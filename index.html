@@ -63,10 +63,62 @@
       --radius:14px;
       --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+
+    /* ======= Site Header (Top Nav) — overlay on hero ======= */
+    .site-header{
+      position:absolute; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
+      background:#e8f1ec var(--logo-url) center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(2,8,20,.15)
+    }
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{
+      display:inline-block; padding:10px 12px; border-radius:10px;
+      color:#fff; text-decoration:none; font-weight:600;
+    }
+    .menu a:hover{ background:rgba(255,255,255,.12); color:#fff }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff; box-shadow:none }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
+    }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
 
     /* ===== Hero (slider) ===== */
     .hero{
@@ -223,16 +275,45 @@
       .lang-fab{ top:10px; right:10px }
       .lang-fab .lang-btn{ padding:6px 8px }
     }
-
     .lang-fab .flag{
       width:20px; height:15px; display:inline-block;
       border-radius:2px; object-fit:cover;
       box-shadow:0 0 0 1px rgba(0,0,0,.08);
     }
     .lang-fab .lang-btn span{ line-height:1 }
+
+    /* ===== place language switcher below overlay header ===== */
+    .lang-fab{ top: calc(var(--header-h) + 10px) !important; }
   </style>
 </head>
 <body>
+
+<!-- === Site Header (Top Navigation) === -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <!-- Brand: โลโก้ + ชื่อบริษัท -->
+    <a class="brand" href="/" aria-label="Baume Chemical">
+      <span class="brand-logo" aria-hidden="true"></span>
+      <span class="brand-name">Baume Chemical</span>
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+
+    <!-- Primary Navigation -->
+    <nav class="primary-nav" aria-label="Primary">
+      <ul class="menu">
+        <li><a href="/" class="nav-link" aria-current="page">Home</a></li>
+        <li><a href="/about" class="nav-link">About us</a></li>
+        <li><a href="/products" class="nav-link">Products</a></li>
+        <li><a href="/contact" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <!-- === Floating Language Switcher (TH/EN) === -->
 <div class="lang-fab" role="group" aria-label="Language switcher">
   <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
@@ -309,7 +390,7 @@
           <div class="badges"><span class="badge">Plating</span><span class="badge">Zinc/Nickel/Copper/Brass</span></div>
           <h3 data-i18n-key="card_plating_title">น้ำยาชุบโลหะ</h3>
           <p data-i18n-key="card_plating_desc">เพิ่มความเงางามให้กับชิ้นงาน ซิงค์ นิกเกิล ทองแดง ทองเหลือง และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์</p>
-          <a class="more" href="PlatingCoating.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="https://www.baumechemical.com/home/platingcoating" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Blackening -->
@@ -491,7 +572,7 @@
           <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
             <li><a href="https://www.baumechemical.com/home/pretreatment">Pretreatment</a></li>
-            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/home/platingcoating">Plating</a></li>
             <li><a href="https://www.baumechemical.com/home/blackening">Blackening</a></li>
             <li><a href="https://www.baumechemical.com/home/passivation">Passivation</a></li>
             <li><a href="https://www.baumechemical.com/home/polishing">Polishing</a></li>
@@ -523,12 +604,23 @@
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- ===== JS (slider, count-up, reveal, parallax, testi, contact, i18n) ===== -->
+  <!-- ===== JS (slider, nav-toggle, count-up, reveal, parallax, testi, contact, i18n) ===== -->
   <script>
     // --- Hero slider ---
     const slides = [...document.querySelectorAll('.slide')];
     let idx = 0;
     setInterval(()=>{ slides[idx].classList.remove('active'); idx = (idx + 1) % slides.length; slides[idx].classList.add('active'); }, 5200);
+
+    // --- Mobile nav toggle ---
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+    })();
 
     // --- Count up when visible ---
     const counters = document.querySelectorAll('.num[data-count]');
