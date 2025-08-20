@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- === SEO Basics === -->
+  <title id="metaTitle">ติดต่อเรา (อีเมลช่องเดียว) | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="ติดต่อ Baume Chemical เพื่อให้ทีมงานติดต่อกลับผ่านอีเมล ช่องเดียว กรอกอีเมลแล้วส่งได้ทันที พร้อมข้อมูลติดต่ออื่นๆ และแผนที่บริษัท">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="contact-us.html">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
+  <meta property="og:title" id="ogTitle" content="ติดต่อเรา | Baume Chemical">
+  <meta property="og:description" id="ogDesc" content="กรอกอีเมลเพื่อให้เราติดต่อกลับได้ทันที พร้อมดูเบอร์โทรและแผนที่บริษัท">
+  <meta property="og:url" content="https://www.baumechemical.com/contact-us">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/V8.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="ติดต่อเรา | Baume Chemical">
+  <meta name="twitter:description" id="twDesc" content="กรอกอีเมลเพื่อให้เราติดต่อกลับได้ทันที พร้อมดูเบอร์โทรและแผนที่บริษัท">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//img5.pic.in.th">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/V8.jpg">
+
+  <!-- === Structured Data (JSON-LD) === -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"ติดต่อเรา | Baume Chemical",
+    "url":"https://www.baumechemical.com/contact-us",
+    "about":{
+      "@type":"Organization",
+      "name":"Baume Chemical",
+      "url":"https://www.baumechemical.com",
+      "logo":"https://www.baumechemical.com/assets/logo.png",
+      "sameAs":["https://line.me/ti/p/~baumechemical"],
+      "contactPoint":[
+        {"@type":"ContactPoint","telephone":"+66-2-869-6400","contactType":"customer support","areaServed":"TH","availableLanguage":["th","en"]},
+        {"@type":"ContactPoint","telephone":"+66-2-869-6402","contactType":"customer support","areaServed":"TH","availableLanguage":["th","en"]},
+        {"@type":"ContactPoint","telephone":"+66-92-546-9887","contactType":"customer support","areaServed":"TH","availableLanguage":["th","en"]}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --brand:#2c5e4e;
+      --brand-2:#387b5b;
+      --accent:#ff9800;
+      --ink:#0f172a;
+      --bg:#f4f6f5;
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --radius:14px;
+      --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --header-h:64px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+
+    /* ======= Site Header (Top Nav) — overlay on hero ======= */
+    .site-header{
+      position:absolute; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
+      background:#e8f1ec var(--logo-url) center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(2,8,20,.15)
+    }
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{
+      display:inline-block; padding:10px 12px; border-radius:10px;
+      color:#fff; text-decoration:none; font-weight:600;
+    }
+    .menu a:hover{ background:rgba(255,255,255,.12); color:#fff }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
+    }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* ===== Hero (use contact banner) ===== */
+    .hero{
+      position:relative; overflow:hidden; color:#fff; text-align:center;
+      min-height: clamp(480px, 62vh, 720px);
+      display:grid; place-items:center;
+      padding-top: var(--header-h);
+    }
+    .slides{position:absolute; inset:0; display:grid}
+    .slide{
+      position:absolute; inset:-4%; background-size:cover; background-position:center; filter:brightness(.82);
+      transform:translateZ(0) scale(1.04);
+      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+    }
+    .slide.active{opacity:1; transform:scale(1.08)}
+    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65))}
+    .hero-inner{position:relative; z-index:1; padding:18px}
+    .hero h1{margin:0 0 10px; font-size: clamp(28px,4.4vw,48px); font-weight:800; text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{margin:0 auto 16px; max-width:840px; color:#dbe6ea}
+
+    /* ===== CTA buttons (optional) ===== */
+    .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    .btn:hover{filter:brightness(.95)}
+
+    /* ===== Language Switcher — bottom-right on hero ===== */
+    .lang-fab{
+      position:absolute; right:14px; bottom:14px; z-index:2;
+      display:flex; gap:6px; padding:4px;
+      border:1px solid #e2e8f0; border-radius:999px;
+      background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* ===== Layout & Cards for content ===== */
+    .wrap{max-width:1100px;margin:auto;padding:28px 16px}
+    .grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media(min-width:1020px){ .grid{grid-template-columns:1.05fr .95fr} }
+    .card{background:#fff;border:1px solid #e5eee8;border-radius:16px;box-shadow:0 10px 34px rgba(2,8,20,.08);padding:18px}
+    h2{margin:4px 0 10px;font-size:clamp(20px,2.6vw,28px);font-weight:800;color:#1f2a24}
+
+    /* Form */
+    form{display:grid;gap:10px}
+    label{font-weight:600}
+    .input{appearance:none;width:100%;border:1px solid #cfdfd5;background:#fff;border-radius:12px;padding:12px 14px;font:inherit}
+    .hp{position:absolute;left:-5000px;opacity:0}
+    .badge{font-size:12px;color:#5e6c74;margin:0}
+    .actions.inline{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .status{font-size:14px;margin-top:4px}
+
+    /* Contact list */
+    .list{display:grid;gap:8px;margin:8px 0 0;padding:0}
+    .list li{list-style:none;border:1px dashed #d9e7de;border-radius:10px;padding:10px;background:#f7fbf8}
+    .list a{color:var(--brand);text-decoration:none}
+    .list a:hover{text-decoration:underline}
+
+    /* Map */
+    .map-embed{aspect-ratio:16/9;border:0;width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(2,8,20,.08)}
+    .map-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+
+    /* ===== Footer (template) ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:28px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+/* === Buttons -> #387b5b (ทุกปุ่ม) === */
+:root{
+  --accent:#387b5b;   /* เผื่อที่อื่นอ้างอิง var นี้ */
+  --brand-2:#387b5b;  /* ให้ตรงกัน */
+}
+
+.btn{
+  border:1px solid var(--accent) !important;
+  background:var(--accent) !important;
+  color:#fff !important;
+}
+
+/* โทน hover กลางๆ */
+.btn:hover{ filter:none; opacity:.92; }
+
+/* ปรับ ghost ให้อ่านชัดบนพื้นขาว (ในการ์ด) */
+.card .btn.ghost{
+  background:transparent !important;
+  border:1px solid var(--accent) !important;
+  color:var(--accent) !important;
+}
+
+/* แต่ใน hero (พื้นมืด) ให้ ghost เป็นเส้น/ตัวอักษรสีขาว */
+.hero .btn.ghost{
+  background:transparent !important;
+  border:1px solid #fff !important;
+  color:#fff !important;
+}
+/* ลดความหนาตัวหนังสือเฉพาะปุ่มแผนที่ */
+.hero .actions .btn[data-i18n-key="btn_open_map"]{
+  font-weight: 600 !important; /* เดิมใช้ 800 */
+}
+
+/* ปุ่ม "เปิดใน Google Maps" ใต้แผนที่ */
+.map-actions .btn[data-i18n-key="map_open"]{
+  font-weight: 600 !important;
+}
+
+/* ถ้าอยากบางกว่านี้อีก ให้เปลี่ยน 600 เป็น 400 */
+  </style>
+</head>
+<body>
+
+  <!-- === Site Header (Top Navigation) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact-us.html" class="nav-link" aria-current="page">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero (single slide for contact) ===== -->
+  <section class="hero" aria-label="ติดต่อ Baume Chemical">
+    <div class="slides" id="slides">
+      <div class="slide active" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg')"></div>
+    </div>
+
+    <!-- ✅ ย้ายออกมาเป็นลูกของ .hero เพื่อยึดขวาล่างของฮีโร่จริง ๆ -->
+    <div class="lang-fab" role="group" aria-label="Language switcher">
+      <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png"
+             srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+        <span>ไทย</span>
+      </button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png"
+             srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+        <span>EN</span>
+      </button>
+    </div>
+
+    <div class="hero-inner">
+      <h1 data-i18n-key="hero_title">ติดต่อเรา</h1>
+      <p data-i18n-key="hero_tagline">โปรดใส่อีเมลของคุณ แล้วเราจะติดต่อกลับโดยเร็วที่สุด</p>
+      <div class="actions">
+        <a class="btn ghost" href="mailto:baumechemical@gmail.com" data-i18n-key="btn_email_us">อีเมลถึงเรา</a>
+        <a class="btn" href="https://maps.app.goo.gl/cLVdw1rxJRDc2BC29" target="_blank" rel="noopener" data-i18n-key="btn_open_map">เปิดแผนที่</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <main class="wrap grid" role="main">
+    <!-- Form card (Email only) -->
+    <section class="card" aria-label="ขอให้ติดต่อกลับทางอีเมล">
+      <h2 data-i18n-key="form_title">ขอให้ติดต่อกลับทางอีเมล</h2>
+      <form id="emailForm" novalidate>
+        <!-- anti-bot -->
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="renderedAt" id="renderedAt" value="">
+
+        <label for="emailOnly" data-i18n-key="email_label">อีเมลของคุณ*</label>
+        <input class="input" id="emailOnly" name="email" type="email" required inputmode="email" autocomplete="email" placeholder="you@example.com" aria-required="true">
+
+        <div class="actions inline">
+          <button class="btn" type="submit" id="sendBtn" data-i18n-key="send_btn">ส่งอีเมลของฉัน</button>
+          <a class="btn ghost" id="altMail" href="mailto:baumechemical@gmail.com" data-i18n-key="send_alt">หรือส่งเมลเอง</a>
+        </div>
+
+        <div class="status" id="statusMsg" aria-live="polite"></div>
+        <p class="badge" data-i18n-key="policy">เราจะใช้ข้อมูลอีเมลนี้เพื่อการติดต่อกลับเท่านั้น</p>
+      </form>
+    </section>
+
+    <!-- Other contact methods -->
+    <aside class="card" aria-label="ข้อมูลติดต่ออื่นๆ">
+      <h2 data-i18n-key="other_title">ข้อมูลติดต่ออื่นๆ</h2>
+      <ul class="list">
+        <li><span data-i18n-key="phone_label">โทรศัพท์</span> : <a href="tel:+6628696400">02 869 6400</a> – <a href="tel:+6628696402">02 869 6402</a></li>
+        <li><span data-i18n-key="mobile_label">มือถือ</span> : <a href="tel:+66925469887">092 546 9887</a></li>
+        <li><span data-i18n-key="line_label">Line</span> : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" data-i18n-key="line_cta">เพิ่มเพื่อน/แชทกับเรา</a></li>
+        <li><span data-i18n-key="email_cs_label">อีเมลฝ่ายบริการลูกค้า</span> : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Map section -->
+  <section class="wrap card" aria-label="แผนที่และการเดินทาง">
+    <h2 data-i18n-key="map_title">แผนที่และการเดินทาง</h2>
+    <p style="margin-top:-2px;color:#5b6775" data-i18n-key="map_sub">เปิดแผนที่เพื่อนำทางมายังบริษัทของเรา</p>
+    <iframe class="map-embed"
+      title="Google Map - Baume Chemical"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Baume%20Chemical%20Bangkok&output=embed"></iframe>
+    <div class="map-actions">
+      <a class="btn" href="https://maps.app.goo.gl/cLVdw1rxJRDc2BC29" target="_blank" rel="noopener" data-i18n-key="map_open">เปิดใน Google Maps</a>
+      <a class="btn ghost" href="https://maps.app.goo.gl/cLVdw1rxJRDc2BC29" target="_blank" rel="noopener" data-i18n-key="map_directions">ขอเส้นทาง</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer (template) ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <!-- แบรนด์ + ที่อยู่/เวลา/โทร -->
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li data-i18n-key="addr1">📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li data-i18n-key="addr2">📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li data-i18n-key="phone_li">📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <!-- หมวดผลิตภัณฑ์ -->
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/home/platingcoating">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/home/blackening">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/home/passivation">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/home/polishing">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/home/strippers">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/home/protective">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/home/service">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/home/equipment">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <!-- ช่องทางติดต่อ -->
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li data-i18n-key="footer_email">✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li data-i18n-key="footer_line">💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li data-i18n-key="footer_web">🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div><span data-i18n-key="copyright">© 2025 Baume Chemical. All rights reserved.</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JS (header height, slider, mobile nav, i18n, form submit) ===== -->
+  <script>
+    // --- Measure header height to space hero nicely ---
+    (function(){
+      const header = document.querySelector('.site-header');
+      const setH = () => {
+        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      };
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH);
+      setH();
+    })();
+
+    // --- Hero slider (handles single slide fine) ---
+    const slides = [...document.querySelectorAll('.slide')];
+    let idx = 0;
+    if (slides.length > 0){
+      setInterval(()=>{ slides[idx].classList.remove('active'); idx = (idx + 1) % slides.length; slides[idx].classList.add('active'); }, 5200);
+    }
+
+    // --- Mobile nav toggle ---
+    (function(){
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        const opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+      header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
+        header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
+      }));
+    })();
+
+    /* ===== i18n (extends template keys with page content) ===== */
+    const I18N = {
+      th: {
+        /* Meta */
+        meta_title: "ติดต่อเรา (อีเมลช่องเดียว) | Baume Chemical",
+        meta_desc: "ติดต่อ Baume Chemical เพื่อให้ทีมงานติดต่อกลับผ่านอีเมล ช่องเดียว กรอกอีเมลแล้วส่งได้ทันที พร้อมข้อมูลติดต่ออื่นๆ และแผนที่บริษัท",
+        og_title: "ติดต่อเรา | Baume Chemical",
+        og_desc: "กรอกอีเมลเพื่อให้เราติดต่อกลับได้ทันที พร้อมดูเบอร์โทรและแผนที่บริษัท",
+        tw_title: "ติดต่อเรา | Baume Chemical",
+        tw_desc: "กรอกอีเมลเพื่อให้เราติดต่อกลับได้ทันที พร้อมดูเบอร์โทรและแผนที่บริษัท",
+
+        /* Hero */
+        hero_title: "ติดต่อเรา",
+        hero_tagline: "โปรดใส่อีเมลของคุณ แล้วเราจะติดต่อกลับโดยเร็วที่สุด",
+        btn_email_us: "อีเมลถึงเรา",
+        btn_open_map: "เปิดแผนที่",
+
+        /* Form & content */
+        form_title: "ขอให้ติดต่อกลับทางอีเมล",
+        email_label: "อีเมลของคุณ*",
+        email_placeholder: "you@example.com",
+        send_btn: "ส่งอีเมลของฉัน",
+        send_alt: "หรือส่งเมลเอง",
+        policy: "เราจะใช้ข้อมูลอีเมลนี้เพื่อการติดต่อกลับเท่านั้น",
+        other_title: "ข้อมูลติดต่ออื่นๆ",
+        phone_label: "โทรศัพท์",
+        mobile_label: "มือถือ",
+        line_label: "Line",
+        line_cta: "เพิ่มเพื่อน/แชทกับเรา",
+        email_cs_label: "อีเมลฝ่ายบริการลูกค้า",
+        map_title: "แผนที่และการเดินทาง",
+        map_sub: "เปิดแผนที่เพื่อนำทางมายังบริษัทของเรา",
+        map_open: "เปิดใน Google Maps",
+        map_directions: "ขอเส้นทาง",
+
+        /* Footer */
+        footer_products: "หมวดผลิตภัณฑ์",
+        footer_contact: "ติดต่อเรา",
+        addr1: "📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
+        addr2: "📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160",
+        hours: "🕒 เวลาทำการ 08.00 - 17.00 น.",
+        phone_li: "📱 <a href=\"tel:+66925469887\">092 546 9887</a>",
+        footer_email: "✉️ : <a href=\"mailto:baumechemical@gmail.com\">baumechemical@gmail.com</a>",
+        footer_line: "💬 : <a href=\"https://line.me/ti/p/~baumechemical\" target=\"_blank\" rel=\"noopener\">@baumechemical</a>",
+        footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
+        copyright: "© 2025 Baume Chemical. All rights reserved.",
+
+        /* Status */
+        sending: "กำลังส่ง…",
+        need_email: "กรุณากรอกอีเมล",
+        sent_ok: "ส่งเรียบร้อย ขอบคุณครับ — เราจะติดต่อกลับโดยเร็ว"
+      },
+      en: {
+        /* Meta */
+        meta_title: "Contact Us (Email Only) | Baume Chemical",
+        meta_desc: "Contact Baume Chemical and we’ll get back to you via email. Enter your email and send instantly. See other contact info and our location map.",
+        og_title: "Contact Us | Baume Chemical",
+        og_desc: "Leave your email for a quick call-back, see phone numbers and our location map.",
+        tw_title: "Contact Us | Baume Chemical",
+        tw_desc: "Leave your email for a quick call-back, see phone numbers and our location map.",
+
+        /* Hero */
+        hero_title: "Contact Us",
+        hero_tagline: "Leave your email and we’ll get back to you as soon as possible.",
+        btn_email_us: "Email us",
+        btn_open_map: "Open Map",
+
+        /* Form & content */
+        form_title: "Contact Me via Email",
+        email_label: "Your email*",
+        email_placeholder: "you@example.com",
+        send_btn: "Send my email",
+        send_alt: "Or email us",
+        policy: "We will use your email solely to contact you back.",
+        other_title: "Other Contact Channels",
+        phone_label: "Telephone",
+        mobile_label: "Mobile",
+        line_label: "LINE",
+        line_cta: "Add friend / Chat with us",
+        email_cs_label: "Customer Service Email",
+        map_title: "Map & Directions",
+        map_sub: "Open Google Maps to navigate to our office.",
+        map_open: "Open in Google Maps",
+        map_directions: "Get Directions",
+
+        /* Footer */
+        footer_products: "Products",
+        footer_contact: "Contact Us",
+        addr1: "📍 31 Soi Phetkasem 48, Yak 24, Bang Waek",
+        addr2: "📍 Phasi Charoen, Bangkok 10160",
+        hours: "🕒 Hours 08:00 – 17:00",
+        phone_li: "📱 <a href=\"tel:+66925469887\">+66 92 546 9887</a>",
+        footer_email: "✉️ : <a href=\"mailto:baumechemical@gmail.com\">baumechemical@gmail.com</a>",
+        footer_line: "💬 : <a href=\"https://line.me/ti/p/~baumechemical\" target=\"_blank\" rel=\"noopener\">@baumechemical</a>",
+        footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
+        copyright: "© 2025 Baume Chemical. All rights reserved.",
+
+        /* Status */
+        sending: "Sending…",
+        need_email: "Please enter your email",
+        sent_ok: "Submitted. Thank you — we’ll get back to you shortly."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc'),
+      emailInput: document.getElementById('emailOnly'),
+      sendBtn: document.getElementById('sendBtn'),
+      status: document.getElementById('statusMsg'),
+    };
+
+    function applyLang(lang){
+      document.documentElement.lang = lang;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        const t = I18N[lang];
+        if (key && t && t[key] !== undefined){
+          // allow HTML for keys that contain links/tags
+          if (/<\/?[a-z][\s\S]*>/i.test(t[key])) node.innerHTML = t[key];
+          else node.textContent = t[key];
+        }
+      });
+
+      const t = I18N[lang];
+      if(t){
+        if(els.metaTitle){ els.metaTitle.textContent = t.meta_title; document.title = t.meta_title; }
+        if(els.metaDesc){ els.metaDesc.setAttribute('content', t.meta_desc); }
+        if(els.ogTitle){ els.ogTitle.setAttribute('content', t.og_title || t.meta_title); }
+        if(els.ogDesc){ els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc); }
+        if(els.twTitle){ els.twTitle.setAttribute('content', t.tw_title || t.meta_title); }
+        if(els.twDesc){ els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc); }
+        if(els.ogLocale){ els.ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH'); }
+        if(els.emailInput && t.email_placeholder){ els.emailInput.placeholder = t.email_placeholder; }
+        if(els.sendBtn && t.send_btn){ els.sendBtn.textContent = t.send_btn; }
+      }
+      try{ localStorage.setItem('lang', lang); }catch(e){}
+    }
+
+    // init lang (default TH)
+    (function initLang(){
+      const defaultLang = 'th';
+      let saved = null;
+      try {
+        const v = localStorage.getItem('lang');
+        if (v === 'en' || v === 'th') saved = v;
+      } catch(e){}
+      applyLang(saved || defaultLang);
+      // wire buttons
+      document.querySelectorAll('.lang-fab .lang-btn')
+        .forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+
+    // ===== Email-only form submit via Apps Script =====
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbwBFX4pEIS-BS8d_7h-Ptlq79NwAj3jTj7mC_uVBQqU4JBs-hZfDgaWLY9HNts93CfErw/exec";
+    const form = document.getElementById('emailForm');
+    const renderedAt = document.getElementById('renderedAt');
+    if (renderedAt) renderedAt.value = Date.now();
+
+    function setStatus(msg, isErr){
+      if(!els.status) return;
+      els.status.textContent = msg;
+      els.status.style.color = isErr ? "#b91c1c" : "#14532d";
+    }
+    function lock(v, t){
+      if (!els.sendBtn) return;
+      els.sendBtn.disabled = v;
+      els.sendBtn.textContent = v ? t.sending : t.send_btn;
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const lang = localStorage.getItem('lang') || 'th';
+      const t = I18N[lang];
+
+      // honeypot
+      if (form.company && form.company.value.trim() !== "") return;
+      // time trap: >= 2.5s after render
+      if (renderedAt && Date.now() - (+renderedAt.value || 0) < 2500) return;
+
+      const email = (form.email.value || "").trim();
+      if (!email){ return setStatus(t.need_email, true); }
+
+      lock(true, t);
+      try{
+        const fd = new FormData(form);
+        fd.append('source','contact-email-only');
+        fd.append('name','');
+        fd.append('phone','');
+        fd.append('message', lang==='th' ? 'ขอให้ติดต่อกลับทางอีเมลนี้' : 'Please contact me back via this email');
+
+        const res = await fetch(ENDPOINT, { method:"POST", body:new URLSearchParams(fd) });
+        const text = await res.text();
+        const ok = (()=>{ try{return JSON.parse(text).ok===true}catch(e){return /ok/i.test(text)} })();
+
+        if (ok){ form.reset(); setStatus(t.sent_ok, false); }
+        else{ throw new Error("failed"); }
+      }catch(err){
+        // fallback: open mail client
+        const subject = encodeURIComponent(lang==='th' ? "ขอติดต่อกลับ — Email only" : "Callback request — Email only");
+        const body = encodeURIComponent((lang==='th'
+          ? `กรุณาติดต่อกลับที่อีเมลนี้: ${email}`
+          : `Please contact me back at this email: ${email}`));
+        window.location.href = `mailto:baumechemical@gmail.com?subject=${subject}&body=${body}`;
+      }finally{
+        lock(false, t);
+      }
+    });
+  </script>
+</body>
+</html>

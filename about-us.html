@@ -7,9 +7,9 @@
   <meta name="description" content="บริษัท โบเม่ เคมิเคิล จำกัด ผู้นำเข้าและจัดหาเคมีภัณฑ์งานชุบเคลือบผิวโลหะคุณภาพสูง มากกว่า 30 ปี พร้อมบริการวิเคราะห์และที่ปรึกษาหน้างาน" data-i18n-attr="content:meta_desc">
 
   <!-- Canonical & Hreflang -->
-  <link rel="canonical" href="https://www.baumechemical.com/about-us">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/about-us">
-  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/about-us">
+  <link rel="canonical" href="about-us.html">
+  <link rel="alternate" hreflang="th" href="about-us.html">
+  <link rel="alternate" hreflang="x-default" href="about-us.html">
 
   <!-- Robots -->
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -17,33 +17,24 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="th_TH">
+  <meta property="og:locale" content="th_TH" id="ogLocale">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="เกี่ยวกับเรา | Baume Chemical" data-i18n-attr="content:og_title">
-  <meta property="og:description" content="ผู้เชี่ยวชาญโซลูชันเคมีงานชุบโลหะครบวงจร ประสบการณ์กว่า 30 ปี" data-i18n-attr="content:og_desc">
+  <meta property="og:title" content="เกี่ยวกับเรา | Baume Chemical" data-i18n-attr="content:og_title" id="ogTitle">
+  <meta property="og:description" content="ผู้เชี่ยวชาญโซลูชันเคมีงานชุบโลหะครบวงจร ประสบการณ์กว่า 30 ปี" data-i18n-attr="content:og_desc" id="ogDesc">
   <meta property="og:url" content="https://www.baumechemical.com/about-us">
-  <meta property="og:image" content="https://www.baumechemical.com/assets/about/hero-lab.jpg">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
   <meta property="og:image:alt" content="ห้องแล็บทดสอบและงานบริการของ Baume Chemical" data-i18n-attr="content:og_img_alt">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="เกี่ยวกับเรา | Baume Chemical" data-i18n-attr="content:tw_title">
-  <meta name="twitter:description" content="ผู้เชี่ยวชาญโซลูชันเคมีงานชุบโลหะครบวงจร ประสบการณ์กว่า 30 ปี" data-i18n-attr="content:tw_desc">
-  <meta name="twitter:image" content="https://www.baumechemical.com/assets/about/hero-lab.jpg">
+  <meta name="twitter:title" content="เกี่ยวกับเรา | Baume Chemical" data-i18n-attr="content:tw_title" id="twTitle">
+  <meta name="twitter:description" content="ผู้เชี่ยวชาญโซลูชันเคมีงานชุบโลหะครบวงจร ประสบการณ์กว่า 30 ปี" data-i18n-attr="content:tw_desc" id="twDesc">
+  <meta name="twitter:image" content="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
 
-  <!-- Perf: Preconnect & Preload hero images -->
+  <!-- Perf: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://img2.pic.in.th" crossorigin>
-  <link rel="preconnect" href="https://img5.pic.in.th" crossorigin>
-  <link rel="dns-prefetch" href="//img2.pic.in.th">
-  <link rel="dns-prefetch" href="//img5.pic.in.th">
-  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
-  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/V8.jpg">
-
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <!-- JSON-LD: AboutPage -->
   <script type="application/ld+json">
@@ -53,7 +44,7 @@
     "name":"เกี่ยวกับเรา | Baume Chemical",
     "url":"https://www.baumechemical.com/about-us",
     "isPartOf":{"@type":"WebSite","name":"Baume Chemical","url":"https://www.baumechemical.com"},
-    "primaryImageOfPage":"https://www.baumechemical.com/assets/about/hero-lab.jpg",
+    "primaryImageOfPage":"https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg",
     "publisher":{
       "@type":"Organization",
       "name":"Baume Chemical",
@@ -88,68 +79,80 @@
 
   <style>
     :root{
-      --brand:#2c5e4e; --accent:#ff9800; --ink:#434343; --muted:#546477; --surface:#ffffff;
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b; /* ปรับปุ่มเป็นเขียวทั้งเว็บ */
+      --ink:#434343; --muted:#546477; --surface:#ffffff; --bg:#d5e4d9;
       --logo:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --hero-top:url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg');
-      --hero-bot:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg');
-      /* NEW: header height variable for responsive language-fab placement */
       --header-h:64px;
+      --container:1200px;
     }
     *{box-sizing:border-box}
     body{
       margin:0; line-height:1.65; color:var(--ink);
       font-family:'Noto Sans Thai',system-ui,sans-serif;
-      background:#d5e4d9;
+      background:var(--bg);
     }
 
-    /* === NEW: Top Navigation (overlay on hero) === */
+    /* === HEADER (จากที่จำไว้ — overlay on hero) === */
     .site-header{
-      position:fixed; inset:0 0 auto 0; z-index:1400;
-      backdrop-filter: blur(8px);
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25));
+      position:absolute; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
       border-bottom:1px solid rgba(255,255,255,.14);
+      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
     }
-    .header-inner{max-width:1200px; margin:0 auto; padding:10px 16px; min-height:var(--header-h);
-      display:flex; align-items:center; justify-content:space-between}
+    .site-header .header-inner{
+      max-width:var(--container); margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:var(--header-h); padding:10px 16px;
+    }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:42px; height:42px; border-radius:10px; background:#e8f1ec var(--logo) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-logo{
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
+      background:#e8f1ec var(--logo) center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(2,8,20,.15)
+    }
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
     .primary-nav{display:flex; align-items:center; gap:12px}
-    .menu{list-style:none; display:flex; gap:4px; margin:0; padding:0}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{
       display:inline-block; padding:10px 12px; border-radius:10px;
-      color:#fff; text-decoration:none; font-weight:700; letter-spacing:.2px
+      color:#fff; text-decoration:none; font-weight:600;
     }
-    .menu a:hover{ background:rgba(255,255,255,.12) }
-    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a:hover{ background:rgba(255,255,255,.12); color:#fff }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff }
     .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
     .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
 
     .nav-toggle{
       appearance:none; border:0; background:transparent; cursor:pointer;
-      width:40px; height:40px; border-radius:9px; display:none; align-items:center; justify-content:center
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
     }
     .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before,.nav-toggle .bar::after{ content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
+    }
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
-
-    /* Mobile / Tablet menu */
     @media (max-width: 920px){
-      .nav-toggle{ display:inline-flex }
       .menu{
-        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 10px);
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px);
         border:1px solid rgba(255,255,255,.18); border-radius:14px;
         transform:translateY(-12px); opacity:0; pointer-events:none;
         display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
       }
-      .menu li a{ display:block; padding:12px 14px }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
     }
 
-    .parallax{position:relative; min-height: clamp(460px, 58vh, 760px); display:grid; place-items:center; text-align:center; color:#fff; overflow:hidden}
+    /* ===== Hero (Parallax) ===== */
+    .parallax{
+      position:relative; min-height: clamp(460px, 58vh, 760px);
+      display:grid; place-items:center; text-align:center; color:#fff; overflow:hidden;
+      padding: calc(var(--header-h) + 24px) 16px 32px; /* เผื่อพื้นที่ใต้ header */
+      isolation:isolate;
+    }
     .px-layer{position:absolute; inset:-14% 0; background-size:cover; background-position:center; transform:translate3d(0,var(--py,0px),0) scale(1.12); filter:brightness(.82); will-change:transform}
     .parallax::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55))}
     .parallax-content{position:relative; z-index:1; padding:24px}
@@ -159,6 +162,22 @@
     .hero-title{margin:0; font-weight:800; letter-spacing:.2px; font-size: clamp(28px, 4.2vw, 52px); text-shadow:0 6px 28px rgba(0,0,0,.5)}
     .hero-sub{margin:.5rem auto 0; max-width:900px; color:#e7f0f6; font-size: clamp(14px,1.6vw,18px)}
 
+    /* ===== Floating Language Switcher — bottom-right on hero (จากที่จำไว้) ===== */
+    .lang-fab{
+      position:absolute; right:18px; bottom:18px; z-index:3;
+      display:flex; gap:6px; padding:4px;
+      border:1px solid #e2e8f0; border-radius:999px;
+      background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* ===== Layout & Cards ===== */
     .wrap{max-width:1200px; margin:auto; padding:48px 20px}
     .card{background:var(--surface); border:1px solid #e6ecf2; border-radius:16px; box-shadow:0 10px 34px rgba(2,8,20,.08); padding:24px}
     h2.section{font-size: clamp(22px,2.6vw,30px); margin:0 0 12px; color:#434343; font-weight:800}
@@ -173,7 +192,7 @@
     .why:hover{transform:translateY(-4px); box-shadow:0 16px 44px rgba(2,8,20,.12)}
     .why .ic{font-size:22px; width:38px; height:38px; display:grid; place-items:center; color:#fff; background:var(--brand); border-radius:10px; margin-bottom:10px}
     .why h3{margin:6px 0 4px; font-size:16px; color:#434343}
-    .why p{margin:0; color:var(--muted); font-size:14px}
+    .why p{margin:0; color:#546477; font-size:14px}
 
     .bullets{display:grid; gap:10px; margin:6px 0 0; padding:0}
     .bullets li{list-style:none; display:flex; gap:10px; align-items:flex-start; color:#2b3744}
@@ -193,10 +212,10 @@
 
     .cta{background:linear-gradient(135deg,#103b2b,#2c5e4e); color:#fff; border-radius:16px; padding:22px; display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap}
     .cta .buttons{display:flex; gap:10px; flex-wrap:wrap}
-    .btn{appearance:none; border:1px solid transparent; background:#fff; color:var(--brand); padding:10px 16px; border-radius:999px; font-weight:700; cursor:pointer; text-decoration:none}
+    .btn{appearance:none; border:1px solid var(--accent); background:var(--accent); color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; text-decoration:none}
     .btn.outline{background:transparent; color:#fff; border-color:#cfe7dc}
 
-    /* === NEW: Footer แบบหน้าหลัก === */
+    /* ===== FOOTER (จากที่จำไว้) ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -206,79 +225,73 @@
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
     .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
-    .ft-desc{margin:6px 0 0; color:#93a4b8; font-size:.96rem}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-    /* ===== Floating Language Switcher (TH/EN) ===== */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* Motion */
+    @media (prefers-reduced-motion: reduce){
+      .btn, .why{transition:none}
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:#387b5b; color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; display:inline-block; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08)}
-    .lang-fab .lang-btn span{ line-height:1 }
-    @media (max-width:480px){ .lang-fab{ top:10px; right:10px } .lang-fab .lang-btn{ padding:6px 8px } }
-
-    /* NEW: push language switcher below the header height */
-    .lang-fab{ top: calc(var(--header-h) + 12px); }
   </style>
 </head>
 <body>
 
-  <!-- === NEW: Top Navigation Bar (overlay) === -->
+  <!-- === HEADER (นำจากโค้ดที่จำไว้) === -->
   <header class="site-header" role="banner">
     <div class="header-inner">
+      <!-- Brand -->
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
+      <!-- Hamburger (mobile) -->
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="bar" aria-hidden="true"></span>
       </button>
 
+      <!-- Primary Navigation -->
       <nav class="primary-nav" aria-label="Primary">
         <ul class="menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="/aboutus.html" class="nav-link" aria-current="page">About us</a></li>
-          <li><a href="/products" class="nav-link">Products</a></li>
-          <li><a href="/contact-us" class="nav-link">Contact Us</a></li>
+          <li><a href="about-us" class="nav-link" aria-current="page">About us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- === Floating Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
+  <!-- ===== Hero Parallax ===== -->
+  <section class="parallax" aria-label="เกี่ยวกับ Baume Chemical">
+  <div class="px-layer"
+       style="
+         background-image:
+           url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg'),
+           url('https://img2.pic.in.th/pic/thumbnail-6.jpg');
+         background-size: cover;
+         background-position: center;
+       "></div>
 
-  <!-- ===== Hero ===== -->
-  <header class="parallax">
-    <div class="px-layer" style="background-image:var(--hero-top)"></div>
-    <div class="brandbar" aria-label="Baume Chemical">
-      <div class="logo" aria-hidden="true"></div><div class="name">Baume Chemical</div>
-    </div>
     <div class="parallax-content">
       <h1 class="hero-title" data-i18n-key="hero_title">เกี่ยวกับ Baume Chemical</h1>
       <p class="hero-sub" data-i18n-key="hero_sub">ผู้นำเข้าและจัดหาเคมีภัณฑ์งานชุบเคลือบผิวโลหะคุณภาพสูง มากกว่า 30 ปี พร้อมบริการวิเคราะห์และที่ปรึกษาหน้างาน</p>
     </div>
-  </header>
+
+    <!-- ปุ่มสลับภาษาแบบ FAB (จากโค้ดที่จำไว้) -->
+    <div class="lang-fab" role="group" aria-label="Language switcher">
+      <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+        <span>ไทย</span>
+      </button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+        <span>EN</span>
+      </button>
+    </div>
+  </section>
 
   <!-- ===== Company profile + services ===== -->
   <section class="wrap grid-2">
@@ -360,7 +373,7 @@
 
   <!-- ===== Bottom CTA Parallax ===== -->
   <section class="parallax" aria-label="ติดต่อทีมงาน">
-    <div class="px-layer" style="background-image:var(--hero-bot)"></div>
+    <div class="px-layer" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg')"></div>
     <div class="parallax-content" style="width:min(1000px,92%);">
       <div class="cta">
         <div>
@@ -373,9 +386,21 @@
         </div>
       </div>
     </div>
+
+    <!-- ภาษา FAB ซ้ำที่ hero ท้ายหน้า (ถ้าต้องการให้แสดงทุกพารัลแลกซ์ ให้คงไว้) -->
+    <div class="lang-fab" role="group" aria-label="Language switcher">
+      <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+        <span>ไทย</span>
+      </button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+        <span>EN</span>
+      </button>
+    </div>
   </section>
 
-  <!-- ===== Footer (เหมือนหน้าหลัก) ===== -->
+  <!-- ===== FOOTER (นำจากโค้ดที่จำไว้) ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -386,48 +411,77 @@
             <div class="ft-name">Baume Chemical</div>
           </div>
           <ul class="footer-list">
-            <li><span data-i18n-key="addr1">📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</span></li>
-            <li><span data-i18n-key="addr2">📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</span></li>
-            <li><span data-i18n-key="hours">🕒 เวลาทำการ 08.00 - 17.00 น.</span></li>
-            <li data-i18n-html="true" data-i18n-key="phone_li">📱 <a href="tel:+66925469887">092 546 9887</a></li>
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
           </ul>
         </section>
 
         <!-- หมวดผลิตภัณฑ์ -->
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
-          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
-            <li><a data-i18n-key="cat_pretreat" href="https://www.baumechemical.com/home/pretreatment">Pretreatment</a></li>
-            <li><a data-i18n-key="cat_plating" href="https://www.baumechemical.com/home/platingcoating">Plating</a></li>
-            <li><a data-i18n-key="cat_blackening" href="https://www.baumechemical.com/home/blackening">Blackening</a></li>
-            <li><a data-i18n-key="cat_passivation" href="https://www.baumechemical.com/home/passivation">Passivation</a></li>
-            <li><a data-i18n-key="cat_polishing" href="https://www.baumechemical.com/home/polishing">Polishing</a></li>
-            <li><a data-i18n-key="cat_strippers" href="https://www.baumechemical.com/home/strippers">Strippers</a></li>
-            <li><a data-i18n-key="cat_protective" href="https://www.baumechemical.com/home/protective">Protective Treatment</a></li>
-            <li><a data-i18n-key="cat_service" href="https://www.baumechemical.com/home/service">Customer Service</a></li>
-            <li><a data-i18n-key="cat_equipment" href="https://www.baumechemical.com/home/equipment">Equipment</a></li>
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/home/platingcoating">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/home/blackening">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/home/passivation">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/home/polishing">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/home/strippers">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/home/protective">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/home/service">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/home/equipment">Equipment</a></li>
           </ul>
         </nav>
 
         <!-- ช่องทางติดต่อ -->
         <section aria-label="ติดต่อเรา">
-          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <h3 class="footer-title">ติดต่อเรา</h3>
           <ul class="footer-list">
-            <li data-i18n-html="true" data-i18n-key="footer_email">✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
-            <li data-i18n-html="true" data-i18n-key="footer_line">💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
-            <li data-i18n-html="true" data-i18n-key="footer_web">🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
           </ul>
         </section>
       </div>
 
       <div class="footer-bottom">
-        <div data-i18n-key="copyright">© 2025 Baume Chemical. All rights reserved.</div>
+        <div>© 2025 Baume Chemical. All rights reserved.</div>
       </div>
     </div>
   </footer>
 
+  <!-- ===== JS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+
   <script>
-    // Parallax driver (รองรับมือถือ)
+    /* --- วัดความสูง header -> --header-h สำหรับเผื่อพื้นที่ hero --- */
+    (function(){
+      const header = document.querySelector('.site-header');
+      const setH = () => {
+        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      };
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH);
+      setH();
+    })();
+
+    /* --- Mobile nav toggle (ตามที่จำไว้) --- */
+    (function(){
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        const opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+      header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
+        header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
+      }));
+    })();
+
+    /* --- Parallax driver --- */
     const pxSections = document.querySelectorAll('.parallax');
     const tick = () => {
       const y = window.scrollY || window.pageYOffset;
@@ -441,23 +495,7 @@
     tick();
     window.addEventListener('scroll', ()=> requestAnimationFrame(tick), {passive:true});
 
-    // NEW: Mobile nav toggle + auto-close
-    (function(){
-      const header = document.querySelector('.site-header');
-      const toggle = document.querySelector('.site-header .nav-toggle');
-      const menuLinks = document.querySelectorAll('.site-header .menu a');
-      if(!header || !toggle) return;
-      toggle.addEventListener('click', ()=>{
-        const opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
-      menuLinks.forEach(a => a.addEventListener('click', ()=>{
-        header.classList.remove('open');
-        toggle.setAttribute('aria-expanded','false');
-      }));
-    })();
-
-    /* ===== i18n: TH/EN toggler ===== */
+    /* --- i18n: ใช้ระบบเดิมของหน้านี้ ปุ่ม .lang-btn ทุกที่ใช้ร่วมกันได้ --- */
     const I18N = {
       th: {
         meta_title: "เกี่ยวกับเรา | Baume Chemical",
@@ -512,27 +550,7 @@
         cta_btn_line: "แอด LINE",
         cta_btn_mail: "ส่งอีเมล",
 
-        footer_products: "หมวดผลิตภัณฑ์",
-        footer_contact: "ติดต่อเรา",
-        cat_pretreat: "Pretreatment",
-        cat_plating: "Plating",
-        cat_blackening: "Blackening",
-        cat_passivation: "Passivation",
-        cat_polishing: "Polishing",
-        cat_strippers: "Strippers",
-        cat_protective: "Protective Treatment",
-        cat_service: "Customer Service",
-        cat_equipment: "Equipment",
-
-        addr1: "📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
-        addr2: "📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160",
-        hours: "🕒 เวลาทำการ 08.00 - 17.00 น.",
-        phone_li: "📱 <a href=\"tel:+66925469887\">092 546 9887</a>",
-        footer_email: "✉️ : <a href=\"mailto:baumechemical@gmail.com\">baumechemical@gmail.com</a>",
-        footer_line: "💬 : <a href=\"https://line.me/ti/p/~baumechemical\" target=\"_blank\" rel=\"noopener\">@baumechemical</a>",
-        footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
-
-        copyright: "© 2025 Baume Chemical. All rights reserved."
+        /* footer text ของหน้านี้เราใช้ footer แบบคงที่จากเทมเพลตที่จำไว้ */
       },
       en: {
         meta_title: "About Us | Baume Chemical",
@@ -585,37 +603,18 @@
         cta_title: "Need help designing or fixing your process?",
         cta_text: "Talk to our technical team to assess your line and pick the right solution.",
         cta_btn_line: "Add LINE",
-        cta_btn_mail: "Send Email",
-
-        footer_products: "Products",
-        footer_contact: "Contact Us",
-        cat_pretreat: "Pretreatment",
-        cat_plating: "Plating",
-        cat_blackening: "Blackening",
-        cat_passivation: "Passivation",
-        cat_polishing: "Polishing",
-        cat_strippers: "Strippers",
-        cat_protective: "Protective Treatment",
-        cat_service: "Customer Service",
-        cat_equipment: "Equipment",
-
-        addr1: "📍 31 Soi Phetkasem 48, Yak 24, Bang Waek",
-        addr2: "📍 Phasi Charoen, Bangkok 10160",
-        hours: "🕒 Hours 08:00 – 17:00",
-        phone_li: "📱 <a href=\"tel:+66925469887\">+66 92 546 9887</a>",
-        footer_email: "✉️ : <a href=\"mailto:baumechemical@gmail.com\">baumechemical@gmail.com</a>",
-        footer_line: "💬 : <a href=\"https://line.me/ti/p/~baumechemical\" target=\"_blank\" rel=\"noopener\">@baumechemical</a>",
-        footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
-
-        copyright: "© 2025 Baume Chemical. All rights reserved."
+        cta_btn_mail: "Send Email"
       }
     };
 
     function applyLang(lang){
       document.documentElement.lang = lang;
-      document.querySelectorAll('.lang-fab .lang-btn')
+
+      // toggle all lang buttons (รวม FAB)
+      document.querySelectorAll('.lang-btn')
         .forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
 
+      // text/html nodes
       document.querySelectorAll('[data-i18n-key]').forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const isHTML = node.hasAttribute('data-i18n-html');
@@ -626,6 +625,7 @@
         }
       });
 
+      // attribute mapping: e.g. content:meta_desc
       document.querySelectorAll('[data-i18n-attr]').forEach(node=>{
         const pairs = node.getAttribute('data-i18n-attr').split(',');
         pairs.forEach(pair=>{
@@ -635,13 +635,21 @@
         });
       });
 
+      // also set meta og:locale
+      const ogLoc = document.getElementById('ogLocale');
+      if(ogLoc) ogLoc.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH');
+
+      // sync <title>
+      const titleNode = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleNode) document.title = titleNode.textContent;
+
       try{ localStorage.setItem('lang', lang); }catch(e){}
     }
 
     (function initLang(){
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      document.querySelectorAll('.lang-fab .lang-btn')
+      document.querySelectorAll('.lang-btn')
         .forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
