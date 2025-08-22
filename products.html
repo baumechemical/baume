@@ -378,6 +378,34 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
   transform:translateX(-100%); animation: sk-shine 1.1s infinite;
 }
 @keyframes sk-shine{ to{ transform:translateX(100%); } }
+/* Footer robustness */
+.footer-grid{
+  display:grid;
+  gap:22px;
+  grid-template-columns:2fr 1fr 1fr;
+  align-items:start;
+}
+.footer-list{ list-style:none; margin:8px 0 0; padding:0; }
+.footer-list li{ margin:6px 0; word-break:break-word; }
+.site-footer .footer-inner{ max-width:var(--container); margin:0 auto; }
+@media(max-width:900px){
+  .footer-grid{ grid-template-columns:1fr; }
+}
+/* FIX: ทำให้ปุ่มใน Quick View/Modal มองเห็นบนพื้นขาว */
+.modal .actions .btn.ghost,
+#modalActions .btn.ghost,
+.qv__actions .btn.ghost{
+  background: transparent;
+  border-color: var(--brand-2, #387b5b) !important;
+  color: var(--brand-2, #387b5b) !important;
+}
+
+.modal .actions .btn.ghost:hover,
+#modalActions .btn.ghost:hover,
+.qv__actions .btn.ghost:hover{
+  background: var(--brand-2, #387b5b) !important;
+  color: #fff !important;
+}
 
   </style>
 </head>
@@ -528,651 +556,364 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
   </footer>
 
   <noscript><div style="padding:16px;text-align:center">โปรดเปิดใช้งาน JavaScript เพื่อดูเนื้อหา</div></noscript>
-  <script>
-    /* ========== DATA ========== */
-    const PRODUCTS = [
-      {
-        id:"pretreatment",
-        name:"เคมีล้างผิวงาน | Pretreatment & Cleaning",
-        cat:"pretreatment", pop:1,
-        desc:"ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิค เตรียมผิวก่อนชุบ ลดคราบน้ำมัน/สนิม",
-        tags:["pretreatment","cleaning","degreaser","ล้างไขมัน","ultrasonic","acid","alkaline"],
-        img:"https://i.imgur.com/QfsLZ0I.jpeg",
-        href:"Pretreatment.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: เคมีล้างผิวงาน",
-        tds:"https://www.baumechemical.com/docs/tds/pretreatment-cleaning.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/pretreatment-cleaning.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"plating",
-        name:"น้ำยาชุบโลหะ | Metal Plating Chemistry",
-        cat:"plating", pop:2,
-        desc:" เราพัฒนาสูตรสำหรับชุบซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้าและโลหะหลากชนิด",
-        tags:["plating","zinc","nickel","copper","brass","white bronze","ชุบโลหะ"],
-        img:"https://i.imgur.com/DzCh11Q.jpeg",
-        href:"PlatingCoating.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาชุบโลหะ",
-        tds:"https://www.baumechemical.com/docs/tds/metal-plating.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/metal-plating.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"blackening",
-        name:"น้ำยารมดำโลหะ | Blackening Solutions",
-        cat:"blackening", pop:3,
-        desc:"ผิวสวย สม่ำเสมอ ทนทาน บนชิ้นเหล็ก อลูมิเนียม ทองเหลือง ทองแดง",
-        tags:["blackening","black oxide","steel","brass","aluminium","รมดำ"],
-        img:"https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg",
-        href:"blackening.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารมดำ",
-        tds:"https://www.baumechemical.com/docs/tds/blackening.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/blackening.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"passivation",
-        name:"โครเมตบนซิงค์ | Passivation on Zinc",
-        cat:"passivation", pop:4,
-        desc:"เพิ่มความทนต่อการกัดกร่อน ทั้งโครม 3 และโครม 6",
-        tags:["passivation","chromate","trivalent","hex-free","โครเมต","โครเมต 3"],
-        img:"https://i.imgur.com/FovZyQU.jpeg",
-        href:"passivation.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: โครเมตบนซิงค์",
-        tds:"https://www.baumechemical.com/docs/tds/passivation-zinc.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/passivation-zinc.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-        swatches:["#b7d3ff","#ffe07a","#3b3b3b","#a5b38b"] // blue, yellow, black, olive (ตัวอย่างเฉด)
-      },
-      {
-        id:"strippers",
-        name:"น้ำยาลอกต่างๆ | Selective Strippers",
-        cat:"strippers", pop:5,
-        desc:"ลอกชั้นชุบ ออกไซด์ สี และคราบบนผิวโลหะอย่างแม่นยำ เตรียมพร้อมสำหรับขั้นตอนต่อไป",
-        tags:["stripper","deplate","paint remover","ลอกงาน","ลอกชุบ","ลอกสี"],
-        img:"https://img2.pic.in.th/pic/thumbnail-4.jpg",
-        href:"strippers.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาลอกต่างๆ",
-        tds:"https://www.baumechemical.com/docs/tds/selective-strippers.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/selective-strippers.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"polishing",
-        name:"น้ำยากัดเงาบนโลหะ | Chemical Polishing",
-        cat:"polishing", pop:6,
-        desc:"ให้ผิวเงางาม สม่ำเสมอ บนชิ้นงานสแตนเลส อลูมิเนียมและเหล็ก",
-        tags:["polishing","bright dip","electropolish","กัดเงา","ขัดเงา"],
-        img:"https://img5.pic.in.th/file/secure-sv1/thumbnail-5.jpg",
-        href:"polishing.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยากัดเงา",
-        tds:"https://www.baumechemical.com/docs/tds/chemical-polishing.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/chemical-polishing.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"protective",
-        name:"น้ำยารักษาผิวชุบให้คงทน | Protective Treatment",
-        cat:"protective", pop:7,
-        desc:"ช่วยคงคุณภาพผิวงานและยืดอายุการใช้งาน",
-        tags:["topcoat","sealant","anti-tarnish","รักษาผิว","เคลือบผิว","ท็อปโค้ท"],
-        img:"https://i.imgur.com/tP3buYl.jpeg",
-        href:"protective.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารักษาผิวชุบให้คงทน",
-        tds:"https://www.baumechemical.com/docs/tds/protective-treatment.pdf",
-        sds:"https://www.baumechemical.com/docs/sds/protective-treatment.pdf",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"service",
-        name:"งานบริการลูกค้า | On-site Technical Service",
-        cat:"service", pop:8,
-        desc:"ดูแลตรวจหน้างาน/แลปทดสอบน้ำยา/ที่ปรึกษากระบวนการชุบ",
-        tags:["service","on-site","technical","titration","QA","บริการหน้างาน","ตรวจอ่างชุบ"],
-        img:"https://img2.pic.in.th/pic/thumbnail-6.jpg",
-        href:"service.html",
-        mail:"mailto:baumechemical@gmail.com?subject=ติดต่อทีมเทคนิค: บริการหน้างาน",
-        specs:{ph:"—", temp:"—", current:"—"},
-      },
-      {
-        id:"equipment",
-        name:"วัสดุอุปกรณ์ | Equipment & Tools",
-        cat:"equipment", pop:9,
-        desc:"เครื่องมือที่เที่ยงตรงและเทคโนโลยีทันสมัยช่วยให้ได้งานชุบที่มีประสิทธิภาพมากที่สุด",
-        tags:["equipment","tools","anode basket","filter","heater","อุปกรณ์","เครื่องมือ"],
-        img:"https://i.imgur.com/BiTxYRw.jpeg",
-        href:"equipment.html",
-        mail:"mailto:baumechemical@gmail.com?subject=สอบถามราคา: วัสดุอุปกรณ์",
-        specs:{ph:"—", temp:"—", current:"—"},
-      }
-    ];
+<script>
+/* ========== DATA (สองภาษาในแต่ละการ์ด) ========== */
+const PRODUCTS = [
+  {
+    id:"pretreatment", cat:"pretreatment", pop:1,
+    name:{ th:"เคมีล้างผิวงาน | Pretreatment & Cleaning", en:"Pretreatment & Cleaning Chemicals" },
+    desc:{ th:"ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิค เตรียมผิวก่อนชุบ ลดคราบน้ำมัน/สนิม",
+           en:"Acid/alkaline degreasers and ultrasonic cleaners. Prepare surfaces before plating; remove oils and rust." },
+    tags:{ th:["pretreatment","cleaning","degreaser","ล้างไขมัน","ultrasonic","acid","alkaline"],
+           en:["pretreatment","cleaning","degreaser","ultrasonic","acid","alkaline"] },
+    img:"https://i.imgur.com/QfsLZ0I.jpeg",
+    href:"Pretreatment.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: เคมีล้างผิวงาน",
+    tds:"https://www.baumechemical.com/docs/tds/pretreatment-cleaning.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/pretreatment-cleaning.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"plating", cat:"plating", pop:2,
+    name:{ th:"น้ำยาชุบโลหะ | Metal Plating Chemistry", en:"Metal Plating Chemistry" },
+    desc:{ th:"เราพัฒนาสูตรสำหรับชุบซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้าและโลหะหลากชนิด",
+           en:"Formulations for zinc, nickel, copper, brass, electro-lacquer and more." },
+    tags:{ th:["plating","zinc","nickel","copper","brass","white bronze","ชุบโลหะ"],
+           en:["plating","zinc","nickel","copper","brass","white bronze"] },
+    img:"https://i.imgur.com/DzCh11Q.jpeg",
+    href:"PlatingCoating.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาชุบโลหะ",
+    tds:"https://www.baumechemical.com/docs/tds/metal-plating.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/metal-plating.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"blackening", cat:"blackening", pop:3,
+    name:{ th:"น้ำยารมดำโลหะ | Blackening Solutions", en:"Blackening Solutions" },
+    desc:{ th:"ผิวสวย สม่ำเสมอ ทนทาน บนชิ้นเหล็ก อลูมิเนียม ทองเหลือง ทองแดง",
+           en:"Uniform, durable black finish on steel, aluminium, brass and copper." },
+    tags:{ th:["blackening","black oxide","steel","brass","aluminium","รมดำ"],
+           en:["blackening","black oxide","steel","brass","aluminium"] },
+    img:"https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg",
+    href:"blackening.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารมดำ",
+    tds:"https://www.baumechemical.com/docs/tds/blackening.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/blackening.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"passivation", cat:"passivation", pop:4,
+    name:{ th:"โครเมตบนซิงค์ | Passivation on Zinc", en:"Passivation on Zinc (Chromate)" },
+    desc:{ th:"เพิ่มความทนต่อการกัดกร่อน ทั้งโครม 3 และโครม 6",
+           en:"Improve corrosion resistance; trivalent systems and hex-6-free options." },
+    tags:{ th:["passivation","chromate","trivalent","hex-free","โครเมต","โครเมต 3"],
+           en:["passivation","chromate","trivalent","hex-free"] },
+    img:"https://i.imgur.com/FovZyQU.jpeg",
+    href:"passivation.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: โครเมตบนซิงค์",
+    tds:"https://www.baumechemical.com/docs/tds/passivation-zinc.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/passivation-zinc.pdf",
+    specs:{ph:"—", temp:"—", current:"—"},
+    swatches:["#b7d3ff","#ffe07a","#3b3b3b","#a5b38b"]
+  },
+  {
+    id:"strippers", cat:"strippers", pop:5,
+    name:{ th:"น้ำยาลอกต่างๆ | Selective Strippers", en:"Selective Strippers" },
+    desc:{ th:"ลอกชั้นชุบ ออกไซด์ สี และคราบบนผิวโลหะอย่างแม่นยำ",
+           en:"Selective removal of deposits, oxides, paints and residues." },
+    tags:{ th:["stripper","deplate","paint remover","ลอกงาน","ลอกชุบ","ลอกสี"],
+           en:["stripper","deplate","paint remover","coating remover"] },
+    img:"https://img2.pic.in.th/pic/thumbnail-4.jpg",
+    href:"strippers.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาลอกต่างๆ",
+    tds:"https://www.baumechemical.com/docs/tds/selective-strippers.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/selective-strippers.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"polishing", cat:"polishing", pop:6,
+    name:{ th:"น้ำยากัดเงาบนโลหะ | Chemical Polishing", en:"Chemical Polishing" },
+    desc:{ th:"ให้ผิวเงางาม สม่ำเสมอ บนชิ้นงานสแตนเลส อลูมิเนียมและเหล็ก",
+           en:"Consistent bright finish on stainless steel, aluminium, and steel." },
+    tags:{ th:["polishing","bright dip","electropolish","กัดเงา","ขัดเงา"],
+           en:["polishing","bright dip","electropolish"] },
+    img:"https://img5.pic.in.th/file/secure-sv1/thumbnail-5.jpg",
+    href:"polishing.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยากัดเงา",
+    tds:"https://www.baumechemical.com/docs/tds/chemical-polishing.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/chemical-polishing.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"protective", cat:"protective", pop:7,
+    name:{ th:"น้ำยารักษาผิวชุบให้คงทน | Protective Treatment", en:"Protective Treatment" },
+    desc:{ th:"ช่วยคงคุณภาพผิวงานและยืดอายุการใช้งาน",
+           en:"Maintain finish quality and extend service life." },
+    tags:{ th:["topcoat","sealant","anti-tarnish","รักษาผิว","เคลือบผิว","ท็อปโค้ท"],
+           en:["topcoat","sealant","anti-tarnish"] },
+    img:"https://i.imgur.com/tP3buYl.jpeg",
+    href:"protective.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารักษาผิวชุบให้คงทน",
+    tds:"https://www.baumechemical.com/docs/tds/protective-treatment.pdf",
+    sds:"https://www.baumechemical.com/docs/sds/protective-treatment.pdf",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"service", cat:"service", pop:8,
+    name:{ th:"งานบริการลูกค้า | On-site Technical Service", en:"On-site Technical Service" },
+    desc:{ th:"ดูแลตรวจหน้างาน/แลปทดสอบน้ำยา/ที่ปรึกษากระบวนการชุบ",
+           en:"On-site inspection, lab titration and process consulting." },
+    tags:{ th:["service","on-site","technical","titration","QA","บริการหน้างาน","ตรวจอ่างชุบ"],
+           en:["service","on-site","technical","titration","QA"] },
+    img:"https://img2.pic.in.th/pic/thumbnail-6.jpg",
+    href:"service.html",
+    mail:"mailto:baumechemical@gmail.com?subject=ติดต่อทีมเทคนิค: บริการหน้างาน",
+    specs:{ph:"—", temp:"—", current:"—"}
+  },
+  {
+    id:"equipment", cat:"equipment", pop:9,
+    name:{ th:"วัสดุอุปกรณ์ | Equipment & Tools", en:"Equipment & Tools" },
+    desc:{ th:"เครื่องมือที่เที่ยงตรงและเทคโนโลยีทันสมัยช่วยให้ได้งานชุบที่มีประสิทธิภาพมากที่สุด",
+           en:"Precision instruments and modern technology for efficient plating." },
+    tags:{ th:["equipment","tools","anode basket","filter","heater","อุปกรณ์","เครื่องมือ"],
+           en:["equipment","tools","anode basket","filter","heater"] },
+    img:"https://i.imgur.com/BiTxYRw.jpeg",
+    href:"equipment.html",
+    mail:"mailto:baumechemical@gmail.com?subject=สอบถามราคา: วัสดุอุปกรณ์",
+    specs:{ph:"—", temp:"—", current:"—"}
+  }
+];
 
-    /* ========== UTIL ========== */
-    const $ = sel => document.querySelector(sel);
-    const $$ = sel => document.querySelectorAll(sel);
-    const grid = $('#grid'), countEl = $('#count'), emptyEl = $('#empty');
+/* ========== UTIL & I18N ========== */
+const $ = sel => document.querySelector(sel);
+const grid = $('#grid'), countEl = $('#count'), emptyEl = $('#empty');
 
-    function escapeReg(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-    function highlight(text, query){
-      if(!query) return text;
-      const re = new RegExp('('+escapeReg(query)+')','ig');
-      return text.replace(re, '<span class="hl">$1</span>');
-    }
+let currentLang = (()=>{
+  try{ const v = localStorage.getItem('lang'); if(v==='en'||v==='th') return v; }catch(e){}
+  return 'th';
+})();
 
-    /* ========== RENDER CARD ========== */
-    function cardHTML(p, q=""){
-      const sw = (p.swatches||[]).map(c=>`<span class="swatch" style="background:${c}"></span>`).join('');
-      const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
-      const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
-      return `
-      <article class="card" data-id="${p.id}" data-cat="${p.cat}">
-        <button class="quick" data-id="${p.id}" aria-label="Quick view">Quick view</button>
-        <div class="thumb" style="background-image:url('${p.img}')"></div>
-        <div class="body">
-          <div class="badges"><span class="badge">${p.cat[0].toUpperCase()+p.cat.slice(1)}</span></div>
-          <h3>${highlight(p.name, q)}</h3>
-          <p class="meta">${highlight(p.desc, q)}</p>
-          ${sw?`<div class="swatches" title="Chromate colour swatches">${sw}</div>`:""}
-          <div class="actions">
-            <a class="btn" href="${p.href}" target="_blank" rel="noopener">ดูรายละเอียด</a>
-            <a class="btn ghost" href="${p.mail}">ขอใบเสนอราคา</a>
-            ${tds}${sds}
-          </div>
-        </div>
-      </article>`;
-    }
+const I18N = {
+  th:{ meta_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
+       meta_desc:"เคมีงานชุบและการเตรียมผิวสำหรับอุตสาหกรรม: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing พร้อมทีมเทคนิคและบริการหน้างานครบวงจร.",
+       og_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
+       og_desc:"โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน",
+       tw_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
+       tw_desc:"โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน",
+       hero_title:"รายการผลิตภัณฑ์",
+       hero_tagline:"ค้นหาตามหมวดหมู่หรือชื่อผลิตภัณฑ์ และขอใบเสนอราคาได้ทันที",
+       btn_products:"ดูหมวดผลิตภัณฑ์", btn_consult:"ปรึกษาทีมเทคนิค",
+       sub_title:"รายการผลิตภัณฑ์", sub_desc:"กรอง/ค้นหาและเรียงลำดับ เพื่อหาหมวดที่ต้องการได้รวดเร็ว",
+       footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+       search_placeholder:"ค้นหาชื่อ/คุณสมบัติ… (เช่น nickel, passivation)",
+       cat_all:"ทุกหมวดหมู่", sort_popular:"เรียงตามแนะนำ", sort_name:"ชื่อ (A–Z)",
+       count:"พบ {n} รายการ", empty:"ไม่พบรายการที่ตรงเงื่อนไขการค้นหา",
+       btn_details:"ดูรายละเอียด", btn_quote:"ขอใบเสนอราคา", btn_quickview:"Quick View",
+       chip_temp_label:"อุณหภูมิ", chip_current_label:"ช่วงกระแส"
+  },
+  en:{ meta_title:"Electroplating & Surface Finishing Chemicals | Baume Chemical",
+       meta_desc:"Complete solutions: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing — with on-site technical service.",
+       og_title:"Products | Baume Chemical",
+       og_desc:"End-to-end plating chemistry with consulting and on-site testing.",
+       tw_title:"Products | Baume Chemical",
+       tw_desc:"End-to-end plating chemistry with consulting and on-site testing.",
+       hero_title:"Product Catalog",
+       hero_tagline:"Filter by category or search by name, then request a quote instantly.",
+       btn_products:"Browse Categories", btn_consult:"Talk to Technical Team",
+       sub_title:"Product Catalog", sub_desc:"Filter, search and sort to find faster",
+       footer_products:"Product Categories", footer_contact:"Contact Us",
+       search_placeholder:"Search name/spec… (e.g., nickel, passivation)",
+       cat_all:"All categories", sort_popular:"Recommended", sort_name:"Name (A–Z)",
+       count:"Found {n} items", empty:"No items match your filters",
+       btn_details:"Details", btn_quote:"Request Quote", btn_quickview:"Quick View",
+       chip_temp_label:"Temperature", chip_current_label:"Current range"
+  }
+};
 
-    /* ========== FILTER / SORT / SEARCH ========== */
-    const state = { q:"", cat:"", sort:"popular" };
-    const PAGE_SIZE = 6;
-    let viewList = []; // filtered + sorted
-    let page = 0;      // pagination for infinite scroll
-    let loading = false;
+const t = k => (I18N[currentLang] && I18N[currentLang][k]) || k;
+function escapeReg(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function highlight(text, query){ if(!query) return text; const re = new RegExp('('+escapeReg(query)+')','ig'); return text.replace(re, '<span class="hl">$1</span>'); }
 
-    function applyFilters(){
-      const q = state.q.trim().toLowerCase();
-      viewList = PRODUCTS.filter(p=>{
-        const inCat = !state.cat || p.cat===state.cat;
-        const qmatch = !q || [p.name,p.desc,(p.tags||[]).join(' ')].join(' ').toLowerCase().includes(q);
-        return inCat && qmatch;
-      });
-      if(state.sort==="name"){ viewList.sort((a,b)=> a.name.localeCompare(b.name,'th')); }
-      else { viewList.sort((a,b)=> a.pop - b.pop); }
-      page = 0;
-      grid.innerHTML = "";
-      updateCount();
-      if(viewList.length===0){ emptyEl.style.display='block'; return; }
-      emptyEl.style.display='none';
-      loadMore(true);
-    }
+const nameOf = p => (p.name?.[currentLang] || p.name?.th || p.name?.en || '');
+const descOf = p => (p.desc?.[currentLang] || p.desc?.th || p.desc?.en || '');
+const tagsStr = p => [...(p.tags?.th||[]), ...(p.tags?.en||[])].join(' ');
 
-    function updateCount(){
-      countEl.textContent = `พบ ${viewList.length} รายการ`;
-    }
+/* ========== RENDER CARD (พร้อม data-* ครบ) ========== */
+function cardHTML(p, q=""){
+  const sw = (p.swatches||[]).map(c=>`<span class="swatch" style="background:${c}"></span>`).join('');
+  const tdsHref = p.tds || '';       // อาจไม่มี
+  const mailHref = p.mail || '';     // อาจไม่มี
+  const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
+  const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
 
-    /* ========== SKELETON + INFINITE SCROLL ========== */
-    function addSkeleton(n=PAGE_SIZE){
-      const frag = document.createDocumentFragment();
-      for(let i=0;i<n;i++){
-        const sk = document.createElement('div');
-        sk.className = 'skeleton';
-        sk.innerHTML = `<div class="sk-thumb"></div><div class="sk-lines">
-          <div class="sk-line lg"></div><div class="sk-line md"></div><div class="sk-line sm"></div></div>`;
-        frag.appendChild(sk);
-      }
-      grid.appendChild(frag);
-    }
-
-    function loadMore(initial=false){
-      if(loading) return;
-      loading = true;
-      addSkeleton(initial? PAGE_SIZE : Math.min(PAGE_SIZE, viewList.length - page*PAGE_SIZE));
-      setTimeout(()=>{ // simulate async / allow skeleton to paint
-        const start = page*PAGE_SIZE;
-        const end = Math.min(start + PAGE_SIZE, viewList.length);
-        const q = state.q.trim();
-        const html = viewList.slice(start,end).map(p=>cardHTML(p,q)).join('');
-        // replace last N skeletons with real cards
-        const skels = [...grid.querySelectorAll('.skeleton')].slice(0, end-start);
-        skels.forEach(el=>el.remove());
-        grid.insertAdjacentHTML('beforeend', html);
-        page++;
-        loading = false;
-      }, 200);
-    }
-
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting && !loading){
-          const hasMore = page*PAGE_SIZE < viewList.length;
-          if(hasMore) loadMore();
-        }
-      });
-    }, {rootMargin:"600px 0px"});
-    io.observe($('#sentinel'));
-
-    /* ========== QUICK VIEW MODAL ========== */
-    function openModal(p){
-      $('#modalImg').style.backgroundImage = `url('${p.img}')`;
-      $('#modalTitle').textContent = p.name;
-      $('#modalDesc').textContent = p.desc;
-      $('#modalBadges').innerHTML = `<span class="badge">${p.cat[0].toUpperCase()+p.cat.slice(1)}</span>`;
-      const c = p.specs || {};
-      $('#modalChips').innerHTML = `
-        <span class="chip">pH: ${c.ph ?? '—'}</span>
-        <span class="chip">อุณหภูมิ: ${c.temp ?? '—'}</span>
-        <span class="chip">ช่วงกระแส: ${c.current ?? '—'}</span>
-      `;
-      const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
-      const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
-      $('#modalActions').innerHTML = `
-        <a class="btn" target="_blank" rel="noopener" href="${p.href}">ดูรายละเอียด</a>
-        <a class="btn ghost" href="${p.mail}">ขอใบเสนอราคา</a>
+  return `
+  <article class="card" data-id="${p.id}" data-cat="${p.cat}">
+    <button class="quick" data-id="${p.id}" aria-label="${t('btn_quickview')}">${t('btn_quickview')}</button>
+    <div class="thumb" style="background-image:url('${p.img}')"></div>
+    <div class="body">
+      <div class="badges"><span class="badge">${p.cat[0].toUpperCase()+p.cat.slice(1)}</span></div>
+      <h3>${highlight(nameOf(p), q)}</h3>
+      <p class="meta">${highlight(descOf(p), q)}</p>
+      ${sw?`<div class="swatches" title="Chromate colour swatches">${sw}</div>`:""}
+      <div class="actions">
+        <a class="btn" href="${p.href}" target="_blank" rel="noopener">${t('btn_details')}</a>
+        <a class="btn ghost" href="${p.mail}">${t('btn_quote')}</a>
         ${tds}${sds}
-      `;
-      const bd = $('#modalBackdrop');
-      bd.style.display = 'flex';
-      bd.setAttribute('aria-hidden','false');
-    }
-    function closeModal(){
-      const bd = $('#modalBackdrop');
-      bd.style.display = 'none';
-      bd.setAttribute('aria-hidden','true');
-    }
-    document.addEventListener('click', e=>{
-      if(e.target.matches('.quick')){ const p = PRODUCTS.find(x=>x.id===e.target.dataset.id); if(p) openModal(p); }
-      if(e.target.id==='modalClose' || e.target.id==='modalBackdrop') closeModal();
-    });
-    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+      </div>
+    </div>
+  </article>`;
+}
 
-    /* ========== SEARCH EVENTS (debounce) ========== */
-    const deb = (fn,ms=250)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms);} };
-    $('#q').addEventListener('input', deb(e=>{ state.q=e.target.value; applyFilters(); }, 200));
-    $('#cat').addEventListener('change', e=>{ state.cat=e.target.value; applyFilters(); });
-    $('#sort').addEventListener('change', e=>{ state.sort=e.target.value; applyFilters(); });
+/* ========== FILTER / SORT / SEARCH ========== */
+const state = { q:"", cat:"", sort:"popular" };
+const PAGE_SIZE = 6;
+let viewList = [], page = 0, loading = false;
 
-    /* ========== HEADER HEIGHT + MOBILE MENU ========== */
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const setH = () => {
-        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
-        document.documentElement.style.setProperty('--header-h', h + 'px');
-      };
-      window.addEventListener('load', setH, {once:true});
-      window.addEventListener('resize', setH);
-      setH();
+function updateCount(){ countEl.textContent = (I18N[currentLang].count||'Found {n} items').replace('{n}', viewList.length); }
+function addSkeleton(n=PAGE_SIZE){
+  const frag = document.createDocumentFragment();
+  for(let i=0;i<n;i++){
+    const sk = document.createElement('div');
+    sk.className = 'skeleton';
+    sk.innerHTML = `<div class="sk-thumb"></div><div class="sk-lines">
+      <div class="sk-line lg"></div><div class="sk-line md"></div><div class="sk-line sm"></div></div>`;
+    frag.appendChild(sk);
+  }
+  grid.appendChild(frag);
+}
+function loadMore(initial=false){
+  if(loading) return; loading = true;
+  addSkeleton(initial? PAGE_SIZE : Math.min(PAGE_SIZE, viewList.length - page*PAGE_SIZE));
+  setTimeout(()=>{
+    const start = page*PAGE_SIZE, end = Math.min(start + PAGE_SIZE, viewList.length);
+    const q = state.q.trim();
+    const html = viewList.slice(start,end).map(p=>cardHTML(p,q)).join('');
+    [...grid.querySelectorAll('.skeleton')].slice(0, end-start).forEach(el=>el.remove());
+    grid.insertAdjacentHTML('beforeend', html);
+    page++; loading = false;
+  }, 200);
+}
+function applyFilters(){
+  const q = state.q.trim().toLowerCase();
+  viewList = PRODUCTS.filter(p=>{
+    const inCat = !state.cat || p.cat===state.cat;
+    const hay = (nameOf(p)+' '+descOf(p)+' '+tagsStr(p)).toLowerCase();
+    const qmatch = !q || hay.includes(q);
+    return inCat && qmatch;
+  });
+  if(state.sort==="name"){ viewList.sort((a,b)=> nameOf(a).localeCompare(nameOf(b), 'th')); }
+  else { viewList.sort((a,b)=> a.pop - b.pop); }
 
-      const toggle = header?.querySelector('.nav-toggle');
-      if(toggle){
-        toggle.addEventListener('click', function(){
-          const opened = header.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(opened));
-        });
-        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
-          header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-        }));
-      }
-    })();
+  page = 0; grid.innerHTML = ""; updateCount();
+  if(viewList.length===0){ emptyEl.textContent = I18N[currentLang].empty; emptyEl.style.display='block'; return; }
+  emptyEl.style.display='none'; loadMore(true);
+}
 
-    /* ========== HERO SLIDER + DOTS ========== */
-    (function(){
-      const slides = [...document.querySelectorAll('.slide')];
-      const dotsWrap = document.querySelector('.dots');
-      if(slides.length===0 || !dotsWrap) return;
-      slides.forEach((_, i)=>{
-        const b = document.createElement('button');
-        b.className = 'dot'; b.type = 'button'; b.setAttribute('aria-label', 'สไลด์ ' + (i+1));
-        b.addEventListener('click', ()=> go(i));
-        dotsWrap.appendChild(b);
-      });
-      let idx = 0, t = null; const dots = [...dotsWrap.children];
-      function go(n){
-        slides[idx].classList.remove('active'); dots[idx].setAttribute('aria-current','false');
-        idx = (n + slides.length) % slides.length;
-        slides[idx].classList.add('active'); dots[idx].setAttribute('aria-current','true');
-      }
-      function tick(){ go(idx+1); }
-      dots[0].setAttribute('aria-current','true');
-      t = setInterval(tick, 5200);
-      const hero = document.querySelector('.hero');
-      hero.addEventListener('mouseenter', ()=> clearInterval(t));
-      hero.addEventListener('mouseleave', ()=> t = setInterval(tick, 5200));
-    })();
+/* ========== QUICK VIEW (ใช้ modal เดิม) ========== */
+function openModal(p){
+  $('#modalImg').style.backgroundImage = `url('${p.img}')`;
+  $('#modalTitle').textContent = nameOf(p);
+  $('#modalDesc').textContent = descOf(p);
+  $('#modalBadges').innerHTML = `<span class="badge">${p.cat[0].toUpperCase()+p.cat.slice(1)}</span>`;
+  const c = p.specs || {};
+  $('#modalChips').innerHTML = `
+    <span class="chip">pH: ${c.ph ?? '—'}</span>
+    <span class="chip">${t('chip_temp_label')}: ${c.temp ?? '—'}</span>
+    <span class="chip">${t('chip_current_label')}: ${c.current ?? '—'}</span>`;
+  const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
+  const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
+  $('#modalActions').innerHTML = `
+    <a class="btn" target="_blank" rel="noopener" href="${p.href}">${t('btn_details')}</a>
+    <a class="btn ghost" href="${p.mail}">${t('btn_quote')}</a>
+    ${tds}${sds}`;
+  const bd = $('#modalBackdrop'); bd.style.display='flex'; bd.setAttribute('aria-hidden','false');
+}
+function closeModal(){ const bd = $('#modalBackdrop'); bd.style.display='none'; bd.setAttribute('aria-hidden','true'); }
+document.addEventListener('click', e=>{
+  if(e.target.matches('.quick')){ const p = PRODUCTS.find(x=>x.id===e.target.dataset.id); if(p) openModal(p); }
+  if(e.target.id==='modalClose' || e.target.id==='modalBackdrop') closeModal();
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 
-    /* ========== I18N (hero + meta สำคัญ) ========== */
-    const I18N = {
-      th:{ meta_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
-           meta_desc:"เคมีงานชุบและการเตรียมผิวสำหรับอุตสาหกรรม: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing พร้อมทีมเทคนิคและบริการหน้างานครบวงจร.",
-           og_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
-           og_desc:"โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน",
-           tw_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
-           tw_desc:"โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน",
-           hero_title:"รายการผลิตภัณฑ์", hero_tagline:"ค้นหาตามหมวดหมู่หรือชื่อผลิตภัณฑ์ และขอใบเสนอราคาได้ทันที",
-           sub_title:"รายการผลิตภัณฑ์", sub_desc:"กรอง/ค้นหาและเรียงลำดับ เพื่อหาหมวดที่ต้องการได้รวดเร็ว",
-           empty:"ไม่พบรายการที่ตรงเงื่อนไขการค้นหา"
-      },
-      en:{ meta_title:"Electroplating & Surface Finishing Chemicals | Baume Chemical",
-           meta_desc:"Complete solutions: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing — with on-site technical service.",
-           og_title:"Products | Baume Chemical",
-           og_desc:"End-to-end plating chemistry with consulting and on-site testing.",
-           tw_title:"Products | Baume Chemical",
-           tw_desc:"End-to-end plating chemistry with consulting and on-site testing.",
-           hero_title:"Product Catalog",
-           hero_tagline:"Filter by category or search by name, then request a quote instantly.",
-           sub_title:"Product Catalog", sub_desc:"Filter, search and sort to find faster",
-           empty:"No items match your filters"
-      }
-    };
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]'),
-      metaTitle: document.getElementById('metaTitle'),
-      metaDesc: document.getElementById('metaDesc'),
-      ogTitle: document.getElementById('ogTitle'),
-      ogDesc: document.getElementById('ogDesc'),
-      ogLocale: document.getElementById('ogLocale'),
-      twTitle: document.getElementById('twTitle'),
-      twDesc: document.getElementById('twDesc')
-    };
-    function applyLang(lang){
-      document.documentElement.lang = lang;
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
-      els.translatables().forEach(node => {
-        const key = node.getAttribute('data-i18n-key');
-        const t = I18N[lang][key]; if(t) node.textContent = t;
-      });
-      const t = I18N[lang];
-      if(t){
-        if(els.metaTitle){ els.metaTitle.textContent = t.meta_title; document.title = t.meta_title; }
-        if(els.metaDesc){ els.metaDesc.setAttribute('content', t.meta_desc); }
-        if(els.ogTitle){ els.ogTitle.setAttribute('content', t.og_title || t.meta_title); }
-        if(els.ogDesc){ els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc); }
-        if(els.twTitle){ els.twTitle.setAttribute('content', t.tw_title || t.meta_title); }
-        if(els.twDesc){ els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc); }
-        if(els.ogLocale){ els.ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH'); }
-      }
-      try{ localStorage.setItem('lang', lang); }catch(e){}
-      // อัปเดต empty text ด้วย
-      emptyEl.textContent = I18N[lang].empty;
-    }
-    (function initLang(){
-      const defaultLang = 'th';
-      let saved = null;
-      try { const v = localStorage.getItem('lang'); if (v === 'en' || v === 'th') saved = v; } catch(e){}
-      applyLang(saved || defaultLang);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
-    })();
+/* ========== EVENTS + HERO + HEADER (เดิม) ========== */
+const deb = (fn,ms=250)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms);} };
+$('#q').addEventListener('input', deb(e=>{ state.q=e.target.value; applyFilters(); }, 200));
+$('#cat').addEventListener('change', e=>{ state.cat=e.target.value; applyFilters(); });
+$('#sort').addEventListener('change', e=>{ state.sort=e.target.value; applyFilters(); });
 
-    /* ========== BOOT ========== */
-    applyFilters(); // render first page
-  </script>
-<script>
-/* ========= PRODUCTS: Live Search + Category + Sort + TDS-only =========== */
 (function(){
-  const $ = (sel, ctx=document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-
-  const grid   = $('#grid');
-  const cards  = $$('#grid .card').map(el => ({
-    el,
-    name: (el.dataset.name || '').toLowerCase(),
-    tags: (el.dataset.tags || '').toLowerCase(),
-    cat : (el.dataset.cat  || '').toLowerCase(),
-    pop : Number(el.dataset.pop || 9999)
-  }));
-  const input  = $('#q');
-  const catSel = $('#cat');
-  const sortSel= $('#sort');
-  const count  = $('#count');
-  const empty  = $('#empty');
-
-  // ใส่ปุ่มเอกสารเฉพาะ TDS (ไม่สร้าง SDS)
-  cards.forEach(c=>{
-    const slot = c.el.querySelector('.docs-slot');
-    if(!slot) return;
-    const tds = c.el.dataset.tds;
-    slot.innerHTML = tds
-      ? `<a class="btn ghost" href="${tds}" target="_blank" rel="noopener">TDS</a>`
-      : '';
-  });
-
-  // ทำ index ค้นหาแบบเร็ว
-  const index = cards.map(c => ({
-    c,
-    str: (c.name + ' ' + c.tags).replace(/\s+/g,' ').trim()
-  }));
-
-  // debounce เบา ๆ
-  let t = null;
-  const debounce = (fn, ms=120) => (...args)=>{ clearTimeout(t); t = setTimeout(()=>fn(...args), ms); };
-
-  // กรอง + เรียง + อัปเดต UI
-  function applyFilter(){
-    grid.classList.add('filtering');
-
-    const qRaw = (input.value || '').trim().toLowerCase();
-    const tokens = qRaw.split(/\s+/).filter(Boolean);
-    const cat = (catSel && catSel.value) ? catSel.value.toLowerCase() : '';
-    const sort = (sortSel && sortSel.value) ? sortSel.value : 'popular';
-
-    // 1) กรอง
-    let visible = [];
-    index.forEach(({c, str})=>{
-      const catOK = !cat || c.cat === cat;
-      const textOK = tokens.length === 0 || tokens.every(tok => str.includes(tok));
-      const show = catOK && textOK;
-      c.el.hidden = !show;
-      if(show) visible.push(c);
-      // เคลียร์ไฮไลต์ทุกครั้งก่อนใส่ใหม่
-      clearHighlight(c.el);
-      if(show && tokens.length) highlight(c.el, tokens);
-    });
-
-    // 2) เรียง
-    if(sort === 'name'){
-      visible.sort((a,b)=> a.name.localeCompare(b.name, 'th'));
-    }else{
-      visible.sort((a,b)=> (a.pop||9999) - (b.pop||9999));
-    }
-    // 3) จัด DOM ใหม่ตามลำดับ
-    const frag = document.createDocumentFragment();
-    visible.forEach(c => frag.appendChild(c.el));
-    grid.appendChild(frag);
-
-    // 4) เคาน์เตอร์ + empty
-    count.textContent = `พบ ${visible.length} รายการ`;
-    empty.style.display = visible.length ? 'none' : 'block';
-
-    grid.classList.remove('filtering');
+  const header = document.getElementById('siteHeader');
+  const setH = () => { const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+  window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH); setH();
+  const toggle = header?.querySelector('.nav-toggle');
+  if(toggle){
+    toggle.addEventListener('click', function(){ const opened = header.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(opened)); });
+    header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }));
   }
-
-  // ====== Highlight helpers ======
-  function escapeRegExp(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-  function escapeHTML(s){
-    return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  }
-  function clearHighlight(card){
-    const nodes = [ card.querySelector('h3'), card.querySelector('.meta') ];
-    nodes.forEach(n=>{
-      if(!n) return;
-      // ใช้ data-original ถ้ามี ไม่งั้นใช้ textContent ปัจจุบัน
-      const raw = n.getAttribute('data-original') || n.textContent;
-      n.setAttribute('data-original', raw);
-      n.innerHTML = escapeHTML(raw);
-    });
-  }
-  function highlight(card, tokens){
-    const nodes = [ card.querySelector('h3'), card.querySelector('.meta') ];
-    nodes.forEach(n=>{
-      if(!n) return;
-      let html = escapeHTML(n.getAttribute('data-original') || n.textContent);
-      tokens.forEach(tok=>{
-        html = html.replace(new RegExp(`(${escapeRegExp(tok)})`, 'gi'), '<mark>$1</mark>');
-      });
-      n.innerHTML = html;
-    });
-  }
-
-  // ====== Events ======
-  input && input.addEventListener('input', debounce(applyFilter, 90));
-  catSel && catSel.addEventListener('change', applyFilter);
-  sortSel && sortSel.addEventListener('change', applyFilter);
-
-  // เริ่มต้นครั้งแรก (แสดงทั้งหมด)
-  applyFilter();
 })();
-</script>
-<script>
-/* ========= Products: Live filter (หายจริง), ตัด SDS, กัน skeleton ========== */
 (function(){
-  const $  = (s, c=document)=> c.querySelector(s);
-  const $$ = (s, c=document)=> Array.from(c.querySelectorAll(s));
-
-  const grid   = $('#grid');
-  if(!grid) return;
-
-  const cards = $$('#grid .card').map(el => ({
-    el,
-    name: (el.dataset.name || '').toLowerCase(),
-    tags: (el.dataset.tags || '').toLowerCase(),
-    cat : (el.dataset.cat  || '').toLowerCase(),
-    pop : Number(el.dataset.pop || 9999)
-  }));
-
-  const input  = $('#q');
-  const catSel = $('#cat');
-  const sortSel= $('#sort');
-  const count  = $('#count');
-  const empty  = $('#empty');
-
-  /* --- ตัด SDS ให้เกลี้ยง (ป้องกันสคริปต์เก่าใส่กลับมา) --- */
-  function nukeSDS(){
-    // 1) ลบปุ่ม/ลิงก์ที่เป็น SDS
-    $$('#grid a, #grid button').forEach(el=>{
-      const txt  = (el.textContent || '').toLowerCase();
-      const href = (el.getAttribute('href') || '').toLowerCase();
-      if (txt.includes('sds') || href.includes('/sds/') || href.endsWith('sds.pdf')) {
-        el.remove();
-      }
-    });
-    // 2) ไม่ให้สคริปต์อื่นสร้างจาก data-sds
-    $$('#grid [data-sds]').forEach(el=> el.removeAttribute('data-sds'));
-
-    // 3) เติม TDS เท่านั้นใน docs-slot
-    cards.forEach(c=>{
-      const tds = c.el.dataset.tds;
-      const slot = c.el.querySelector('.docs-slot');
-      if(!slot) return;
-      slot.innerHTML = tds
-        ? `<a class="btn ghost" href="${tds}" target="_blank" rel="noopener">TDS</a>`
-        : '';
-    });
-  }
-  nukeSDS();
-
-  /* --- กัน skeleton แทรกมา (ถ้ามี infinite-scroll เดิม) --- */
-  const killSkeletons = (root=document)=>{
-    $$('.skeleton, .skeleton-card, [data-skeleton], .loading-skeleton, .card.skeleton', root)
-      .forEach(n=> n.remove());
-  };
-  killSkeletons(grid);
-  // เฝ้าดู DOM; ถ้ามีอะไรที่เป็น skeleton โผล่ ให้ลบทิ้งทันที
-  const mo = new MutationObserver(muts=>{
-    muts.forEach(m=>{
-      m.addedNodes.forEach(node=>{
-        if(!(node instanceof HTMLElement)) return;
-        if(node.matches('.skeleton, .skeleton-card, [data-skeleton], .loading-skeleton, .card.skeleton')) { node.remove(); return; }
-        killSkeletons(node);
-        // กัน SDS ที่ถูกแทรกใหม่
-        if(node.closest('#grid')) nukeSDS();
-      });
-    });
-  });
-  mo.observe(grid, {childList:true, subtree:true});
-
-  /* --- ทำดัชนีข้อความสำหรับค้นหา --- */
-  const index = cards.map(c => ({ c, str: (c.name + ' ' + c.tags).replace(/\s+/g,' ').trim() }));
-
-  /* --- ฟังก์ชันกรอง/เรียง + อัปเดต UI --- */
-  const escapeRegExp = s => s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-  const escapeHTML = s => s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-
-  function clearHighlight(card){
-    const nodes = [ card.querySelector('h3'), card.querySelector('.meta') ];
-    nodes.forEach(n=>{
-      if(!n) return;
-      const raw = n.getAttribute('data-original') || n.textContent || '';
-      n.setAttribute('data-original', raw);
-      n.innerHTML = escapeHTML(raw);
-    });
-  }
-  function highlight(card, tokens){
-    const nodes = [ card.querySelector('h3'), card.querySelector('.meta') ];
-    nodes.forEach(n=>{
-      if(!n) return;
-      let html = escapeHTML(n.getAttribute('data-original') || n.textContent || '');
-      tokens.forEach(tok=>{
-        html = html.replace(new RegExp(`(${escapeRegExp(tok)})`, 'gi'), '<mark>$1</mark>');
-      });
-      n.innerHTML = html;
-    });
-  }
-
-  let debounceT = null;
-  const debounce = (fn, ms=90) => (...args)=>{ clearTimeout(debounceT); debounceT = setTimeout(()=>fn(...args), ms); };
-
-  function applyFilter(){
-    const qRaw = (input?.value || '').trim().toLowerCase();
-    const tokens = qRaw.split(/\s+/).filter(Boolean);
-    const cat = (catSel && catSel.value) ? catSel.value.toLowerCase() : '';
-    const sort = (sortSel && sortSel.value) ? sortSel.value : 'popular';
-
-    let visible = [];
-
-    // กรอง: การ์ดที่ไม่แมตช์ -> หายไปจริง ๆ (hidden)
-    index.forEach(({c, str})=>{
-      const catOK  = !cat || c.cat === cat;
-      const textOK = tokens.length === 0 || tokens.every(tok => str.includes(tok));
-      const show = catOK && textOK;
-
-      // เคลียร์/ใส่ highlight
-      clearHighlight(c.el);
-      if(show && tokens.length) highlight(c.el, tokens);
-
-      c.el.hidden = !show;       // <-- หายไปเลย
-      if(show) visible.push(c);
-    });
-
-    // เรียง
-    visible.sort(sort === 'name'
-      ? (a,b)=> a.name.localeCompare(b.name, 'th')
-      : (a,b)=> (a.pop||9999) - (b.pop||9999)
-    );
-
-    // จัด DOM ใหม่ตามลำดับ
-    const frag = document.createDocumentFragment();
-    visible.forEach(c => frag.appendChild(c.el));
-    grid.appendChild(frag);
-
-    // อัปเดตเคาน์เตอร์ + empty
-    if(count) count.textContent = `พบ ${visible.length} รายการ`;
-    if(empty) empty.style.display = visible.length ? 'none' : 'block';
-  }
-
-  // Events
-  input && input.addEventListener('input', debounce(applyFilter, 90));
-  catSel && catSel.addEventListener('change', applyFilter);
-  sortSel && sortSel.addEventListener('change', applyFilter);
-
-  // ช็อตคัต: Esc เพื่อล้างค้นหา
-  input && input.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape'){ input.value=''; applyFilter(); input.blur(); }
-  });
-
-  // แสดงผลครั้งแรก (ทั้งหมด)
-  applyFilter();
+  const slides = [...document.querySelectorAll('.slide')];
+  const dotsWrap = document.querySelector('.dots'); if(slides.length===0 || !dotsWrap) return;
+  slides.forEach((_, i)=>{ const b = document.createElement('button'); b.className='dot'; b.type='button'; b.setAttribute('aria-label', 'Slide '+(i+1)); b.addEventListener('click', ()=> go(i)); dotsWrap.appendChild(b); });
+  let idx = 0, tmr = null; const dots = [...dotsWrap.children];
+  function go(n){ slides[idx].classList.remove('active'); dots[idx].setAttribute('aria-current','false'); idx = (n + slides.length) % slides.length; slides[idx].classList.add('active'); dots[idx].setAttribute('aria-current','true'); }
+  function tick(){ go(idx+1); }
+  dots[0].setAttribute('aria-current','true'); tmr = setInterval(tick, 5200);
+  const hero = document.querySelector('.hero'); hero.addEventListener('mouseenter', ()=> clearInterval(tmr)); hero.addEventListener('mouseleave', ()=> tmr = setInterval(tick, 5200));
 })();
+
+/* ========== LANGUAGE SWITCH (อัปเดตหัวข้อ/ปุ่ม/placeholder/การ์ด) ========== */
+function applyLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('.lang-fab .lang-btn').forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+
+  document.querySelectorAll('[data-i18n-key]').forEach(node => {
+    const key = node.getAttribute('data-i18n-key'); const txt = I18N[lang][key]; if(txt) node.textContent = txt;
+  });
+
+  const meta = I18N[lang];
+  if(meta){
+    const titleEl = document.getElementById('metaTitle');
+    if(titleEl){ titleEl.textContent = meta.meta_title; document.title = meta.meta_title; }
+    document.getElementById('metaDesc')?.setAttribute('content', meta.meta_desc);
+    document.getElementById('ogTitle')?.setAttribute('content', meta.og_title || meta.meta_title);
+    document.getElementById('ogDesc')?.setAttribute('content', meta.og_desc || meta.meta_desc);
+    document.getElementById('twTitle')?.setAttribute('content', meta.tw_title || meta.meta_title);
+    document.getElementById('twDesc')?.setAttribute('content', meta.tw_desc || meta.meta_desc);
+    document.getElementById('ogLocale')?.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH');
+  }
+
+  const qInput = document.getElementById('q'); if(qInput) qInput.setAttribute('placeholder', I18N[lang].search_placeholder);
+  const allOpt = document.querySelector('#cat option[value=""]'); if(allOpt) allOpt.textContent = I18N[lang].cat_all;
+  const sPop = document.querySelector('#sort option[value="popular"]'); if(sPop) sPop.textContent = I18N[lang].sort_popular;
+  const sName = document.querySelector('#sort option[value="name"]'); if(sName) sName.textContent = I18N[lang].sort_name;
+
+  emptyEl.textContent = I18N[lang].empty;
+
+  try{ localStorage.setItem('lang', lang); }catch(e){}
+
+  applyFilters(); // re-render การ์ดตามภาษา
+}
+(function initLang(){
+  applyLang(currentLang);
+  document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+})();
+
+/* ========== FIRST RENDER + INFINITE SCROLL ========== */
+applyFilters();
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting && !loading){
+      const hasMore = page*PAGE_SIZE < viewList.length;
+      if(hasMore) loadMore();
+    }
+  });
+}, {rootMargin:"600px 0px"});
+io.observe(document.getElementById('sentinel'));
 </script>
+
 <!-- ===== Quick View Overlay ===== -->
 <div id="qv" class="qv" hidden>
   <div class="qv__backdrop" data-qv-close></div>
@@ -1198,125 +939,6 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
   </div>
 </div>
 
-<script>
-/* ========= Quick View (centered) ========= */
-(function(){
-  const qv = document.getElementById('qv');
-  if(!qv) return;
-
-  const imgEl   = qv.querySelector('#qvImg');
-  const titleEl = qv.querySelector('#qvTitle');
-  const metaEl  = qv.querySelector('#qvMeta');
-  const chipsEl = qv.querySelector('#qvChips');
-  const swEl    = qv.querySelector('#qvSwatches');
-  const actEl   = qv.querySelector('#qvActions');
-
-  const SELECTORS = ['[data-qv]', '.js-qv', '.quick-view']; // ทริกเกอร์ที่รองรับ
-
-  function openFromCard(card){
-    // รูป
-    const img = card.querySelector('img');
-    imgEl.src = img?.currentSrc || img?.src || '';
-    imgEl.alt = img?.alt || '';
-
-    // ชื่อ + คำโปรย
-    titleEl.textContent = card.querySelector('h3')?.textContent?.trim() || (card.dataset.name || '').split('|')[0].trim();
-    metaEl.textContent  = card.querySelector('.meta')?.textContent?.trim() || '';
-
-    // chips (ถ้ามี dataset เช่น data-ph="5.0–6.0" data-temp="25–35°C" data-amp="1–3 A/dm²")
-    chipsEl.innerHTML = '';
-    const chips = [];
-    if(card.dataset.ph)   chips.push(`pH ${card.dataset.ph}`);
-    if(card.dataset.temp) chips.push(`Temp ${card.dataset.temp}`);
-    if(card.dataset.amp)  chips.push(`Current ${card.dataset.amp}`);
-    chips.forEach(t=>{
-      const s = document.createElement('span');
-      s.className = 'qv__chip'; s.textContent = t;
-      chipsEl.appendChild(s);
-    });
-
-    // swatches สีโครเมต (รองรับ data-swatches="#ffd54f,#9ad0f5,#bec3c7")
-    swEl.innerHTML = '';
-    const swList = (card.dataset.swatches || '').split(',').map(s=>s.trim()).filter(Boolean);
-    swList.forEach(c=>{
-      const d = document.createElement('span');
-      d.className = 'qv__swatch'; d.style.background = c; d.title = c;
-      swEl.appendChild(d);
-    });
-    swEl.style.display = swList.length ? 'flex' : 'none';
-    chipsEl.style.display = chips.length ? 'flex' : 'none';
-
-    // ปุ่มการกระทำ (ดูรายละเอียด / TDS / ขอใบเสนอราคา)
-    actEl.innerHTML = '';
-    const link = card.querySelector('a[href]:not(.btn):not([data-qv])')?.href || card.querySelector('.btn[href]')?.href || '#';
-    const tds  = card.dataset.tds;
-
-    const btnDetail = document.createElement('a');
-    btnDetail.className = 'btn';
-    btnDetail.href = link;
-    btnDetail.textContent = 'ดูรายละเอียด';
-    actEl.appendChild(btnDetail);
-
-    if(tds){
-      const btnTds = document.createElement('a');
-      btnTds.className = 'btn ghost';
-      btnTds.href = tds; btnTds.target = '_blank'; btnTds.rel='noopener';
-      btnTds.textContent = 'TDS';
-      actEl.appendChild(btnTds);
-    }
-
-    const btnQuote = card.querySelector('.actions a[href^="mailto:"]')?.cloneNode(true);
-    if(btnQuote){ btnQuote.classList.add('btn','ghost'); actEl.appendChild(btnQuote); }
-
-    // โชว์โมดอลกลางจอ + ล็อกสกรอลล์ฉากหลัง
-    qv.hidden = false;
-    qv.classList.add('open');
-    document.documentElement.classList.add('qv-lock');
-    document.body.classList.add('qv-lock');
-
-    // โฟกัสเพื่อ Esc
-    qv.querySelector('.qv__close')?.focus();
-  }
-
-  function closeQV(){
-    qv.classList.remove('open');
-    document.documentElement.classList.remove('qv-lock');
-    document.body.classList.remove('qv-lock');
-    // รอแอนิเมชันนิด ก่อนซ่อนไว้จริง ๆ
-    setTimeout(()=>{ qv.hidden = true; }, 180);
-  }
-
-  // ปุ่ม/แบ็คดรอปปิด
-  qv.addEventListener('click', e=>{
-    if(e.target.matches('[data-qv-close]')) closeQV();
-  });
-  document.addEventListener('keydown', e=>{
-    if(e.key === 'Escape' && !qv.hidden) closeQV();
-  });
-
-  // เดเลเกตคลิกจากการ์ด: รองรับทั้ง .quick-view, .js-qv, [data-qv]
-  document.addEventListener('click', e=>{
-    const trigger = e.target.closest(SELECTORS.join(','));
-    if(!trigger) return;
-    const card = e.target.closest('.card');
-    if(!card) return;
-    e.preventDefault();
-    openFromCard(card);
-  });
-
-  // (ออปชัน) เติมปุ่ม Quick View ให้อัตโนมัติ หากยังไม่มี
-  document.querySelectorAll('#grid .card').forEach(card=>{
-    const has = card.querySelector(SELECTORS.join(','));
-    if(has) return;
-    const actions = card.querySelector('.actions');
-    if(!actions) return;
-    const b = document.createElement('button');
-    b.type='button'; b.className='btn ghost js-qv';
-    b.textContent='Quick View';
-    actions.insertBefore(b, actions.firstChild);
-  });
-})();
-</script>
 <!-- ===== Quick View Overlay (หากมีอยู่แล้ว ให้แทนที่บล็อกเดิม) ===== -->
 <div id="qv" class="qv" hidden>
   <div class="qv__backdrop" data-qv-close></div>
@@ -1520,7 +1142,45 @@ const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
   });
 })();
 </script>
+<!-- Drop-in: ลบปุ่ม SDS ออกจากทุกการ์ด + Quick View -->
+<script>
+(function(){
+  const TARGETS = '#grid .actions a, #modalActions a';
 
+  function isSDS(el){
+    const txt  = (el.textContent || '').trim().toLowerCase();
+    const href = (el.getAttribute('href') || '').toLowerCase();
+    // จับทั้งข้อความ/ไฟล์/โฟลเดอร์ sds
+    return txt === 'sds' ||
+           txt.includes('safety data') ||
+           href.includes('/sds/') ||
+           /(^|\/)sds(\.pdf)?(\?|#|$)/.test(href);
+  }
+
+  function nuke(root=document){
+    root.querySelectorAll(TARGETS).forEach(a => { if(isSDS(a)) a.remove(); });
+  }
+
+  // ลบครั้งแรก
+  nuke();
+  // กันสคริปต์อื่นสร้างจาก data-sds
+  document.querySelectorAll('#grid [data-sds]').forEach(n=> n.removeAttribute('data-sds'));
+
+  // เฝ้าดู DOM—ถ้ามีการ์ด/ปุ่มใหม่โผล่ ให้ลบทันที
+  const grid = document.getElementById('grid');
+  const modalActs = document.getElementById('modalActions');
+  const mo = new MutationObserver(muts=>{
+    for(const m of muts){
+      for(const node of m.addedNodes){
+        if(!(node instanceof HTMLElement)) continue;
+        if(node.matches && node.matches(TARGETS) && isSDS(node)) { node.remove(); continue; }
+        nuke(node);
+      }
+    }
+  });
+  if(grid) mo.observe(grid, {childList:true, subtree:true});
+  if(modalActs) mo.observe(modalActs, {childList:true, subtree:true});
+})();
+</script>
 </body>
 </html>
-

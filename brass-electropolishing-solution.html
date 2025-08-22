@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">Laser B — น้ำยากัด/จุ่มเงาทองเหลือง | Baume Chemical</title>
+  <meta name="description" content="Laser B สารเข้มข้นเชิงกรดสำหรับกำจัดออกไซด์/คราบแดงและให้ผิวเงาบนทองเหลือง ไนตริกฟรี ไม่มีควันพิษ จุ่ม 1–3 นาที ใช้ได้ทั้งแร็ค/บาร์เรล ควบคุม pH &lt;2">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Laser B — Brass Bright Etch/Deoxidizer">
+  <meta property="og:description" content="Nitric-free bright etch for brass. Removes oxide & red smut, gives durable luster. Dip 1–3 min, rack & barrel ready.">
+  <meta property="og:image" content="https://i.imgur.com/wEo6YIQ.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/wEo6YIQ.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/wEo6YIQ.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Nitric-free</span>
+        <span class="badge" data-i18n-key="badge2">Brass Bright Etch</span>
+        <span class="badge" data-i18n-key="badge3">Rack & Barrel</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Laser B — น้ำยากัด/จุ่มเงาทองเหลือง</h1>
+      <p data-i18n-key="hero_tagline">สารเข้มข้นเชิงกรดสำหรับกำจัดออกไซด์/คราบแดง และให้ผิวเงาสวย คงทน จุ่ม 1–3 นาที ที่อุณหภูมิห้อง</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">🌫️</div><h3 data-i18n-key="f1_t">ไม่มีควันพิษ</h3><p data-i18n-key="f1_d">ไม่ใช้กรดไนตริก (HNO₃) ลดความเสี่ยงต่อทางเดินหายใจ</p></div>
+        <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="f2_t">เงางามคงทน</h3><p data-i18n-key="f2_d">ไม่ต้องพึ่งกรดโครมิก/ไซยาไนด์เพื่อคงเงา</p></div>
+        <div class="pill"><div class="ic">🔗</div><h3 data-i18n-key="f3_t">พร้อมชุบต่อ</h3><p data-i18n-key="f3_d">ผิวหลังจุ่มพร้อมเข้าสู่กระบวนการชุบอื่นโดยไม่ต้องล้างซ้ำ</p></div>
+        <div class="pill"><div class="ic">🧲</div><h3 data-i18n-key="f4_t">รองรับทองเหลืองทุกเกรด</h3><p data-i18n-key="f4_d">ใช้ได้กับเกรด Zn สูง/มีตะกั่ว</p></div>
+        <div class="pill"><div class="ic">🛠️</div><h3 data-i18n-key="f5_t">ใช้ได้ทั้งแร็ค & บาร์เรล</h3><p data-i18n-key="f5_d">ยืดหยุ่นกับสายการผลิต</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f6_t">ควบคุมง่าย</h3><p data-i18n-key="f6_d">โฟกัสที่ pH &lt; 2.0 และเวลาแช่ 1–3 นาที</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">
+        Laser B เป็นสารเข้มข้นเชิงกรดสำหรับกำจัดฟิล์มออกไซด์จากการกัด และขจัดคราบแดงหลังกรดซัลฟิวริก
+        เพื่อให้ได้ผิวเงางามสม่ำเสมอ คงทนกว่าเอจจ์ทั่วไป
+      </p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> น้ำยากัด/จุ่มเงาทองเหลือง (Bright Etch/Deoxidizer)</li>
+        <li data-i18n-key="pi_finish"><strong>ฟิล์ม/ผิว:</strong> เงาสว่าง สม่ำเสมอ พร้อมชุบต่อ</li>
+        <li data-i18n-key="pi_use"><strong>การใช้งาน:</strong> ชิ้นส่วนตกแต่ง งานเฟอร์นิเจอร์ งานชุบต่อเนื่อง</li>
+        <li data-i18n-key="pi_ops"><strong>เงื่อนไขทำงาน:</strong> อุณหภูมิห้อง; จุ่ม 1–3 นาที; pH เป้าหมาย &lt; 2.0</li>
+        <li data-i18n-key="pi_modes"><strong>โหมด:</strong> แร็ค/บาร์เรล</li>
+      </ul>
+    </section>
+
+    <!-- Usage Rates -->
+    <section id="usage" class="card">
+      <h2 class="section" data-i18n-key="usage_title">อัตราการใช้</h2>
+      <div class="table">
+        <table aria-label="Usage Rates">
+          <thead>
+            <tr>
+              <th data-i18n-key="usage_col_item">น้ำยา</th>
+              <th data-i18n-key="usage_col_amount">อัตราการใช้ (ซี.ซี./ลิตร)</th>
+              <th data-i18n-key="usage_col_note">หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="usage_solution">Laser B</td><td data-i18n-key="usage_solution_amt">350</td><td>—</td></tr>
+            <tr><td data-i18n-key="usage_water">น้ำกลั่น</td><td data-i18n-key="usage_water_amt">650</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mixing Example -->
+    <section id="mixing" class="card">
+      <h2 class="section" data-i18n-key="mix_title">ตัวอย่างการผสม (ต้องการ 20 ลิตร)</h2>
+      <div class="table">
+        <table aria-label="Mixing Example">
+          <thead>
+            <tr>
+              <th data-i18n-key="mix_col_item">น้ำยา</th>
+              <th data-i18n-key="mix_col_amount">ปริมาณ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="mix_solution">Laser B</td><td data-i18n-key="mix_solution_amt">7 ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_water">น้ำกลั่น</td><td data-i18n-key="mix_water_amt">13 ลิตร</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Maintenance -->
+    <section id="maintenance" class="card">
+      <h2 class="section" data-i18n-key="maint_title">การดูแลรักษาน้ำยา & การควบคุม</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="m1">เก็บในที่เย็น อากาศถ่ายเท</li>
+        <li data-i18n-key="m2">ตรวจ pH ให้ต่ำกว่า 2.0 เสมอ</li>
+        <li data-i18n-key="m3">หาก pH สูงกว่า 2.0 ให้ปรับด้วยกรดกำมะถัน (H₂SO₄) อย่างระมัดระวัง</li>
+      </ul>
+    </section>
+
+    <!-- Process Steps -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">ขั้นตอนการทำงาน</h2>
+      <ol style="margin:0 0 0 22px">
+        <li data-i18n-key="pr1">ชิ้นงานมันมาก → ต้มล้างไขมันด้วย B1 (60 กรัม/ลิตร)</li>
+        <li data-i18n-key="pr2">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr3">จุ่ม Desmut 1–2 นาที</li>
+        <li data-i18n-key="pr4">จุ่ม Laser B 1–3 นาที (หรือจนผิวเป็นน้ำตาลเข้มทั่ว)</li>
+        <li data-i18n-key="pr5">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr6">จุ่มกรดกำมะถัน 3% 5–30 วินาที (ล้างสีน้ำตาลออกจนหมด)</li>
+        <li data-i18n-key="pr7">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr8">ทองเหลือง Zn/Pb สูง → จุ่มกรดฟอสฟอริก 30% 1–2 นาที</li>
+        <li data-i18n-key="pr9">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr10">จุ่มกันหมองทองเหลือง/ทองแดง (1 ซีซี/ลิตร) 30 วินาที</li>
+        <li data-i18n-key="pr11">อบแห้งหรือเข้าสู่กระบวนการชุบถัดไป</li>
+      </ol>
+    </section>
+
+    <!-- Tanks & EHS -->
+    <section id="ehs" class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ถัง อุปกรณ์ & ความปลอดภัย</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="ehs_tank">ใช้อุปกรณ์ทนกรด เช่น ถัง PE/PP และระบบระบายอากาศที่ดี</li>
+        <li data-i18n-key="ehs_ppe">สวม PPE: ถุงมือ แว่นตานิรภัย หน้ากาก กันกระเด็น</li>
+        <li data-i18n-key="ehs_waste">ของเสียเชิงกรดที่มีโลหะ ให้บำบัด/ปรับ pH และทิ้งตามกฎหมายท้องถิ่น</li>
+      </ul>
+      <p class="note" data-i18n-key="note_ppe">*เพื่อความปลอดภัย ให้ปฏิบัติตาม SDS/TDS และมาตรการ EHS ของสถานประกอบการ</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Laser B — น้ำยากัด/จุ่มเงาทองเหลือง | Baume Chemical",
+
+        badge1:"Nitric-free", badge2:"Brass Bright Etch", badge3:"Rack & Barrel",
+        hero_title:"Laser B — น้ำยากัด/จุ่มเงาทองเหลือง",
+        hero_tagline:"สารเข้มข้นเชิงกรดสำหรับกำจัดออกไซด์/คราบแดง และให้ผิวเงาสวย คงทน จุ่ม 1–3 นาที ที่อุณหภูมิห้อง",
+
+        features_title:"คุณสมบัติพิเศษ",
+        f1_t:"ไม่มีควันพิษ", f1_d:"ไม่ใช้กรดไนตริก (HNO₃) ลดความเสี่ยงต่อทางเดินหายใจ",
+        f2_t:"เงางามคงทน", f2_d:"ไม่ต้องพึ่งกรดโครมิก/ไซยาไนด์เพื่อคงเงา",
+        f3_t:"พร้อมชุบต่อ", f3_d:"ผิวหลังจุ่มพร้อมเข้าสู่กระบวนการชุบโดยไม่ต้องล้างซ้ำ",
+        f4_t:"รองรับทองเหลืองทุกเกรด", f4_d:"ใช้ได้กับเกรด Zn สูง/มีตะกั่ว",
+        f5_t:"ใช้ได้ทั้งแร็ค & บาร์เรล", f5_d:"ยืดหยุ่นกับสายการผลิต",
+        f6_t:"ควบคุมง่าย", f6_d:"โฟกัสที่ pH < 2.0 และเวลาแช่ 1–3 นาที",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"Laser B เป็นสารเข้มข้นเชิงกรดสำหรับกำจัดฟิล์มออกไซด์จากการกัด และขจัดคราบแดงหลังกรดซัลฟิวริก เพื่อให้ได้ผิวเงางามสม่ำเสมอ คงทนกว่าเอจจ์ทั่วไป",
+        pi_type:"ประเภท: น้ำยากัด/จุ่มเงาทองเหลือง (Bright Etch/Deoxidizer)",
+        pi_finish:"ฟิล์ม/ผิว: เงาสว่าง สม่ำเสมอ พร้อมชุบต่อ",
+        pi_use:"การใช้งาน: ชิ้นส่วนตกแต่ง งานเฟอร์นิเจอร์ งานชุบต่อเนื่อง",
+        pi_ops:"เงื่อนไขทำงาน: อุณหภูมิห้อง; จุ่ม 1–3 นาที; pH เป้าหมาย < 2.0",
+        pi_modes:"โหมด: แร็ค/บาร์เรล",
+
+        usage_title:"อัตราการใช้",
+        usage_col_item:"น้ำยา", usage_col_amount:"อัตราการใช้ (ซี.ซี./ลิตร)", usage_col_note:"หมายเหตุ",
+        usage_solution:"Laser B", usage_solution_amt:"350",
+        usage_water:"น้ำกลั่น", usage_water_amt:"650",
+
+        mix_title:"ตัวอย่างการผสม (ต้องการ 20 ลิตร)",
+        mix_col_item:"น้ำยา", mix_col_amount:"ปริมาณ",
+        mix_solution:"Laser B", mix_solution_amt:"7 ลิตร",
+        mix_water:"น้ำกลั่น", mix_water_amt:"13 ลิตร",
+
+        maint_title:"การดูแลรักษาน้ำยา & การควบคุม",
+        m1:"เก็บในที่เย็น อากาศถ่ายเท",
+        m2:"ตรวจ pH ให้ต่ำกว่า 2.0 เสมอ",
+        m3:"หาก pH สูงกว่า 2.0 ให้ปรับด้วยกรดกำมะถัน (H₂SO₄) อย่างระมัดระวัง",
+
+        process_title:"ขั้นตอนการทำงาน",
+        pr1:"ชิ้นงานมันมาก → ต้มล้างไขมันด้วย B1 (60 กรัม/ลิตร)",
+        pr2:"ล้างน้ำสะอาด",
+        pr3:"จุ่ม Desmut 1–2 นาที",
+        pr4:"จุ่ม Laser B 1–3 นาที (หรือจนผิวเป็นน้ำตาลเข้มทั่ว)",
+        pr5:"ล้างน้ำสะอาด",
+        pr6:"จุ่มกรดกำมะถัน 3% 5–30 วินาที (ล้างสีน้ำตาลออกจนหมด)",
+        pr7:"ล้างน้ำสะอาด",
+        pr8:"ทองเหลือง Zn/Pb สูง → จุ่มกรดฟอสฟอริก 30% 1–2 นาที",
+        pr9:"ล้างน้ำสะอาด",
+        pr10:"จุ่มกันหมองทองเหลือง/ทองแดง (1 ซีซี/ลิตร) 30 วินาที",
+        pr11:"อบแห้งหรือเข้าสู่กระบวนการชุบถัดไป",
+
+        ehs_title:"ถัง อุปกรณ์ & ความปลอดภัย",
+        ehs_tank:"ใช้อุปกรณ์ทนกรด เช่น ถัง PE/PP และระบบระบายอากาศที่ดี",
+        ehs_ppe:"สวม PPE: ถุงมือ แว่นตานิรภัย หน้ากาก กันกระเด็น",
+        ehs_waste:"ของเสียเชิงกรดที่มีโลหะ ให้บำบัด/ปรับ pH และทิ้งตามกฎหมายท้องถิ่น",
+        note_ppe:"*เพื่อความปลอดภัย ให้ปฏิบัติตาม SDS/TDS และมาตรการ EHS ของสถานประกอบการ",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Laser B — Brass Bright Etch/Deoxidizer | Baume Chemical",
+
+        badge1:"Nitric-free", badge2:"Brass Bright Etch", badge3:"Rack & Barrel",
+        hero_title:"Laser B — Brass Bright Etch / Deoxidizer",
+        hero_tagline:"Acid concentrate to remove oxide/red smut and produce durable luster. Dip 1–3 min at room temperature.",
+
+        features_title:"Key Features",
+        f1_t:"No toxic fumes", f1_d:"Nitric acid–free to reduce respiratory risks",
+        f2_t:"Durable luster", f2_d:"No chromic acid or cyanide keepers required",
+        f3_t:"Plate-ready surface", f3_d:"No extra cleaning needed before subsequent plating",
+        f4_t:"Covers all brass grades", f4_d:"Works with high-Zn and leaded brass",
+        f5_t:"Rack & barrel capable", f5_d:"Flexible for production lines",
+        f6_t:"Straightforward control", f6_d:"Focus on pH < 2.0 and 1–3 min dwell",
+
+        product_title:"Product Information",
+        product_lead:"Laser B is an acid concentrate formulated to remove etch oxides and red smut after sulfuric acid, delivering a bright, uniform, long-lasting finish.",
+        pi_type:"Type: Bright etch / deoxidizer for brass",
+        pi_finish:"Finish: bright, uniform, plating-ready",
+        pi_use:"Applications: decorative parts, furniture hardware, continuous plating lines",
+        pi_ops:"Operating: room temperature; 1–3 min dip; target pH < 2.0",
+        pi_modes:"Modes: rack / barrel",
+
+        usage_title:"Usage Rates",
+        usage_col_item:"Solution", usage_col_amount:"Dosage (cc/L)", usage_col_note:"Note",
+        usage_solution:"Laser B", usage_solution_amt:"350",
+        usage_water:"DI water", usage_water_amt:"650",
+
+        mix_title:"Mixing Example (total 20 L)",
+        mix_col_item:"Solution", mix_col_amount:"Amount",
+        mix_solution:"Laser B", mix_solution_amt:"7 L",
+        mix_water:"DI water", mix_water_amt:"13 L",
+
+        maint_title:"Bath Care & Control",
+        m1:"Store cool, well-ventilated",
+        m2:"Keep pH below 2.0",
+        m3:"If pH > 2.0, carefully add sulfuric acid (H₂SO₄) to adjust",
+
+        process_title:"Process Steps",
+        pr1:"Heavy oils → alkaline soak B1 (60 g/L)",
+        pr2:"Rinse well",
+        pr3:"Desmut dip 1–2 min",
+        pr4:"Laser B dip 1–3 min (or until uniform dark brown film forms)",
+        pr5:"Rinse",
+        pr6:"3% H₂SO₄ dip 5–30 s (remove brown film completely)",
+        pr7:"Rinse",
+        pr8:"High Zn/Pb brass → 30% H₃PO₄ dip 1–2 min",
+        pr9:"Rinse",
+        pr10:"Anti-tarnish for brass/copper (1 cc/L) 30 s",
+        pr11:"Dry or proceed to plating",
+
+        ehs_title:"Tanks, Equipment & Safety",
+        ehs_tank:"Use acid-resistant equipment (PE/PP tanks) and adequate ventilation",
+        ehs_ppe:"Wear PPE: gloves, safety glasses, suitable mask/face protection",
+        ehs_waste:"Treat/neutralize metal-bearing acidic waste and dispose per local regulations",
+        note_ppe:"*Follow site EHS policies and the product SDS/TDS for safe handling.",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

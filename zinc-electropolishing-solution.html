@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">ACITEK MZ-52 — จุ่มเงาบนซิ้งค์ | Baume Chemical</title>
+  <meta name="description" content="ACITEK MZ-52 น้ำยาจุ่มเงาบนซิ้งค์/ซิ้งค์ฉีด ช่วยกำจัดออกไซด์ คราบสกปรก และปรับผิวให้เงางาม พร้อมก่อนชุบ ใช้เข้มข้น 30–50% ที่ 70–80 °C 2–3 นาที">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="ACITEK MZ-52 — Zinc/Zamak Bright Dip">
+  <meta property="og:description" content="Bright-dip for zinc & zinc die-cast: removes oxides/soil, improves brightness & adhesion. 30–50% at 70–80 °C for ~2–3 min.">
+  <meta property="og:image" content="https://i.imgur.com/KmCDo7F.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/KmCDo7F.png">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/KmCDo7F.png') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Bright Dip</span>
+        <span class="badge" data-i18n-key="badge2">Zinc / Zamak</span>
+        <span class="badge" data-i18n-key="badge3">70–80 °C • 2–3 min</span>
+      </div>
+      <h1 data-i18n-key="hero_title">ACITEK MZ-52 — จุ่มเงาบนซิ้งค์</h1>
+      <p data-i18n-key="hero_tagline">กำจัดออกไซด์/คราบ ปรับผิวซิ้งค์/ซิ้งค์ฉีดให้เงางาม พร้อมก่อนชุบ</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">🧽</div><h3 data-i18n-key="f1_t">ล้างออกไซด์/คราบ</h3><p data-i18n-key="f1_d">ขจัดชั้นออกซิเดชันและสิ่งสกปรกบนผิวซิ้งค์</p></div>
+        <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="f2_t">เพิ่มความเงา</h3><p data-i18n-key="f2_d">ให้พื้นผิวเรียบ เงางาม สวยพร้อมโชว์</p></div>
+        <div class="pill"><div class="ic">🧩</div><h3 data-i18n-key="f3_t">รองรับซิ้งค์ฉีด</h3><p data-i18n-key="f3_d">ใช้ได้กับชิ้นงานซิ้งค์ฉีด/ซัลก์/ขี้ตะกั่วที่ซิ้งค์สูง</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f4_t">เป็นหัวเชื้อเข้มข้น</h3><p data-i18n-key="f4_d">ใช้งานที่ความเข้มข้น 30–50%</p></div>
+        <div class="pill"><div class="ic">⏱️</div><h3 data-i18n-key="f5_t">รวดเร็ว</h3><p data-i18n-key="f5_d">เวลาแช่โดยทั่วไป 2–3 นาที</p></div>
+        <div class="pill"><div class="ic">🔗</div><h3 data-i18n-key="f6_t">ยึดเกาะก่อนชุบดี</h3><p data-i18n-key="f6_d">ช่วยเตรียมผิวให้พร้อมสำหรับชุบ/เคลือบต่อไป</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">
+        ACITEK MZ-52 เป็นน้ำยาจุ่มเงาสำหรับซิ้งค์และซิ้งค์ฉีด ช่วยกำจัดออกไซด์ คราบสกปรก และปรับสภาพผิวให้เงางาม
+        เหมาะสำหรับเตรียมผิวก่อนกระบวนการชุบหรือเคลือบผิว
+      </p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> จุ่มเงา/ปรับสภาพผิวซิ้งค์ (Bright Dip/Activation)</li>
+        <li data-i18n-key="pi_sub"><strong>วัสดุ:</strong> ซิ้งค์, ซิ้งค์ฉีด (Zamak)</li>
+        <li data-i18n-key="pi_form"><strong>รูปแบบ:</strong> หัวเชื้อของเหลวเข้มข้น</li>
+        <li data-i18n-key="pi_ops"><strong>เงื่อนไขทำงาน:</strong> 30–50% w/v; 70–80 °C; 2–3 นาที (ปรับตามต้องการ)</li>
+      </ul>
+    </section>
+
+    <!-- Specs / Operating -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">สเปก & สภาพการทำงาน</h2>
+      <div class="table">
+        <table aria-label="Operating conditions">
+          <thead>
+            <tr>
+              <th data-i18n-key="head_param">พารามิเตอร์</th>
+              <th data-i18n-key="head_opt">ค่าที่เหมาะสม</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="sp_chem">ตัวน้ำยา</td><td data-i18n-key="sp_chem_val">ACITEK MZ-52</td></tr>
+            <tr><td data-i18n-key="sp_conc">ความเข้มข้น</td><td data-i18n-key="sp_conc_val">30–50%</td></tr>
+            <tr><td data-i18n-key="sp_temp">อุณหภูมิ</td><td data-i18n-key="sp_temp_val">70–80 °C</td></tr>
+            <tr><td data-i18n-key="sp_time">เวลาแช่</td><td data-i18n-key="sp_time_val">~2–3 นาที (หรือจนได้ผิวตามต้องการ)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">ขั้นตอนการทำงาน</h2>
+      <ol style="margin:0 0 0 22px">
+        <li data-i18n-key="pr1">ชิ้นงานซิ้งค์/ซิ้งค์ฉีดพร้อมทำความสะอาดเบื้องต้น</li>
+        <li data-i18n-key="pr2">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr3">จุ่ม ACITEK MZ-52 ประมาณ 2–3 นาที หรือจนได้เงาตามต้องการ</li>
+        <li data-i18n-key="pr4">ล้างน้ำสะอาดทันที — หลีกเลี่ยงการค้างอากาศ &gt; 3 วินาที เพื่อลดคราบเหลือง</li>
+        <li data-i18n-key="pr5">ล้างน้ำสะอาดอีกครั้ง</li>
+        <li data-i18n-key="pr6">กรณีจะชุบ/เคลือบต่อ ให้จุ่มสารปรับสภาพ (กรดอ่อน) ก่อนเข้ากระบวนการถัดไป</li>
+      </ol>
+    </section>
+
+    <!-- EHS -->
+    <section id="ehs" class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="ehs1">สวม PPE ที่เหมาะสม: ถุงมือ แว่นตา หน้ากาก</li>
+        <li data-i18n-key="ehs2">ทำงานในที่อากาศถ่ายเท ระวังการกระเด็นของสารเคมีร้อน</li>
+        <li data-i18n-key="ehs3">ของเสียที่มีโลหะ/กรด: ปรับ pH และบำบัดตามกฎหมายก่อนทิ้ง</li>
+      </ul>
+      <p class="note" data-i18n-key="note_ppe">*ปฏิบัติตาม SDS/TDS ของผลิตภัณฑ์และแนวทาง EHS ของสถานประกอบการ</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"ACITEK MZ-52 — จุ่มเงาบนซิ้งค์ | Baume Chemical",
+        badge1:"Bright Dip", badge2:"Zinc / Zamak", badge3:"70–80 °C • 2–3 min",
+        hero_title:"ACITEK MZ-52 — จุ่มเงาบนซิ้งค์",
+        hero_tagline:"กำจัดออกไซด์/คราบ ปรับผิวซิ้งค์/ซิ้งค์ฉีดให้เงางาม พร้อมก่อนชุบ",
+
+        features_title:"คุณสมบัติพิเศษ",
+        f1_t:"ล้างออกไซด์/คราบ", f1_d:"ขจัดชั้นออกซิเดชันและสิ่งสกปรกบนผิวซิ้งค์",
+        f2_t:"เพิ่มความเงา", f2_d:"ให้พื้นผิวเรียบ เงางาม สวยพร้อมโชว์",
+        f3_t:"รองรับซิ้งค์ฉีด", f3_d:"ใช้ได้กับชิ้นงานซิ้งค์ฉีด/ซัลก์/ขี้ตะกั่วที่ซิ้งค์สูง",
+        f4_t:"เป็นหัวเชื้อเข้มข้น", f4_d:"ใช้งานที่ความเข้มข้น 30–50%",
+        f5_t:"รวดเร็ว", f5_d:"เวลาแช่โดยทั่วไป 2–3 นาที",
+        f6_t:"ยึดเกาะก่อนชุบดี", f6_d:"ช่วยเตรียมผิวให้พร้อมสำหรับชุบ/เคลือบต่อไป",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"ACITEK MZ-52 เป็นน้ำยาจุ่มเงาสำหรับซิ้งค์และซิ้งค์ฉีด ช่วยกำจัดออกไซด์ คราบสกปรก และปรับสภาพผิวให้เงางาม เหมาะสำหรับเตรียมผิวก่อนกระบวนการชุบหรือเคลือบผิว",
+        pi_type:"ประเภท: จุ่มเงา/ปรับสภาพผิวซิ้งค์ (Bright Dip/Activation)",
+        pi_sub:"วัสดุ: ซิ้งค์, ซิ้งค์ฉีด (Zamak)",
+        pi_form:"รูปแบบ: หัวเชื้อของเหลวเข้มข้น",
+        pi_ops:"เงื่อนไขทำงาน: 30–50% w/v; 70–80 °C; 2–3 นาที (ปรับตามต้องการ)",
+
+        specs_title:"สเปก & สภาพการทำงาน",
+        head_param:"พารามิเตอร์", head_opt:"ค่าที่เหมาะสม",
+        sp_chem:"ตัวน้ำยา", sp_chem_val:"ACITEK MZ-52",
+        sp_conc:"ความเข้มข้น", sp_conc_val:"30–50%",
+        sp_temp:"อุณหภูมิ", sp_temp_val:"70–80 °C",
+        sp_time:"เวลาแช่", sp_time_val:"~2–3 นาที (หรือจนได้ผิวตามต้องการ)",
+
+        process_title:"ขั้นตอนการทำงาน",
+        pr1:"ชิ้นงานซิ้งค์/ซิ้งค์ฉีดพร้อมทำความสะอาดเบื้องต้น",
+        pr2:"ล้างน้ำสะอาด",
+        pr3:"จุ่ม ACITEK MZ-52 ประมาณ 2–3 นาที หรือจนได้เงาตามต้องการ",
+        pr4:"ล้างน้ำสะอาดทันที — หลีกเลี่ยงการค้างอากาศ > 3 วินาที เพื่อลดคราบเหลือง",
+        pr5:"ล้างน้ำสะอาดอีกครั้ง",
+        pr6:"กรณีจะชุบ/เคลือบต่อ ให้จุ่มสารปรับสภาพ (กรดอ่อน) ก่อนเข้ากระบวนการถัดไป",
+
+        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        ehs1:"สวม PPE ที่เหมาะสม: ถุงมือ แว่นตา หน้ากาก",
+        ehs2:"ทำงานในที่อากาศถ่ายเท ระวังการกระเด็นของสารเคมีร้อน",
+        ehs3:"ของเสียที่มีโลหะ/กรด: ปรับ pH และบำบัดตามกฎหมายก่อนทิ้ง",
+        note_ppe:"*ปฏิบัติตาม SDS/TDS ของผลิตภัณฑ์และแนวทาง EHS ของสถานประกอบการ",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"ACITEK MZ-52 — Zinc/Zamak Bright Dip | Baume Chemical",
+        badge1:"Bright Dip", badge2:"Zinc / Zamak", badge3:"70–80 °C • 2–3 min",
+        hero_title:"ACITEK MZ-52 — Zinc Bright Dip",
+        hero_tagline:"Removes oxides/soil and brightens zinc & die-cast zinc surfaces for better plating readiness.",
+
+        features_title:"Key Features",
+        f1_t:"Oxide/soil removal", f1_d:"Effectively strips unwanted oxidation and residues",
+        f2_t:"Improved brightness", f2_d:"Leaves a smooth, show-ready sheen",
+        f3_t:"Die-cast compatible", f3_d:"Suited for zinc die-cast / high-zinc parts",
+        f4_t:"Concentrate", f4_d:"Use at 30–50% working strength",
+        f5_t:"Fast cycle", f5_d:"Typical dwell ~2–3 minutes",
+        f6_t:"Better adhesion", f6_d:"Preps surfaces for subsequent plating/coating",
+
+        product_title:"Product Information",
+        product_lead:"ACITEK MZ-52 is a bright-dip/activation for zinc and zinc die-cast. It removes oxides and soils and restores a bright surface prior to plating or coating.",
+        pi_type:"Type: Bright-dip / activation for zinc",
+        pi_sub:"Substrates: Zinc, zinc die-cast (Zamak)",
+        pi_form:"Form: Liquid concentrate",
+        pi_ops:"Operating: 30–50% w/v; 70–80 °C; 2–3 min (adjust as needed)",
+
+        specs_title:"Specs & Operating Conditions",
+        head_param:"Parameter", head_opt:"Optimal",
+        sp_chem:"Chemistry", sp_chem_val:"ACITEK MZ-52",
+        sp_conc:"Concentration", sp_conc_val:"30–50%",
+        sp_temp:"Temperature", sp_temp_val:"70–80 °C",
+        sp_time:"Dwell time", sp_time_val:"~2–3 min (to target finish)",
+
+        process_title:"Process Sequence",
+        pr1:"Pre-clean zinc/zinc die-cast part",
+        pr2:"Rinse",
+        pr3:"Dip in ACITEK MZ-52 for ~2–3 min or to desired brightness",
+        pr4:"Immediate rinse — avoid air exposure > 3 s to minimize yellowing",
+        pr5:"Rinse again",
+        pr6:"If plating/coating next, condition in mild acid before the next step",
+
+        ehs_title:"Safety & Environment",
+        ehs1:"Wear appropriate PPE: gloves, goggles, mask",
+        ehs2:"Work with good ventilation; beware of hot chemical splashes",
+        ehs3:"Neutralize/treat acidic, metal-bearing waste per regulations",
+        note_ppe:"*Always follow the product SDS/TDS and your site EHS procedures.",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

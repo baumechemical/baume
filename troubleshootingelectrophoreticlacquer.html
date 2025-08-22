@@ -1,0 +1,702 @@
+   <!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title data-i18n-key="page_title">EPA 2020 แลคเกอร์ไฟฟ้า & แลคเกอร์น้ำ 2200 | Baume Chemical</title>
+  <meta name="description" content="คู่มือแลคเกอร์ใส 2 ระบบในหน้าเดียว: EPA 2020 (แลคเกอร์ไฟฟ้า E-coat) และ แลคเกอร์น้ำ 2200 (Water-based Chromium-free) พร้อมวิธีผสม/สภาวะ/อบ/แก้ปัญหา/อุปกรณ์ และสวิตช์ภาษา TH/EN.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="product.group">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="EPA 2020 & Water Lacquer 2200 • Clear Protective Coats">
+  <meta property="og:description" content="E-coat clear lacquer & water-based chromium-free lacquer in one page: specs, make-up, curing, troubleshooting.">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Wrap & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Tabs */
+    .tabs{display:flex;gap:8px;justify-content:center;margin-top:-22px}
+    .tab-btn{
+      appearance:none;border:1px solid #e3ece5;background:#fff;color:#1f2a24;
+      padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:800;
+      box-shadow:var(--shadow-1)
+    }
+    .tab-btn[aria-selected="true"]{background:var(--brand-2);color:#fff;border-color:#2c7756}
+
+    /* Feature pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+    .hide{display:none !important}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">แลคเกอร์ใส</span>
+        <span class="badge" data-i18n-key="badge2">E-coat & Water-based</span>
+        <span class="badge" data-i18n-key="badge3">Rack</span>
+      </div>
+      <h1 data-i18n-key="hero_title">EPA 2020 แลคเกอร์ไฟฟ้า + แลคเกอร์น้ำ 2200</h1>
+      <p data-i18n-key="hero_tagline">สองโซลูชันเคลือบใสพร้อมใช้งาน: E-coat (EPA 2020) & Water-based 2200 — วิธีผสม สภาวะ อบ และแก้ปัญหา ครบในหน้าเดียว</p>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <nav class="tabs wrap" role="tablist" aria-label="เลือกผลิตภัณฑ์">
+    <button class="tab-btn" role="tab" id="tab-epa" aria-controls="panel-epa" aria-selected="true" data-route="epa2020">EPA 2020</button>
+    <button class="tab-btn" role="tab" id="tab-2200" aria-controls="panel-2200" aria-selected="false" data-route="lacquer2200">แลคเกอร์น้ำ 2200</button>
+  </nav>
+
+  <!-- PAGE: EPA 2020 -->
+  <main id="panel-epa" class="wrap" role="tabpanel" aria-labelledby="tab-epa">
+    <!-- Product info -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="epa_info_title">ข้อมูลผลิตภัณฑ์: Teknoclear EPA 2020 (แลคเกอร์ไฟฟ้า)</h2>
+      <p class="lead" data-i18n-key="epa_info_lead">แลคเกอร์ใสแบบ E-coat เงา ใส ฟิล์มแข็ง ทนกัดกร่อน ใช้กับผิวโลหะ/ผิวชุบ (เช่น เงิน ทองเหลือง เครื่องประดับ ฯลฯ) เพื่อกันสนิม/เพิ่มความเงางาม</p>
+
+      <!-- 6 Feature pills -->
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="epa_feat1_t">ฟิล์มใสเงา</h3><p data-i18n-key="epa_feat1_d">บาง สม่ำเสมอ ไม่เป็นหยด</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="epa_feat2_t">ทนกัดกร่อน</h3><p data-i18n-key="epa_feat2_d">เพิ่มอายุการใช้งานพื้นผิว</p></div>
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="epa_feat3_t">E-coat คุมความหนา</h3><p data-i18n-key="epa_feat3_d">0.05–0.1 A/dm² เคลือบ 8 µm ภายใน 30 วินาที</p></div>
+        <div class="pill"><div class="ic">🚀</div><h3 data-i18n-key="epa_feat4_t">ชุบไว ผลิตทัน</h3><p data-i18n-key="epa_feat4_d">เหมาะงานผลิตจำนวนมาก</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="epa_feat5_t">จัดการ Solvent ง่าย</h3><p data-i18n-key="epa_feat5_d">Ultrafiltration คุมคุณภาพน้ำยา</p></div>
+        <div class="pill"><div class="ic">🧰</div><h3 data-i18n-key="epa_feat6_t">รองรับ Rack</h3><p data-i18n-key="epa_feat6_d">ยืดหยุ่นต่อไลน์การผลิต</p></div>
+      </div>
+    </section>
+
+    <!-- Specs -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="epa_specs_title">สภาวะการทำงาน</h2>
+      <div class="table">
+        <table aria-label="EPA 2020 Operating">
+          <thead><tr><th data-i18n-key="th_requirements">สิ่งที่ต้องการ</th><th data-i18n-key="th_value">ค่ามาตรฐาน</th></tr></thead>
+          <tbody>
+            <tr><td>Teknoclear EPA 2020</td><td>330 g/L</td></tr>
+            <tr><td>Dye</td><td>0–1 ml/L</td></tr>
+            <tr><td>RI</td><td>12–14</td></tr>
+            <tr><td>pH</td><td>4.4–5.2</td></tr>
+            <tr><td data-i18n-key="epa_conduct_label">การนำไฟฟ้า</td><td>900–1100 μS</td></tr>
+            <tr><td>Solvent</td><td>3–4 %</td></tr>
+            <tr><td data-i18n-key="temp">อุณหภูมิ</td><td>23–27 °C</td></tr>
+            <tr><td data-i18n-key="anode">ขั้วล่อ (แอโนด)</td><td>สแตนเลส 316</td></tr>
+            <tr><td data-i18n-key="current">กระแสไฟ</td><td>0.05–0.1 A/dm²</td></tr>
+            <tr><td data-i18n-key="area_ratio">พื้นที่แอโนด:ชิ้นงาน</td><td>2 : 1</td></tr>
+            <tr><td data-i18n-key="rate">อัตราเคลือบ</td><td>≈8 µm (30 วินาทีแรก)</td></tr>
+            <tr><td data-i18n-key="time">เวลาเคลือบ</td><td>10–120 วินาที</td></tr>
+            <tr><td data-i18n-key="delay">ดีเลย์ก่อนจ่ายกระแส</td><td>10–15 วินาที</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="epa_steps_title">ขั้นตอนการทำงาน (แนะนำ)</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="epa_step1">ล้างน้ำกลั่น 2 ครั้ง (ก่อน/หลัง) ลดปนเปื้อนโลหะ</li>
+        <li data-i18n-key="epa_step2">จุ่มปรับผิวด้วย 2% แลคเกอร์ 2020</li>
+        <li data-i18n-key="epa_step3">เคลือบด้วย EPA 2020 (ตามสเปกด้านบน)</li>
+        <li data-i18n-key="epa_step4">ล้างน้ำกลั่น 2 ครั้ง → จุ่มน้ำยากำจัดคราบน้ำ</li>
+        <li data-i18n-key="epa_step5">เป่าแห้ง → อบชิ้นงาน</li>
+      </ul>
+    </section>
+
+    <!-- Curing -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="curing_title">การอบ (Curing)</h2>
+      <div class="table">
+        <table aria-label="EPA 2020 Curing">
+          <thead><tr><th data-i18n-key="cond">เงื่อนไข</th><th data-i18n-key="duration">เวลา</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n-key="epa_cure1_cond">โลหะเนื้อแข็ง 150–180 °C</td><td>20 นาที</td></tr>
+            <tr><td data-i18n-key="epa_cure2_cond">โลหะเนื้อแข็ง 90–120 °C</td><td>30–60 นาที</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="cure_note">*อบไม่พอ → ฟิล์มไม่แข็ง มีรอยนิ้วมือได้</p>
+    </section>
+
+    <!-- Make-up / Adjust -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="mix_title">การผสมน้ำยา & การปรับน้ำยา</h2>
+      <ol style="margin:0 0 12px 22px">
+        <li data-i18n-key="mix1">ผสม EPA 2020 กับสี (ถ้ามี) กวนจนเนื้อเดียว</li>
+        <li data-i18n-key="mix2">ค่อยๆ เติมน้ำกลั่น ระหว่างกวนจนเต็มถัง</li>
+        <li data-i18n-key="mix3">กวนต่อเนื่องอย่างน้อย 12–24 ชม. (น้ำกลั่น Conductivity &lt; 5 μS)</li>
+      </ol>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="mix_ri">RI: 11–14</li>
+        <li data-i18n-key="mix_cond">Conductivity: 900–1000 μS</li>
+        <li data-i18n-key="mix_ph">pH: 4.2–5.2</li>
+        <li data-i18n-key="mix_meq">MEQ (ไทเทรต 0.1 M KOH): 27–33</li>
+      </ul>
+    </section>
+
+    <!-- Equipment -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="equip_title">อุปกรณ์</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="epa_eq1">บ่อ PP/PVC/สแตนเลส พร้อม in-tank circulation (≥5× ปริมาตรบ่อต่อชั่วโมง)</li>
+        <li data-i18n-key="epa_eq2">ขั้วล่อ SS316, ตู้อบ, ตู้ไฟปรับได้ถึง ~60 V</li>
+        <li data-i18n-key="epa_eq3">ชุด Ultrafiltration คุมตัวทำละลาย/การนำไฟฟ้า</li>
+      </ul>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="troubles_title">การแก้ปัญหา (EPA 2020)</h2>
+      <div class="table">
+        <table aria-label="EPA 2020 Troubleshooting">
+          <thead><tr><th data-i18n-key="issue">ปัญหา</th><th data-i18n-key="fix">แนวทางแก้</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n-key="ts1i">ฟิล์มหนา</td><td data-i18n-key="ts1f">กระแสมาก/เวลานาน → ลดกระแส/เวลา; Solvent สูง → UF กรอง</td></tr>
+            <tr><td data-i18n-key="ts2i">ผิวส้ม</td><td data-i18n-key="ts2f">Solvent สูง → UF; เร่งกระแสเร็ว → ลด ramp/กระแส</td></tr>
+            <tr><td data-i18n-key="ts3i">หนาแต่ไม่เรียบ</td><td data-i18n-key="ts3f">ลดกระแส &lt;0.5 A/dm²; ลดอุณหภูมิ; UF เอาไอออนปนเปื้อน</td></tr>
+            <tr><td data-i18n-key="ts4i">ฟิล์มบาง</td><td data-i18n-key="ts4f">เพิ่มแลคเกอร์/กระแส/เวลา</td></tr>
+            <tr><td data-i18n-key="ts5i">บางและตามดที่ไฟสูง</td><td data-i18n-key="ts5f">Solvent/แลคเกอร์ต่ำ → ปรับ; อุณหภูมิต่ำ → 25–30 °C</td></tr>
+            <tr><td data-i18n-key="ts6i">เหลือบรุ้ง</td><td data-i18n-key="ts6f">แลคเกอร์ต่ำ/อุณหภูมิต่ำ/กระแสน้อย/เวลาน้อย → ปรับเพิ่ม</td></tr>
+            <tr><td data-i18n-key="ts7i">ฟิล์มเว้า/รู/รอยด</td><td data-i18n-key="ts7f">ผิวสกปรก → รีคลีน; UF เอาโลหะ/ตะกอน; น้ำล้าง &lt;5 μS</td></tr>
+            <tr><td data-i18n-key="ts8i">คราบหลังล้าง/อบ</td><td data-i18n-key="ts8f">ล้างไม่สะอาด/เป่าไม่แห้ง → เพิ่มขั้นล้าง/ลมสะอาด; ใช้น้ำยากำจัดคราบน้ำ</td></tr>
+            <tr><td data-i18n-key="ts9i">ฟองแก๊ส/รอยฟอง</td><td data-i18n-key="ts9f">พักปั๊มให้น้ำยาใส; เพิ่มเวลาหลังล้างก่อนชุบ</td></tr>
+            <tr><td data-i18n-key="ts10i">ฟิล์มอ่อน</td><td data-i18n-key="ts10f">อบอุณหภูมิต่ำ → เพิ่มอุณหภูมิหรือยืดเวลา</td></tr>
+            <tr><td data-i18n-key="ts11i">น้ำยาออกเหลือง/น้ำตาล</td><td data-i18n-key="ts11f">ส่วนที่โดนความร้อนจับตัว → เช็กการกวน/กรอง; ลดอุณหภูมิ 25–30 °C</td></tr>
+            <tr><td data-i18n-key="ts12i">แอมป์ตกระหว่างชุบ</td><td data-i18n-key="ts12f">Solvent สูง/ด่างปน (จากน้ำล้าง) /โลหะปน → UF + คุมคุณภาพน้ำล้าง</td></tr>
+            <tr><td data-i18n-key="ts13i">การนำไฟฟ้าต่ำ</td><td data-i18n-key="ts13f">แลคเกอร์/solvent ต่ำ → ปรับ</td></tr>
+            <tr><td data-i18n-key="ts14i">การนำไฟฟ้าสูง &gt;1300 μS</td><td data-i18n-key="ts14f">แลคเกอร์/solvent สูง หรือไอออนปน → UF</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- EHS -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="ehs1">ใช้น้ำกลั่น/กรองคุณภาพสูง (Conductivity &lt; 5 μS สำหรับล้าง/ผสม)</li>
+        <li data-i18n-key="ehs2">สวม PPE (ถุงมือ/แว่น/หน้ากาก) และระบายอากาศให้พอ</li>
+        <li data-i18n-key="ehs3">ของเสียมีสารอินทรีย์/โลหะ → บำบัดตามระเบียบ</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- PAGE: Lacquer 2200 -->
+  <main id="panel-2200" class="wrap hide" role="tabpanel" aria-labelledby="tab-2200">
+    <!-- Product info -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_info_title">ข้อมูลผลิตภัณฑ์: แลคเกอร์น้ำ 2200 (Chromium-free)</h2>
+      <p class="lead" data-i18n-key="lac_info_lead">แลคเกอร์ใสน้ำ เทคโนโลยีล่าสุด ไม่ใช้โครเมียม ฟิล์มแข็ง ทนกัดกร่อน เพิ่มประสิทธิภาพชิ้นงานชุบสังกะสี และกันหมองทองแดง/ทองเหลือง/นิเกิล</p>
+
+      <!-- 6 Feature pills -->
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">💧</div><h3 data-i18n-key="lac_feat1_t">Water-based</h3><p data-i18n-key="lac_feat1_d">เบสน้ำ ใช้ง่าย กลิ่นต่ำ</p></div>
+        <div class="pill"><div class="ic">♻️</div><h3 data-i18n-key="lac_feat2_t">Chromium-free</h3><p data-i18n-key="lac_feat2_d">สอดคล้องข้อกำหนด</p></div>
+        <div class="pill"><div class="ic">🫧</div><h3 data-i18n-key="lac_feat3_t">กันหมองทองแดง/ทองเหลือง</h3><p data-i18n-key="lac_feat3_d">ลดการเปลี่ยนสี</p></div>
+        <div class="pill"><div class="ic">🪵</div><h3 data-i18n-key="lac_feat4_t">ฟิล์มแข็ง ทนขีดข่วน</h3><p data-i18n-key="lac_feat4_d">เพิ่มความทนทาน</p></div>
+        <div class="pill"><div class="ic">💸</div><h3 data-i18n-key="lac_feat5_t">ต้นทุนคุมง่าย</h3><p data-i18n-key="lac_feat5_d">สูตรเจือจาง 10–15%</p></div>
+        <div class="pill"><div class="ic">🧭</div><h3 data-i18n-key="lac_feat6_t">กระบวนการเรียบง่าย</h3><p data-i18n-key="lac_feat6_d">จุ่ม 30–60 s → อบ</p></div>
+      </div>
+    </section>
+
+    <!-- Usage -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_usage_title">วิธีการใช้ / อัตราส่วน</h2>
+      <div class="table">
+        <table aria-label="Lacquer 2200 Use">
+          <thead><tr><th data-i18n-key="comp">องค์ประกอบ</th><th data-i18n-key="amount">ปริมาณ</th><th data-i18n-key="unit">หน่วย</th></tr></thead>
+          <tbody>
+            <tr><td>แลคเกอร์ 2200</td><td>10–15</td><td>%</td></tr>
+            <tr><td data-i18n-key="distilled">น้ำกลั่น</td><td>85–90</td><td>%</td></tr>
+            <tr><td data-i18n-key="dip_temp">อุณหภูมิในการจุ่ม</td><td data-i18n-key="room">ห้อง</td><td>—</td></tr>
+            <tr><td data-i18n-key="dip_time">เวลาในการจุ่ม</td><td>30–60</td><td data-i18n-key="sec">วินาที</td></tr>
+            <tr><td>pH</td><td>8.5–10.0</td><td>—</td></tr>
+            <tr><td data-i18n-key="dry_temp">อุณหภูมิอบแห้ง</td><td>60–80</td><td>°C</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Curing -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_cure_title">การอบ (Curing)</h2>
+      <p data-i18n-key="lac_cure_text">อบ 60–70 °C 5–10 นาที (ดีขึ้นที่ 120–130 °C ขึ้นกับชนิดโลหะ)</p>
+    </section>
+
+    <!-- Equipment -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_equip_title">อุปกรณ์</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="lac_eq1">ใช้ถังสแตนเลสหรือพลาสติก (PE/PP/PVC) สำหรับแลคเกอร์ 2200</li>
+      </ul>
+    </section>
+
+    <!-- Maintenance -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_maint_title">การบำรุงรักษาน้ำยา</h2>
+      <p data-i18n-key="lac_maint_text">คุม pH 8.5–9.0 ด้วยแอมโมเนียน้ำ/แอมโมเนียมไฮดรอกไซด์</p>
+    </section>
+
+    <!-- Process -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_steps_title">ขั้นตอนการทำงาน (แนะนำ)</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="lac2k_step1">ชิ้นงานชุบเสร็จ → ล้างน้ำสะอาด 2 ครั้ง</li>
+        <li data-i18n-key="lac2k_step2">จุ่ม แลคเกอร์ 2200</li>
+        <li data-i18n-key="lac2k_step3">อบร้อนให้แห้ง</li>
+      </ul>
+      <p class="note" data-i18n-key="lac_note">*ใช้น้ำกลั่น/น้ำกรองสำหรับล้างและผสม (ไม่ใช้น้ำบาดาล)</p>
+    </section>
+
+    <!-- EHS -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="lac_ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="lac_ehs1">สวม PPE ตามเหมาะสม และระบายอากาศเพียงพอ</li>
+        <li data-i18n-key="lac_ehs2">ควบคุมการทิ้งของเสียตามข้อกำหนด</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "logo":"https://img2.pic.in.th/pic/Baume.jpg",
+    "contactPoint":[{"@type":"ContactPoint","telephone":"+66-92-546-9887","contactType":"customer service","areaServed":"TH"}],
+    "address":{"@type":"PostalAddress","streetAddress":"31 Soi Phetkasem 48 Yak 24, Bang Waek, Phasi Charoen","addressLocality":"Bangkok","postalCode":"10160","addressCountry":"TH"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Clear Lacquer Coatings",
+    "itemListElement":[
+      {"@type":"Product","name":"Teknoclear EPA 2020 (Electrophoretic Clear Lacquer)","sku":"EPA-2020","brand":{"@type":"Brand","name":"Baume Chemical"},"url":"#epa2020"},
+      {"@type":"Product","name":"Water Lacquer 2200 (Chromium-free)","sku":"LAC-2200","brand":{"@type":"Brand","name":"Baume Chemical"},"url":"#lacquer2200"}
+    ]
+  }
+  </script>
+
+  <!-- i18n + Tab Router -->
+  <script>
+    const I18N = {
+      th:{
+        page_title:"EPA 2020 แลคเกอร์ไฟฟ้า & แลคเกอร์น้ำ 2200 | Baume Chemical",
+        badge1:"แลคเกอร์ใส", badge2:"E-coat & Water-based", badge3:"Rack",
+        hero_title:"EPA 2020 แลคเกอร์ไฟฟ้า + แลคเกอร์น้ำ 2200",
+        hero_tagline:"สองโซลูชันเคลือบใสพร้อมใช้งาน: E-coat (EPA 2020) & Water-based 2200 — วิธีผสม สภาวะ อบ และแก้ปัญหา ครบในหน้าเดียว",
+
+        epa_info_title:"ข้อมูลผลิตภัณฑ์: Teknoclear EPA 2020 (แลคเกอร์ไฟฟ้า)",
+        epa_info_lead:"แลคเกอร์ใสแบบ E-coat เงา ใส ฟิล์มแข็ง ทนกัดกร่อน ใช้กับผิวโลหะ/ผิวชุบ (เช่น เงิน ทองเหลือง เครื่องประดับ ฯลฯ) เพื่อกันสนิม/เพิ่มความเงางาม",
+        epa_feat1_t:"ฟิล์มใสเงา", epa_feat1_d:"บาง สม่ำเสมอ ไม่เป็นหยด",
+        epa_feat2_t:"ทนกัดกร่อน", epa_feat2_d:"เพิ่มอายุการใช้งานพื้นผิว",
+        epa_feat3_t:"E-coat คุมความหนา", epa_feat3_d:"0.05–0.1 A/dm² เคลือบ 8 µm ภายใน 30 วินาที",
+        epa_feat4_t:"ชุบไว ผลิตทัน", epa_feat4_d:"เหมาะงานผลิตจำนวนมาก",
+        epa_feat5_t:"จัดการ Solvent ง่าย", epa_feat5_d:"Ultrafiltration คุมคุณภาพน้ำยา",
+        epa_feat6_t:"รองรับ Rack", epa_feat6_d:"ยืดหยุ่นต่อไลน์การผลิต",
+
+        epa_specs_title:"สภาวะการทำงาน",
+        th_requirements:"สิ่งที่ต้องการ", th_value:"ค่ามาตรฐาน",
+        epa_conduct_label:"การนำไฟฟ้า", temp:"อุณหภูมิ", anode:"ขั้วล่อ (แอโนด)", current:"กระแสไฟ",
+        area_ratio:"พื้นที่แอโนด:ชิ้นงาน", rate:"อัตราเคลือบ", time:"เวลาเคลือบ", delay:"ดีเลย์ก่อนจ่ายกระแส",
+
+        epa_steps_title:"ขั้นตอนการทำงาน (แนะนำ)",
+        epa_step1:"ล้างน้ำกลั่น 2 ครั้ง (ก่อน/หลัง) ลดปนเปื้อนโลหะ",
+        epa_step2:"จุ่มปรับผิวด้วย 2% แลคเกอร์ 2020",
+        epa_step3:"เคลือบด้วย EPA 2020 (ตามสเปกด้านบน)",
+        epa_step4:"ล้างน้ำกลั่น 2 ครั้ง → จุ่มน้ำยากำจัดคราบน้ำ",
+        epa_step5:"เป่าแห้ง → อบชิ้นงาน",
+
+        curing_title:"การอบ (Curing)", cond:"เงื่อนไข", duration:"เวลา",
+        epa_cure1_cond:"โลหะเนื้อแข็ง 150–180 °C", epa_cure2_cond:"โลหะเนื้อแข็ง 90–120 °C",
+        cure_note:"*อบไม่พอ → ฟิล์มไม่แข็ง มีรอยนิ้วมือได้",
+
+        mix_title:"การผสมน้ำยา & การปรับน้ำยา",
+        mix1:"ผสม EPA 2020 กับสี (ถ้ามี) กวนจนเนื้อเดียว",
+        mix2:"ค่อยๆ เติมน้ำกลั่น ระหว่างกวนจนเต็มถัง",
+        mix3:"กวนต่อเนื่องอย่างน้อย 12–24 ชม. (น้ำกลั่น Conductivity < 5 μS)",
+        mix_ri:"RI: 11–14", mix_cond:"Conductivity: 900–1000 μS", mix_ph:"pH: 4.2–5.2", mix_meq:"MEQ (ไทเทรต 0.1 M KOH): 27–33",
+
+        equip_title:"อุปกรณ์",
+        epa_eq1:"บ่อ PP/PVC/สแตนเลส พร้อม in-tank circulation (≥5× ปริมาตรบ่อต่อชั่วโมง)",
+        epa_eq2:"ขั้วล่อ SS316, ตู้อบ, ตู้ไฟปรับได้ถึง ~60 V",
+        epa_eq3:"ชุด Ultrafiltration คุมตัวทำละลาย/การนำไฟฟ้า",
+
+        troubles_title:"การแก้ปัญหา (EPA 2020)", issue:"ปัญหา", fix:"แนวทางแก้",
+        ts1i:"ฟิล์มหนา", ts1f:"กระแสมาก/เวลานาน → ลดกระแส/เวลา; Solvent สูง → UF กรอง",
+        ts2i:"ผิวส้ม", ts2f:"Solvent สูง → UF; เร่งกระแสเร็ว → ลด ramp/กระแส",
+        ts3i:"หนาแต่ไม่เรียบ", ts3f:"ลดกระแส <0.5 A/dm²; ลดอุณหภูมิ; UF เอาไอออนปนเปื้อน",
+        ts4i:"ฟิล์มบาง", ts4f:"เพิ่มแลคเกอร์/กระแส/เวลา",
+        ts5i:"บางและตามดที่ไฟสูง", ts5f:"Solvent/แลคเกอร์ต่ำ → ปรับ; อุณหภูมิต่ำ → 25–30 °C",
+        ts6i:"เหลือบรุ้ง", ts6f:"แลคเกอร์ต่ำ/อุณหภูมิต่ำ/กระแสน้อย/เวลาน้อย → ปรับเพิ่ม",
+        ts7i:"ฟิล์มเว้า/รู/รอยด", ts7f:"ผิวสกปรก → รีคลีน; UF เอาโลหะ/ตะกอน; น้ำล้าง <5 μS",
+        ts8i:"คราบหลังล้าง/อบ", ts8f:"ล้างไม่สะอาด/เป่าไม่แห้ง → เพิ่มขั้นล้าง/ลมสะอาด; ใช้น้ำยากำจัดคราบน้ำ",
+        ts9i:"ฟองแก๊ส/รอยฟอง", ts9f:"พักปั๊มให้น้ำยาใส; เพิ่มเวลาหลังล้างก่อนชุบ",
+        ts10i:"ฟิล์มอ่อน", ts10f:"อบอุณหภูมิต่ำ → เพิ่มอุณหภูมิหรือยืดเวลา",
+        ts11i:"น้ำยาออกเหลือง/น้ำตาล", ts11f:"ส่วนที่โดนความร้อนจับตัว → เช็กการกวน/กรอง; ลดอุณหภูมิ 25–30 °C",
+        ts12i:"แอมป์ตกระหว่างชุบ", ts12f:"Solvent สูง/ด่างปน (จากน้ำล้าง) /โลหะปน → UF + คุมคุณภาพน้ำล้าง",
+        ts13i:"การนำไฟฟ้าต่ำ", ts13f:"แลคเกอร์/solvent ต่ำ → ปรับ",
+        ts14i:"การนำไฟฟ้าสูง >1300 μS", ts14f:"แลคเกอร์/solvent สูง หรือไอออนปน → UF",
+
+        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        ehs1:"ใช้น้ำกลั่น/กรองคุณภาพสูง (Conductivity < 5 μS สำหรับล้าง/ผสม)",
+        ehs2:"สวม PPE (ถุงมือ/แว่น/หน้ากาก) และระบายอากาศให้พอ",
+        ehs3:"ของเสียมีสารอินทรีย์/โลหะ → บำบัดตามระเบียบ",
+
+        lac_info_title:"ข้อมูลผลิตภัณฑ์: แลคเกอร์น้ำ 2200 (Chromium-free)",
+        lac_info_lead:"แลคเกอร์ใสน้ำ เทคโนโลยีล่าสุด ไม่ใช้โครเมียม ฟิล์มแข็ง ทนกัดกร่อน เพิ่มประสิทธิภาพชิ้นงานชุบสังกะสี และกันหมองทองแดง/ทองเหลือง/นิเกิล",
+        lac_feat1_t:"Water-based", lac_feat1_d:"เบสน้ำ ใช้ง่าย กลิ่นต่ำ",
+        lac_feat2_t:"Chromium-free", lac_feat2_d:"สอดคล้องข้อกำหนด",
+        lac_feat3_t:"กันหมองทองแดง/ทองเหลือง", lac_feat3_d:"ลดการเปลี่ยนสี",
+        lac_feat4_t:"ฟิล์มแข็ง ทนขีดข่วน", lac_feat4_d:"เพิ่มความทนทาน",
+        lac_feat5_t:"ต้นทุนคุมง่าย", lac_feat5_d:"สูตรเจือจาง 10–15%",
+        lac_feat6_t:"กระบวนการเรียบง่าย", lac_feat6_d:"จุ่ม 30–60 s → อบ",
+
+        lac_usage_title:"วิธีการใช้ / อัตราส่วน",
+        comp:"องค์ประกอบ", amount:"ปริมาณ", unit:"หน่วย", distilled:"น้ำกลั่น",
+        dip_temp:"อุณหภูมิในการจุ่ม", room:"ห้อง", dip_time:"เวลาในการจุ่ม", sec:"วินาที", dry_temp:"อุณหภูมิอบแห้ง",
+
+        lac_cure_title:"การอบ (Curing)", lac_cure_text:"อบ 60–70 °C 5–10 นาที (ดีขึ้นที่ 120–130 °C ขึ้นกับชนิดโลหะ)",
+
+        lac_equip_title:"อุปกรณ์", lac_maint_title:"การบำรุงรักษาน้ำยา", lac_maint_text:"คุม pH 8.5–9.0 ด้วยแอมโมเนียน้ำ/แอมโมเนียมไฮดรอกไซด์",
+
+        lac_steps_title:"ขั้นตอนการทำงาน (แนะนำ)",
+        lac2k_step1:"ชิ้นงานชุบเสร็จ → ล้างน้ำสะอาด 2 ครั้ง",
+        lac2k_step2:"จุ่ม แลคเกอร์ 2200",
+        lac2k_step3:"อบร้อนให้แห้ง",
+        lac_note:"*ใช้น้ำกลั่น/น้ำกรองสำหรับล้างและผสม (ไม่ใช้น้ำบาดาล)",
+
+        lac_ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        lac_ehs1:"สวม PPE ตามเหมาะสม และระบายอากาศเพียงพอ",
+        lac_ehs2:"ควบคุมการทิ้งของเสียตามข้อกำหนด",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น."
+      },
+      en:{
+        page_title:"EPA 2020 E-coat & Water Lacquer 2200 | Baume Chemical",
+        badge1:"Clear Lacquer", badge2:"E-coat & Water-based", badge3:"Rack",
+        hero_title:"EPA 2020 (E-coat) + Water Lacquer 2200",
+        hero_tagline:"Two clear-coat solutions in one page — specs, make-up, curing & troubleshooting for E-coat and water-based systems.",
+
+        epa_info_title:"Product Info: Teknoclear EPA 2020 (Electrophoretic)",
+        epa_info_lead:"Glossy clear E-coat film, hard and corrosion-resistant for metal/finished surfaces (silver, brass, jewelry, etc.).",
+
+        epa_feat1_t:"High-gloss clear film", epa_feat1_d:"Thin, uniform, non-droplet",
+        epa_feat2_t:"Corrosion resistance", epa_feat2_d:"Extends surface lifetime",
+        epa_feat3_t:"Controlled thickness", epa_feat3_d:"0.05–0.1 A/dm², ~8 µm in 30 s",
+        epa_feat4_t:"Fast throughput", epa_feat4_d:"Ideal for mass production",
+        epa_feat5_t:"Easy solvent control", epa_feat5_d:"Ultrafiltration for bath quality",
+        epa_feat6_t:"Rack ready", epa_feat6_d:"Flexible for various lines",
+
+        epa_specs_title:"Operating Window",
+        th_requirements:"Requirement", th_value:"Target",
+        epa_conduct_label:"Conductivity", temp:"Temperature", anode:"Anode", current:"Current",
+        area_ratio:"Anode : Cathode area", rate:"Deposition rate", time:"Coating time", delay:"Delay before current",
+
+        epa_steps_title:"Recommended Workflow",
+        epa_step1:"DI rinse ×2 (pre/post) to reduce metallic contamination",
+        epa_step2:"Surface activate with 2% Lacquer 2020",
+        epa_step3:"E-coat with EPA 2020 (per specs above)",
+        epa_step4:"DI rinse ×2 → water-spot remover dip",
+        epa_step5:"Blow dry → oven cure",
+
+        curing_title:"Curing", cond:"Condition", duration:"Duration",
+        epa_cure1_cond:"Hard metals 150–180 °C", epa_cure2_cond:"Hard metals 90–120 °C",
+        cure_note:"*Under-curing leaves soft film and fingerprint marks.",
+
+        mix_title:"Bath Make-up & Adjustments",
+        mix1:"Premix EPA 2020 with dye (if any) until homogeneous",
+        mix2:"Slowly add DI water while stirring to final volume",
+        mix3:"Circulate 12–24 h (DI conductivity < 5 μS)",
+        mix_ri:"RI: 11–14", mix_cond:"Conductivity: 900–1000 μS", mix_ph:"pH: 4.2–5.2", mix_meq:"MEQ (0.1 M KOH): 27–33",
+
+        equip_title:"Equipment",
+        epa_eq1:"PP/PVC/SS tank with in-tank circulation (≥5× tank volume/h)",
+        epa_eq2:"SS316 anodes, oven, rectifier up to ~60 V",
+        epa_eq3:"Ultrafiltration set for solvent/electrolyte control",
+
+        troubles_title:"Troubleshooting (EPA 2020)", issue:"Issue", fix:"Fix",
+        ts1i:"Over-thick film", ts1f:"Reduce current/time; high solvent → ultrafiltration",
+        ts2i:"Orange peel", ts2f:"Lower solvent; avoid aggressive current ramp",
+        ts3i:"Thick but uneven", ts3f:"Current <0.5 A/dm²; lower temp; remove ions via UF",
+        ts4i:"Thin film", ts4f:"Increase lacquer/current/time",
+        ts5i:"Burn at high current areas", ts5f:"Raise solvent/lacquer; 25–30 °C bath",
+        ts6i:"Iridescence", ts6f:"Raise lacquer/temp/current/time",
+        ts7i:"Pits/voids", ts7f:"Re-clean; UF to remove metal/sediment; DI rinse <5 μS",
+        ts8i:"Rinse/bake stains", ts8f:"Improve rinsing/drying; add water-spot remover",
+        ts9i:"Gas bubbles/prints", ts9f:"Let bath rest clear; increase post-rinse dwell",
+        ts10i:"Soft film", ts10f:"Increase cure temperature/time",
+        ts11i:"Yellow/brown tint", ts11f:"Check agitation/filtration; keep 25–30 °C",
+        ts12i:"Dropping amps", ts12f:"High solvent/alkali carryover/metal → UF; improve rinsing",
+        ts13i:"Low conductivity", ts13f:"Raise lacquer/solvent as specified",
+        ts14i:"High conductivity >1300 μS", ts14f:"Reduce lacquer/solvent or UF to purge ions",
+
+        ehs_title:"Safety & Environment",
+        ehs1:"Use high-purity DI (conductivity < 5 μS) for rinse/make-up",
+        ehs2:"Wear PPE (gloves/goggles/respirator) with proper ventilation",
+        ehs3:"Treat organic/metal-bearing waste per regulation",
+
+        lac_info_title:"Product Info: Water Lacquer 2200 (Chromium-free)",
+        lac_info_lead:"Water-based clear coat, hard and corrosion-resistant; boosts Zn finishes and prevents tarnish on Cu/Brass/Ni.",
+        lac_feat1_t:"Water-based", lac_feat1_d:"Low odor, easy handling",
+        lac_feat2_t:"Chromium-free", lac_feat2_d:"Regulatory friendly",
+        lac_feat3_t:"Anti-tarnish for Cu/Brass", lac_feat3_d:"Minimizes discoloration",
+        lac_feat4_t:"Hard & durable film", lac_feat4_d:"Scratch resistance",
+        lac_feat5_t:"Cost-controllable", lac_feat5_d:"Dilution 10–15%",
+        lac_feat6_t:"Simple workflow", lac_feat6_d:"Dip 30–60 s → dry",
+
+        lac_usage_title:"Usage / Ratios",
+        comp:"Component", amount:"Amount", unit:"Unit", distilled:"DI water",
+        dip_temp:"Dip temperature", room:"Room", dip_time:"Dip time", sec:"sec", dry_temp:"Drying temp",
+
+        lac_cure_title:"Curing", lac_cure_text:"Dry at 60–70 °C for 5–10 min (better at 120–130 °C depending on metal)",
+
+        lac_equip_title:"Equipment", lac_maint_title:"Bath Maintenance", lac_maint_text:"Keep pH 8.5–9.0 with ammonium hydroxide",
+
+        lac_steps_title:"Recommended Workflow",
+        lac2k_step1:"Post-plate parts → DI rinse ×2",
+        lac2k_step2:"Dip in Lacquer 2200",
+        lac2k_step3:"Thermal dry",
+
+        lac_note:"*Use DI/filtered water for rinse and make-up (avoid well water).",
+
+        lac_ehs_title:"Safety & Environment",
+        lac_ehs1:"Use appropriate PPE and ensure ventilation",
+        lac_ehs2:"Dispose per local regulations",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00"
+      }
+    };
+
+    const pageMeta = {
+      epa2020: {
+        title_th:"EPA 2020 แลคเกอร์ไฟฟ้า | Baume Chemical",
+        title_en:"EPA 2020 Electrophoretic Clear Lacquer | Baume Chemical",
+        desc_th:"แลคเกอร์ใสแบบ E-coat: วิธีผสม สเปก RI/pH/μS กระแส/เวลา อบ และแก้ปัญหา ครบ.",
+        desc_en:"E-coat clear lacquer: make-up, RI/pH/μS, current/time, curing & troubleshooting."
+      },
+      lacquer2200: {
+        title_th:"แลคเกอร์น้ำ 2200 | Baume Chemical",
+        title_en:"Water Lacquer 2200 | Baume Chemical",
+        desc_th:"แลคเกอร์ใสน้ำ Chromium-free: วิธีผสม จุ่ม อบ pH และการบำรุงรักษา.",
+        desc_en:"Water-based chromium-free clear coat: mix, dip, dry, pH & maintenance."
+      }
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      // apply text
+      document.querySelectorAll('[data-i18n-key]').forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      // update title/description for current tab
+      const hash = (location.hash||'#epa2020').replace('#','');
+      const meta = pageMeta[hash==='lacquer2200'?'lacquer2200':'epa2020'];
+      const titleEl = document.querySelector('title');
+      const descEl = document.querySelector('meta[name="description"]');
+      if(titleEl) titleEl.textContent = (L==='en') ? meta.title_en : meta.title_th;
+      if(descEl) descEl.setAttribute('content', (L==='en') ? meta.desc_en : meta.desc_th);
+
+      // update buttons state
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    function showPanel(route){
+      const p1 = document.getElementById('panel-epa');
+      const p2 = document.getElementById('panel-2200');
+      const t1 = document.getElementById('tab-epa');
+      const t2 = document.getElementById('tab-2200');
+      const isEPA = route!=='lacquer2200';
+      p1.classList.toggle('hide', !isEPA);
+      p2.classList.toggle('hide', isEPA);
+      t1.setAttribute('aria-selected', String(isEPA));
+      t2.setAttribute('aria-selected', String(!isEPA));
+
+      const L = (localStorage.getItem('lang') || 'th');
+      const meta = pageMeta[isEPA?'epa2020':'lacquer2200'];
+      const titleEl = document.querySelector('title');
+      const descEl = document.querySelector('meta[name="description"]');
+      if(titleEl) titleEl.textContent = (L==='en') ? meta.title_en : meta.title_th;
+      if(descEl) descEl.setAttribute('content', (L==='en') ? meta.desc_en : meta.desc_th);
+    }
+
+    // Init
+    (function init(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
+      });
+
+      document.getElementById('tab-epa').addEventListener('click', ()=> { history.replaceState(null,"","#epa2020"); showPanel('epa2020'); });
+      document.getElementById('tab-2200').addEventListener('click', ()=> { history.replaceState(null,"","#lacquer2200"); showPanel('lacquer2200'); });
+
+      const hash = (location.hash||'').replace('#','');
+      showPanel(hash==='lacquer2200' ? 'lacquer2200' : 'epa2020');
+
+      // canonical (client-side fallback)
+      try{
+        const link = document.createElement('link');
+        link.setAttribute('rel','canonical');
+        link.setAttribute('href', location.href.split('#')[0]);
+        document.head.appendChild(link);
+      }catch(e){}
+    })();
+  </script>
+</body>
+</html>
+ 

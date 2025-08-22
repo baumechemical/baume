@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title data-i18n-key="meta_title">Hex Green 64 • สีเขียวทหาร 64 | Baume Chemical</title>
+  <meta name="description" content="โครเมทสีเขียวทหาร (Cr6+) สำหรับงานซิงค์ เข้มลึกแบบ Olive Drab ใช้ได้ทั้งแร็ค/บาร์เรล pH 1.3–2.0 จุ่ม 30–120 วิ พร้อมตัวอย่างผสม 100 ลิตรและแนวทางแก้ปัญหา">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Hex Green 64 • Olive Drab Chromate">
+  <meta property="og:description" content="Deep olive-drab chromate (Cr(VI)) for zinc. pH 1.3–2.0; 30–120 s; rack & barrel; paintable substrate.">
+  <meta property="og:image" content="https://i.imgur.com/3dneBY4.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Preloads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3dneBY4.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); /* โลโก้ footer */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* HERO (HEADER IMAGE) */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(360px, 58svh, 620px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/3dneBY4.jpeg') center/cover no-repeat; /* รูป header */
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:16px}
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer with logo */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:#2c5e4e;background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- HEADER / HERO -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Hexavalent (Cr(VI))</span>
+        <span class="badge" data-i18n-key="badge2">Olive Drab</span>
+        <span class="badge" data-i18n-key="badge3">Rack & Barrel</span>
+        <span class="badge" data-i18n-key="badge4">Paintable</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Hex Green 64 — สีเขียวทหาร 64</h1>
+      <p data-i18n-key="hero_desc">โครเมทสีเขียวทหาร (Cr6+) สำหรับงานซิงค์ เฉดเข้มลึกแบบ Olive Drab ทนกัดกร่อนสูง ใช้ได้ทั้งแร็ค/บาร์เรล และพ่นสีทับได้ดี</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Overview -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="overview_title">ภาพรวม</h2>
+      <p class="lead" data-i18n-key="overview_text">
+        Hex Green 64 เป็นโครเมท Cr(VI) เฉดเขียวทหารเข้ม ออกดำ ช่วยเพิ่มการทนกัดกร่อนและการยึดเกาะสีบนผิวซิงค์
+        เหมาะกับสายแร็คและบาร์เรล ใช้งานง่าย ควบคุมด้วย pH/เวลา/การไหลเวียน
+      </p>
+    </section>
+
+    <!-- Operating -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="ops_title">วิธีการใช้งาน (ช่วงการทำงาน)</h2>
+      <div class="table">
+        <table aria-label="Operating conditions">
+          <thead>
+            <tr>
+              <th data-i18n-key="th_param">พารามิเตอร์</th>
+              <th data-i18n-key="th_opt">ค่าที่เหมาะสม</th>
+              <th data-i18n-key="th_range">ช่วง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="op_hex">Hex Green 64</td>
+              <td>~80 cc/ลิตร</td>
+              <td>50–100 cc/ลิตร</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="op_time">เวลาในการจุ่ม</td>
+              <td>~60 วินาที</td>
+              <td>30–120 วินาที</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="op_pH">pH</td>
+              <td>~1.7</td>
+              <td data-i18n-key="op_pH_range">1.3–2.0 (ปรับด้วย HNO₃ / NaOH)</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="op_motion">การเคลื่อนไหว</td>
+              <td data-i18n-key="op_motion_opt">เป่าลมเบา หรือแกว่งโยกช้า</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="ops_note">*คุม pH ให้คงที่ตลอดงาน โทน/ความเข้มขึ้นกับเวลา ความเข้มข้น และสภาพผิวก่อนจุ่ม</p>
+    </section>
+
+    <!-- Make-up -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="mix_title">ตัวอย่างการผสม</h2>
+      <p data-i18n-key="mix_text">
+        ผสมน้ำยา <b>100 ลิตร</b> : ตวง <b>Hex Green 64 = 8 ลิตร</b> เติมน้ำ <b>92 ลิตร</b> กวนน้ำยาให้เข้ากัน
+        จุ่มทดสอบเฉด: ถ้าเข้มไป → เติมน้ำ / ถ้าอ่อนไป → เติมน้ำยา
+      </p>
+    </section>
+
+    <!-- Process -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="proc_title">ขั้นตอนการทำงาน</h2>
+      <div class="table">
+        <table aria-label="Process sequence">
+          <thead>
+            <tr><th>#</th><th data-i18n-key="th_detail">รายละเอียด</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td data-i18n-key="step1">ชิ้นงานที่ชุบซิงค์แล้ว</td></tr>
+            <tr><td>2</td><td data-i18n-key="step2">ล้างน้ำสะอาด 2 ครั้ง</td></tr>
+            <tr><td>3</td><td data-i18n-key="step3">จุ่มกรดดินประสิว 1% 3–15 วินาที</td></tr>
+            <tr><td>4</td><td data-i18n-key="step4">ล้างน้ำสะอาด</td></tr>
+            <tr><td>5</td><td data-i18n-key="step5">จุ่ม Hex Green 64 30–120 วินาที พร้อมเป่าลมหรือแกว่งเบา</td></tr>
+            <tr><td>6</td><td data-i18n-key="step6">ล้างน้ำสะอาด 2 ครั้ง</td></tr>
+            <tr><td>7</td><td data-i18n-key="step7">เป่าลมอุ่น (≤ 50 °C) ให้แห้ง</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="tr_title">ปัญหาที่พบบ่อย & แนวทางแก้ไข (สีเขียวทหาร)</h2>
+      <ul class="lead" style="margin:0 0 6px 18px">
+        <li data-i18n-key="t1"><b>สีไม่สม่ำเสมอ/ซีด:</b> ปรับ pH 1.3–2.0; ใช้อุณหภูมิห้อง; เพิ่มเวลา/ความเข้มข้นตามต้องการ; ทำความสะอาดผิวก่อนจุ่ม</li>
+        <li data-i18n-key="t2"><b>ฝ้า/คราบขาวหลังแห้ง:</b> เพิ่มขั้นตอนล้าง (2–3 ครั้ง); ลดความเข้มข้นให้อยู่ในช่วงแนะนำ</li>
+        <li data-i18n-key="t3"><b>ฟิล์มล่อน/ยึดเกาะไม่ดี:</b> ปรับปรุงการเตรียมผิว (ล้างไขมัน/กำจัดสนิม); รักษา pH และความเข้มข้นให้อยู่ในสเปก</li>
+        <li data-i18n-key="t4"><b>ทนกัดกร่อนไม่ดี:</b> ฟิล์มบาง → เพิ่มเวลา/ความเข้มข้น; พิจารณาใช้ Top Coat/Sealer</li>
+      </ul>
+      <p class="note" data-i18n-key="safety"><b>ความปลอดภัย (Cr(VI)):</b> ใช้ PPE เหมาะสม ระบายอากาศ และบำบัดของเสียตามกฎหมาย</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Hex Green 64 • สีเขียวทหาร 64 | Baume Chemical",
+        badge1:"Hexavalent (Cr(VI))", badge2:"Olive Drab", badge3:"แร็ค & บาร์เรล", badge4:"พ่นสีทับได้",
+        hero_title:"Hex Green 64 — สีเขียวทหาร 64",
+        hero_desc:"โครเมทสีเขียวทหาร (Cr6+) สำหรับงานซิงค์ เฉดเข้มลึกแบบ Olive Drab ทนกัดกร่อนสูง ใช้ได้ทั้งแร็ค/บาร์เรล และพ่นสีทับได้ดี",
+
+        overview_title:"ภาพรวม",
+        overview_text:"Hex Green 64 เป็นโครเมท Cr(VI) เฉดเขียวทหารเข้ม ออกดำ ช่วยเพิ่มการทนกัดกร่อนและการยึดเกาะสีบนผิวซิงค์ เหมาะกับสายแร็คและบาร์เรล ใช้งานง่าย ควบคุมด้วย pH/เวลา/การไหลเวียน",
+
+        ops_title:"วิธีการใช้งาน (ช่วงการทำงาน)",
+        th_param:"พารามิเตอร์", th_opt:"ค่าที่เหมาะสม", th_range:"ช่วง",
+        op_hex:"Hex Green 64", op_time:"เวลาในการจุ่ม", op_pH:"pH", op_pH_range:"1.3–2.0 (ปรับด้วย HNO₃ / NaOH)", op_motion:"การเคลื่อนไหว", op_motion_opt:"เป่าลมเบา หรือแกว่งโยกช้า",
+        ops_note:"*คุม pH ให้คงที่ตลอดงาน โทน/ความเข้มขึ้นกับเวลา ความเข้มข้น และสภาพผิวก่อนจุ่ม",
+
+        mix_title:"ตัวอย่างการผสม",
+        mix_text:"ผสมน้ำยา 100 ลิตร : ตวง Hex Green 64 = 8 ลิตร เติมน้ำ 92 ลิตร กวนน้ำยาให้เข้ากัน จุ่มทดสอบเฉด: ถ้าเข้มไป → เติมน้ำ / ถ้าอ่อนไป → เติมน้ำยา",
+
+        proc_title:"ขั้นตอนการทำงาน",
+        th_detail:"รายละเอียด",
+        step1:"ชิ้นงานที่ชุบซิงค์แล้ว",
+        step2:"ล้างน้ำสะอาด 2 ครั้ง",
+        step3:"จุ่มกรดดินประสิว 1% 3–15 วินาที",
+        step4:"ล้างน้ำสะอาด",
+        step5:"จุ่ม Hex Green 64 30–120 วินาที พร้อมเป่าลมหรือแกว่งเบา",
+        step6:"ล้างน้ำสะอาด 2 ครั้ง",
+        step7:"เป่าลมอุ่น (≤ 50 °C) ให้แห้ง",
+
+        tr_title:"ปัญหาที่พบบ่อย & แนวทางแก้ไข (สีเขียวทหาร)",
+        t1:"สีไม่สม่ำเสมอ/ซีด: ปรับ pH 1.3–2.0; อุณหภูมิห้อง; เพิ่มเวลา/ความเข้มข้น; ปรับปรุงการทำความสะอาดก่อนจุ่ม",
+        t2:"ฝ้า/คราบขาว: เพิ่มการล้าง (2–3 ครั้ง); ลดความเข้มข้นให้กลับสเปก",
+        t3:"ฟิล์มล่อน/ยึดเกาะไม่ดี: ปรับปรุงการเตรียมผิว; รักษา pH และความเข้มข้นตามสเปก",
+        t4:"ทนกัดกร่อนไม่ดี: ฟิล์มบาง → เพิ่มเวลา/ความเข้มข้น; พิจารณา Top Coat/Sealer",
+        safety:"ความปลอดภัย (Cr(VI)): ใช้ PPE เหมาะสม ระบายอากาศ และบำบัดของเสียตามกฎหมาย"
+      },
+      en:{
+        meta_title:"Hex Green 64 • Olive Drab Chromate | Baume Chemical",
+        badge1:"Hexavalent (Cr(VI))", badge2:"Olive Drab", badge3:"Rack & Barrel", badge4:"Paintable",
+        hero_title:"Hex Green 64 — Olive Drab",
+        hero_desc:"Deep olive-drab chromate (Cr(VI)) for zinc; high corrosion resistance, suitable for rack & barrel, excellent paint adhesion.",
+
+        overview_title:"Overview",
+        overview_text:"Hex Green 64 is a deep military-green/near-black Cr(VI) chromate for zinc, improving corrosion resistance and paint adhesion. Straightforward control via pH, time, and agitation.",
+
+        ops_title:"Operating Window",
+        th_param:"Parameter", th_opt:"Optimal", th_range:"Range",
+        op_hex:"Hex Green 64", op_time:"Dip time", op_pH:"pH", op_pH_range:"1.3–2.0 (adjust with HNO₃ / NaOH)", op_motion:"Agitation", op_motion_opt:"Gentle air sparge or slow rocking",
+        ops_note:"*Hold pH steady. Tone/intensity depends on time, concentration, and pre-dip surface condition.",
+
+        mix_title:"Make-up Example",
+        mix_text:"For 100 L: add 8 L Hex Green 64 + 92 L water, mix well. Tone tuning: too dark → add water; too light → add solution.",
+
+        proc_title:"Process Sequence",
+        th_detail:"Detail",
+        step1:"Zinc-plated part",
+        step2:"Rinse ×2",
+        step3:"1% nitric acid, 3–15 s",
+        step4:"Rinse",
+        step5:"Hex Green 64 for 30–120 s with gentle agitation",
+        step6:"Rinse ×2",
+        step7:"Warm blow-off (≤ 50 °C) to dry",
+
+        tr_title:"Troubleshooting (Olive Drab)",
+        t1:"Uneven/pale: correct pH 1.3–2.0; keep room temp; increase time/conc; improve pre-clean.",
+        t2:"Haze/white film: add rinses (2–3); reduce concentration to spec.",
+        t3:"Peeling/poor adhesion: improve surface prep; keep pH & concentration in spec.",
+        t4:"Poor corrosion resistance: film too thin → increase time/conc; consider top coat/sealer.",
+        safety:"Safety (Cr(VI)): Use proper PPE, ensure ventilation, and treat waste per regulations."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

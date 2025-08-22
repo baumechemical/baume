@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">Teknoseal B100 • น้ำยากันหมองดีบุก | Baume Chemical</title>
+  <meta name="description" content="น้ำยากันหมองสำหรับผิวดีบุก ช่วยไล่น้ำ แห้งไว ฟิล์มใสยืดหยุ่น ปกป้องผิวชุบไม่ให้หมอง ใช้งาน 30–55 °C 50–100 cc/L">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Teknoseal B100 — Tin Anti-Tarnish">
+  <meta property="og:description" content="Final rinse anti-tarnish for tin. Fast-dry, clear flexible film. 30–55 °C, 50–100 cc/L.">
+  <meta property="og:image" content="https://i.imgur.com/XZQoDHI.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/XZQoDHI.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/XZQoDHI.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Tin Anti-Tarnish</span>
+        <span class="badge" data-i18n-key="badge2">Fast-Dry</span>
+        <span class="badge" data-i18n-key="badge3">Final Rinse</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Teknoseal B100 — น้ำยากันหมองดีบุก</h1>
+      <p data-i18n-key="hero_tagline">ไล่น้ำ แห้งไว ฟิล์มใสยืดหยุ่น ปกป้องผิวดีบุกไม่ให้หมอง ใช้งาน 30–55 °C (50–100 cc/L)</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Intro -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="intro_title">ภาพรวมผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="intro_p1">
+        น้ำยากันหมองดีบุก B100 เป็นน้ำยาประเภทเคลือบผิวสำหรับดีบุก ใช้เป็นขั้นตอนล้างสุดท้ายเพื่อสร้างฟิล์มใสที่ช่วยปกป้องผิวชุบไม่ให้หมอง
+        คงเฉดสีให้สวยงาม เพิ่มความทนทาน และเก็บได้นานโดยไม่เสื่อมสภาพ
+      </p>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติเด่น</h2>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">💧</div><h3 data-i18n-key="f1_t">ไล่น้ำ / แห้งไว</h3><p data-i18n-key="f1_d">ลดคราบน้ำ ช่วยให้ชิ้นงานแห้งเร็ว เรียบใส</p></div>
+        <div class="pill"><div class="ic">🧴</div><h3 data-i18n-key="f2_t">ฟิล์มใสยืดหยุ่น</h3><p data-i18n-key="f2_d">เคลือบปกป้องโดยไม่เปลี่ยนเฉดสีผิวดีบุก</p></div>
+        <div class="pill"><div class="ic">🌡️</div><h3 data-i18n-key="f3_t">ทำงานที่ 30–55 °C</h3><p data-i18n-key="f3_d">สภาพแวดล้อมเป็นมิตร ใช้งานสะดวก</p></div>
+        <div class="pill"><div class="ic">⚖️</div><h3 data-i18n-key="f4_t">ใช้เข้มข้นต่ำ</h3><p data-i18n-key="f4_d">50–100 cc/L ประหยัด ควบคุมง่าย</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f5_t">ผสมน้ำกลั่น</h3><p data-i18n-key="f5_d">ลดการปนเปื้อน รักษาคุณภาพฟิล์ม</p></div>
+        <div class="pill"><div class="ic">🧰</div><h3 data-i18n-key="f6_t">ช่วงใช้งานกว้าง</h3><p data-i18n-key="f6_d">ใช้เป็น final rinse หลังชุบดีบุก/ขัดเงา</p></div>
+      </div>
+    </section>
+
+    <!-- Usage table -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="use_title">วิธีการใช้</h2>
+      <div class="table">
+        <table aria-label="Operating conditions">
+          <thead>
+            <tr>
+              <th data-i18n-key="tb_comp">องค์ประกอบ</th>
+              <th data-i18n-key="tb_amt">ปริมาณ</th>
+              <th data-i18n-key="tb_unit">หน่วย</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="tb_b100">น้ำยากันหมอง Teknoseal B100</td><td>50–100</td><td data-i18n-key="unit_ccl">ซี.ซี./ลิตร</td></tr>
+            <tr><td data-i18n-key="tb_temp">อุณหภูมิ</td><td>30–55</td><td data-i18n-key="unit_c">องศาเซลเซียส</td></tr>
+            <tr><td data-i18n-key="tb_time">เวลาในการจุ่ม</td><td data-i18n-key="tb_time_val">10 วินาที – 1 นาที</td><td></td></tr>
+            <tr><td data-i18n-key="tb_water">น้ำที่ใช้ผสม</td><td data-i18n-key="tb_water_val">น้ำกลั่น</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mix example & process -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="mix_title">ตัวอย่างการผสมน้ำยา</h2>
+      <p data-i18n-key="mix_p">
+        ถ้าต้องการน้ำยากันหมองจำนวน 10 ลิตร ให้ตวงน้ำยา B100 จำนวน 500 ซี.ซี. แล้วเติมน้ำกลั่นอีก 9.5 ลิตร กวนน้ำยาให้เข้ากัน
+      </p>
+
+      <h2 class="section" data-i18n-key="proc_title">ขั้นตอนการทำงาน</h2>
+      <ol style="margin:0 0 0 22px">
+        <li data-i18n-key="p1">ชิ้นงานที่ชุบเรียบร้อยแล้ว</li>
+        <li data-i18n-key="p2">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="p3">ล้างน้ำสะอาดอีกครั้ง</li>
+        <li data-i18n-key="p4">จุ่มน้ำกลั่น</li>
+        <li data-i18n-key="p5">จุ่มน้ำยากันหมอง B100 ตามเวลาที่กำหนด</li>
+        <li data-i18n-key="p6">อบร้อนหรือปั่นเหวี่ยงให้แห้ง</li>
+      </ol>
+      <p class="note" data-i18n-key="note_ppe">*ควรสวม PPE (ถุงมือ/แว่น/หน้ากาก) ระหว่างการทำงาน</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li> 
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Teknoseal B100 • น้ำยากันหมองดีบุก | Baume Chemical",
+        badge1:"Tin Anti-Tarnish", badge2:"Fast-Dry", badge3:"Final Rinse",
+        hero_title:"Teknoseal B100 — น้ำยากันหมองดีบุก",
+        hero_tagline:"ไล่น้ำ แห้งไว ฟิล์มใสยืดหยุ่น ปกป้องผิวดีบุกไม่ให้หมอง ใช้งาน 30–55 °C (50–100 cc/L)",
+
+        intro_title:"ภาพรวมผลิตภัณฑ์",
+        intro_p1:"น้ำยากันหมองดีบุก B100 เป็นน้ำยาประเภทเคลือบผิวสำหรับดีบุก ใช้เป็นขั้นตอนล้างสุดท้ายเพื่อสร้างฟิล์มใสที่ช่วยปกป้องผิวชุบไม่ให้หมอง คงเฉดสีให้สวยงาม เพิ่มความทนทาน และเก็บได้นานโดยไม่เสื่อมสภาพ",
+
+        features_title:"คุณสมบัติเด่น",
+        f1_t:"ไล่น้ำ / แห้งไว", f1_d:"ลดคราบน้ำ ช่วยให้ชิ้นงานแห้งเร็ว เรียบใส",
+        f2_t:"ฟิล์มใสยืดหยุ่น", f2_d:"เคลือบปกป้องโดยไม่เปลี่ยนเฉดสีผิวดีบุก",
+        f3_t:"ทำงานที่ 30–55 °C", f3_d:"สภาพแวดล้อมเป็นมิตร ใช้งานสะดวก",
+        f4_t:"ใช้เข้มข้นต่ำ", f4_d:"50–100 cc/L ประหยัด ควบคุมง่าย",
+        f5_t:"ผสมน้ำกลั่น", f5_d:"ลดการปนเปื้อน รักษาคุณภาพฟิล์ม",
+        f6_t:"ช่วงใช้งานกว้าง", f6_d:"ใช้เป็น final rinse หลังชุบดีบุก/ขัดเงา",
+
+        use_title:"วิธีการใช้",
+        tb_comp:"องค์ประกอบ", tb_amt:"ปริมาณ", tb_unit:"หน่วย",
+        tb_b100:"น้ำยากันหมอง Teknoseal B100", unit_ccl:"ซี.ซี./ลิตร",
+        tb_temp:"อุณหภูมิ", unit_c:"องศาเซลเซียส",
+        tb_time:"เวลาในการจุ่ม", tb_time_val:"10 วินาที – 1 นาที",
+        tb_water:"น้ำที่ใช้ผสม", tb_water_val:"น้ำกลั่น",
+
+        mix_title:"ตัวอย่างการผสมน้ำยา",
+        mix_p:"ถ้าต้องการน้ำยากันหมองจำนวน 10 ลิตร ให้ตวงน้ำยา B100 จำนวน 500 ซี.ซี. แล้วเติมน้ำกลั่นอีก 9.5 ลิตร กวนน้ำยาให้เข้ากัน",
+
+        proc_title:"ขั้นตอนการทำงาน",
+        p1:"ชิ้นงานที่ชุบเรียบร้อยแล้ว", p2:"ล้างน้ำสะอาด", p3:"ล้างน้ำสะอาดอีกครั้ง",
+        p4:"จุ่มน้ำกลั่น", p5:"จุ่มน้ำยากันหมอง B100 ตามเวลาที่กำหนด", p6:"อบร้อนหรือปั่นเหวี่ยงให้แห้ง",
+
+        note_ppe:"*ควรสวม PPE (ถุงมือ/แว่น/หน้ากาก) ระหว่างการทำงาน",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Teknoseal B100 • Tin Anti-Tarnish | Baume Chemical",
+        badge1:"Tin Anti-Tarnish", badge2:"Fast-Dry", badge3:"Final Rinse",
+        hero_title:"Teknoseal B100 — Tin Anti-Tarnish",
+        hero_tagline:"Water-displacing, quick-dry, clear flexible film. Protects tin finish from tarnish. 30–55 °C (50–100 cc/L).",
+
+        intro_title:"Product Overview",
+        intro_p1:"B100 is a final-rinse anti-tarnish for tin, forming a clear protective film that preserves tone and improves durability. Long bath life, easy to maintain.",
+
+        features_title:"Key Features",
+        f1_t:"Water-displacing & quick-dry", f1_d:"Minimizes water marks, speeds drying",
+        f2_t:"Clear flexible film", f2_d:"Protects without altering tin tone",
+        f3_t:"Works at 30–55 °C", f3_d:"Convenient and production-friendly",
+        f4_t:"Low dosage", f4_d:"50–100 cc/L — economical & simple control",
+        f5_t:"DI water make-up", f5_d:"Reduces contamination, stable film quality",
+        f6_t:"Wide applicability", f6_d:"Final rinse after tin plating / brightening",
+
+        use_title:"How to Use",
+        tb_comp:"Component", tb_amt:"Amount", tb_unit:"Unit",
+        tb_b100:"Teknoseal B100 anti-tarnish", unit_ccl:"cc/L",
+        tb_temp:"Temperature", unit_c:"°C",
+        tb_time:"Immersion time", tb_time_val:"10 sec – 1 min",
+        tb_water:"Make-up water", tb_water_val:"Deionized water",
+
+        mix_title:"Mix Example",
+        mix_p:"For 10 L bath: add 500 cc of B100 and fill up with DI water to 10 L. Mix well.",
+
+        proc_title:"Recommended Process",
+        p1:"Plated parts ready", p2:"Rinse", p3:"Rinse again",
+        p4:"DI water dip", p5:"Immerse in B100 within recommended time", p6:"Warm dry or spin dry",
+
+        note_ppe:"*Wear appropriate PPE (gloves/goggles/respirator) during operation.",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      // Title & meta
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title data-i18n-key="page_title">สารเคมีห้องแล็บ & ไทเทรชัน | Baume Chemical</title>
+  <meta name="description" content="รายการสารเคมีและสารละลายมาตรฐานที่ใช้ในห้องแล็บสำหรับงานชุบโลหะ: มาตรฐาน M/N, บัฟเฟอร์, อินดิเคเตอร์ (TH/EN).">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Lab & Titration Chemicals • Standards • Buffers • Indicators">
+  <meta property="og:description" content="Compact bilingual list for plating labs (EN/TH).">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(360px, 58svh, 620px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Table */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:680px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Lab Reagents</span>
+        <span class="badge" data-i18n-key="badge2">Standards • Buffers • Indicators</span>
+        <span class="badge" data-i18n-key="badge3">Titration</span>
+      </div>
+      <h1 data-i18n-key="hero_title">สารเคมีห้องแล็บ & สารละลายมาตรฐาน</h1>
+      <p data-i18n-key="hero_tagline">
+        รายการสารเคมี/สารละลายที่ใช้บ่อยในงานชุบโลหะและการทดสอบคุณภาพบ่อ — รูปแบบมาตรฐาน M/N, บัฟเฟอร์ และอินดิเคเตอร์ (TH/EN)
+      </p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Overview -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="list_title">รายการสารเคมี</h2>
+      <p class="lead" data-i18n-key="list_lead">ตารางต่อไปนี้เป็นสารเคมี/สารละลายพร้อมความเข้มข้นอ้างอิงสำหรับงานแล็บ</p>
+
+      <div class="table" role="region" aria-label="Lab chemicals table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n-key="th_name">Chemical / Reagent</th>
+              <th data-i18n-key="th_conc">Concentration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>E.D.T.A.</td><td>0.1M</td></tr>
+            <tr><td>E.D.T.A.</td><td>0.2M</td></tr>
+            <tr><td>Hydrochloric Acid</td><td>0.1M</td></tr>
+            <tr><td>Hydrochloric Acid</td><td>1.0M</td></tr>
+            <tr><td>Silver Nitrate</td><td>0.1M</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>1.0M</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>0.1M</td></tr>
+            <tr><td>Sodium Thiosulphate</td><td>0.1N</td></tr>
+            <tr><td>Sulphuric Acid</td><td>0.1N</td></tr>
+            <tr><td>Sulphuric Acid</td><td>1.0N</td></tr>
+            <tr><td>Ammonia Buffer</td><td>pH 10</td></tr>
+            <tr><td>Ammonium Hydroxide</td><td>50% (v/v)</td></tr>
+            <tr><td>Barium Chloride</td><td>20% (w/v)</td></tr>
+            <tr><td>Boric Acid Mixer</td><td>-</td></tr>
+            <tr><td>Formaldehyde</td><td>10% (v/v)</td></tr>
+            <tr><td>Formaldehyde</td><td>50% (v/v)</td></tr>
+            <tr><td>Hydrochloric Acid</td><td>20% (v/v)</td></tr>
+            <tr><td>Hydrogen Peroxide</td><td>30% (w/v)</td></tr>
+            <tr><td>Hydrogen Peroxide</td><td>35% (w/v)</td></tr>
+            <tr><td>Manital</td><td>20% (w/v)</td></tr>
+            <tr><td>Potassium Iodide</td><td>10% (w/v)</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>20% (w/v)</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>5M</td></tr>
+            <tr><td>Sulphuric Acid</td><td>2.5M</td></tr>
+            <tr><td>Sulphuric Acid</td><td>3N</td></tr>
+            <tr><td>Erichrome Black T</td><td>-</td></tr>
+            <tr><td>Indincocamine Indicator</td><td>-</td></tr>
+            <tr><td>Merixide Indicator</td><td>-</td></tr>
+            <tr><td>Methyl Orange Indicator</td><td>-</td></tr>
+            <tr><td>Methyl Red Indicator</td><td>-</td></tr>
+            <tr><td>P.A.N. Indicator</td><td>-</td></tr>
+            <tr><td>Phenolphthalein Indicator</td><td>-</td></tr>
+            <tr><td>Potassium Chromate</td><td>5%</td></tr>
+            <tr><td>Ammonia Hydroxide</td><td>28%</td></tr>
+            <tr><td>Ammonium Bifluoride</td><td>-</td></tr>
+            <tr><td>Ammonium Perpersulphate</td><td>-</td></tr>
+            <tr><td>Barium Chloride</td><td>-</td></tr>
+            <tr><td>Buffer Solution</td><td>pH 1.68</td></tr>
+            <tr><td>Buffer Solution</td><td>pH 4</td></tr>
+            <tr><td>Buffer Solution</td><td>pH 7</td></tr>
+            <tr><td>Buffer Solution</td><td>pH 10</td></tr>
+            <tr><td>Erichrome Black T</td><td>-</td></tr>
+            <tr><td>Formaldehyde</td><td>37%</td></tr>
+            <tr><td>Hydrochloric Acid</td><td>36%</td></tr>
+            <tr><td>Indincocamine</td><td>-</td></tr>
+            <tr><td>Manital</td><td>-</td></tr>
+            <tr><td>Merixide</td><td>-</td></tr>
+            <tr><td>Potassium Chloride</td><td>-</td></tr>
+            <tr><td>Potassium Iodide</td><td>-</td></tr>
+            <tr><td>Sodium Chloride</td><td>-</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>-</td></tr>
+            <tr><td>Sulphuric Acid</td><td>98%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note" data-i18n-key="note">
+        *ต้องสวม PPE (ถุงมือ แว่นตา หน้ากาก) ตลอดการเตรียม/ใช้งานสารเคมี และปฏิบัติตามข้อกำหนดท้องถิ่น
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="Pretreatment.html">Pretreatment</a></li>
+            <li><a href="PlatingCoating.html">Plating</a></li>
+            <li><a href="blackening.html">Blackening</a></li>
+            <li><a href="passivation.html">Passivation</a></li>
+            <li><a href="polishing.html">Polishing</a></li>
+            <li><a href="strippers.html">Strippers</a></li>
+            <li><a href="protective.html">Protective Treatment</a></li>
+            <li><a href="service.html">Customer service</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Lab & Titration Chemicals",
+    "about":["Laboratory reagents","Titration standards","Buffers","Indicators"],
+    "inLanguage":"th,en",
+    "author":{"@type":"Organization","name":"Baume Chemical"},
+    "image":"https://i.imgur.com/3xwVLZZ.jpeg",
+    "mainEntityOfPage":"https://www.baumechemical.com/lab/chemicals"
+  }
+  </script>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        page_title:"สารเคมีห้องแล็บ & ไทเทรชัน | Baume Chemical",
+        badge1:"Lab Reagents", badge2:"Standards • Buffers • Indicators", badge3:"Titration",
+        hero_title:"สารเคมีห้องแล็บ & สารละลายมาตรฐาน",
+        hero_tagline:"รายการสารเคมี/สารละลายที่ใช้บ่อยในงานชุบโลหะและการทดสอบคุณภาพบ่อ — รูปแบบมาตรฐาน M/N, บัฟเฟอร์ และอินดิเคเตอร์ (TH/EN)",
+
+        list_title:"รายการสารเคมี",
+        list_lead:"ตารางต่อไปนี้เป็นสารเคมี/สารละลายพร้อมความเข้มข้นอ้างอิงสำหรับงานแล็บ",
+        th_name:"Chemical / Reagent",
+        th_conc:"ความเข้มข้น",
+        note:"*ต้องสวม PPE (ถุงมือ แว่นตา หน้ากาก) ตลอดการเตรียม/ใช้งานสารเคมี และปฏิบัติตามข้อกำหนดท้องถิ่น",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)",
+        cat_black:"ดำเคมี (Blackening)", cat_passivation:"พาสซิเวชัน (Passivation)",
+        cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)",
+        cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        page_title:"Lab & Titration Chemicals | Baume Chemical",
+        badge1:"Lab Reagents", badge2:"Standards • Buffers • Indicators", badge3:"Titration",
+        hero_title:"Lab Chemicals & Standard Solutions",
+        hero_tagline:"Frequently used reagents for plating labs — molar/normal standards, buffers, and indicators (EN/TH).",
+
+        list_title:"Chemical List",
+        list_lead:"The table below lists common reagents/solutions with reference concentrations for lab use.",
+        th_name:"Chemical / Reagent",
+        th_conc:"Concentration",
+        note:"*Wear PPE (gloves, safety goggles, respirator) when preparing/using chemicals and comply with local regulations.",
+
+        footer_products:"Product Categories", footer_contact:"Contact Us",
+        footer_hours:"🕒 Office hours 08:00–17:00",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      document.querySelectorAll('[data-i18n-key]').forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val!=='undefined') node.textContent = val;
+      });
+
+      const titleEl = document.querySelector('title');
+      const descEl  = document.querySelector('meta[name="description"]');
+      if(titleEl) titleEl.textContent = I18N[L].page_title;
+      if(descEl){
+        descEl.setAttribute('content',
+          L==='en'
+            ? "Common lab reagents and standard solutions for electroplating labs — molar/normal standards, buffers, and indicators (EN/TH)."
+            : "รายการสารเคมีและสารละลายมาตรฐานที่ใช้ในห้องแล็บสำหรับงานชุบโลหะ: มาตรฐาน M/N, บัฟเฟอร์, อินดิเคเตอร์ (TH/EN)."
+        );
+      }
+
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function init(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
+      });
+
+      // canonical (client-side fallback)
+      try{
+        const link = document.createElement('link');
+        link.setAttribute('rel','canonical');
+        link.setAttribute('href', location.href.split('#')[0]);
+        document.head.appendChild(link);
+      }catch(e){}
+    })();
+  </script>
+</body>
+</html>
