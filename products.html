@@ -643,7 +643,7 @@ function loadMore(initial=false){
   }, 200);
 }
 function applyFilters(){
-  // ยกเลิกงานโหลดค้างจากรอบก่อน
+  // ยกเลิกงานโหลดค้าง
   clearTimeout(loadTimer);
   loadTimer = null;
   loading   = false;
@@ -651,7 +651,7 @@ function applyFilters(){
   const q = state.q.trim().toLowerCase();
   const terms = q ? q.split(/\s+/).filter(Boolean) : [];
 
-  // ให้คะแนนความเกี่ยวข้อง
+  // ---- คิดคะแนนความเกี่ยวข้องจากคำค้น ----
   const score = (p) => {
     if(!terms.length) return 0;
     const n  = (nameOf(p) || "").toLowerCase();
@@ -660,44 +660,48 @@ function applyFilters(){
     let s = 0;
     for(const w of terms){
       if(!w) continue;
-      if(n === w)         s += 500;           // ชื่อตรงเป๊ะ
-      if(n.startsWith(w)) s += 280;           // ชื่อขึ้นต้นด้วยคำค้น
+      if(n === w)         s += 500;
+      if(n.startsWith(w)) s += 280;
       const idx = n.indexOf(w);
-      if(idx >= 0)        s += 220 - idx;     // พบในชื่อ: ต้น ๆ ได้คะแนนมาก
-      if(tg.includes(w))  s += 140;           // พบในแท็ก
-      if(d.includes(w))   s += 80;            // พบในคำอธิบาย
+      if(idx >= 0)        s += 220 - idx;
+      if(tg.includes(w))  s += 140;
+      if(d.includes(w))   s += 80;
     }
     return s;
   };
 
-  // 1) กรองตาม "หมวด" เท่านั้น (คงจำนวนการ์ดไว้)
-  const base = PRODUCTS.filter(p => !state.cat || p.cat === state.cat);
+  // ---- โหมด "คง 9 ใบไว้เสมอ" ----
+  // ถ้าคุณอยากให้กรองเหลือเฉพาะหมวดจริง ๆ ให้ดูคอมเมนต์ด้านล่าง
+  const base = PRODUCTS.slice();
 
-  // 2) ตีคะแนน + ทำธงว่า "ตรงคำค้นไหม"
+  // enrich: ธงว่าเข้าหมวดไหม / hit คำค้นไหม / คะแนน
   const enriched = base.map(p => {
     const hay = (nameOf(p)+' '+descOf(p)+' '+tagsStr(p)).toLowerCase();
-    const s   = score(p);
-    const hit = terms.length ? terms.some(w => hay.includes(w)) : false;
-    return { p, s, hit };
+    return {
+      p,
+      catHit: !!state.cat && p.cat === state.cat,            // เข้าหมวดที่เลือก
+      hit: terms.length ? terms.some(w => hay.includes(w)) : false, // แมตช์คำค้นไหม
+      s: score(p)                                           // คะแนนความเกี่ยวข้อง
+    };
   });
 
-  // 3) เรียงลำดับ: การ์ดที่ "hit" มาก่อนเสมอ → ตามคะแนน → tie-break ด้วยตัวเลือกผู้ใช้
+  // เรียง: 1) catHit ก่อน 2) ถ้ามีคำค้น → hit ก่อน 3) คะแนนมากก่อน 4) tie-break ตาม sort
   enriched.sort((A, B) => {
-    if (A.hit !== B.hit) return (B.hit ? 1 : 0) - (A.hit ? 1 : 0); // hit ก่อน
-    if (A.s !== B.s)     return B.s - A.s;                         // คะแนนมากก่อน
+    if (A.catHit !== B.catHit) return (B.catHit?1:0) - (A.catHit?1:0);
+    if (terms.length && A.hit !== B.hit) return (B.hit?1:0) - (A.hit?1:0);
+    if (A.s !== B.s) return B.s - A.s;
     if (state.sort === "name") {
       return nameOf(A.p).localeCompare(nameOf(B.p), currentLang === 'th' ? 'th' : 'en');
     }
-    return A.p.pop - B.p.pop;                                       // แนะนำ (pop น้อย) ก่อน
+    return A.p.pop - B.p.pop;
   });
 
-  // 4) อัปเดต viewList แล้วเรนเดอร์
+  // อัปเดต list + เรนเดอร์
   viewList = enriched.map(x => x.p);
 
   page = 0;
   grid.innerHTML = "";
-  updateCount();                      // จะยังแสดง 9 รายการตามหมวด (ตั้งใจให้คงไว้)
-
+  updateCount();
   if(viewList.length === 0){
     emptyEl.textContent = I18N[currentLang].empty;
     emptyEl.style.display = 'block';
