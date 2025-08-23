@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ชี้ sitemap ให้บอท
+Sitemap: https://www.baumechemical.com/sitemap.xml

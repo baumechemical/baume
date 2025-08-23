@@ -3,37 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== SEO (with IDs for language switch) ===== -->
   <title id="metaTitle">ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical</title>
-  <meta name="description" id="metaDesc" content="เคมีงานชุบและการเตรียมผิวสำหรับอุตสาหกรรม: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing พร้อมทีมเทคนิคและบริการหน้างานครบวงจร.">
+  <meta id="metaDesc" name="description" content="รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing พร้อมทีมเทคนิคและบริการหน้างาน.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="products.html">
+  <link rel="canonical" href="https://www.baumechemical.com/products.html">
   <meta name="theme-color" content="#2c5e4e">
-  <meta property="og:locale" id="ogLocale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:title" id="ogTitle" content="ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical">
   <meta property="og:description" id="ogDesc" content="โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน">
-  <meta property="og:url" content="https://www.baumechemical.com/products">
+  <meta property="og:url" content="https://www.baumechemical.com/products.html">
   <meta property="og:image" content="https://i.imgur.com/3xwVLZZ.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Baume Chemical — Electroplating & Surface Preparation">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" id="twTitle" content="ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical">
   <meta name="twitter:description" id="twDesc" content="โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน">
+  <meta name="twitter:image" content="https://i.imgur.com/3xwVLZZ.jpeg">
+
+  <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://i.imgur.com/3xwVLZZ.jpeg">
 
-  <!-- Org JSON-LD -->
+  <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "logo":"https://www.baumechemical.com/assets/logo.png",
+    "sameAs":["https://line.me/ti/p/~baumechemical"]
+  }
+  </script>
+
+  <!-- JSON-LD: Products CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"ผลิตภัณฑ์ | Baume Chemical",
+    "url":"https://www.baumechemical.com/products.html",
+    "inLanguage":"th",
+    "isPartOf":{"@type":"WebSite","url":"https://www.baumechemical.com/","name":"Baume Chemical"},
+    "description":"รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing"
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumb Home → Products -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1,
+        "name": "Home", "item": "https://www.baumechemical.com/" },
+      { "@type": "ListItem", "position": 2,
+        "name": "Products", "item": "https://www.baumechemical.com/products.html" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList of product categories -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListOrder":"http://schema.org/ItemListOrderAscending",
+    "numberOfItems": 9,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Pretreatment","url":"https://www.baumechemical.com/Pretreatment.html"},
+      {"@type":"ListItem","position":2,"name":"Plating","url":"https://www.baumechemical.com/PlatingCoating.html"},
+      {"@type":"ListItem","position":3,"name":"Blackening","url":"https://www.baumechemical.com/blackening.html"},
+      {"@type":"ListItem","position":4,"name":"Passivation","url":"https://www.baumechemical.com/passivation.html"},
+      {"@type":"ListItem","position":5,"name":"Polishing","url":"https://www.baumechemical.com/polishing.html"},
+      {"@type":"ListItem","position":6,"name":"Strippers","url":"https://www.baumechemical.com/strippers.html"},
+      {"@type":"ListItem","position":7,"name":"Protective Treatment","url":"https://www.baumechemical.com/protective.html"},
+      {"@type":"ListItem","position":8,"name":"Customer service","url":"https://www.baumechemical.com/service.html"},
+      {"@type":"ListItem","position":9,"name":"Equipment","url":"https://www.baumechemical.com/equipment.html"}
+    ]
+  }
   </script>
 
   <style>
     :root{
       --brand:#2c5e4e;
       --brand-2:#387b5b;
-      --accent:#387b5b; /* unify brand accent */
+      --accent:#387b5b;
       --ink:#0f172a;
       --muted:#5b6a7c;
       --bg:#f4f6f5;
@@ -47,9 +112,9 @@
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 
-    /* ===== HEADER (ลุคเดียวกับหน้า home: overlay + glass) ===== */
+    /* ===== HEADER ===== */
     .site-header{
       position:absolute; inset:0 auto auto 0; right:0; z-index:1400;
       background:linear-gradient(180deg, rgba(4,10,22,.66), rgba(4,10,22,0));
@@ -127,12 +192,12 @@
     .toolbar-inner{max-width:var(--container); margin:0 auto; padding:12px 18px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
     .input, select{border:1px solid #dbe1ea; background:#fff; padding:11px 12px; border-radius:12px; min-width:220px; box-shadow:var(--shadow-1)}
     #q{min-width:260px}
-    .count{margin-left:auto; color:var(--muted); font-weight:600}
+    .count{margin-left:auto; color:var(--muted); font-weight:600; font-variant-numeric: tabular-nums;}
 
     /* ===== Grid & Card ===== */
     .wrap{max-width:var(--container); margin:24px auto; padding:0 18px}
-    .grid{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))}
-    .card{background:#fff; border:1px solid #e6ecf3; border-radius:var(--radius); box-shadow:var(--shadow-1); overflow:hidden; display:flex; flex-direction:column; position:relative}
+    .grid{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); position:relative}
+    .card{background:#fff; border:1px solid #e6ecf3; border-radius:var(--radius); box-shadow:var(--shadow-1); overflow:hidden; display:flex; flex-direction:column; position:relative; transition:opacity .2s ease, transform .2s ease}
     .card .thumb{width:100%; aspect-ratio:3/4; background:#eef2f6 center/cover no-repeat}
     .card .body{padding:14px 14px 16px}
     .badges{display:flex; gap:6px; margin-bottom:6px; flex-wrap:wrap}
@@ -143,14 +208,14 @@
     .swatch{width:14px; height:14px; border-radius:50%; border:1px solid rgba(0,0,0,.15); box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
     .card .actions{display:flex; gap:8px; flex-wrap:wrap}
     .card .btn.ghost{background:transparent; border-color:var(--accent); color:var(--accent)}
-    .card:hover{box-shadow:var(--shadow-2); transform:translateY(-2px); transition:.18s ease}
+    .card:hover{box-shadow:var(--shadow-2); transform:translateY(-2px)}
     .hl{background:linear-gradient(180deg, rgba(255,242,204,.9), rgba(255,242,204,0.7)); padding:0 .15em; border-radius:4px}
 
-    /* Quick View button (ขวาบนรูป) */
+    /* Quick button on card */
     .quick{position:absolute; top:10px; right:10px; background:#ffffffe6; border:1px solid #e2e8f0; border-radius:999px; padding:6px 10px; font-weight:800; font-size:.86rem; cursor:pointer; box-shadow:var(--shadow-1)}
     .quick:hover{background:#fff}
 
-    /* ===== Modal ===== */
+    /* ===== Modal (single system) ===== */
     .modal-backdrop{position:fixed; inset:0; background:rgba(15,23,42,.55); display:none; align-items:center; justify-content:center; z-index:2000; padding:18px}
     .modal{max-width:920px; width:min(96vw, 920px); background:#fff; border-radius:18px; box-shadow:0 30px 80px rgba(2,8,20,.28); overflow:hidden; display:grid; grid-template-columns: 1.2fr 1fr}
     .modal .left{min-height:320px; background:#f1f5f9 center/cover no-repeat}
@@ -162,7 +227,6 @@
     .modal h3{margin:0 0 6px}
     .modal .meta{margin:0 0 10px}
     .modal-close{position:absolute; top:10px; right:10px; background:#ffffff; border:1px solid #e2e8f0; border-radius:999px; padding:6px 10px; font-weight:800; cursor:pointer}
-
     @media(max-width:860px){ .modal{grid-template-columns:1fr} .modal .left{aspect-ratio:16/9} }
 
     /* ===== Skeleton ===== */
@@ -176,242 +240,29 @@
     /* ===== Empty ===== */
     .empty{display:none; text-align:center; padding:38px; color:var(--muted)}
 
-    /* ===== Footer (คงเดิม) ===== */
+    /* ===== Footer ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:32px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
     .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr; align-items:start}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
     .ft-logo{width:44px; height:44px; border-radius:12px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
+    .footer-list li{margin:6px 0; word-break:break-word}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
     @media (prefers-reduced-motion: reduce){ .slide,.btn{transition:none} }
-/* === Live filter helpers === */
-[hidden]{ display:none !important; }
-
-/* keyword highlight */
-mark{
-  background:#fff4a3;
-  color:inherit;
-  padding:0 .2em;
-  border-radius:.3em;
-  box-shadow:inset 0 -1px 0 rgba(0,0,0,.04);
-}
-
-/* ปุ่มเอกสาร TDS เท่านั้น (ไม่มี SDS) */
-.docs-slot .btn + .btn{ margin-left:8px; }
-
-/* ให้เคาน์เตอร์อ่านง่ายขึ้นนิดนึง */
-.count{ font-variant-numeric: tabular-nums; }
-
-/* โหมดโหลด/สแกนดูเร็ว: ซ่อนเอฟเฟ็กต์ที่ไม่จำเป็นตอนกรอง */
-.grid.filtering .card{ transition:none !important; }
-/* --- ห้าม skeleton โผล่เลย --- */
-.grid .skeleton,
-.grid .skeleton-card,
-.grid [data-skeleton],
-.grid .loading-skeleton,
-.grid .card.skeleton{ display:none !important; }
-
-/* highlight คำค้น */
-mark{
-  background:#fff4a3; color:inherit;
-  padding:0 .2em; border-radius:.25em;
-  box-shadow:inset 0 -1px 0 rgba(0,0,0,.05);
-}
-
-/* เคาน์เตอร์อ่านง่าย */
-.count{ font-variant-numeric: tabular-nums; }
-
-/* ตัด SDS แบบป้องกันไว้ก่อนด้วย CSS */
-.docs-slot a[href*="/sds/"],
-.docs-slot a[href*="sds.pdf"],
-.docs-slot .btn.sds,
-.docs-slot [data-kind="sds"]{ display:none !important; }
-/* ===== Quick View (center overlay) ===== */
-.qv{ position:fixed; inset:0; z-index:2500; display:none; }
-.qv.open{ display:grid; place-items:center; }
-.qv[hidden]{ display:none !important; }
-
-.qv__backdrop{
-  position:fixed; inset:0;
-  background:rgba(2,10,25,.55);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  opacity:0; transition:opacity .18s ease;
-}
-.qv.open .qv__backdrop{ opacity:1; }
-
-.qv__panel{
-  position:relative;
-  width:min(980px, 92vw);
-  max-height: min(84dvh, 840px);
-  background:#fff;
-  border:1px solid #e6ecf3;
-  border-radius:20px;
-  box-shadow:0 20px 60px rgba(2,8,20,.25);
-  overflow:hidden;
-  display:grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap:0;
-  transform:translateY(6px) scale(.98);
-  opacity:0;
-  transition:transform .22s cubic-bezier(.2,.8,.2,1), opacity .22s ease;
-}
-.qv.open .qv__panel{ transform:none; opacity:1; }
-
-.qv__media{ background:#0b1220; display:grid; place-items:center; }
-.qv__media img{
-  width:100%; height:100%; object-fit:cover;
-  max-height: min(84dvh, 840px);
-}
-
-.qv__body{
-  padding:16px 16px 18px 16px; overflow:auto;
-}
-.qv__title{ margin:2px 0 4px; font-size:1.25rem; font-weight:800; }
-.qv__meta{ margin:0 0 12px; color:#506173; }
-
-.qv__chips{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 12px; }
-.qv__chip{
-  font-weight:700; font-size:.85rem;
-  background:#f1f5f9; color:#0f172a; border:1px solid #e2e8f0;
-  padding:6px 10px; border-radius:999px;
-}
-.qv__swatches{ display:flex; gap:6px; margin:6px 0 12px; }
-.qv__swatch{ width:18px; height:18px; border-radius:4px; border:1px solid rgba(0,0,0,.15); }
-
-.qv__actions{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
-.qv__actions .btn{ border-radius:12px; }
-
-.qv__close{
-  position:absolute; top:10px; right:10px;
-  width:36px; height:36px; border-radius:10px;
-  display:grid; place-items:center;
-  background:#ffffffea; border:1px solid #e2e8f0;
-  cursor:pointer; font-weight:800;
-}
-.qv__close:hover{ background:#fff; }
-
-/* Mobile: stack */
-@media (max-width: 860px){
-  .qv__panel{ grid-template-columns:1fr; width:min(720px, 94vw); max-height:92dvh; }
-  .qv__media img{ max-height:36dvh; }
-}
-
-/* ล็อกสกรอลล์ฉากหลังตอนเปิดโมดอล */
-html.qv-lock, body.qv-lock{ overflow:hidden !important; }
-
-/* กัน element อื่นทับ */
-.site-header{ z-index:1400; } /* โมดอลใช้ z=2500 อยู่แล้ว */
-/* ===== Quick View: center overlay & animation ===== */
-.qv{ position:fixed; inset:0; z-index:2500; display:none; }
-.qv.open{ display:grid; place-items:center; }
-.qv[hidden]{ display:none !important; }
-.qv__backdrop{
-  position:fixed; inset:0; background:rgba(2,10,25,.55);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  opacity:0; transition:opacity .18s ease;
-}
-.qv.open .qv__backdrop{ opacity:1; }
-.qv__panel{
-  position:relative; width:min(980px,92vw);
-  max-height:min(84dvh,840px);
-  background:#fff; border:1px solid #e6ecf3; border-radius:20px;
-  box-shadow:0 20px 60px rgba(2,8,20,.25);
-  overflow:hidden; display:grid; grid-template-columns:1.3fr 1fr;
-  transform:translateY(6px) scale(.98); opacity:0;
-  transition:transform .22s cubic-bezier(.2,.8,.2,1), opacity .22s ease;
-}
-.qv.open .qv__panel{ transform:none; opacity:1; }
-.qv__media{ background:#0b1220; display:grid; place-items:center; }
-.qv__media img{ width:100%; height:100%; object-fit:cover; max-height:min(84dvh,840px); }
-.qv__body{ padding:16px; overflow:auto; }
-.qv__title{ margin:2px 0 4px; font-size:1.25rem; font-weight:800; }
-.qv__meta{ margin:0 0 12px; color:#506173; }
-.qv__chips{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 12px; }
-.qv__chip{ font-weight:700; font-size:.85rem; background:#f1f5f9; color:#0f172a;
-  border:1px solid #e2e8f0; padding:6px 10px; border-radius:999px; }
-.qv__swatches{ display:flex; gap:6px; margin:6px 0 12px; }
-.qv__swatch{ width:18px; height:18px; border-radius:4px; border:1px solid rgba(0,0,0,.15); }
-.qv__actions{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
-.qv__close{
-  position:absolute; top:10px; right:10px; width:36px; height:36px; border-radius:10px;
-  display:grid; place-items:center; background:#ffffffea; border:1px solid #e2e8f0; cursor:pointer; font-weight:800;
-}
-.qv__close:hover{ background:#fff; }
-@media (max-width:860px){
-  .qv__panel{ grid-template-columns:1fr; width:min(720px,94vw); max-height:92dvh; }
-  .qv__media img{ max-height:36dvh; }
-}
-/* lock scroll on modal open */
-html.qv-lock, body.qv-lock{ overflow:hidden !important; }
-
-/* ===== Search filtering: fade out cards + skeleton ===== */
-.grid{ position:relative; }
-.card{ transition:opacity .2s ease, transform .2s ease; }
-.grid.is-filtering .card{ opacity:0; transform:translateY(4px) scale(.98); pointer-events:none; }
-.card.is-hidden{ display:none !important; }
-
-/* skeleton layer (overlay inside grid) */
-.grid .skel{ position:absolute; inset:0; display:none;
-  grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:18px; }
-.grid.is-filtering .skel{ display:grid; }
-
-.skel__card{
-  border-radius:var(--radius); border:1px solid #e6ecf3; overflow:hidden;
-  box-shadow:var(--shadow-1); background:#f5f7fa;
-  height: clamp(260px, 33vw, 360px);
-  position:relative;
-}
-.skel__media{ height:60%; background:#e9eef5; }
-.skel__line{ height:12px; margin:10px 12px; border-radius:8px; background:#e9eef5; }
-.skel__shine{
-  position:absolute; inset:0;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
-  transform:translateX(-100%); animation: sk-shine 1.1s infinite;
-}
-@keyframes sk-shine{ to{ transform:translateX(100%); } }
-/* Footer robustness */
-.footer-grid{
-  display:grid;
-  gap:22px;
-  grid-template-columns:2fr 1fr 1fr;
-  align-items:start;
-}
-.footer-list{ list-style:none; margin:8px 0 0; padding:0; }
-.footer-list li{ margin:6px 0; word-break:break-word; }
-.site-footer .footer-inner{ max-width:var(--container); margin:0 auto; }
-@media(max-width:900px){
-  .footer-grid{ grid-template-columns:1fr; }
-}
-/* FIX: ทำให้ปุ่มใน Quick View/Modal มองเห็นบนพื้นขาว */
-.modal .actions .btn.ghost,
-#modalActions .btn.ghost,
-.qv__actions .btn.ghost{
-  background: transparent;
-  border-color: var(--brand-2, #387b5b) !important;
-  color: var(--brand-2, #387b5b) !important;
-}
-
-.modal .actions .btn.ghost:hover,
-#modalActions .btn.ghost:hover,
-.qv__actions .btn.ghost:hover{
-  background: var(--brand-2, #387b5b) !important;
-  color: #fff !important;
-}
-
+    mark{ background:#fff4a3; color:inherit; padding:0 .2em; border-radius:.25em; box-shadow:inset 0 -1px 0 rgba(0,0,0,.05) }
+    [hidden]{ display:none !important; }
   </style>
 </head>
 <body>
 
-  <!-- ===== HEADER (เหมือนหน้า home) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header" role="banner" id="siteHeader">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Baume Chemical">
@@ -500,7 +351,7 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
     <div id="empty" class="empty" data-i18n-key="empty">ไม่พบรายการที่ตรงเงื่อนไขการค้นหา</div>
   </main>
 
-  <!-- ===== QUICK VIEW MODAL ===== -->
+  <!-- ===== QUICK VIEW MODAL (single) ===== -->
   <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal" role="document">
       <div class="left" id="modalImg"></div>
@@ -515,7 +366,7 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
     </div>
   </div>
 
-  <!-- ===== FOOTER (เหมือนเดิม) ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -556,6 +407,7 @@ html.qv-lock, body.qv-lock{ overflow:hidden !important; }
   </footer>
 
   <noscript><div style="padding:16px;text-align:center">โปรดเปิดใช้งาน JavaScript เพื่อดูเนื้อหา</div></noscript>
+
 <script>
 /* ========== DATA (สองภาษาในแต่ละการ์ด) ========== */
 const PRODUCTS = [
@@ -570,7 +422,6 @@ const PRODUCTS = [
     href:"Pretreatment.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: เคมีล้างผิวงาน",
     tds:"https://www.baumechemical.com/docs/tds/pretreatment-cleaning.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/pretreatment-cleaning.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -584,7 +435,6 @@ const PRODUCTS = [
     href:"PlatingCoating.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาชุบโลหะ",
     tds:"https://www.baumechemical.com/docs/tds/metal-plating.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/metal-plating.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -598,7 +448,6 @@ const PRODUCTS = [
     href:"blackening.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารมดำ",
     tds:"https://www.baumechemical.com/docs/tds/blackening.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/blackening.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -612,7 +461,6 @@ const PRODUCTS = [
     href:"passivation.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: โครเมตบนซิงค์",
     tds:"https://www.baumechemical.com/docs/tds/passivation-zinc.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/passivation-zinc.pdf",
     specs:{ph:"—", temp:"—", current:"—"},
     swatches:["#b7d3ff","#ffe07a","#3b3b3b","#a5b38b"]
   },
@@ -627,7 +475,6 @@ const PRODUCTS = [
     href:"strippers.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยาลอกต่างๆ",
     tds:"https://www.baumechemical.com/docs/tds/selective-strippers.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/selective-strippers.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -641,7 +488,6 @@ const PRODUCTS = [
     href:"polishing.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยากัดเงา",
     tds:"https://www.baumechemical.com/docs/tds/chemical-polishing.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/chemical-polishing.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -655,7 +501,6 @@ const PRODUCTS = [
     href:"protective.html",
     mail:"mailto:baumechemical@gmail.com?subject=ขอใบเสนอราคา: น้ำยารักษาผิวชุบให้คงทน",
     tds:"https://www.baumechemical.com/docs/tds/protective-treatment.pdf",
-    sds:"https://www.baumechemical.com/docs/sds/protective-treatment.pdf",
     specs:{ph:"—", temp:"—", current:"—"}
   },
   {
@@ -688,10 +533,7 @@ const PRODUCTS = [
 const $ = sel => document.querySelector(sel);
 const grid = $('#grid'), countEl = $('#count'), emptyEl = $('#empty');
 
-let currentLang = (()=>{
-  try{ const v = localStorage.getItem('lang'); if(v==='en'||v==='th') return v; }catch(e){}
-  return 'th';
-})();
+let currentLang = (()=>{ try{ const v = localStorage.getItem('lang'); if(v==='en'||v==='th') return v; }catch(e){} return 'th'; })();
 
 const I18N = {
   th:{ meta_title:"ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical",
@@ -732,20 +574,16 @@ const I18N = {
 
 const t = k => (I18N[currentLang] && I18N[currentLang][k]) || k;
 function escapeReg(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-function highlight(text, query){ if(!query) return text; const re = new RegExp('('+escapeReg(query)+')','ig'); return text.replace(re, '<span class="hl">$1</span>'); }
+function highlight(text, query){ if(!query) return text; const re = new RegExp('('+escapeReg(query)+')','ig'); return text.replace(re, '<mark>$1</mark>'); }
 
 const nameOf = p => (p.name?.[currentLang] || p.name?.th || p.name?.en || '');
 const descOf = p => (p.desc?.[currentLang] || p.desc?.th || p.desc?.en || '');
 const tagsStr = p => [...(p.tags?.th||[]), ...(p.tags?.en||[])].join(' ');
 
-/* ========== RENDER CARD (พร้อม data-* ครบ) ========== */
+/* ========== RENDER CARD (ไม่มี SDS) ========== */
 function cardHTML(p, q=""){
   const sw = (p.swatches||[]).map(c=>`<span class="swatch" style="background:${c}"></span>`).join('');
-  const tdsHref = p.tds || '';       // อาจไม่มี
-  const mailHref = p.mail || '';     // อาจไม่มี
   const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
-  const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
-
   return `
   <article class="card" data-id="${p.id}" data-cat="${p.cat}">
     <button class="quick" data-id="${p.id}" aria-label="${t('btn_quickview')}">${t('btn_quickview')}</button>
@@ -758,16 +596,16 @@ function cardHTML(p, q=""){
       <div class="actions">
         <a class="btn" href="${p.href}" target="_blank" rel="noopener">${t('btn_details')}</a>
         <a class="btn ghost" href="${p.mail}">${t('btn_quote')}</a>
-        ${tds}${sds}
+        ${tds}
       </div>
     </div>
   </article>`;
 }
 
-/* ========== FILTER / SORT / SEARCH ========== */
+/* ========== FILTER / SORT / SEARCH + INFINITE ========== */
 const state = { q:"", cat:"", sort:"popular" };
 const PAGE_SIZE = 6;
-let viewList = [], page = 0, loading = false;
+let viewList = [], page = 0, loading = false, loadTimer = null;
 
 function updateCount(){ countEl.textContent = (I18N[currentLang].count||'Found {n} items').replace('{n}', viewList.length); }
 function addSkeleton(n=PAGE_SIZE){
@@ -782,34 +620,94 @@ function addSkeleton(n=PAGE_SIZE){
   grid.appendChild(frag);
 }
 function loadMore(initial=false){
-  if(loading) return; loading = true;
-  addSkeleton(initial? PAGE_SIZE : Math.min(PAGE_SIZE, viewList.length - page*PAGE_SIZE));
-  setTimeout(()=>{
-    const start = page*PAGE_SIZE, end = Math.min(start + PAGE_SIZE, viewList.length);
-    const q = state.q.trim();
-    const html = viewList.slice(start,end).map(p=>cardHTML(p,q)).join('');
+  if(loading) return;
+  loading = true;
+
+  // จำนวนสเกเลตันที่แสดง
+  const remain = Math.max(0, viewList.length - page*PAGE_SIZE);
+  addSkeleton(initial ? PAGE_SIZE : Math.min(PAGE_SIZE, remain));
+
+  clearTimeout(loadTimer);
+  loadTimer = setTimeout(()=>{
+    const start = page*PAGE_SIZE;
+    const end   = Math.min(start + PAGE_SIZE, viewList.length);
+    const q     = state.q.trim();
+
+    const html = viewList.slice(start, end).map(p=>cardHTML(p, q)).join('');
+    // ลบสเกเลตันเท่าที่ใส่ไป
     [...grid.querySelectorAll('.skeleton')].slice(0, end-start).forEach(el=>el.remove());
+
     grid.insertAdjacentHTML('beforeend', html);
-    page++; loading = false;
+    page++;
+    loading = false;
   }, 200);
 }
 function applyFilters(){
-  const q = state.q.trim().toLowerCase();
-  viewList = PRODUCTS.filter(p=>{
-    const inCat = !state.cat || p.cat===state.cat;
-    const hay = (nameOf(p)+' '+descOf(p)+' '+tagsStr(p)).toLowerCase();
-    const qmatch = !q || hay.includes(q);
-    return inCat && qmatch;
-  });
-  if(state.sort==="name"){ viewList.sort((a,b)=> nameOf(a).localeCompare(nameOf(b), 'th')); }
-  else { viewList.sort((a,b)=> a.pop - b.pop); }
+  // ยกเลิกงานโหลดค้างจากรอบก่อน
+  clearTimeout(loadTimer);
+  loadTimer = null;
+  loading   = false;
 
-  page = 0; grid.innerHTML = ""; updateCount();
-  if(viewList.length===0){ emptyEl.textContent = I18N[currentLang].empty; emptyEl.style.display='block'; return; }
-  emptyEl.style.display='none'; loadMore(true);
+  const q = state.q.trim().toLowerCase();
+  const terms = q ? q.split(/\s+/).filter(Boolean) : [];
+
+  // ให้คะแนนความเกี่ยวข้อง
+  const score = (p) => {
+    if(!terms.length) return 0;
+    const n  = (nameOf(p) || "").toLowerCase();
+    const d  = (descOf(p) || "").toLowerCase();
+    const tg = (tagsStr(p) || "").toLowerCase();
+    let s = 0;
+    for(const w of terms){
+      if(!w) continue;
+      if(n === w)         s += 500;           // ชื่อตรงเป๊ะ
+      if(n.startsWith(w)) s += 280;           // ชื่อขึ้นต้นด้วยคำค้น
+      const idx = n.indexOf(w);
+      if(idx >= 0)        s += 220 - idx;     // พบในชื่อ: ต้น ๆ ได้คะแนนมาก
+      if(tg.includes(w))  s += 140;           // พบในแท็ก
+      if(d.includes(w))   s += 80;            // พบในคำอธิบาย
+    }
+    return s;
+  };
+
+  // 1) กรองตาม "หมวด" เท่านั้น (คงจำนวนการ์ดไว้)
+  const base = PRODUCTS.filter(p => !state.cat || p.cat === state.cat);
+
+  // 2) ตีคะแนน + ทำธงว่า "ตรงคำค้นไหม"
+  const enriched = base.map(p => {
+    const hay = (nameOf(p)+' '+descOf(p)+' '+tagsStr(p)).toLowerCase();
+    const s   = score(p);
+    const hit = terms.length ? terms.some(w => hay.includes(w)) : false;
+    return { p, s, hit };
+  });
+
+  // 3) เรียงลำดับ: การ์ดที่ "hit" มาก่อนเสมอ → ตามคะแนน → tie-break ด้วยตัวเลือกผู้ใช้
+  enriched.sort((A, B) => {
+    if (A.hit !== B.hit) return (B.hit ? 1 : 0) - (A.hit ? 1 : 0); // hit ก่อน
+    if (A.s !== B.s)     return B.s - A.s;                         // คะแนนมากก่อน
+    if (state.sort === "name") {
+      return nameOf(A.p).localeCompare(nameOf(B.p), currentLang === 'th' ? 'th' : 'en');
+    }
+    return A.p.pop - B.p.pop;                                       // แนะนำ (pop น้อย) ก่อน
+  });
+
+  // 4) อัปเดต viewList แล้วเรนเดอร์
+  viewList = enriched.map(x => x.p);
+
+  page = 0;
+  grid.innerHTML = "";
+  updateCount();                      // จะยังแสดง 9 รายการตามหมวด (ตั้งใจให้คงไว้)
+
+  if(viewList.length === 0){
+    emptyEl.textContent = I18N[currentLang].empty;
+    emptyEl.style.display = 'block';
+    return;
+  }
+  emptyEl.style.display = 'none';
+  loadMore(true);
 }
 
-/* ========== QUICK VIEW (ใช้ modal เดิม) ========== */
+/* ========== QUICK VIEW (ใช้ modal เดียว) ========== */
 function openModal(p){
   $('#modalImg').style.backgroundImage = `url('${p.img}')`;
   $('#modalTitle').textContent = nameOf(p);
@@ -821,11 +719,10 @@ function openModal(p){
     <span class="chip">${t('chip_temp_label')}: ${c.temp ?? '—'}</span>
     <span class="chip">${t('chip_current_label')}: ${c.current ?? '—'}</span>`;
   const tds = p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}">TDS</a>` : '';
-  const sds = p.sds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.sds}">SDS</a>` : '';
   $('#modalActions').innerHTML = `
     <a class="btn" target="_blank" rel="noopener" href="${p.href}">${t('btn_details')}</a>
     <a class="btn ghost" href="${p.mail}">${t('btn_quote')}</a>
-    ${tds}${sds}`;
+    ${tds}`;
   const bd = $('#modalBackdrop'); bd.style.display='flex'; bd.setAttribute('aria-hidden','false');
 }
 function closeModal(){ const bd = $('#modalBackdrop'); bd.style.display='none'; bd.setAttribute('aria-hidden','true'); }
@@ -835,7 +732,7 @@ document.addEventListener('click', e=>{
 });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
 
-/* ========== EVENTS + HERO + HEADER (เดิม) ========== */
+/* ========== EVENTS + HERO + HEADER ========== */
 const deb = (fn,ms=250)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms);} };
 $('#q').addEventListener('input', deb(e=>{ state.q=e.target.value; applyFilters(); }, 200));
 $('#cat').addEventListener('change', e=>{ state.cat=e.target.value; applyFilters(); });
@@ -862,13 +759,12 @@ $('#sort').addEventListener('change', e=>{ state.sort=e.target.value; applyFilte
   const hero = document.querySelector('.hero'); hero.addEventListener('mouseenter', ()=> clearInterval(tmr)); hero.addEventListener('mouseleave', ()=> tmr = setInterval(tick, 5200));
 })();
 
-/* ========== LANGUAGE SWITCH (อัปเดตหัวข้อ/ปุ่ม/placeholder/การ์ด) ========== */
+/* ========== LANGUAGE SWITCH (อัปเดตเมตาด้วย) ========== */
 function applyLang(lang){
   currentLang = lang;
   document.documentElement.lang = lang;
 
   document.querySelectorAll('.lang-fab .lang-btn').forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
-
   document.querySelectorAll('[data-i18n-key]').forEach(node => {
     const key = node.getAttribute('data-i18n-key'); const txt = I18N[lang][key]; if(txt) node.textContent = txt;
   });
@@ -891,7 +787,6 @@ function applyLang(lang){
   const sName = document.querySelector('#sort option[value="name"]'); if(sName) sName.textContent = I18N[lang].sort_name;
 
   emptyEl.textContent = I18N[lang].empty;
-
   try{ localStorage.setItem('lang', lang); }catch(e){}
 
   applyFilters(); // re-render การ์ดตามภาษา
@@ -902,7 +797,6 @@ function applyLang(lang){
 })();
 
 /* ========== FIRST RENDER + INFINITE SCROLL ========== */
-applyFilters();
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting && !loading){
@@ -912,275 +806,6 @@ const io = new IntersectionObserver(entries=>{
   });
 }, {rootMargin:"600px 0px"});
 io.observe(document.getElementById('sentinel'));
-</script>
-
-<!-- ===== Quick View Overlay ===== -->
-<div id="qv" class="qv" hidden>
-  <div class="qv__backdrop" data-qv-close></div>
-  <div class="qv__panel" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
-    <button class="qv__close" aria-label="ปิด" title="ปิด" data-qv-close>✕</button>
-
-    <div class="qv__media">
-      <img id="qvImg" alt="">
-    </div>
-
-    <div class="qv__body">
-      <h3 class="qv__title" id="qvTitle"></h3>
-      <p class="qv__meta" id="qvMeta"></p>
-
-      <!-- quick-spec chips (ถ้ามี) -->
-      <div class="qv__chips" id="qvChips"></div>
-
-      <!-- chromate color swatches (ถ้ามี) -->
-      <div class="qv__swatches" id="qvSwatches"></div>
-
-      <div class="qv__actions" id="qvActions"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ===== Quick View Overlay (หากมีอยู่แล้ว ให้แทนที่บล็อกเดิม) ===== -->
-<div id="qv" class="qv" hidden>
-  <div class="qv__backdrop" data-qv-close></div>
-  <div class="qv__panel" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
-    <button class="qv__close" aria-label="ปิด" title="ปิด" data-qv-close>✕</button>
-    <div class="qv__media"><img id="qvImg" alt=""></div>
-    <div class="qv__body">
-      <h3 class="qv__title" id="qvTitle"></h3>
-      <p class="qv__meta" id="qvMeta"></p>
-      <div class="qv__chips" id="qvChips"></div>
-      <div class="qv__swatches" id="qvSwatches"></div>
-      <div class="qv__actions" id="qvActions"></div>
-    </div>
-  </div>
-</div>
-
-<script>
-/* ========= Utilities ========= */
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
-
-/* ========= Build skeletons once ========= */
-(function(){
-  const grid = $('#grid');
-  if(!grid || grid.querySelector('.skel')) return;
-  const sk = document.createElement('div');
-  sk.className = 'skel';
-  const makeCard = ()=> {
-    const w = document.createElement('div'); w.className='skel__card';
-    const m = document.createElement('div'); m.className='skel__media'; w.appendChild(m);
-    const l1 = document.createElement('div'); l1.className='skel__line'; w.appendChild(l1);
-    const l2 = document.createElement('div'); l2.className='skel__line'; l2.style.width='60%'; w.appendChild(l2);
-    const shine = document.createElement('div'); shine.className='skel__shine'; w.appendChild(shine);
-    return w;
-  };
-  // สร้างสเกเลตันตามคอลัมน์ประมาณ 8 ชิ้น
-  for(let i=0;i<8;i++) sk.appendChild(makeCard());
-  grid.prepend(sk);
-})();
-
-/* ========= Search + Filter (fade to skeleton 0.2s) ========= */
-(function(){
-  const grid = $('#grid');
-  const cards = $$('.card', grid);
-  const empty = $('#empty');
-  const count = $('#count');
-  const q = $('#q');
-  const cat = $('#cat');
-  const sort = $('#sort');
-  let filteringTimer = null;
-
-  // เอา SDS ออกจากการ์ดให้หมด
-  $$('.card .actions a').forEach(a=>{
-    const txt = (a.textContent||'').toLowerCase();
-    if (txt.includes('sds') || /\/sds\//i.test(a.href)) a.remove();
-  });
-
-  function matchCard(card, keyword, category){
-    const name = (card.dataset.name||'') + ' ' + (card.dataset.tags||'');
-    const catMatch = !category || card.dataset.cat === category;
-    const kw = keyword.trim().toLowerCase();
-    const kwMatch = !kw || name.toLowerCase().includes(kw);
-    return catMatch && kwMatch;
-  }
-
-  function applySort(list){
-    const mode = sort?.value || 'popular';
-    if(mode==='name'){
-      list.sort((a,b)=> (a.dataset.name||'').localeCompare(b.dataset.name||'', 'th'));
-    }else{ // popular
-      list.sort((a,b)=> (+a.dataset.pop||999) - (+b.dataset.pop||999));
-    }
-    list.forEach(el=> grid.appendChild(el));
-  }
-
-  function filterNow(){
-    const kw = q?.value || '';
-    const category = cat?.value || '';
-    const visible = [];
-
-    cards.forEach(c=>{
-      const ok = matchCard(c, kw, category);
-      c.classList.toggle('is-hidden', !ok);
-      if(ok) visible.push(c);
-    });
-
-    applySort(visible);
-    if(count) count.textContent = `พบ ${visible.length} รายการ`;
-    if(empty) empty.style.display = visible.length ? 'none' : 'block';
-
-    grid.classList.remove('is-filtering');
-  }
-
-  function startFilter(){
-    // เริ่มแอนิเมชันจางหาย + แสดงสเกเลตัน 0.2s
-    grid.classList.add('is-filtering');
-    if(filteringTimer) clearTimeout(filteringTimer);
-    filteringTimer = setTimeout(filterNow, 200);
-  }
-
-  ['input','change'].forEach(ev=>{
-    q?.addEventListener(ev, startFilter);
-    cat?.addEventListener(ev, startFilter);
-    sort?.addEventListener(ev, startFilter);
-  });
-
-  // init run
-  filterNow();
-})();
-
-/* ========= Quick View (fixed center + no scroll jump) ========= */
-(function(){
-  const qv = $('#qv');
-  if(!qv) return;
-
-  const imgEl   = $('#qvImg', qv);
-  const titleEl = $('#qvTitle', qv);
-  const metaEl  = $('#qvMeta', qv);
-  const chipsEl = $('#qvChips', qv);
-  const swEl    = $('#qvSwatches', qv);
-  const actEl   = $('#qvActions', qv);
-  const SELECTORS = ['[data-qv]', '.js-qv', '.quick-view'];
-
-  let lockScrollY = 0;
-  function lockScroll(){
-    lockScrollY = window.scrollY || window.pageYOffset;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${lockScrollY}px`;
-    document.body.style.left = '0'; document.body.style.right = '0';
-    document.documentElement.classList.add('qv-lock'); document.body.classList.add('qv-lock');
-  }
-  function unlockScroll(){
-    document.documentElement.classList.remove('qv-lock'); document.body.classList.remove('qv-lock');
-    document.body.style.position=''; document.body.style.top=''; document.body.style.left=''; document.body.style.right='';
-    window.scrollTo(0, lockScrollY || 0);
-  }
-
-  function openFromCard(card){
-    // media
-    const img = card.querySelector('img');
-    imgEl.src = img?.currentSrc || img?.src || '';
-    imgEl.alt = img?.alt || '';
-    // text
-    titleEl.textContent = card.querySelector('h3')?.textContent?.trim() || (card.dataset.name||'').split('|')[0].trim();
-    metaEl.textContent  = card.querySelector('.meta')?.textContent?.trim() || '';
-    // chips
-    chipsEl.innerHTML = '';
-    const chips = [];
-    if(card.dataset.ph)   chips.push(`pH ${card.dataset.ph}`);
-    if(card.dataset.temp) chips.push(`Temp ${card.dataset.temp}`);
-    if(card.dataset.amp)  chips.push(`Current ${card.dataset.amp}`);
-    chips.forEach(t=>{ const s=document.createElement('span'); s.className='qv__chip'; s.textContent=t; chipsEl.appendChild(s); });
-    chipsEl.style.display = chips.length ? 'flex' : 'none';
-    // swatches
-    swEl.innerHTML = '';
-    const swList = (card.dataset.swatches||'').split(',').map(s=>s.trim()).filter(Boolean);
-    swList.forEach(c=>{ const d=document.createElement('span'); d.className='qv__swatch'; d.style.background=c; d.title=c; swEl.appendChild(d); });
-    swEl.style.display = swList.length ? 'flex' : 'none';
-    // actions
-    actEl.innerHTML = '';
-    const link = card.querySelector('a[href]:not(.btn):not([data-qv])')?.href || card.querySelector('.btn[href]')?.href || '#';
-    const tds  = card.dataset.tds;
-    const btnDetail = document.createElement('a'); btnDetail.className='btn'; btnDetail.href=link; btnDetail.textContent='ดูรายละเอียด'; actEl.appendChild(btnDetail);
-    if(tds){ const btnTds=document.createElement('a'); btnTds.className='btn ghost'; btnTds.href=tds; btnTds.target='_blank'; btnTds.rel='noopener'; btnTds.textContent='TDS'; actEl.appendChild(btnTds); }
-    const btnQuote = card.querySelector('.actions a[href^="mailto:"]')?.cloneNode(true);
-    if(btnQuote){ btnQuote.classList.add('btn','ghost'); actEl.appendChild(btnQuote); }
-
-    // show
-    qv.hidden = false; qv.classList.add('open'); lockScroll();
-    qv.querySelector('.qv__close')?.focus({preventScroll:true});
-  }
-
-  function closeQV(){
-    qv.classList.remove('open');
-    setTimeout(()=>{ qv.hidden = true; unlockScroll(); }, 180);
-  }
-
-  // close handlers
-  qv.addEventListener('click', e=>{ if(e.target.matches('[data-qv-close]')) closeQV(); });
-  document.addEventListener('keydown', e=>{ if(e.key==='Escape' && !qv.hidden) closeQV(); });
-
-  // delegate triggers
-  document.addEventListener('click', e=>{
-    const trigger = e.target.closest(SELECTORS.join(','));
-    if(!trigger) return;
-    const card = e.target.closest('.card');
-    if(!card) return;
-    e.preventDefault(); e.stopPropagation();
-    openFromCard(card);
-  });
-
-  // auto-add Quick View button if missing
-  $$('#grid .card').forEach(card=>{
-    const has = card.querySelector(SELECTORS.join(','));
-    if(has) return;
-    const actions = card.querySelector('.actions');
-    if(!actions) return;
-    const b = document.createElement('button');
-    b.type='button'; b.className='btn ghost js-qv'; b.textContent='Quick View';
-    actions.insertBefore(b, actions.firstChild);
-  });
-})();
-</script>
-<!-- Drop-in: ลบปุ่ม SDS ออกจากทุกการ์ด + Quick View -->
-<script>
-(function(){
-  const TARGETS = '#grid .actions a, #modalActions a';
-
-  function isSDS(el){
-    const txt  = (el.textContent || '').trim().toLowerCase();
-    const href = (el.getAttribute('href') || '').toLowerCase();
-    // จับทั้งข้อความ/ไฟล์/โฟลเดอร์ sds
-    return txt === 'sds' ||
-           txt.includes('safety data') ||
-           href.includes('/sds/') ||
-           /(^|\/)sds(\.pdf)?(\?|#|$)/.test(href);
-  }
-
-  function nuke(root=document){
-    root.querySelectorAll(TARGETS).forEach(a => { if(isSDS(a)) a.remove(); });
-  }
-
-  // ลบครั้งแรก
-  nuke();
-  // กันสคริปต์อื่นสร้างจาก data-sds
-  document.querySelectorAll('#grid [data-sds]').forEach(n=> n.removeAttribute('data-sds'));
-
-  // เฝ้าดู DOM—ถ้ามีการ์ด/ปุ่มใหม่โผล่ ให้ลบทันที
-  const grid = document.getElementById('grid');
-  const modalActs = document.getElementById('modalActions');
-  const mo = new MutationObserver(muts=>{
-    for(const m of muts){
-      for(const node of m.addedNodes){
-        if(!(node instanceof HTMLElement)) continue;
-        if(node.matches && node.matches(TARGETS) && isSDS(node)) { node.remove(); continue; }
-        nuke(node);
-      }
-    }
-  });
-  if(grid) mo.observe(grid, {childList:true, subtree:true});
-  if(modalActs) mo.observe(modalActs, {childList:true, subtree:true});
-})();
 </script>
 </body>
 </html>
