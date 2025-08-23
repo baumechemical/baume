@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <!-- Title & Meta -->
   <title data-i18n-key="title">ไม่พบหน้านี้ (404) | Baume Chemical</title>
-  <meta name="description" content="ขออภัย ไม่พบหน้าที่คุณต้องการ ช่วยพาคุณกลับไปยังหน้าหลักหรือดูหมวดผลิตภัณฑ์ได้ที่นี่">
+  <meta name="description" content="ขออภัย ไม่พบหน้าที่คุณต้องการ คุณสามารถกลับไปยังหน้าหลักได้ที่นี่">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#387b5b">
 
@@ -13,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:title" data-i18n-key="ogtitle" content="404 • Page not found">
-  <meta property="og:description" data-i18n-key="ogdesc" content="We couldn’t find that page. Try search or jump to Products.">
+  <meta property="og:description" data-i18n-key="ogdesc" content="We couldn’t find that page. Head back home.">
   <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
 
   <!-- Fonts -->
@@ -23,19 +24,16 @@
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b; /* ปุ่มทุกปุ่มใช้สีนี้ */
-      --ink:#0f172a; --muted:#5b6a7c; --bg:#d5e4d9;
-      --radius:16px; --radius-lg:22px;
-      --shadow-1:0 8px 24px rgba(2,8,20,.06);
-      --shadow-2:0 16px 44px rgba(2,8,20,.14);
+      --brand:#2c5e4e; --accent:#387b5b;
+      --ink:#0f172a; --bg:#dfe9e6;
+      --radius:16px; --shadow-1:0 8px 24px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
       --container:1200px; --header-h:64px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:'Noto Sans Thai', sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
 
-    /* Header */
+    /* Header (overlay) */
     .site-header{
       position:absolute; inset:0 auto auto 0; right:0; z-index:1400;
       background:linear-gradient(180deg, rgba(4,10,22,.66), rgba(4,10,22,0));
@@ -68,73 +66,33 @@
       .nav-toggle{ display:inline-flex }
     }
 
-/* Language FAB */
-.lang-fab{
-  position:absolute; right:18px; bottom:18px; z-index:3; display:flex; gap:6px; padding:4px 4px;
-  border:1px solid rgba(226,232,240,.9); border-radius:999px; background:#ffffffcc;
-  backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
-}
-
-/* ปุ่ม “ไม่ได้เลือก” = โทนปกติ */
-.lang-fab .lang-btn{
-  appearance:none; cursor:pointer; font-weight:800; letter-spacing:.1px;
-  padding:6px 12px; border-radius:999px; display:flex; align-items:center; gap:6px;
-  background:#fff; color:#0f172a; border:1px solid #e2e8f0;
-}
-.lang-fab .lang-btn:hover{ background:#f8fafc }
-
-/* ปุ่ม “ที่เลือกอยู่” เท่านั้นที่เป็นสี #387b5b */
-.lang-fab .lang-btn[aria-pressed="true"]{
-  background:#387b5b; color:#fff; border-color:#387b5b;
-}
-
-/* ธง */
-.flag{ width:18px; height:14px; border-radius:2px; object-fit:cover;
-  box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-
-
     /* Hero */
     .hero{
       position:relative; color:#fff; text-align:center;
       min-height:clamp(520px, 70vh, 760px);
       display:grid; place-items:center; padding-top:var(--header-h);
       background:
-        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.7)),
-        url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; /* รูปใหม่ */
+        linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.7)),
+        url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
       isolation:isolate;
     }
     .hero-inner{position:relative; z-index:2; max-width:900px; padding:18px}
     .big404{
       font-weight:800; font-size:clamp(72px, 18vw, 220px); line-height:1; margin:0 0 8px;
-      background: linear-gradient(90deg, #fff, #e2f0ea, #fbe8cc);
+      background: linear-gradient(90deg, #ffffff, #e6f3ed, #fbe8cc);
       -webkit-background-clip:text; background-clip:text; color:transparent;
       text-shadow:0 12px 40px rgba(0,0,0,.35);
     }
-    .hero p{margin:0 auto 14px; color:#dbe6ea; max-width:760px}
+    .hero p{margin:0 auto 18px; color:#dbe6ea; max-width:760px}
 
-    /* Buttons (ทุกปุ่มเป็น #387b5b) */
+    /* The ONLY button */
     .btn{
       appearance:none;border:1px solid var(--accent);background:var(--accent);color:#fff;
       padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none;box-shadow:var(--shadow-1)
     }
-    .btn:hover{filter:brightness(0.95)}
-    .btn.ghost{background:var(--accent); border-color:var(--accent); color:#fff} /* ให้สีเดียวกันตามที่ขอ */
-
+    .btn:hover{filter:brightness(.95)}
+    .btn:focus-visible{outline:2px solid #fff; outline-offset:2px}
     .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
-    .searchbar{margin:10px auto 14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap}
-    .input{border:1px solid #dbe1ea; background:#fff; padding:12px 14px; border-radius:12px; min-width:280px; box-shadow:var(--shadow-1)}
-
-    /* Layout + Cards */
-    .wrap{max-width:var(--container); margin: -42px auto 28px; padding:0 18px; position:relative; z-index:3}
-    .grid{
-      display:grid; gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* คุมความกว้างไอเท็ม */
-      justify-content:center; /* จัดกึ่งกลางทั้งสามการ์ด */
-    }
-    .card{background:#fff; border:1px solid #e6ecf3; border-radius:var(--radius); box-shadow:var(--shadow-1); overflow:hidden; width:100%}
-    .card .body{padding:16px}
-    .card h3{margin:4px 0 6px; font-size:1.06rem}
-    .card p{margin:0 0 12px; color:#506173}
 
     /* Footer */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:32px}
@@ -165,69 +123,30 @@
       </button>
       <nav class="primary-nav" aria-label="Primary">
         <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us.html">About us</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
-    </div>
-
-    <!-- Language FAB -->
-    <div class="lang-fab" role="group" aria-label="Language switcher">
-      <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-      </button>
-      <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-      </button>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="h1">
     <div class="hero-inner">
-      <div class="big404">404</div>
-      <h1 data-i18n-key="h1">ไม่พบหน้านี้</h1>
-      <p data-i18n-key="h1_sub">ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ คุณสามารถค้นหาสิ่งที่ต้องการ หรือกลับไปยังหน้าหลัก</p>
+      <div class="big404" aria-hidden="true">404</div>
+      <h1 id="h1" data-i18n-key="h1">ไม่พบหน้านี้</h1>
+      <p data-i18n-key="h1_sub">ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ</p>
 
-      <form class="searchbar" role="search" onsubmit="return goSearch(event)">
-        <input id="q" class="input" type="search" placeholder="ค้นหาผลิตภัณฑ์… (เช่น nickel, passivation)">
-        <button class="btn" data-i18n-key="btn_search" type="submit">ค้นหา</button>
-        <a class="btn ghost" href="products.html" data-i18n-key="btn_all">ดูหมวดผลิตภัณฑ์</a>
-      </form>
+      <!-- ✅ ปุ่มเดียวที่เหลือ -->
       <div class="actions">
-        <a class="btn" href="index.html" data-i18n-key="c1_btn_top">ไปหน้า Home</a>
+        <a class="btn" href="/" data-i18n-key="c1_btn_top">ไปหน้า Home</a>
       </div>
     </div>
   </section>
 
-  <!-- QUICK LINKS (3 การ์ด จัดกึ่งกลางแล้ว) -->
-  <main class="wrap" role="main">
-    <div class="grid">
-      <article class="card">
-        <div class="body">
-          <h3 data-i18n-key="c1_t">กลับหน้าแรก</h3>
-          <p data-i18n-key="c1_d">เริ่มใหม่จากหน้าโฮมเพจ</p>
-          <a class="btn" href="index.html" data-i18n-key="c1_btn">ไปหน้า Home</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="body">
-          <h3 data-i18n-key="c2_t">ดูรายการผลิตภัณฑ์</h3>
-          <p data-i18n-key="c2_d">พบหมวดหมู่และสินค้าได้ง่าย</p>
-          <a class="btn" href="products.html" data-i18n-key="c2_btn">Products</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="body">
-          <h3 data-i18n-key="c3_t">ติดต่อทีมเทคนิค</h3>
-          <p data-i18n-key="c3_d">สอบถามวิธีการ/สเปก/ใบเสนอราคา</p>
-          <a class="btn" href="contact-us.html" data-i18n-key="c3_btn">Contact Us</a>
-        </div>
-      </article>
-    </div>
-  </main>
+  <!-- ไม่มี QUICK LINKS / SEARCH / ปุ่มอื่นๆ แล้ว -->
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -248,15 +167,15 @@
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
           <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
-            <li><a href="Pretreatment.html">Pretreatment</a></li>
-            <li><a href="PlatingCoating.html">Plating</a></li>
-            <li><a href="blackening.html">Blackening</a></li>
-            <li><a href="passivation.html">Passivation</a></li>
-            <li><a href="polishing.html">Polishing</a></li>
-            <li><a href="strippers.html">Strippers</a></li>
-            <li><a href="protective.html">Protective Treatment</a></li>
-            <li><a href="service.html">Customer service</a></li>
-            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="/Pretreatment.html">Pretreatment</a></li>
+            <li><a href="/PlatingCoating.html">Plating</a></li>
+            <li><a href="/blackening.html">Blackening</a></li>
+            <li><a href="/passivation.html">Passivation</a></li>
+            <li><a href="/polishing.html">Polishing</a></li>
+            <li><a href="/strippers.html">Strippers</a></li>
+            <li><a href="/protective.html">Protective Treatment</a></li>
+            <li><a href="/service.html">Customer service</a></li>
+            <li><a href="/equipment.html">Equipment</a></li>
           </ul>
         </nav>
         <section aria-label="ติดต่อเรา">
@@ -273,56 +192,45 @@
   </footer>
 
   <script>
-    // Mobile nav
+    // Mobile nav + header height
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
-      function setH(){ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); }
-      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH); setH();
+      const setH = () => {
+        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      };
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH);
+      setH();
       if(toggle){
-        toggle.addEventListener('click', function(){ const opened = header.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(opened)); });
-        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }));
+        toggle.addEventListener('click', function(){
+          const opened = header.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(opened));
+        });
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
+          header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
+        }));
       }
     })();
 
-    // Search handler
-    function goSearch(e){
-      e.preventDefault();
-      const q = document.getElementById('q')?.value?.trim();
-      if(!q){ location.href = 'products.html'; return false; }
-      location.href = 'products.html?q=' + encodeURIComponent(q);
-      return false;
-    }
-
-    // i18n
+    // i18n (เหลือเฉพาะ key ที่ใช้)
     const I18N = {
       th:{
         title:"ไม่พบหน้านี้ (404) | Baume Chemical",
         ogtitle:"404 • ไม่พบหน้านี้",
-        ogdesc:"เราไม่พบหน้าที่คุณต้องการ ลองค้นหา หรือไปหน้า Products",
+        ogdesc:"เราไม่พบหน้าที่คุณต้องการ กลับไปหน้าแรกได้เลย",
         h1:"ไม่พบหน้านี้",
-        h1_sub:"ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ คุณสามารถค้นหาสิ่งที่ต้องการ หรือกลับไปยังหน้าหลัก",
-        btn_search:"ค้นหา",
-        btn_all:"ดูหมวดผลิตภัณฑ์",
-        c1_btn_top:"ไปหน้า Home",
-
-        c1_t:"กลับหน้าแรก", c1_d:"เริ่มใหม่จากหน้าโฮมเพจ", c1_btn:"ไปหน้า Home",
-        c2_t:"ดูรายการผลิตภัณฑ์", c2_d:"พบหมวดหมู่และสินค้าได้ง่าย", c2_btn:"Products",
-        c3_t:"ติดต่อทีมเทคนิค", c3_d:"สอบถามวิธีการ/สเปก/ใบเสนอราคา", c3_btn:"Contact Us"
+        h1_sub:"ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ",
+        c1_btn_top:"ไปหน้า Home"
       },
       en:{
         title:"Page not found (404) | Baume Chemical",
         ogtitle:"404 • Page not found",
-        ogdesc:"We couldn’t find that page. Try search or jump to Products.",
+        ogdesc:"We couldn’t find that page. Head back home.",
         h1:"Page not found",
-        h1_sub:"The link may have moved, been renamed, or expired. Try searching or head back home.",
-        btn_search:"Search",
-        btn_all:"Browse Products",
-        c1_btn_top:"Go Home",
-
-        c1_t:"Back to Home", c1_d:"Start fresh from the homepage", c1_btn:"Go Home",
-        c2_t:"Browse Products", c2_d:"Find items by category", c2_btn:"Products",
-        c3_t:"Contact technical team", c3_d:"Ask specs/methods/quotes", c3_btn:"Contact Us"
+        h1_sub:"The link may have moved, been renamed, or expired.",
+        c1_btn_top:"Go Home"
       }
     };
     function applyLang(lang){
@@ -335,17 +243,14 @@
       document.title = I18N[L].title;
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', I18N[L].ogtitle);
       document.querySelector('meta[property="og:description"]')?.setAttribute('content', I18N[L].ogdesc);
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=> btn.setAttribute('aria-pressed', String(btn.dataset.lang===L)));
       try{ localStorage.setItem('lang', L);}catch(e){}
     }
     (function initLang(){
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
-      });
     })();
   </script>
-  <!-- ตั้งค่าให้เซิร์ฟเวอร์ส่งสถานะ HTTP 404 สำหรับไฟล์นี้ -->
+
+  <!-- หมายเหตุ: ให้เซิร์ฟเวอร์ส่งสถานะ HTTP 404 สำหรับไฟล์นี้ -->
 </body>
 </html>
