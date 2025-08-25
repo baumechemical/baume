@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title data-i18n-key="meta_title">KEMTEK NI-508 • ชุบนิกเกิลไม่ใช้ไฟฟ้า (ฟอสฟอรัสปานกลาง) | Baume Chemical</title>
+  <meta name="description" content="กระบวนการ EN (Mid-P ≥7%P) เสถียร เงาสูง แข็ง/ทนสึกหรอ อัตราการสะสม ~13–20 µm/h ใช้ได้ทั้งถังแขวนและถังกลิ้ง พร้อมสเปก/สูตรผสม/การดูแลครบ">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="KEMTEK NI-508 • Electroless Nickel (Mid-P)">
+  <meta property="og:description" content="EN Mid-P เสถียร เงาสูง แข็ง ทนกัดกร่อน อัตราการสะสม ~13–20 µm/h พร้อมแนวทางควบคุม/ปรับเติม">
+  <meta property="og:image" content="https://i.imgur.com/j7SpCDD.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/j7SpCDD.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/j7SpCDD.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Feature pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    /* Notes */
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- === Floating Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Electroless Nickel (Mid-P ≥ 7%)</span>
+        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+      </div>
+      <h1 data-i18n-key="hero_title">KEMTEK NI-508</h1>
+      <p data-i18n-key="hero_tagline">กระบวนการชุบนิกเกิลไม่ใช้ไฟฟ้าที่เสถียร เงาสูง แข็ง/ทนสึกหรอ และต้านการกัดกร่อน อัตราสะสม ~0.5–0.8 mil/h (≈13–20 µm/h) เหมาะกับงานหลากหลายวัสดุ</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติเด่น</h2>
+      <p class="lead" data-i18n-key="features_lead">ออกแบบเพื่อประหยัดการดำเนินงาน ควบคุมง่าย และคุณภาพผิวคงเส้นคงวา</p>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f1_t">อัตราการชุบเร็ว</h3><p data-i18n-key="f1_d">≈13–20 µm/ชม. ในบ่อใหม่</p></div>
+        <div class="pill"><div class="ic">💸</div><h3 data-i18n-key="f2_t">ต้นทุนคุมง่าย</h3><p data-i18n-key="f2_d">ระบบ 3 ส่วน เติมเป็นสัดส่วน ประหยัด</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f3_t">ทนสึกหรอ/กัดกร่อน</h3><p data-i18n-key="f3_d">แข็ง 46–48 HRC; อบ 400°C/1ชม. ได้ ~66–70 HRC</p></div>
+        <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="f4_t">เงางามเรียบ</h3><p data-i18n-key="f4_d">ฝากเคลือบละเอียด เงาสูง</p></div>
+        <div class="pill"><div class="ic">📈</div><h3 data-i18n-key="f5_t">เสถียรอายุงานยาว</h3><p data-i18n-key="f5_d">เหมาะทั้งถังแขวน/ถังกลิ้ง</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f6_t">Mid-P Alloy</h3><p data-i18n-key="f6_d">P &ge; 7% ให้สมดุลความแข็ง/ต้านกัดกร่อน</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">สรุปคุณสมบัติ การใช้งาน และการควบคุมหลัก</p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type" data-i18n-html><strong>ประเภท:</strong> ชุบนิกเกิลไม่ใช้ไฟฟ้า Mid-P (&ge;7%P) ระบบ 3 ส่วน (A/B/C)</li>
+        <li data-i18n-key="pi_rate"><strong>อัตราการสะสม:</strong> ≈13–20 µm/ชม. (0.5–0.8 mil/h)</li>
+        <li data-i18n-key="pi_temp_ph"><strong>ช่วงทำงาน:</strong> 82–91 °C; pH 4.6–4.8</li>
+        <li data-i18n-key="pi_hard" data-i18n-html><strong>ความแข็ง:</strong> 46–48 HRC; อบ 400&nbsp;°C × 1 ชม. ได้ ~66–70 HRC</li>
+        <li data-i18n-key="pi_subs"><strong>วัสดุรองรับ:</strong> เหล็ก, สแตนเลส, ทองเหลือง/ทองแดง, อลูมิเนียม (เตรียมผิวตามขั้นตอน)</li>
+        <li data-i18n-key="pi_control"><strong>การควบคุม:</strong> รักษา Ni 5.3–6.0 g/L, ติดตาม pH/อุณหภูมิ, กรองต่อเนื่อง</li>
+      </ul>
+    </section>
+
+    <!-- Specs -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">สเปก & เงื่อนไขการทำงาน</h2>
+      <div class="table" style="margin-bottom:12px">
+        <table aria-label="Operating conditions">
+          <thead><tr><th data-i18n-key="specs_head_param">พารามิเตอร์</th><th data-i18n-key="specs_head_value">ค่าแนะนำ</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n-key="specs_row1">อุณหภูมิ</td><td data-i18n-key="specs_row1_v">82–91 °C (เหมาะสุด ~88 °C)</td></tr>
+            <tr><td data-i18n-key="specs_row2">pH (ทั่วไป)</td><td data-i18n-key="specs_row2_v">4.6–4.8 (เป้าหมาย 4.7–4.8)</td></tr>
+            <tr><td data-i18n-key="specs_row3">pH (งานอลูมิเนียม)</td><td data-i18n-key="specs_row3_v">ไม่เกิน ~5.2</td></tr>
+            <tr><td data-i18n-key="specs_row4" data-i18n-html>นิกเกิลละลาย</td><td data-i18n-key="specs_row4_v">5–6 กรัม/ลิตร (ควรรักษา ≥5.3 g/L)</td></tr>
+            <tr><td data-i18n-key="specs_row5">การกวน</td><td data-i18n-key="specs_row5_v">เขย่า/กวนแนวตั้ง หรือใช้ลมเบาที่กรองแล้ว</td></tr>
+            <tr><td data-i18n-key="specs_row6">การกรอง</td><td data-i18n-key="specs_row6_v">กรองต่อเนื่อง ~15 µm; ออฟไลน์ ~3 µm</td></tr>
+            <tr><td data-i18n-key="specs_row7">อัตราสะสม</td><td data-i18n-key="specs_row7_v">≈0.5–0.8 mil/h (13–20 µm/h)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin:8px 0 6px" data-i18n-key="mix_title">สูตรผสมบ่อใหม่ (ต่อ 1 ลิตร)</h3>
+      <div class="table">
+        <table aria-label="Make-up per liter">
+          <thead><tr><th data-i18n-key="mix_head_comp">ส่วนประกอบ</th><th data-i18n-key="mix_head_amt">ปริมาณ</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n-key="mix_row1">KEMTEK NI-508 A</td><td>60 mL</td></tr>
+            <tr><td data-i18n-key="mix_row2">KEMTEK NI-508 B</td><td>90 mL</td></tr>
+            <tr><td data-i18n-key="mix_row3">น้ำกลั่น</td><td data-i18n-key="mix_row3_v">เติมจนครบ 1 ลิตร (≈850 mL)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">การเตรียมอ่าง & การดำเนินงาน</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="p1" data-i18n-html><strong>เตรียมบ่อ:</strong> เติมน้ำกลั่น ~70–80% ปริมาตร → เติม A, B ตามสัดส่วน → อุ่นถึง 82–91&nbsp;°C → ปรับ pH ให้ 4.6–4.9</li>
+        <li data-i18n-key="p2"><strong>เดินงาน:</strong> แขวน/บาร์เรลที่อุณหภูมิเป้าหมาย กวนแนวตั้ง/ลมเบา กรองต่อเนื่องเพื่อผิวเรียบ</li>
+        <li data-i18n-key="p3"><strong>พักงาน:</strong> จบกะลดอุณหภูมิ และกรองทั้งบ่อหากไม่ได้กรองต่อเนื่อง</li>
+      </ul>
+
+      <h3 style="margin:10px 0 6px" data-i18n-key="add_title">การปรับเติม</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="add1">รักษา Ni ≥5.3–6.0 g/L เพื่อคงอัตราสะสม</li>
+        <li data-i18n-key="add2"><strong>อัตราส่วนเติม:</strong> เติม KEMTEK NI-508 A : NI-508 C = 1 : 1</li>
+        <li data-i18n-key="add3"><strong>แนวทางเติมปกติ:</strong> A 100 mL + C 100 mL ต่อ ~10 dm² ต่อความหนา ~15 µm (ปรับตามจริง)</li>
+      </ul>
+
+      <h3 style="margin:10px 0 6px" data-i18n-key="ph_title">การควบคุม pH</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="ph_up" data-i18n-html>เพิ่ม pH: NH<sub>4</sub>OH 50% (เติมช้า)</li>
+        <li data-i18n-key="ph_down" data-i18n-html>ลด pH: H<sub>2</sub>SO<sub>4</sub> 10%</li>
+      </ul>
+
+      <h3 style="margin:10px 0 6px" data-i18n-key="filter_title">การกรอง</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="filter1">ใช้ชุดกรองพลาสติก/บุพลาสติก (หลีกเลี่ยงสแตนเลส)</li>
+        <li data-i18n-key="filter2">กรองต่อเนื่อง ~15 µm; กรองก่อนเริ่มงานวันถัดไป ~3 µm</li>
+      </ul>
+
+      <h3 style="margin:10px 0 6px" data-i18n-key="equip_title">อุปกรณ์แนะนำ</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="equip1">ถัง PP/PE/PVC-lined พร้อมฮีตเตอร์ที่รองรับ ≥90 °C</li>
+      </ul>
+
+      <h3 style="margin:10px 0 6px" data-i18n-key="red_title">ตัวรีดิวเซอร์/ความเข้มข้น</h3>
+      <p style="margin:0" data-i18n-key="red_desc">คงระดับตัวรีดิวซ์ ~86–109 mL/L; ลดลง 1 mL/L ให้เติม KEMTEK NI-508 C ~0.62 mL/L</p>
+    </section>
+
+    <!-- EHS -->
+    <section id="ehs" class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & น้ำเสีย</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="ehs1">สารละลายเป็นกรดและอุณหภูมิสูง ระวังการสัมผัสผิวหนัง/ดวงตา</li>
+        <li data-i18n-key="ehs2">หากเข้าตา ล้างน้ำสะอาด 15 นาที และพบแพทย์</li>
+        <li data-i18n-key="ehs3">ก่อนปล่อยลงระบบบำบัด ปรับ pH 6–8 และตกตะกอนโลหะตามระเบียบ</li>
+      </ul>
+      <p class="note" data-i18n-key="ehs_note">*สวม PPE (ถุงมือ/แว่นตานิรภัย/หน้ากาก) ตลอดการปฏิบัติงาน</p>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="card">
+      <h2 class="section" data-i18n-key="tr_title">แนวทางแก้ปัญหาเบื้องต้น</h2>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr1_h">1) ผิวไม่เรียบ/ขรุขระ</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr1_b1">เช็ก Ni ให้ 5.3–6.0 g/L</li>
+        <li data-i18n-key="tr1_b2">คุมอุณหภูมิ 82–91 °C</li>
+        <li data-i18n-key="tr1_b3">เพิ่มประสิทธิภาพการกวน/การไหลเวียน</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr2_h">2) ความแข็งต่ำ</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr2_b1" data-i18n-html>อบ 400&nbsp;°C × 1 ชม. → ~66–70 HRC</li>
+        <li data-i18n-key="tr2_b2">อบ 250 °C ~24 ชม. เพื่อ ~68 HRC</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr3_h">3) การชุบไม่สม่ำเสมอ</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr3_b1">ปรับกวน/ลม และจัดตำแหน่งชิ้นงานให้ไหลเวียนทั่วถึง</li>
+        <li data-i18n-key="tr3_b2">คุมอุณหภูมิและ pH ให้อยู่ในช่วง</li>
+        <li data-i18n-key="tr3_b3">กรองละเอียด (≤3 µm) หากมีตะกอน</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr4_h">4) pH หลุดช่วง</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr4_b1" data-i18n-html>เพิ่ม pH ด้วย NH<sub>4</sub>OH 50% / ลดด้วย H<sub>2</sub>SO<sub>4</sub> 10%</li>
+        <li data-i18n-key="tr4_b2">ติดตาม pH สม่ำเสมอ เป้าหมาย 4.7–4.8</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr5_h">5) คราบ/สีไม่สม่ำเสมอ</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr5_b1">ทวนอัตราส่วนผสม/ปรับเติม</li>
+        <li data-i18n-key="tr5_b2">กรองต่อเนื่อง ลดสิ่งสกปรกแขวนลอย</li>
+        <li data-i18n-key="tr5_b3">คุมอุณหภูมิให้เสถียร</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr6_h">6) เกิดตะกอนในสารละลาย</h3>
+      <ul style="margin:0 0 10px 18px">
+        <li data-i18n-key="tr6_b1">เพิ่มประสิทธิภาพการกรองและปรับ pH ในช่วงที่แนะนำ</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr7_h">7) คุณภาพไม่ถึงเป้า (บาง/ไม่แข็ง)</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="tr7_b1">ตรวจอัตราส่วนเติม A/C และความเข้มข้น Ni</li>
+        <li data-i18n-key="tr7_b2">คุมอุณหภูมิ/pH และทวนมาตรฐานการกวน/กรอง</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === i18n === -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"KEMTEK NI-508 • ชุบนิกเกิลไม่ใช้ไฟฟ้า (ฟอสฟอรัสปานกลาง) | Baume Chemical",
+        meta_desc:"กระบวนการ EN (Mid-P ≥7%P) เสถียร เงาสูง แข็ง/ทนสึกหรอ อัตราการสะสม ~13–20 µm/h ใช้ได้ทั้งถังแขวนและถังกลิ้ง พร้อมสเปก/สูตรผสม/การดูแลครบ",
+        og_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P)",
+        og_desc:"EN Mid-P เสถียร เงาสูง แข็ง ทนกัดกร่อน อัตราการสะสม ~13–20 µm/h พร้อมแนวทางควบคุม/ปรับเติม",
+
+        badge1:"ชุบนิกเกิลไม่ใช้ไฟฟ้า (Mid-P ≥ 7%)",
+        badge2:"Rack & Barrel",
+        hero_title:"KEMTEK NI-508",
+        hero_tagline:"กระบวนการชุบนิกเกิลไม่ใช้ไฟฟ้าที่เสถียร เงาสูง แข็ง/ทนสึกหรอ และต้านการกัดกร่อน อัตราสะสม ~0.5–0.8 mil/h (≈13–20 µm/h) เหมาะกับงานหลากหลายวัสดุ",
+
+        features_title:"คุณสมบัติเด่น",
+        features_lead:"ออกแบบเพื่อประหยัดการดำเนินงาน ควบคุมง่าย และคุณภาพผิวคงเส้นคงวา",
+        f1_t:"อัตราการชุบเร็ว", f1_d:"≈13–20 µm/ชม. ในบ่อใหม่",
+        f2_t:"ต้นทุนคุมง่าย", f2_d:"ระบบ 3 ส่วน เติมเป็นสัดส่วน ประหยัด",
+        f3_t:"ทนสึกหรอ/กัดกร่อน", f3_d:"แข็ง 46–48 HRC; อบ 400°C/1ชม. ~66–70 HRC",
+        f4_t:"เงางามเรียบ", f4_d:"ฝากเคลือบละเอียด เงาสูง",
+        f5_t:"เสถียรอายุงานยาว", f5_d:"เหมาะทั้งถังแขวน/ถังกลิ้ง",
+        f6_t:"Mid-P Alloy", f6_d:"P ≥ 7% ให้สมดุลความแข็ง/ต้านกัดกร่อน",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"สรุปคุณสมบัติ การใช้งาน และการควบคุมหลัก",
+        pi_type:"ประเภท: ชุบนิกเกิลไม่ใช้ไฟฟ้า Mid-P (&ge;7%P) ระบบ 3 ส่วน (A/B/C)",
+        pi_rate:"อัตราการสะสม: ≈13–20 µm/ชม. (0.5–0.8 mil/h)",
+        pi_temp_ph:"ช่วงทำงาน: 82–91 °C; pH 4.6–4.8",
+        pi_hard:"ความแข็ง: 46–48 HRC; อบ 400 °C × 1 ชม. ได้ ~66–70 HRC",
+        pi_subs:"วัสดุรองรับ: เหล็ก, สแตนเลส, ทองเหลือง/ทองแดง, อลูมิเนียม (เตรียมผิวตามขั้นตอน)",
+        pi_control:"การควบคุม: รักษา Ni 5.3–6.0 g/L, ติดตาม pH/อุณหภูมิ, กรองต่อเนื่อง",
+
+        specs_title:"สเปก & เงื่อนไขการทำงาน",
+        specs_head_param:"พารามิเตอร์", specs_head_value:"ค่าแนะนำ",
+        specs_row1:"อุณหภูมิ", specs_row1_v:"82–91 °C (เหมาะสุด ~88 °C)",
+        specs_row2:"pH (ทั่วไป)", specs_row2_v:"4.6–4.8 (เป้าหมาย 4.7–4.8)",
+        specs_row3:"pH (งานอลูมิเนียม)", specs_row3_v:"ไม่เกิน ~5.2",
+        specs_row4:"นิกเกิลละลาย", specs_row4_v:"5–6 กรัม/ลิตร (ควรรักษา ≥5.3 g/L)",
+        specs_row5:"การกวน", specs_row5_v:"เขย่า/กวนแนวตั้ง หรือใช้ลมเบาที่กรองแล้ว",
+        specs_row6:"การกรอง", specs_row6_v:"กรองต่อเนื่อง ~15 µm; ออฟไลน์ ~3 µm",
+        specs_row7:"อัตราสะสม", specs_row7_v:"≈0.5–0.8 mil/h (13–20 µm/h)",
+
+        mix_title:"สูตรผสมบ่อใหม่ (ต่อ 1 ลิตร)",
+        mix_head_comp:"ส่วนประกอบ", mix_head_amt:"ปริมาณ",
+        mix_row1:"KEMTEK NI-508 A",
+        mix_row2:"KEMTEK NI-508 B",
+        mix_row3:"น้ำกลั่น",
+        mix_row3_v:"เติมจนครบ 1 ลิตร (≈850 mL)",
+
+        process_title:"การเตรียมอ่าง & การดำเนินงาน",
+        p1:"เตรียมบ่อ: เติมน้ำกลั่น ~70–80% ปริมาตร → เติม A, B ตามสัดส่วน → อุ่นถึง 82–91 °C → ปรับ pH ให้ 4.6–4.9",
+        p2:"เดินงาน: แขวน/บาร์เรลที่อุณหภูมิเป้าหมาย กวนแนวตั้ง/ลมเบา กรองต่อเนื่องเพื่อผิวเรียบ",
+        p3:"พักงาน: จบกะลดอุณหภูมิ และกรองทั้งบ่อหากไม่ได้กรองต่อเนื่อง",
+
+        add_title:"การปรับเติม",
+        add1:"รักษา Ni ≥5.3–6.0 g/L เพื่อคงอัตราสะสม",
+        add2:"อัตราส่วนเติม: เติม KEMTEK NI-508 A : NI-508 C = 1 : 1",
+        add3:"แนวทางเติมปกติ: A 100 mL + C 100 mL ต่อ ~10 dm² ต่อความหนา ~15 µm (ปรับตามจริง)",
+
+        ph_title:"การควบคุม pH",
+        ph_up:"เพิ่ม pH: NH4OH 50% (เติมช้า)",
+        ph_down:"ลด pH: H2SO4 10%",
+
+        filter_title:"การกรอง",
+        filter1:"ใช้ชุดกรองพลาสติก/บุพลาสติก (หลีกเลี่ยงสแตนเลส)",
+        filter2:"กรองต่อเนื่อง ~15 µm; กรองก่อนเริ่มงานวันถัดไป ~3 µm",
+
+        equip_title:"อุปกรณ์แนะนำ",
+        equip1:"ถัง PP/PE/PVC-lined พร้อมฮีตเตอร์ที่รองรับ ≥90 °C",
+
+        red_title:"ตัวรีดิวเซอร์/ความเข้มข้น",
+        red_desc:"คงระดับตัวรีดิวซ์ ~86–109 mL/L; ลดลง 1 mL/L ให้เติม KEMTEK NI-508 C ~0.62 mL/L",
+
+        ehs_title:"ความปลอดภัย & น้ำเสีย",
+        ehs1:"สารละลายเป็นกรดและอุณหภูมิสูง ระวังการสัมผัสผิวหนัง/ดวงตา",
+        ehs2:"หากเข้าตา ล้างน้ำสะอาด 15 นาที และพบแพทย์",
+        ehs3:"ก่อนปล่อยลงระบบบำบัด ปรับ pH 6–8 และตกตะกอนโลหะตามระเบียบ",
+        ehs_note:"*สวม PPE (ถุงมือ/แว่นตานิรภัย/หน้ากาก) ตลอดการปฏิบัติงาน",
+
+        tr_title:"แนวทางแก้ปัญหาเบื้องต้น",
+        tr1_h:"1) ผิวไม่เรียบ/ขรุขระ",
+        tr1_b1:"เช็ก Ni ให้ 5.3–6.0 g/L",
+        tr1_b2:"คุมอุณหภูมิ 82–91 °C",
+        tr1_b3:"เพิ่มประสิทธิภาพการกวน/การไหลเวียน",
+
+        tr2_h:"2) ความแข็งต่ำ",
+        tr2_b1:"อบ 400 °C × 1 ชม. → ~66–70 HRC",
+        tr2_b2:"อบ 250 °C ~24 ชม. เพื่อ ~68 HRC",
+
+        tr3_h:"3) การชุบไม่สม่ำเสมอ",
+        tr3_b1:"ปรับกวน/ลม และจัดตำแหน่งชิ้นงานให้ไหลเวียนทั่วถึง",
+        tr3_b2:"คุมอุณหภูมิและ pH ให้อยู่ในช่วง",
+        tr3_b3:"กรองละเอียด (≤3 µm) หากมีตะกอน",
+
+        tr4_h:"4) pH หลุดช่วง",
+        tr4_b1:"เพิ่ม pH ด้วย NH4OH 50% / ลดด้วย H2SO4 10%",
+        tr4_b2:"ติดตาม pH สม่ำเสมอ เป้าหมาย 4.7–4.8",
+
+        tr5_h:"5) คราบ/สีไม่สม่ำเสมอ",
+        tr5_b1:"ทวนอัตราส่วนผสม/ปรับเติม",
+        tr5_b2:"กรองต่อเนื่อง ลดสิ่งสกปรกแขวนลอย",
+        tr5_b3:"คุมอุณหภูมิให้เสถียร",
+
+        tr6_h:"6) เกิดตะกอนในสารละลาย",
+        tr6_b1:"เพิ่มประสิทธิภาพการกรองและปรับ pH ในช่วงที่แนะนำ",
+
+        tr7_h:"7) คุณภาพไม่ถึงเป้า (บาง/ไม่แข็ง)",
+        tr7_b1:"ตรวจอัตราส่วนเติม A/C และความเข้มข้น Ni",
+        tr7_b2:"คุมอุณหภูมิ/pH และทวนมาตรฐานการกวน/กรอง",
+
+        footer_products:"หมวดผลิตภัณฑ์",
+        footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+
+        cat_pretreat:"เตรียมผิว (Pretreatment)",
+        cat_plating:"ชุบเคลือบ (Plating)",
+        cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)",
+        cat_polishing:"ขัดเงา (Polishing)",
+        cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)",
+        cat_service:"บริการ (Customer Service)",
+        cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P) | Baume Chemical",
+        meta_desc:"Stable EN (Mid-P ≥7%P): high brightness, hard/wear-resistant, corrosion-resistant. Deposition ~13–20 µm/h for rack & barrel. Includes specs, make-up, control.",
+        og_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P)",
+        og_desc:"Stable Mid-P EN with ~13–20 µm/h rate; bright, hard, corrosion-resistant. Practical control/addition guidance.",
+
+        badge1:"Electroless Nickel (Mid-P ≥ 7%)",
+        badge2:"Rack & Barrel",
+        hero_title:"KEMTEK NI-508",
+        hero_tagline:"Stable electroless nickel process delivering bright, hard, corrosion-resistant deposits at ~0.5–0.8 mil/h (≈13–20 µm/h) across a wide range of substrates.",
+
+        features_title:"Key Features",
+        features_lead:"Designed for low operating cost, easy control, and consistent finish quality.",
+        f1_t:"Fast build", f1_d:"≈13–20 µm/h in fresh baths",
+        f2_t:"Cost-friendly control", f2_d:"Three-part system with proportional additions",
+        f3_t:"Wear/corrosion resistance", f3_d:"As-plated 46–48 HRC; ~66–70 HRC after 400 °C / 1 h",
+        f4_t:"Bright, smooth finish", f4_d:"Fine-grained, high-brightness deposits",
+        f5_t:"Stable, long bath life", f5_d:"Suitable for both rack and barrel",
+        f6_t:"Mid-P alloy", f6_d:"P ≥ 7% balances hardness and corrosion resistance",
+
+        product_title:"Product Information",
+        product_lead:"At-a-glance properties, use cases, and control points",
+        pi_type:"Type: Mid-P EN (≥7%P), three-part system (A/B/C)",
+        pi_rate:"Deposition rate: ≈13–20 µm/h (0.5–0.8 mil/h)",
+        pi_temp_ph:"Operating window: 82–91 °C; pH 4.6–4.8",
+        pi_hard:"Hardness: 46–48 HRC; ~66–70 HRC after 400 °C × 1 h",
+        pi_subs:"Supported substrates: steel, stainless, brass/copper, aluminium (with appropriate pretreatment)",
+        pi_control:"Control: maintain Ni 5.3–6.0 g/L; track pH/temperature; continuous filtration",
+
+        specs_title:"Specs & Operating Conditions",
+        specs_head_param:"Parameter", specs_head_value:"Recommended",
+        specs_row1:"Temperature", specs_row1_v:"82–91 °C (optimum ~88 °C)",
+        specs_row2:"pH (general)", specs_row2_v:"4.6–4.8 (target 4.7–4.8)",
+        specs_row3:"pH (aluminium work)", specs_row3_v:"≤ ~5.2",
+        specs_row4:"Dissolved nickel", specs_row4_v:"5–6 g/L (maintain ≥5.3 g/L)",
+        specs_row5:"Agitation", specs_row5_v:"Vertical agitation/shake or filtered, gentle air",
+        specs_row6:"Filtration", specs_row6_v:"Continuous ~15 µm; offline ~3 µm",
+        specs_row7:"Deposition rate", specs_row7_v:"≈0.5–0.8 mil/h (13–20 µm/h)",
+
+        mix_title:"New-bath Make-up (per 1 L)",
+        mix_head_comp:"Component", mix_head_amt:"Amount",
+        mix_row1:"KEMTEK NI-508 A",
+        mix_row2:"KEMTEK NI-508 B",
+        mix_row3:"DI water",
+        mix_row3_v:"Top up to 1 L (≈850 mL)",
+
+        process_title:"Tank Preparation & Operation",
+        p1:"Make-up: charge DI water to ~70–80% → add A then B proportionally → heat to 82–91 °C → set pH 4.6–4.9",
+        p2:"Run: rack/barrel at target temperature; vertical/air agitation; continuous filtration for smoothness",
+        p3:"Idle: cool down after shift; polish-filter if not filtering continuously",
+
+        add_title:"Operating Additions",
+        add1:"Keep Ni ≥5.3–6.0 g/L to sustain rate",
+        add2:"Addition ratio: KEMTEK NI-508 A : NI-508 C = 1 : 1",
+        add3:"Typical addition: A 100 mL + C 100 mL per ~10 dm² for ~15 µm build (adjust to results)",
+
+        ph_title:"pH Control",
+        ph_up:"Raise pH: NH4OH 50% (add slowly)",
+        ph_down:"Lower pH: H2SO4 10%",
+
+        filter_title:"Filtration",
+        filter1:"Use plastic/plastic-lined filter sets (avoid stainless due to possible plating)",
+        filter2:"Continuous ~15 µm; fine polish ~3 µm before next day’s start",
+
+        equip_title:"Recommended Equipment",
+        equip1:"PP/PE/PVC-lined tanks with heaters rated ≥90 °C",
+
+        red_title:"Reducer / Concentration",
+        red_desc:"Maintain reducer ~86–109 mL/L; if down by 1 mL/L, add ~0.62 mL/L of KEMTEK NI-508 C.",
+
+        ehs_title:"Safety & Effluent",
+        ehs1:"Acidic solution at elevated temperature—avoid skin/eye contact.",
+        ehs2:"If in eyes, rinse with clean water for 15 minutes and seek medical attention.",
+        ehs3:"Before discharge to treatment, adjust pH 6–8 and precipitate metals per regulations.",
+        ehs_note:"*Wear PPE (gloves, goggles, mask) at all times.",
+
+        tr_title:"Basic Troubleshooting",
+        tr1_h:"1) Rough/uneven finish",
+        tr1_b1:"Keep Ni at 5.3–6.0 g/L",
+        tr1_b2:"Hold 82–91 °C",
+        tr1_b3:"Improve agitation/flow",
+
+        tr2_h:"2) Low hardness",
+        tr2_b1:"Heat treat 400 °C × 1 h → ~66–70 HRC",
+        tr2_b2:"250 °C requires ~24 h to reach ~68 HRC",
+
+        tr3_h:"3) Non-uniform coverage",
+        tr3_b1:"Optimize agitation/air and part orientation",
+        tr3_b2:"Keep temperature and pH in range",
+        tr3_b3:"Fine filtration (≤3 µm) if sludge present",
+
+        tr4_h:"4) pH out of range",
+        tr4_b1:"Raise with NH4OH 50% / lower with H2SO4 10%",
+        tr4_b2:"Monitor pH regularly; target 4.7–4.8",
+
+        tr5_h:"5) Stain/colour variation",
+        tr5_b1:"Verify make-up/addition ratios",
+        tr5_b2:"Maintain continuous filtration",
+        tr5_b3:"Stabilize temperature",
+
+        tr6_h:"6) Precipitate in bath",
+        tr6_b1:"Enhance filtration and correct pH to spec",
+
+        tr7_h:"7) Below-target build/hardness",
+        tr7_b1:"Check A/C addition ratio and Ni concentration",
+        tr7_b2:"Control temperature/pH; review agitation/filtration SOPs",
+
+        footer_products:"Products",
+        footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 Hours 08:00–17:00",
+
+        cat_pretreat:"Pretreatment",
+        cat_plating:"Plating",
+        cat_black:"Blackening",
+        cat_passivation:"Passivation",
+        cat_polishing:"Polishing",
+        cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment",
+        cat_service:"Customer Service",
+        cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      // Title & meta
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+      try{
+        const md = document.querySelector('meta[name="description"]');
+        if(md && I18N[L].meta_desc) md.setAttribute('content', I18N[L].meta_desc);
+        const ogt = document.querySelector('meta[property="og:title"]');
+        if(ogt && I18N[L].og_title) ogt.setAttribute('content', I18N[L].og_title);
+        const ogd = document.querySelector('meta[property="og:description"]');
+        if(ogd && I18N[L].og_desc) ogd.setAttribute('content', I18N[L].og_desc);
+      }catch(e){}
+
+      // Toggle button state
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // Swap texts (support innerHTML when node has data-i18n-html)
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if(!key) return;
+        const val = I18N[L][key];
+        if(typeof val === 'undefined') return;
+        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val;
+        else node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

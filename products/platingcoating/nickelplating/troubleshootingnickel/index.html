@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title data-i18n-key="meta_title">Nickel A-Brite • ยาเงานิเกิ้ล | Baume Chemical</title>
+  <meta name="description" content="ยาเงานิเกิ้ล A-Brite สำหรับงานชุบนิเกิ้ลทั้งถังกลิ้งและถังแขวน เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม และรองรับโครเมียมได้ยอดเยี่ยม">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Nickel A-Brite • Bright Nickel">
+  <meta property="og:description" content="เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม รองรับโครเมียม">
+  <meta property="og:image" content="https://i.imgur.com/j7SpCDD.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/j7SpCDD.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* === Hero (แบบเดิม) === */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/j7SpCDD.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* === Layout & cards === */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* === Feature pills === */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* === Tables === */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    /* Note */
+    .note{font-style:italic;color:#9a3412}
+
+    /* === Footer === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- === Floating Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Bright Nickel</span>
+        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Nickel A-Brite</h1>
+      <p data-i18n-key="hero_tagline">ยาเงานิเกิ้ลคุณภาพสูงสำหรับงานชุบนิเกิ้ล เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม และรองรับโครเมียมได้ยอดเยี่ยม</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <p class="lead" data-i18n-key="features_lead">ออกแบบเพื่อผิวเงาสม่ำเสมอทั้งงานถังแขวนและถังกลิ้ง</p>
+      <div class="pill-grid">
+        <div class="pill">
+          <div class="ic">✨</div>
+          <h3 data-i18n-key="f1_t">ความมันวาวสูง</h3>
+          <p data-i18n-key="f1_d">ให้ผิวมันวาวสะท้อนแสง</p>
+        </div>
+        <div class="pill">
+          <div class="ic">🧩</div>
+          <h3 data-i18n-key="f2_t">กลบรอยทรายดี</h3>
+          <p data-i18n-key="f2_d">เก็บผิวหยาบ ลดริ้วรอย</p>
+        </div>
+        <div class="pill">
+          <div class="ic">⚡</div>
+          <h3 data-i18n-key="f3_t">ไวและรับกระแสสูง</h3>
+          <p data-i18n-key="f3_d">ชุบได้เร็ว รองรับกระแสสูง</p>
+        </div>
+        <div class="pill">
+          <div class="ic">🕳️</div>
+          <h3 data-i18n-key="f4_t">เข้าซอกมุม</h3>
+          <p data-i18n-key="f4_d">ครอบคลุม LCD ได้ดี</p>
+        </div>
+        <div class="pill">
+          <div class="ic">🛡️</div>
+          <h3 data-i18n-key="f5_t">รองรับโครเมียม</h3>
+          <p data-i18n-key="f5_d">ชุบโครเมียมบนผิวนิเกิ้ลได้ดี</p>
+        </div>
+        <div class="pill">
+          <div class="ic">📈</div>
+          <h3 data-i18n-key="f6_t">ช่วงการใช้งานกว้าง</h3>
+          <p data-i18n-key="f6_d">ทนการแปรผันของโหลด/อุณหภูมิ คงความเงาได้ดี</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">ภาพรวมการใช้งานและความเข้ากันได้ของระบบ</p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> สารเติมแต่ง “ยาเงานิเกิ้ล” (Brightener/Leveler)</li>
+        <li data-i18n-key="pi_process"><strong>ระบบบ่อ:</strong> Watts / Modified Watts สำหรับงานถังแขวนและถังกลิ้ง</li>
+        <li data-i18n-key="pi_apps"><strong>การใช้งาน:</strong> งานตกแต่ง, ชิ้นส่วนยานยนต์/ฮาร์ดแวร์, อุปกรณ์ไฟฟ้า, รองพื้นก่อนชุบโครเมียม</li>
+        <li data-i18n-key="pi_substrates"><strong>วัสดุรองรับ:</strong> เหล็ก, ทองเหลือง, ทองแดง; พลาสติกที่ผ่านการเมทัลไลซ์อย่างถูกต้อง</li>
+        <li data-i18n-key="pi_thickness"><strong>ความหนาแนะนำ:</strong> 5–25 µm ตามสเปกงาน; กรณีเป็นชั้นรองโครเมียมมัก 10–25 µm</li>
+        <li data-i18n-key="pi_control"><strong>การควบคุม:</strong> ติดตามการใช้งานตามแอมแปร์-ชั่วโมง และทดสอบ Hull-cell เพื่อปรับยาเงา/ยาพื้น</li>
+      </ul>
+    </section>
+
+    <!-- Companion chemicals -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="comp_title">น้ำยาที่ใช้ร่วมกัน</h2>
+      <div class="table">
+        <table aria-label="companion chemicals">
+          <thead>
+            <tr>
+              <th data-i18n-key="comp_head_item">รายการ</th>
+              <th data-i18n-key="comp_head_role">บทบาท</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="comp_row1_item">ยาเงานิเกิ้ล A-Brite</td>
+              <td data-i18n-key="comp_row1_role">ควบคุมความเงา/ความมันวาว โดยเฉพาะช่วงกระแสต่ำ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="comp_row2_item">ยาพื้นนิเกิ้ล 902</td>
+              <td data-i18n-key="comp_row2_role">ช่วยกระจายตัวของยาเงาและความสม่ำเสมอของผิว</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lead" style="margin-top:12px" data-i18n-key="comp_lead">ใช้คู่กันได้ทั้ง “ผสมบ่อใหม่” และ “การปรับเติมระหว่างผลิต”</p>
+    </section>
+
+    <!-- New makeup -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">อัตราการใช้ (สำหรับบ่อผสมใหม่)</h2>
+      <div class="table">
+        <table aria-label="makeup table">
+          <thead>
+            <tr>
+              <th data-i18n-key="specs_head_comp">สาร</th>
+              <th data-i18n-key="specs_head_dose">อัตราการใช้</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="specs_row1_comp">นิเกิ้ลซัลเฟต</td><td>270 – 320 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="specs_row2_comp">นิเกิ้ลคลอไรด์</td><td>20 – 60 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="specs_row3_comp">กรดบอริก</td><td>40 – 50 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="specs_row4_comp">ยาพื้นนิเกิ้ล 902</td><td>8 – 10 ซีซี/ลิตร</td></tr>
+            <tr><td data-i18n-key="specs_row5_comp">ยาเงานิเกิ้ล A-Brite</td><td>0.1 – 0.4 ซีซี/ลิตร</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Additions -->
+    <section id="additions" class="card">
+      <h2 class="section" data-i18n-key="additions_title">การใช้งานและอัตราการปรับเติม</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="add_b1"><strong>ยาพื้นนิเกิ้ล 902:</strong> 150 – 200 ซีซี ต่อ 1,000 แอมแปร์ชั่วโมง</li>
+        <li data-i18n-key="add_b2"><strong>ยาเงานิเกิ้ล A-Brite:</strong> 100 – 150 ซีซี ต่อ 1,000 แอมแปร์ชั่วโมง</li>
+      </ul>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="card">
+      <h2 class="section" data-i18n-key="tr_title">วิธีการแก้ไขน้ำยาชุบนิเกิ้ลเงาเบื้องต้น</h2>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_burn_h">ผิวชุบไหม้</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr_burn_1">กระแสไฟสูงเกินไป → ลดกระแส</li>
+        <li data-i18n-key="tr_burn_2">อุณหภูมิต่ำเกินไป → ปรับขึ้น ~50 °C</li>
+        <li data-i18n-key="tr_burn_3">น้ำยาไม่สมดุล → ส่งวิเคราะห์/ปรับองค์ประกอบ</li>
+        <li data-i18n-key="tr_burn_4">แขวนงานไม่เหมาะสม → ปรับจำนวน/ระยะห่าง</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_pit_h">ผิวเป็นหลุม</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr_pit_1">ปนเปื้อนโลหะ (Fe ฯลฯ) → ดัมมี่น้ำยา</li>
+        <li data-i18n-key="tr_pit_2">กรดบอริกต่ำ/ pH เพี้ยน → ปรับให้เหมาะสม</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_rough_h">ผิวหยาบไม่เรียบ</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr_rough_1">กระแสสูงเกิน → ลดกระแส</li>
+        <li data-i18n-key="tr_rough_2">กรดบอริกต่ำ/ pH สูง → ปรับ pH (HCl)</li>
+        <li data-i18n-key="tr_rough_3">มีฝุ่น/สารไม่ละลาย → กรอง/ใช้ยาฆ่าโลหะ</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_peel_h">ลอก เปราะ แตก</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr_peel_1" data-i18n-html>เตรียมผิวไม่พอ → กระตุ้นผิว H<sub>2</sub>SO<sub>4</sub> 5–20%</li>
+        <li data-i18n-key="tr_peel_2">ชุบนานแล้ว → กระตุ้นผิวให้นานขึ้นหรือเตรียมผิวใหม่</li>
+        <li data-i18n-key="tr_peel_3">กระแสสูง → ลดกระแส</li>
+        <li data-i18n-key="tr_peel_4">โลหะปนเปื้อน → ดัมมี่น้ำยา</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_thin_h">ชุบไม่เข้มหรือบาง</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="tr_thin_1">กระแสต่ำ → เพิ่มกระแส</li>
+        <li data-i18n-key="tr_thin_2">ขาดยาเงา → เติมตามสเปก</li>
+        <li data-i18n-key="tr_thin_3">pH สูง → ปรับด้วย HCl</li>
+        <li data-i18n-key="tr_thin_4">ทางเดินกระแสไม่ดี → ตรวจหัวล่อ/ตะขอ และทำความสะอาดทุกครั้ง</li>
+        <li data-i18n-key="tr_thin_5">เวลาไม่พอ → เพิ่มเวลาชุบ</li>
+      </ul>
+    </section>
+
+    <p class="note" data-i18n-key="note_ppe">*ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างกระบวนการ</p>
+  </main>
+
+  <!-- === Footer (แบบเดิม) === -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === i18n === -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Nickel A-Brite • ยาเงานิเกิ้ล | Baume Chemical",
+        meta_desc:"ยาเงานิเกิ้ล A-Brite สำหรับงานชุบนิเกิ้ลทั้งถังกลิ้งและถังแขวน เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม และรองรับโครเมียมได้ยอดเยี่ยม",
+        og_title:"Nickel A-Brite • Bright Nickel",
+        og_desc:"เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม รองรับโครเมียม",
+
+        badge1:"Bright Nickel", badge2:"Rack & Barrel",
+        hero_title:"Nickel A-Brite",
+        hero_tagline:"ยาเงานิเกิ้ลคุณภาพสูงสำหรับงานชุบนิเกิ้ล เงาสูง กลบรอยทรายดี ครอบคลุมซอกมุม และรองรับโครเมียมได้ยอดเยี่ยม",
+
+        features_title:"คุณสมบัติพิเศษ",
+        features_lead:"ออกแบบเพื่อผิวเงาสม่ำเสมอทั้งงานถังแขวนและถังกลิ้ง",
+        f1_t:"ความมันวาวสูง", f1_d:"ให้ผิวมันวาวสะท้อนแสง",
+        f2_t:"กลบรอยทรายดี", f2_d:"เก็บผิวหยาบ ลดริ้วรอย",
+        f3_t:"ไวและรับกระแสสูง", f3_d:"ชุบได้เร็ว รองรับกระแสสูง",
+        f4_t:"เข้าซอกมุม", f4_d:"ครอบคลุม LCD ได้ดี",
+        f5_t:"รองรับโครเมียม", f5_d:"ชุบโครเมียมบนผิวนิเกิ้ลได้ดี",
+        f6_t:"ช่วงการใช้งานกว้าง", f6_d:"ทนการแปรผันของโหลด/อุณหภูมิ คงความเงาได้ดี",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"ภาพรวมการใช้งานและความเข้ากันได้ของระบบ",
+        pi_type:"ประเภท: สารเติมแต่ง “ยาเงานิเกิ้ล” (Brightener/Leveler)",
+        pi_process:"ระบบบ่อ: Watts / Modified Watts สำหรับงานถังแขวนและถังกลิ้ง",
+        pi_apps:"การใช้งาน: งานตกแต่ง, ชิ้นส่วนยานยนต์/ฮาร์ดแวร์, อุปกรณ์ไฟฟ้า, รองพื้นก่อนชุบโครเมียม",
+        pi_substrates:"วัสดุรองรับ: เหล็ก, ทองเหลือง, ทองแดง; พลาสติกที่ผ่านการเมทัลไลซ์อย่างถูกต้อง",
+        pi_thickness:"ความหนาแนะนำ: 5–25 µm ตามสเปกงาน; กรณีเป็นชั้นรองโครเมียมมัก 10–25 µm",
+        pi_control:"การควบคุม: ติดตามการใช้งานตามแอมแปร์-ชั่วโมง และทดสอบ Hull-cell เพื่อปรับยาเงา/ยาพื้น",
+
+        comp_title:"น้ำยาที่ใช้ร่วมกัน",
+        comp_head_item:"รายการ", comp_head_role:"บทบาท",
+        comp_row1_item:"ยาเงานิเกิ้ล A-Brite",
+        comp_row1_role:"ควบคุมความเงา/ความมันวาว โดยเฉพาะช่วงกระแสต่ำ",
+        comp_row2_item:"ยาพื้นนิเกิ้ล 902",
+        comp_row2_role:"ช่วยกระจายตัวของยาเงาและความสม่ำเสมอของผิว",
+        comp_lead:"ใช้คู่กันได้ทั้ง “ผสมบ่อใหม่” และ “การปรับเติมระหว่างผลิต”",
+
+        specs_title:"อัตราการใช้ (สำหรับบ่อผสมใหม่)",
+        specs_head_comp:"สาร", specs_head_dose:"อัตราการใช้",
+        specs_row1_comp:"นิเกิ้ลซัลเฟต",
+        specs_row2_comp:"นิเกิ้ลคลอไรด์",
+        specs_row3_comp:"กรดบอริก",
+        specs_row4_comp:"ยาพื้นนิเกิ้ล 902",
+        specs_row5_comp:"ยาเงานิเกิ้ล A-Brite",
+
+        additions_title:"การใช้งานและอัตราการปรับเติม",
+        add_b1:"ยาพื้นนิเกิ้ล 902: 150 – 200 ซีซี ต่อ 1,000 แอมแปร์ชั่วโมง",
+        add_b2:"ยาเงานิเกิ้ล A-Brite: 100 – 150 ซีซี ต่อ 1,000 แอมแปร์ชั่วโมง",
+
+        tr_title:"วิธีการแก้ไขน้ำยาชุบนิเกิ้ลเงาเบื้องต้น",
+        tr_burn_h:"ผิวชุบไหม้",
+        tr_burn_1:"กระแสไฟสูงเกินไป → ลดกระแส",
+        tr_burn_2:"อุณหภูมิต่ำเกินไป → ปรับขึ้น ~50 °C",
+        tr_burn_3:"น้ำยาไม่สมดุล → ส่งวิเคราะห์/ปรับองค์ประกอบ",
+        tr_burn_4:"แขวนงานไม่เหมาะสม → ปรับจำนวน/ระยะห่าง",
+
+        tr_pit_h:"ผิวเป็นหลุม",
+        tr_pit_1:"ปนเปื้อนโลหะ (Fe ฯลฯ) → ดัมมี่น้ำยา",
+        tr_pit_2:"กรดบอริกต่ำ/ pH เพี้ยน → ปรับให้เหมาะสม",
+
+        tr_rough_h:"ผิวหยาบไม่เรียบ",
+        tr_rough_1:"กระแสสูงเกิน → ลดกระแส",
+        tr_rough_2:"กรดบอริกต่ำ/ pH สูง → ปรับ pH (HCl)",
+        tr_rough_3:"มีฝุ่น/สารไม่ละลาย → กรอง/ใช้ยาฆ่าโลหะ",
+
+        tr_peel_h:"ลอก เปราะ แตก",
+        tr_peel_1:"เตรียมผิวไม่พอ → กระตุ้นผิว H<sub>2</sub>SO<sub>4</sub> 5–20%",
+        tr_peel_2:"ชุบนานแล้ว → กระตุ้นผิวให้นานขึ้นหรือเตรียมผิวใหม่",
+        tr_peel_3:"กระแสสูง → ลดกระแส",
+        tr_peel_4:"โลหะปนเปื้อน → ดัมมี่น้ำยา",
+
+        tr_thin_h:"ชุบไม่เข้มหรือบาง",
+        tr_thin_1:"กระแสต่ำ → เพิ่มกระแส",
+        tr_thin_2:"ขาดยาเงา → เติมตามสเปก",
+        tr_thin_3:"pH สูง → ปรับด้วย HCl",
+        tr_thin_4:"ทางเดินกระแสไม่ดี → ตรวจหัวล่อ/ตะขอ และทำความสะอาดทุกครั้ง",
+        tr_thin_5:"เวลาไม่พอ → เพิ่มเวลาชุบ",
+
+        note_ppe:"*ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างกระบวนการ",
+
+        footer_products:"หมวดผลิตภัณฑ์",
+        footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+
+        cat_pretreat:"เตรียมผิว (Pretreatment)",
+        cat_plating:"ชุบเคลือบ (Plating)",
+        cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)",
+        cat_polishing:"ขัดเงา (Polishing)",
+        cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)",
+        cat_service:"บริการ (Customer Service)",
+        cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Nickel A-Brite • Bright Nickel | Baume Chemical",
+        meta_desc:"High-performance bright nickel additive for rack & barrel: high gloss, excellent leveling, strong low-current coverage, chrome-ready.",
+        og_title:"Nickel A-Brite • Bright Nickel",
+        og_desc:"High gloss, strong leveling, LCD coverage, chrome-ready.",
+
+        badge1:"Bright Nickel", badge2:"Rack & Barrel",
+        hero_title:"Nickel A-Brite",
+        hero_tagline:"High-performance bright nickel additive for rack & barrel lines: high gloss, excellent leveling, strong low-current coverage, and chrome-ready.",
+
+        features_title:"Key Features",
+        features_lead:"Engineered for uniform brightness on both rack and barrel work.",
+        f1_t:"High gloss", f1_d:"Mirror-like, reflective finish",
+        f2_t:"Excellent leveling", f2_d:"Smooths roughness and minimizes sanding marks",
+        f3_t:"Fast & high-current capable", f3_d:"Short cycles; tolerates higher current",
+        f4_t:"Recess coverage", f4_d:"Strong LCD throwing power",
+        f5_t:"Chrome-ready", f5_d:"Excellent base for subsequent chrome",
+        f6_t:"Wide operating window", f6_d:"Resilient to load/temperature swings; maintains brightness",
+
+        product_title:"Product Information",
+        product_lead:"At-a-glance usage and compatibility",
+        pi_type:"Type: Bright nickel additive (brightener/leveler)",
+        pi_process:"Bath system: Watts / Modified Watts; suitable for rack & barrel",
+        pi_apps:"Applications: decorative finishes, automotive hardware, electrical parts, chrome undercoat",
+        pi_substrates:"Substrates: steel, brass, copper; metallized plastics with proper underlayers",
+        pi_thickness:"Recommended thickness: 5–25 µm depending on spec; typically 10–25 µm for chrome undercoat",
+        pi_control:"Control: track consumption by ampere-hours and use a Hull cell to adjust brightener/base",
+
+        comp_title:"Companion Chemicals",
+        comp_head_item:"Item", comp_head_role:"Role",
+        comp_row1_item:"Nickel A-Brite brightener",
+        comp_row1_role:"Controls brightness/leveling—especially in LCD regions",
+        comp_row2_item:"Nickel Base 902",
+        comp_row2_role:"Promotes uniform brightener distribution and consistency",
+        comp_lead:"Use together for both new bath make-up and routine additions.",
+
+        specs_title:"Make-up (new bath)",
+        specs_head_comp:"Component", specs_head_dose:"Dosage",
+        specs_row1_comp:"Nickel sulfate",
+        specs_row2_comp:"Nickel chloride",
+        specs_row3_comp:"Boric acid",
+        specs_row4_comp:"Nickel Base 902",
+        specs_row5_comp:"Nickel A-Brite brightener",
+
+        additions_title:"Operating additions",
+        add_b1:"Nickel Base 902: 150–200 mL per 1,000 A·h",
+        add_b2:"Nickel A-Brite: 100–150 mL per 1,000 A·h",
+
+        tr_title:"Basic troubleshooting for bright nickel",
+        tr_burn_h:"Burned deposit",
+        tr_burn_1:"Excess current → reduce current",
+        tr_burn_2:"Bath too cold → raise to ~50 °C",
+        tr_burn_3:"Unbalanced chemistry → analyze & adjust",
+        tr_burn_4:"Poor racking/spacing → adjust load & spacing",
+
+        tr_pit_h:"Pitting",
+        tr_pit_1:"Metal contamination (Fe, etc.) → dummy the bath",
+        tr_pit_2:"Low boric / off-spec pH → correct to spec",
+
+        tr_rough_h:"Rough / non-smooth deposit",
+        tr_rough_1:"Over-current → reduce",
+        tr_rough_2:"Low boric / high pH → adjust pH (HCl)",
+        tr_rough_3:"Insolubles/particulates → filter / use metal remover",
+
+        tr_peel_h:"Peeling / brittleness / cracking",
+        tr_peel_1:"Insufficient activation → acid activate with H<sub>2</sub>SO<sub>4</sub> 5–20%",
+        tr_peel_2:"Old nickel underlayer → extend activation or re-prepare surface",
+        tr_peel_3:"Over-current → reduce",
+        tr_peel_4:"Metal contamination → dummy the bath",
+
+        tr_thin_h:"Low build / thin deposit",
+        tr_thin_1:"Current too low → increase",
+        tr_thin_2:"Brightener depleted → add per spec",
+        tr_thin_3:"High pH → correct with HCl",
+        tr_thin_4:"Poor electrical path → check thieves/hooks; clean each run",
+        tr_thin_5:"Insufficient time → extend plating time",
+
+        note_ppe:"*Personal protective equipment (gloves, goggles, mask) should be worn during operation.",
+
+        footer_products:"Products",
+        footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 Hours 08:00–17:00",
+
+        cat_pretreat:"Pretreatment",
+        cat_plating:"Plating",
+        cat_black:"Blackening",
+        cat_passivation:"Passivation",
+        cat_polishing:"Polishing",
+        cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment",
+        cat_service:"Customer Service",
+        cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      try{
+        const md = document.querySelector('meta[name="description"]');
+        if(md && I18N[L].meta_desc) md.setAttribute('content', I18N[L].meta_desc);
+        const ogt = document.querySelector('meta[property="og:title"]');
+        if(ogt && I18N[L].og_title) ogt.setAttribute('content', I18N[L].og_title);
+        const ogd = document.querySelector('meta[property="og:description"]');
+        if(ogd && I18N[L].og_desc) ogd.setAttribute('content', I18N[L].og_desc);
+      }catch(e){}
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if(!key) return;
+        const val = I18N[L][key];
+        if(typeof val === 'undefined') return;
+        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val;
+        else node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

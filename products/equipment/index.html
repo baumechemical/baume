@@ -8,19 +8,21 @@
   <!-- === SEO === -->
   <meta name="description" content="วัสดุอุปกรณ์และเครื่องมือสำหรับงานชุบโลหะและห้องปฏิบัติการ: รีเอเจนต์ เครื่องมือวิเคราะห์ และอุปกรณ์ควบคุมไลน์ชุบ ครบจบในที่เดียว พร้อมคำปรึกษาโดยผู้เชี่ยวชาญ">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="equipment.html">
-  <link rel="alternate" hreflang="th" href="equipment.html">
-  <link rel="alternate" hreflang="en" href="equipment.html">
+  <link rel="canonical" href="https://www.baumechemical.com/products/equipment/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/products/equipment/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/products/equipment/">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:title" content="วัสดุอุปกรณ์ | Baume Chemical">
   <meta property="og:description" content="อุปกรณ์ห้องแล็บและเครื่องมือควบคุมกระบวนการชุบโลหะครบวงจร พร้อมทีมที่ปรึกษา">
-  <meta property="og:url" content="https://www.baumechemical.com/products/equipment/index.html">
+  <meta property="og:url" content="https://www.baumechemical.com/products/equipment/">
   <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta property="og:image:alt" content="Lab and plating equipment by Baume Chemical">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured Data (JSON-LD) -->
@@ -40,15 +42,39 @@
     "@type":"CollectionPage",
     "inLanguage":"th",
     "name":"Equipment",
-    "url":"https://www.baumechemical.com/products/equipment/index.html",
+    "url":"https://www.baumechemical.com/products/equipment/",
     "description":"Lab reagents, analytical instruments, and plating line equipment for metal finishing."
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},
+      {"@type":"ListItem","position":3,"name":"Equipment","item":"https://www.baumechemical.com/products/equipment/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Equipment categories",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Laboratory Analytical Reagents","url":"https://www.baumechemical.com/products/equipment/labchemicals.html"},
+      {"@type":"ListItem","position":2,"name":"Laboratory Analytical Equipment","url":"https://www.baumechemical.com/products/equipment/toolschemical.html"},
+      {"@type":"ListItem","position":3,"name":"Plating Line Equipment","url":"https://www.baumechemical.com/products/equipment/platingequipment.html"}
+    ]
+  }
+  </script>
 
-  <!-- Fonts -->
+  <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
 
   <style>
     :root{
@@ -67,7 +93,28 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* === Language Switcher === */
+    /* === Top Header (logo + menu) === */
+    .site-header{
+      position:sticky; top:0; z-index:1000;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid #e6ece8;
+    }
+    .nav-bar{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:14px; flex-wrap:wrap}
+    .primary-nav a{
+      text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600;
+    }
+    .primary-nav a:hover{ background:#ecf4ef }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* === Floating Language Switcher === */
     .lang-fab{
       position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
       padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
@@ -85,10 +132,17 @@
       position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(420px, 60vh, 620px);
       background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
-      padding: 22px 16px;
+      padding: 28px 16px;
     }
     .hero h1{margin:0 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-home{
+      display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
+      background: #ffffff1a; border:1px solid #ffffff55; color:#fff;
+      backdrop-filter: blur(4px);
+    }
+    .back-home:hover{ background:#ffffff2a; border-color:#ffffff90 }
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -104,7 +158,7 @@
     .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
     .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
     .card p{margin:0;color:#5b6675;font-size:.96rem}
-    .card .more{display:inline-block;margin-top:10px;color:var(--accent);font-weight:800;text-decoration:none}
+    .card .more{display:inline-block;margin-top:10px;color:#ff9800;font-weight:800;text-decoration:none}
     .card .more:hover{text-decoration:underline}
     .card.lift{will-change:transform,box-shadow}
     @media(hover:hover) and (pointer:fine){
@@ -135,6 +189,23 @@
 </head>
 <body>
 
+  <!-- === Top Header (logo + menu) === -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+        <a href="https://www.baumechemical.com/products/equipment/" data-i18n-key="nav_equipment" aria-current="page">Equipment</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- === Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
@@ -150,6 +221,7 @@
   <!-- === Hero === -->
   <header class="hero">
     <div class="wrap">
+      <a class="back-home" href="/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับหน้าแรก</a>
       <h1 data-i18n-key="hero_title">วัสดุอุปกรณ์</h1>
       <p data-i18n-key="hero_tagline">เครื่องมือและอุปกรณ์สำหรับงานชุบโลหะและห้องปฏิบัติการ</p>
     </div>
@@ -270,9 +342,11 @@
     }, {threshold:.18});
     revealEls.forEach(el=>revObs.observe(el));
 
-    /* i18n dictionary (ไม่ย่อเนื้อหา) */
+    /* i18n dictionary */
     const I18N = {
       th: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_equipment:"Equipment",
+        back_home:"← กลับหน้าแรก",
         hero_title: "วัสดุอุปกรณ์",
         hero_tagline: "เครื่องมือและอุปกรณ์สำหรับงานชุบโลหะและห้องปฏิบัติการ",
         sec_title: "ผลิตภัณฑ์ของเรา",
@@ -290,6 +364,8 @@
         footer_copy: "© 2025 Baume Chemical. All rights reserved."
       },
       en: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_equipment:"Equipment",
+        back_home:"← Back to Home",
         hero_title: "Equipment",
         hero_tagline: "Tools and equipment for metal plating and laboratory work",
         sec_title: "Our Products",

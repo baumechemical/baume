@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">Nickel Satin SM • น้ำยาชุบนิเกิ้ลซาติน | Baume Chemical</title>
+  <meta name="description" content="ชุดน้ำยาซาตินนิเกิ้ล (Satin Nickel) สำหรับงาน Rack/Barrel ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี รองรับโครเมี่ยม พร้อมสเปก/สูตรผสม/แนวทางควบคุมครบ">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Nickel Satin SM • Satin Nickel System">
+  <meta property="og:description" content="Adjustable matte level, smooth satin grain, wide current range, chrome-ready. Includes specs & make-up/control guidance.">
+  <meta property="og:image" content="https://i.imgur.com/j7SpCDD.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/j7SpCDD.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* === Hero === */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/j7SpCDD.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* === Layout & cards === */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* === Feature pills === */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* === Tables === */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    /* Notes */
+    .note{font-style:italic;color:#9a3412}
+    .muted{color:#5b6775}
+
+    /* === Footer === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- === Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Satin Nickel System</span>
+        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Nickel Satin SM</h1>
+      <p data-i18n-key="hero_tagline">ชุดน้ำยาซาตินนิเกิ้ลสำหรับงานตกแต่ง ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี และรองรับการชุบโครเมี่ยมต่อ</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <p class="lead" data-i18n-key="features_lead">ออกแบบให้ควบคุมง่าย ผลลัพธ์คงเส้นคงวา ทั้งงานถังแขวนและถังกลิ้ง</p>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">🪩</div><h3 data-i18n-key="f1_t">ผิวซาตินเนียน</h3><p data-i18n-key="f1_d">เม็ดละเอียด สม่ำเสมอทั้งชิ้นงานเรียบ/โค้ง</p></div>
+        <div class="pill"><div class="ic">🎚️</div><h3 data-i18n-key="f2_t">ปรับความด้านได้</h3><p data-i18n-key="f2_d">ควบคุมด้วย Foaming Agent SM, กระแส, อุณหภูมิ, เวลา</p></div>
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f3_t">รับกระแสกว้าง</h3><p data-i18n-key="f3_d">ชุบช่วง 3–8 A/dm² ครอบคลุม LCD ได้ดี</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f4_t">ทนการกรอง</h3><p data-i18n-key="f4_d">ตัวพาไม่สูญเสียง่ายในการกรองเชือก/ผ้า</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f5_t">รองรับโครเมี่ยม</h3><p data-i18n-key="f5_d">เป็นชั้นรองที่ดีสำหรับโครเมี่ยมเงาหรือซาติน</p></div>
+        <div class="pill"><div class="ic">🧰</div><h3 data-i18n-key="f6_t">ใช้งานง่าย</h3><p data-i18n-key="f6_d">ควบคุม pH/อุณหภูมิไม่ซับซ้อน เหมาะ Rack/Barrel</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">สรุปคุณสมบัติและจุดควบคุมหลักของระบบซาตินนิเกิ้ล</p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type" data-i18n-html><strong>ประเภท:</strong> ระบบซาตินนิเกิ้ล (Satin Nickel) ใช้ตัวพา Satin Carrier A/B และ Foaming Agent SM</li>
+        <li data-i18n-key="pi_finish"><strong>ผิวสำเร็จ:</strong> ด้านเนียน ปรับได้ตั้งแต่กึ่งด้านถึงด้านจัด</li>
+        <li data-i18n-key="pi_rate"><strong>ช่วงกระแสใช้งาน:</strong> 3–8 A/dm² (แนะนำ 4–6 A/dm²)</li>
+        <li data-i18n-key="pi_use"><strong>การใช้งาน:</strong> เครื่องประดับ ชิ้นส่วนอิเล็กทรอนิกส์ ฮาร์ดแวร์ งานตกแต่ง และรองรับโครเมี่ยมต่อ</li>
+        <li data-i18n-key="pi_subs"><strong>วัสดุรองรับ:</strong> เหล็ก สแตนเลส ทองเหลือง/ทองแดง สังกะสีไดคาสต์* (เตรียมผิวเหมาะสม)</li>
+        <li class="muted" data-i18n-key="pi_note">*งานบางชนิดควรมีคอปเปอร์สไตรค์หรือนิเกิ้ลสไตรค์ก่อน</li>
+      </ul>
+    </section>
+
+    <!-- Specs -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">สเปก & เงื่อนไขการทำงาน</h2>
+      <div class="table" style="margin-bottom:12px">
+        <table aria-label="Operating conditions">
+          <thead>
+            <tr>
+              <th data-i18n-key="specs_head_param">พารามิเตอร์</th>
+              <th data-i18n-key="specs_head_value">ค่าแนะนำ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="s_row1">อุณหภูมิ</td><td data-i18n-key="s_row1_v">50–60 °C (แนะนำ ~55 °C)</td></tr>
+            <tr><td data-i18n-key="s_row2">pH</td><td data-i18n-key="s_row2_v">4.1–4.5 (แนะนำ ~4.4)</td></tr>
+            <tr><td data-i18n-key="s_row3">ความหนาแน่นกระแส</td><td data-i18n-key="s_row3_v">3–8 A/dm² (แนะนำ 4–6 A/dm²)</td></tr>
+            <tr><td data-i18n-key="s_row4">แอโนด</td><td data-i18n-key="s_row4_v">แผ่น/เม็ดนิเกิ้ล ใส่ถุงผ้าทนกรด</td></tr>
+            <tr><td data-i18n-key="s_row5">การกวน</td><td data-i18n-key="s_row5_v">โยกชิ้นงาน/กวนเชิงกล หลีกเลี่ยงลมตรง</td></tr>
+            <tr><td data-i18n-key="s_row6">การกรอง</td><td data-i18n-key="s_row6_v">กรองต่อเนื่อง หรืออย่างน้อยกรองทุกวันหลังงาน</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin:8px 0 6px" data-i18n-key="mix_title">สูตรผสมบ่อใหม่ (ต่อ 1 ลิตร)</h3>
+      <div class="table">
+        <table aria-label="Make-up per liter">
+          <thead>
+            <tr>
+              <th data-i18n-key="mix_head_comp">ส่วนประกอบ</th>
+              <th data-i18n-key="mix_head_amt">ปริมาณ</th>
+              <th data-i18n-key="mix_head_std">ค่ามาตรฐาน</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="mix_row1">นิเกิ้ลซัลเฟต</td><td>—</td><td data-i18n-key="mix_row1_v">400–450 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_row2">นิเกิ้ลคลอไรด์</td><td>—</td><td data-i18n-key="mix_row2_v">50–60 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_row3">กรดบอริก</td><td>—</td><td data-i18n-key="mix_row3_v">35–42 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_row4">Satin Carrier A</td><td>—</td><td data-i18n-key="mix_row4_v">15–25 ซีซี/ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_row5">Satin Carrier B</td><td>—</td><td data-i18n-key="mix_row5_v">8–18 ซีซี/ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_row6">Satin Foaming Agent SM</td><td data-i18n-key="mix_row6_amt">ตามหน้างาน</td><td data-i18n-key="mix_row6_v">0–2 ซีซี/ลิตร</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="mix_note">*ควรผสมน้ำ Foaming Agent ก่อนเติม และกวนให้ทั่วบ่อ</p>
+    </section>
+
+    <!-- Additions -->
+    <section id="additions" class="card">
+      <h2 class="section" data-i18n-key="additions_title">การปรับเติมระหว่างผลิต</h2>
+      <p class="lead" data-i18n-key="additions_lead">อ้างอิงอัตราสิ้นเปลืองโดยประมาณทุก ๆ 10,000 แอมแปร์ชั่วโมง (A·h)</p>
+      <div class="table">
+        <table aria-label="Operating additions">
+          <thead>
+            <tr>
+              <th data-i18n-key="add_head_item">รายการ</th>
+              <th data-i18n-key="add_head_dose">อัตราการใช้</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Satin Carrier A</td><td data-i18n-key="add_a">0.5–1.5 ลิตร ต่อ 10,000 A·h</td></tr>
+            <tr><td>Satin Carrier B</td><td data-i18n-key="add_b">1.5–3.0 ซีซี/ลิตร (ปรับแต่งความด้านรายวัน)</td></tr>
+            <tr><td>Satin Foaming Agent SM</td><td data-i18n-key="add_c">ตามหน้างาน หรือ ~0.02 ซีซี/ลิตร/ชั่วโมง</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Chemistry notes -->
+    <section id="chem_notes" class="card">
+      <h2 class="section" data-i18n-key="chem_title">หมายเหตุด้านเคมี</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="chem_1">นิเกิ้ลซัลเฟต: แหล่ง Ni หลัก ระดับต่ำเกินไปทำให้ความเป็นซาตินลดลง</li>
+        <li data-i18n-key="chem_2">นิเกิ้ลคลอไรด์: ช่วยการละลาย/เงาขึ้นได้ ไม่ควรเติมมากเกิน</li>
+        <li data-i18n-key="chem_3">กรดบอริก: ส่งผลต่อความคงตัวของผิวซาติน ควรรักษาในช่วงมาตรฐาน</li>
+        <li data-i18n-key="chem_4">Satin Carrier A/B: ช่วยให้ซาตินติดผิวดี หากเติมมากไปอาจเงาระยะสั้นได้ ตัวพาไม่หายด้วยการกรองเชือก/ผ้า</li>
+        <li data-i18n-key="chem_5">Foaming Agent SM: ตัวกำหนดความด้าน เติมมาก→ด้านมาก ปรับตามเวลา/กระแส/อุณหภูมิ</li>
+      </ul>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="card">
+      <h2 class="section" data-i18n-key="tr_title">แนวทางแก้ปัญหาเบื้องต้น (Satin Nickel)</h2>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr1_h">ผิวไม่เรียบ/ไม่สม่ำเสมอ</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr1_1">ปรับกระแสให้อยู่ 4–6 A/dm² และคุมอุณหภูมิให้คงที่</li>
+        <li data-i18n-key="tr1_2">เพิ่มการกวนชิ้นงาน/การไหลเวียน ลดจุดอับ</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr2_h">รอยขีด/รอยคลื่น</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr2_1">ขัดเตรียมผิวและล้างให้สะอาด ลดสิ่งปนเปื้อน</li>
+        <li data-i18n-key="tr2_2">กรองต่อเนื่องและเปลี่ยนสื่อกรองตามรอบ</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr3_h">สี/ความด้านไม่สม่ำเสมอ</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr3_1">ทวนอัตราส่วน Carrier A/B และ Foaming Agent</li>
+        <li data-i18n-key="tr3_2">คุม pH 4.1–4.5 และอุณหภูมิ 50–60 °C</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr4_h">ด้านเกิน/เงาเกิน</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr4_1">ด้านเกิน → ลด Foaming Agent หรือกระแส/เวลา</li>
+        <li data-i18n-key="tr4_2">เงาเกิน → เพิ่ม Foaming Agent ทีละน้อย และ/หรือปรับกระแสลง</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr5_h">การยึดเกาะไม่ดี</h3>
+      <ul style="margin:0 0 12px 18px">
+        <li data-i18n-key="tr5_1">ตรวจขั้นตอนเตรียมผิว (ขจัดคราบ/แอซิดแอคติเวต)</li>
+        <li data-i18n-key="tr5_2">ตรวจตะขอ/หัวล่อและการสัมผัสไฟฟ้า</li>
+      </ul>
+
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr6_h">ความทนทานเคลือบต่ำ</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="tr6_1">เพิ่มความหนาเวลา และรักษากระแสในช่วงแนะนำ</li>
+        <li data-i18n-key="tr6_2">ทวนอุณหภูมิ/การกวนเพื่อขนาดเกรนที่เหมาะสม</li>
+      </ul>
+    </section>
+
+    <p class="note" data-i18n-key="note_ppe">*ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างกระบวนการ</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === i18n === -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Nickel Satin SM • น้ำยาชุบนิเกิ้ลซาติน | Baume Chemical",
+        badge1:"ระบบซาตินนิเกิ้ล", badge2:"Rack & Barrel",
+        hero_title:"Nickel Satin SM",
+        hero_tagline:"ชุดน้ำยาซาตินนิเกิ้ลสำหรับงานตกแต่ง ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี และรองรับการชุบโครเมี่ยมต่อ",
+
+        features_title:"คุณสมบัติพิเศษ",
+        features_lead:"ออกแบบให้ควบคุมง่าย ผลลัพธ์คงเส้นคงวา ทั้งงานถังแขวนและถังกลิ้ง",
+        f1_t:"ผิวซาตินเนียน", f1_d:"เม็ดละเอียด สม่ำเสมอทั้งชิ้นงานเรียบ/โค้ง",
+        f2_t:"ปรับความด้านได้", f2_d:"ควบคุมด้วย Foaming Agent SM, กระแส, อุณหภูมิ, เวลา",
+        f3_t:"รับกระแสกว้าง", f3_d:"ชุบช่วง 3–8 A/dm² ครอบคลุม LCD ได้ดี",
+        f4_t:"ทนการกรอง", f4_d:"ตัวพาไม่สูญเสียง่ายในการกรองเชือก/ผ้า",
+        f5_t:"รองรับโครเมี่ยม", f5_d:"เป็นชั้นรองที่ดีสำหรับโครเมี่ยมเงาหรือซาติน",
+        f6_t:"ใช้งานง่าย", f6_d:"ควบคุม pH/อุณหภูมิไม่ซับซ้อน เหมาะ Rack/Barrel",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"สรุปคุณสมบัติและจุดควบคุมหลักของระบบซาตินนิเกิ้ล",
+        pi_type:"ประเภท: ระบบซาตินนิเกิ้ล (Satin Nickel) ใช้ตัวพา Satin Carrier A/B และ Foaming Agent SM",
+        pi_finish:"ผิวสำเร็จ: ด้านเนียน ปรับได้ตั้งแต่กึ่งด้านถึงด้านจัด",
+        pi_rate:"ช่วงกระแสใช้งาน: 3–8 A/dm² (แนะนำ 4–6 A/dm²)",
+        pi_use:"การใช้งาน: เครื่องประดับ ชิ้นส่วนอิเล็กทรอนิกส์ ฮาร์ดแวร์ งานตกแต่ง และรองรับโครเมี่ยมต่อ",
+        pi_subs:"วัสดุรองรับ: เหล็ก สแตนเลส ทองเหลือง/ทองแดง สังกะสีไดคาสต์* (เตรียมผิวเหมาะสม)",
+        pi_note:"*งานบางชนิดควรมีคอปเปอร์สไตรค์หรือนิเกิ้ลสไตรค์ก่อน",
+
+        specs_title:"สเปก & เงื่อนไขการทำงาน",
+        specs_head_param:"พารามิเตอร์", specs_head_value:"ค่าแนะนำ",
+        s_row1:"อุณหภูมิ", s_row1_v:"50–60 °C (แนะนำ ~55 °C)",
+        s_row2:"pH", s_row2_v:"4.1–4.5 (แนะนำ ~4.4)",
+        s_row3:"ความหนาแน่นกระแส", s_row3_v:"3–8 A/dm² (แนะนำ 4–6 A/dm²)",
+        s_row4:"แอโนด", s_row4_v:"แผ่น/เม็ดนิเกิ้ล ใส่ถุงผ้าทนกรด",
+        s_row5:"การกวน", s_row5_v:"โยกชิ้นงาน/กวนเชิงกล หลีกเลี่ยงลมตรง",
+        s_row6:"การกรอง", s_row6_v:"กรองต่อเนื่อง หรืออย่างน้อยกรองทุกวันหลังงาน",
+
+        mix_title:"สูตรผสมบ่อใหม่ (ต่อ 1 ลิตร)",
+        mix_head_comp:"ส่วนประกอบ", mix_head_amt:"ปริมาณ", mix_head_std:"ค่ามาตรฐาน",
+        mix_row1:"นิเกิ้ลซัลเฟต", mix_row1_v:"400–450 กรัม/ลิตร",
+        mix_row2:"นิเกิ้ลคลอไรด์", mix_row2_v:"50–60 กรัม/ลิตร",
+        mix_row3:"กรดบอริก", mix_row3_v:"35–42 กรัม/ลิตร",
+        mix_row4:"Satin Carrier A", mix_row4_v:"15–25 ซีซี/ลิตร",
+        mix_row5:"Satin Carrier B", mix_row5_v:"8–18 ซีซี/ลิตร",
+        mix_row6:"Satin Foaming Agent SM", mix_row6_amt:"ตามหน้างาน", mix_row6_v:"0–2 ซีซี/ลิตร",
+        mix_note:"*ควรผสมน้ำ Foaming Agent ก่อนเติม และกวนให้ทั่วบ่อ",
+
+        additions_title:"การปรับเติมระหว่างผลิต",
+        additions_lead:"อ้างอิงอัตราสิ้นเปลืองโดยประมาณทุก ๆ 10,000 แอมแปร์ชั่วโมง (A·h)",
+        add_head_item:"รายการ", add_head_dose:"อัตราการใช้",
+        add_a:"0.5–1.5 ลิตร ต่อ 10,000 A·h",
+        add_b:"1.5–3.0 ซีซี/ลิตร (ปรับแต่งความด้านรายวัน)",
+        add_c:"ตามหน้างาน หรือ ~0.02 ซีซี/ลิตร/ชั่วโมง",
+
+        chem_title:"หมายเหตุด้านเคมี",
+        chem_1:"นิเกิ้ลซัลเฟต: แหล่ง Ni หลัก ระดับต่ำเกินไปทำให้ความเป็นซาตินลดลง",
+        chem_2:"นิเกิ้ลคลอไรด์: ช่วยการละลาย/เงาขึ้นได้ ไม่ควรเติมมากเกิน",
+        chem_3:"กรดบอริก: ส่งผลต่อความคงตัวของผิวซาติน ควรรักษาในช่วงมาตรฐาน",
+        chem_4:"Satin Carrier A/B: ช่วยให้ซาตินติดผิวดี หากเติมมากไปอาจเงาระยะสั้นได้ ตัวพาไม่หายด้วยการกรองเชือก/ผ้า",
+        chem_5:"Foaming Agent SM: ตัวกำหนดความด้าน เติมมาก→ด้านมาก ปรับตามเวลา/กระแส/อุณหภูมิ",
+
+        tr_title:"แนวทางแก้ปัญหาเบื้องต้น (Satin Nickel)",
+        tr1_h:"ผิวไม่เรียบ/ไม่สม่ำเสมอ",
+        tr1_1:"ปรับกระแสให้อยู่ 4–6 A/dm² และคุมอุณหภูมิให้คงที่",
+        tr1_2:"เพิ่มการกวนชิ้นงาน/การไหลเวียน ลดจุดอับ",
+        tr2_h:"รอยขีด/รอยคลื่น",
+        tr2_1:"ขัดเตรียมผิวและล้างให้สะอาด ลดสิ่งปนเปื้อน",
+        tr2_2:"กรองต่อเนื่องและเปลี่ยนสื่อกรองตามรอบ",
+        tr3_h:"สี/ความด้านไม่สม่ำเสมอ",
+        tr3_1:"ทวนอัตราส่วน Carrier A/B และ Foaming Agent",
+        tr3_2:"คุม pH 4.1–4.5 และอุณหภูมิ 50–60 °C",
+        tr4_h:"ด้านเกิน/เงาเกิน",
+        tr4_1:"ด้านเกิน → ลด Foaming Agent หรือกระแส/เวลา",
+        tr4_2:"เงาเกิน → เพิ่ม Foaming Agent ทีละน้อย และ/หรือปรับกระแสลง",
+        tr5_h:"การยึดเกาะไม่ดี",
+        tr5_1:"ตรวจขั้นตอนเตรียมผิว (ขจัดคราบ/แอซิดแอคติเวต)",
+        tr5_2:"ตรวจตะขอ/หัวล่อและการสัมผัสไฟฟ้า",
+        tr6_h:"ความทนทานเคลือบต่ำ",
+        tr6_1:"เพิ่มความหนาเวลา และรักษากระแสในช่วงแนะนำ",
+        tr6_2:"ทวนอุณหภูมิ/การกวนเพื่อขนาดเกรนที่เหมาะสม",
+
+        note_ppe:"*ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างกระบวนการ",
+
+        footer_products:"หมวดผลิตภัณฑ์",
+        footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+
+        cat_pretreat:"เตรียมผิว (Pretreatment)",
+        cat_plating:"ชุบเคลือบ (Plating)",
+        cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)",
+        cat_polishing:"ขัดเงา (Polishing)",
+        cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)",
+        cat_service:"บริการ (Customer Service)",
+        cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Nickel Satin SM • Satin Nickel Additive | Baume Chemical",
+        badge1:"Satin Nickel System", badge2:"Rack & Barrel",
+        hero_title:"Nickel Satin SM",
+        hero_tagline:"Satin nickel system for decorative work: adjustable matte level, smooth uniform grain, strong LCD coverage, and chrome-ready base.",
+
+        features_title:"Key Features",
+        features_lead:"Built for easy control and consistent results on both rack and barrel lines.",
+        f1_t:"Fine satin grain", f1_d:"Uniform texture on flat and contoured parts",
+        f2_t:"Adjustable matte", f2_d:"Tune via Foaming Agent SM, current, temperature, and time",
+        f3_t:"Wide current window", f3_d:"Operates across 3–8 A/dm² with good LCD coverage",
+        f4_t:"Filter-stable carriers", f4_d:"Carriers resist loss in rope/cloth filtration",
+        f5_t:"Chrome-ready", f5_d:"Excellent underlayer for bright or satin chrome",
+        f6_t:"Simple operation", f6_d:"Straightforward pH/temperature control; rack & barrel friendly",
+
+        product_title:"Product Information",
+        product_lead:"Key properties and control points for the satin nickel system",
+        pi_type:"Type: Satin nickel using Satin Carrier A/B and Foaming Agent SM",
+        pi_finish:"Finish: Smooth matte—tunable from semi-matte to deep matte",
+        pi_rate:"Operating current range: 3–8 A/dm² (recommended 4–6 A/dm²)",
+        pi_use:"Applications: jewelry, electronics hardware, decorative hardware; chrome topcoat compatible",
+        pi_subs:"Substrates: steel, stainless, brass/copper, Zn die-cast* (with proper pretreatment)",
+        pi_note:"*Copper strike or nickel strike may be recommended for some bases.",
+
+        specs_title:"Specs & Operating Conditions",
+        specs_head_param:"Parameter", specs_head_value:"Recommended",
+        s_row1:"Temperature", s_row1_v:"50–60 °C (target ~55 °C)",
+        s_row2:"pH", s_row2_v:"4.1–4.5 (target ~4.4)",
+        s_row3:"Current density", s_row3_v:"3–8 A/dm² (recommend 4–6 A/dm²)",
+        s_row4:"Anodes", s_row4_v:"Nickel plates/balls bagged in acid-resistant cloth",
+        s_row5:"Agitation", s_row5_v:"Work movement/mechanical; avoid direct air",
+        s_row6:"Filtration", s_row6_v:"Continuous or at minimum daily after production",
+
+        mix_title:"New-bath Make-up (per 1 L)",
+        mix_head_comp:"Component", mix_head_amt:"Amount", mix_head_std:"Standard",
+        mix_row1:"Nickel sulfate", mix_row1_v:"400–450 g/L",
+        mix_row2:"Nickel chloride", mix_row2_v:"50–60 g/L",
+        mix_row3:"Boric acid", mix_row3_v:"35–42 g/L",
+        mix_row4:"Satin Carrier A", mix_row4_v:"15–25 mL/L",
+        mix_row5:"Satin Carrier B", mix_row5_v:"8–18 mL/L",
+        mix_row6:"Satin Foaming Agent SM", mix_row6_amt:"As required", mix_row6_v:"0–2 mL/L",
+        mix_note:"*Premix Foaming Agent with water before addition and homogenize the bath.",
+
+        additions_title:"Operating Additions",
+        additions_lead:"Indicative consumption per 10,000 ampere-hours (A·h)",
+        add_head_item:"Item", add_head_dose:"Dosage",
+        add_a:"0.5–1.5 L per 10,000 A·h",
+        add_b:"1.5–3.0 mL/L (daily matte trim)",
+        add_c:"As required, or ~0.02 mL/L/hour",
+
+        chem_title:"Chemistry Notes",
+        chem_1:"Nickel sulfate: primary Ni source; too low reduces satin character",
+        chem_2:"Nickel chloride: aids dissolution/brightness—avoid over-dosing",
+        chem_3:"Boric acid: stabilizes deposit—maintain within spec",
+        chem_4:"Satin Carriers A/B: improve adhesion of satin; excess can momentarily brighten; carriers are not removed by rope/cloth filtration",
+        chem_5:"Foaming Agent SM: determines matte level; higher dose → deeper matte; also influenced by time/current/temperature",
+
+        tr_title:"Basic Troubleshooting (Satin Nickel)",
+        tr1_h:"Non-uniform / uneven texture",
+        tr1_1:"Hold 4–6 A/dm² and stabilize temperature",
+        tr1_2:"Increase part movement/flow to eliminate dead zones",
+        tr2_h:"Scratches / wave marks",
+        tr2_1:"Improve surface prep and cleanliness",
+        tr2_2:"Run continuous filtration and service media regularly",
+        tr3_h:"Colour/matte non-uniformity",
+        tr3_1:"Re-check Carrier A/B and Foaming Agent ratios",
+        tr3_2:"Keep pH 4.1–4.5 and 50–60 °C",
+        tr4_h:"Too matte / too shiny",
+        tr4_1:"Too matte → reduce Foaming Agent or current/time",
+        tr4_2:"Too shiny → increment Foaming Agent and/or lower current",
+        tr5_h:"Poor adhesion",
+        tr5_1:"Verify cleaning/acid activation steps",
+        tr5_2:"Check thieves/hooks and electrical contact",
+        tr6_h:"Low durability",
+        tr6_1:"Increase build time and stay in recommended current",
+        tr6_2:"Review temperature/agitation for proper grain size",
+
+        note_ppe:"*Personal protective equipment (gloves, goggles, mask) should be worn during operation.",
+
+        footer_products:"Products",
+        footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 Hours 08:00–17:00",
+
+        cat_pretreat:"Pretreatment",
+        cat_plating:"Plating",
+        cat_black:"Blackening",
+        cat_passivation:"Passivation",
+        cat_polishing:"Polishing",
+        cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment",
+        cat_service:"Customer Service",
+        cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      // <title> & meta
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+      try{
+        const md = document.querySelector('meta[name="description"]');
+        if(md && I18N[L].meta_desc) md.setAttribute('content', I18N[L].meta_desc);
+        const ogt = document.querySelector('meta[property="og:title"]');
+        if(ogt && I18N[L].og_title) ogt.setAttribute('content', I18N[L].og_title);
+        const ogd = document.querySelector('meta[property="og:description"]');
+        if(ogd && I18N[L].og_desc) ogd.setAttribute('content', I18N[L].og_desc);
+      }catch(e){}
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if(!key) return;
+        const val = I18N[L][key];
+        if(typeof val === 'undefined') return;
+        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val;
+        else node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>
