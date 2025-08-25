@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title data-i18n-key="meta_title">Prism 350 • สีรุ้ง โครม 3 บนซิงค์ | Baume Chemical</title>
+  <meta name="description" content="Prism 350 โครเมตไตรวาเลนท์สำหรับงานซิงค์ ฟิล์มสีรุ้ง (เขียวฟ้า/ม่วงฟ้าแกมแดง) ทนสนิมขาว ~144–196 ชม. ช่วงทำงานกว้าง pH≈1.7 ปรับเติมได้ยาว ไม่ต้องตั้งบ่อใหม่บ่อย" />
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Prism 350 • Trivalent Rainbow Chromate on Zinc">
+  <meta property="og:description" content="Trivalent (Cr(III)) rainbow chromate. Long bath life, replenishable. 144–196 h white-rust resistance (NSS).">
+  <meta property="og:image" content="https://i.imgur.com/8CCfxaM.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Preload hero image (header) -->
+  <link rel="preload" as="image" href="https://i.imgur.com/8CCfxaM.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow:0 8px 26px rgba(2,8,20,.06);
+      /* ⬇️ Footer logo (ตามลิงก์ที่ให้มา) */
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language Switcher */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero (HEADER IMAGE จากลิงก์ที่ให้) */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/8CCfxaM.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer (LOGO จากลิงก์ที่ให้) */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:#2c5e4e;background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- HEADER / HERO -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Trivalent (Cr(III))</span>
+        <span class="badge" data-i18n-key="badge2">Replenishable Bath</span>
+        <span class="badge" data-i18n-key="badge3">144–196 h NSS</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Prism 350 — สีรุ้ง โครม 3 บนซิงค์</h1>
+      <p data-i18n-key="hero_tagline">ฟิล์มสีรุ้ง (เขียวฟ้า/ม่วงฟ้าแกมแดง) ไม่มีโครม 6 • ควบคุมง่าย pH≈1.7 • อายุบ่อยาว เพียงปรับเติม</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- INTRO -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="intro_title">ภาพรวมผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="intro_p">
+        Prism 350 เป็นน้ำยาสีรุ้งสำหรับโครเมตไตรวาเลนท์บนซิงค์ ใช้งานง่าย ปลอดภัยต่อสิ่งแวดล้อม
+        จุดเด่นอยู่ที่ “อายุบ่อนานและปรับเติมได้เรื่อย ๆ” โดยไม่ต้องตั้งบ่อใหม่บ่อย ฟิล์มที่ได้ให้โทนสีรุ้ง
+        ขึ้นกับสภาวะการจุ่ม และให้ความทนทานต่อสนิมขาวประมาณ 144–196 ชั่วโมง*
+      </p>
+      <p class="note" data-i18n-key="intro_note">*ผลขึ้นกับความหนาซิงค์ สภาพผิว การซีลหลังโครเมต และเงื่อนไขทดสอบ</p>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <div class="pill-grid">
+        <div class="pill"><h3 data-i18n-key="f1_t">ไตรวาเลนท์จริง</h3><p data-i18n-key="f1_d">ไม่มี Cr(VI) ง่ายต่อการบำบัดน้ำเสีย</p></div>
+        <div class="pill"><h3 data-i18n-key="f2_t">อายุบ่อยาว</h3><p data-i18n-key="f2_d">เน้นปรับเติม ไม่ต้องตั้งบ่อใหม่บ่อย</p></div>
+        <div class="pill"><h3 data-i18n-key="f3_t">โทนสีรุ้งสวย</h3><p data-i18n-key="f3_d">เขียวฟ้า/ม่วงฟ้าแกมแดง ขึ้นกับเวลาจุ่ม/สภาพบ่อ</p></div>
+        <div class="pill"><h3 data-i18n-key="f4_t">ช่วงทำงานกว้าง</h3><p data-i18n-key="f4_d">20–35 °C • pH 1.5–2.0 (เป้าหมาย ~1.7)</p></div>
+        <div class="pill"><h3 data-i18n-key="f5_t">รองรับแร็ค/บาร์เรล</h3><p data-i18n-key="f5_d">บาร์เรล ~9 rpm • ไลน์แขวน ~3–4 m/min</p></div>
+        <div class="pill"><h3 data-i18n-key="f6_t">ทนสนิมขาว</h3><p data-i18n-key="f6_d">โดยทั่วไป ~144–196 ชั่วโมง (NSS)</p></div>
+      </div>
+    </section>
+
+    <!-- OPERATING -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="ops_title">ช่วงการใช้งาน</h2>
+      <div class="table">
+        <table aria-label="Operating conditions">
+          <thead>
+            <tr>
+              <th data-i18n-key="head_param">พารามิเตอร์</th>
+              <th data-i18n-key="head_opt">ค่าที่เหมาะสม</th>
+              <th data-i18n-key="head_range">ช่วง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Prism 350</td><td>100 cc/L</td><td>80–120 cc/L</td></tr>
+            <tr><td data-i18n-key="t_temp">อุณหภูมิ</td><td>25 °C</td><td>20–35 °C</td></tr>
+            <tr><td data-i18n-key="t_dwell">เวลาจุ่มแกว่ง</td><td>60 s</td><td>30–90 s</td></tr>
+            <tr><td>pH</td><td>~1.7</td><td>1.5–2.0</td></tr>
+            <tr><td data-i18n-key="t_barrel">บาร์เรล (rpm)</td><td>9</td><td>6–12</td></tr>
+            <tr><td data-i18n-key="t_rack">ไลน์แขวน (m/min)</td><td>~3.5</td><td>3–4</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="ops_note">ควบคุม pH ด้วย HNO₃ (เพิ่มความเป็นกรด) หรือโซดาไฟ/NaHCO₃ (ยก pH) อย่างระมัดระวัง</p>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="proc_title">ขั้นตอนการทำงาน</h2>
+      <div class="table">
+        <table aria-label="Process sequence">
+          <thead>
+            <tr>
+              <th data-i18n-key="step_no">ขั้น</th>
+              <th data-i18n-key="step_desc">รายละเอียด</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td data-i18n-key="s1">ชิ้นงานชุบซิงค์เรียบร้อยแล้ว (แนะนำความหนา ≥ 8 µm)</td></tr>
+            <tr><td>2</td><td data-i18n-key="s2">ล้างน้ำสะอาด ×2</td></tr>
+            <tr><td>3</td><td data-i18n-key="s3">จุ่มกรดดินประสิว 0.3–1% v/v</td></tr>
+            <tr><td>4</td><td data-i18n-key="s4">ล้างน้ำสะอาด ×2</td></tr>
+            <tr><td>5</td><td data-i18n-key="s5">จุ่ม Prism 350 ~45–60 s</td></tr>
+            <tr><td>6</td><td data-i18n-key="s6">ล้างน้ำสะอาด ×2</td></tr>
+            <tr><td>7</td><td data-i18n-key="s7">เป่าลมหรืออบให้แห้ง (หลีกเลี่ยงการเหวี่ยงแรง ฟิล์มอาจฉีก)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TROUBLESHOOTING -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="tr_title">ปัญหาที่พบบ่อย & วิธีแก้</h2>
+      <div class="table">
+        <table aria-label="Troubleshooting">
+          <thead>
+            <tr>
+              <th data-i18n-key="tr_p">ปัญหา</th>
+              <th data-i18n-key="tr_s">แนวทางแก้ไข</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="tp1">ความต้านทานการกัดกร่อนต่ำ</td>
+              <td>
+                <ul style="margin:0 0 0 18px">
+                  <li data-i18n-key="tp1_1">pH สูงเกินไป (&gt;2.0) → ปรับลงด้วย HNO₃ ให้ 1.5–2.0</li>
+                  <li data-i18n-key="tp1_2">pH ต่ำเกินไป (&lt;1.5) → ปรับขึ้นด้วย NaOH เจือจาง/NaHCO₃</li>
+                  <li data-i18n-key="tp1_3">อุณหภูมิสูง (&gt;35 °C) → ลดใกล้ ~25 °C</li>
+                  <li data-i18n-key="tp1_4">ความเข้มข้นต่ำ → เพิ่มตามสเปก</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td data-i18n-key="tp2">สีไม่สม่ำเสมอ</td>
+              <td>
+                <ul style="margin:0 0 0 18px">
+                  <li data-i18n-key="tp2_1">เวลาจุ่มน้อย → เพิ่มเป็น 45–60 s</li>
+                  <li data-i18n-key="tp2_2">บาร์เรลหมุนไม่คงที่ → ปรับ ~9 rpm</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="ppe">**PPE:** ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท และอ้างอิง TDS/SDS เสมอ</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <!-- LOGO ใช้ลิงก์พื้นหลังตามตัวแปร --logo-url -->
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Prism 350 • สีรุ้ง โครม 3 บนซิงค์ | Baume Chemical",
+        badge1:"Trivalent (Cr(III))", badge2:"ปรับเติมต่อเนื่อง", badge3:"144–196 ชม. NSS",
+        hero_title:"Prism 350 — สีรุ้ง โครม 3 บนซิงค์",
+        hero_tagline:"ฟิล์มสีรุ้ง (เขียวฟ้า/ม่วงฟ้าแกมแดง) ไม่มีโครม 6 • ควบคุมง่าย pH≈1.7 • อายุบ่อยาว เพียงปรับเติม",
+
+        intro_title:"ภาพรวมผลิตภัณฑ์",
+        intro_p:"Prism 350 เป็นน้ำยาสีรุ้งสำหรับโครเมตไตรวาเลนท์บนซิงค์ ใช้งานง่าย ปลอดภัยต่อสิ่งแวดล้อม จุดเด่นอยู่ที่ “อายุบ่อนานและปรับเติมได้เรื่อย ๆ” โดยไม่ต้องตั้งบ่อใหม่บ่อย ฟิล์มที่ได้ให้โทนสีรุ้ง ขึ้นกับสภาวะการจุ่ม และให้ความทนทานต่อสนิมขาวประมาณ 144–196 ชั่วโมง*",
+        intro_note:"*ผลขึ้นกับความหนาซิงค์ สภาพผิว การซีลหลังโครเมต และเงื่อนไขทดสอบ",
+
+        features_title:"คุณสมบัติพิเศษ",
+        f1_t:"ไตรวาเลนท์จริง", f1_d:"ไม่มี Cr(VI) ง่ายต่อการบำบัดน้ำเสีย",
+        f2_t:"อายุบ่อยาว", f2_d:"เน้นปรับเติม ไม่ต้องตั้งบ่อใหม่บ่อย",
+        f3_t:"โทนสีรุ้งสวย", f3_d:"เขียวฟ้า/ม่วงฟ้าแกมแดง ขึ้นกับเวลาจุ่ม/สภาพบ่อ",
+        f4_t:"ช่วงทำงานกว้าง", f4_d:"20–35 °C • pH 1.5–2.0 (เป้าหมาย ~1.7)",
+        f5_t:"รองรับแร็ค/บาร์เรล", f5_d:"บาร์เรล ~9 rpm • ไลน์แขวน ~3–4 m/min",
+        f6_t:"ทนสนิมขาว", f6_d:"โดยทั่วไป ~144–196 ชั่วโมง (NSS)",
+
+        ops_title:"ช่วงการใช้งาน",
+        head_param:"พารามิเตอร์", head_opt:"ค่าที่เหมาะสม", head_range:"ช่วง",
+        t_temp:"อุณหภูมิ", t_dwell:"เวลาจุ่มแกว่ง", t_barrel:"บาร์เรล (rpm)", t_rack:"ไลน์แขวน (m/min)",
+        ops_note:"ควบคุม pH ด้วย HNO₃ (เพิ่มความเป็นกรด) หรือโซดาไฟ/NaHCO₃ (ยก pH) อย่างระมัดระวัง",
+
+        proc_title:"ขั้นตอนการทำงาน",
+        step_no:"ขั้น", step_desc:"รายละเอียด",
+        s1:"ชิ้นงานชุบซิงค์เรียบร้อยแล้ว (แนะนำความหนา ≥ 8 µm)",
+        s2:"ล้างน้ำสะอาด ×2",
+        s3:"จุ่มกรดดินประสิว 0.3–1% v/v",
+        s4:"ล้างน้ำสะอาด ×2",
+        s5:"จุ่ม Prism 350 ~45–60 s",
+        s6:"ล้างน้ำสะอาด ×2",
+        s7:"เป่าลมหรืออบให้แห้ง (หลีกเลี่ยงการเหวี่ยงแรง ฟิล์มอาจฉีก)",
+
+        tr_title:"ปัญหาที่พบบ่อย & วิธีแก้",
+        tr_p:"ปัญหา", tr_s:"แนวทางแก้ไข",
+        tp1:"ความต้านทานการกัดกร่อนต่ำ",
+        tp1_1:"pH สูงเกินไป (>2.0) → ปรับลงด้วย HNO₃ ให้ 1.5–2.0",
+        tp1_2:"pH ต่ำเกินไป (<1.5) → ปรับขึ้นด้วย NaOH เจือจาง/NaHCO₃",
+        tp1_3:"อุณหภูมิสูง (>35 °C) → ลดใกล้ ~25 °C",
+        tp1_4:"ความเข้มข้นต่ำ → เพิ่มตามสเปก",
+        tp2:"สีไม่สม่ำเสมอ",
+        tp2_1:"เวลาจุ่มน้อย → เพิ่มเป็น 45–60 s",
+        tp2_2:"บาร์เรลหมุนไม่คงที่ → ปรับ ~9 rpm",
+
+        ppe:"**PPE:** ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท และอ้างอิง TDS/SDS เสมอ",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Prism 350 • Trivalent Rainbow Chromate on Zinc | Baume Chemical",
+        badge1:"Trivalent (Cr(III))", badge2:"Replenishable Bath", badge3:"144–196 h NSS",
+        hero_title:"Prism 350 — Rainbow Chromate (Cr(III))",
+        hero_tagline:"Rainbow hues (green-blue / purple-blue) • Hex-chrome free • pH≈1.7 • Long bath life with simple replenishment",
+
+        intro_title:"Product Overview",
+        intro_p:"Prism 350 is a trivalent rainbow chromate for zinc with easy control and improved environmental profile. The bath is designed for long life with on-going replenishment (no frequent full remakes). Achieves rainbow tones depending on dip conditions and typically ~144–196 h white rust resistance.*",
+        intro_note:"*Results depend on Zn thickness, surface prep, post-seal, and test conditions.",
+
+        features_title:"Key Features",
+        f1_t:"True trivalent", f1_d:"No Cr(VI); simpler effluent treatment",
+        f2_t:"Long bath life", f2_d:"Replenish instead of frequent remakes",
+        f3_t:"Attractive rainbow tones", f3_d:"Hue varies with dwell and bath state",
+        f4_t:"Wide window", f4_d:"20–35 °C • pH 1.5–2.0 (target ~1.7)",
+        f5_t:"Rack & barrel ready", f5_d:"~9 rpm barrel • ~3–4 m/min rack line",
+        f6_t:"White-rust resistance", f6_d:"Typically ~144–196 h (NSS)",
+
+        ops_title:"Operating Window",
+        head_param:"Parameter", head_opt:"Optimal", head_range:"Range",
+        t_temp:"Temperature", t_dwell:"Dwell (agitated)", t_barrel:"Barrel (rpm)", t_rack:"Rack line (m/min)",
+        ops_note:"Control pH with HNO₃ to lower, or dilute NaOH/NaHCO₃ to raise—handle carefully.",
+
+        proc_title:"Process Sequence",
+        step_no:"Step", step_desc:"Details",
+        s1:"Zinc deposit complete (recommended ≥ 8 µm)",
+        s2:"Rinse ×2",
+        s3:"Nitric acid dip 0.3–1% v/v",
+        s4:"Rinse ×2",
+        s5:"Prism 350 ~45–60 s",
+        s6:"Rinse ×2",
+        s7:"Blow off or oven dry (avoid hard spinning; film can tear)",
+
+        tr_title:"Troubleshooting",
+        tr_p:"Issue", tr_s:"Remedy",
+        tp1:"Low corrosion resistance",
+        tp1_1:"pH high (>2.0) → lower with HNO₃ to 1.5–2.0",
+        tp1_2:"pH low (<1.5) → raise with dilute NaOH/NaHCO₃",
+        tp1_3:"Temperature high (>35 °C) → reduce near 25 °C",
+        tp1_4:"Concentration low → raise within spec",
+        tp2:"Non-uniform rainbow",
+        tp2_1:"Dwell too short → increase to 45–60 s",
+        tp2_2:"Barrel rpm unstable → set ~9 rpm",
+
+        ppe:"**PPE:** Gloves / goggles / respirator; ensure ventilation; always refer to TDS/SDS.",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>
