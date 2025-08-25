@@ -7,7 +7,7 @@
 
   <!-- === SEO === -->
   <meta name="description" content="น้ำยาลอกชั้นชุบ/ออกไซด์/สี สำหรับเหล็ก ทองแดง ทองเหลือง ฯลฯ — ควบคุมง่าย ลอกเฉพาะชั้นเคลือบ เตรียมผิวสำหรับชุบ พ่นสี หรือเชื่อม">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow, max-image-preview:large">
   <link rel="canonical" href="https://www.baumechemical.com/products/strippers/">
   <meta name="theme-color" content="#2c5e4e">
 
@@ -30,6 +30,14 @@
     "url":"https://www.baumechemical.com/",
     "logo":"https://www.baumechemical.com/assets/logo.png",
     "sameAs":["https://line.me/ti/p/~baumechemical"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/"
   }
   </script>
   <script type="application/ld+json">
@@ -81,14 +89,69 @@
       --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* === Language Switcher === */
+    /* === Overlay Top Nav (เหมือนหน้าโฮม) === */
+    .site-header{
+      position:absolute; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
+      background:#e8f1ec var(--logo-url) center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(2,8,20,.15)
+    }
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{
+      display:inline-block; padding:10px 12px; border-radius:10px;
+      color:#fff; text-decoration:none; font-weight:600;
+    }
+    .menu a:hover{ background:rgba(255,255,255,.12); color:#fff }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff; box-shadow:none }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
+    }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* === Floating Language Switcher (เลื่อนลงให้พ้นเฮดเดอร์) === */
     .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px;
       padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
       box-shadow:0 10px 26px rgba(2,8,20,.12);
     }
@@ -107,6 +170,13 @@
     }
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:960px; margin:0 auto; color:#e6f2ef}
+    .back-home{
+      display:inline-flex; align-items:center; gap:8px;
+      margin-bottom:10px; padding:6px 12px; border-radius:999px;
+      background:#ffffffcc; color:#0f172a; border:1px solid #e2e8f0;
+      text-decoration:none; font-weight:800; backdrop-filter: blur(6px);
+    }
+    .back-home:hover{ background:#fff }
 
     /* === Layout === */
     .wrap{max-width:1200px; margin:auto; padding:34px 16px}
@@ -156,6 +226,33 @@
   </style>
 </head>
 <body>
+
+  <!-- === Site Header (Top Navigation) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about-us.html" class="nav-link">About us</a></li>
+          <li><a href="/products.html" class="nav-link" aria-current="page">Products</a></li>
+          <li><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- === Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
@@ -171,6 +268,7 @@
   <!-- === Hero === -->
   <header class="hero">
     <div class="wrap" style="padding:22px 16px">
+      <a class="back-home" href="/" data-i18n-key="back_home" aria-label="Back to home">← กลับหน้าแรก</a>
       <h1 data-i18n-key="hero_title">น้ำยาลอกผิว/ลอกชุบ (Strippers)</h1>
       <p data-i18n-key="hero_tagline">
         ลอกชั้นชุบ ออกไซด์ สี และคราบบนผิวโลหะอย่างแม่นยำ เตรียมพร้อมสำหรับขั้นตอนต่อไป
@@ -280,8 +378,19 @@
     </div>
   </footer>
 
-  <!-- === JS: reveal + i18n === -->
+  <!-- === JS: menu toggle + reveal + i18n === -->
   <script>
+    // Mobile nav toggle (เหมือนหน้า Home)
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+    })();
+
     // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
@@ -292,6 +401,7 @@
     /* i18n dictionary */
     const I18N = {
       th: {
+        back_home: "← กลับหน้าแรก",
         hero_title: "น้ำยาลอกผิว/ลอกชุบ (Strippers)",
         hero_tagline: "ลอกชั้นชุบ ออกไซด์ สี และคราบบนผิวโลหะอย่างแม่นยำ เตรียมพร้อมสำหรับขั้นตอนต่อไป เช่น ชุบ พ่นสี หรือเชื่อม — สูตรคุมง่าย และช่วยลดของเสียในไลน์",
         sec_products: "ผลิตภัณฑ์",
@@ -308,6 +418,7 @@
         footer_copy: "© 2025 Baume Chemical. All rights reserved."
       },
       en: {
+        back_home: "← Back to Home",
         hero_title: "Metal Strippers & Coating Removers",
         hero_tagline: "Precisely remove plated layers, oxides, paints, and residues to prep for plating, painting, or welding — easy bath control and reduced rework.",
         sec_products: "Products",
@@ -331,13 +442,14 @@
     };
 
     function applyLang(lang){
-      document.documentElement.lang = lang === 'en' ? 'en' : 'th';
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[lang] && I18N[lang][key]) node.textContent = I18N[lang][key];
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
-      try{ localStorage.setItem('lang', lang); }catch(e){}
+      try{ localStorage.setItem('lang', sel); }catch(e){}
     }
 
     (function initLang(){
