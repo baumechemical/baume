@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- === SEO Basics === -->
+  <title data-i18n-key="meta_title">MILLENIUM NCZ 1221 • น้ำยาชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ | Baume Chemical</title>
+  <meta name="description" content="MILLENIUM NCZ 1221 ระบบชุบสังกะสีอัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น ใช้ได้ทั้งถังแขวนและถังกลิ้ง ค่ามาตรฐาน/การเติม/บำรุงรักษาครบในหน้าเดียว">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="MILLENIUM NCZ 1221 • Non-Cyanide Alkaline Zinc | Baume Chemical">
+  <meta property="og:description" content="High-performance non-cyanide alkaline zinc: high gloss, wide window, uniform LCD-HCD, rack & barrel ready.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail-7.jpg">
+  <meta property="og:image:alt" content="Non-Cyanide Alkaline Zinc plating bath">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD Product -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"MILLENIUM NCZ 1221",
+    "description":"Non-Cyanide Alkaline Zinc plating solution for rack & barrel lines.",
+    "brand":{"@type":"Brand","name":"Baume Chemical"},
+    "category":"Zinc Plating (Non-Cyanide Alkaline)",
+    "image":"https://img2.pic.in.th/pic/thumbnail-7.jpg",
+    "inLanguage":"th"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail-7.jpg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --vh: 1vh; /* iOS viewport height fix */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* (CSS ของ header คงไว้ได้ แต่เราเอาตัว header ออกแล้ว) */
+    .site-header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(180%) blur(10px); background:#ffffffcc; border-bottom:1px solid rgba(2,8,20,.06)}
+    .nav{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:16px; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--brand)}
+    .logo{width:36px; height:36px; border-radius:8px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 2px 8px rgba(0,0,0,.2)}
+    .links{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .links a{color:#1f2937; text-decoration:none; font-weight:700}
+    .links .sep{color:#94a3b8}
+    .cta{display:inline-block; padding:8px 12px; background:var(--brand-2); color:#fff; border-radius:10px; text-decoration:none; font-weight:800}
+    .cta:hover{filter:brightness(.96)}
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* === Hero (patched for iOS vh) === */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(420px, calc(var(--vh, 1vh) * 60), 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://img2.pic.in.th/pic/thumbnail-7.jpg') center/cover no-repeat;
+    }
+    @supports (height: 100svh){
+      .hero{ min-height: clamp(420px, 60svh, 640px); }
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin-bottom:10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+
+    /* === Hero badges === */
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+    .badge{
+      padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;
+      font-weight:700;backdrop-filter:blur(6px)
+    }
+
+    /* === Layout === */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+
+    /* === Feature pills === */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px;box-shadow:var(--shadow-1)}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* === Cards & Tables === */
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:860px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    /* === Note === */
+    .note{font-style:italic;color:#9a3412}
+
+    /* === Footer === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* ===== Passive iframe (option: use when you embed iframes) ===== */
+    .embed-passive{ position:relative; }
+    .embed-passive iframe{
+      width:100%; height:100%; border:0;
+      pointer-events:none;
+    }
+    .embed-passive.is-active iframe{ pointer-events:auto; }
+    .embed-passive .tap-ovl{
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      font:600 14px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color:#0f172a; background:transparent;
+      cursor:pointer; user-select:none;
+    }
+    .embed-passive.is-active .tap-ovl{ display:none; }
+  </style>
+</head>
+<body>
+
+  <!-- === Floating Language Switcher (คงไว้) === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- === (ลบ header ออกตามที่ขอ) === -->
+
+  <!-- === Hero === -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Non-Cyanide Alkaline Zinc</span>
+        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+      </div>
+      <h1 data-i18n-key="hero_title">MILLENIUM NCZ 1221</h1>
+      <p data-i18n-key="hero_tagline">ระบบชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น เหมาะทั้งถังแขวนและถังกลิ้ง</p>
+    </div>
+  </section>
+
+  <!-- === Main Content === -->
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="sec_features">คุณสมบัติหลัก</h2>
+      <p class="lead" data-i18n-key="sec_features_lead">ออกแบบเพื่อหน้าต่างการผลิตกว้าง ครอบคลุมรูปทรงชิ้นงานและโหลดที่หลากหลาย</p>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">⚙️</div><h3 data-i18n-key="f1_t">ความยืดหยุ่นดีเยี่ยม</h3><p data-i18n-key="f1_d">หนาแล้วไม่ลอก/ไม่พอง ทนต่อการขึ้นรูปและการจับยึด</p></div>
+        <div class="pill"><div class="ic">📊</div><h3 data-i18n-key="f2_t">กระจายผิวสม่ำเสมอ</h3><p data-i18n-key="f2_d">ความหนา LCD→HCD ต่ำกว่าอาบซิงค์กรด (~1:1.5 เทียบ ~1:3.5)</p></div>
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f3_t">ประสิทธิภาพกระแสสูง</h3><p data-i18n-key="f3_d">ทำงานได้ทั้งกระแสต่ำและสูง ลดเวลาไซเคิล</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f4_t">ช่วงทำงานกว้าง</h3><p data-i18n-key="f4_d">0.2–4.0 A/dm² และ 20–35 °C ให้อภัยต่อโหลดผสม</p></div>
+        <div class="pill"><div class="ic">🔁</div><h3 data-i18n-key="f5_t">รองรับ Rack & Barrel</h3><p data-i18n-key="f5_d">เสถียรและให้ความเงาเหมาะกับทั้งสองระบบ</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f6_t">รองรับโครเมต</h3><p data-i18n-key="f6_d">ผิวละเอียดสะอาด ช่วยการยึดติดของโครเมตทุกเฉด</p></div>
+      </div>
+    </section>
+
+    <!-- Specs -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="sec_specs">การเตรียมและเงื่อนไขการทำงาน</h2>
+      <div class="table">
+        <table aria-label="NCZ 1221 bath specification table">
+          <thead>
+            <tr>
+              <th data-i18n-key="tbl_detail">รายละเอียด</th>
+              <th data-i18n-key="tbl_optimum">ค่าสุดเหมาะสม</th>
+              <th data-i18n-key="tbl_range">ช่วงค่า</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Zinc Oxide</td><td data-i18n-key="zno_opt">12 กรัม/ลิตร</td><td data-i18n-key="zno_rng">8 – 15 กรัม/ลิตร</td></tr>
+            <tr><td>Sodium Hydroxide</td><td>120 กรัม/ลิตร</td><td>100 – 170 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="naoh_zn">NaOH : Zn</td><td>12 : 1</td><td>12/15 : 1</td></tr>
+            <tr><td>MILLENIUM NCZ 1221 A</td><td>10.0 มล./ลิตร</td><td>8.0 – 12.0 มล./ลิตร</td></tr>
+            <tr><td>MILLENIUM NCZ 1221 B</td><td>1.0 มล./ลิตร</td><td>0.5 – 1.5 มล./ลิตร</td></tr>
+            <tr><td>MILLENIUM NCZ 1221 C</td><td>2.0 มล./ลิตร</td><td>1.5 – 2.5 มล./ลิตร</td></tr>
+            <tr><td data-i18n-key="temp">อุณหภูมิ</td><td>25 °C</td><td>20 – 35 °C</td></tr>
+            <tr><td data-i18n-key="cd">ความหนาแน่นกระแส</td><td>0.5 – 1.0 A/dm²</td><td>0.2 – 4.0 A/dm²</td></tr>
+            <tr><td data-i18n-key="ratio_ca">Cathode : Anode</td><td>1/1.5 : 2.0</td><td>1/1.5 : 2.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Additions -->
+    <section id="additions" class="card">
+      <h2 class="section" data-i18n-key="sec_additions">การเติมน้ำยา (ml/KAH)</h2>
+      <div class="table">
+        <table aria-label="NCZ 1221 additions table">
+          <thead>
+            <tr>
+              <th data-i18n-key="prod_name">ชื่อผลิตภัณฑ์</th>
+              <th data-i18n-key="dosage">ปริมาณที่แนะนำ (มล./KAH)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>MILLENIUM NCZ 1221 A</td><td>125 – 150</td></tr>
+            <tr><td>MILLENIUM NCZ 1221 B</td><td>50 – 75</td></tr>
+            <tr><td>MILLENIUM NCZ 1221 C</td><td>20 – 30</td></tr>
+            <tr><td data-i18n-key="poor_water">หากคุณภาพน้ำไม่ดี</td><td>30 – 50</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Maintenance -->
+    <section id="maintenance" class="card">
+      <h2 class="section" data-i18n-key="sec_maint">การบำรุงรักษา</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="m1">วิเคราะห์ Zn และ NaOH เป็นระยะ</li>
+        <li data-i18n-key="m2">ควบคุมอุณหภูมิ 25–30 °C</li>
+        <li data-i18n-key="m3">ถังแขวน: 10 : 1 (NaOH : Zn)</li>
+        <li data-i18n-key="m4">ถังกลิ้ง: 12 : 1 (NaOH : Zn)</li>
+        <li data-i18n-key="m5"><strong>การเติมซิงค์ควรทำโดยบ่อพักภายนอก</strong></li>
+      </ul>
+      <p class="note" data-i18n-key="ppe_note">*สวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างการทำงาน</p>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section id="troubleshooting" class="card">
+      <h2 class="section" data-i18n-key="sec_tr">แนวทางแก้ปัญหาเบื้องต้น</h2>
+      <h3 style="margin:6px 0 8px" data-i18n-key="tr_slow_h">ชุบติดช้า</h3>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="tr_slow_1">Zn metal ต่ำหรือยาพื้นมากไป → ปรับ Zn ให้อยู่ 8–22 g/L</li>
+        <li data-i18n-key="tr_slow_2">อุณหภูมิน้ำยาต่ำ → คุม 30–32 °C</li>
+        <li data-i18n-key="tr_slow_3">ใส่ชิ้นงานหนาแน่นเกิน → ลดปริมาณชิ้นงาน</li>
+        <li data-i18n-key="tr_slow_4">กระแสไฟต่ำ/การต่อขั้วไม่ดี → ตรวจแอโนด/ตู้ไฟ</li>
+        <li data-i18n-key="tr_slow_5">ปนเปื้อนไซยาไนด์ → ปรึกษาทีมเทคนิค</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === i18n === -->
+  <script>
+    const I18N = {
+      th:{ meta_title:"MILLENIUM NCZ 1221 • น้ำยาชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ | Baume Chemical",
+        nav_features:"คุณสมบัติ", nav_specs:"ค่ามาตรฐาน", nav_additions:"การเติมน้ำยา", nav_maintenance:"บำรุงรักษา", nav_troubleshooting:"ปัญหา/วิธีแก้", nav_line:"LINE @baumechemical",
+        /* Hero */
+        badge1:"ซิงค์อัลคาไลน์ไร้ไซยาไนด์",
+        badge2:"ถังแขวน & ถังกลิ้ง",
+        hero_title:"MILLENIUM NCZ 1221",
+        hero_tagline:"ระบบชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น เหมาะทั้งถังแขวนและถังกลิ้ง",
+        /* Features */
+        sec_features:"คุณสมบัติหลัก", sec_features_lead:"ออกแบบเพื่อหน้าต่างการผลิตกว้าง ครอบคลุมรูปทรงชิ้นงานและโหลดที่หลากหลาย",
+        f1_t:"ความยืดหยุ่นดีเยี่ยม", f1_d:"หนาแล้วไม่ลอก/ไม่พอง ทนต่อการขึ้นรูปและการจับยึด",
+        f2_t:"กระจายผิวสม่ำเสมอ", f2_d:"ความหนา LCD→HCD ต่ำกว่าอาบซิงค์กรด (~1:1.5 เทียบ ~1:3.5)",
+        f3_t:"ประสิทธิภาพกระแสสูง", f3_d:"ทำงานได้ทั้งกระแสต่ำและสูง ลดเวลาไซเคิล",
+        f4_t:"ช่วงทำงานกว้าง", f4_d:"0.2–4.0 A/dm² และ 20–35 °C ให้อภัยต่อโหลดผสม",
+        f5_t:"รองรับ Rack & Barrel", f5_d:"เสถียรและให้ความเงาเหมาะกับทั้งสองระบบ",
+        f6_t:"รองรับโครเมต", f6_d:"ผิวละเอียดสะอาด ช่วยการยึดติดของโครเมตทุกเฉด",
+        /* Specs */
+        sec_specs:"การเตรียมและเงื่อนไขการทำงาน", tbl_detail:"รายละเอียด", tbl_optimum:"ค่าสุดเหมาะสม", tbl_range:"ช่วงค่า",
+        naoh_zn:"NaOH : Zn", temp:"อุณหภูมิ", cd:"ความหนาแน่นกระแส", ratio_ca:"Cathode : Anode",
+        zno_opt:"12 กรัม/ลิตร", zno_rng:"8 – 15 กรัม/ลิตร",
+        /* Additions */
+        sec_additions:"การเติมน้ำยา (ml/KAH)", prod_name:"ชื่อผลิตภัณฑ์", dosage:"ปริมาณที่แนะนำ (มล./KAH)", poor_water:"หากคุณภาพน้ำไม่ดี",
+        /* Maintenance */
+        sec_maint:"การบำรุงรักษา", m1:"วิเคราะห์ Zn และ NaOH เป็นระยะ", m2:"ควบคุมอุณหภูมิ 25–30 °C",
+        m3:"ถังแขวน: 10 : 1 (NaOH : Zn)", m4:"ถังกลิ้ง: 12 : 1 (NaOH : Zn)", m5:"การเติมซิงค์ควรทำโดยบ่อพักภายนอก",
+        ppe_note:"*สวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างการทำงาน",
+        /* Troubleshooting */
+        sec_tr:"แนวทางแก้ปัญหาเบื้องต้น", tr_slow_h:"ชุบติดช้า",
+        tr_slow_1:"Zn metal ต่ำหรือยาพื้นมากไป → ปรับ Zn ให้อยู่ 8–22 g/L",
+        tr_slow_2:"อุณหภูมิน้ำยาต่ำ → คุม 30–32 °C",
+        tr_slow_3:"ใส่ชิ้นงานหนาแน่นเกิน → ลดปริมาณชิ้นงาน",
+        tr_slow_4:"กระแสไฟต่ำ/การต่อขั้วไม่ดี → ตรวจแอโนด/ตู้ไฟ",
+        tr_slow_5:"ปนเปื้อนไซยาไนด์ → ปรึกษาทีมเทคนิค",
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+      en:{ meta_title:"MILLENIUM NCZ 1221 • Non-Cyanide Alkaline Zinc | Baume Chemical",
+        nav_features:"Features", nav_specs:"Specs", nav_additions:"Additions", nav_maintenance:"Maintenance", nav_troubleshooting:"Troubleshooting", nav_line:"LINE @baumechemical",
+        /* Hero */
+        badge1:"Non-Cyanide Alkaline Zinc",
+        badge2:"Rack & Barrel",
+        hero_title:"MILLENIUM NCZ 1221",
+        hero_tagline:"Non-cyanide alkaline zinc with high gloss, uniform distribution, and flexible thick deposits for both rack and barrel lines.",
+        /* Features */
+        sec_features:"Key Features", sec_features_lead:"Engineered for wide production windows across varied part geometries and mixed loads.",
+        f1_t:"Excellent Flexibility", f1_d:"Thick deposits without peeling/blistering; resilient during forming/handling",
+        f2_t:"Superior Distribution", f2_d:"Lower LCD→HCD thickness spread vs. acid zinc (~1:1.5 vs. ~1:3.5)",
+        f3_t:"High Efficiency", f3_d:"Performs at both low/high current densities to reduce cycle time",
+        f4_t:"Wide Operating Window", f4_d:"0.2–4.0 A/dm² and 20–35 °C; forgiving in mixed-load scenarios",
+        f5_t:"Rack & Barrel Ready", f5_d:"Stability and bright throwing power for both systems",
+        f6_t:"Chromate-Friendly", f6_d:"Clean, fine-grained deposits for strong chromate adhesion",
+        /* Specs */
+        sec_specs:"Preparation & Operating Conditions", tbl_detail:"Detail", tbl_optimum:"Optimum", tbl_range:"Range",
+        naoh_zn:"NaOH : Zn", temp:"Temperature", cd:"Current density", ratio_ca:"Cathode : Anode",
+        zno_opt:"12 g/L", zno_rng:"8 – 15 g/L",
+        /* Additions */
+        sec_additions:"Additions (ml/KAH)", prod_name:"Product", dosage:"Recommended dosage (ml/KAH)", poor_water:"If water quality is poor",
+        /* Maintenance */
+        sec_maint:"Maintenance", m1:"Analyze Zn and NaOH regularly", m2:"Maintain 25–30 °C",
+        m3:"Rack: 10 : 1 (NaOH : Zn)", m4:"Barrel: 12 : 1 (NaOH : Zn)", m5:"Add zinc through an external make-up tank",
+        ppe_note:"*Wear appropriate PPE (gloves, goggles, mask) during operation.",
+        /* Troubleshooting */
+        sec_tr:"Basic Troubleshooting", tr_slow_h:"Slow to start depositing",
+        tr_slow_1:"Low Zn or excessive base → adjust Zn to 8–22 g/L",
+        tr_slow_2:"Bath too cold → control at 30–32 °C",
+        tr_slow_3:"Excessive load → reduce work volume",
+        tr_slow_4:"Low current/poor connections → check anodes/power supply",
+        tr_slow_5:"Cyanide contamination → consult technical support",
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en')?'en':'th';
+      document.documentElement.lang = L;
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key];
+      });
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- iOS 100vh fix -->
+  <script>
+    (function(){
+      function setVH(){
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh + 'px');
+      }
+      setVH();
+      window.addEventListener('resize', setVH, {passive:true});
+      window.addEventListener('orientationchange', setVH, {passive:true});
+    })();
+  </script>
+
+  <!-- Passive iframe (optional) -->
+  <script>
+    (function(){
+      const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
+      if(!isIOS) return;
+      function activate(container){
+        container.classList.add('is-active');
+        clearTimeout(container._timer);
+        container._timer = setTimeout(()=> container.classList.remove('is-active'), 10000);
+      }
+      document.querySelectorAll('iframe[data-passive]').forEach((frame)=>{
+        if(frame.closest('.embed-passive')) return;
+        const wrap = document.createElement('div');
+        wrap.className = 'embed-passive';
+        frame.parentNode.insertBefore(wrap, frame);
+        wrap.appendChild(frame);
+        const ovl = document.createElement('div');
+        ovl.className = 'tap-ovl';
+        ovl.textContent = 'แตะเพื่อโต้ตอบ';
+        wrap.appendChild(ovl);
+        ovl.addEventListener('touchstart', ()=> activate(wrap), {passive:true});
+        ovl.addEventListener('click', ()=> activate(wrap));
+      });
+    })();
+  </script>
+</body>
+</html>
