@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">Steel Brite Dip — น้ำยากัดเงาชิ้นงานเหล็ก | Baume Chemical</title>
+  <meta name="description" content="Steel Brite Dip ทำความสะอาดหลังล้างไขมัน/กัดกรด เพิ่มเงา กัดคราบสเกลด่างดำเหล็กคาร์บอนต่ำ ใช้คู่ไฮโดรเจนเปอร์ออกไซด์ ทำงานอุณหภูมิห้อง 18–32 °C แช่ 30 วินาที–5 นาที พร้อมสัดส่วนผสม การใช้งาน การดูแล และตัวอย่างผสม 40 ลิตร">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Steel Brite Dip — Steel Bright Dip">
+  <meta property="og:description" content="Brightens steel after pickling, removes dark scale on low-carbon steel. Room temp 18–32 °C, 30 s–5 min. With H2O2.">
+  <meta property="og:image" content="https://i.imgur.com/FHHDk78.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/FHHDk78.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/FHHDk78.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Bright Dip</span>
+        <span class="badge" data-i18n-key="badge2">Steel</span>
+        <span class="badge" data-i18n-key="badge3">18–32 °C • 30 s–5 min</span>
+      </div>
+      <h1 data-i18n-key="hero_title">Steel Brite Dip — น้ำยากัดเงาชิ้นงานเหล็ก</h1>
+      <p data-i18n-key="hero_tagline">เพิ่มความเงาหลังกัดกรด กัดคราบสเกลด่างดำเหล็กคาร์บอนต่ำ ใช้คู่ H₂O₂ ที่อุณหภูมิห้อง</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="f1_t">เพิ่มเงา/ความสวย</h3><p data-i18n-key="f1_d">ทำให้ผิวเหล็กเงาขึ้นหลังล้างไขมัน/กัดกรด</p></div>
+        <div class="pill"><div class="ic">🧽</div><h3 data-i18n-key="f2_t">กัดคราบสเกล</h3><p data-i18n-key="f2_d">กำจัดด่างดำบนเหล็กคาร์บอนต่ำได้ดี</p></div>
+        <div class="pill"><div class="ic">🌡️</div><h3 data-i18n-key="f3_t">ทำงานอุณหภูมิห้อง</h3><p data-i18n-key="f3_d">18–32 °C ควบคุมง่าย</p></div>
+        <div class="pill"><div class="ic">⚗️</div><h3 data-i18n-key="f4_t">ละลายน้ำดี</h3><p data-i18n-key="f4_d">ผงกรดหยาบ ละลายง่าย ใช้คู่ไฮโดรเจนเปอร์ออกไซด์</p></div>
+        <div class="pill"><div class="ic">⏱️</div><h3 data-i18n-key="f5_t">ออกฤทธิ์ไว</h3><p data-i18n-key="f5_d">เวลาแช่ 30 วินาที–5 นาที</p></div>
+        <div class="pill"><div class="ic">🔧</div><h3 data-i18n-key="f6_t">ก่อนลงชุบได้ทันที</h3><p data-i18n-key="f6_d">จบขั้นตอนแล้วพร้อมเข้าบ่อชุบ (ตามลำดับงานที่แนะนำ)</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">
+        น้ำยาผงสำหรับทำความสะอาด/เพิ่มเงาเหล็กหลังล้างไขมันและกัดกรด ใช้กำจัดคราบสเกลด่างดำบนเหล็กคาร์บอนต่ำ
+        ทำงานร่วมกับไฮโดรเจนเปอร์ออกไซด์ที่อุณหภูมิห้อง
+      </p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> Steel bright dip / กัดเงาหลังกัดกรด</li>
+        <li data-i18n-key="pi_sub"><strong>วัสดุ:</strong> เหล็ก (เน้นเหล็กคาร์บอนต่ำ)</li>
+        <li data-i18n-key="pi_form"><strong>รูปแบบ:</strong> ผงกรดละลายน้ำ ใช้คู่ H₂O₂</li>
+        <li data-i18n-key="pi_ops"><strong>เงื่อนไขทำงาน:</strong> 18–32 °C; เวลา 30 วินาที–5 นาที</li>
+      </ul>
+    </section>
+
+    <!-- Specs / Operating -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">สเปก & สัดส่วนผสม</h2>
+      <div class="table">
+        <table aria-label="Operating & Composition">
+          <thead>
+            <tr>
+              <th data-i18n-key="head_param">พารามิเตอร์</th>
+              <th data-i18n-key="head_value">ค่า/ช่วง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="sp_sbd">STEEL BRITE DIP</td><td data-i18n-key="sp_sbd_val">40–65 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="sp_h2o2_35">H₂O₂ 35%</td><td data-i18n-key="sp_h2o2_35_val">100–200 ซี.ซี./ลิตร</td></tr>
+            <tr><td data-i18n-key="sp_h2o2_50">H₂O₂ 50% (ทางเลือก)</td><td data-i18n-key="sp_h2o2_50_val">70–140 ซี.ซี./ลิตร</td></tr>
+            <tr><td data-i18n-key="sp_temp">อุณหภูมิ</td><td data-i18n-key="sp_temp_val">18–32 °C (ห้อง)</td></tr>
+            <tr><td data-i18n-key="sp_time">เวลาแช่</td><td data-i18n-key="sp_time_val">30 วินาที–5 นาที</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" data-i18n-key="note_temp">*หลีกเลี่ยงอุณหภูมิ &gt; 35 °C เพราะประสิทธิภาพจะลดลง — ควรมีหล่อเย็นถ้าจำเป็น</p>
+    </section>
+
+    <!-- Mixing example -->
+    <section id="mixing" class="card">
+      <h2 class="section" data-i18n-key="mix_title">ตัวอย่างการผสม (40 ลิตร)</h2>
+      <div class="table">
+        <table aria-label="Mixing Example 40 L">
+          <thead>
+            <tr>
+              <th data-i18n-key="mix_item">ส่วนผสม</th>
+              <th data-i18n-key="mix_qty">ปริมาณ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="mix_sbd">ผง STEEL BRITE DIP</td><td data-i18n-key="mix_sbd_q">2 กิโลกรัม</td></tr>
+            <tr><td data-i18n-key="mix_water">น้ำกลั่น/น้ำกรอง</td><td data-i18n-key="mix_water_q">รวม 40 ลิตร (เท 20 ลิตร → ละลายผง → เติมอีก 20 ลิตร)</td></tr>
+            <tr><td data-i18n-key="mix_h2o2">ไฮโดรเจนเปอร์ออกไซด์ 50%</td><td data-i18n-key="mix_h2o2_q">5.5 ลิตร</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ol style="margin:10px 0 0 22px">
+        <li data-i18n-key="mix_step1">เทน้ำ 20 ลิตรลงถัง</li>
+        <li data-i18n-key="mix_step2">ค่อยๆ ละลายผง 2 กก. ให้เข้ากัน แล้วเติมน้ำอีก 20 ลิตร</li>
+        <li data-i18n-key="mix_step3">เติม H₂O₂ 50% ปริมาณ 5.5 ลิตร กวนให้เข้ากัน</li>
+      </ol>
+    </section>
+
+    <!-- Process line -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">ขั้นตอนการทำงาน</h2>
+      <ol style="margin:0 0 0 22px">
+        <li data-i18n-key="pr1">ชิ้นงานเหล็กล้างไขมันเรียบร้อย</li>
+        <li data-i18n-key="pr2">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr3">กัดกรด</li>
+        <li data-i18n-key="pr4">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr5">จุ่ม Steel Brite Dip ที่ผสมแล้ว (ควบคุมไม่ให้ &gt;35 °C; ควรมีระบบหล่อเย็น)</li>
+        <li data-i18n-key="pr6">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr7">จุ่มกรดเกลือ (HCl) หรือกรดกำมะถัน (H₂SO₄) 10–20% 1–2 นาที</li>
+        <li data-i18n-key="pr8">ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr9">ลงบ่อชุบทันที</li>
+      </ol>
+      <p class="note" data-i18n-key="note_yellow">*หากยังไม่ชบทันที ผิวที่สัมผัสอากาศจะเหลืองส้ม ให้จุ่ม HCl/H₂SO₄ 10–20% เพื่อล้างคราบ เหล่านั้น แล้วล้างน้ำและชบทันที อย่าค้างอากาศนาน</p>
+    </section>
+
+    <!-- Bath Care -->
+    <section id="maintenance" class="card">
+      <h2 class="section" data-i18n-key="maint_title">การดูแลรักษา & การปรับเติม</h2>
+      <ul style="margin:0 0 0 18px">
+        <li data-i18n-key="m1">ขณะไม่ใช้งาน ปิดฝาถังให้เรียบร้อย (มีรูระบายเล็กน้อย)</li>
+        <li data-i18n-key="m2">ติดตาม “ฟอง” ระหว่างจุ่มเป็นตัวชี้วัดสมบูรณ์ของน้ำยา</li>
+        <li data-i18n-key="m3">ฟองลดลง → เติมผง 10–20 กรัม/ลิตร + เติม H₂O₂ 50% 50–60 ซี.ซี./ลิตร</li>
+        <li data-i18n-key="m4">กรณีถัง 40 ลิตร: เติมผง ~600 กรัม และ H₂O₂ 50% ~2.5 ลิตร</li>
+        <li data-i18n-key="m5">น้ำยาทำงานเกิดความร้อน ควรหล่อเย็นให้อยู่ในช่วงที่แนะนำ</li>
+      </ul>
+    </section>
+
+    <!-- EHS -->
+    <section id="ehs" class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="ehs1">เป็นกรดและมีสารออกซิไดซ์ — สวม PPE: ถุงมือ แว่นตา หน้ากากให้เหมาะสม</li>
+        <li data-i18n-key="ehs2">ใช้ในที่อากาศถ่ายเท ระวังการกระเด็น</li>
+        <li data-i18n-key="ehs3">ห้ามปนวัสดุอินทรีย์/โลหะบางชนิดกับ H₂O₂ เข้มข้น</li>
+        <li data-i18n-key="ehs4">ของเสียกรด/มีโลหะ: ปรับ pH/บำบัด/ทิ้งตามกฎหมาย</li>
+      </ul>
+      <p class="note" data-i18n-key="note_ppe">*ปฏิบัติตาม SDS/TDS และแนวทาง EHS ของสถานประกอบการ</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"Steel Brite Dip — น้ำยากัดเงาชิ้นงานเหล็ก | Baume Chemical",
+
+        badge1:"Bright Dip", badge2:"Steel", badge3:"18–32 °C • 30 s–5 min",
+        hero_title:"Steel Brite Dip — น้ำยากัดเงาชิ้นงานเหล็ก",
+        hero_tagline:"เพิ่มความเงาหลังกัดกรด กัดคราบสเกลด่างดำเหล็กคาร์บอนต่ำ ใช้คู่ H₂O₂ ที่อุณหภูมิห้อง",
+
+        features_title:"คุณสมบัติพิเศษ",
+        f1_t:"เพิ่มเงา/ความสวย", f1_d:"ทำให้ผิวเหล็กเงาขึ้นหลังล้างไขมัน/กัดกรด",
+        f2_t:"กัดคราบสเกล", f2_d:"กำจัดด่างดำบนเหล็กคาร์บอนต่ำได้ดี",
+        f3_t:"ทำงานอุณหภูมิห้อง", f3_d:"18–32 °C ควบคุมง่าย",
+        f4_t:"ละลายน้ำดี", f4_d:"ผงกรดหยาบ ละลายง่าย ใช้คู่ไฮโดรเจนเปอร์ออกไซด์",
+        f5_t:"ออกฤทธิ์ไว", f5_d:"เวลาแช่ 30 วินาที–5 นาที",
+        f6_t:"ก่อนลงชุบได้ทันที", f6_d:"จบขั้นตอนแล้วพร้อมเข้าบ่อชุบ (ตามลำดับงานที่แนะนำ)",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"น้ำยาผงสำหรับทำความสะอาด/เพิ่มเงาเหล็กหลังล้างไขมันและกัดกรด ใช้กำจัดคราบสเกลด่างดำบนเหล็กคาร์บอนต่ำ ทำงานร่วมกับไฮโดรเจนเปอร์ออกไซด์ที่อุณหภูมิห้อง",
+        pi_type:"ประเภท: Steel bright dip / กัดเงาหลังกัดกรด",
+        pi_sub:"วัสดุ: เหล็ก (เน้นเหล็กคาร์บอนต่ำ)",
+        pi_form:"รูปแบบ: ผงกรดละลายน้ำ ใช้คู่ H₂O₂",
+        pi_ops:"เงื่อนไขทำงาน: 18–32 °C; เวลา 30 วินาที–5 นาที",
+
+        specs_title:"สเปก & สัดส่วนผสม",
+        head_param:"พารามิเตอร์", head_value:"ค่า/ช่วง",
+        sp_sbd:"STEEL BRITE DIP", sp_sbd_val:"40–65 กรัม/ลิตร",
+        sp_h2o2_35:"H₂O₂ 35%", sp_h2o2_35_val:"100–200 ซี.ซี./ลิตร",
+        sp_h2o2_50:"H₂O₂ 50% (ทางเลือก)", sp_h2o2_50_val:"70–140 ซี.ซี./ลิตร",
+        sp_temp:"อุณหภูมิ", sp_temp_val:"18–32 °C (ห้อง)",
+        sp_time:"เวลาแช่", sp_time_val:"30 วินาที–5 นาที",
+        note_temp:"*หลีกเลี่ยงอุณหภูมิ > 35 °C เพราะประสิทธิภาพจะลดลง — ควรมีหล่อเย็นถ้าจำเป็น",
+
+        mix_title:"ตัวอย่างการผสม (40 ลิตร)",
+        mix_item:"ส่วนผสม", mix_qty:"ปริมาณ",
+        mix_sbd:"ผง STEEL BRITE DIP", mix_sbd_q:"2 กิโลกรัม",
+        mix_water:"น้ำกลั่น/น้ำกรอง", mix_water_q:"รวม 40 ลิตร (เท 20 ลิตร → ละลายผง → เติมอีก 20 ลิตร)",
+        mix_h2o2:"ไฮโดรเจนเปอร์ออกไซด์ 50%", mix_h2o2_q:"5.5 ลิตร",
+        mix_step1:"เทน้ำ 20 ลิตรลงถัง",
+        mix_step2:"ค่อยๆ ละลายผง 2 กก. ให้เข้ากัน แล้วเติมน้ำอีก 20 ลิตร",
+        mix_step3:"เติม H₂O₂ 50% ปริมาณ 5.5 ลิตร กวนให้เข้ากัน",
+
+        process_title:"ขั้นตอนการทำงาน",
+        pr1:"ชิ้นงานเหล็กล้างไขมันเรียบร้อย",
+        pr2:"ล้างน้ำสะอาด",
+        pr3:"กัดกรด",
+        pr4:"ล้างน้ำสะอาด",
+        pr5:"จุ่ม Steel Brite Dip ที่ผสมแล้ว (ควบคุมไม่ให้ >35 °C; ควรมีระบบหล่อเย็น)",
+        pr6:"ล้างน้ำสะอาด",
+        pr7:"จุ่มกรดเกลือ (HCl) หรือกรดกำมะถัน (H₂SO₄) 10–20% 1–2 นาที",
+        pr8:"ล้างน้ำสะอาด",
+        pr9:"ลงบ่อชุบทันที",
+        note_yellow:"*หากยังไม่ชบทันที ผิวที่สัมผัสอากาศจะเหลืองส้ม ให้จุ่ม HCl/H₂SO₄ 10–20% เพื่อล้างคราบ แล้วล้างน้ำและชบทันที อย่าค้างอากาศนาน",
+
+        maint_title:"การดูแลรักษา & การปรับเติม",
+        m1:"ขณะไม่ใช้งาน ปิดฝาถังให้เรียบร้อย (มีรูระบายเล็กน้อย)",
+        m2:"ติดตาม “ฟอง” ระหว่างจุ่มเป็นตัวชี้วัดสมบูรณ์ของน้ำยา",
+        m3:"ฟองลดลง → เติมผง 10–20 กรัม/ลิตร + เติม H₂O₂ 50% 50–60 ซี.ซี./ลิตร",
+        m4:"กรณีถัง 40 ลิตร: เติมผง ~600 กรัม และ H₂O₂ 50% ~2.5 ลิตร",
+        m5:"น้ำยาทำงานเกิดความร้อน ควรหล่อเย็นให้อยู่ในช่วงที่แนะนำ",
+
+        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        ehs1:"เป็นกรดและมีสารออกซิไดซ์ — สวม PPE: ถุงมือ แว่นตา หน้ากากให้เหมาะสม",
+        ehs2:"ใช้ในที่อากาศถ่ายเท ระวังการกระเด็น",
+        ehs3:"ห้ามปนวัสดุอินทรีย์/โลหะบางชนิดกับ H₂O₂ เข้มข้น",
+        ehs4:"ของเสียกรด/มีโลหะ: ปรับ pH/บำบัด/ทิ้งตามกฎหมาย",
+        note_ppe:"*ปฏิบัติตาม SDS/TDS และแนวทาง EHS ของสถานประกอบการ",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"Steel Brite Dip — Steel Bright Dip | Baume Chemical",
+
+        badge1:"Bright Dip", badge2:"Steel", badge3:"18–32 °C • 30 s–5 min",
+        hero_title:"Steel Brite Dip — Steel Bright Dip",
+        hero_tagline:"Post-pickle brightening; removes dark scale on low-carbon steel. Works with H₂O₂ at room temperature.",
+
+        features_title:"Key Features",
+        f1_t:"Boosts brightness", f1_d:"Improves appearance after degrease/pickle",
+        f2_t:"Scale removal", f2_d:"Cleans dark oxide on low-carbon steel",
+        f3_t:"Room-temp operation", f3_d:"18–32 °C for easy control",
+        f4_t:"Water-soluble powder", f4_d:"Acidic powder used with hydrogen peroxide",
+        f5_t:"Fast action", f5_d:"Typical dip 30 s–5 min",
+        f6_t:"Pre-plate ready", f6_d:"Leaves parts ready for plating per sequence",
+
+        product_title:"Product Information",
+        product_lead:"Powder bright dip to clean/brighten steel after degreasing and pickling. Efficiently removes dark scale on low-carbon steel at room temperature with hydrogen peroxide.",
+        pi_type:"Type: Steel bright dip / post-pickle brightening",
+        pi_sub:"Substrate: Steel (focus on low-carbon steel)",
+        pi_form:"Form: Water-soluble acidic powder used with H₂O₂",
+        pi_ops:"Operating: 18–32 °C; 30 s–5 min dwell",
+
+        specs_title:"Specs & Mixing Ratios",
+        head_param:"Parameter", head_value:"Value/Range",
+        sp_sbd:"STEEL BRITE DIP", sp_sbd_val:"40–65 g/L",
+        sp_h2o2_35:"H₂O₂ 35%", sp_h2o2_35_val:"100–200 mL/L",
+        sp_h2o2_50:"H₂O₂ 50% (alt.)", sp_h2o2_50_val:"70–140 mL/L",
+        sp_temp:"Temperature", sp_temp_val:"18–32 °C (room)",
+        sp_time:"Dip time", sp_time_val:"30 s–5 min",
+        note_temp:"*Avoid > 35 °C to prevent performance loss — add cooling if needed",
+
+        mix_title:"Mixing Example (40 L)",
+        mix_item:"Component", mix_qty:"Quantity",
+        mix_sbd:"STEEL BRITE DIP powder", mix_sbd_q:"2 kg",
+        mix_water:"DI/filtered water", mix_water_q:"40 L total (20 L → dissolve powder → add 20 L)",
+        mix_h2o2:"Hydrogen peroxide 50%", mix_h2o2_q:"5.5 L",
+        mix_step1:"Charge 20 L water to tank",
+        mix_step2:"Dissolve 2 kg powder thoroughly, then add remaining 20 L water",
+        mix_step3:"Add 5.5 L of 50% H₂O₂ and mix well",
+
+        process_title:"Process Sequence",
+        pr1:"Steel parts degreased",
+        pr2:"Rinse",
+        pr3:"Acid pickle",
+        pr4:"Rinse",
+        pr5:"Dip in mixed Steel Brite Dip (keep ≤35 °C; provide cooling)",
+        pr6:"Rinse",
+        pr7:"Dip in HCl or H₂SO₄ 10–20% for 1–2 min",
+        pr8:"Rinse",
+        pr9:"Proceed to plating immediately",
+        note_yellow:"*If plating is delayed, surfaces may yellow/orange. Briefly dip in 10–20% HCl/H₂SO₄, rinse, and plate immediately. Do not leave in air.",
+
+        maint_title:"Maintenance & Replenishment",
+        m1:"When idle, keep tank covered with a small vent",
+        m2:"Use bath foaming during dip as a quick health indicator",
+        m3:"If foam drops: add 10–20 g/L powder + 50–60 mL/L of 50% H₂O₂",
+        m4:"For a 40 L tank: ~600 g powder + ~2.5 L of 50% H₂O₂",
+        m5:"Process generates heat; provide cooling to stay in the recommended range",
+
+        ehs_title:"Safety & Environment",
+        ehs1:"Acidic and oxidative system — wear proper PPE (gloves, goggles, mask)",
+        ehs2:"Ensure ventilation; avoid splashes",
+        ehs3:"Keep concentrated H₂O₂ away from organics/incompatible metals",
+        ehs4:"Neutralize/treat acidic metal-bearing waste per regulations",
+        note_ppe:"*Follow product SDS/TDS and your site EHS procedures.",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>
