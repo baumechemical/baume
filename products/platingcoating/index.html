@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>น้ำยาชุบและเคลือบผิวโลหะ (Plating & Coating) | Baume Chemical</title>
 
-  <!-- === SEO === -->
+  <!-- === SEO (aligned & consistent) === -->
   <meta name="description" content="น้ำยาชุบและเคลือบผิวโลหะสำหรับงานอุตสาหกรรม: ซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้า และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์ พร้อมคำปรึกษาและโซลูชันตามไลน์ผลิต">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://www.baumechemical.com/platingcoating.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
@@ -17,11 +17,12 @@
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:title" content="น้ำยาชุบและเคลือบผิวโลหะ (Plating & Coating) - Baume Chemical">
   <meta property="og:description" content="โซลูชันชุบและเคลือบผิวโลหะครบ: Zinc, Nickel, Copper, Brass, Electrolytic Lacquer, Cyanide-Free White Bronze">
-  <meta property="og:url" content="https://www.baumechemical.com/platingcoating.html">
+  <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/">
   <meta property="og:image" content="https://i.imgur.com/Vwpuq95.jpeg">
+  <meta property="og:image:alt" content="Plating & Coating product examples">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -32,23 +33,26 @@
     "sameAs":["https://line.me/ti/p/~baumechemical"]
   }
   </script>
+  <!-- JSON-LD: CollectionPage (URL aligned) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
     "name":"Plating & Coating",
     "inLanguage":"th",
-    "url":"https://www.baumechemical.com/platingcoating",
+    "url":"https://www.baumechemical.com/products/platingcoating/",
     "description":"น้ำยาชุบและเคลือบผิวโลหะ: ซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้า และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์"
   }
   </script>
+  <!-- JSON-LD: Breadcrumb (Home > Products > Plating & Coating) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Plating & Coating","item":"https://www.baumechemical.com/platingcoating"}
+      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},
+      {"@type":"ListItem","position":3,"name":"Plating & Coating","item":"https://www.baumechemical.com/products/platingcoating/"}
     ]
   }
   </script>
@@ -60,42 +64,55 @@
 
   <style>
     :root{
-      --brand:#2c5e4e;
-      --brand-2:#387b5b;
-      --accent:#ff9800;
-      --ink:#0f172a;
-      --muted:#5b6675;
-      --bg:#f4f6f5;
-      --radius:14px;
-      --shadow-1:0 8px 26px rgba(2,8,20,.06);
-      --shadow-2:0 16px 40px rgba(2,8,20,.14);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5; --radius:14px;
+      --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14); --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* === Floating Language Switcher (TH/EN) === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ======= Header (overlay on hero) ======= */
+    .site-header{position:absolute; top:0; left:0; right:0; z-index:1400; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); border-bottom:1px solid rgba(255,255,255,.14)}
+    .site-header .header-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; min-height:var(--header-h); padding:10px 16px}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px; background:#e8f1ec var(--logo-url) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{ content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    @media (max-width: 920px){
+      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease}
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
+
+    /* === Language FAB (below header) === */
+    .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
+    .lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a }
     .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* === Hero === */
-    .hero{
-      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(420px, 60vh, 620px);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://i.imgur.com/Vwpuq95.jpeg') center/cover no-repeat;
-    }
+    .hero{ position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px) }
+    .hero::before{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://i.imgur.com/Vwpuq95.jpeg') center/cover no-repeat }
+    .hero-inner{ position:relative; z-index:1; padding:26px 16px }
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:900px; margin:0 auto; color:#e6f2ef}
+
+    /* Back-to-home button */
+    .home-back{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) }
+    .home-back:hover{ background:rgba(255,255,255,.12) }
 
     /* === Layout === */
     .wrap{max-width:1200px; margin:auto; padding:34px 16px}
@@ -116,14 +133,12 @@
     .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
     .card .more:hover{ text-decoration:underline }
 
-    /* Lift (opt-in) */
+    /* Lift opt-in */
     .card.lift{ will-change: transform, box-shadow }
-    @media (hover:hover) and (pointer:fine){
-      .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) }
-    }
+    @media (hover:hover) and (pointer:fine){ .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) } }
     @media (prefers-reduced-motion: reduce){ .card.lift{ transition:none } }
 
-    /* === Footer (match homepage) === */
+    /* === Footer === */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -133,18 +148,36 @@
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
     .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
-    .ft-desc{margin:6px 0 0; color:#93a4b8; font-size:.96rem}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
-
-    /* === Utilities === */
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
-    .reveal.show{opacity:1; transform:none}
   </style>
 </head>
 <body>
+  <!-- === Site Header (logo + menu) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about-us.html" class="nav-link">About us</a></li>
+          <li><a href="/products.html" class="nav-link" aria-current="page">Products</a></li>
+          <li><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- === Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
@@ -157,16 +190,16 @@
     </button>
   </div>
 
-  <!-- === Hero === -->
-  <header class="hero">
-    <div class="wrap" style="padding:22px 16px">
+  <!-- === HERO (with back-to-home) === -->
+  <section class="hero" aria-label="Plating & Coating hero">
+    <div class="hero-inner wrap">
+      <div style="margin-bottom:12px">
+        <a class="home-back" href="/">← <span data-i18n-key="back_home">หน้าแรก</span></a>
+      </div>
       <h1 data-i18n-key="hero_title">น้ำยาชุบและเคลือบผิวโลหะ (Plating & Coating)</h1>
-      <p data-i18n-key="hero_tagline">
-        กระบวนการชุบและเคลือบช่วยเพิ่มความทนการกัดกร่อน ความแข็ง ความเงางาม และสมบัติเชิงฟังก์ชันของชิ้นงาน
-        เราพัฒนาสูตรสำหรับซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้า และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์ พร้อมทีมเทคนิคดูแลไลน์ผลิตของคุณ
-      </p>
+      <p data-i18n-key="hero_tagline">กระบวนการชุบและเคลือบช่วยเพิ่มความทนการกัดกร่อน ความแข็ง ความเงางาม และสมบัติเชิงฟังก์ชันของชิ้นงาน เราพัฒนาสูตรสำหรับซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้า และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์ พร้อมทีมเทคนิคดูแลไลน์ผลิตของคุณ</p>
     </div>
-  </header>
+  </section>
 
   <!-- === Products Grid === -->
   <main class="wrap">
@@ -180,9 +213,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Corrosion Protection</span></div>
           <h3 data-i18n-key="zinc_title">ชุบซิงค์ (Zinc Plating)</h3>
-          <p data-i18n-key="zinc_desc">
-            สร้างชั้นป้องกันสนิม เงางาม เกาะตัวไว เหมาะกับงานหลุมตื้น โครเมตมีหลายสีและทนสภาพแวดล้อม ใช้แพร่หลายในยานยนต์เพื่อคุ้มค่าและปกป้องชิ้นส่วนหลัก
-          </p>
+          <p data-i18n-key="zinc_desc">สร้างชั้นป้องกันสนิม เงางาม เกาะตัวไว เหมาะกับงานหลุมตื้น โครเมตมีหลายสีและทนสภาพแวดล้อม ใช้แพร่หลายในยานยนต์เพื่อคุ้มค่าและปกป้องชิ้นส่วนหลัก</p>
           <a class="more" href="zincplating.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -193,9 +224,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Bright / Hard</span></div>
           <h3 data-i18n-key="nickel_title">ชุบนิกเกิล (Nickel Plating)</h3>
-          <p data-i18n-key="nickel_desc">
-            ทั้งแบบมีไฟและไม่ใช้ไฟ เพิ่มความทนสึกหรอ ทนกัดกร่อน และความแข็ง ผิวขาวเงา เหมาะเป็นชั้นรองก่อนชุบอื่น ใช้ได้ทั้งถังกลิ้งและถังแขวน เกาะเร็ว หนา เงา เข้าได้ถึงซอก
-          </p>
+          <p data-i18n-key="nickel_desc">ทั้งแบบมีไฟและไม่ใช้ไฟ เพิ่มความทนสึกหรอ ทนกัดกร่อน และความแข็ง ผิวขาวเงา เหมาะเป็นชั้นรองก่อนชุบอื่น ใช้ได้ทั้งถังกลิ้งและถังแขวน เกาะเร็ว หนา เงา เข้าได้ถึงซอก</p>
           <a class="more" href="nickelplating.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -206,9 +235,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Copper</span><span class="badge">Conductivity</span></div>
           <h3 data-i18n-key="copper_title">ชุบทองแดง (Copper Plating)</h3>
-        <p data-i18n-key="copper_desc">
-          เพิ่มความนำไฟฟ้า/ความร้อนและการยึดเกาะ เหมาะเป็นชั้นรองก่อนนิกเกิล/โครม ช่วยให้เงา ลดเวลาชุบนิกเกิล และเพิ่มการต้านการกัดกร่อนเมื่อเคลือบโครมทับ
-        </p>
+          <p data-i18n-key="copper_desc">เพิ่มความนำไฟฟ้า/ความร้อนและการยึดเกาะ เหมาะเป็นชั้นรองก่อนนิกเกิล/โครม ช่วยให้เงา ลดเวลาชุบนิกเกิล และเพิ่มการต้านการกัดกร่อนเมื่อเคลือบโครมทับ</p>
           <a class="more" href="copperplating.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -219,9 +246,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Brass</span><span class="badge">Decorative</span></div>
           <h3 data-i18n-key="brass_title">ชุบทองเหลือง (Brass Plating)</h3>
-          <p data-i18n-key="brass_desc">
-            สีทองสวยงาม นิยมกับงานจิวเวลรี่/ตกแต่ง มักเคลือบแลคเกอร์ทับเพื่อกันหมอง ใช้น้ำยาผสมทองแดง-สังกะสีเป็นหลัก
-          </p>
+          <p data-i18n-key="brass_desc">สีทองสวยงาม นิยมกับงานจิวเวลรี่/ตกแต่ง มักเคลือบแลคเกอร์ทับเพื่อกันหมอง ใช้น้ำยาผสมทองแดง-สังกะสีเป็นหลัก</p>
           <a class="more" href="brassplating.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -232,9 +257,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Lacquer</span><span class="badge">UV Resistant</span></div>
           <h3 data-i18n-key="lacquer_title">แลคเกอร์ไฟฟ้า (Electrolytic Lacquer)</h3>
-          <p data-i18n-key="lacquer_desc">
-            กันกัดกร่อนสูง เลือกได้หลายเฉดสี ใช้เดี่ยวได้โดยไม่ต้องชุบโลหะอื่น ทน UV สีไม่ซีดแม้โดนแดดนาน
-          </p>
+          <p data-i18n-key="lacquer_desc">กันกัดกร่อนสูง เลือกได้หลายเฉดสี ใช้เดี่ยวได้โดยไม่ต้องชุบโลหะอื่น ทน UV สีไม่ซีดแม้โดนแดดนาน</p>
           <a class="more" href="electrophoreticlacquer.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -245,9 +268,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">White Bronze</span><span class="badge">Cyanide-Free</span></div>
           <h3 data-i18n-key="wb_title">ไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์</h3>
-          <p data-i18n-key="wb_desc">
-            สูตรปลอดไซยาไนด์ ลดความเสี่ยงด้านสิ่งแวดล้อม/ความปลอดภัย ผิวขาวเงิน เงา กระจายตัวดี คุมง่าย ลดต้นทุนบำบัด เหมาะกับถังแขวน/ถังกลิ้ง และโลหะฐานหลากหลาย
-          </p>
+          <p data-i18n-key="wb_desc">สูตรปลอดไซยาไนด์ ลดความเสี่ยงด้านสิ่งแวดล้อม/ความปลอดภัย ผิวขาวเงิน เงา กระจายตัวดี คุมง่าย ลดต้นทุนบำบัด เหมาะกับถังแขวน/ถังกลิ้ง และโลหะฐานหลากหลาย</p>
           <a class="more" href="cyanide-free-white-bronze.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -258,7 +279,6 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
-        <!-- แบรนด์ + ที่อยู่/เวลา/โทร -->
         <section class="footer-brand">
           <div class="ft-head">
             <div class="ft-logo" aria-hidden="true"></div>
@@ -272,7 +292,6 @@
           </ul>
         </section>
 
-        <!-- หมวดผลิตภัณฑ์ -->
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
           <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
@@ -288,7 +307,6 @@
           </ul>
         </nav>
 
-        <!-- ช่องทางติดต่อ -->
         <section aria-label="ติดต่อเรา">
           <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
           <ul class="footer-list">
@@ -305,8 +323,19 @@
     </div>
   </footer>
 
-  <!-- === JS: reveal + i18n === -->
+  <!-- === JS: nav toggle + reveal + i18n === -->
   <script>
+    // Mobile nav toggle
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+    })();
+
     // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
@@ -314,9 +343,10 @@
     }, {threshold:.18});
     revealEls.forEach(el=>revObs.observe(el));
 
-    /* i18n dictionary */
+    // i18n
     const I18N = {
       th: {
+        back_home: "หน้าแรก",
         hero_title: "น้ำยาชุบและเคลือบผิวโลหะ (Plating & Coating)",
         hero_tagline: "กระบวนการชุบและเคลือบช่วยเพิ่มความทนการกัดกร่อน ความแข็ง ความเงางาม และสมบัติเชิงฟังก์ชันของชิ้นงาน เราพัฒนาสูตรสำหรับซิงค์ นิกเกิล ทองแดง ทองเหลือง แลคเกอร์ไฟฟ้า และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์ พร้อมทีมเทคนิคดูแลไลน์ผลิตของคุณ",
         sec_products: "ผลิตภัณฑ์",
@@ -339,6 +369,7 @@
         footer_copy: "© 2025 Baume Chemical. All rights reserved."
       },
       en: {
+        back_home: "Home",
         hero_title: "Plating & Coating Chemicals",
         hero_tagline: "Processes that enhance corrosion resistance, hardness, gloss, and functional properties. We develop tailored formulas for Zinc, Nickel, Copper, Brass, Electrolytic Lacquer, and Cyanide-Free White Bronze, supported by our technical team for your production line.",
         sec_products: "Products",
@@ -362,19 +393,14 @@
       }
     };
 
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
-    };
+    const els = { langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'), translatables: () => document.querySelectorAll('[data-i18n-key]') };
 
     function applyLang(lang){
-      document.documentElement.lang = lang === 'en' ? 'en' : 'th';
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
-      els.translatables().forEach(node => {
-        const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[lang] && I18N[lang][key]) node.textContent = I18N[lang][key];
-      });
-      try{ localStorage.setItem('lang', lang); }catch(e){}
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node => { const key = node.getAttribute('data-i18n-key'); if (key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key]; });
+      try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
     (function initLang(){

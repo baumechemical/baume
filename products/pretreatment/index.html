@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- === SEO Basics === -->
+  <!-- === SEO Basics (aligned paths) === -->
   <title data-i18n-key="meta_title">กรด/ด่างล้างไขมัน • อัลตร้าโซนิค | Baume Chemical</title>
   <meta name="description" content="น้ำยาทำความสะอาดก่อนชุบ: กรดล้างไขมัน ด่างล้างไขมัน และอัลตร้าโซนิค เลือกสูตรให้เหมาะกับวัสดุ/คราบ เพื่อให้ผิวพร้อมชุบ คุณภาพคงที่ ลดของเสีย พร้อมทีมเทคนิคดูแลงานหน้างานจริง">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="products/pretreatment.html">
+  <link rel="canonical" href="https://www.baumechemical.com/products/pretreatment/">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Twitter (match canonical) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="กรด/ด่างล้างไขมัน • อัลตร้าโซนิค | Baume Chemical">
   <meta property="og:description" content="กรด/ด่างล้างไขมัน และอัลตร้าโซนิคสำหรับ Pretreatment ก่อนชุบ ทีมเทคนิคช่วยเลือกสูตรให้เหมาะกับไลน์ของคุณ">
-  <meta property="og:url" content="https://www.baumechemical.com/products/pretreatment.html">
+  <meta property="og:url" content="https://www.baumechemical.com/products/pretreatment/">
   <meta property="og:image" content="https://i.imgur.com/QfsLZ0I.jpeg">
   <meta property="og:image:alt" content="Pretreatment cleaning: acid, alkaline and ultrasonic">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,18 +34,18 @@
     "sameAs":["https://line.me/ti/p/~baumechemical"]
   }
   </script>
-  <!-- JSON-LD: CollectionPage -->
+  <!-- JSON-LD: CollectionPage (URL aligned, language) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
     "name":"Pretreatment Cleaners",
     "inLanguage":"th",
-    "url":"https://www.baumechemical.com/pretreatment",
+    "url":"https://www.baumechemical.com/products/pretreatment/",
     "description":"น้ำยาทำความสะอาดก่อนชุบ: กรด ด่าง และอัลตร้าโซนิค"
   }
   </script>
-  <!-- JSON-LD: Breadcrumb -->
+  <!-- JSON-LD: Breadcrumb (fixed syntax + URLs) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -53,11 +53,11 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
       {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},
-      "@type":"ListItem","position":3,"name":"Pretreatment Cleaners","item":"https://www.baumechemical.com/products/pretreatment.html"
+      {"@type":"ListItem","position":3,"name":"Pretreatment Cleaners","item":"https://www.baumechemical.com/products/pretreatment/"}
     ]
   }
   </script>
-  <!-- JSON-LD: ItemList (anchors) -->
+  <!-- JSON-LD: ItemList (use fragment URLs on this page) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -65,9 +65,9 @@
     "name":"Pretreatment Cleaning Chemicals",
     "itemListOrder":"https://schema.org/ItemListOrderAscending",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"#acid"},
-      {"@type":"ListItem","position":2,"url":"#alkaline"},
-      {"@type":"ListItem","position":3,"url":"#ultrasonic"}
+      {"@type":"ListItem","position":1,"url":"https://www.baumechemical.com/products/pretreatment/#acid"},
+      {"@type":"ListItem","position":2,"url":"https://www.baumechemical.com/products/pretreatment/#alkaline"},
+      {"@type":"ListItem","position":3,"url":"https://www.baumechemical.com/products/pretreatment/#ultrasonic"}
     ]
   }
   </script>
@@ -83,33 +83,54 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.65}
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ======= Site Header (overlay on hero) ======= */
+    .site-header{position:absolute; top:0; left:0; right:0; z-index:1400; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); border-bottom:1px solid rgba(255,255,255,.14)}
+    .site-header .header-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; min-height:var(--header-h); padding:10px 16px}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px; background:#e8f1ec var(--logo-url) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{ content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    @media (max-width: 920px){
+      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease}
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
+
+    /* === Floating Language Switcher (place below header) === */
+    .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
+    .lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a }
     .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* === Hero (เหมือนโค้ดก่อนหน้า) === */
-    .hero{
-      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(420px, 60vh, 620px);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://i.imgur.com/QfsLZ0I.jpeg') center/cover no-repeat;
-      padding:22px 16px;
-    }
+    /* === Hero (uses your image) === */
+    .hero{ position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px) }
+    .hero::before{ content:""; position:absolute; inset:0; background:url('https://i.imgur.com/QfsLZ0I.jpeg') center/cover no-repeat; filter:brightness(.82) }
+    .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)) }
+    .hero-inner{ position:relative; z-index:1; padding:26px 16px }
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:900px; margin:0 auto; color:#e6f2ef}
+
+    /* Back-to-home (ghost) */
+    .home-back{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) }
+    .home-back:hover{ background:rgba(255,255,255,.12) }
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -136,7 +157,7 @@
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.96rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
 
-    /* === Footer (เหมือนหน้าอื่น) === */
+    /* === Footer (same style) === */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -146,7 +167,6 @@
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
     .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
-    .ft-desc{margin:6px 0 0; color:#93a4b8; font-size:.96rem}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
@@ -155,7 +175,30 @@
 </head>
 <body>
 
-  <!-- === Language Switcher === -->
+  <!-- === Site Header (logo + menu) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about-us.html" class="nav-link">About us</a></li>
+          <li><a href="/products.html" class="nav-link" aria-current="page">Products</a></li>
+          <li><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Floating Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
       <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
@@ -167,13 +210,16 @@
     </button>
   </div>
 
-  <!-- === Hero (เหมือนโค้ดก่อนหน้า) === -->
-  <header class="hero">
-    <div class="wrap" style="padding:22px 16px">
+  <!-- === HERO (with back-to-home) === -->
+  <section class="hero" aria-label="Pretreatment overview">
+    <div class="hero-inner wrap">
+      <div style="margin-bottom:12px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
+      </div>
       <h1 data-i18n-key="hero_title">กรด/ด่างล้างไขมัน – อัลตร้าโซนิค Pretreatment</h1>
       <p data-i18n-key="hero_tagline">เลือกสูตรให้เหมาะกับวัสดุและคราบ เพื่อให้ผิวพร้อมชุบ คุณภาพคงที่ ลดของเสีย</p>
     </div>
-  </header>
+  </section>
 
   <main class="wrap">
     <section>
@@ -250,7 +296,6 @@
   <td data-i18n-key="row_alk_app">การจุ่ม / การพ่น / ไฟฟ้า</td>
   <td data-i18n-key="row_alk_note">*เลือกสูตรและอัตราให้เหมาะสมกับวัสดุ</td>
 </tr>
-
 <tr>
   <td data-i18n-key="row_ultra_type">อัลตร้าโซนิค</td>
   <td data-i18n-key="row_ultra_mat">ชิ้นงานซับซ้อน / ในรูตามชิ้นงาน</td>
@@ -258,7 +303,6 @@
   <td data-i18n-key="row_ultra_app">อ่างอัลตร้าโซนิคร่วมกับน้ำยาทำความสะอาด</td>
   <td data-i18n-key="row_ultra_note">ช่วยเสริมประสิทธิภาพของขั้นตอนการทำความสะอาดหลัก</td>
 </tr>
-
           </tbody>
         </table>
       </div>
@@ -266,7 +310,7 @@
     </section>
   </main>
 
-  <!-- === Footer (เหมือนหน้าอื่น) === -->
+  <!-- === Footer === -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -314,11 +358,23 @@
     </div>
   </footer>
 
-  <!-- === i18n === -->
+  <!-- === JS: nav toggle + i18n === -->
   <script>
+    // Mobile nav toggle
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+    })();
+
+    // i18n (reuse keys from your page)
     const I18N = {
       th:{
-        meta_title:"กรด/ด่างล้างไขมัน • อัลตร้าโซนิค | Baume Chemical",
+        back_home:"หน้าแรก",
         hero_title:"กรด/ด่างล้างไขมัน – อัลตร้าโซนิค Pretreatment",
         hero_tagline:"น้ำยาทำความสะอาดก่อนชุบ: กรดล้างไขมัน ด่างล้างไขมัน และอัลตร้าโซนิค เลือกสูตรให้เหมาะกับวัสดุ/คราบ เพื่อให้ผิวพร้อมชุบ คุณภาพคงที่ ลดของเสีย พร้อมทีมเทคนิคดูแลงานหน้างานจริง",
         sec_products:"ผลิตภัณฑ์ในกลุ่มนี้",
@@ -332,7 +388,7 @@
         btn_details:"ดูรายละเอียด →",
         tbl_type:"ประเภท", tbl_materials:"วัสดุที่เหมาะสม", tbl_soils:"คราบเป้าหมาย", tbl_app:"การใช้งาน", tbl_notes:"หมายเหตุ",
         row_acid_type:"แบบกรด", row_acid_mat:"เหล็ก, ทองเหลือง, ทองแดง", row_acid_soil:"ออกไซด์/สนิม + คราบน้ำมันบางเบา", row_acid_app:"การจุ่ม / การพ่น", row_acid_note:"ควบคุมเวลา/ความเข้มข้นเพื่อเลี่ยงการกัดเกินจำเป็น",
-        row_alk_type:"แบบด่าง", row_alk_mat:"เหล็ก, สเตนเลส, อะลูมิเนียม*", row_alk_soil:"คราบน้ำมัน, ขี้ผึ้ง, จาระบี (บาง–หนา)", row_alk_app:"การจุ่ม / การพ่น / ไฟฟ้า	", row_alk_note:"*เลือกสูตร/อัตราให้เหมาะกับวัสดุ",
+        row_alk_type:"แบบด่าง", row_alk_mat:"เหล็ก, สเตนเลส, อะลูมิเนียม*", row_alk_soil:"คราบน้ำมัน, ขี้ผึ้ง, จาระบี (บาง–หนา)", row_alk_app:"การจุ่ม / การพ่น / ไฟฟ้า", row_alk_note:"*เลือกสูตร/อัตราให้เหมาะกับวัสดุ",
         row_ultra_type:"อัลตร้าโซนิค", row_ultra_mat:"ชิ้นงานซับซ้อน / ช่องรูชิ้นงาน", row_ultra_soil:"คราบสกปรกที่ติดในรูหรือร่องลึก", row_ultra_app:"อ่างอัลตร้าโซนิคร่วมกับน้ำยาทำความสะอาด", row_ultra_note:"ช่วยเสริมประสิทธิภาพของขั้นตอนการทำความสะอาดหลัก",
         tbl_footnote:"หมายเหตุ: อุณหภูมิ/เวลา/ความเข้มข้น ควรกำหนดจากการทดลองหน้างานและมาตรฐานไลน์ของคุณ",
         footer_products:"หมวดผลิตภัณฑ์",
@@ -340,7 +396,7 @@
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{
-        meta_title:"Acid & Alkaline Cleaners • Ultrasonic | Baume Chemical",
+        back_home:"Home",
         hero_title:"Acid & Alkaline Cleaners – Ultrasonic (Pretreatment)",
         hero_tagline:"Select the right formula for your substrate and soils to ensure plating-ready surfaces, consistent quality, and fewer rejects.",
         sec_products:"Products in this group",
@@ -354,7 +410,7 @@
         btn_details:"View details →",
         tbl_type:"Type", tbl_materials:"Suitable materials", tbl_soils:"Target soils", tbl_app:"Application", tbl_notes:"Notes",
         row_acid_type:"Acid", row_acid_mat:"Steel, brass, copper", row_acid_soil:"Oxides/rust + light oils", row_acid_app:"Dip / spray", row_acid_note:"Control time/concentration to avoid over-etching",
-        row_alk_type:"Alkaline", row_alk_mat:"Steel, stainless, aluminum*", row_alk_soil:"Oils, wax, grease (light–heavy)", row_alk_app:"Dip / spray / foam", row_alk_note:"*Use formulations/ratios appropriate to the substrate",
+        row_alk_type:"Alkaline", row_alk_mat:"Steel, stainless, aluminum*", row_alk_soil:"Oils, wax, grease (light–heavy)", row_alk_app:"Dip / spray / electric", row_alk_note:"*Use formulations/ratios appropriate to the substrate",
         row_ultra_type:"Ultrasonic", row_ultra_mat:"Complex parts / cavities", row_ultra_soil:"Soils trapped in holes/crevices", row_ultra_app:"Ultrasonic bath + cleaner", row_ultra_note:"Enhances the primary cleaning stage",
         tbl_footnote:"Note: Actual operating parameters (temperature/time/concentration) should be set by on-site trials and your line standards.",
         footer_products:"Products",
@@ -380,7 +436,7 @@
     }
 
     (function initLang(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      const saved = (typeof localStorage!== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
