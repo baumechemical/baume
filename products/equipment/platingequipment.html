@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title data-i18n-key="page_title">อุปกรณ์งานชุบ (Plating Tools) | Baume Chemical</title>
+  <meta name="description" content="อุปกรณ์สำหรับกระบวนการชุบโลหะ: Barrel/Rack Tank, Rectifier, Ultra Filtration, Ultrasonic, Heater/Chiller, Centrifugal Dryer — เค้าโครงเดียวกับหน้าอื่นๆ ของ Baume (TH/EN).">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Plating Tools • Baume Chemical">
+  <meta property="og:description" content="Barrel & Rack tanks, rectifier, UF, ultrasonic, heaters/chiller, centrifugal dryer (TH/EN).">
+  <meta property="og:image" content="https://i.imgur.com/R7gYwSN.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/R7gYwSN.jpeg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px;
+      --shadow-1:0 10px 26px rgba(2,8,20,.10);
+      --shadow-2:0 16px 40px rgba(2,8,20,.18);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero (match site look) */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://i.imgur.com/R7gYwSN.jpeg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & section cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Tools grid */
+    .tools{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))}
+    .tool{
+      background:#fff; border:1px solid #e6ecf3; border-radius:14px; overflow:hidden;
+      box-shadow:var(--shadow-1);
+      transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease, opacity .4s ease;
+      transform: translateY(8px);
+      opacity: 0;
+      will-change: transform;
+    }
+    .tool.in{ transform:none; opacity:1; }
+    .tool:focus-within,
+    .tool:hover{ transform: translateY(-6px); box-shadow:var(--shadow-2); }
+    .tool img{ width:100%; height:200px; object-fit:cover; display:block }
+    .tool .body{ padding:14px }
+    .tool h3{ margin:4px 0 6px; font-size:1.06rem; color:#2c5e4e; font-weight:800 }
+    .tool p{ margin:0; color:#556477 }
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    @media (prefers-reduced-motion: reduce){
+      .tool{ transition:none }
+    }
+/* Enlarge every card image by 50% on both width & height */
+.tools .tool img{
+  width:80%;          /* +50% width */
+  height:400px;        /* เดิม 200px → +50% = 300px */
+  margin-center;    /* เลื่อนซ้าย 25% เพื่อกึ่งกลางรูป (เพราะกว้าง 150%) */
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+/* === Enlarge CARD only (keep image size) === */
+
+/* +50% ความกว้างการ์ด: 350px -> 525px (เฉพาะจอ ≥ 769px) */
+@media (min-width: 769px){
+  .services{
+    grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
+    gap: 26px;
+  }
+}
+
+/* เพิ่มพื้นที่ภายในการ์ดให้อวบขึ้น แต่ไม่ยุ่งกับรูป */
+.service-item{
+  padding: 30px 28px; /* เดิม 20px → ฟูขึ้น แต่รูปไม่ขยาย */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้รูป/ข้อความอยู่กึ่งกลาง */
+}
+
+/* ล็อคขนาดรูปให้คงเดิม (ไม่ขยายตามความกว้างการ์ด) */
+.service-item img{
+  width: min(350px, 100%);  /* คงความกว้างเดิม ~350px บนเดสก์ท็อป, ย่อได้บนจอเล็ก */
+  height: 250px;            /* คงความสูงเดิม */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto 14px;
+}
+/* === Card images: fill card width, show whole image (no crop) === */
+.tools .tool img{
+  width: 100% !important;     /* เต็มการ์ดด้านกว้าง */
+  height: auto !important;    /* สูงแปรผันตามสัดส่วนรูป */
+  aspect-ratio: 16 / 10;      /* ให้การ์ดสูงเท่ากันทุกใบ (เปลี่ยนเป็น 4/3 หรือ 1/1 ได้) */
+  object-fit: contain !important;  /* เห็นรูปครบทุกมุม ไม่ครอป */
+  object-position: center;
+  display: block;
+  background: #fff;           /* พื้นหลังรองรับ “ขอบดำ/ขาว” ถ้าสัดส่วนไม่พอดี */
+  border-bottom: 1px solid #e6ecf3; /* เส้นคั่นเล็กน้อย (เอาออกได้) */
+}
+
+/* ปิดทับสไตล์ที่ทำให้รูปแคบลง/สูงตายตัว */
+.tools .tool img{
+  max-width: 100% !important;
+}
+/* === Enlarge ONLY the cards; images scale with them (+50%) === */
+@media (min-width: 769px){
+  /* เดิม: minmax(280px, 1fr) → ขยาย 50% เป็น 420px */
+  .tools{
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)) !important;
+    gap: 24px; /* ฟูขึ้นนิดนึงให้หายอึดอัด */
+  }
+
+  /* เนื้อในการ์ดฟูขึ้นตามสัดส่วน (~1.5x ของ 14px) */
+  .tool .body{
+    padding: 21px !important;
+  }
+}
+
+/* รูปขยายตามการ์ด (จากเดิมสูง 200px → 300px = +50%) */
+.tools .tool img{
+  width: 100% !important;     /* เต็มความกว้างการ์ด */
+  height: 350px !important;   /* 200px × 1.5 */
+  object-fit: cover;          /* เติมพื้นที่ให้เต็ม ดูเต็มใบ */
+  object-position: center;
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Plating Tools</span>
+        <span class="badge" data-i18n-key="badge2">Tanks • Power • Filtration</span>
+        <span class="badge" data-i18n-key="badge3">QA/QC</span>
+      </div>
+      <h1 data-i18n-key="hero_title">อุปกรณ์งานชุบ (Plating Tools)</h1>
+      <p data-i18n-key="hero_tagline">
+        อุปกรณ์สำคัญเพื่อคุณภาพงานชุบ—ตั้งแต่ถังชุบ ระบบไฟฟ้า การกรอง อัลตร้าโซนิค การควบคุมอุณหภูมิ จนถึงการทำแห้ง (TH/EN)
+      </p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Intro -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="sec_intro">ภาพรวม</h2>
+      <p class="lead" data-i18n-key="intro_p">
+        กระบวนการชุบโลหะช่วยเพิ่มความทนทาน ป้องกันการกัดกร่อน และปรับปรุงผิวชิ้นงานให้เหมาะกับการใช้งาน
+        อุปกรณ์ที่เหมาะสมช่วยควบคุมคุณภาพและเพิ่มประสิทธิภาพ ทั้งการเตรียมสาร การทดสอบคุณภาพน้ำยา และเครื่องมือช่วยชุบ
+      </p>
+    </section>
+
+    <!-- Tools grid (ทุก “บูลเล็ต” = แต่ละการ์ด ยกตัวได้) -->
+    <section class="card">
+      <h2 class="section" data-i18n-key="sec_tools">รายการอุปกรณ์</h2>
+      <div class="tools" id="tools">
+        <!-- 1 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/v3Bp18o.jpeg" alt="Barrel Plating Tank">
+          <div class="body">
+            <h3 data-i18n-key="t1_t">ถังชุบแบบบาร์เรล (Barrel Plating Tank)</h3>
+            <p data-i18n-key="t1_d">เหมาะกับชิ้นส่วนขนาดเล็ก ต้องการความสม่ำเสมอของฟิล์ม</p>
+          </div>
+        </article>
+        <!-- 2 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/R7gYwSN.jpeg" alt="Rack Plating Tank">
+          <div class="body">
+            <h3 data-i18n-key="t2_t">ถังชุบแบบแร็ค (Rack Plating Tank)</h3>
+            <p data-i18n-key="t2_d">ใช้กับชิ้นงานขนาดใหญ่ คุมคุณภาพได้สะดวก</p>
+          </div>
+        </article>
+        <!-- 3 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/LVCcQGH.jpeg" alt="Rectifier">
+          <div class="body">
+            <h3 data-i18n-key="t3_t">เรคติไฟเออร์ (Rectifier)</h3>
+            <p data-i18n-key="t3_d">จ่ายกระแสไฟฟ้าเสถียรสำหรับกระบวนการชุบ</p>
+          </div>
+        </article>
+        <!-- 4 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/scWFmoV.jpeg" alt="Ultra Filtration System">
+          <div class="body">
+            <h3 data-i18n-key="t4_t">ระบบอัลตร้า-ฟิลเทรชัน (Ultra Filtration)</h3>
+            <p data-i18n-key="t4_d">ช่วยกำจัดสิ่งเจือปนในสารละลายชุบ</p>
+          </div>
+        </article>
+        <!-- 5 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/TKatOc6.jpeg" alt="Ultrasonic Cleaner">
+          <div class="body">
+            <h3 data-i18n-key="t5_t">เครื่องล้างอัลตร้าโซนิค (Ultrasonic Cleaner)</h3>
+            <p data-i18n-key="t5_d">ทำความสะอาดชิ้นงานด้วยคลื่นอัลตร้าโซนิค</p>
+          </div>
+        </article>
+        <!-- 6 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/2FLov8d.jpeg" alt="Heater">
+          <div class="body">
+            <h3 data-i18n-key="t6_t">ฮีตเตอร์ (Heater)</h3>
+            <p data-i18n-key="t6_d">คงอุณหภูมิของน้ำยาให้เหมาะสม</p>
+          </div>
+        </article>
+        <!-- 7 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/dM1fO3U.jpeg" alt="Titanium Heater">
+          <div class="body">
+            <h3 data-i18n-key="t7_t">ฮีตเตอร์ไทเทเนียม (Titanium Heater)</h3>
+            <p data-i18n-key="t7_d">ทนสารเคมี เหมาะกับบ่อกรดจัด</p>
+          </div>
+        </article>
+        <!-- 8 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/isX6XS4.jpeg" alt="Plating Chiller">
+          <div class="body">
+            <h3 data-i18n-key="t8_t">ชิลเลอร์สำหรับบ่อชุบ (Plating Chiller)</h3>
+            <p data-i18n-key="t8_d">ควบคุมอุณหภูมิให้อยู่ในช่วงที่เหมาะสม</p>
+          </div>
+        </article>
+        <!-- 9 -->
+        <article class="tool" tabindex="0">
+          <img src="https://i.imgur.com/gxQ6oNF.jpeg" alt="Centrifugal Drying Machine">
+          <div class="body">
+            <h3 data-i18n-key="t9_t">เครื่องปั่นแห้ง (Centrifugal Dryer)</h3>
+            <p data-i18n-key="t9_d">เร่งกระบวนการทำแห้งหลังชุบ</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Plating Tools",
+    "about":["Barrel Tank","Rack Tank","Rectifier","UF","Ultrasonic","Heater","Titanium Heater","Chiller","Centrifugal Dryer"],
+    "inLanguage":"th,en",
+    "image":"https://i.imgur.com/v3Bp18o.jpeg",
+    "publisher":{"@type":"Organization","name":"Baume Chemical"}
+  }
+  </script>
+
+  <!-- i18n + card lift on reveal -->
+  <script>
+    const I18N = {
+      th:{
+        page_title:"อุปกรณ์งานชุบ (Plating Tools) | Baume Chemical",
+        badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
+        hero_title:"อุปกรณ์งานชุบ (Plating Tools)",
+        hero_tagline:"อุปกรณ์สำคัญเพื่อคุณภาพงานชุบ—ตั้งแต่ถังชุบ ระบบไฟฟ้า การกรอง อัลตร้าโซนิค การควบคุมอุณหภูมิ จนถึงการทำแห้ง (TH/EN)",
+
+        sec_intro:"ภาพรวม",
+        intro_p:"กระบวนการชุบโลหะช่วยเพิ่มความทนทาน ป้องกันการกัดกร่อน และปรับปรุงผิวชิ้นงานให้เหมาะกับการใช้งาน อุปกรณ์ที่เหมาะสมช่วยควบคุมคุณภาพและเพิ่มประสิทธิภาพ ทั้งการเตรียมสาร การทดสอบคุณภาพน้ำยา และเครื่องมือช่วยชุบ",
+
+        sec_tools:"รายการอุปกรณ์",
+        t1_t:"ถังชุบแบบบาร์เรล (Barrel Plating Tank)",  t1_d:"เหมาะกับชิ้นส่วนขนาดเล็ก ต้องการความสม่ำเสมอของฟิล์ม",
+        t2_t:"ถังชุบแบบแร็ค (Rack Plating Tank)",        t2_d:"ใช้กับชิ้นงานขนาดใหญ่ คุมคุณภาพได้สะดวก",
+        t3_t:"เรคติไฟเออร์ (Rectifier)",               t3_d:"จ่ายกระแสไฟฟ้าเสถียรสำหรับกระบวนการชุบ",
+        t4_t:"ระบบอัลตร้า-ฟิลเทรชัน (Ultra Filtration)", t4_d:"ช่วยกำจัดสิ่งเจือปนในสารละลายชุบ",
+        t5_t:"เครื่องล้างอัลตร้าโซนิค (Ultrasonic Cleaner)", t5_d:"ทำความสะอาดชิ้นงานด้วยคลื่นอัลตร้าโซนิค",
+        t6_t:"ฮีตเตอร์ (Heater)",                      t6_d:"คงอุณหภูมิของน้ำยาให้เหมาะสม",
+        t7_t:"ฮีตเตอร์ไทเทเนียม (Titanium Heater)",    t7_d:"ทนสารเคมี เหมาะกับบ่อกรดจัด",
+        t8_t:"ชิลเลอร์สำหรับบ่อชุบ (Plating Chiller)", t8_d:"ควบคุมอุณหภูมิให้อยู่ในช่วงที่เหมาะสม",
+        t9_t:"เครื่องปั่นแห้ง (Centrifugal Dryer)",     t9_d:"เร่งกระบวนการทำแห้งหลังชุบ",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)",
+        cat_black:"ดำเคมี (Blackening)", cat_passivation:"พาสซิเวชัน (Passivation)",
+        cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)",
+        cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        page_title:"Plating Tools | Baume Chemical",
+        badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
+        hero_title:"Plating Tools",
+        hero_tagline:"Essential tools for electroplating — tanks, power, filtration, ultrasonic, thermal control and drying (EN/TH).",
+
+        sec_intro:"Overview",
+        intro_p:"Metal plating enhances durability, prevents corrosion and improves surface properties. The right tools boost quality and efficiency across chemical prep, bath QA/QC and production steps.",
+
+        sec_tools:"Tools Catalog",
+        t1_t:"Barrel Plating Tank",    t1_d:"For small parts with uniform coverage.",
+        t2_t:"Rack Plating Tank",      t2_d:"For larger workpieces with easy control.",
+        t3_t:"Rectifier",              t3_d:"Stable current for plating.",
+        t4_t:"Ultra Filtration System",t4_d:"Removes impurities from plating solutions.",
+        t5_t:"Ultrasonic Cleaner",     t5_d:"Cleans parts via ultrasonic waves.",
+        t6_t:"Heater",                 t6_d:"Maintains proper solution temperature.",
+        t7_t:"Titanium Heater",        t7_d:"Chemical-resistant for strong acid baths.",
+        t8_t:"Plating Chiller",        t8_d:"Controls bath temperature to optimum.",
+        t9_t:"Centrifugal Drying Machine", t9_d:"Speeds up post-plating drying.",
+
+        footer_products:"Product Categories", footer_contact:"Contact Us",
+        footer_hours:"🕒 Office hours 08:00–17:00",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      document.querySelectorAll('[data-i18n-key]').forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val!=='undefined') node.textContent = val;
+      });
+
+      const titleEl = document.querySelector('title');
+      const descEl  = document.querySelector('meta[name="description"]');
+      if(titleEl) titleEl.textContent = I18N[L].page_title;
+      if(descEl){
+        descEl.setAttribute('content',
+          L==='en'
+            ? "Essential plating tools: barrel/rack tanks, rectifier, UF, ultrasonic, heaters/chiller, centrifugal dryer (EN/TH)."
+            : "อุปกรณ์งานชุบโลหะ: ถังชุบ Rack/Barrel, เรคติไฟเออร์, UF, Ultrasonic, ฮีตเตอร์/ชิลเลอร์, เครื่องปั่นแห้ง (TH/EN)."
+        );
+      }
+
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    // Reveal/lift every card (“ยกด้วยทุกบูลเล็ต”)
+    function initLift(){
+      const els = document.querySelectorAll('.tool');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin:'80px 0px' });
+      els.forEach(el=> io.observe(el));
+    }
+
+    (function init(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
+      });
+
+      // canonical (client-side fallback)
+      try{
+        const link = document.createElement('link');
+        link.setAttribute('rel','canonical');
+        link.setAttribute('href', location.href.split('#')[0]);
+        document.head.appendChild(link);
+      }catch(e){}
+
+      initLift();
+    })();
+  </script>
+</body>
+</html>
