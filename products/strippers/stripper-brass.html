@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n-key="meta_title">NEOBRITE RS — ยาลอกนิเกิ้ลบนทองเหลือง | Baume Chemical</title>
+  <meta name="description" content="NEOBRITE RS ผงลอกนิเกิ้ลสำหรับชิ้นงานทองเหลือง ใช้งานง่าย ผสมกรดกำมะถัน 50 ซี.ซี./ลิตร เข้มข้น 100–150 กรัม/ลิตร ระยะเวลา 5–10 นาที พร้อมตัวอย่างการผสม 100 ลิตร ขั้นตอนใช้งาน และข้อควรปลอดภัย">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="NEOBRITE RS — Nickel Stripper (Brass)">
+  <meta property="og:description" content="Powder nickel stripper for brass. 100–150 g/L + 50 mL/L H₂SO₄; 5–10 min. Mixing example for 100 L and step-by-step process included.">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail-4.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail-4.jpg">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
+      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+
+    /* Language FAB */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Hero */
+    .hero{
+      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(380px, 60svh, 640px);
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+                 url('https://img2.pic.in.th/pic/thumbnail-4.jpg') center/cover no-repeat;
+    }
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+
+    /* Pills */
+    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
+    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
+    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
+    .pill p{margin:0;color:#5b6675}
+    .ic{font-size:20px}
+
+    /* Tables */
+    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    table{border-collapse:collapse;width:100%;min-width:760px}
+    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
+    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+
+    .note{font-style:italic;color:#9a3412}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- Language Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Nickel Stripper</span>
+        <span class="badge" data-i18n-key="badge2">Brass</span>
+        <span class="badge" data-i18n-key="badge3">100–150 g/L • 5–10 min</span>
+      </div>
+      <h1 data-i18n-key="hero_title">NEOBRITE RS — ยาลอกนิเกิ้ลบนทองเหลือง</h1>
+      <p data-i18n-key="hero_tagline">ผงลอกนิเกิ้ล ผสมกรดกำมะถัน ใช้งานง่าย รวดเร็ว ถนอมพื้นผิวทองเหลือง</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Features -->
+    <section id="features" class="card">
+      <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
+      <div class="pill-grid">
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f1_t">ลอกนิเกิ้ลรวดเร็ว</h3><p data-i18n-key="f1_d">ออกฤทธิ์ไว เหมาะกับงานที่ต้องการรอบสั้น</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f2_t">ถนอมพื้นผิวทองเหลือง</h3><p data-i18n-key="f2_d">ออกแบบมาเพื่อคงสภาพผิวฐาน</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f3_t">ผงละลายน้ำ</h3><p data-i18n-key="f3_d">ผสมใช้งานง่าย ควบคุมสะดวก</p></div>
+        <div class="pill"><div class="ic">🧯</div><h3 data-i18n-key="f4_t">อัตราส่วนชัดเจน</h3><p data-i18n-key="f4_d">100–150 กรัม/ลิตร + H₂SO₄ 50 ซี.ซี./ลิตร</p></div>
+        <div class="pill"><div class="ic">⏱️</div><h3 data-i18n-key="f5_t">เวลาทำงานสั้น</h3><p data-i18n-key="f5_d">แช่ 5–10 นาที แล้วล้างออก</p></div>
+        <div class="pill"><div class="ic">🧰</div><h3 data-i18n-key="f6_t">ขยายสเกลง่าย</h3><p data-i18n-key="f6_d">มีตัวอย่างผสม 100 ลิตรสำหรับตั้งบ่อ</p></div>
+      </div>
+    </section>
+
+    <!-- Product info -->
+    <section id="product" class="card">
+      <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="product_lead">
+        ยาลอกนิเกิ้ลแบบผงที่ใช้ร่วมกับกรดกำมะถัน เหมาะสำหรับลอกชั้นนิเกิ้ลออกจากชิ้นงานทองเหลืองอย่างรวดเร็วและมีประสิทธิภาพ
+        ควรใช้อุปกรณ์และถังที่ทนกรด และปฏิบัติตามข้อควรปลอดภัยอย่างเคร่งครัด
+      </p>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> ยาลอกนิเกิ้ล (สำหรับทองเหลือง)</li>
+        <li data-i18n-key="pi_sub"><strong>วัสดุ:</strong> ทองเหลือง (Brass)</li>
+        <li data-i18n-key="pi_form"><strong>รูปแบบ:</strong> ผงละลายน้ำ + เติมกรดกำมะถัน</li>
+        <li data-i18n-key="pi_ops"><strong>แนวทางใช้งาน:</strong> 100–150 กรัม/ลิตร + กรดกำมะถัน 50 ซี.ซี./ลิตร; เวลา 5–10 นาที</li>
+      </ul>
+    </section>
+
+    <!-- Specs / Operating -->
+    <section id="specs" class="card">
+      <h2 class="section" data-i18n-key="specs_title">สเปก & สัดส่วนผสม</h2>
+      <div class="table">
+        <table aria-label="Operating & Composition">
+          <thead>
+            <tr>
+              <th data-i18n-key="head_param">พารามิเตอร์</th>
+              <th data-i18n-key="head_value">ค่า/ช่วง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="sp_powder">NEOBRITE RS (ผง)</td><td data-i18n-key="sp_powder_val">100–150 กรัม/ลิตร</td></tr>
+            <tr><td data-i18n-key="sp_acid">กรดกำมะถัน (H₂SO₄)</td><td data-i18n-key="sp_acid_val">50 ซี.ซี./ลิตร</td></tr>
+            <tr><td data-i18n-key="sp_time">เวลาแช่</td><td data-i18n-key="sp_time_val">5–10 นาที (จนลอกหมด)</td></tr>
+            <tr><td data-i18n-key="sp_tank">วัสดุถัง/อุปกรณ์</td><td data-i18n-key="sp_tank_val">วัสดุทนกรด (เช่น PE/PP)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Mixing example -->
+    <section id="mixing" class="card">
+      <h2 class="section" data-i18n-key="mix_title">ตัวอย่างการผสม (100 ลิตร)</h2>
+      <div class="table">
+        <table aria-label="Mixing Example 100 L">
+          <thead>
+            <tr>
+              <th data-i18n-key="mix_item">ส่วนผสม</th>
+              <th data-i18n-key="mix_qty">ปริมาณ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="mix_rs">NEOBRITE RS (ผง)</td><td data-i18n-key="mix_rs_q">13 กิโลกรัม</td></tr>
+            <tr><td data-i18n-key="mix_h2so4">กรดกำมะถัน (H₂SO₄)</td><td data-i18n-key="mix_h2so4_q">5 ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_water">น้ำสะอาด/DI</td><td data-i18n-key="mix_water_q">เติมจนครบ 100 ลิตร</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ol style="margin:10px 0 0 22px">
+        <li data-i18n-key="mix_step1">เตรียมน้ำในถังทนกรด จากนั้นค่อยๆ ละลายผง NEOBRITE RS ให้เข้ากัน</li>
+        <li data-i18n-key="mix_step2">เติมกรดกำมะถันตามอัตราส่วน ระวังการกระเด็น</li>
+        <li data-i18n-key="mix_step3">เติมน้ำให้ครบปริมาตร กวนจนเป็นเนื้อเดียว พร้อมทดสอบชิ้นงาน</li>
+      </ol>
+    </section>
+
+    <!-- Process line -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">ขั้นตอนการลอกนิเกิ้ล</h2>
+      <ol style="margin:0 0 0 22px">
+        <li data-i18n-key="pr1">เตรียมสารละลายในถังทนกรดตามอัตราส่วนที่แนะนำ</li>
+        <li data-i18n-key="pr2">แช่ชิ้นงานทองเหลืองลงในบ่อ NEOBRITE RS 5–10 นาที หรือจนลอกหมด แล้วนำออกทันที</li>
+        <li data-i18n-key="pr3">ล้างน้ำสะอาดหลายครั้ง อาจตามด้วยน้ำยาป้องกันออกซิเดชัน (ถ้าจำเป็น)</li>
+        <li data-i18n-key="pr4">จัดการของเสีย/น้ำล้างตามระเบียบและข้อกฎหมาย</li>
+      </ol>
+    </section>
+
+    <!-- EHS -->
+    <section id="ehs" class="card">
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="ehs1">สวม PPE: ถุงมือ แว่นตา หน้ากาก และผ้ากันสารเคมี</li>
+        <li data-i18n-key="ehs2">ใช้ในบริเวณอากาศถ่ายเท ระวังการกระเด็น โดยเฉพาะขณะเติมกรด</li>
+        <li data-i18n-key="ehs3">ใช้อุปกรณ์/ถังทนกรด (PE/PP) เท่านั้น</li>
+        <li data-i18n-key="ehs4">ของเสียที่มีโลหะ/กรด ต้องปรับสภาพ/บำบัดก่อนทิ้งตามกฎหมาย</li>
+      </ul>
+      <p class="note" data-i18n-key="note_ppe">*ปฏิบัติตามเอกสาร SDS/TDS และนโยบาย EHS ของสถานประกอบการอย่างเคร่งครัด</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- i18n -->
+  <script>
+    const I18N = {
+      th:{
+        meta_title:"NEOBRITE RS — ยาลอกนิเกิ้ลบนทองเหลือง | Baume Chemical",
+
+        badge1:"Nickel Stripper", badge2:"Brass", badge3:"100–150 g/L • 5–10 min",
+        hero_title:"NEOBRITE RS — ยาลอกนิเกิ้ลบนทองเหลือง",
+        hero_tagline:"ผงลอกนิเกิ้ล ผสมกรดกำมะถัน ใช้งานง่าย รวดเร็ว ถนอมพื้นผิวทองเหลือง",
+
+        features_title:"คุณสมบัติพิเศษ",
+        f1_t:"ลอกนิเกิ้ลรวดเร็ว", f1_d:"ออกฤทธิ์ไว เหมาะกับงานที่ต้องการรอบสั้น",
+        f2_t:"ถนอมพื้นผิวทองเหลือง", f2_d:"ออกแบบมาเพื่อคงสภาพผิวฐาน",
+        f3_t:"ผงละลายน้ำ", f3_d:"ผสมใช้งานง่าย ควบคุมสะดวก",
+        f4_t:"อัตราส่วนชัดเจน", f4_d:"100–150 กรัม/ลิตร + H₂SO₄ 50 ซี.ซี./ลิตร",
+        f5_t:"เวลาทำงานสั้น", f5_d:"แช่ 5–10 นาที แล้วล้างออก",
+        f6_t:"ขยายสเกลง่าย", f6_d:"มีตัวอย่างผสม 100 ลิตรสำหรับตั้งบ่อ",
+
+        product_title:"ข้อมูลผลิตภัณฑ์",
+        product_lead:"ยาลอกนิเกิ้ลแบบผงที่ใช้ร่วมกับกรดกำมะถัน เหมาะสำหรับลอกชั้นนิเกิ้ลออกจากชิ้นงานทองเหลืองอย่างรวดเร็วและมีประสิทธิภาพ ควรใช้อุปกรณ์และถังที่ทนกรด และปฏิบัติตามข้อควรปลอดภัยอย่างเคร่งครัด",
+        pi_type:"ประเภท: ยาลอกนิเกิ้ล (สำหรับทองเหลือง)",
+        pi_sub:"วัสดุ: ทองเหลือง (Brass)",
+        pi_form:"รูปแบบ: ผงละลายน้ำ + เติมกรดกำมะถัน",
+        pi_ops:"แนวทางใช้งาน: 100–150 กรัม/ลิตร + กรดกำมะถัน 50 ซี.ซี./ลิตร; เวลา 5–10 นาที",
+
+        specs_title:"สเปก & สัดส่วนผสม",
+        head_param:"พารามิเตอร์", head_value:"ค่า/ช่วง",
+        sp_powder:"NEOBRITE RS (ผง)", sp_powder_val:"100–150 กรัม/ลิตร",
+        sp_acid:"กรดกำมะถัน (H₂SO₄)", sp_acid_val:"50 ซี.ซี./ลิตร",
+        sp_time:"เวลาแช่", sp_time_val:"5–10 นาที (จนลอกหมด)",
+        sp_tank:"วัสดุถัง/อุปกรณ์", sp_tank_val:"วัสดุทนกรด (เช่น PE/PP)",
+
+        mix_title:"ตัวอย่างการผสม (100 ลิตร)",
+        mix_item:"ส่วนผสม", mix_qty:"ปริมาณ",
+        mix_rs:"NEOBRITE RS (ผง)", mix_rs_q:"13 กิโลกรัม",
+        mix_h2so4:"กรดกำมะถัน (H₂SO₄)", mix_h2so4_q:"5 ลิตร",
+        mix_water:"น้ำสะอาด/DI", mix_water_q:"เติมจนครบ 100 ลิตร",
+        mix_step1:"เตรียมน้ำในถังทนกรด จากนั้นค่อยๆ ละลายผง NEOBRITE RS ให้เข้ากัน",
+        mix_step2:"เติมกรดกำมะถันตามอัตราส่วน ระวังการกระเด็น",
+        mix_step3:"เติมน้ำให้ครบปริมาตร กวนจนเป็นเนื้อเดียว พร้อมทดสอบชิ้นงาน",
+
+        process_title:"ขั้นตอนการลอกนิเกิ้ล",
+        pr1:"เตรียมสารละลายในถังทนกรดตามอัตราส่วนที่แนะนำ",
+        pr2:"แช่ชิ้นงานทองเหลืองลงในบ่อ NEOBRITE RS 5–10 นาที หรือจนลอกหมด แล้วนำออกทันที",
+        pr3:"ล้างน้ำสะอาดหลายครั้ง อาจตามด้วยน้ำยาป้องกันออกซิเดชัน (ถ้าจำเป็น)",
+        pr4:"จัดการของเสีย/น้ำล้างตามระเบียบและข้อกฎหมาย",
+
+        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        ehs1:"สวม PPE: ถุงมือ แว่นตา หน้ากาก และผ้ากันสารเคมี",
+        ehs2:"ใช้ในบริเวณอากาศถ่ายเท ระวังการกระเด็น โดยเฉพาะขณะเติมกรด",
+        ehs3:"ใช้อุปกรณ์/ถังทนกรด (PE/PP) เท่านั้น",
+        ehs4:"ของเสียที่มีโลหะ/กรด ต้องปรับสภาพ/บำบัดก่อนทิ้งตามกฎหมาย",
+        note_ppe:"*ปฏิบัติตามเอกสาร SDS/TDS และนโยบาย EHS ของสถานประกอบการอย่างเคร่งครัด",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
+        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
+        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+      },
+      en:{
+        meta_title:"NEOBRITE RS — Nickel Stripper for Brass | Baume Chemical",
+
+        badge1:"Nickel Stripper", badge2:"Brass", badge3:"100–150 g/L • 5–10 min",
+        hero_title:"NEOBRITE RS — Nickel Stripper (Brass)",
+        hero_tagline:"Water-soluble powder with sulfuric acid addition — fast, easy, brass-safe stripping.",
+
+        features_title:"Key Features",
+        f1_t:"Fast nickel removal", f1_d:"Short cycle time for efficient stripping",
+        f2_t:"Brass-safe", f2_d:"Designed to preserve the brass substrate",
+        f3_t:"Water-soluble powder", f3_d:"Easy to mix and control",
+        f4_t:"Clear ratios", f4_d:"100–150 g/L + 50 mL/L H₂SO₄",
+        f5_t:"Short dwell", f5_d:"Typical immersion 5–10 minutes",
+        f6_t:"Scalable setup", f6_d:"Includes a 100 L mixing example",
+
+        product_title:"Product Information",
+        product_lead:"Powder nickel stripper used with sulfuric acid for rapid removal of nickel from brass parts. Use acid-resistant equipment and follow safety procedures.",
+        pi_type:"Type: Nickel stripper (for brass)",
+        pi_sub:"Substrate: Brass",
+        pi_form:"Form: Water-soluble powder + sulfuric acid addition",
+        pi_ops:"Guideline: 100–150 g/L + 50 mL/L H₂SO₄; 5–10 minutes dwell",
+
+        specs_title:"Specs & Mixing Ratios",
+        head_param:"Parameter", head_value:"Value/Range",
+        sp_powder:"NEOBRITE RS (powder)", sp_powder_val:"100–150 g/L",
+        sp_acid:"Sulfuric acid (H₂SO₄)", sp_acid_val:"50 mL/L",
+        sp_time:"Immersion time", sp_time_val:"5–10 min (until stripped)",
+        sp_tank:"Tank/equipment", sp_tank_val:"Acid-resistant (e.g., PE/PP)",
+
+        mix_title:"Mixing Example (100 L)",
+        mix_item:"Component", mix_qty:"Quantity",
+        mix_rs:"NEOBRITE RS (powder)", mix_rs_q:"13 kg",
+        mix_h2so4:"Sulfuric acid (H₂SO₄)", mix_h2so4_q:"5 L",
+        mix_water:"Water (DI/clean)", mix_water_q:"Top up to 100 L total",
+        mix_step1:"Charge water into an acid-resistant tank and dissolve NEOBRITE RS gradually.",
+        mix_step2:"Add H₂SO₄ per ratio carefully to avoid splashes.",
+        mix_step3:"Top up with water to final volume and mix thoroughly. Test on sample parts.",
+
+        process_title:"Stripping Process",
+        pr1:"Prepare bath in an acid-resistant tank per ratios",
+        pr2:"Immerse brass parts for 5–10 min or until fully stripped; remove promptly",
+        pr3:"Rinse thoroughly multiple times; optional anti-oxidation rinse as needed",
+        pr4:"Handle and treat waste/rinse per regulations",
+
+        ehs_title:"Safety & Environment",
+        ehs1:"Wear PPE: gloves, goggles, suitable mask/apron",
+        ehs2:"Work with good ventilation; take care when adding acid",
+        ehs3:"Use only acid-resistant equipment (PE/PP)",
+        ehs4:"Treat acid/metal-bearing waste before disposal per law",
+        note_ppe:"*Always follow the product SDS/TDS and your site EHS procedures.",
+
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
+        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
+        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
+      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[L][key];
+        if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>
