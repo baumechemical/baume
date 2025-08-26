@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>โครเมตบนซิงค์ให้ตรงโทน (Passivation) — คุมอุณหภูมิ/เวลา/ค่า pH | Baume Chemical</title>
+
+  <!-- === SEO === -->
+  <meta name="description" content="คู่มือคุมโทนสีโครเมตบนซิงค์: อุณหภูมิ เวลา pH ความเข้มข้น/ตัวเร่ง การล้าง/การลากคราบ และการบ่มฟิล์ม พร้อมตารางแก้ปัญหาโทนหลุด ไหลเป็นปื้น หลุดง่าย และทดสอบ Salt Spray/สี L*a*b*">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="keywords" content="zinc passivation, chromate, trivalent chromate, โครเมตซิงค์, คุมโทน, สีฟ้า เหลือง รุ้ง, Passivation pH, Baume Chemical">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="โครเมตบนซิงค์ให้ตรงโทน (Passivation) — คุมอุณหภูมิ/เวลา/ค่า pH">
+  <meta property="og:description" content="พารามิเตอร์ที่มีผลต่อโทนสีและความทนสนิม: Temp/Time/pH/ตัวเร่ง/การล้าง พร้อมตารางแก้ปัญหาและแนวทาง QA">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg">
+  <meta property="og:image:alt" content="Zinc passivation color control">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "logo":"https://www.baumechemical.com/assets/logo.png",
+    "sameAs":["https://line.me/ti/p/~baumechemical"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
+      {"@type":"ListItem","position":3,"name":"Zinc Passivation Color Control","item":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"โครเมตบนซิงค์ให้ตรงโทน (Passivation) — คุมอุณหภูมิ/เวลา/ค่า pH",
+    "inLanguage":"th",
+    "author":{"@type":"Organization","name":"Baume Chemical"},
+    "publisher":{"@type":"Organization","name":"Baume Chemical","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"}},
+    "image":"https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg",
+    "mainEntityOfPage":"https://www.baumechemical.com/blog/zinc-passivation-color-control/",
+    "description":"พารามิเตอร์หลักที่มีผลต่อโทนสีและความทนสนิมของโครเมตบนซิงค์ พร้อมตารางแก้ปัญหาและแนวทางควบคุมคุณภาพ",
+    "datePublished":"2025-01-05",
+    "dateModified":"2025-01-05"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+
+    /* === Sticky Top Header (logo + menu) === */
+    .site-header{
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid #e6ece8;
+    }
+    .nav-bar{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;
+      font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-fab .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* === Hero === */
+    .hero{
+      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(420px, 60vh, 620px);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg') center/cover no-repeat;
+    }
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-chip{
+      display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;
+      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
+      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
+    }
+    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+    /* === Layout === */
+    .wrap{max-width:980px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    h3{margin:18px 0 8px;font-size:1.1rem}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
+
+    /* === Article === */
+    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
+    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
+    .toc a{color:#2c5e4e;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
+    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
+    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
+    th{background:#f8fbf9}
+    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+
+    /* === Footer (match homepage) === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* === Utilities === */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* === Dual language blocks === */
+    [data-lang-block]{display:none}
+    html[lang="th"] [data-lang-block="th"]{display:block}
+    html[lang="en"] [data-lang-block="en"]{display:block}
+  </style>
+</head>
+<body>
+
+  <!-- === Top Header === -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+      <span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+      <span>EN</span>
+    </button>
+  </div>
+
+  <!-- === Hero === -->
+  <header class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <a class="back-chip" href="https://www.baumechemical.com/blog/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_blog">← กลับบล็อก</a>
+      <h1 data-i18n-key="hero_title">โครเมตบนซิงค์ให้ตรงโทน (Passivation) — คุมอุณหภูมิ/เวลา/ค่า pH</h1>
+      <p data-i18n-key="hero_tagline">
+        ปรับโทนฟ้า/เหลือง/รุ้งให้คงเส้นคงวา ด้วยหน้าต่าง Temp–Time–pH ที่เหมาะ การล้าง/ลากคราบที่ถูกต้อง และการบ่ม–ซีลฟิล์ม
+        เชื่อมโยงไปยัง
+        <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/passivation/">Passivation</a>,
+        <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/protective/">Protective Treatment</a>,
+        <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/service/">Service</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- === Article === -->
+  <main class="wrap">
+    <article class="article reveal">
+
+      <!-- TH block -->
+      <div data-lang-block="th">
+        <div class="toc" aria-label="สารบัญ">
+          <strong>สารบัญ:</strong>
+          <div>
+            <a href="#tldr">TL;DR – ค่าเริ่มต้น</a> ·
+            <a href="#factors">ตัวแปรที่คุมโทน</a> ·
+            <a href="#prep">การเตรียมก่อนจุ่ม</a> ·
+            <a href="#window">หน้าต่าง Temp–Time–pH</a> ·
+            <a href="#rinse">การล้าง/ลากคราบ & บ่ม/ซีล</a> ·
+            <a href="#qa">การทดสอบ/QA</a> ·
+            <a href="#troubleshoot">ตารางแก้ปัญหา</a> ·
+            <a href="#related">ลิงก์ที่เกี่ยวข้อง</a>
+          </div>
+        </div>
+
+        <section id="intro">
+          <p class="lead">
+            โครเมตบนซิงค์ (โดยมากเป็นระบบ <strong>Trivalent</strong>) ให้โทนตั้งแต่ฟ้าใสจนถึงเหลือง/รุ้ง ตามความหนาและสภาพฟิล์ม.
+            โทน “ตรงสเปกและคงที่” ขึ้นกับการคุม <strong>อุณหภูมิ</strong>, <strong>เวลา</strong>, <strong>ค่า pH</strong>,
+            ความเข้มข้น/ตัวเร่ง, และ <strong>การล้าง/ลากคราบ</strong> ที่ดี
+          </p>
+        </section>
+
+        <section id="tldr">
+          <h2 class="section">TL;DR – ค่าเริ่มต้นแนะนำ</h2>
+          <ul>
+            <li><strong>ชนิด:</strong> ระบบ Trivalent สำหรับโทนฟ้า/เหลือง/รุ้ง</li>
+            <li><strong>อุณหภูมิอ่าง:</strong> 20–35&nbsp;°C (เริ่ม 25–28&nbsp;°C)</li>
+            <li><strong>เวลา:</strong> 15–45&nbsp;วินาที (เริ่ม 25–30&nbsp;วินาที)</li>
+            <li><strong>pH:</strong> 1.6–2.4 (ขึ้นกับสูตร/โทนที่ต้องการ; เริ่ม ~1.8–2.0)</li>
+            <li><strong>การกวน:</strong> อ่อน–ปานกลาง ลดฟองก๊าซ/คราบ</li>
+            <li><strong>ล้าง:</strong> DI 2–3 ขั้นแบบ Counter-flow ก่อนซีล</li>
+            <li><strong>ซีล:</strong> โพลิเมอร์/ซิลิกา ช่วยคุมโทน & เพิ่ม Salt Spray</li>
+          </ul>
+          <div class="note">ค่าเฉพาะขึ้นกับสูตร/สินค้า — ใช้กราฟควบคุมจากผู้ผลิต และทดสอบกับชิ้นจริงก่อนผลิต</div>
+        </section>
+
+        <section id="factors">
+          <h2 class="section">ตัวแปรที่ส่งผลต่อโทน</h2>
+          <ul>
+            <li><strong>อุณหภูมิ:</strong> สูงขึ้น → ฟิล์มหนาขึ้น โทนเหลือง/รุ้งชัด; สูงเกินไปเสี่ยง <em>smut</em>/สีกระดำกระด่าง</li>
+            <li><strong>เวลา:</strong> นานขึ้น → โทนขยับจากฟ้า → เหลือง/รุ้ง; นานเกินทำให้ฟิล์มเปราะ/ถูหลุด</li>
+            <li><strong>pH:</strong> ต่ำลง (กรดมากขึ้น) → ฟิล์มหน็าขึ้นเร็ว; สูงไป → ฟ้าบาง/ซีด</li>
+            <li><strong>ตัวเร่ง/ฟลูออไรด์:</strong> มากไป → กัดรุนแรง/สีด่าง; น้อยไป → ไม่ขึ้นโทน/เป็นปื้น</li>
+            <li><strong>ฐานซิงค์:</strong> ความหนา/ความมันผิว/เงา ส่งผลการรับฟิล์มและโทน</li>
+          </ul>
+        </section>
+
+        <section id="prep">
+          <h2 class="section">การเตรียมก่อนจุ่ม (สำคัญมาก)</h2>
+          <ol>
+            <li><strong>ล้างไขมัน & ล้าง DI</strong> ให้ผ่าน Water-break</li>
+            <li><strong>แอซิดแอคติวิเตชัน (acid dip)</strong> สั้น ๆ เพื่อล้างออกไซด์บนซิงค์</li>
+            <li><strong>จัดวางชิ้นงาน</strong> ลดการกักก๊าซ/รอยน้ำ</li>
+            <li><strong>ตรวจลากคราบจากบ่อก่อนหน้า</strong> (alkali/brightener/Cl⁻) เพื่อลดปื้น</li>
+          </ol>
+        </section>
+
+        <section id="window">
+          <h2 class="section">หน้าต่าง Temp–Time–pH (เริ่มแล้วไล่จูน)</h2>
+          <table aria-label="ช่วงตั้งต้น">
+            <thead><tr><th>พารามิเตอร์</th><th>ตั้งต้น</th><th>ถ้าอยากโทนเข้มขึ้น</th><th>ถ้าอยากโทนอ่อน/ฟ้าใส</th></tr></thead>
+            <tbody>
+              <tr><td>อุณหภูมิ</td><td>26&nbsp;°C</td><td>เพิ่มอุณหภูมิทีละ 2&nbsp;°C</td><td>ลดอุณหภูมิทีละ 2&nbsp;°C</td></tr>
+              <tr><td>เวลา</td><td>30 วินาที</td><td>เพิ่มเวลา +5–10 วินาที</td><td>ลดเวลา −5–10 วินาที</td></tr>
+              <tr><td>pH</td><td>1.9</td><td>ลด pH ลง 0.1–0.2</td><td>เพิ่ม pH ขึ้น 0.1–0.2</td></tr>
+            </tbody>
+          </table>
+          <p>ปรับทีละตัว แซมเปิลจากตำแหน่งต่าง ๆ ของแร็ค แล้วเปรียบเทียบสีภายใต้ไฟมาตรฐาน D65</p>
+        </section>
+
+        <section id="rinse">
+          <h2 class="section">การล้าง/ลากคราบ & การบ่ม/ซีล</h2>
+          <ul>
+            <li><strong>Counter-flow DI 2–3 บ่อ</strong> ตัดคราบเกลือ/อัลคาไลจากบ่อก่อนหน้า</li>
+            <li><strong>ซีล (Topcoat)</strong> เพิ่มความคงทนโทนสีและชั่วโมง Salt Spray</li>
+            <li><strong>บ่มฟิล์ม</strong> หลีกเลี่ยงการถู/บรรจุแน่นใน 24 ชม. แรก</li>
+          </ul>
+        </section>
+
+        <section id="qa">
+          <h2 class="section">การทดสอบ/QA ที่ควรมี</h2>
+          <ul>
+            <li><strong>pH/อุณหภูมิ/ความนำไฟฟ้า</strong> — เครื่องมือสอบเทียบ, ทำกราฟควบคุม</li>
+            <li><strong>Salt Spray (ISO 9227, NSS)</strong> — ชั่วโมงก่อนเกิดสนิมขาวตามสเปกงาน/เมื่อซีลแล้ว</li>
+            <li><strong>วัดสี (L*a*b*)</strong> — เทียบ standard chip; ใช้ ΔE เป็นเกณฑ์โทน</li>
+            <li><strong>การเสียดสี/ถู</strong> — ตรวจ Rub-off หลัง 24 ชม.</li>
+          </ul>
+          <p class="lead">ดูสินค้าในหมวด <a href="https://www.baumechemical.com/products/passivation/" target="_blank" rel="noopener">Passivation</a> และ <a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective</a></p>
+        </section>
+
+        <section id="troubleshoot">
+          <h2 class="section">ตารางแก้ปัญหาโทน & คุณภาพ</h2>
+          <table aria-label="Troubleshooting">
+            <thead><tr><th>อาการ</th><th>สาเหตุที่พบบ่อย</th><th>แนวทางแก้</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>โทนซีด/ฟ้าใสเกิน</td>
+                <td>เวลา/อุณหภูมิต่ำ · pH สูง · ฟิล์มบาง</td>
+                <td>เพิ่มเวลา/อุณหภูมิ · ลด pH เล็กน้อย · ตรวจตัวเร่ง</td>
+              </tr>
+              <tr>
+                <td>เหลืองจัด/ออกน้ำตาล</td>
+                <td>เวลา/อุณหภูมิสูง · pH ต่ำเกิน · อ่างแก่</td>
+                <td>ลดเวลา/อุณหภูมิ · เพิ่ม pH ทีละ 0.1–0.2 · รีเฟรช/คัดทิ้งบางส่วน</td>
+              </tr>
+              <tr>
+                <td>เป็นปื้น/รุ้งไม่สม่ำเสมอ</td>
+                <td>ลากคราบจากบ่อก่อน · ล้างไม่พอ · การกวนไม่ทั่ว</td>
+                <td>เพิ่ม DI counter-flow · ปรับการกวน · ตรวจตั้งชิ้นงาน</td>
+              </tr>
+              <tr>
+                <td>ถูแล้วหลุด/เป็นคราบ</td>
+                <td>บ่มไม่พอ · ฟิล์มหนาเปราะ · ซีลไม่เหมาะ</td>
+                <td>รอ 24 ชม. ก่อนประกอบ · ปรับ Temp/Time/pH ให้บางลง · เปลี่ยนชนิดซีล</td>
+              </tr>
+              <tr>
+                <td>Fail สนิมขาวเร็ว</td>
+                <td>โครเมตบาง · ซีลไม่มี/เสื่อม · ปนเปื้อนคลอไรด์</td>
+                <td>เพิ่มความหนาฟิล์ม (เวลา/Temp/pH) · ใช้ซีล · คุมลากคราบ/เติม-คัดทิ้ง</td>
+              </tr>
+              <tr>
+                <td>จุดดำ/หม่น</td>
+                <td>ตัวเร่ง/ฟลูออไรด์สูง · คราบโลหะ/อินทรีย์สะสม</td>
+                <td>รีบาลานซ์ตัวเร่ง · คาร์บอนทรีต/กรองละเอียด</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="warn"><strong>ความปลอดภัย:</strong> อ่างโครเมตมีสารโครเมียม — ใช้ PPE, ระบบดูดไอ, และบำบัดของเสียตามข้อกำหนด</div>
+        </section>
+
+        <section id="related">
+          <h2 class="section">ลิงก์ที่เกี่ยวข้อง</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/passivation/" target="_blank" rel="noopener">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- EN block -->
+      <div data-lang-block="en">
+        <div class="toc" aria-label="Table of contents">
+          <strong>Contents:</strong>
+          <div>
+            <a href="#tldr_en">TL;DR</a> ·
+            <a href="#factors_en">Key levers</a> ·
+            <a href="#prep_en">Pre-dip prep</a> ·
+            <a href="#window_en">Temp–Time–pH window</a> ·
+            <a href="#rinse_en">Rinsing/dragout & cure/seal</a> ·
+            <a href="#qa_en">QA tests</a> ·
+            <a href="#troubleshoot_en">Troubleshooting</a> ·
+            <a href="#related_en">Related</a>
+          </div>
+        </div>
+
+        <section id="intro_en">
+          <p class="lead">
+            Zinc <strong>trivalent</strong> passivation covers blue → yellow/iridescent tones. Stable tone depends on
+            controlling <strong>temperature</strong>, <strong>time</strong>, <strong>pH</strong>, accelerator balance, and sound rinsing/dragout control.
+          </p>
+        </section>
+
+        <section id="tldr_en">
+          <h2 class="section">TL;DR – starter settings</h2>
+          <ul>
+            <li><strong>Temp:</strong> 20–35&nbsp;°C (start 25–28&nbsp;°C)</li>
+            <li><strong>Time:</strong> 15–45 s (start 25–30 s)</li>
+            <li><strong>pH:</strong> 1.6–2.4 (start ~1.8–2.0)</li>
+            <li><strong>Agitation:</strong> mild–moderate</li>
+            <li><strong>Rinse:</strong> 2–3 DI counter-flow; <strong>Seal:</strong> polymer/silica</li>
+          </ul>
+          <div class="note">Follow your product’s control chart; verify on actual parts before ramping.</div>
+        </section>
+
+        <section id="factors_en">
+          <h2 class="section">Key levers affecting tone</h2>
+          <ul>
+            <li><strong>Temperature:</strong> higher → thicker film → stronger yellow/iridescence; too high → smut/patchy</li>
+            <li><strong>Time:</strong> longer → darker/iridescent; too long → brittle/rub-off</li>
+            <li><strong>pH:</strong> lower → faster build/thicker; higher → thin blue tone</li>
+            <li><strong>Accelerator/fluoride:</strong> over → harsh etch/dark spots; under → pale/patchy</li>
+            <li><strong>Zinc base:</strong> thickness/brightness influences film uptake and tone</li>
+          </ul>
+        </section>
+
+        <section id="prep_en">
+          <h2 class="section">Pre-dip preparation</h2>
+          <ol>
+            <li>Degrease → DI rinse until water-break passes</li>
+            <li>Short <strong>acid activation</strong> to remove zinc oxides</li>
+            <li>Fixture to avoid gas entrapment/water marks</li>
+            <li>Control <strong>drag-in</strong> (alkali/brightener/Cl⁻) from prior baths</li>
+          </ol>
+        </section>
+
+        <section id="window_en">
+          <h2 class="section">Temp–Time–pH window (tune gradually)</h2>
+          <table aria-label="Starter window">
+            <thead><tr><th>Parameter</th><th>Start</th><th>For darker/warmer tone</th><th>For lighter/blue tone</th></tr></thead>
+            <tbody>
+              <tr><td>Temperature</td><td>26&nbsp;°C</td><td>+2&nbsp;°C steps</td><td>−2&nbsp;°C steps</td></tr>
+              <tr><td>Time</td><td>30 s</td><td>+5–10 s</td><td>−5–10 s</td></tr>
+              <tr><td>pH</td><td>1.9</td><td>−0.1 to −0.2</td><td>+0.1 to +0.2</td></tr>
+            </tbody>
+          </table>
+          <p>Adjust one at a time; compare under D65 lighting using reference chips.</p>
+        </section>
+
+        <section id="rinse_en">
+          <h2 class="section">Rinsing/dragout & curing/sealing</h2>
+          <ul>
+            <li><strong>2–3 DI counter-flow rinses</strong> to cut alkali/brightener carryover</li>
+            <li><strong>Seal coat</strong> (polymer/silica) improves tone stability & salt spray life</li>
+            <li><strong>Cure</strong> — avoid abrasion/packing within first 24 h</li>
+          </ul>
+        </section>
+
+        <section id="qa_en">
+          <h2 class="section">QA & testing</h2>
+          <ul>
+            <li><strong>pH/Temp/Conductivity</strong> — calibrated meters; control charts</li>
+            <li><strong>Salt spray (ISO 9227 NSS)</strong> — hours to white rust per spec/with sealer</li>
+            <li><strong>Color (L*a*b*)</strong> — ΔE against standard chips</li>
+            <li><strong>Rub-off</strong> after 24 h cure</li>
+          </ul>
+        </section>
+
+        <section id="troubleshoot_en">
+          <h2 class="section">Troubleshooting</h2>
+          <table aria-label="Troubleshooting">
+            <thead><tr><th>Symptom</th><th>Likely causes</th><th>Fix</th></tr></thead>
+            <tbody>
+              <tr><td>Pale/too blue</td><td>Low T/time; high pH; thin film</td><td>Raise T/time; lower pH slightly; check accelerator</td></tr>
+              <tr><td>Yellow/brownish</td><td>High T/time; low pH; aged bath</td><td>Reduce T/time; raise pH; refresh/bleed & feed</td></tr>
+              <tr><td>Patchy/iridescent blotches</td><td>Drag-in; poor rinse; uneven agitation</td><td>Improve DI counter-flow; adjust flow/fixturing</td></tr>
+              <tr><td>Rub-off</td><td>Insufficient cure; brittle thick film; improper sealer</td><td>24 h cure; lighten film; switch sealer</td></tr>
+              <tr><td>Early white rust</td><td>Thin film; no/weak seal; chloride contamination</td><td>Increase build; add sealer; control drag-in</td></tr>
+              <tr><td>Dark specks/dull</td><td>Excess accelerator/fluoride; organic/metal soils</td><td>Rebalance accelerator; carbon treat; fine filtration</td></tr>
+            </tbody>
+          </table>
+          <div class="warn"><strong>Safety:</strong> Chromium-containing baths require PPE, ventilation, and compliant waste treatment.</div>
+        </section>
+
+        <section id="related_en">
+          <h2 class="section">Related links</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/passivation/" target="_blank" rel="noopener">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">On-site Service</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- === Footer (เหมือนหน้าหลัก) === -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === JS: reveal + i18n (toggle blocks) === -->
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+
+    /* i18n dictionary (nav/back/hero/footer) */
+    const I18N = {
+      th: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← กลับบล็อก",
+        hero_title: "โครเมตบนซิงค์ให้ตรงโทน (Passivation) — คุมอุณหภูมิ/เวลา/ค่า pH",
+        hero_tagline: "คุมโทนด้วย Temp–Time–pH ที่เหมาะ การล้าง/ลากคราบที่ดี และการบ่ม–ซีลฟิล์ม พร้อมตารางแก้ปัญหาและ QA",
+        footer_products: "หมวดผลิตภัณฑ์",
+        footer_contact: "ติดต่อเรา",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+      },
+      en: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← Back to Blog",
+        hero_title: "Zinc Chromate Tone Control (Passivation) — Master Temp/Time/pH",
+        hero_tagline: "Achieve consistent blue/yellow/iridescent tones via the right Temp–Time–pH, proper rinsing/dragout control, and cure/seal—plus a troubleshooting table and QA.",
+        footer_products: "Products",
+        footer_contact: "Contact Us",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+      });
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>
