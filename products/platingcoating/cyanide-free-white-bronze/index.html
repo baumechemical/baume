@@ -137,6 +137,27 @@
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
+    .hero-inner{position:relative; z-index:1}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(28px,4.4vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto 14px; color:#e6f2ef}
+    .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    .btn:hover{filter:brightness(.95)}
+
+    /* กันโดนเมนูมือถือ/เฮดเดอร์ทับ */
+.hero { position: relative; }
+.hero .hero-inner,
+.hero .badges,
+.hero .back-wrap { position: relative; z-index: 1501; }
+
+/* กันโดนตั้งค่าอื่นเผลอซ่อนไว้ */
+.badges, .back-wrap { display: block; visibility: visible; opacity: 1; }
+
+/* ระยะปุ่มย้อนกลับ ให้โผล่ใต้เฮดเดอร์แน่นอน */
+.back-wrap { position: absolute; left: 16px; top: calc(var(--header-h) + 12px); }
+
+
     /* Layout & cards */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
@@ -157,6 +178,11 @@
     }
     .btn.back:hover{ background:#ffffff33 }
     .btn.back svg{width:18px; height:18px; display:block}
+    /* ให้คอนเทนต์ hero อยู่เหนือพื้นหลังเสมอ */
+.hero .wrap { position: relative; z-index: 1; }
+/* กันกรณีมีอะไรทับ การคลิก */
+.actions a { pointer-events: auto; }
+
 
     /* Tables */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
@@ -180,7 +206,7 @@
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
-  </style>
+</style>
 </head>
 <body>
 
@@ -221,26 +247,37 @@
   </div>
 
   <!-- Hero -->
-  <section class="hero" aria-label="317M White Bronze">
-    <!-- Back button -->
-    <div class="back-wrap">
-      <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span data-i18n-key="btn_back">ย้อนกลับ</span>
-      </a>
+<section class="hero" aria-label="317M White Bronze">
+  <!-- Back button -->
+  <div class="back-wrap">
+    <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span data-i18n-key="btn_back">ย้อนกลับ</span>
+    </a>
+  </div>
+
+  <div class="wrap hero-inner" style="padding:22px 16px">
+    <div class="badges">
+      <span class="badge" data-i18n-key="badge1">Cyanide-Free White Bronze</span>
+      <span class="badge" data-i18n-key="badge2">Bright • Hard • Wear-Resistant</span>
+      <span class="badge" data-i18n-key="badge3">Rack / Barrel</span>
     </div>
-    <div class="wrap" style="padding:22px 16px">
-      <div class="badges">
-        <span class="badge" data-i18n-key="badge1">Cyanide-Free White Bronze</span>
-        <span class="badge" data-i18n-key="badge2">Bright • Hard • Wear-Resistant</span>
-        <span class="badge" data-i18n-key="badge3">Rack / Barrel</span>
-      </div>
-      <h1 data-i18n-key="hero_title">317M — ไวท์บรอนซ์ (ปราศจากไซยาไนด์)</h1>
-      <p data-i18n-key="hero_tagline">กระบวนการชุบไวท์บรอนซ์สีเงินสว่าง ปลอดไซยาไนด์ ชุบเร็ว ฟิล์มแข็ง ~600HV (0.05) สม่ำเสมอ ทนการสึก/สารเคมี ทำงานอุณหภูมิต่ำ ช่วงกระแสกว้าง เหมาะกับชิ้นงานแร็ค/บาร์เรล และสอดคล้องข้อกำหนดโลหะอันตราย EU/USA/Japan</p>
+
+    <h1 data-i18n-key="hero_title">317M — ไวท์บรอนซ์ (ปราศจากไซยาไนด์)</h1>
+    <p data-i18n-key="hero_tagline">
+      กระบวนการชุบไวท์บรอนซ์สีเงินสว่าง ปลอดไซยาไนด์ ชุบเร็ว ฟิล์มแข็ง ~600HV (0.05) สม่ำเสมอ ทนการสึก/สารเคมี ทำงานอุณหภูมิต่ำ ช่วงกระแสกว้าง เหมาะกับชิ้นงานแร็ค/บาร์เรล และสอดคล้องข้อกำหนดโลหะอันตราย EU/USA/Japan
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="https://www.baumechemical.com/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
+      <a class="btn ghost" href="https://www.baumechemical.com/contact-us/" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <main class="wrap">
     <!-- Overview -->
@@ -448,6 +485,9 @@
       th:{
         page_title:"317M ไวท์บรอนซ์ (ปราศจากไซยาไนด์) | Baume Chemical",
         badge1:"Cyanide-Free White Bronze", badge2:"สว่าง • แข็ง • ทนสึก", badge3:"Rack / Barrel",
+        btn_back: "ย้อนกลับ",
+        btn_consult: "ปรึกษาทีมเทคนิค",
+        btn_products: "ดูหมวดผลิตภัณฑ์",
         hero_title:"317M — ไวท์บรอนซ์ (ปราศจากไซยาไนด์)",
         hero_tagline:"กระบวนการชุบไวท์บรอนซ์สีเงินสว่าง ปลอดไซยาไนด์ ชุบเร็ว ฟิล์มแข็ง ~600HV (0.05) สม่ำเสมอ ทนการสึก/สารเคมี ทำงานอุณหภูมิต่ำ ช่วงกระแสกว้าง เหมาะกับชิ้นงานแร็ค/บาร์เรล และสอดคล้องข้อกำหนดโลหะอันตราย EU/USA/Japan",
         info_title:"รายละเอียดสินค้า",
@@ -474,6 +514,9 @@
       en:{
         page_title:"317M Cyanide-Free White Bronze | Baume Chemical",
         badge1:"Cyanide-Free White Bronze", badge2:"Bright • Hard • Wear-Resistant", badge3:"Rack / Barrel",
+        btn_back: "Back",
+        btn_consult: "Talk to a Specialist",
+        btn_products: "Browse Products",
         hero_title:"317M — Cyanide-Free White Bronze",
         hero_tagline:"A bright silver-color, cyanide-free white bronze process. Simple make-up, fast plating, ~600HV(0.05), uniform and chemical-/wear-resistant. Low-temperature operation with wide current range for rack and barrel; compliant with hazardous-metals regulations (EU/USA/Japan).",
         info_title:"Product Overview",
