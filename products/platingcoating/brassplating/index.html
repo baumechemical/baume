@@ -6,7 +6,7 @@
 
   <!-- === SEO Basics === -->
   <title data-i18n-key="meta_title">น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical</title>
-  <meta name="description" content="โซลูชันชุบเหลือง (Brass): Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide‑Free) สำหรับงาน Rack/Barrel เน้นโทนสีทอง ความเงา การยึดเกาะ และการทนกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน.">
+  <meta name="description" content="โซลูชันชุบเหลือง (Brass): Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide-Free) สำหรับงาน Rack/Barrel เน้นโทนสีทอง ความเงา การยึดเกาะ และการทนกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/brassplating/">
   <meta name="theme-color" content="#2c5e4e">
@@ -17,7 +17,7 @@
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Brass Plating Solutions | Baume Chemical">
-  <meta property="og:description" content="Dark Yellow / Greenish Yellow / Cyanide‑Free Imitation Gold for rack and barrel—gold‑like appearance with good adhesion and corrosion resistance.">
+  <meta property="og:description" content="Dark Yellow / Greenish Yellow / Cyanide-Free Imitation Gold for rack and barrel—gold-like appearance with good adhesion and corrosion resistance.">
   <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/brassplating/">
   <meta property="og:image" content="https://i.imgur.com/ikv1kfr.jpeg">
   <meta property="og:image:alt" content="Brass plating bath with rich golden finish">
@@ -42,7 +42,7 @@
     "name":"Brass Plating Solutions",
     "inLanguage":"th",
     "url":"https://www.baumechemical.com/products/platingcoating/brassplating/",
-    "description":"Dark Yellow Brass, Greenish Yellow Brass, and Cyanide‑free Imitation Gold systems for rack and barrel plating."
+    "description":"Dark Yellow Brass, Greenish Yellow Brass, and Cyanide-free Imitation Gold systems for rack and barrel plating."
   }
   </script>
   <!-- JSON-LD: Breadcrumb -->
@@ -82,22 +82,89 @@
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.65}
 
-    /* === Floating Language Switcher === */
-    .lang-fab{position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    /* === Site Header (overlay on hero) === */
+    .site-header{
+      position:absolute; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{
+      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
+      background:#e8f1ec var(--logo-url) center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(2,8,20,.15)
+    }
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{
+      display:inline-block; padding:10px 12px; border-radius:10px;
+      color:#fff; text-decoration:none; font-weight:600;
+    }
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
+    }
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* === Floating Language Switcher (below header) === */
+    .lang-fab{position:fixed; top: calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
     .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* === Hero === */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 640px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://i.imgur.com/ikv1kfr.jpeg') center/cover no-repeat; padding:22px 16px}
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,46px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(480px, 66vh, 740px); background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)), url('https://i.imgur.com/ikv1kfr.jpeg') center/cover no-repeat; padding:22px 16px}
+    .hero-inner{position:relative; z-index:1}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(28px,4.4vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto 14px; color:#e6f2ef}
+    .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    .btn:hover{filter:brightness(.95)}
+
+    /* Back button on hero */
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
+
+    /* Hero bullets (3 chips) */
+    .bullets{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px}
+    .bullet{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid rgba(255,255,255,.5); border-radius:999px; background:rgba(255,255,255,.12); font-weight:600; color:#eaf4f2; backdrop-filter: blur(6px)}
+    .bullet .icon{display:grid; place-items:center; width:22px; height:22px; border-radius:999px; background:#fff; color:#0f172a; font-weight:800; font-size:12px}
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -143,6 +210,32 @@
 </head>
 <body>
 
+  <!-- === Site Header (Top Navigation) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="https://www.baumechemical.com/index/" class="nav-link">Home</a></li>
+          <li><a href="https://www.baumechemical.com/about-us/" class="nav-link">About us</a></li>
+          <li><a href="https://www.baumechemical.com/products/" class="nav-link" aria-current="page">Products</a></li>
+          <li><a href="https://www.baumechemical.com/contact-us/" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- === Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
@@ -156,10 +249,41 @@
   </div>
 
   <!-- === Hero === -->
-  <header class="hero">
-    <div class="wrap" style="padding:22px 16px">
+  <header class="hero" aria-label="Brass Plating Hero">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
+    <div class="hero-inner wrap" style="padding:22px 16px">
       <h1 data-i18n-key="hero_title">Brass Plating</h1>
       <p data-i18n-key="hero_tagline">ชุบเหลืองเพื่อผิวโทนทอง สวยหรู พร้อมการยึดเกาะและความทนกัดกร่อน—รองรับ Dark Yellow / Greenish Yellow และ Imitation Gold (ปลอดไซยาไนด์) สำหรับ Rack/Barrel</p>
+
+      <!-- Pretty bullets (3) -->
+      <div class="bullets" aria-label="Key highlights">
+        <div class="bullet">
+          <span class="icon">✓</span>
+          <span data-i18n-key="b1">โทนสีทองปรับเฉดได้</span>
+        </div>
+        <div class="bullet">
+          <span class="icon">✓</span>
+          <span data-i18n-key="b2">Dark / Greenish / Imitation Gold (NC)</span>
+        </div>
+        <div class="bullet">
+          <span class="icon">✓</span>
+          <span data-i18n-key="b3">รองรับ Rack/Barrel งานตกแต่ง</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
+        <a class="btn ghost" href="https://www.baumechemical.com/contact-us/" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+      </div>
     </div>
   </header>
 
@@ -185,24 +309,24 @@
         <!-- Greenish Yellow Brass -->
         <article id="greenish-yellow" class="card lift reveal">
           <picture>
-            <img src="https://i.imgur.com/ZASo1u0.jpeg" alt="Greenish Yellow Brass – distinctive yellow‑green tone">
+            <img src="https://i.imgur.com/ZASo1u0.jpeg" alt="Greenish Yellow Brass – distinctive yellow-green tone">
           </picture>
           <div class="body">
-            <div class="badges"><span class="badge">Brass</span><span class="badge">Yellow‑Green</span></div>
+            <div class="badges"><span class="badge">Brass</span><span class="badge">Yellow-Green</span></div>
             <h3 data-i18n-key="gy_title">Greenish Yellow Brass Salt</h3>
             <p data-i18n-key="gy_desc">เหมาะทั้งถังกลิ้ง/ถังแขวน ทำงานได้ทั้งอุ่น/เย็น (แนะนำอุ่น) ให้โทนเหลืองอมเขียว ไล่เฉดได้ด้วยอุณหภูมิและกระแส ให้ผิวสวยโดดเด่น แตกต่าง</p>
             <a class="more" href="troubleshootingbrass/index.html" target="_blank" rel="noopener" data-i18n-key="btn_details">ดูรายละเอียด →</a>
           </div>
         </article>
 
-        <!-- Cyanide‑Free Imitation Gold -->
+        <!-- Cyanide-Free Imitation Gold -->
         <article id="imitation-gold-nc" class="card lift reveal">
           <picture>
-            <img src="https://img2.pic.in.th/pic/thumbnail-1.jpg" alt="Cyanide‑Free Imitation Gold – safer brass process">
+            <img src="https://img2.pic.in.th/pic/thumbnail-1.jpg" alt="Cyanide-Free Imitation Gold – safer brass process">
           </picture>
           <div class="body">
-            <div class="badges"><span class="badge">Imitation Gold</span><span class="badge">Cyanide‑Free</span></div>
-            <h3 data-i18n-key="ig_title">Cyanide‑Free Imitation Gold</h3>
+            <div class="badges"><span class="badge">Imitation Gold</span><span class="badge">Cyanide-Free</span></div>
+            <h3 data-i18n-key="ig_title">Cyanide-Free Imitation Gold</h3>
             <p data-i18n-key="ig_desc">ระบบปลอดไซยาไนด์ ลดความเสี่ยงด้านความปลอดภัยและสิ่งแวดล้อม ให้ผิวสวยทนทาน เหมาะกับงานที่ต้องการคุณภาพสูงและข้อกำกับด้านสิ่งแวดล้อม</p>
             <a class="more" href="troubleshootingbrassnoncyanide/index.html" target="_blank" rel="noopener" data-i18n-key="btn_details">ดูรายละเอียด →</a>
           </div>
@@ -313,19 +437,54 @@
   </script>
   <style>.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.reveal.show{opacity:1;transform:none}</style>
 
-  <!-- === i18n === -->
+  <!-- === JS: nav-toggle + back + i18n === -->
   <script>
+    // --- Mobile nav toggle ---
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+    })();
+
+    // --- Back button ---
+    (function(){
+      const btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          const ref = document.referrer;
+          const sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin) { history.back(); return; }
+        }catch(e){}
+        // Fallback: go to parent directory (products/platingcoating/)
+        const parent = location.pathname.replace(/[^\/]+\/?$/, '');
+        location.href = parent || '/products/platingcoating/';
+      });
+    })();
+
+    // --- i18n ---
     const I18N = {
       th:{
         meta_title:"น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical",
         hero_title:"Brass Plating",
         hero_tagline:"ชุบเหลืองเพื่อผิวโทนทอง สวยหรู พร้อมการยึดเกาะและความทนกัดกร่อน—รองรับ Dark Yellow / Greenish Yellow และ Imitation Gold (ปลอดไซยาไนด์) สำหรับ Rack/Barrel",
+        btn_products:"ดูหมวดผลิตภัณฑ์",
+        btn_consult:"ปรึกษาทีมเทคนิค",
+        btn_back:"ย้อนกลับ",
+        b1:"โทนสีทองปรับเฉดได้",
+        b2:"Dark / Greenish / Imitation Gold (NC)",
+        b3:"รองรับ Rack/Barrel งานตกแต่ง",
         sec_products:"ผลิตภัณฑ์ในกลุ่มนี้",
         sec_products_lead:"ชุบเหลือง (ทองแดง+สังกะสี) เพื่อความสวยงาม การนำไฟฟ้า และการป้องกันการกัดกร่อน ใช้ในจิวเวลรี่ งานตกแต่ง ฮาร์ดแวร์ เครื่องดนตรี และชิ้นส่วนยานยนต์",
         btn_details:"ดูรายละเอียด →",
         dy_title:"Dark Yellow Brass Salt", dy_desc:"เหมาะทั้งถังกลิ้ง/ถังแขวน ทำงานได้ทั้งอุ่น/เย็น (แนะนำอุ่น) ให้โทนเหลืองทองจัดจ้าน ไล่เฉดผ่านอุณหภูมิและกระแส ผิวเงาใกล้เคียงทอง 20–24K",
         gy_title:"Greenish Yellow Brass Salt", gy_desc:"เหมาะทั้งถังกลิ้ง/ถังแขวน ให้โทนเหลืองอมเขียว ปรับเฉดด้วยอุณหภูมิและกระแส ผิวโดดเด่นต่างจากเหลืองทองทั่วไป",
-        ig_title:"Cyanide‑Free Imitation Gold", ig_desc:"ระบบปลอดไซยาไนด์ ลดความเสี่ยงด้านความปลอดภัยและสิ่งแวดล้อม ให้ผิวสวยทนทาน เหมาะกับงานที่ต้องการคุณภาพสูงและการปฏิบัติตามข้อกำกับ",
+        ig_title:"Cyanide-Free Imitation Gold", ig_desc:"ระบบปลอดไซยาไนด์ ลดความเสี่ยงด้านความปลอดภัยและสิ่งแวดล้อม ให้ผิวสวยทนทาน เหมาะกับงานที่ต้องการคุณภาพสูงและการปฏิบัติตามข้อกำกับ",
         tbl_type:"ประเภท", tbl_tone:"โทนสี", tbl_app:"การใช้งาน", tbl_sub:"วัสดุรองรับ", tbl_notes:"หมายเหตุ",
         row_dy_type:"ทองเหลืองแดงเข้ม", row_dy_tone:"เหลืองทอง–เหลืองอมแดง", row_dy_app:"ถังกลิ้งและถังแขวน", row_dy_sub:"พื้นนิกเกิล, ทองเหลือง", row_dy_note:"ไล่เฉดด้วยอุณหภูมิ/กระแส",
         row_gy_type:"ทองเหลืองเขียวเข้ม", row_gy_tone:"เหลืองอมเขียว", row_gy_app:"ถังกลิ้งและถังแขวน", row_gy_sub:"พื้นนิกเกิล, ทองเหลือง", row_gy_note:"โทนแตกต่าง โดดเด่น",
@@ -336,18 +495,24 @@
       en:{
         meta_title:"Brass Plating Solutions | Baume Chemical",
         hero_title:"Brass Plating",
-        hero_tagline:"Gold‑tone brass finishes with strong adhesion and corrosion resistance—Dark Yellow, Greenish Yellow, and Cyanide‑Free Imitation Gold for rack/barrel lines.",
+        hero_tagline:"Gold-tone brass finishes with strong adhesion and corrosion resistance—Dark Yellow, Greenish Yellow, and Cyanide-Free Imitation Gold for rack/barrel lines.",
+        btn_products:"Browse Products",
+        btn_consult:"Talk to a Specialist",
+        btn_back:"Back",
+        b1:"Tunable gold tones",
+        b2:"Dark / Greenish / Imitation Gold (NC)",
+        b3:"Rack/Barrel ready",
         sec_products:"Products in this group",
         sec_products_lead:"Brass (Cu+Zn) for aesthetics, conductivity, and corrosion protection—used across jewelry, décor, hardware, instruments, and auto parts.",
         btn_details:"View details →",
-        dy_title:"Dark Yellow Brass Salt", dy_desc:"Rack and barrel capable; runs warm/cold (warm preferred). Rich yellow‑gold tones adjustable via temperature/current; high gloss, 20–24K‑like appearance.",
-        gy_title:"Greenish Yellow Brass Salt", gy_desc:"Rack and barrel capable; yellow‑green tone adjustable by temperature/current for a distinctive look.",
-        ig_title:"Cyanide‑Free Imitation Gold", ig_desc:"Cyanide‑free system for safer, eco‑friendlier operations; durable, attractive gold‑like finish; ideal where environmental compliance matters.",
+        dy_title:"Dark Yellow Brass Salt", dy_desc:"Rack and barrel capable; runs warm/cold (warm preferred). Rich yellow-gold tones adjustable via temperature/current; high gloss, 20–24K-like appearance.",
+        gy_title:"Greenish Yellow Brass Salt", gy_desc:"Rack and barrel capable; yellow-green tone adjustable by temperature/current for a distinctive look.",
+        ig_title:"Cyanide-Free Imitation Gold", ig_desc:"Cyanide-free system for safer, eco-friendlier operations; durable, attractive gold-like finish; ideal where environmental compliance matters.",
         tbl_type:"Type", tbl_tone:"Tone", tbl_app:"Application", tbl_sub:"Substrates", tbl_notes:"Notes",
-        row_dy_type:"Dark Yellow Brass", row_dy_tone:"Yellow‑to‑reddish yellow", row_dy_app:"Rack / Barrel", row_dy_sub:"Ni base, brass", row_dy_note:"Tune tone with temperature/current",
-        row_gy_type:"Greenish Yellow Brass", row_gy_tone:"Yellow‑green", row_gy_app:"Rack / Barrel", row_gy_sub:"Ni base, brass", row_gy_note:"Distinctive color option",
-        row_ig_type:"Imitation Gold (NC)", row_ig_tone:"Gold‑like (cyanide‑free)", row_ig_app:"Decorative / Compliance", row_ig_sub:"Industries prioritizing safety/environment", row_ig_note:"Reduces hazardous waste burden",
-        tbl_footnote:"Note: Actual parameters (temperature/time/concentration/current) must be set via on‑site trials and your line standards.",
+        row_dy_type:"Dark Yellow Brass", row_dy_tone:"Yellow-to-reddish yellow", row_dy_app:"Rack / Barrel", row_dy_sub:"Ni base, brass", row_dy_note:"Tune tone with temperature/current",
+        row_gy_type:"Greenish Yellow Brass", row_gy_tone:"Yellow-green", row_gy_app:"Rack / Barrel", row_gy_sub:"Ni base, brass", row_gy_note:"Distinctive color option",
+        row_ig_type:"Imitation Gold (NC)", row_ig_tone:"Gold-like (cyanide-free)", row_ig_app:"Decorative / Compliance", row_ig_sub:"Industries prioritizing safety/environment", row_ig_note:"Reduces hazardous waste burden",
+        tbl_footnote:"Note: Actual parameters (temperature/time/concentration/current) must be set via on-site trials and your line standards.",
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
@@ -357,7 +522,7 @@
     function applyLang(lang){
       const L = (lang==='en')?'en':'th';
       document.documentElement.lang = L;
-      const titleEl = document.querySelector('title[data-i18n-key=\"meta_title\"]');
+      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
       if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
       els.translatables().forEach(node=>{ const key = node.getAttribute('data-i18n-key'); if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key]; });
