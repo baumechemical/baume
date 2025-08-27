@@ -68,223 +68,147 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
 
-  :root{ --header-h: 56px; } /* ปรับความสูงตามจริงของ header บนมือถือ */
-
-/* HEADER พื้นฐาน */
-.site-header{
-  position: sticky; top:0; z-index:1200;
-  backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(255,255,255,.86);
-  border-bottom:1px solid #e6ece8;
-}
-.nav-bar{
-  max-width:1200px; margin:0 auto; padding:8px 12px;
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-.brand-logo{width:38px;height:38px;border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-.brand-name{font-weight:800; color:#1d2b23}
-
-/* เมนูหลัก - เดสก์ท็อป */
-.primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-.primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
-.primary-nav a:hover{ background:#ecf4ef }
-.primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-
-/* ปุ่มเบอร์เกอร์ */
-.nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-.nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-.nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
-
-/* มือถือ: ย่อขนาด + เมนูเลื่อนลงแบบแผง */
-@media (max-width:900px){
-  .brand-logo{width:30px;height:30px;border-radius:8px}
-  .brand-name{font-size:15px}
-  .nav-toggle{ display:inline-block; }
-  .primary-nav{
-    position:fixed; left:0; right:0; top:var(--header-h);
-    background:#fff; border-bottom:1px solid #e6ece8;
-    box-shadow:0 12px 30px rgba(2,8,20,.12);
-    display:none; flex-direction:column; gap:6px;
-    padding:12px 16px; z-index:1190;
+  <style>
+  :root{
+    --header-h: 56px;
+    --brand: #2c5e4e;
+    --brand-2: #387b5b;
+    --logo-url: url('https://www.baumechemical.com/assets/logo.png');
+    --shadow-1: 0 10px 26px rgba(2,8,20,.08);
   }
-  .primary-nav a{ padding:12px 10px; font-size:15px }
-  .site-header.open .primary-nav{ display:flex; }
-  body.no-scroll{ overflow:hidden; } /* กันหน้าเลื่อนเมื่อเมนูเปิด */
-  /* ซ่อนชื่อแบรนด์ถ้าจอแคบมาก */
-  @media (max-width:760px){ .brand-name{display:none} }
-}
 
-/* ====== ปุ่มภาษา (LANG FAB) ให้เลื่อนตามหน้าและไม่ทับหัว ====== */
-.lang-fab{
-  position:fixed; top:14px; right:14px; z-index:1100;
-  display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
-  background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
-}
-.lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a; }
-.lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-.lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-
-/* มือถือ: ทำเป็น sticky ใต้เฮดเดอร์ + ย่อขนาด + ซ่อนตัวอักษรจอเล็กมาก */
-@media (max-width:900px){
-  .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
-  .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
-  .lang-fab .flag{ width:18px; height:13px }
-}
-@media (max-width:420px){
-  .lang-fab .lang-btn span{ display:none; } /* เหลือแค่ธง */
-}
-
-
-    /* === Hero === */
-    .hero{
-      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(420px, 60vh, 620px);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/image0-5.jpeg') center/cover no-repeat;
-    }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
-    .back-chip{
-      display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;
-      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
-      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
-    }
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
-
-    /* === Layout === */
-    .wrap{max-width:980px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
-    h3{margin:18px 0 8px;font-size:1.1rem}
-    p.lead{margin:0 0 16px;color:#5f6d7c}
-
-    /* === Article === */
-    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
-    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
-    .toc a{color:#2c5e4e;text-decoration:none}
-    .toc a:hover{text-decoration:underline}
-    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
-    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
-    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
-    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
-    th{background:#f8fbf9}
-    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
-
-    /* === Footer (match homepage) === */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
-    .site-footer a{color:#e2e8f0;text-decoration:none}
-    .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
-
-    /* === Utilities === */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
-
-    /* === Dual language blocks === */
-    [data-lang-block]{display:none}
-    html[lang="th"] [data-lang-block="th"]{display:block}
-    html[lang="en"] [data-lang-block="en"]{display:block}
-
-    :root{ --header-h: 56px; } /* ปรับความสูงตามจริงของ header บนมือถือ */
-
-/* HEADER พื้นฐาน */
-.site-header{
-  position: sticky; top:0; z-index:1200;
-  backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(255,255,255,.86);
-  border-bottom:1px solid #e6ece8;
-}
-.nav-bar{
-  max-width:1200px; margin:0 auto; padding:8px 12px;
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-.brand-logo{width:38px;height:38px;border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-.brand-name{font-weight:800; color:#1d2b23}
-
-/* เมนูหลัก - เดสก์ท็อป */
-.primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-.primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
-.primary-nav a:hover{ background:#ecf4ef }
-.primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-
-/* ปุ่มเบอร์เกอร์ */
-.nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-.nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-.nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
-
-/* มือถือ: ย่อขนาด + เมนูเลื่อนลงแบบแผง */
-@media (max-width:900px){
-  .brand-logo{width:30px;height:30px;border-radius:8px}
-  .brand-name{font-size:15px}
-  .nav-toggle{ display:inline-block; }
-  .primary-nav{
-    position:fixed; left:0; right:0; top:var(--header-h);
-    background:#fff; border-bottom:1px solid #e6ece8;
-    box-shadow:0 12px 30px rgba(2,8,20,.12);
-    display:none; flex-direction:column; gap:6px;
-    padding:12px 16px; z-index:1190;
+  /* HEADER พื้นฐาน */
+  .site-header{
+    position: sticky; top:0; z-index:1200;
+    backdrop-filter:saturate(140%) blur(8px);
+    background:rgba(255,255,255,.86);
+    border-bottom:1px solid #e6ece8;
   }
-  .primary-nav a{ padding:12px 10px; font-size:15px }
-  .site-header.open .primary-nav{ display:flex; }
-  body.no-scroll{ overflow:hidden; } /* กันหน้าเลื่อนเมื่อเมนูเปิด */
-  /* ซ่อนชื่อแบรนด์ถ้าจอแคบมาก */
-  @media (max-width:760px){ .brand-name{display:none} }
-}
+  .nav-bar{
+    max-width:1200px; margin:0 auto; padding:8px 12px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+  .brand-logo{width:38px;height:38px;border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+  .brand-name{font-weight:800; color:#1d2b23}
 
-/* ====== ปุ่มภาษา (LANG FAB) ให้เลื่อนตามหน้าและไม่ทับหัว ====== */
-.lang-fab{
-  position:fixed; top:14px; right:14px; z-index:1100;
-  display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
-  background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
-}
-.lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a; }
-.lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-.lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+  .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+  .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+  .primary-nav a:hover{ background:#ecf4ef }
+  .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
 
-/* มือถือ: ทำเป็น sticky ใต้เฮดเดอร์ + ย่อขนาด + ซ่อนตัวอักษรจอเล็กมาก */
-@media (max-width:900px){
-  .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
-  .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
-  .lang-fab .flag{ width:18px; height:13px }
-}
-@media (max-width:420px){
-  .lang-fab .lang-btn span{ display:none; } /* เหลือแค่ธง */
-}
+  .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
+  .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
+  .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
 
-/* === Language buttons INSIDE menu/header === */
-.lang-menu{
-  display:flex; align-items:center; gap:6px;
-  padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#fff;
-  box-shadow:0 8px 20px rgba(2,8,20,.08);
-}
-.lang-menu .lang-btn{
-  appearance:none; border:0; background:transparent; cursor:pointer;
-  padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-}
-.lang-menu .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-.lang-menu .flag{ width:18px; height:13px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+  /* มือถือ */
+  @media (max-width:900px){
+    .brand-logo{width:30px;height:30px;border-radius:8px}
+    .brand-name{font-size:15px}
+    .nav-toggle{ display:inline-block; }
+    .primary-nav{
+      position:fixed; left:0; right:0; top:var(--header-h);
+      background:#fff; border-bottom:1px solid #e6ece8;
+      box-shadow:0 12px 30px rgba(2,8,20,.12);
+      display:none; flex-direction:column; gap:6px;
+      padding:12px 16px; z-index:1190;
+    }
+    .primary-nav a{ padding:12px 10px; font-size:15px }
+    .site-header.open .primary-nav{ display:flex; }
+    body.no-scroll{ overflow:hidden; }
+  }
+  /* แยก @media 760px ออกมา (ห้ามซ้อน) */
+  @media (max-width:760px){
+    .brand-name{display:none}
+  }
 
-/* เดสก์ท็อปโชว์ตัวขวาสุด มือถือโชว์ตัวในเมนู */
-@media (min-width:901px){ .lang-menu--mobile{ display:none } }
-@media (max-width:900px){
-  .lang-menu--desktop{ display:none }
-  .lang-menu--mobile{ display:flex; margin-top:8px; }
-}
+  /* ปุ่มภาษา FAB */
+  .lang-fab{
+    position:fixed; top:14px; right:14px; z-index:1100;
+    display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
+    background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
+  }
+  .lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a; }
+  .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+  .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
+  @media (max-width:900px){
+    .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
+    .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
+    .lang-fab .flag{ width:18px; height:13px }
+  }
+  @media (max-width:420px){
+    .lang-fab .lang-btn span{ display:none; }
+  }
+
+  /* ปุ่มภาษาในเมนู/เดสก์ท็อป */
+  .lang-menu{
+    display:flex; align-items:center; gap:6px;
+    padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#fff;
+    box-shadow:0 8px 20px rgba(2,8,20,.08);
+  }
+  .lang-menu .lang-btn{
+    appearance:none; border:0; background:transparent; cursor:pointer;
+    padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+  }
+  .lang-menu .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+  .lang-menu .flag{ width:18px; height:13px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+  @media (min-width:901px){ .lang-menu--mobile{ display:none } }
+  @media (max-width:900px){
+    .lang-menu--desktop{ display:none }
+    .lang-menu--mobile{ display:flex; margin-top:8px; }
+  }
+
+  /* === Hero / Layout / Article / Footer / Utilities (ของเดิมคุณ) === */
+  .hero{ position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px);
+    background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/image0-5.jpeg') center/cover no-repeat; }
+  .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+  .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+  .back-chip{ display:inline-flex; align-items:center; gap:6px; margin-bottom:10px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px); }
+  .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+  .wrap{max-width:980px;margin:auto;padding:34px 16px}
+  h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+  h3{margin:18px 0 8px;font-size:1.1rem}
+  p.lead{margin:0 0 16px;color:#5f6d7c}
+
+  .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
+  .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
+  .toc a{color:#2c5e4e;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
+  .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
+  table{width:100%;border-collapse:collapse;margin:10px 0 16px}
+  th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
+  th{background:#f8fbf9}
+  code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+
+  .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+  .site-footer a{color:#e2e8f0;text-decoration:none}
+  .site-footer a:hover{color:#fff;text-decoration:underline}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+  .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+  @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+  .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+  .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+  .ft-name{font-weight:800;color:#fff}
+  .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+  .footer-list{list-style:none;margin:8px 0 0;padding:0}
+  .footer-list li{margin:6px 0}
+  .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  [data-lang-block]{display:none}
+  html[lang="th"] [data-lang-block="th"]{display:block}
+  html[lang="en"] [data-lang-block="en"]{display:block}
   </style>
+
 </head>
 <body>
 
-  <!-- === Top Header === -->
 <header class="site-header" role="banner" aria-label="Site header">
   <div class="nav-bar">
     <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -292,7 +216,7 @@
       <span class="brand-name">Baume Chemical</span>
     </a>
 
-    <!-- ปุ่มเบอร์เกอร์ (แสดงเฉพาะมือถือ) -->
+    <!-- ปุ่มเบอร์เกอร์ (มือถือ) -->
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
       <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
@@ -304,10 +228,29 @@
       <a href="https://www.baumechemical.com/products/passivation/">Passivation</a>
       <a href="https://www.baumechemical.com/products/polishing/">Polishing</a>
       <a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a>
+
+      <!-- ปุ่มภาษาเวอร์ชันมือถือในเมนู -->
+      <div class="lang-menu lang-menu--mobile" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+          <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+          <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+        </button>
+      </div>
     </nav>
+
+    <!-- ปุ่มภาษาเดสก์ท็อป ขอบขวา -->
+    <div class="lang-menu lang-menu--desktop" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+      </button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+      </button>
+    </div>
   </div>
 </header>
-
 
     <!-- ปุ่มภาษาเดสก์ท็อป (อยู่นอกเมนู) -->
     <div class="lang-menu lang-menu--desktop" role="group" aria-label="Language">
@@ -611,105 +554,44 @@
     </div>
   </footer>
 
-  <!-- === JS: reveal + i18n (toggle blocks) === -->
-  <script>
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const revObs = new IntersectionObserver((entries,obs)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
-    revealEls.forEach(el=>revObs.observe(el));
-
-    /* i18n dictionary (hero/footer/nav/back labels; article uses dual blocks) */
-    const I18N = {
-      th: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
-        back_blog:"← ย้อนกลับ",
-        hero_title: "กัดเงาอลูมิเนียมด้วยไฟฟ้า (Electropolishing) ให้เงาเรียบเสมอ",
-        hero_tagline: "ขั้นตอนทีละสเต็ป หน้าต่างกระแส/อุณหภูมิ เทคนิคคุมความสม่ำเสมอ และวิธีแก้ปัญหายอดฮิต พร้อมลิงก์ไปหมวด Pretreatment และ Polishing ที่เกี่ยวข้อง",
-        footer_products: "หมวดผลิตภัณฑ์",
-        footer_contact: "ติดต่อเรา",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
-      },
-      en: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
-        back_blog:"← Back to Blog",
-        hero_title: "Aluminum Electropolishing: How to Get a Uniform Bright Finish",
-        hero_tagline: "Step-by-step prep, starter windows for current/temperature, fixturing tips, and a quick troubleshooting guide—with links to related Pretreatment and Polishing chemistries.",
-        footer_products: "Products",
-        footer_contact: "Contact Us",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
-      }
-    };
-
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
-    };
-
-    function applyLang(lang){
-      const sel = (lang === 'en') ? 'en' : 'th';
-      document.documentElement.lang = sel;
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
-      els.translatables().forEach(node => {
-        const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
-      });
-      try{ localStorage.setItem('lang', sel); }catch(e){}
-    }
-
-    (function initLang(){
-      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
-      applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
-    })();
-  </script>
-  <script>
-(function(){
-  // Toggle เมนูหลัก
-  const header = document.querySelector('.site-header');
-  const toggle = document.querySelector('.nav-toggle');
-  toggle?.addEventListener('click', ()=>{
-    const isOpen = header.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('no-scroll', isOpen);
-  });
-  // ปิดเมนูเมื่อเปลี่ยนขนาดจอกลับเป็นเดสก์ท็อป
-  window.addEventListener('resize', ()=>{
-    if (window.innerWidth > 900 && header.classList.contains('open')){
-      header.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-      document.body.classList.remove('no-scroll');
-    }
-  });
-
-  // (ตัวเลือก) ให้ปุ่มภาษาเลื่อนหายตอนสกรอลล์ลง โชว์ตอนเลื่อนขึ้น
-  if (window.matchMedia('(max-width: 900px)').matches){
-    const fab = document.querySelector('.lang-fab');
-    let lastY = window.scrollY;
-    window.addEventListener('scroll', ()=>{
-      const down = window.scrollY > lastY;
-      fab.style.transition = 'transform .18s ease, opacity .18s ease';
-      fab.style.transform = down ? 'translateY(-10px)' : 'translateY(0)';
-      fab.style.opacity = down ? '0' : '1';
-      lastY = window.scrollY;
-    }, {passive:true});
-  }
-})();
-</script>
-
 <script>
-  const I18N = { /* … ของเดิม … */ };
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const revObs = new IntersectionObserver((entries,obs)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+  }, {threshold:.18});
+  revealEls.forEach(el=>revObs.observe(el));
+
+  // i18n dictionary
+  const I18N = {
+    th: {
+      nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+      back_blog:"← ย้อนกลับ",
+      hero_title: "กัดเงาอลูมิเนียมด้วยไฟฟ้า (Electropolishing) ให้เงาเรียบเสมอ",
+      hero_tagline: "ขั้นตอนทีละสเต็ป หน้าต่างกระแส/อุณหภูมิ เทคนิคคุมความสม่ำเสมอ และวิธีแก้ปัญหายอดฮิต พร้อมลิงก์ไปหมวด Pretreatment และ Polishing ที่เกี่ยวข้อง",
+      footer_products: "หมวดผลิตภัณฑ์",
+      footer_contact: "ติดต่อเรา",
+      footer_copy: "© 2025 Baume Chemical. All rights reserved."
+    },
+    en: {
+      nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+      back_blog:"← Back to Blog",
+      hero_title: "Aluminum Electropolishing: How to Get a Uniform Bright Finish",
+      hero_tagline: "Step-by-step prep, starter windows for current/temperature, fixturing tips, and a quick troubleshooting guide—with links to related Pretreatment and Polishing chemistries.",
+      footer_products: "Products",
+      footer_contact: "Contact Us",
+      footer_copy: "© 2025 Baume Chemical. All rights reserved."
+    }
+  };
 
   const els = {
-    langBtns: () => document.querySelectorAll('.lang-btn'),
+    langBtns: () => document.querySelectorAll('.lang-btn'), // ทั้ง FAB และในเมนู
     translatables: () => document.querySelectorAll('[data-i18n-key]')
   };
 
   function applyLang(lang){
     const sel = (lang === 'en') ? 'en' : 'th';
     document.documentElement.lang = sel;
-    // อัปเดตสถานะปุ่มทั้งเดสก์ท็อปและมือถือพร้อมกัน
     els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
     els.translatables().forEach(node => {
       const key = node.getAttribute('data-i18n-key');
@@ -718,46 +600,44 @@
     try{ localStorage.setItem('lang', sel); }catch(e){}
   }
 
-  (function initLang(){
+  (function init(){
     const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
     applyLang(saved);
     els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+
+    // Toggle เมนู
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.nav-toggle');
+    toggle?.addEventListener('click', ()=>{
+      const isOpen = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('no-scroll', isOpen);
+    });
+    window.addEventListener('resize', ()=>{
+      if (window.innerWidth > 900 && header.classList.contains('open')){
+        header.classList.remove('open');
+        toggle?.setAttribute('aria-expanded','false');
+        document.body.classList.remove('no-scroll');
+      }
+    });
+
+    // FAB hide-on-scroll (mobile)
+    if (window.matchMedia('(max-width: 900px)').matches){
+      const fab = document.querySelector('.lang-fab');
+      if (fab){
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', ()=>{
+          const down = window.scrollY > lastY;
+          fab.style.transition = 'transform .18s ease, opacity .18s ease';
+          fab.style.transform = down ? 'translateY(-10px)' : 'translateY(0)';
+          fab.style.opacity = down ? '0' : '1';
+          lastY = window.scrollY;
+        }, {passive:true});
+      }
+    }
   })();
 </script>
 
-<script>
-(function(){
-  // Toggle เมนูหลัก
-  const header = document.querySelector('.site-header');
-  const toggle = document.querySelector('.nav-toggle');
-  toggle?.addEventListener('click', ()=>{
-    const isOpen = header.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('no-scroll', isOpen);
-  });
-  // ปิดเมนูเมื่อเปลี่ยนขนาดจอกลับเป็นเดสก์ท็อป
-  window.addEventListener('resize', ()=>{
-    if (window.innerWidth > 900 && header.classList.contains('open')){
-      header.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-      document.body.classList.remove('no-scroll');
-    }
-  });
-
-  // (ตัวเลือก) ให้ปุ่มภาษาเลื่อนหายตอนสกรอลล์ลง โชว์ตอนเลื่อนขึ้น
-  if (window.matchMedia('(max-width: 900px)').matches){
-    const fab = document.querySelector('.lang-fab');
-    let lastY = window.scrollY;
-    window.addEventListener('scroll', ()=>{
-      const down = window.scrollY > lastY;
-      fab.style.transition = 'transform .18s ease, opacity .18s ease';
-      fab.style.transform = down ? 'translateY(-10px)' : 'translateY(0)';
-      fab.style.opacity = down ? '0' : '1';
-      lastY = window.scrollY;
-    }, {passive:true});
-  }
-})();
-</script>
 
 </body>
 </html>
