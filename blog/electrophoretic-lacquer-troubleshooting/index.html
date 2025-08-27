@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า (E-coat/ED) & วิธีแก้เบื้องต้น | Baume Chemical</title>
+
+  <!-- === SEO === -->
+  <meta name="description" content="รวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED) เช่น fish eyes, crater, พิตติ้ง, ฟิล์มบาง, ไหม้ขอบ, โทนสีเพี้ยน, การเกิดฟอง พร้อมสาเหตุ–วิธีแก้ หน้าต่างพารามิเตอร์ การคุมอ่าง/UF/Anolyte ล้าง–ไดร์ไฟ และ QA/การอบให้หายขาด">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="keywords" content="E-coat troubleshooting, electrophoretic lacquer, ED paint, แลคเกอร์ไฟฟ้า, ปัญหา e-coat, UF membrane, anolyte control, Baume Chemical">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า (E-coat/ED) & วิธีแก้เบื้องต้น">
+  <meta property="og:description" content="Fish eyes, crater, ฟิล์มบาง/หนาไม่สม่ำเสมอ, ไหม้ขอบ, โทนสีเพี้ยน, โฟม — สาเหตุ วิธีแก้ หน้าต่างพารามิเตอร์ และการคุมอ่าง/UF/Anolyte">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/ecoat_line_cover.webp">
+  <meta property="og:image:alt" content="Electrophoretic lacquer (E-coat) line and coated parts">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า (E-coat/ED) & วิธีแก้เบื้องต้น",
+    "inLanguage":"th",
+    "author":{"@type":"Organization","name":"Baume Chemical"},
+    "publisher":{"@type":"Organization","name":"Baume Chemical","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"}},
+    "image":"https://img2.pic.in.th/pic/ecoat_line_cover.webp",
+    "mainEntityOfPage":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/",
+    "description":"คู่มือแก้ปัญหาและคุมคุณภาพงานแลคเกอร์ไฟฟ้า (E-coat/ED): อาการ→สาเหตุ→วิธีแก้ หน้าต่างพารามิเตอร์ UF/Anolyte การล้าง–อบ และ QA",
+    "datePublished":"2025-01-01",
+    "dateModified":"2025-01-01"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+
+    /* === Sticky Top Header (logo + menu) === */
+    .site-header{
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid #e6ece8;
+    }
+    .nav-bar{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;
+      font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-fab .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* === Hero === */
+    .hero{
+      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(420px, 60vh, 620px);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/ecoat_line_cover.webp') center/cover no-repeat;
+    }
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-chip{
+      display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;
+      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
+      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
+    }
+    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+    /* === Layout === */
+    .wrap{max-width:980px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    h3{margin:18px 0 8px;font-size:1.1rem}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
+
+    /* === Article === */
+    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
+    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
+    .toc a{color:#2c5e4e;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
+    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
+    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
+    th{background:#f8fbf9}
+    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+
+    /* === Footer (match homepage) === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* === Utilities === */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* === Dual language blocks === */
+    [data-lang-block]{display:none}
+    html[lang="th"] [data-lang-block="th"]{display:block}
+    html[lang="en"] [data-lang-block="en"]{display:block}
+  </style>
+</head>
+<body>
+
+  <!-- === Top Header === -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+      <span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+      <span>EN</span>
+    </button>
+  </div>
+
+  <!-- === Hero === -->
+  <header class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <a class="back-chip" href="https://www.baumechemical.com/blog/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_blog">← กลับบล็อก</a>
+      <h1 data-i18n-key="hero_title">ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า (E-coat/ED) &amp; วิธีแก้เบื้องต้น</h1>
+      <p data-i18n-key="hero_tagline">
+        Fish eyes · Crater · พิตติ้ง/รูเข็ม · ฟิล์มบาง/หนาไม่เท่ากัน · ไหม้ขอบ · โทนสี/ความเงาเพี้ยน · โฟม — สาเหตุ พารามิเตอร์ และแนวทางแก้
+        — ลิงก์ไปหมวด <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/protective/">Protective</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- === Article === -->
+  <main class="wrap">
+    <article class="article reveal">
+
+      <!-- TH block -->
+      <div data-lang-block="th">
+        <div class="toc" aria-label="สารบัญ">
+          <strong>สารบัญ:</strong>
+          <div>
+            <a href="#tldr">TL;DR – ชีทแก้เร็ว</a> ·
+            <a href="#symptoms">อาการยอดฮิต & สาเหตุ–วิธีแก้</a> ·
+            <a href="#windows">หน้าต่างพารามิเตอร์ (ตัวอย่างทั่วไป)</a> ·
+            <a href="#bath">คุมอ่างหลัก/UF/Anolyte</a> ·
+            <a href="#rinse">ล้าง/รินส์ & โปรไฟล์ไฟ</a> ·
+            <a href="#bakeqa">อบให้หายขาด & QA</a> ·
+            <a href="#maintenance">บำรุงรักษา</a> ·
+            <a href="#related">ลิงก์ที่เกี่ยวข้อง</a>
+          </div>
+        </div>
+
+        <section id="intro">
+          <p class="lead">
+            แลคเกอร์ไฟฟ้า (E-coat/ED) ให้การเคลือบที่ <strong>สม่ำเสมอ ครอบคลุมซอกมุม และยึดเกาะสูง</strong> แต่ต้องคุม “<em>อ่างหลัก-UF-Anolyte-รินส์-อบ</em>”
+            ให้สมดุลกัน บทความนี้รวมปัญหายอดฮิต หน้าต่างพารามิเตอร์ตัวอย่าง และเช็กลิสต์คุมคุณภาพแบบใช้งานจริง
+          </p>
+          <div class="warn"><strong>หมายเหตุ:</strong> พารามิเตอร์ <em>แตกต่างกันตามระบบ/ผู้ผลิต</em> ให้ยึด datasheet เป็นหลัก แล้วใช้ตารางนี้เป็นแนวทางจูนหน้างาน</div>
+        </section>
+
+        <section id="tldr">
+          <h2 class="section">TL;DR – ชีทแก้เร็ว</h2>
+          <table aria-label="Quick actions">
+            <thead><tr><th>อาการ</th><th>ทำอะไรทันที</th></tr></thead>
+            <tbody>
+              <tr><td>Fish eyes (ตาแมว)</td><td>ตัดแหล่งซิลิโคน/น้ำมัน, เพิ่มการล้าง DI, สคิมผิวอ่าง, ตรวจคอมเพรสเซอร์ออยล์/ปลดแบบ</td></tr>
+              <tr><td>Crater/Crawling</td><td>ลดแรงตึงผิวผิดปกติ, เช็คของแข็ง/คอนดักทีวิตี้, ปรับแรงดัน/เวลาขึ้นฟิล์มให้นุ่ม</td></tr>
+              <tr><td>พิตติ้ง/ผิวสาก</td><td>กรอง 10–25 µm, เพิ่มการกวน, ล้าง Permeate หลายสเต็ป, เช็คเกลือ/ฝุ่น</td></tr>
+              <tr><td>ฟิล์มบาง/หนาไม่เท่ากัน</td><td>ทวน %ของแข็ง/แรงดัน/เวลา, ไล่โปรไฟล์ไฟแบบ Ramp, เช็คการวางชิ้น/ระยะขั้ว</td></tr>
+              <tr><td>ไหม้ขอบ/HCD burn</td><td>ลดแรงดันปลาย, เพิ่มชิลด์/Thief, เพิ่ม Ramp-up, คุมอุณหภูมิอ่าง</td></tr>
+              <tr><td>โทน/เงาเพี้ยน</td><td>ล็อก pH/Temp/%ของแข็ง, คนอ่าง/กรองให้ Pigment กระจาย, เช็คสเปกอบ</td></tr>
+              <tr><td>โฟม</td><td>ลดอากาศดูดกลับ/หัวฉีด, ปรับจุดคืน Permeate, ทวนสารช่วยเปียก</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="symptoms">
+          <h2 class="section">อาการยอดฮิต &amp; สาเหตุ–วิธีแก้</h2>
+          <table aria-label="Symptoms and fixes">
+            <thead><tr><th>อาการ</th><th>สาเหตุที่พบบ่อย</th><th>แนวทางแก้</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Fish eyes / ดันฟิล์ม</td>
+                <td>ซิลิโคน/น้ำมัน, ปลดแบบ, น้ำมันคอมเพรสเซอร์, ผงฝุ่นบนผิว</td>
+                <td>ตัดแหล่งซิลิโคน, เปลี่ยนชนิดปลดแบบ, ติดตั้ง oil trap, ทำความสะอาดอากาศเป่า, เพิ่ม DI rinse ก่อนเข้าอ่าง</td>
+              </tr>
+              <tr>
+                <td>Crater / Crawling</td>
+                <td>แรงตึงผิวผิดสมดุล, %ของแข็งต่ำ/สูงเกิน, คอนดักทีวิตี้หลุด, ไฟขึ้นเร็วเกิน</td>
+                <td>รีบาลานซ์ %ของแข็ง/คอนดักทีวิตี้ตามกราฟควบคุม, ใช้ Ramp-up 10–30 วินาที, ลด HCD</td>
+              </tr>
+              <tr>
+                <td>พิตติ้ง/จุดหยาบ</td>
+                <td>สิ่งแขวนลอย/เจล, ฝุ่น, เกลือ/โลหะปน, รินส์สกปรก</td>
+                <td>กรอง 10–25 µm ต่อเนื่อง, UF ให้พอ, ทำความสะอาดราง/สายพาน, รีเฟรชรินส์สุดท้าย (DI &lt; 30 µS/cm)</td>
+              </tr>
+              <tr>
+                <td>ฟิล์มบาง/หนาไม่เท่ากัน</td>
+                <td>%ของแข็งต่ำ, แรงดัน/เวลาน้อย, การวางชิ้น/ระยะขั้วไม่สมดุล, อุณหภูมิอ่างต่ำ</td>
+                <td>ยก %ของแข็งสู่ช่วงเป้าหมาย, เพิ่มแรงดัน/เวลา, จัดจิ๊ก/ชิลด์, รักษาอ่าง ~30°C (ตามระบบ)</td>
+              </tr>
+              <tr>
+                <td>ไหม้ขอบ/เงาแตกบริเวณ HCD</td>
+                <td>แรงดันสูง/ขึ้นไฟฉับพลัน, Pigment/สารเงาไม่สมดุล, อุณหภูมิสูง</td>
+                <td>เพิ่ม Ramp, ลดแรงดันปลาย/เวลาถือ, คนอ่าง, ตรวจสัดส่วนเรซิน:พิกเมนต์</td>
+              </tr>
+              <tr>
+                <td>โทนสี/ความเงาแกว่ง</td>
+                <td>pH/Temp/%SOL หลุด, การตกตะกอนของ Pigment, สารร่วม (coalescent) ผันผวน</td>
+                <td>ล็อก pH/Temp/%SOL ตาม datasheet, คนอ่าง, เติม/ลด coalescent ตามควบคุม</td>
+              </tr>
+              <tr>
+                <td>ยึดเกาะไม่ผ่าน</td>
+                <td>Pretreatment/ฟอสเฟตไม่ดี, คราบไอออน/เกลือ, อบไม่ถึงอุณหภูมิชิ้นงาน</td>
+                <td>ทวน Pretreatment ทั้งเส้น, เพิ่ม DI rinse, วัด <em>metal temperature</em> ระหว่างอบแทนอุณหภูมิอากาศ</td>
+              </tr>
+              <tr>
+                <td>โฟมมาก</td>
+                <td>อากาศดูดกลับ, หัวฉีดคืน Permeate ทิ่มผิวน้ำ, สารช่วยเปียกเกิน</td>
+                <td>ย้ายจุดคืน Permeate ใต้ผิวน้ำ, ลดแรงปั๊ม/ลด air entrainment, ปรับสัดส่วนสารช่วยเปียก</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="windows">
+          <h2 class="section">หน้าต่างพารามิเตอร์ (ตัวอย่างทั่วไป)</h2>
+          <table aria-label="Typical process windows">
+            <thead><tr><th>พารามิเตอร์</th><th>ช่วงเริ่มต้นที่พบบ่อย*</th><th>หมายเหตุ</th></tr></thead>
+            <tbody>
+              <tr><td>อุณหภูมิอ่าง</td><td>28–32 °C</td><td>ยิ่งคงที่ ฟิล์มยิ่งสม่ำเสมอ</td></tr>
+              <tr><td>% ของแข็ง (NVS)</td><td>15–22%</td><td>หนาฟิล์มขึ้นกับ %SOL/แรงดัน/เวลา</td></tr>
+              <tr><td>pH (คาไทออนิก)</td><td>~5.2–6.0</td><td>ตามระบบ/ผู้ผลิต</td></tr>
+              <tr><td>คอนดักทีวิตี้</td><td>~0.8–1.6 mS/cm</td><td>อ้างอิงกราฟควบคุมของระบบ</td></tr>
+              <tr><td>แรงดัน/Ramp</td><td>120–300 V · Ramp 10–30 s</td><td>ขึ้นกับรูปทรงและเป้าหมายความหนา</td></tr>
+              <tr><td>เวลาเคลือบ</td><td>2–4 นาที</td><td>ให้ถึงความหนาเป้าหมาย (เช่น 15–30 µm)</td></tr>
+              <tr><td>รินส์ Permeate</td><td>2–3 ขั้นต่อเนื่อง</td><td>ลด carry-over & คราบน้ำ</td></tr>
+              <tr><td>อบ (ชิ้นงาน)</td><td>160–190 °C · 10–20 นาที</td><td>วัด “อุณหภูมิชิ้นงาน” ไม่ใช่อากาศ</td></tr>
+            </tbody>
+          </table>
+          <div class="note">* ช่วงนี้เป็น “แนวทางทั่วไป” ให้ยึดเอกสารผู้ผลิตระบบเป็นหลัก</div>
+        </section>
+
+        <section id="bath">
+          <h2 class="section">คุมอ่างหลัก / UF / Anolyte</h2>
+          <ul>
+            <li><strong>อ่างหลัก:</strong> ติดตาม %ของแข็ง, pH, คอนดักทีวิตี้, อุณหภูมิ; คนอ่างสม่ำเสมอ; กรอง 10–25 µm ต่อเนื่อง</li>
+            <li><strong>UF (Ultrafiltration):</strong> ปรับอัตรา Permeate ให้ %ของแข็งคงที่; ทำ CIP ตามกำหนด; เลี่ยงน้ำมัน/ซิลิโคนลงเมมเบรน</li>
+            <li><strong>Anolyte:</strong> ตรวจคอนดักทีวิตี้/กรดสะสม; เปลี่ยน/ทดแทนตามคู่มือ; ทำความสะอาดถังแอโนด/แอโนดบ่อย ๆ</li>
+            <li><strong>บันทึกการเติม:</strong> เรซิน/พิกเมนต์/ตัวทำละลาย/กรด ชี้แจงเป็น Ah หรือปริมาณงาน เพื่อทำกราฟควบคุม</li>
+          </ul>
+        </section>
+
+        <section id="rinse">
+          <h2 class="section">ล้าง/รินส์ &amp; โปรไฟล์ไฟ</h2>
+          <ul>
+            <li><strong>DI/Permeate cascade ≥ 2–3 ขั้น</strong> ก่อนและหลังอ่างหลัก; เป้าหมาย DI สุดท้าย ≤ 30 µS/cm</li>
+            <li><strong>ลด Carry-over:</strong> พักสะเด็ด 3–5 วินาทีเหนืออ่าง; จัดทางน้ำไหลกลับ; เป่าลมลดหยด</li>
+            <li><strong>Ramp-up ไฟ:</strong> 10–30 วินาทีจนถึงแรงดันเป้าหมาย; ลดไหม้ขอบ/ผิวหนืด</li>
+            <li><strong>การวางชิ้น/ชิลด์:</strong> ให้สนามไฟสมดุล ลด HCD และเพิ่ม Throwing Power</li>
+          </ul>
+        </section>
+
+        <section id="bakeqa">
+          <h2 class="section">อบให้หายขาด &amp; QA</h2>
+          <ul>
+            <li><strong>Metal Temperature:</strong> ติดเทอร์โมคัปเปิลบนชิ้นงานจริงเพื่อยืนยันเวลา-อุณหภูมิถึงสเปก</li>
+            <li><strong>ความหนาฟิล์ม:</strong> ใช้เกจความหนา/ครอสเช็คหลายจุด (ขอบ-แอ่ง-พื้นกว้าง)</li>
+            <li><strong>ยึดเกาะ:</strong> Cross-hatch/เทปตามมาตรฐาน</li>
+            <li><strong>ความทนกัดกร่อน:</strong> หากสเปกกำหนด ดูคู่มือ
+              <a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">Salt Spray Test</a></li>
+            <li><strong>โทน/เงา:</strong> เทียบแผงมาสเตอร์; คุมพารามิเตอร์ให้คงที่ระหว่างล็อต</li>
+          </ul>
+        </section>
+
+        <section id="maintenance">
+          <h2 class="section">บำรุงรักษา (Routine)</h2>
+          <table aria-label="Maintenance plan">
+            <thead><tr><th>ความถี่</th><th>รายการ</th></tr></thead>
+            <tbody>
+              <tr><td>ทุกกะ</td><td>บันทึก pH/Temp/%SOL/คอนดักทีวิตี้; ตรวจโฟม/การกวน; เติมน้ำระเหย DI</td></tr>
+              <tr><td>รายวัน</td><td>ล้างตะแกรง/หัวฉีด, เช็คอัตรา UF/Permeate, สุ่มวัดความหนาฟิล์ม</td></tr>
+              <tr><td>รายสัปดาห์</td><td>CIP UF ตามคู่มือ; ทำความสะอาดแอโนด/ถัง anolyte; วิเคราะห์ไอออนรบกวนหากมีอาการ</td></tr>
+              <tr><td>รายเดือน</td><td>วิเคราะห์องค์ประกอบอ่างเต็มชุด; ตรวจเตาอบ (โปรไฟล์/คาลิเบรต); ถ่ายตะกอน/ทำความสะอาดถัง</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="related">
+          <h2 class="section">ลิงก์ที่เกี่ยวข้อง</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a> — แลคเกอร์/ซีล/ทรีตผิวหลังชุบ</li>
+            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a> — ความสะอาดคือรากของยึดเกาะ</li>
+            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a> — UF/กรอง/วัดความหนา/เตาอบ</li>
+            <li><a href="https://www.baumechemical.com/blog/anti-tarnish-selection/" target="_blank" rel="noopener">เลือก Anti-tarnish ให้ตรงสเปก</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน</a> — ตั้งอ่าง/ทำกราฟควบคุม/อบรมทีม</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- EN block -->
+      <div data-lang-block="en">
+        <div class="toc" aria-label="Table of contents">
+          <strong>Contents:</strong>
+          <div>
+            <a href="#tldr_en">TL;DR</a> ·
+            <a href="#symptoms_en">Common defects</a> ·
+            <a href="#windows_en">Typical windows</a> ·
+            <a href="#bath_en">Bath/UF/Anolyte</a> ·
+            <a href="#rinse_en">Rinsing & power ramp</a> ·
+            <a href="#bakeqa_en">Bake & QA</a> ·
+            <a href="#maintenance_en">Maintenance</a> ·
+            <a href="#related_en">Related</a>
+          </div>
+        </div>
+
+        <section id="tldr_en">
+          <h2 class="section">TL;DR</h2>
+          <ul>
+            <li><strong>Fish eyes:</strong> remove silicone/oil sources; boost DI rinsing; skim surface; fix compressor oil carryover.</li>
+            <li><strong>Craters:</strong> rebalance %solids/conductivity; use soft ramp-up; stabilize wetting.</li>
+            <li><strong>Pitting/rough:</strong> 10–25 µm filtration; stronger UF; refresh final DI.</li>
+            <li><strong>Uneven build/burn:</strong> correct voltage/time/ramp; shielding; keep bath ~30 °C.</li>
+            <li><strong>Tone/gloss drift:</strong> lock pH/Temp/%solids; keep pigment dispersed; verify bake spec.</li>
+          </ul>
+        </section>
+
+        <section id="symptoms_en">
+          <h2 class="section">Common defects & fixes</h2>
+          <p>See Thai table for detailed cause→action mapping: fish eyes, crater, pitting, thin film, edge burn, tone/gloss drift, foaming, adhesion.</p>
+        </section>
+
+        <section id="windows_en">
+          <h2 class="section">Typical process windows (examples)</h2>
+          <p>Bath 28–32 °C · NVS 15–22% · pH (cationic) ~5.2–6.0 · Conductivity ~0.8–1.6 mS/cm · 120–300 V with 10–30 s ramp · 2–4 min to ~15–30 µm · Permeate rinses ×2–3 · Bake 160–190 °C (metal temp) for 10–20 min. Always follow your system datasheet.</p>
+        </section>
+
+        <section id="bath_en">
+          <h2 class="section">Bath / UF / Anolyte</h2>
+          <p>Track %solids, pH, conductivity, temperature; continuous 10–25 µm filtration; right UF rate and regular CIP; monitor anolyte conductivity/acidity; keep addition logs to maintain control charts.</p>
+        </section>
+
+        <section id="rinse_en">
+          <h2 class="section">Rinsing & power ramp</h2>
+          <p>DI/permeate cascades (≥2–3); reduce carry-over; ramp-up 10–30 s; use fixtures/shields to improve throwing power.</p>
+        </section>
+
+        <section id="bakeqa_en">
+          <h2 class="section">Bake & QA</h2>
+          <ul>
+            <li>Measure <em>metal temperature</em> during bake.</li>
+            <li>Check film thickness at multiple locations.</li>
+            <li>Adhesion by cross-hatch/tape; corrosion per spec (<a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">Salt Spray</a>).</li>
+          </ul>
+        </section>
+
+        <section id="maintenance_en">
+          <h2 class="section">Maintenance</h2>
+          <p>Per shift: log pH/Temp/%SOL/conductivity; Daily: UF/permeate & film checks; Weekly: UF CIP & anolyte clean; Monthly: full bath analysis & oven calibration.</p>
+        </section>
+
+        <section id="related_en">
+          <h2 class="section">Related links</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a></li>
+            <li><a href="https://www.baumechemical.com/blog/anti-tarnish-selection/" target="_blank" rel="noopener">Anti-tarnish selection</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">On-site Service</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- === Footer (เหมือนหน้าหลัก) === -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === JS: reveal + i18n (toggle blocks) === -->
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+
+    /* i18n dictionary (nav/back/hero/footer) */
+    const I18N = {
+      th: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← กลับบล็อก",
+        hero_title: "ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า (E-coat/ED) & วิธีแก้เบื้องต้น",
+        hero_tagline: "Fish eyes · Crater · พิตติ้ง/รูเข็ม · ฟิล์มบาง/หนาไม่เท่ากัน · ไหม้ขอบ · โทนสี/ความเงาเพี้ยน · โฟม — สาเหตุ พารามิเตอร์ และแนวทางแก้ — ลิงก์ไป Protective",
+        footer_products: "หมวดผลิตภัณฑ์",
+        footer_contact: "ติดต่อเรา",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+      },
+      en: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← Back to Blog",
+        hero_title: "Common Issues with Electrophoretic Lacquer (E-coat/ED) & Quick Fixes",
+        hero_tagline: "Fish eyes · Craters · Pitting · Uneven build · Edge burn · Tone/gloss drift · Foaming — causes, parameters, and fixes — with links to Protective.",
+        footer_products: "Products",
+        footer_contact: "Contact Us",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+      });
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

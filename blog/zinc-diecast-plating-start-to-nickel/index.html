@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เริ่มต้นชุบชิ้นฉีดสังกะสี (Zinc Die-Cast) ตั้งแต่ศูนย์ถึงนิกเกิล/โครเมียม | Baume Chemical</title>
+
+  <!-- === SEO === -->
+  <meta name="description" content="คู่มือเริ่มต้นชุบชิ้นฉีดสังกะสี (Zamak): อบไล่แก๊ส ทำความสะอาด/แอคทิเวต Copper strike (มี/ไม่มีไซยาไนด์), Acid copper, Semi-bright/bright nickel และโครเมียม พร้อมหน้าต่างพารามิเตอร์และตารางแก้ปัญหา">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="keywords" content="zinc die cast plating, zamak plating, copper strike, acid copper, nickel chrome, ชุบซิงค์ฉีด, ชุบนิกเกิลบนซิงค์, Baume Chemical">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="เริ่มต้นชุบชิ้นฉีดสังกะสี (Zinc Die-Cast) ตั้งแต่ศูนย์ถึงนิกเกิล/โครเมียม">
+  <meta property="og:description" content="ลำดับกระบวนการครบ: Degas → Clean/Activate → Copper Strike → Acid Copper → Semi-bright/Bright Nickel → Chrome พร้อมหน้าต่างการเดินงานและตารางแก้ปัญหา">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/zinc_diecast_stack_cover.webp">
+  <meta property="og:image:alt" content="Zinc die-cast parts with Cu–Ni–Cr finish">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"เริ่มต้นชุบชิ้นฉีดสังกะสี (Zinc Die-Cast) ตั้งแต่ศูนย์ถึงนิกเกิล/โครเมียม",
+    "inLanguage":"th",
+    "author":{"@type":"Organization","name":"Baume Chemical"},
+    "publisher":{"@type":"Organization","name":"Baume Chemical","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"}},
+    "image":"https://img2.pic.in.th/pic/zinc_diecast_stack_cover.webp",
+    "mainEntityOfPage":"https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/",
+    "description":"ขั้นตอนและค่าตั้งต้นสำหรับชุบชิ้นฉีดสังกะสี: degassing, cleaning/activation, copper strike, acid copper, semi-bright/bright nickel และ chrome พร้อมตารางแก้ปัญหา",
+    "datePublished":"2025-01-01",
+    "dateModified":"2025-01-01"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+
+    /* Header */
+    .site-header{position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8}
+    .nav-bar{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* Lang FAB */
+    .lang-fab{position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* Hero */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/zinc_diecast_stack_cover.webp') center/cover no-repeat}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-chip{display:inline-flex; align-items:center; gap:6px; margin-bottom:10px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
+    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+    /* Layout & Article */
+    .wrap{max-width:980px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    h3{margin:18px 0 8px;font-size:1.1rem}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
+
+    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
+    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
+    .toc a{color:#2c5e4e;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
+    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
+    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
+    th{background:#f8fbf9}
+    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* Utils */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Dual language blocks */
+    [data-lang-block]{display:none}
+    html[lang="th"] [data-lang-block="th"]{display:block}
+    html[lang="en"] [data-lang-block="en"]{display:block}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/">Plating</a>
+        <a href="https://www.baumechemical.com/products/passivation/">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Lang Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย"><img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span></button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English"><img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span></button>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <a class="back-chip" href="https://www.baumechemical.com/blog/" onclick="if(history.length>1){history.back();return false;}">← กลับบล็อก</a>
+      <h1 data-i18n-key="hero_title">เริ่มต้นชุบชิ้นฉีดสังกะสี (Zinc Die-Cast) ตั้งแต่ศูนย์ถึงนิกเกิล/โครเมียม</h1>
+      <p data-i18n-key="hero_tagline">Degas → Clean/Activate → Copper Strike → Acid Copper → Semi-bright/Bright Nickel → Chrome พร้อมหน้าต่างพารามิเตอร์ & ตารางแก้ปัญหา</p>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="wrap">
+    <article class="article reveal">
+
+      <!-- TH block -->
+      <div data-lang-block="th">
+        <div class="toc" aria-label="สารบัญ">
+          <strong>สารบัญ:</strong>
+          <div><a href="#tldr">TL;DR – แผนภาพลำดับ</a> · <a href="#material">รู้จักชิ้นฉีดสังกะสี</a> · <a href="#degas">อบไล่แก๊ส</a> · <a href="#prep">ทำความสะอาด/แอคทิเวต</a> · <a href="#strike">Copper strike</a> · <a href="#acidcu">Acid copper</a> · <a href="#nickel">Semi-bright/bright Nickel</a> · <a href="#chrome">Chromium (ถ้าต้องการ)</a> · <a href="#troubleshoot">ตารางแก้ปัญหา</a> · <a href="#qa">QA & เกณฑ์ทดสอบ</a> · <a href="#related">ลิงก์ที่เกี่ยวข้อง</a></div>
+        </div>
+
+        <section id="tldr">
+          <h2 class="section">TL;DR – แผนภาพลำดับ</h2>
+          <p class="lead">Degas 120–140°C → อัลคาไลน์คลีน → ล้าง → แอคทิเวตกรด (HCl อ่อน) → <strong>Copper Strike</strong> → <strong>Acid Copper</strong> (ปรับระดับ) → <strong>Semi-bright Ni</strong> → <strong>Bright Ni</strong> → <em>Chrome (ทางเลือก)</em>.</p>
+          <div class="warn"><strong>ความปลอดภัย:</strong> บริหารสารไซยาไนด์อย่างปลอดภัย (ถ้าใช้), ระบบดูดไอกรด/ด่าง, PPE ครบ และบำบัดน้ำเสียตามกฎหมาย</div>
+        </section>
+
+        <section id="material">
+          <h2 class="section">รู้จักชิ้นฉีดสังกะสี (Zamak 3/5 ฯลฯ)</h2>
+          <ul>
+            <li><strong>จุดท้าทาย:</strong> รูพรุน/ไล่แก๊ส, สารปลดแบบ, ซิงค์ออกซิไดซ์เร็ว → ทำให้ฟอง/พิตติ้ง/ยึดเกาะแย่</li>
+            <li><strong>เป้าหมาย:</strong> ปิดรูพรุนด้วย <em>degassing</em>, ทำผิวให้สะอาด/แอคทีฟ แล้วใช้ <strong>copper-first</strong> เป็นฐานก่อนนิกเกิล</li>
+          </ul>
+        </section>
+
+        <section id="degas">
+          <h2 class="section">อบไล่แก๊ส (Degassing)</h2>
+          <ul>
+            <li><strong>อุณหภูมิ/เวลา:</strong> 120–140&nbsp;°C · 2–4 ชม. (ทดสอบจริงกับอัลลอย/มวลชิ้นงาน)</li>
+            <li><strong>จุดสังเกต:</strong> ลดฟองก๊าซระหว่างชุบและลด “จุดระเบิด” บนนิกเกิล/โครเมียม</li>
+            <li><strong>หลังอบ:</strong> แพ็คกันฝุ่น, เข้าแผน Pretreatment โดยเร็วเพื่อเลี่ยงออกไซด์ใหม่</li>
+          </ul>
+        </section>
+
+        <section id="prep">
+          <h2 class="section">ทำความสะอาด/แอคทิเวต</h2>
+          <ol>
+            <li><strong>ดีเกรส/อัลคาไลน์คลีน</strong> (เลือกจาก <a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a>)</li>
+            <li><strong>ล้างน้ำ</strong> 2 ขั้น</li>
+            <li><strong>แอคทิเวตกรด</strong> HCl 5–10% · 5–20 วินาที (สั้นและคุมอุณหภูมิ) → <em>อย่า</em>กัดลึก</li>
+            <li><strong>ล้าง DI</strong> 2 ขั้น ก่อนเข้าถัง strike</li>
+          </ol>
+          <div class="note">เลี่ยงเวลาค้างอากาศยาวหลังแอคทิเวต เพราะ Zn รีออกซิไดซ์เร็ว</div>
+        </section>
+
+        <section id="strike">
+          <h2 class="section">Copper Strike (ฐานยึดเกาะ)</h2>
+          <table aria-label="Copper strike options">
+            <thead><tr><th>ระบบ</th><th>จุดเด่น</th><th>ข้อควรระวัง</th><th>ค่าตั้งต้น</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>ไซยาไนด์คอปเปอร์ (คลาสสิก)</td>
+                <td>ทนกัดกร่อนพื้นผิว Zn ระหว่างเริ่มชุบดี, ยึดเกาะสูง</td>
+                <td>การจัดการสารไซยาไนด์/ความปลอดภัย</td>
+                <td>อุณหภูมิ 20–30°C · CD 0.5–1.5 A/dm² · 1–3 µm</td>
+              </tr>
+              <tr>
+                <td>อัลคาไลน์คอปเปอร์ (ปลอดไซยาไนด์)</td>
+                <td>ลดความเสี่ยงไซยาไนด์</td>
+                <td>หน้าต่างแคบกว่า, ต้องคุมความสะอาดดีมาก</td>
+                <td>อุณหภูมิ 20–35°C · CD 0.5–1.2 A/dm² · 1–3 µm</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>ใช้ <strong>เวลาสั้น-บาง</strong> เพื่อปกป้องพื้น Zn แล้วรีบเข้าสเต็ป Acid copper เพื่อปรับระดับผิว</p>
+        </section>
+
+        <section id="acidcu">
+          <h2 class="section">Acid Copper (ปรับระดับ/อุดรอย)</h2>
+          <ul>
+            <li><strong>บทบาท:</strong> ทำความเรียบและเติมรอยผิวก่อนขึ้นนิกเกิล</li>
+            <li><strong>ค่าตั้งต้น:</strong> 22–28&nbsp;°C · CD 1.0–3.0 A/dm² (Rack), 0.2–0.6 A/dm² (Barrel) · ความหนา 10–25 µm</li>
+            <li><strong>คุมคุณภาพ:</strong> กรองต่อเนื่อง 1–5 µm, กวน/ไหลเวียนให้ฟองหลุด, เติมสารเงาตาม Ah</li>
+          </ul>
+        </section>
+
+        <section id="nickel">
+          <h2 class="section">Semi-bright & Bright Nickel</h2>
+          <ul>
+            <li><strong>Semi-bright Ni:</strong> ไม่มีซัลเฟอร์ · เหนียว · 8–15 µm</li>
+            <li><strong>Bright Ni:</strong> มีสารเงา/ซัลเฟอร์ · เงาสูง · 8–12 µm</li>
+            <li><strong>หน้าต่างทั่วไป:</strong> 50–60&nbsp;°C · pH ~3.5–4.5 · CD 2–6 A/dm² (Rack)</li>
+            <li><strong>เสริมทนสนิม:</strong> Microporous/Micro-discontinuous Ni (อิมัลชัน/บล็อคเกอร์) ก่อน Chrome</li>
+          </ul>
+        </section>
+
+        <section id="chrome">
+          <h2 class="section">Chromium (ตัวเลือกสำหรับงานตกแต่ง)</h2>
+          <ul>
+            <li><strong>เป้าหมาย:</strong> 0.2–0.3 µm (Decorative) เพื่อโทน/ทนขีดข่วน</li>
+            <li><strong>ชนิด:</strong> ไตรวาเลนต์ (Trivalent) เป็นที่นิยม · คุมสีให้ตรงสเปก</li>
+          </ul>
+          <div class="note">ถ้าไม่ต้องการ Chrome: จบที่ Bright Ni แล้วเคลือบซีล/แลกเกอร์จาก <a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a></div>
+        </section>
+
+        <section id="troubleshoot">
+          <h2 class="section">ตารางแก้ปัญหา</h2>
+          <table aria-label="Troubleshooting table">
+            <thead><tr><th>อาการ</th><th>สาเหตุพบบ่อย</th><th>แนวทางแก้</th></tr></thead>
+            <tbody>
+              <tr><td>พอง/ยก (blister)</td><td>ก๊าซค้างในรูพรุน, แอคทิเวตอ่อน, strike หนาเกินช้าเกาะ</td><td>Degas เพิ่ม, ย้ำ HCl activation สั้น, ทำ strike บางและเร็วเข้ากรดคอปเปอร์</td></tr>
+              <tr><td>พิตติ้งจุด</td><td>ฝุ่น/สารปลดแบบ/ฟองก๊าซ</td><td>ทำความสะอาดเข้มขึ้น, กรองละเอียด, เพิ่มการกวน/มุมทางออก</td></tr>
+              <tr><td>ไหม้ขอบ</td><td>CD สูง, ระยะขั้วแคบ, สารเงาไม่สมดุล</td><td>ลด CD/แรงดัน, เพิ่มชิลด์/ระยะขั้ว, รีบูสต์ตัวเงาตาม Hull cell</td></tr>
+              <tr><td>ด้าน/ไม่เงา</td><td>สารเงาต่ำ, อุณหภูมิ/พารามิเตอร์นอกหน้าต่าง</td><td>ปรับสารเงาตาม Ah, ล็อก temp/pH, ทดสอบ Hull cell</td></tr>
+              <tr><td>สี Chrome/โทนไม่คง</td><td>พารามิเตอร์โครเมียม/นิกเกิลแกว่ง, ล้าง/เป่าแห้งช้า</td><td>คุมเวลา/อุณหภูมิ, ล้าง DI หลายขั้น, เป่า/อบให้แห้งไว</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="qa">
+          <h2 class="section">QA & เกณฑ์ทดสอบ</h2>
+          <ul>
+            <li>ความหนา (Cu/Ni/Cr แยกชั้นถ้ากำหนด) — XRF</li>
+            <li>ยึดเกาะ (bend/tape/cross-hatch ตามสเปก)</li>
+            <li>โทนสี/เงา เทียบแผงมาตรฐาน</li>
+            <li>Salt Spray ตามข้อตกลง (ดู <a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">คู่มือแบบเร็ว</a>)</li>
+          </ul>
+        </section>
+
+        <section id="related">
+          <h2 class="section">ลิงก์ที่เกี่ยวข้อง</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a> — คลีน/แอคทิเวต</li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener">Plating</a> — Copper/Nickel/Chrome ระบบที่เกี่ยวข้อง</li>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective</a> — ซีล/แลกเกอร์</li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน</a> — ตั้งอ่าง/ทำมาตรฐาน/สอน Hull cell</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- EN block -->
+      <div data-lang-block="en">
+        <div class="toc" aria-label="Table of contents">
+          <strong>Contents:</strong>
+          <div><a href="#tldr_en">TL;DR</a> · <a href="#material_en">Die-cast basics</a> · <a href="#degas_en">Degassing</a> · <a href="#prep_en">Clean/Activate</a> · <a href="#strike_en">Copper strike</a> · <a href="#acidcu_en">Acid copper</a> · <a href="#nickel_en">Semi-bright/bright Ni</a> · <a href="#chrome_en">Chrome</a> · <a href="#troubleshoot_en">Troubleshooting</a> · <a href="#qa_en">QA</a> · <a href="#related_en">Links</a></div>
+        </div>
+
+        <section id="tldr_en">
+          <h2 class="section">TL;DR</h2>
+          <p class="lead">Degas → alkaline clean → rinse → mild HCl activate → <strong>Cu strike</strong> → <strong>acid Cu</strong> → <strong>semi-bright Ni</strong> → <strong>bright Ni</strong> → <em>chrome (optional)</em>.</p>
+        </section>
+
+        <section id="material_en">
+          <h2 class="section">Die-cast basics</h2>
+          <p>Zamak is porous and re-oxidizes fast; surfactant/mold-release residues are common—address via degassing and robust pretreatment.</p>
+        </section>
+
+        <section id="degas_en">
+          <h2 class="section">Degassing</h2>
+          <p>120–140&nbsp;°C for 2–4 h (tune to alloy/mass). Keep parts clean and move into pretreatment quickly after bake.</p>
+        </section>
+
+        <section id="prep_en">
+          <h2 class="section">Clean/Activate</h2>
+          <ol>
+            <li>Alkaline clean → rinse ×2</li>
+            <li>HCl 5–10% for 5–20 s → DI rinses ×2 → into strike</li>
+          </ol>
+        </section>
+
+        <section id="strike_en">
+          <h2 class="section">Copper strike</h2>
+          <p>Cyanide Cu (classic) or non-cyanide alkaline Cu. Aim 1–3 µm; short dwell; then move to acid Cu for leveling.</p>
+        </section>
+
+        <section id="acidcu_en">
+          <h2 class="section">Acid copper</h2>
+          <p>22–28&nbsp;°C; CD 1.0–3.0 A/dm² (rack). Target 10–25 µm; filter 1–5 µm; maintain additives by Ah.</p>
+        </section>
+
+        <section id="nickel_en">
+          <h2 class="section">Semi-bright & Bright Nickel</h2>
+          <p>Semi-bright (S-free) 8–15 µm; bright Ni 8–12 µm; 50–60&nbsp;°C; pH 3.5–4.5; CD 2–6 A/dm².</p>
+        </section>
+
+        <section id="chrome_en">
+          <h2 class="section">Chrome (optional)</h2>
+          <p>Decorative thickness ~0.2–0.3 µm; trivalent systems common; control color per spec.</p>
+        </section>
+
+        <section id="troubleshoot_en">
+          <h2 class="section">Troubleshooting</h2>
+          <ul>
+            <li><strong>Blister:</strong> more degas; sharper activation; thinner/faster strike.</li>
+            <li><strong>Pitting:</strong> finer filtration; stronger cleaning; better agitation.</li>
+            <li><strong>Edge burn:</strong> lower CD/voltage; shields; balance brightener.</li>
+            <li><strong>Dullness:</strong> restore additives; lock temp/pH; Hull cell.</li>
+            <li><strong>Color drift:</strong> stabilize Ni/Cr params; rinse/dry discipline.</li>
+          </ul>
+        </section>
+
+        <section id="qa_en">
+          <h2 class="section">QA</h2>
+          <ul>
+            <li>Layer thickness by XRF</li>
+            <li>Adhesion per spec</li>
+            <li>Tone/brightness vs. master panel</li>
+            <li>Salt spray per requirement</li>
+          </ul>
+        </section>
+
+        <section id="related_en">
+          <h2 class="section">Related links</h2>
+          <ul>
+            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective</a></li>
+            <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">Salt spray quick guide</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo" aria-hidden="true"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+          </ul>
+        </nav>
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div>© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} }); }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+
+    // Language toggle (hero/footer labels only; article uses dual blocks)
+    const els = { langBtns:()=>document.querySelectorAll('.lang-fab .lang-btn') };
+    function applyLang(lang){
+      const sel=(lang==='en')?'en':'th';
+      document.documentElement.lang=sel;
+      els.langBtns().forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===sel)));
+      try{localStorage.setItem('lang',sel);}catch(e){}
+    }
+    (function init(){
+      const saved=(typeof localStorage!=='undefined' && localStorage.getItem('lang'))||'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=>btn.addEventListener('click',()=>applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

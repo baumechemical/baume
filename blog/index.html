@@ -45,23 +45,30 @@
     "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
     "blogPost":[
       {"@type":"BlogPosting","headline":"กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ","url":"https://www.baumechemical.com/blog/aluminum-electropolishing/"},
-      {"@type":"BlogPosting","headline":"คู่มือเลือก Anti-tarnish ให้ตรงสเปกงาน","url":"https://www.baumechemical.com/blog/anti-tarnish-selection/"},
+      {"@type":"BlogPosting","headline":"เลือก Anti-tarnish ยังไงให้ตรงสเปก","url":"https://www.baumechemical.com/blog/anti-tarnish-selection/"},
       {"@type":"BlogPosting","headline":"ชุบลอก/ลอกไม่หมด สาเหตุและวิธีแก้","url":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"ทำสีโครเมตบนซิงค์ให้ตรงโทน (Passivation)","url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"},
+      {"@type":"BlogPosting","headline":"โครเมตบนซิงค์ให้ตรงโทน (Passivation)","url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"},
       {"@type":"BlogPosting","headline":"รมดำให้ด้านสม่ำเสมอและทนการถู","url":"https://www.baumechemical.com/blog/blackening-uniform-matte/"},
-      {"@type":"BlogPosting","headline":"Salt Spray Test แบบเร็ว: เตรียมชิ้นและอ่านผล","url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"}
+      {"@type":"BlogPosting","headline":"Salt Spray Test แบบเร็ว: เตรียมชิ้นและอ่านผล","url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"},
+      {"@type":"BlogPosting","headline":"Bright Dip ทองเหลืองแบบเลเซอร์ B","url":"https://www.baumechemical.com/blog/brass-bright-dip-laser-b/"},
+      {"@type":"BlogPosting","headline":"ปัญหาชุบทองเหลืองบนเหล็กและทองแดง","url":"https://www.baumechemical.com/blog/brass-plating-on-steel-copper/"},
+      {"@type":"BlogPosting","headline":"ปัญหาแลคเกอร์ไฟฟ้า (E-coat) และการแก้","url":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/"},
+      {"@type":"BlogPosting","headline":"ชุบนิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?","url":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/"},
+      {"@type":"BlogPosting","headline":"ปัญหาการชุบนิกเกิลและแนวทางแก้","url":"https://www.baumechemical.com/blog/nickel-plating-troubleshooting/"},
+      {"@type":"BlogPosting","headline":"Nickel Troubleshooting (รวมเคส)","url":"https://www.baumechemical.com/blog/nickel-troubleshooting/"},
+      {"@type":"BlogPosting","headline":"พื้นฐานการชุบโลหะ: เคมี/อุปกรณ์/ดูแล","url":"https://www.baumechemical.com/blog/plating-basics/"},
+      {"@type":"BlogPosting","headline":"ชุบซิงค์: โครเมต Cr³⁺ vs Cr⁶⁺","url":"https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/"},
+      {"@type":"BlogPosting","headline":"เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล","url":"https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/"},
+      {"@type":"BlogPosting","headline":"Zinc Plating Troubleshooting (หน้ารวมซีรีส์)","url":"https://www.baumechemical.com/blog/zinc-plating-troubleshooting/"},
+      {"@type":"BlogPosting","headline":"ซีล/ท็อปโค้ทสำหรับโครเมต 3","url":"https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/"}
     ]
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"}
+  ]}
   </script>
 
   <!-- Fonts & Perf -->
@@ -80,80 +87,50 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* === Sticky Top Header (logo + menu) === */
-    .site-header{
-      position:sticky; top:0; z-index:1200;
-      backdrop-filter:saturate(140%) blur(8px);
-      background:rgba(255,255,255,.78);
-      border-bottom:1px solid #e6ece8;
-    }
-    .nav-bar{
-      max-width:1200px; margin:0 auto; padding:10px 16px;
-      display:flex; align-items:center; gap:14px; justify-content:space-between;
-    }
+    /* Header */
+    .site-header{position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8}
+    .nav-bar{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
     .brand-name{font-weight:800; color:#1d2b23}
     .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
     .primary-nav a:hover{ background:#ecf4ef }
     .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
     @media(max-width:760px){ .brand-name{display:none} }
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
+    /* Lang switcher */
+    .lang-fab{position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
     .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* === Hero === */
-    .hero{
-      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(420px, 60vh, 620px);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
-      padding: 28px 16px;
-    }
+    /* Hero */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{
-      display:inline-flex; align-items:center; gap:6px;
-      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
-      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
-    }
+    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
     .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
 
-    /* === Layout === */
+    /* Layout & cards */
     .wrap{max-width:1200px; margin:auto; padding:34px 16px}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     .lead{margin:0 0 16px; color:#5f6d7c}
-
-    /* === Blog cards === */
     .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
     @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
     @media(max-width:640px){ .grid{grid-template-columns:1fr} }
-    .card{background:#fff; border:1px solid #e3ece5; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-1); transition:transform .18s ease, box-shadow .18s ease}
+    .card{background:#fff; border:1px solid #e3ece5; border-radius:14px; overflow:hidden; box-shadow:0 8px 26px rgba(2,8,20,.06); transition:transform .18s ease, box-shadow .18s ease}
     .card picture,.card img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#eff5f0}
     .card .body{padding:14px}
     .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
     .badge{font-size:12px; background:#eff7f1; border:1px solid #d8e7dd; color:#2f6b52; padding:2px 8px; border-radius:999px}
     .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
     .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
+    .card .more{display:inline-block; margin-top:10px; color:#ff9800; font-weight:800; text-decoration:none}
     .card .more:hover{ text-decoration:underline }
-    .card.lift{ will-change: transform, box-shadow }
-    @media (hover:hover) and (pointer:fine){
-      .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) }
-    }
-    @media (prefers-reduced-motion: reduce){ .card.lift{ transition:none } }
+    @media (hover:hover) and (pointer:fine){ .card:hover{ transform:translateY(-8px); box-shadow:0 16px 40px rgba(2,8,20,.14) } }
 
-    /* === Footer (match homepage) === */
+    /* Footer */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -161,21 +138,21 @@
     .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-    /* === Utilities === */
+    /* Utils */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
   </style>
 </head>
 <body>
 
-  <!-- === Top Header (logo + menu) === -->
+  <!-- Header -->
   <header class="site-header" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -193,7 +170,7 @@
     </div>
   </header>
 
-  <!-- === Language Switcher === -->
+  <!-- Lang switcher -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
       <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
@@ -205,7 +182,7 @@
     </button>
   </div>
 
-  <!-- === Hero === -->
+  <!-- Hero -->
   <header class="hero">
     <div class="wrap">
       <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
@@ -214,81 +191,202 @@
     </div>
   </header>
 
-  <!-- === Blog Index === -->
+  <!-- Index -->
   <main class="wrap">
     <h2 class="section" data-i18n-key="sec_latest">บทความล่าสุด</h2>
     <p class="lead" data-i18n-key="sec_lead">วิธีการดูแลรักษาและแนวทางคุมคุณภาพ</p>
 
     <div class="grid">
-      <!-- 1. Aluminum Electropolishing -->
+      <!-- 1 -->
       <article class="card lift reveal">
         <picture><img src="https://img2.pic.in.th/pic/image0-5.jpeg" alt="Aluminum Electropolishing"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Polishing</span><span class="badge">How-to</span></div>
           <h3 data-i18n-key="post1_t">กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ</h3>
-          <p data-i18n-key="post1_d">ตั้งค่าอ่าง, กระแส/เวลา, การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอแบบคุมได้จริง หน้างาน.</p>
+          <p data-i18n-key="post1_d">ตั้งค่าอ่าง กระแส/เวลา การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอ</p>
           <a class="more" href="aluminum-electropolishing/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <!-- 2. Anti-tarnish selection -->
+      <!-- 2 -->
       <article class="card lift reveal">
         <picture><img src="https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg" alt="Select Anti-tarnish"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Guide</span></div>
           <h3 data-i18n-key="post2_t">เลือก Anti-tarnish ยังไงให้ตรงสเปก</h3>
-          <p data-i18n-key="post2_d">เปรียบเทียบ Cold/Hot/Electro/Tin และการเทสความชื้น/ซอลต์สเปรย์ พร้อมลิงก์ไปยังผลิตภัณฑ์.</p>
+          <p data-i18n-key="post2_d">เปรียบเทียบ Cold/Hot/Electro/Tin และวิธีทดสอบความทน</p>
           <a class="more" href="anti-tarnish-selection/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <!-- 3. Plating peeling -->
+      <!-- 3 -->
       <article class="card lift reveal">
         <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Plating peel troubleshooting"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Troubleshoot</span><span class="badge">Pretreatment</span></div>
           <h3 data-i18n-key="post3_t">ชุบลอก/ลอกไม่หมด: สาเหตุ & วิธีแก้</h3>
-          <p data-i18n-key="post3_d">จากความสะอาด, activation, over-bright, สภาพอ่าง ไปจนถึงโปรไฟล์ไฟ — เช็กลิสต์ลงหน้างาน.</p>
+        <p data-i18n-key="post3_d">จากความสะอาด Activation Over-bright สภาพอ่าง และโปรไฟล์ไฟ</p>
           <a class="more" href="plating-peeling-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <!-- 4. Passivation color control -->
+      <!-- 4 -->
       <article class="card lift reveal">
         <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Zinc passivation color control"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">QA</span></div>
           <h3 data-i18n-key="post4_t">โครเมตบนซิงค์ให้ตรงโทน</h3>
-          <p data-i18n-key="post4_d">ควบคุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่าง เพื่อคุมโทน Y/B/IR ให้คงเส้นคงวา.</p>
+          <p data-i18n-key="post4_d">คุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่างให้คงสี</p>
           <a class="more" href="zinc-passivation-color-control/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <!-- 5. Blackening -->
+      <!-- 5 -->
       <article class="card lift reveal">
         <picture><img src="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" alt="Uniform blackening finish"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Blackening</span><span class="badge">Process</span></div>
           <h3 data-i18n-key="post5_t">รมดำให้ด้านสม่ำเสมอและทนการถู</h3>
-          <p data-i18n-key="post5_d">การเตรียมผิว, ค่าอุณหภูมิ/เวลา, การซีล และการทดสอบการเสียดสี ที่ทำให้ผิวด้านคงทน.</p>
+          <p data-i18n-key="post5_d">เตรียมผิว อุณหภูมิ/เวลา ซีล และทดสอบการเสียดสี</p>
           <a class="more" href="blackening-uniform-matte/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <!-- 6. Salt Spray -->
+      <!-- 6 -->
       <article class="card lift reveal">
         <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Salt spray quick guide"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Test</span><span class="badge">Corrosion</span></div>
-          <h3 data-i18n-key="post6_t">การเตรียมชิ้นงานสำหรับ Salt Spray Test</h3>
-          <p data-i18n-key="post6_d">เตรียมชิ้นทดสอบ, เงื่อนไข NSS/ASS/CASS, เกณฑ์อ่านผล และเช็กลิสต์ก่อนส่งทดสอบ.</p>
+          <h3 data-i18n-key="post6_t">Salt Spray Test แบบเร็ว</h3>
+          <p data-i18n-key="post6_d">เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์</p>
           <a class="more" href="salt-spray-quick-guide/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Brass bright dip Laser B"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Brass</span><span class="badge">Bright Dip</span></div>
+          <h3 data-i18n-key="post7_t">ทำไมต้องใช้กัดเงาทองเหลือง Laser B</h3>
+          <p data-i18n-key="post7_d">ดึงผิวให้เหลืองสดใส ไร้คราบแดงจากกำมะถัน</p>
+          <a class="more" href="brass-bright-dip-laser-b/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Brass on steel/copper"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Brass</span><span class="badge">Troubleshoot</span></div>
+          <h3 data-i18n-key="post8_t">ชุบทองเหลืองบนเหล็กและทองแดง</h3>
+          <p data-i18n-key="post8_d">อาการที่พบบ่อย วิธีดูแล และแนวทางแก้</p>
+          <a class="more" href="brass-plating-on-steel-copper/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="card lift reveal">
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Electrophoretic lacquer issues"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Coating</span><span class="badge">E-coat</span></div>
+          <h3 data-i18n-key="post9_t">ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า</h3>
+          <p data-i18n-key="post9_d">สาเหตุหลัก การตั้งค่าอ่าง และวิธีแก้เบื้องต้น</p>
+          <a class="more" href="electrophoretic-lacquer-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Nickel on steel with copper undercoat"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Process</span></div>
+          <h3 data-i18n-key="post10_t">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?</h3>
+          <p data-i18n-key="post10_d">เทียบผลผ่าน/ไม่ผ่านทองแดงรองพื้นต่อการยึดเกาะ</p>
+          <a class="more" href="nickel-on-steel-copper-undercoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Nickel plating troubleshooting"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Troubleshoot</span></div>
+          <h3 data-i18n-key="post11_t">ปัญหาการชุบนิกเกิล & วิธีแก้</h3>
+          <p data-i18n-key="post11_d">เงาไม่มา คราบ/ฝ้า ยึดติดไม่ดี พิตติ้ง ฯลฯ</p>
+          <a class="more" href="nickel-plating-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="card lift reveal">
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Nickel troubleshooting hub"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Cases</span></div>
+          <h3 data-i18n-key="post12_t">Nickel Troubleshooting (รวมเคส)</h3>
+          <p data-i18n-key="post12_d">อาการ–สาเหตุ–แนวทางแก้ แบบย่อยสั้นอ่านไว</p>
+          <a class="more" href="nickel-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/3mWQsKe.jpeg" alt="Plating basics"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Basics</span><span class="badge">Guide</span></div>
+          <h3 data-i18n-key="post13_t">ความรู้การชุบโลหะเบื้องต้น</h3>
+          <p data-i18n-key="post13_d">เคมีหลัก อุปกรณ์สำคัญ การดูแลบ่อ และความปลอดภัย</p>
+          <a class="more" href="plating-basics/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article class="card lift reveal">
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Chromate Cr3 vs Cr6"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Chromate</span><span class="badge">Zinc</span></div>
+          <h3 data-i18n-key="post14_t">ชุบซิงค์: โครเมต 3 vs โครเมต 6</h3>
+          <p data-i18n-key="post14_d">ต่างกันยังไง เรื่องกฎหมาย ปัญหา และความทนทาน</p>
+          <a class="more" href="zinc-chromate-cr3-vs-cr6/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 15 -->
+      <article class="card lift reveal">
+        <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Zinc die-cast to nickel"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Setup</span></div>
+          <h3 data-i18n-key="post15_t">เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล</h3>
+          <p data-i18n-key="post15_d">ตั้งแต่ Pretreatment → Zinc → Passivation → เตรียมชุบนิกเกิล</p>
+          <a class="more" href="zinc-diecast-plating-start-to-nickel/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- 16 -->
+      <article class="card lift reveal">
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Zinc troubleshooting hub"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Series</span></div>
+          <h3 data-i18n-key="post16_t">Zinc Plating Troubleshooting (หน้ารวมซีรีส์)</h3>
+          <p data-i18n-key="post16_d">ดัชนีรวมลิงก์: ตั้งไลน์ → แก้ปัญหา → QA/Salt Spray</p>
+          <a class="more" href="zinc-plating-troubleshooting/index.html" data-i18n-key="read_more">เข้าไปดูซีรีส์ →</a>
+        </div>
+      </article>
+
+      <!-- 17 -->
+      <article class="card lift reveal">
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Trivalent seal & topcoat"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Protective</span><span class="badge">Sealer</span></div>
+          <h3 data-i18n-key="post17_t">ซีล/ท็อปโค้ทสำหรับโครเมต 3</h3>
+          <p data-i18n-key="post17_d">เลือกชนิด ตั้งค่าอ่าง และทดสอบความทน</p>
+          <a class="more" href="zinc-trivalent-seal-topcoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- === Footer (เหมือนหน้าหลัก) === -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -336,7 +434,7 @@
     </div>
   </footer>
 
-  <!-- === JS: reveal + i18n === -->
+  <!-- JS -->
   <script>
     // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
@@ -345,7 +443,7 @@
     }, {threshold:.18});
     revealEls.forEach(el=>revObs.observe(el));
 
-    /* i18n dictionary (เพิ่มเมนูและปุ่มย้อนกลับ) */
+    /* i18n dictionary */
     const I18N = {
       th: {
         nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
@@ -354,46 +452,123 @@
         hero_tagline: "ความรู้เชิงปฏิบัติสำหรับงานชุบโลหะ พร้อมลิงก์ไปยังผลิตภัณฑ์ที่เกี่ยวข้อง",
         sec_latest: "บทความล่าสุด",
         sec_lead: "วิธีการดูแลรักษาและแนวทางคุมคุณภาพ",
-        post1_t: "กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ",
-        post1_d: "ตั้งค่าอ่าง, กระแส/เวลา, การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอแบบคุมได้จริง หน้างาน.",
-        post2_t: "เลือก Anti-tarnish ยังไงให้ตรงสเปก",
-        post2_d: "เปรียบเทียบ Cold/Hot/Electro/Tin และการเทสความชื้น/ซอลต์สเปรย์ พร้อมลิงก์ไปยังผลิตภัณฑ์.",
-        post3_t: "ชุบลอก/ลอกไม่หมด: สาเหตุ & วิธีแก้",
-        post3_d: "จากความสะอาด, activation, over-bright, สภาพอ่าง ไปจนถึงโปรไฟล์ไฟ — เช็กลิสต์ลงหน้างาน.",
-        post4_t: "โครเมตบนซิงค์ให้ตรงโทน",
-        post4_d: "ควบคุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่าง เพื่อคุมโทน Y/B/IR ให้คงเส้นคงวา.",
-        post5_t: "รมดำให้ด้านสม่ำเสมอและทนการถู",
-        post5_d: "การเตรียมผิว, ค่าอุณหภูมิ/เวลา, การซีล และการทดสอบการเสียดสี ที่ทำให้ผิวด้านคงทน.",
-        post6_t: "Salt Spray Test แบบเร็ว",
-        post6_d: "เตรียมชิ้นทดสอบ, เงื่อนไข NSS/ASS/CASS, เกณฑ์อ่านผล และเช็กลิสต์ก่อนส่งทดสอบ.",
         read_more: "อ่านต่อ →",
-        footer_products: "หมวดผลิตภัณฑ์",
-        footer_contact: "ติดต่อเรา",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+
+        post1_t:"กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ",
+        post1_d:"ตั้งค่าอ่าง กระแส/เวลา การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอ",
+
+        post2_t:"เลือก Anti-tarnish ยังไงให้ตรงสเปก",
+        post2_d:"เปรียบเทียบ Cold/Hot/Electro/Tin และวิธีทดสอบความทน",
+
+        post3_t:"ชุบลอก/ลอกไม่หมด: สาเหตุ & วิธีแก้",
+        post3_d:"จากความสะอาด Activation Over-bright สภาพอ่าง และโปรไฟล์ไฟ",
+
+        post4_t:"โครเมตบนซิงค์ให้ตรงโทน",
+        post4_d:"คุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่างให้คงสี",
+
+        post5_t:"รมดำให้ด้านสม่ำเสมอและทนการถู",
+        post5_d:"เตรียมผิว อุณหภูมิ/เวลา ซีล และทดสอบการเสียดสี",
+
+        post6_t:"Salt Spray Test แบบเร็ว",
+        post6_d:"เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์",
+
+        post7_t:"ทำไมต้องใช้กัดเงาทองเหลือง Laser B",
+        post7_d:"ดึงผิวให้เหลืองสดใส ไร้คราบแดงจากกำมะถัน",
+
+        post8_t:"ชุบทองเหลืองบนเหล็กและทองแดง",
+        post8_d:"อาการที่พบบ่อย วิธีดูแล และแนวทางแก้",
+
+        post9_t:"ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า",
+        post9_d:"สาเหตุหลัก การตั้งค่าอ่าง และวิธีแก้เบื้องต้น",
+
+        post10_t:"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?",
+        post10_d:"เทียบผลผ่าน/ไม่ผ่านทองแดงรองพื้นต่อการยึดเกาะ",
+
+        post11_t:"ปัญหาการชุบนิกเกิล & วิธีแก้",
+        post11_d:"เงาไม่มา คราบ/ฝ้า ยึดติดไม่ดี พิตติ้ง ฯลฯ",
+
+        post12_t:"Nickel Troubleshooting (รวมเคส)",
+        post12_d:"อาการ–สาเหตุ–แนวทางแก้ แบบย่อยสั้นอ่านไว",
+
+        post13_t:"ความรู้การชุบโลหะเบื้องต้น",
+        post13_d:"เคมีหลัก อุปกรณ์สำคัญ การดูแลบ่อ และความปลอดภัย",
+
+        post14_t:"ชุบซิงค์: โครเมต 3 vs โครเมต 6",
+        post14_d:"ต่างกันยังไง เรื่องกฎหมาย ปัญหา และความทนทาน",
+
+        post15_t:"เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล",
+        post15_d:"ตั้งแต่ Pretreatment → Zinc → Passivation → เตรียมชุบนิกเกิล",
+
+        post16_t:"Zinc Plating Troubleshooting (หน้ารวมซีรีส์)",
+        post16_d:"ดัชนีรวมลิงก์: ตั้งไลน์ → แก้ปัญหา → QA/Salt Spray",
+
+        post17_t:"ซีล/ท็อปโค้ทสำหรับโครเมต 3",
+        post17_d:"เลือกชนิด ตั้งค่าอ่าง และทดสอบความทน",
+
+        footer_products: "หมวดผลิตภัณฑ์", footer_contact: "ติดต่อเรา", footer_copy: "© 2025 Baume Chemical. All rights reserved."
       },
+
       en: {
         nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
         back_home:"← Back to Home",
         hero_title: "Articles & Guides",
         hero_tagline: "Practical know-how for metal finishing with links to relevant products.",
         sec_latest: "Latest Articles",
-        sec_lead: "how-to, troubleshooting, and quality control.",
-        post1_t: "Aluminum Electropolishing for Uniform Gloss",
-        post1_d: "Bath setup, current/time, surface prep, and post-treatment to achieve even brightness.",
-        post2_t: "How to Choose the Right Anti-tarnish",
-        post2_d: "Compare Cold/Hot/Electro/Tin types, humidity and salt-spray testing, with product links.",
-        post3_t: "Plating Peeling / Poor Stripping: Causes & Fixes",
-        post3_d: "From cleanliness and activation to over-bright, bath condition and current profile.",
-        post4_t: "Zinc Passivation: Getting the Color Right",
-        post4_d: "Control temperature/time/pH and refresh to keep Y/B/IR tones consistent.",
-        post5_t: "Uniform Matte Blackening & Abrasion Resistance",
-        post5_d: "Surface preparation, time/temperature, sealing, and abrasion checks.",
-        post6_t: "Salt Spray: Quick Guide",
-        post6_d: "Specimen prep, NSS/ASS/CASS conditions, reading criteria, and pre-test checklist.",
+        sec_lead: "How-to, troubleshooting, and quality control.",
         read_more: "Read more →",
-        footer_products: "Products",
-        footer_contact: "Contact Us",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+
+        post1_t:"Aluminum Electropolishing for Uniform Gloss",
+        post1_d:"Bath setup, current/time, surface prep, and post-rinse to achieve even brightness.",
+
+        post2_t:"How to Choose the Right Anti-tarnish",
+        post2_d:"Compare Cold/Hot/Electro/Tin types and durability testing methods.",
+
+        post3_t:"Plating Peeling / Incomplete Strip: Causes & Fixes",
+        post3_d:"From cleanliness & activation to over-bright, bath condition, and current profile.",
+
+        post4_t:"Zinc Passivation: Getting the Color Right",
+        post4_d:"Control temperature/time/pH and refresh to keep tone consistent.",
+
+        post5_t:"Uniform Matte Blackening & Abrasion Resistance",
+        post5_d:"Surface prep, time/temperature, sealing, and abrasion checks.",
+
+        post6_t:"Salt Spray: Quick Guide",
+        post6_d:"Specimen prep, NSS/ASS/CASS conditions, rating criteria, and checklist.",
+
+        post7_t:"Why Use Brass Bright Dip Laser B",
+        post7_d:"Restore a clean yellow without red sulfur stain.",
+
+        post8_t:"Brass Plating on Steel & Copper",
+        post8_d:"Common issues, maintenance, and quick fixes.",
+
+        post9_t:"Electrophoretic Lacquer: Common Problems",
+        post9_d:"Root causes, bath settings, and first-aid fixes.",
+
+        post10_t:"Nickel on Steel: Need a Copper Undercoat?",
+        post10_d:"Effect of with/without copper strike on adhesion.",
+
+        post11_t:"Nickel Plating Troubleshooting",
+        post11_d:"Dull/rough, haze, poor adhesion, pitting, etc.",
+
+        post12_t:"Nickel Troubleshooting (Case Digest)",
+        post12_d:"Short symptom–cause–fix snippets for quick reference.",
+
+        post13_t:"Plating Basics",
+        post13_d:"Core chemistries, key equipment, bath care, and safety.",
+
+        post14_t:"Zinc Chromate: Cr³⁺ vs Cr⁶⁺",
+        post14_d:"Differences, regulations, typical issues, and durability.",
+
+        post15_t:"Zinc Die-cast: From Start to Nickel",
+        post15_d:"Pretreatment → Zinc → Passivation → Prep for Nickel.",
+
+        post16_t:"Zinc Plating Troubleshooting (Series Hub)",
+        post16_d:"Index of links: setup → fixes → QA/Salt spray.",
+
+        post17_t:"Trivalent Chromate Seal / Topcoat",
+        post17_d:"Choosing type, bath setup, and durability checks.",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 

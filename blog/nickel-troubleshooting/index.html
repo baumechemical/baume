@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nickel Troubleshooting Series | Baume Chemical</title>
+
+  <!-- === SEO === -->
+  <meta name="description" content="ซีรีส์รวมบทความแก้ปัญหางานชุบนิกเกิล: สาเหตุ–วิธีแก้ การตั้งอ่างควบคุมคุณภาพ Woods strike การเลือกระหว่าง Watts vs Sulfamate Duplex Ni และการใช้ชั้นทองแดงรองพื้น">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/nickel-troubleshooting/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/nickel-troubleshooting/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/nickel-troubleshooting/">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="keywords" content="nickel troubleshooting, woods nickel strike, watts vs sulfamate, duplex nickel, ชุบนิกเกิล, ปัญหาชุบนิกเกิล, Baume Chemical">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Nickel Troubleshooting Series — รวมบทความแก้ปัญหางานชุบนิกเกิล">
+  <meta property="og:description" content="จากสาเหตุการลอก ผิวด้าน พิตติ้ง ไปจนถึงการตั้งอ่าง Woods strike, Watts/Sulfamate, Duplex Ni และชั้นทองแดงรองพื้น">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/nickel-troubleshooting/">
+  <meta property="og:image" content="https://i.imgur.com/DzCh11Q.jpeg">
+  <meta property="og:image:alt" content="Nickel plating troubleshooting by Baume Chemical">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "logo":"https://www.baumechemical.com/assets/logo.png",
+    "sameAs":["https://line.me/ti/p/~baumechemical"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Nickel Troubleshooting Series",
+    "inLanguage":"th",
+    "url":"https://www.baumechemical.com/blog/nickel-troubleshooting/",
+    "description":"Series hub for nickel plating troubleshooting and process control.",
+    "hasPart":[
+      {"@type":"Article","headline":"ปัญหาต่างๆกับการชุบนิกเกิล & วิธีแก้เบื้องต้น","url":"https://www.baumechemical.com/blog/nickel-troubleshooting/overview/"},
+      {"@type":"Article","headline":"ชุบนิกเกิลบนเหล็กต้องรองทองแดงไหม?","url":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/"},
+      {"@type":"Article","headline":"Woods Nickel Strike — ตั้งค่า & คุมคุณภาพ","url":"https://www.baumechemical.com/blog/woods-nickel-strike-setup/"},
+      {"@type":"Article","headline":"Watts vs Sulfamate Nickel — เลือกให้ตรงงาน","url":"https://www.baumechemical.com/blog/nickel-watts-vs-sulfamate/"},
+      {"@type":"Article","headline":"Duplex Nickel & Micro-porous Chromium — กันสนิมสวยงาม","url":"https://www.baumechemical.com/blog/duplex-nickel-microporous-chromium/"},
+      {"@type":"Article","headline":"ความหนา Ni, การทดสอบรูพรุน & การซีล","url":"https://www.baumechemical.com/blog/nickel-thickness-pore-test/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
+      {"@type":"ListItem","position":3,"name":"Nickel Troubleshooting","item":"https://www.baumechemical.com/blog/nickel-troubleshooting/"}
+    ]
+  }
+  </script>
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/DzCh11Q.jpeg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+
+    /* === Sticky Top Header (logo + menu) === */
+    .site-header{
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid #e6ece8;
+    }
+    .nav-bar{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;
+      font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-fab .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* === Hero === */
+    .hero{
+      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(420px, 52vh, 560px);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/DzCh11Q.jpeg') center/cover no-repeat;
+      padding: 28px 16px;
+    }
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{
+      display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;
+      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
+      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
+    }
+    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+    /* === Layout === */
+    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+
+    /* === Cards === */
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
+    @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:640px){ .grid{grid-template-columns:1fr} }
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-1);transition:transform .18s ease,box-shadow .18s ease}
+    .card picture,.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eff5f0}
+    .card .body{padding:14px}
+    .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+    .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
+    .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
+    .card p{margin:0;color:#5b6675;font-size:.96rem}
+    .card .more{display:inline-block;margin-top:10px;color:var(--accent);font-weight:800;text-decoration:none}
+    .card .more:hover{text-decoration:underline}
+    .card.lift{will-change:transform,box-shadow}
+    @media(hover:hover) and (pointer:fine){
+      .card.lift:hover,.card.lift:focus-within{transform:translateY(-8px);box-shadow:var(--shadow-2)}
+    }
+    @media(prefers-reduced-motion:reduce){.card.lift{transition:none}}
+
+    /* === Footer (match site) === */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  </style>
+</head>
+<body>
+
+  <!-- === Top Header === -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Language Switcher === -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+      <span>ไทย</span>
+    </button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+      <span>EN</span>
+    </button>
+  </div>
+
+  <!-- === Hero === -->
+  <header class="hero">
+    <div class="wrap">
+      <a class="back-chip" href="https://www.baumechemical.com/blog/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_blog">← กลับบล็อก</a>
+      <h1 data-i18n-key="hero_title">Nickel Troubleshooting Series</h1>
+      <p data-i18n-key="hero_tagline">รวมบทความแก้ปัญหา–คุมกระบวนการชุบนิกเกิล: จากการตั้งอ่าง, Woods strike, Watts/Sulfamate, Duplex Ni จนถึงการเลือกรองทองแดง</p>
+    </div>
+  </header>
+
+  <!-- === Series Index === -->
+  <main class="wrap">
+    <h2 class="section" data-i18n-key="sec_overview">ภาพรวมซีรีส์</h2>
+    <p class="lead" data-i18n-key="series_lead">เริ่มจากเบสิคไปจนถึงทริกเชิงสเปก พร้อมลิงก์ไปสินค้าที่เกี่ยวข้อง และบริการตั้งอ่าง/เทรนนิ่งหน้างาน</p>
+
+    <div class="grid">
+
+      <!-- A. Nickel Troubleshooting Overview -->
+      <article class="card lift">
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Nickel Troubleshooting Overview"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Troubleshoot</span></div>
+          <h3 data-i18n-key="a_t">ปัญหาชุบนิกเกิล & วิธีแก้เบื้องต้น (Overview)</h3>
+          <p data-i18n-key="a_d">รวมอาการยอดฮิต: ลอก ด้าน พิตติ้ง เงาไม่เต็ม ขอบไหม้—เช็กลิสต์หน้างาน + พารามิเตอร์ควบคุม</p>
+          <a class="more" href="overview/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- B. Copper undercoat decision -->
+      <article class="card lift">
+        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Nickel on steel: copper undercoat"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Design</span></div>
+          <h3 data-i18n-key="b_t">ชุบบนเหล็กต้องรองทองแดงไหม?</h3>
+          <p data-i18n-key="b_d">ตัดสินใจระหว่างใช้ชั้นทองแดงหรือ Woods strike ต่อ Ni ตรง พร้อมโฟลว์และสเปกความหนา</p>
+          <a class="more" href="../nickel-on-steel-copper-undercoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- C. Woods strike setup (Coming soon) -->
+      <article class="card lift">
+        <picture><img src="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" alt="Woods Nickel Strike setup"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Process</span><span class="badge">Coming soon</span></div>
+          <h3 data-i18n-key="c_t">Woods Nickel Strike — ตั้งค่า & คุมคุณภาพ</h3>
+          <p data-i18n-key="c_d">องค์ประกอบอ่าง pH/อุณหภูมิ/กระแส เวลาแช่ การล้างข้ามบ่อ และการป้องกันการลอกที่อินเตอร์เฟส</p>
+          <a class="more" href="../woods-nickel-strike-setup/" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- D. Watts vs Sulfamate (Coming soon) -->
+      <article class="card lift">
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Watts vs Sulfamate Nickel"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Chemistry</span><span class="badge">Coming soon</span></div>
+          <h3 data-i18n-key="d_t">Watts vs Sulfamate — เลือกให้ตรงงาน</h3>
+          <p data-i18n-key="d_d">เลือกสูตรให้ตรงความต้องการ: ความเค้นตกค้าง ความเหนียว การกลึง การชุบหนา และความเงา</p>
+          <a class="more" href="../nickel-watts-vs-sulfamate/" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- E. Duplex Ni & Micro-porous Cr (Coming soon) -->
+      <article class="card lift">
+        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg" alt="Duplex Nickel & Micro-porous Cr"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">Decorative</span><span class="badge">Coming soon</span></div>
+          <h3 data-i18n-key="e_t">Duplex Nickel & Micro-porous Cr</h3>
+          <p data-i18n-key="e_d">เพิ่มความทนการกัดกร่อนสำหรับงานตกแต่ง: ชั้น Ni ต่างศักย์ + โครเมียมพรุนจิ่ว</p>
+          <a class="more" href="../duplex-nickel-microporous-chromium/" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+      <!-- F. Thickness & Pore test (Coming soon) -->
+      <article class="card lift">
+        <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Nickel thickness & pore testing"></picture>
+        <div class="body">
+          <div class="badge-row"><span class="badge">QA</span><span class="badge">Coming soon</span></div>
+          <h3 data-i18n-key="f_t">ความหนา Ni, การทดสอบรูพรุน & การซีล</h3>
+          <p data-i18n-key="f_d">XRF/คาลิเปอร์, ferroxyl/porosity test, sealants และการประเมินอายุการใช้งาน</p>
+          <a class="more" href="../nickel-thickness-pore-test/" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Related links / CTAs -->
+    <section style="margin-top:22px">
+      <h2 class="section" data-i18n-key="sec_links">ลิงก์ที่เกี่ยวข้อง</h2>
+      <ul>
+        <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener">Plating</a> — น้ำยานิกเกิล/ทองแดง/โครเมียม</li>
+        <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a> — คลีน/แอคทิเวตก่อนชุบ</li>
+        <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a> — ท็อปโค้ต/กันหมอง</li>
+        <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน</a> — ตั้งอ่าง/วิเคราะห์/ทำมาตรฐาน</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- === Footer (เหมือนหน้าหลัก) === -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === JS: reveal + i18n === -->
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.card');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+
+    /* i18n dictionary */
+    const I18N = {
+      th: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← กลับบล็อก",
+        hero_title:"Nickel Troubleshooting Series",
+        hero_tagline:"รวมบทความแก้ปัญหา–คุมกระบวนการชุบนิกเกิล: จากการตั้งอ่าง, Woods strike, Watts/Sulfamate, Duplex Ni จนถึงการเลือกรองทองแดง",
+        sec_overview:"ภาพรวมซีรีส์",
+        series_lead:"เริ่มจากเบสิคไปจนถึงทริกเชิงสเปก พร้อมลิงก์ไปสินค้าที่เกี่ยวข้อง และบริการตั้งอ่าง/เทรนนิ่งหน้างาน",
+        a_t:"ปัญหาชุบนิกเกิล & วิธีแก้เบื้องต้น (Overview)",
+        a_d:"รวมอาการยอดฮิต: ลอก ด้าน พิตติ้ง เงาไม่เต็ม ขอบไหม้—เช็กลิสต์หน้างาน + พารามิเตอร์ควบคุม",
+        b_t:"ชุบบนเหล็กต้องรองทองแดงไหม?",
+        b_d:"ตัดสินใจระหว่างใช้ชั้นทองแดงหรือ Woods strike ต่อ Ni ตรง พร้อมโฟลว์และสเปกความหนา",
+        c_t:"Woods Nickel Strike — ตั้งค่า & คุมคุณภาพ",
+        c_d:"องค์ประกอบอ่าง pH/อุณหภูมิ/กระแส เวลาแช่ การล้างข้ามบ่อ และการป้องกันการลอกที่อินเตอร์เฟส",
+        d_t:"Watts vs Sulfamate — เลือกให้ตรงงาน",
+        d_d:"เลือกสูตรให้ตรงความต้องการ: ความเค้นตกค้าง ความเหนียว การกลึง การชุบหนา และความเงา",
+        e_t:"Duplex Nickel & Micro-porous Cr",
+        e_d:"เพิ่มความทนการกัดกร่อนสำหรับงานตกแต่ง: ชั้น Ni ต่างศักย์ + โครเมียมพรุนจิ่ว",
+        f_t:"ความหนา Ni, การทดสอบรูพรุน & การซีล",
+        f_d:"XRF/คาลิเปอร์, ferroxyl/porosity test, sealants และการประเมินอายุการใช้งาน",
+        read_more:"อ่านต่อ →",
+        footer_products:"หมวดผลิตภัณฑ์",
+        footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+      en: {
+        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        back_blog:"← Back to Blog",
+        hero_title:"Nickel Troubleshooting Series",
+        hero_tagline:"A hub for nickel plating troubleshooting & control: Woods strike, Watts/Sulfamate, duplex Ni, and the copper-undercoat decision.",
+        sec_overview:"Series Overview",
+        series_lead:"From basics to spec-driven tips, with links to related products and on-site setup/training.",
+        a_t:"Nickel Troubleshooting — Quick Overview",
+        a_d:"Common symptoms: peel, dullness, pitting, non-uniform gloss, edge burn — on-floor checklist + control parameters.",
+        b_t:"Nickel on Steel: Do You Need a Copper Undercoat?",
+        b_d:"Decide between copper undercoat vs direct Ni with Woods strike; includes flows and thickness guidance.",
+        c_t:"Woods Nickel Strike — Setup & Control",
+        c_d:"Bath make-up, pH/temperature/current, dwell time, transfers, and preventing interface peel.",
+        d_t:"Watts vs Sulfamate — Picking the Right Bath",
+        d_d:"Match to needs: residual stress, toughness/machining, thick deposits, brightness.",
+        e_t:"Duplex Nickel & Micro-porous Chromium",
+        e_d:"Raise decorative corrosion resistance with potential-differential Ni layers plus porous Cr.",
+        f_t:"Ni Thickness, Pore Testing & Sealing",
+        f_d:"XRF/caliper, ferroxyl/porosity testing, sealants, and life assessment.",
+        read_more:"Read more →",
+        footer_products:"Products",
+        footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+      });
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+    }
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ชุบสังกะสี — Part 2: เดินงาน/โครเมต/Hull cell/ตารางแก้ | Baume Chemical</title>
+
+  <!-- === SEO === -->
+  <meta name="description" content="พารามิเตอร์เดินงาน (Rack/Barrel), คุมโครเมต/พาสซิเวชัน & Anti-tarnish, วิธีทำ Hull cell และอ่านผล, ตารางแก้ปัญหาชุบซิงค์แบบใช้งานได้จริง + เช็กลิสต์ QA ก่อนส่งงาน">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/part-2/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/part-2/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/part-2/">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="keywords" content="zinc plating troubleshooting, chromate passivation, anti-tarnish, hull cell, salt spray, QA checklist">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="ชุบสังกะสี — Part 2: เดินงาน/โครเมต/Hull cell/ตารางแก้">
+  <meta property="og:description" content="เดินงานอย่างนิ่ง คุมโครเมต/ซีล อ่าน Hull cell เป็น และใช้ตารางแก้ปัญหา + QA plan">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/part-2/">
+  <meta property="og:image" content="https://img2.pic.in.th/pic/zinc_plating_cover.webp">
+  <meta property="og:image:alt" content="Hull cell panel and chromate tones">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"ชุบสังกะสี — Part 2: เดินงาน/โครเมต/Hull cell/ตารางแก้",
+    "inLanguage":"th",
+    "author":{"@type":"Organization","name":"Baume Chemical"},
+    "publisher":{"@type":"Organization","name":"Baume Chemical","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"}},
+    "image":"https://img2.pic.in.th/pic/zinc_plating_cover.webp",
+    "mainEntityOfPage":"https://www.baumechemical.com/blog/zinc-plating-troubleshooting/part-2/",
+    "description":"พารามิเตอร์เดินงาน คุมโครเมต/Anti-tarnish วิธีทำ Hull cell และอ่านผล พร้อมตารางแก้ปัญหา + QA checklist",
+    "datePublished":"2025-01-01",
+    "dateModified":"2025-01-01"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+
+    /* Header */
+    .site-header{position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8}
+    .nav-bar{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
+
+    /* Lang FAB */
+    .lang-fab{position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* Hero */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/zinc_plating_cover.webp') center/cover no-repeat}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-chip{display:inline-flex; align-items:center; gap:6px; margin-bottom:10px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
+    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+
+    /* Layout & Article */
+    .wrap{max-width:980px;margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    h3{margin:18px 0 8px;font-size:1.1rem}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
+
+    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
+    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
+    .toc a{color:#2c5e4e;text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
+    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
+    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
+    th{background:#f8fbf9}
+    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* Utils */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Dual language blocks */
+    [data-lang-block]{display:none}
+    html[lang="th"] [data-lang-block="th"]{display:block}
+    html[lang="en"] [data-lang-block="en"]{display:block}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/">Plating</a>
+        <a href="https://www.baumechemical.com/products/passivation/">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/">Blog</a>
+        <a href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/" aria-current="page">Zinc Troubleshooting</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Lang Switcher -->
+  <div class="lang-fab" role="group" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย"><img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span></button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English"><img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span></button>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap" style="padding:22px 16px">
+      <a class="back-chip" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/" onclick="if(history.length>1){history.back();return false;}">← กลับซีรีส์ Zinc Troubleshooting</a>
+      <h1 data-i18n-key="hero_title">ชุบสังกะสี — Part 2: เดินงาน/โครเมต/Hull cell/ตารางแก้</h1>
+      <p data-i18n-key="hero_tagline">เดินงานให้นิ่ง คุมโทนโครเมตและซีลให้ผ่าน NSS แล้วใช้ Hull cell + ตารางแก้ปัญหาเพื่อจูนละเอียด</p>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="wrap">
+    <article class="article reveal">
+
+      <!-- TH -->
+      <div data-lang-block="th">
+        <div class="toc"><strong>สารบัญ:</strong>
+          <div><a href="#run">พารามิเตอร์เดินงาน</a> · <a href="#chromate">โครเมต/พาสซิเวชัน</a> · <a href="#anti">Anti-tarnish</a> · <a href="#hull">Hull cell</a> · <a href="#table">ตารางแก้ปัญหา</a> · <a href="#qa">QA & เช็กลิสต์</a> · <a href="#links">ลิงก์ที่เกี่ยวข้อง</a></div>
+        </div>
+
+        <section id="run">
+          <h2 class="section">พารามิเตอร์เดินงาน (Rack/Barrel)</h2>
+          <ul>
+            <li><strong>โหลด/การกวน:</strong> รักษา loading ใกล้เคียงเดิม, กวน/ไหลเวียนให้ฟองหลุดเร็ว</li>
+            <li><strong>ไฟ:</strong> Rack ใช้ CD สูงกว่า Barrel; ปรับตาม HCD/LCD ของรูปทรง</li>
+            <li><strong>อุณหภูมิ:</strong> คงที่ในกรอบของผู้ผลิตเพื่อคุมเงา/ความตึงผิว</li>
+            <li><strong>เติมสาร:</strong> เติมตัวเงา/ตัวปรับตาม Ampere-hour หรือผลทดสอบ Hull cell</li>
+            <li><strong>กรอง:</strong> ต่อเนื่อง/ผ้ากรอง 1–5 µm ลดพิตติ้ง</li>
+          </ul>
+        </section>
+
+        <section id="chromate">
+          <h2 class="section">โครเมต/พาสซิเวชัน: คุมโทนให้ตรง</h2>
+          <ul>
+            <li><strong>pH อ่าง:</strong> อยู่ในกรอบสเปก (เช่น 1.6–2.2/เหลือง, 1.8–2.4/สีรุ้ง — ยกตัวอย่าง ให้ยึดสเปกจริง)</li>
+            <li><strong>เวลา/อุณหภูมิ:</strong> เวลาสั้นไปสีอ่อนไม่ทน, นาน/ร้อนเกินอาจคล้ำ</li>
+            <li><strong>ล้าง:</strong> DI หลายขั้นจนไม่เหลือคราบ, เป่า/สปินให้แห้งไว ลดฝ้าขาว</li>
+            <li><strong>อบคลายไฮโดรเจน (ถ้ากำหนด):</strong> 190–220&nbsp;°C, 1–4 ชม. ตามสเปกชิ้นงาน</li>
+          </ul>
+          <div class="note">รายละเอียดเชิงลึกดูเพิ่มที่ <a href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" target="_blank" rel="noopener">คุมโทนโครเมตบนซิงค์</a></div>
+        </section>
+
+        <section id="anti">
+          <h2 class="section">Anti-tarnish/ซีล: เลือกให้ผ่าน NSS</h2>
+          <ul>
+            <li><strong>ชนิด:</strong> Cold / Hot / Electro / Tin-seal — เลือกตามชิ้นงานและชั่วโมง NSS</li>
+            <li><strong>การเตรียม:</strong> ล้างก่อนซีล, คุมอุณหภูมิ, เวลาจุ่ม และการไหลออกจากชิ้นงาน</li>
+            <li><strong>ยืนยันผล:</strong> ทดสอบชื้นเร่ง/ซอลต์สเปรย์ตัวอย่างจริง</li>
+          </ul>
+          <div class="note">ดูคู่มือเลือกซีลที่ <a href="https://www.baumechemical.com/blog/anti-tarnish-selection/" target="_blank" rel="noopener">เลือก Anti-tarnish ยังไงให้ตรงสเปก</a></div>
+        </section>
+
+        <section id="hull">
+          <h2 class="section">Hull cell: ทำและอ่านผล</h2>
+          <ol>
+            <li>เตรียมแผ่น Hull cell (60°) ทำความสะอาด/ขัดเงา</li>
+            <li>ตั้ง CD/เวลา ตามคู่มือระบบ (เช่น 2A, 5 นาที) บันทึกสารเติมล่าสุด</li>
+            <li>ชุบ → ล้าง → โครเมต (ถ้าต้องการดูสี) → เป่า/อบแห้ง</li>
+            <li>อ่าน HCD→LCD: ดูไหม้/ด้าน/เส้นริ้ว/พิตติ้ง/คราบฝ้า</li>
+            <li>จูนสารเงา/ตัวปรับ/เกลือหลักทีละสเต็ป จนได้แถบกว้างและนิ่ง</li>
+          </ol>
+        </section>
+
+        <section id="table">
+          <h2 class="section">ตารางแก้ปัญหา (สรุปเร็ว)</h2>
+          <table aria-label="Troubleshooting">
+            <thead><tr><th>อาการ</th><th>สาเหตุพบบ่อย</th><th>ทางแก้</th></tr></thead>
+            <tbody>
+              <tr><td>ไหม้ขอบ (HCD)</td><td>CD สูง/ระยะขั้วแคบ/ตัวเงาไม่สมดุล</td><td>ลด CD/แรงดัน, เพิ่มระยะขั้ว/ชิลด์, ปรับสารเงา</td></tr>
+              <tr><td>ด้าน/เทา (LCD)</td><td>โยนตัวต่ำ/โหลดแน่น/เวลาไม่พอ</td><td>ลดโหลด/เพิ่มเวลาหรือ CD เฉลี่ย, พิจารณา Alkaline</td></tr>
+              <tr><td>พิตติ้ง/จุด</td><td>สิ่งแขวน/ฟองก๊าซ/คราบเข้าอ่าง</td><td>กรองละเอียด, เพิ่ม DI ล้าง, ปรับการกวน</td></tr>
+              <tr><td>ยึดเกาะไม่ดี</td><td>Pretreatment ไม่พอ/สนิมกลับ</td><td>ทวนดีเกรส/พิคเคิล, ลดเวลาค้างอากาศ</td></tr>
+              <tr><td>สีโครเมตไม่ตรง</td><td>pH/เวลา/อุณหภูมิพาสซิเวชัน</td><td>รีเซ็ตค่า, ล็อกการล้าง/อบแห้ง</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="qa">
+          <h2 class="section">QA & เช็กลิสต์ก่อนส่ง</h2>
+          <ul>
+            <li>ความหนาเฉลี่ย/สม่ำเสมอ (XRF/แมกเนติก)</li>
+            <li>ยึดเกาะ (bend/tape/cross-hatch ตามสเปก)</li>
+            <li>สีโครเมต (เปรียบเทียบแผงมาตรฐาน)</li>
+            <li>Salt Spray (NSS/ASS/CASS ตามข้อกำหนด) — <a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">อ่านเกณฑ์</a></li>
+            <li>ความสะอาด/คราบ/สนิมแดงก่อนแพ็ค</li>
+          </ul>
+        </section>
+
+        <section id="links">
+          <h2 class="section">ลิงก์ที่เกี่ยวข้อง</h2>
+          <ul>
+            <li><a href="../">Index ซีรีส์ Zinc Troubleshooting</a> · <a href="../part-1/">Part 1 — ระบบ & ค่าเริ่มต้น</a></li>
+            <li><a href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" target="_blank" rel="noopener">คุมโทนโครเมตบนซิงค์</a></li>
+            <li><a href="https://www.baumechemical.com/blog/anti-tarnish-selection/" target="_blank" rel="noopener">เลือก Anti-tarnish</a></li>
+            <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">Salt Spray แบบเร็ว</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน: ตั้งอ่าง/ทำมาตรฐาน</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- EN -->
+      <div data-lang-block="en">
+        <div class="toc"><strong>Contents:</strong>
+          <div><a href="#run_en">Operation</a> · <a href="#chromate_en">Chromate/Passivation</a> · <a href="#anti_en">Anti-tarnish</a> · <a href="#hull_en">Hull cell</a> · <a href="#table_en">Troubleshooting table</a> · <a href="#qa_en">QA & checklist</a> · <a href="#links_en">Links</a></div>
+        </div>
+
+        <section id="run_en">
+          <h2 class="section">Operation (Rack/Barrel)</h2>
+          <ul>
+            <li>Keep loading consistent; agitation/recirculation to clear gas film</li>
+            <li>Rack CD > Barrel CD; tune to geometry (HCD/LCD)</li>
+            <li>Hold temperature within supplier window</li>
+            <li>Replenish brightener/carriers by Ah and Hull cell feedback</li>
+            <li>Continuous filtration (1–5 µm)</li>
+          </ul>
+        </section>
+
+        <section id="chromate_en">
+          <h2 class="section">Chromate/Passivation</h2>
+          <ul>
+            <li>Control bath pH within spec; time/temperature define tone & durability</li>
+            <li>Rinse thoroughly (DI cascade); fast dry to avoid white haze</li>
+            <li>Hydrogen relief bake if required by spec</li>
+          </ul>
+        </section>
+
+        <section id="anti_en">
+          <h2 class="section">Anti-tarnish/Seal</h2>
+          <ul>
+            <li>Select Cold/Hot/Electro/Tin to meet NSS targets</li>
+            <li>Control temperature/dwell and drainage; verify via humidity/salt-spray</li>
+          </ul>
+        </section>
+
+        <section id="hull_en">
+          <h2 class="section">Hull cell</h2>
+          <ol>
+            <li>Clean/polish panel; set CD/time (e.g., 2 A, 5 min)</li>
+            <li>Plate → rinse → optional chromate → dry</li>
+            <li>Read HCD→LCD for burn/dull/striations/pitting</li>
+            <li>Adjust additives/base salts one variable at a time</li>
+          </ol>
+        </section>
+
+        <section id="table_en">
+          <h2 class="section">Troubleshooting (summary)</h2>
+          <table aria-label="Troubleshooting EN">
+            <thead><tr><th>Symptom</th><th>Likely causes</th><th>Fix</th></tr></thead>
+            <tbody>
+              <tr><td>HCD burn</td><td>High CD/close spacing/brightener imbalance</td><td>Lower CD/voltage; shields; adjust additives</td></tr>
+              <tr><td>LCD dull</td><td>Poor throw/high load/short time</td><td>Reduce load; increase time; consider alkaline</td></tr>
+              <tr><td>Pitting</td><td>Particles/gas film/drag-in</td><td>Finer filtration; DI rinses; better agitation</td></tr>
+              <tr><td>Poor adhesion</td><td>Insufficient pretreatment/re-oxidation</td><td>Revisit cleaning/pickle; minimize air delay</td></tr>
+              <tr><td>Chromate off-tone</td><td>pH/time/temp out of spec</td><td>Reset parameters; rinse/dry discipline</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="qa_en">
+          <h2 class="section">QA & Pre-shipment checklist</h2>
+          <ul>
+            <li>Thickness (avg/uniformity)</li>
+            <li>Adhesion (per spec)</li>
+            <li>Chromate tone vs. standard</li>
+            <li>Salt spray per requirement (see quick guide)</li>
+            <li>Cleanliness & absence of red rust</li>
+          </ul>
+        </section>
+
+        <section id="links_en">
+          <h2 class="section">Links</h2>
+          <ul>
+            <li><a href="../">Series index</a> · <a href="../part-1/">Part 1</a></li>
+            <li><a href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" target="_blank" rel="noopener">Chromate color control</a></li>
+            <li><a href="https://www.baumechemical.com/blog/anti-tarnish-selection/" target="_blank" rel="noopener">Choosing anti-tarnish</a></li>
+            <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener">Salt spray quick guide</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">On-site Service</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand"><div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective</a></li>
+            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
+          </ul>
+        </nav>
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:baumechemical@gmail.com">baumechemical@gmail.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div>© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} }); }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+
+    // Lang
+    const els = { langBtns:()=>document.querySelectorAll('.lang-fab .lang-btn') };
+    function applyLang(lang){ const sel=(lang==='en')?'en':'th'; document.documentElement.lang=sel; els.langBtns().forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===sel))); try{localStorage.setItem('lang',sel);}catch(e){} }
+    (function init(){ const saved=(typeof localStorage!=='undefined' && localStorage.getItem('lang'))||'th'; applyLang(saved); els.langBtns().forEach(btn=>btn.addEventListener('click',()=>applyLang(btn.dataset.lang))); })();
+  </script>
+</body>
+</html>
