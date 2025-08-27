@@ -167,27 +167,100 @@
     [data-lang-block]{display:none}
     html[lang="th"] [data-lang-block="th"]{display:block}
     html[lang="en"] [data-lang-block="en"]{display:block}
+
+    <header class="site-header" role="banner" aria-label="Site header">
+  <div class="nav-bar">
+    <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+      <span class="brand-logo" aria-hidden="true"></span>
+      <span class="brand-name">Baume Chemical</span>
+    </a>
+
+    <!-- ปุ่มเบอร์เกอร์ (มือถือ) -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <!-- เมนูหลัก -->
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+      <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+      <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+      <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+      <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+      <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+      <!-- ปุ่มภาษาในเมนู (โชว์เฉพาะมือถือ) -->
+      <div class="lang-menu lang-menu--mobile" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+          <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+          <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ปุ่มภาษาเดสก์ท็อป (อยู่นอกเมนู) -->
+    <div class="lang-menu lang-menu--desktop" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+      </button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+      </button>
+    </div>
+  </div>
+</header>
+
   </style>
 </head>
 <body>
 
   <!-- === Top Header === -->
-  <header class="site-header" role="banner" aria-label="Site header">
-    <div class="nav-bar">
-      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
-        <span class="brand-logo" aria-hidden="true"></span>
-        <span class="brand-name">Baume Chemical</span>
-      </a>
-      <nav class="primary-nav" aria-label="Primary">
-        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
-        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
-        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
-        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
-        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
-      </nav>
+<header class="site-header" role="banner" aria-label="Site header">
+  <div class="nav-bar">
+    <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+      <span class="brand-logo" aria-hidden="true"></span>
+      <span class="brand-name">Baume Chemical</span>
+    </a>
+
+    <!-- ปุ่มเบอร์เกอร์ (มือถือ) -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <!-- เมนูหลัก -->
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+      <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+      <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+      <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+      <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+      <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+      <!-- ปุ่มภาษาในเมนู (โชว์เฉพาะมือถือ) -->
+      <div class="lang-menu lang-menu--mobile" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+          <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+          <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ปุ่มภาษาเดสก์ท็อป (อยู่นอกเมนู) -->
+    <div class="lang-menu lang-menu--desktop" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+      </button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- === Language Switcher === -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
@@ -562,5 +635,33 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
+
+  <script>
+  const I18N = { /* … ของเดิม … */ };
+
+  const els = {
+    langBtns: () => document.querySelectorAll('.lang-btn'),
+    translatables: () => document.querySelectorAll('[data-i18n-key]')
+  };
+
+  function applyLang(lang){
+    const sel = (lang === 'en') ? 'en' : 'th';
+    document.documentElement.lang = sel;
+    // อัปเดตสถานะปุ่มทั้งเดสก์ท็อปและมือถือพร้อมกัน
+    els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+    els.translatables().forEach(node => {
+      const key = node.getAttribute('data-i18n-key');
+      if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+    });
+    try{ localStorage.setItem('lang', sel); }catch(e){}
+  }
+
+  (function initLang(){
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+    applyLang(saved);
+    els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+  })();
+</script>
+
 </body>
 </html>

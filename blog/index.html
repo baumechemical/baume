@@ -49,7 +49,7 @@
       {"@type":"BlogPosting","headline":"ชุบลอก/ลอกไม่หมด สาเหตุและวิธีแก้","url":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/"},
       {"@type":"BlogPosting","headline":"โครเมตบนซิงค์ให้ตรงโทน (Passivation)","url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"},
       {"@type":"BlogPosting","headline":"รมดำให้ด้านสม่ำเสมอและทนการถู","url":"https://www.baumechemical.com/blog/blackening-uniform-matte/"},
-      {"@type":"BlogPosting","headline":"การเตรียมชิ้นงาน Salt Spray Test","url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"},
+      {"@type":"BlogPosting","headline":"Salt Spray Test แบบเร็ว: เตรียมชิ้นและอ่านผล","url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"},
       {"@type":"BlogPosting","headline":"Bright Dip ทองเหลืองแบบเลเซอร์ B","url":"https://www.baumechemical.com/blog/brass-bright-dip-laser-b/"},
       {"@type":"BlogPosting","headline":"ปัญหาชุบทองเหลืองบนเหล็กและทองแดง","url":"https://www.baumechemical.com/blog/brass-plating-on-steel-copper/"},
       {"@type":"BlogPosting","headline":"ปัญหาแลคเกอร์ไฟฟ้า (E-coat) และการแก้","url":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/"},
@@ -148,101 +148,27 @@
     /* Utils */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
-
-    :root{ --header-h: 56px; } /* ปรับความสูงตามจริงของ header บนมือถือ */
-
-/* HEADER พื้นฐาน */
-.site-header{
-  position: sticky; top:0; z-index:1200;
-  backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(255,255,255,.86);
-  border-bottom:1px solid #e6ece8;
-}
-.nav-bar{
-  max-width:1200px; margin:0 auto; padding:8px 12px;
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-.brand-logo{width:38px;height:38px;border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-.brand-name{font-weight:800; color:#1d2b23}
-
-/* เมนูหลัก - เดสก์ท็อป */
-.primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-.primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
-.primary-nav a:hover{ background:#ecf4ef }
-.primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-
-/* ปุ่มเบอร์เกอร์ */
-.nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-.nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-.nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
-
-/* มือถือ: ย่อขนาด + เมนูเลื่อนลงแบบแผง */
-@media (max-width:900px){
-  .brand-logo{width:30px;height:30px;border-radius:8px}
-  .brand-name{font-size:15px}
-  .nav-toggle{ display:inline-block; }
-  .primary-nav{
-    position:fixed; left:0; right:0; top:var(--header-h);
-    background:#fff; border-bottom:1px solid #e6ece8;
-    box-shadow:0 12px 30px rgba(2,8,20,.12);
-    display:none; flex-direction:column; gap:6px;
-    padding:12px 16px; z-index:1190;
-  }
-  .primary-nav a{ padding:12px 10px; font-size:15px }
-  .site-header.open .primary-nav{ display:flex; }
-  body.no-scroll{ overflow:hidden; } /* กันหน้าเลื่อนเมื่อเมนูเปิด */
-  /* ซ่อนชื่อแบรนด์ถ้าจอแคบมาก */
-  @media (max-width:760px){ .brand-name{display:none} }
-}
-
-/* ====== ปุ่มภาษา (LANG FAB) ให้เลื่อนตามหน้าและไม่ทับหัว ====== */
-.lang-fab{
-  position:fixed; top:14px; right:14px; z-index:1100;
-  display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
-  background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
-}
-.lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a; }
-.lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-.lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-
-/* มือถือ: ทำเป็น sticky ใต้เฮดเดอร์ + ย่อขนาด + ซ่อนตัวอักษรจอเล็กมาก */
-@media (max-width:900px){
-  .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
-  .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
-  .lang-fab .flag{ width:18px; height:13px }
-}
-@media (max-width:420px){
-  .lang-fab .lang-btn span{ display:none; } /* เหลือแค่ธง */
-}
-
   </style>
 </head>
 <body>
 
   <!-- Header -->
-<header class="site-header" role="banner" aria-label="Site header">
-  <div class="nav-bar">
-    <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
-      <span class="brand-logo" aria-hidden="true"></span>
-      <span class="brand-name">Baume Chemical</span>
-    </a>
-
-    <!-- ปุ่มเบอร์เกอร์ (แสดงเฉพาะมือถือ) -->
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-
-    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-      <a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a>
-      <a href="https://www.baumechemical.com/products/platingcoating/">Plating</a>
-      <a href="https://www.baumechemical.com/products/blackening/">Blackening</a>
-      <a href="https://www.baumechemical.com/products/passivation/">Passivation</a>
-      <a href="https://www.baumechemical.com/products/polishing/">Polishing</a>
-      <a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
+        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
+        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
+        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
+        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Lang switcher -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
@@ -295,7 +221,7 @@
 
       <!-- 3 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="Plating peel troubleshooting"></picture>
+        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Plating peel troubleshooting"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Troubleshoot</span><span class="badge">Pretreatment</span></div>
           <h3 data-i18n-key="post3_t">ชุบลอก/ลอกไม่หมด: สาเหตุ & วิธีแก้</h3>
@@ -331,7 +257,7 @@
         <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Salt spray quick guide"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Test</span><span class="badge">Corrosion</span></div>
-          <h3 data-i18n-key="post6_t">การเตรียมชิ้นงาน Salt Spray Test</h3>
+          <h3 data-i18n-key="post6_t">Salt Spray Test แบบเร็ว</h3>
           <p data-i18n-key="post6_d">เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์</p>
           <a class="more" href="salt-spray-quick-guide/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
@@ -339,7 +265,7 @@
 
       <!-- 7 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image6-1.jpeg" alt="Brass bright dip Laser B"></picture>
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Brass bright dip Laser B"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Brass</span><span class="badge">Bright Dip</span></div>
           <h3 data-i18n-key="post7_t">ทำไมต้องใช้กัดเงาทองเหลือง Laser B</h3>
@@ -361,7 +287,7 @@
 
       <!-- 9 -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg" alt="Electrophoretic lacquer issues"></picture>
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Electrophoretic lacquer issues"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Coating</span><span class="badge">E-coat</span></div>
           <h3 data-i18n-key="post9_t">ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า</h3>
@@ -372,7 +298,7 @@
 
       <!-- 10 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image2-1.jpeg" alt="Nickel on steel with copper undercoat"></picture>
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Nickel on steel with copper undercoat"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Process</span></div>
           <h3 data-i18n-key="post10_t">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?</h3>
@@ -383,7 +309,7 @@
 
       <!-- 11 -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image4-1.jpeg" alt="Nickel plating troubleshooting"></picture>
+        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Nickel plating troubleshooting"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Troubleshoot</span></div>
           <h3 data-i18n-key="post11_t">ปัญหาการชุบนิกเกิล & วิธีแก้</h3>
@@ -394,7 +320,7 @@
 
       <!-- 12 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="Nickel troubleshooting hub"></picture>
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Nickel troubleshooting hub"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Cases</span></div>
           <h3 data-i18n-key="post12_t">Nickel Troubleshooting (รวมเคส)</h3>
@@ -427,7 +353,7 @@
 
       <!-- 15 -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image3-1.jpeg" alt="Zinc die-cast to nickel"></picture>
+        <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Zinc die-cast to nickel"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Setup</span></div>
           <h3 data-i18n-key="post15_t">เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล</h3>
@@ -438,7 +364,7 @@
 
       <!-- 16 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image7-1.jpeg" alt="Zinc troubleshooting hub"></picture>
+        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Zinc troubleshooting hub"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Series</span></div>
           <h3 data-i18n-key="post16_t">Zinc Plating Troubleshooting (หน้ารวมซีรีส์)</h3>
@@ -449,7 +375,7 @@
 
       <!-- 17 -->
       <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image0-6.jpeg" alt="Trivalent seal & topcoat"></picture>
+        <picture><img src="https://i.imgur.com/ukJr5Po.jpeg" alt="Trivalent seal & topcoat"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Sealer</span></div>
           <h3 data-i18n-key="post17_t">ซีล/ท็อปโค้ทสำหรับโครเมต 3</h3>
@@ -543,7 +469,7 @@
         post5_t:"รมดำให้ด้านสม่ำเสมอและทนการถู",
         post5_d:"เตรียมผิว อุณหภูมิ/เวลา ซีล และทดสอบการเสียดสี",
 
-        post6_t:"การเตรียมชิ้นงาน Salt Spray Test",
+        post6_t:"Salt Spray Test แบบเร็ว",
         post6_d:"เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์",
 
         post7_t:"ทำไมต้องใช้กัดเงาทองเหลือง Laser B",
@@ -668,40 +594,5 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
-
-  <script>
-(function(){
-  // Toggle เมนูหลัก
-  const header = document.querySelector('.site-header');
-  const toggle = document.querySelector('.nav-toggle');
-  toggle?.addEventListener('click', ()=>{
-    const isOpen = header.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.classList.toggle('no-scroll', isOpen);
-  });
-  // ปิดเมนูเมื่อเปลี่ยนขนาดจอกลับเป็นเดสก์ท็อป
-  window.addEventListener('resize', ()=>{
-    if (window.innerWidth > 900 && header.classList.contains('open')){
-      header.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-      document.body.classList.remove('no-scroll');
-    }
-  });
-
-  // (ตัวเลือก) ให้ปุ่มภาษาเลื่อนหายตอนสกรอลล์ลง โชว์ตอนเลื่อนขึ้น
-  if (window.matchMedia('(max-width: 900px)').matches){
-    const fab = document.querySelector('.lang-fab');
-    let lastY = window.scrollY;
-    window.addEventListener('scroll', ()=>{
-      const down = window.scrollY > lastY;
-      fab.style.transition = 'transform .18s ease, opacity .18s ease';
-      fab.style.transform = down ? 'translateY(-10px)' : 'translateY(0)';
-      fab.style.opacity = down ? '0' : '1';
-      lastY = window.scrollY;
-    }, {passive:true});
-  }
-})();
-</script>
-
 </body>
 </html>
