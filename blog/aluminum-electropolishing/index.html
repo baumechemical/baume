@@ -78,71 +78,38 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
 
-:root{ --header-h: 56px; } /* ปรับตามความสูงจริงบนมือถือ */
+    /* === Sticky Top Header (logo + menu) === */
+    .site-header{
+      position:sticky; top:0; z-index:1200;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:rgba(255,255,255,.78);
+      border-bottom:1px solid #e6ece8;
+    }
+    .nav-bar{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:14px; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-name{font-weight:800; color:#1d2b23}
+    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a:hover{ background:#ecf4ef }
+    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    @media(max-width:760px){ .brand-name{display:none} }
 
-/* ===== Header (Desktop) ===== */
-.site-header{
-  position: sticky; top:0; z-index:1200;
-  backdrop-filter:saturate(140%) blur(8px);
-  background:rgba(255,255,255,.86);
-  border-bottom:1px solid #e6ece8;
-}
-.nav-bar{
-  max-width:1200px; margin:0 auto; padding:8px 12px;
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-.brand-logo{width:38px;height:38px;border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-.brand-name{font-weight:800; color:#1d2b23}
-.primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-.primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
-.primary-nav a:hover{ background:#ecf4ef }
-.primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-
-/* ===== Burger button (ใช้ .nav-toggle เท่านั้น) ===== */
-.nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-.nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-.nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
-
-/* ===== Mobile (<=900px) ===== */
-@media (max-width:900px){
-  .brand-logo{width:30px;height:30px;border-radius:8px}
-  .brand-name{display:none}
-  .nav-toggle{ display:inline-block; }
-
-  /* เมนูเป็นแผงเลื่อนลงคงที่ใต้หัวเว็บ */
-  .primary-nav{
-    position:fixed; left:0; right:0; top:var(--header-h);
-    background:#fff; border-bottom:1px solid #e6ece8;
-    box-shadow:0 12px 30px rgba(2,8,20,.12);
-    display:none; flex-direction:column; gap:6px;
-    padding:12px 16px; z-index:1190;
-  }
-  .site-header.open .primary-nav{ display:flex; }
-  .primary-nav a{ padding:12px 10px; font-size:15px }
-  body.no-scroll{ overflow:hidden; }
-}
-
-/* ===== Language FAB ===== */
-.lang-fab{
-  position:fixed; top:14px; right:14px; z-index:1100;
-  display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
-  background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
-}
-.lang-fab .lang-btn{ appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a; }
-.lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-.lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-
-/* มือถือ: ทำเป็น sticky ใต้หัวเว็บ */
-@media (max-width:900px){
-  .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
-  .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
-  .lang-fab .flag{ width:18px; height:13px }
-}
-@media (max-width:420px){
-  .lang-fab .lang-btn span{ display:none; } /* แสดงเฉพาะธง */
-}
-
+    /* === Floating Language Switcher === */
+    .lang-fab{
+      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
+      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .lang-fab .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;
+      font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a;
+    }
+    .lang-fab .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-fab .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     /* === Hero === */
     .hero{
@@ -201,48 +168,7 @@
     html[lang="th"] [data-lang-block="th"]{display:block}
     html[lang="en"] [data-lang-block="en"]{display:block}
 
-    /* === Mobile-friendly header === */
-.menu-toggle{
-  display:none; align-items:center; gap:8px;
-  background:#fff; border:1px solid #e2e8f0; padding:8px 10px;
-  border-radius:10px; font-weight:800; color:#1f2a24;
-}
-.menu-toggle .bar{width:18px;height:2px;background:#1f2a24;display:block;position:relative}
-.menu-toggle .bar::before,.menu-toggle .bar::after{
-  content:""; position:absolute; left:0; width:18px; height:2px; background:#1f2a24
-}
-.menu-toggle .bar::before{ top:-6px } .menu-toggle .bar::after{ top:6px }
-.menu-toggle[aria-expanded="true"] .bar{background:transparent}
-.menu-toggle[aria-expanded="true"] .bar::before{transform:rotate(45deg); top:0}
-.menu-toggle[aria-expanded="true"] .bar::after{transform:rotate(-45deg); top:0}
-.menu-toggle .menu-text{font-size:14px}
-
-/* ปรับขนาดสำหรับจอเล็ก */
-@media (max-width: 900px){
-  .nav-bar{padding:8px 12px}
-  .brand-logo{width:30px; height:30px}
-  .brand-name{display:none}
-  .primary-nav{
-    display:none; position:absolute; left:0; right:0; top:54px;
-    background:#fff; border-bottom:1px solid #e6ece8;
-    box-shadow:0 10px 24px rgba(2,8,20,.08); z-index:1250;
-  }
-  .primary-nav.open{ display:grid; grid-template-columns:1fr; gap:0 }
-  .primary-nav a{
-    padding:12px 16px; border-radius:0; font-size:15px;
-    border-top:1px solid #f1f5f1;
-  }
-  .primary-nav a:first-child{ border-top:0 }
-  .menu-toggle{ display:flex }
-}
-
-/* ลดความสูง/ขนาดฟอนต์เพิ่มอีกขั้นสำหรับจอเล็กมาก */
-@media (max-width: 420px){
-  .menu-toggle{ padding:6px 8px }
-  .primary-nav a{ padding:11px 14px; font-size:14px }
-}
-
-:root{ --header-h: 56px; } /* ปรับความสูงตามจริงของ header บนมือถือ */
+    :root{ --header-h: 56px; } /* ปรับความสูงตามจริงของ header บนมือถือ */
 
 /* HEADER พื้นฐาน */
 .site-header{
@@ -336,7 +262,6 @@
     </nav>
   </div>
 </header>
-
 
 
   <!-- === Language Switcher === -->
@@ -682,9 +607,9 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
-
-<script>
+  <script>
 (function(){
+  // Toggle เมนูหลัก
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.nav-toggle');
   toggle?.addEventListener('click', ()=>{
@@ -692,6 +617,7 @@
     toggle.setAttribute('aria-expanded', String(isOpen));
     document.body.classList.toggle('no-scroll', isOpen);
   });
+  // ปิดเมนูเมื่อเปลี่ยนขนาดจอกลับเป็นเดสก์ท็อป
   window.addEventListener('resize', ()=>{
     if (window.innerWidth > 900 && header.classList.contains('open')){
       header.classList.remove('open');
@@ -699,7 +625,8 @@
       document.body.classList.remove('no-scroll');
     }
   });
-  // ทำให้ปุ่มภาษาเลื่อนหลบตอนสกรอลล์ลง
+
+  // (ตัวเลือก) ให้ปุ่มภาษาเลื่อนหายตอนสกรอลล์ลง โชว์ตอนเลื่อนขึ้น
   if (window.matchMedia('(max-width: 900px)').matches){
     const fab = document.querySelector('.lang-fab');
     let lastY = window.scrollY;
