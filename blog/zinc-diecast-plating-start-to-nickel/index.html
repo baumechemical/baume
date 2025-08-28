@@ -167,6 +167,9 @@
     /* Reveal */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
+    .menu-scrim{ display:none; pointer-events:none; }
+.menu-scrim:not([hidden]){ display:block; pointer-events:auto; }
+
   </style>
 </head>
 <body>
