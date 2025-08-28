@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Salt Spray Test: เตรียมชิ้นทดสอบ, เงื่อนไข NSS/ASS/CASS, เกณฑ์อ่านผล & เช็กลิสต์ | Baume Chemical</title>
+  <title>คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test (NSS/AASS/CASS) | Baume Chemical Blog</title>
 
-  <!-- === SEO === -->
-  <meta name="description" content="คู่มือ Salt/Fog (ASTM B117 / ISO 9227): วิธีเตรียมชิ้นทดสอบ เงื่อนไข NSS/ASS/CASS (5% NaCl, pH, อุณหภูมิ, อัตราสะสมหมอก) เกณฑ์อ่านผล (White/Red Rust, Blister, Scribe Creep) และเช็กลิสต์ก่อนส่งทดสอบ">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/">
+  <!-- === SEO base === -->
+  <meta name="description" content="คู่มือเตรียมชิ้นงาน Salt Spray Test แบบใช้งานจริง: ค่าเริ่มต้นที่แนะนำ (NSS/AASS/CASS) การเตรียมผิว การมาร์ก/มาสก์ การจัดวางในเครื่อง เกณฑ์ควบคุมห้อง และตารางปัญหาพบเจอบ่อย พร้อมลิงก์ความรู้ที่เกี่ยวข้อง">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/salt-spray-sample-prep/">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/salt-spray-sample-prep/">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/salt-spray-sample-prep/">
+  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/salt-spray-sample-prep/">
   <meta name="theme-color" content="#2c5e4e">
-  <meta name="keywords" content="salt spray, salt fog, ASTM B117, ISO 9227, JIS Z 2371, NSS, AASS, CASS, corrosion test, neutral salt spray, acetic salt spray, copper-accelerated salt spray, Baume Chemical">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="th_TH">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Salt Spray Test: เตรียมชิ้นทดสอบ, NSS/ASS/CASS, เกณฑ์อ่านผล & เช็กลิสต์">
-  <meta property="og:description" content="ตั้งแต่การเตรียมชิ้นทดสอบ เงื่อนไข NSS/ASS/CASS ไปจนถึงเกณฑ์อ่านผลและเช็กลิสต์ก่อนส่งแล็บ">
-  <meta property="og:url" content="https://www.baumechemical.com/blog/salt-spray-quick-guide/">
-  <meta property="og:image" content="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png">
-  <meta property="og:image:alt" content="Salt spray chamber & corrosion test panels">
+  <meta property="og:title" content="คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test (NSS/AASS/CASS)">
+  <meta property="og:description" content="เลือกชนิดการทดสอบ → เตรียมผิว/มาร์ก → จัดวางในเครื่อง → คุม pH/อุณหภูมิ/อัตรารับละออง → ตารางปัญหาและวิธีแก้">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/salt-spray-sample-prep/">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta property="og:image:alt" content="Salt Spray Test sample preparation — Baume Chemical">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured Data (JSON-LD) -->
@@ -32,153 +33,150 @@
     "@type":"Organization",
     "name":"Baume Chemical",
     "url":"https://www.baumechemical.com/",
-    "logo":"https://www.baumechemical.com/assets/logo.png",
+    "logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},
     "sameAs":["https://line.me/ti/p/~baumechemical"]
   }
   </script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
-      {"@type":"ListItem","position":3,"name":"Salt Spray Quick Guide","item":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"}
-    ]
+    "@type":"BlogPosting",
+    "headline":"คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test (NSS/AASS/CASS)",
+    "url":"https://www.baumechemical.com/blog/salt-spray-sample-prep/",
+    "inLanguage":"th",
+    "description":"แนวทางเตรียมชิ้นงานสำหรับ NSS/AASS/CASS ตั้งแต่ทำความสะอาด มาสก์/มาร์ก การจัดวางในเครื่อง เกณฑ์ควบคุมห้องทดสอบ และตารางปัญหาพบเจอบ่อย",
+    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
+    "image":"https://i.imgur.com/3mWQsKe.jpeg"
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Salt Spray Test: เตรียมชิ้นทดสอบ, เงื่อนไข NSS/ASS/CASS, เกณฑ์อ่านผล และเช็กลิสต์ก่อนส่งทดสอบ",
-    "inLanguage":"th",
-    "author":{"@type":"Organization","name":"Baume Chemical"},
-    "publisher":{"@type":"Organization","name":"Baume Chemical","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"}},
-    "image":"https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png",
-    "mainEntityOfPage":"https://www.baumechemical.com/blog/salt-spray-quick-guide/",
-    "description":"สรุปการเตรียมตัวอย่าง เงื่อนไข NSS/ASS/CASS เกณฑ์การอ่านผล และเช็กลิสต์ก่อนส่งแล็บ ตามแนวทางทั่วไปของ ASTM B117/ISO 9227",
-    "datePublished":"2025-01-09",
-    "dateModified":"2025-01-09"
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
+    {"@type":"ListItem","position":3,"name":"Salt Spray Test — Sample Prep","item":"https://www.baumechemical.com/blog/salt-spray-sample-prep/"}
+  ]}
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:56px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* === Sticky Top Header (logo + menu) === */
-    .site-header{
-      position:sticky; top:0; z-index:1200;
-      backdrop-filter:saturate(140%) blur(8px);
-      background:rgba(255,255,255,.78);
-      border-bottom:1px solid #e6ece8;
-    }
-    .nav-bar{
-      max-width:1200px; margin:0 auto; padding:10px 16px;
-      display:flex; align-items:center; gap:14px; justify-content:space-between;
-    }
+    /* ===== Header ===== */
+    .site-header{ position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8; }
+    .nav-bar{ max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
     .brand-name{font-weight:800; color:#1d2b23}
     .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600; }
+    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
     .primary-nav a:hover{ background:#ecf4ef }
     .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
     @media(max-width:760px){ .brand-name{display:none} }
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1300; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* Burger */
+    .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
+    .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
+    .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-block; }
+      .primary-nav{ position:fixed; left:0; right:0; top:var(--header-h); background:#fff; border-bottom:1px solid #e6ece8; box-shadow:0 12px 30px rgba(2,8,20,.12); display:none; flex-direction:column; gap:6px; padding:12px 16px; z-index:1190; }
+      .primary-nav a{ padding:12px 10px; font-size:15px }
+      .site-header.open .primary-nav{ display:flex; }
+      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1185; display:none }
     }
-    .lang-fab .lang-btn{
-      appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;
-      font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .lang-fab .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .menu-scrim{ display:none } .menu-scrim:not([hidden]){ display:block }
 
-    /* === Hero === */
-    .hero{
-      position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(420px, 60vh, 620px);
-      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png') center/cover no-repeat;
-    }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
-    .back-chip{
-      display:inline-flex; align-items:center; gap:6px; margin-bottom:10px;
-      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
-      background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px);
-    }
+    /* ===== Lang FAB ===== */
+    .lang-fab{ position:fixed; top:calc(env(safe-area-inset-top, 0px) + 14px); right:calc(env(safe-area-inset-right, 0px) + 14px); z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition:transform .18s ease, opacity .18s ease;}
+    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .lang-fab.is-hide{ opacity:0; transform:translateY(-10px); pointer-events:none }
+    @media (max-width:900px){ .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); margin:8px 12px 0 auto; background:#fff; box-shadow:0 8px 26px rgba(2,8,20,.06);} .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 } .lang-fab .flag{ width:18px; height:13px } }
+    @media (max-width:420px){ .lang-fab .lang-btn span{ display:none } }
+    @media (prefers-reduced-motion: reduce){ .lang-fab{ transition:none } }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
     .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
 
-    /* === Layout === */
-    .wrap{max-width:980px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
-    h3{margin:18px 0 8px;font-size:1.1rem}
-    p.lead{margin:0 0 16px;color:#5f6d7c}
+    /* ===== Base layout ===== */
+    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    .lead{margin:0 0 16px; color:#5f6d7c}
 
-    /* === Article === */
-    .article{background:#fff;border:1px solid #e3ece5;border-radius:16px;box-shadow:var(--shadow-1);padding:20px}
-    .toc{background:#f6fbf8;border:1px solid #dcebe2;border-radius:12px;padding:12px;margin:10px 0 16px}
-    .toc a{color:#2c5e4e;text-decoration:none}
-    .toc a:hover{text-decoration:underline}
-    .note{background:#f7fbff;border:1px solid #cde5ff;color:#1e3a8a;border-radius:12px;padding:12px;margin:12px 0}
-    .warn{background:#fff7ed;border:1px solid #fdba74;color:#7c2d12;border-radius:12px;padding:12px;margin:12px 0}
-    table{width:100%;border-collapse:collapse;margin:10px 0 16px}
-    th,td{border:1px solid #e6ece8;padding:8px;text-align:left}
-    th{background:#f8fbf9}
-    code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:2px 6px}
+    /* Decor & components */
+    html{scroll-behavior:smooth}
+    [hidden]{display:none !important}
+    .section{position:relative}
+    .section::after{content:"";display:block;height:3px;width:72px;margin:8px 0 0;background:linear-gradient(90deg,var(--brand-2),#59a286,transparent);border-radius:2px}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-1)}
+    #toc p{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+    .toc-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:700}
+    .toc-chip:hover{background:#e4f0ea}
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:#f4faf7}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
 
-    /* === Footer (match homepage) === */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
-    .site-footer a{color:#e2e8f0;text-decoration:none}
-    .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    /* Part switcher */
+    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
+    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
+    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* Footer */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-    /* === Utilities === */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
-
-    /* === Dual language blocks === */
-    [data-lang-block]{display:none}
-    html[lang="th"] [data-lang-block="th"]{display:block}
-    html[lang="en"] [data-lang-block="en"]{display:block}
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
   </style>
 </head>
 <body>
 
-  <!-- === Top Header === -->
+  <!-- ===== Header ===== -->
   <header class="site-header" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
-      <nav class="primary-nav" aria-label="Primary">
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
         <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
         <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
         <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
@@ -188,8 +186,9 @@
       </nav>
     </div>
   </header>
+  <div class="menu-scrim" hidden></div>
 
-  <!-- === Language Switcher === -->
+  <!-- Lang FAB -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
       <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
@@ -201,311 +200,220 @@
     </button>
   </div>
 
-  <!-- === Hero === -->
+  <!-- Hero -->
   <header class="hero">
-    <div class="wrap" style="padding:22px 16px">
-      <a class="back-chip" href="https://www.baumechemical.com/blog/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_blog">← ย้อนกลับ</a>
-      <h1 data-i18n-key="hero_title">Salt Spray Test: NSS/ASS/CASS แบบเข้าใจง่าย</h1>
-      <p data-i18n-key="hero_tagline">
-        เตรียมชิ้นทดสอบให้ถูกต้อง กำหนดเงื่อนไข NSS/ASS/CASS ตามมาตรฐาน อ่านผลให้ตรงสเปก พร้อมเช็กลิสต์ส่งแล็บ
-        ลิงก์ไปยัง
-        <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/protective/">Protective</a>,
-        <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/passivation/">Passivation</a>
-        และ <a style="color:#fff;text-decoration:underline" href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a>
-      </p>
+    <div class="wrap">
+      <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+      <h1 data-i18n-key="hero_title">คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test (NSS/AASS/CASS)</h1>
+      <p data-i18n-key="hero_tagline">เลือกชนิดทดสอบ → เตรียมผิว/มาร์ก/มาสก์ → จัดวางในเครื่อง → ควบคุม pH/อุณหภูมิ/อัตรารับละออง → ตารางปัญหาพบเจอบ่อย</p>
     </div>
   </header>
 
-  <!-- === Article === -->
   <main class="wrap">
-    <article class="article reveal">
+    <!-- Part Switcher -->
+    <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
+      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: ค่าเริ่มต้น/เตรียมผิว/หน้าต่างการทดสอบ</span></button>
+      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: การจัดวาง/ดูแลห้อง/ตารางปัญหา/ลิงก์</span></button>
+    </div>
 
-      <!-- TH block -->
-      <div data-lang-block="th">
-        <div class="toc" aria-label="สารบัญ">
-          <strong>สารบัญ:</strong>
-          <div>
-            <a href="#tldr">TL;DR – ค่าเริ่มต้น</a> ·
-            <a href="#specimen">เตรียมชิ้นทดสอบ</a> ·
-            <a href="#conditions">เงื่อนไข NSS/ASS/CASS</a> ·
-            <a href="#reading">เกณฑ์อ่านผล</a> ·
-            <a href="#checklist">เช็กลิสต์ก่อนส่ง</a> ·
-            <a href="#troubleshoot">แก้ปัญหางานตก</a> ·
-            <a href="#related">ลิงก์ที่เกี่ยวข้อง</a>
-          </div>
-        </div>
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#defaults" data-part="1" data-i18n-key="toc_defaults">ค่าเริ่มต้นที่แนะนำ</a>
+        <a class="toc-chip" href="#prep" data-part="1" data-i18n-key="toc_prep">การเตรียมผิว/มาร์ก/มาสก์</a>
+        <a class="toc-chip" href="#window" data-part="1" data-i18n-key="toc_window">หน้าต่างและตัวแปรการทดสอบ</a>
+        <a class="toc-chip" href="#placement" data-part="2" data-i18n-key="toc_placement">การจัดวางชิ้นในห้องทดสอบ</a>
+        <a class="toc-chip" href="#chamber" data-part="2" data-i18n-key="toc_chamber">การดูแลห้อง & การคุมคุณภาพ</a>
+        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a>
+        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
+      </p>
+    </nav>
 
-        <section id="intro">
-          <p class="lead">
-            Salt Spray (Salt Fog) เป็นการเร่งการกัดกร่อนเพื่อเปรียบเทียบความทนสนิมของผิวเคลือบ/การเคลือบผิว
-            ค่าต่อไปนี้เป็นแนวทางทั่วไป โปรดอ้างอิงสเปกของลูกค้าหรือมาตรฐาน <strong>ASTM B117 / ISO 9227 / JIS Z 2371</strong> เป็นหลัก
-          </p>
-        </section>
-
-        <section id="tldr">
-          <h2 class="section">TL;DR – ค่าเริ่มต้นแนะนำ*</h2>
-          <ul>
-            <li><strong>NSS</strong> (Neutral): 5&nbsp;±&nbsp;1% NaCl, pH <strong>6.5–7.2</strong>, อุณหภูมิห้องทดสอบ <strong>~35&nbsp;°C</strong></li>
-            <li><strong>AASS/ASS</strong> (Acetic): 5% NaCl ปรับ pH <strong>3.1–3.3</strong> ด้วยกรดอะซิติก, อุณหภูมิ <strong>~35&nbsp;°C</strong></li>
-            <li><strong>CASS</strong> (Copper-accelerated): 5% NaCl + <em>CuCl₂·2H₂O</em> ~<strong>0.25 g/L</strong>, pH <strong>3.1–3.3</strong>, อุณหภูมิ <strong>~50&nbsp;°C</strong></li>
-            <li><strong>อัตราสะสมหมอก</strong> (collection rate): <strong>1.0–2.0 mL/h</strong> ต่อพื้นที่คอลเลคเตอร์ <strong>80&nbsp;cm²</strong></li>
-            <li><strong>การวางชิ้นงาน</strong>: เอียง <strong>15–30° จากแนวดิ่ง</strong>, ไม่ให้มีหยดน้ำ/บังหมอก</li>
-            <li><strong>ชั่วโมงทดสอบ</strong>: ตามสเปกสั่งงาน (เช่น 24–1,000 h)</li>
-          </ul>
-          <div class="note">*ตัวเลขเป็นค่าแพร่หลาย ให้ยึดสเปกของลูกค้าหรือมาตรฐานล่าสุดเป็นที่สุด</div>
-        </section>
-
-        <section id="specimen">
-          <h2 class="section">เตรียมชิ้นทดสอบให้ผ่านฉลุย</h2>
-          <ol>
-            <li><strong>ตัวอย่าง</strong>: ใช้ชิ้นงานจริงหรือแผ่นเทียบสเปกเดียวกับการผลิต บอกชนิดวัสดุ/เกรดให้ชัด</li>
-            <li><strong>ความสะอาด</strong>: ดีเกรส + ล้าง DI หลีกเลี่ยงจับผิวด้วยมือเปล่า (ใส่ถุงมือไร้แป้ง)</li>
-            <li><strong>มาสก์พื้นที่ไม่ประเมิน</strong>: ขอบตัด/รูที่เสี่ยงกักน้ำ ให้ปิดหรือเจาะระบายน้ำ</li>
-            <li><strong>บันทึกก่อนทดสอบ</strong>: ความหนาผิวเคลือบ (เช่น µm), สภาพผิว, เวลา/อุณหภูมิการบ่ม</li>
-            <li><strong>การบ่มหลังเคลือบ</strong>: Passivation/Sealer หลายระบบควรบ่ม <strong>24–48 ชม.</strong> ก่อนเข้า Salt Spray</li>
-            <li><strong>ป้ายระบุตัวอย่าง</strong>: ใช้แท็ก/หมึกที่ไม่กัดกร่อนและไม่ไหลเยิ้ม</li>
-          </ol>
-        </section>
-
-        <section id="conditions">
-          <h2 class="section">เงื่อนไข NSS/ASS/CASS (สรุป)</h2>
-          <table aria-label="Salt spray conditions summary">
-            <thead>
-              <tr>
-                <th>พารามิเตอร์</th>
-                <th>NSS</th>
-                <th>AASS/ASS</th>
-                <th>CASS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>NaCl</td>
-                <td>5&nbsp;±&nbsp;1% m/m</td>
-                <td>5&nbsp;±&nbsp;1% m/m</td>
-                <td>5&nbsp;±&nbsp;1% m/m</td>
-              </tr>
-              <tr>
-                <td>สารเติมแต่ง</td>
-                <td>—</td>
-                <td>ปรับ pH ด้วยกรดอะซิติก</td>
-                <td>เพิ่ม CuCl₂·2H₂O ~0.25 g/L + ปรับ pH ด้วยกรดอะซิติก</td>
-              </tr>
-              <tr>
-                <td>pH สารละลาย</td>
-                <td>6.5–7.2</td>
-                <td>3.1–3.3</td>
-                <td>3.1–3.3</td>
-              </tr>
-              <tr>
-                <td>อุณหภูมิห้องทดสอบ</td>
-                <td>35&nbsp;°C</td>
-                <td>35&nbsp;°C</td>
-                <td>50&nbsp;°C</td>
-              </tr>
-              <tr>
-                <td>อัตราสะสมหมอก</td>
-                <td colspan="3">1.0–2.0 mL/h ต่อ 80&nbsp;cm² (สม่ำเสมอทั่วตู้)</td>
-              </tr>
-              <tr>
-                <td>การจัดวางชิ้นงาน</td>
-                <td colspan="3">เอียง 15–30° จากแนวดิ่ง, ไม่ซ้อน/ไม่กักหยดน้ำ</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="warn"><strong>หมายเหตุ:</strong> ให้ยึดรายละเอียดการสอบเทียบ/การตรวจ pH/การเก็บอัตราสะสมของแล็บตามมาตรฐานปัจจุบัน</div>
-        </section>
-
-        <section id="reading">
-          <h2 class="section">เกณฑ์อ่านผล (กำหนดให้ชัดใน PO)</h2>
-          <ul>
-            <li><strong>ชุบสังกะสี/ซิงค์อัลลอย</strong>: แยก <em>White corrosion</em> (ผลิตภัณฑ์สังกะสี) กับ <em>Red rust</em> (สนิมเหล็กฐาน). โดยทั่วไป <em>“fail”</em> เมื่อเกิด <strong>Red rust</strong> บริเวณที่ระบุ</li>
-            <li><strong>อะลูมิเนียม/แอโนไดซ์/เคมีคอนเวอร์ชัน</strong>: จุดพิต/คราบผง/ฟิลิฟอร์ม ให้ระบุ % พื้นที่หรือจำนวนจุด</li>
-            <li><strong>ชิ้นทำสี/ท็อปโค้ท</strong>: บวมพอง (Blister), การกัดกร่อนตามรอยกรีด (<em>Scribe creep</em>) ระบุเกณฑ์ เช่น ≤ X mm ตามมาตรฐานที่อ้าง</li>
-            <li><strong>จุดเวลา</strong>: ระบุชั่วโมงที่ต้องรายงาน (เช่น 24/48/96/240/480/720/1000 h) และเกณฑ์ผ่าน/ตกในแต่ละจุด</li>
-          </ul>
-        </section>
-
-        <section id="checklist">
-          <h2 class="section">เช็กลิสต์ก่อนส่งทดสอบ</h2>
-          <ul>
-            <li>อ้างอิงมาตรฐาน: ASTM B117 / ISO 9227 / JIS Z 2371 (ระบุชนิด NSS, AASS, CASS)</li>
-            <li>ชั่วโมงทดสอบ + จุดเวลาในการอ่านผล</li>
-            <li>เกณฑ์ผ่าน/ตก (เช่น Red rust บริเวณไม่ใช่รอยคีบ = Fail)</li>
-            <li>การจัดวาง/ทิศทางตัวอย่างในตู้</li>
-            <li>การบ่มหลังเคลือบก่อนส่ง (เช่น 24–48 ชม.)</li>
-            <li>จำนวนตัวอย่าง/การทำซ้ำ (replicate) อย่างน้อย 2–3 ชิ้น</li>
-            <li>ภาพถ่ายก่อนทดสอบ + บันทึกความหนา/ผิว/ซีล</li>
-            <li>ขอสำเนาใบสอบเทียบเครื่อง/บันทึก pH/อัตราสะสมหมอกจากแล็บ</li>
-          </ul>
-        </section>
-
-        <section id="troubleshoot">
-          <h2 class="section">แก้ปัญหายอดฮิตเมื่อผลไม่ถึง</h2>
-          <table>
-            <thead><tr><th>อาการ</th><th>สาเหตุที่พบบ่อย</th><th>แนวทางแก้</th></tr></thead>
-            <tbody>
-              <tr>
-                <td>เกิด White rust เร็ว (Zn)</td>
-                <td>Passivation บ่มไม่พอ · ล้างไม่ดี · ผิวหยาบ/คมมาก · ความหนาเคลือบบาง</td>
-                <td>บ่ม 24–48 ชม. · เพิ่ม DI/ล้างหลายบ่อ · ลบคม/ปรับผิว · เพิ่มความหนาหรือเปลี่ยนเกรดซิงค์อัลลอย</td>
-              </tr>
-              <tr>
-                <td>Red rust เกิดก่อนชั่วโมงสเปก</td>
-                <td>ซีลไม่เหมาะ · ปนเปื้อนคลอไรด์ · โทโพโลยีชิ้นงานกักหยดน้ำ</td>
-                <td>เปลี่ยน/เพิ่ม Sealer (<a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective</a>) · คุมการลากคราบ/ทิศวาง · เจาะระบาย</td>
-              </tr>
-              <tr>
-                <td>ผลกระจายไม่สม่ำเสมอ</td>
-                <td>อัตราสะสมหมอกไม่สม่ำเสมอ · วางชิ้นงานบังกัน</td>
-                <td>ลดการบรรทุก · ยืนยัน collection rate ทุกจุด · จัดวางใหม่ตามมาตรฐาน</td>
-              </tr>
-              <tr>
-                <td>คราบหยดน้ำ/รอยไหล</td>
-                <td>วางแนวนอนเกิน · ไม่มีทางน้ำออก</td>
-                <td>เอียง 15–30° · เปิดรูระบาย · หลีกเลี่ยงมุมคว่ำ</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id="related">
-          <h2 class="section">ลิงก์ที่เกี่ยวข้อง</h2>
-          <ul>
-            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a> — ซีล & โทปโค้ทเพิ่มชั่วโมง</li>
-            <li><a href="https://www.baumechemical.com/products/passivation/" target="_blank" rel="noopener">Passivation</a> — คอนเวอร์ชันโค้ทเพิ่มความทน</li>
-            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a> — ความสะอาดก่อนชุบ/ทำสี</li>
-            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a> — เครื่องมือทดสอบ/สเปรย์</li>
-            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">บริการหน้างาน</a> — ตั้งมาตรฐาน/ออกแบบ DOE</li>
-          </ul>
-        </section>
+    <!-- 2. ค่าเริ่มต้นที่แนะนำ -->
+    <section id="defaults" data-part="1" class="reveal section-block" aria-labelledby="def-h">
+      <h2 id="def-h" class="section" data-i18n-key="def_h">ค่าเริ่มต้นที่แนะนำ (อ้างอิงแนวปฏิบัติทั่วไป NSS/AASS/CASS)</h2>
+      <p class="lead" data-i18n-key="def_lead">ใช้เป็นจุดตั้งต้นและตรวจสอบกับสเปกของลูกค้าหรือมาตรฐานที่ใช้งาน (ASTM/ISO) อีกครั้งก่อนทดสอบจริง</p>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n-key="t_std">ชนิดทดสอบ</th>
+              <th data-i18n-key="t_temp">อุณหภูมิห้อง</th>
+              <th data-i18n-key="t_ph">pH สารละออง</th>
+              <th data-i18n-key="t_na">NaCl</th>
+              <th data-i18n-key="t_col">อัตรารับละออง</th>
+              <th data-i18n-key="t_note">หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="nss">NSS (Neutral)</td>
+              <td data-i18n-key="nss_t">35 ± 2 °C</td>
+              <td data-i18n-key="nss_ph">~6.5–7.2</td>
+              <td data-i18n-key="nss_na">NaCl ~5% m/m ในน้ำ DI</td>
+              <td data-i18n-key="nss_col">~1.0–2.0 mL/h ต่อ 80 cm²</td>
+              <td data-i18n-key="nss_note">เหมาะสำหรับสังกะสี โครเมต และชิ้นเคลือบทั่วไป</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="aass">AASS (Acetic)</td>
+              <td data-i18n-key="aass_t">35 ± 2 °C</td>
+              <td data-i18n-key="aass_ph">~3.1–3.3 (ปรับด้วยกรดอะซิติก)</td>
+              <td data-i18n-key="aass_na">NaCl ~5% m/m</td>
+              <td data-i18n-key="aass_col">~1.0–2.0 mL/h ต่อ 80 cm²</td>
+              <td data-i18n-key="aass_note">สำหรับชิ้นงานที่ต้องการความเร่งเพิ่มขึ้นจาก NSS</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="cass">CASS (Copper-accelerated)</td>
+              <td data-i18n-key="cass_t">50 ± 2 °C</td>
+              <td data-i18n-key="cass_ph">~3.1–3.3</td>
+              <td data-i18n-key="cass_na">NaCl ~5% m/m + เกลือทองแดงตามสเปก</td>
+              <td data-i18n-key="cass_col">~1.0–2.0 mL/h ต่อ 80 cm²</td>
+              <td data-i18n-key="cass_note">ใช้สำหรับระบบเคลือบที่ทนการกัดกร่อนสูง</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <p class="lead" data-i18n-key="def_warn">Tip: ใช้น้ำ DI/RO เกลือบริสุทธิ์ต่ำโลหะหนัก กรองละออง/ลม และสอบเทียบอัตรารับละอองก่อนเริ่ม</p>
+    </section>
 
-      <!-- EN block -->
-      <div data-lang-block="en">
-        <div class="toc" aria-label="Table of contents">
-          <strong>Contents:</strong>
-          <div>
-            <a href="#tldr_en">TL;DR</a> ·
-            <a href="#specimen_en">Specimen prep</a> ·
-            <a href="#conditions_en">NSS/AASS/CASS</a> ·
-            <a href="#reading_en">Reading criteria</a> ·
-            <a href="#checklist_en">Checklist</a> ·
-            <a href="#troubleshoot_en">Troubleshooting</a> ·
-            <a href="#related_en">Related</a>
-          </div>
-        </div>
+    <!-- 3. การเตรียมผิว/มาร์ก/มาสก์ -->
+    <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
+      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิว/มาร์ก/มาสก์ก่อนเข้า Salt Spray</h2>
+      <ul>
+        <li data-i18n-key="p_clean">ล้างไขมันหลายขั้น (ด่าง/อิมัลซิไฟ/อัลตร้าโซนิก) → ล้าง DI → เป่าแห้ง หลีกเลี่ยงการสัมผัสนิ้ว</li>
+        <li data-i18n-key="p_handle">จับด้วยถุงมือสะอาด/แหนบพลาสติก ไม่ให้เกิดคราบน้ำมันมือ</li>
+        <li data-i18n-key="p_mask">ถ้าต้องทดสอบเฉพาะพื้นที่ ให้ใช้มาสก์ที่ทนไอเกลือและไม่ทำปฏิกิริยา</li>
+        <li data-i18n-key="p_mark">มาร์ก/ทำหมายเลขด้วยแท็กแยกหรือสลักนอกพื้นที่ทดสอบ (หลีกเลี่ยงการทำรอยบนผิวที่ต้องการวัด)</li>
+        <li data-i18n-key="p_scribe">หากสเปกระบุการกรีด (scribe) ให้ใช้ใบมีด/เทมเพลตมาตรฐาน ลึก/กว้างตามสเปก และสะอาดปราศจากครีบ</li>
+        <li data-i18n-key="p_cond">ทิ้งชิ้นงานหลังเตรียมไม่เกินเวลาที่กำหนด (เช่น ≤ 1–4 ชม.) ก่อนเริ่มทดสอบ เพื่อหลีกเลี่ยงการเกิดฟิล์ม/การปนเปื้อน</li>
+      </ul>
+    </section>
 
-        <section id="intro_en">
-          <p class="lead">
-            Salt spray (fog) is an accelerated corrosion comparison test. The figures below are common practice—always
-            follow your customer spec and the current <strong>ASTM B117 / ISO 9227 / JIS Z 2371</strong>.
-          </p>
-        </section>
-
-        <section id="tldr_en">
-          <h2 class="section">TL;DR – common starting points*</h2>
-          <ul>
-            <li><strong>NSS</strong>: 5&nbsp;±&nbsp;1% NaCl, pH <strong>6.5–7.2</strong>, chamber <strong>~35&nbsp;°C</strong></li>
-            <li><strong>AASS</strong>: 5% NaCl, adjust pH to <strong>3.1–3.3</strong> with acetic acid, chamber <strong>~35&nbsp;°C</strong></li>
-            <li><strong>CASS</strong>: 5% NaCl + <em>CuCl₂·2H₂O</em> ~<strong>0.25 g/L</strong>, pH <strong>3.1–3.3</strong>, chamber <strong>~50&nbsp;°C</strong></li>
-            <li><strong>Collection rate</strong>: <strong>1.0–2.0 mL/h</strong> per <strong>80&nbsp;cm²</strong> collector area</li>
-            <li><strong>Panel orientation</strong>: tilt <strong>15–30° from vertical</strong>, avoid water retention</li>
-            <li><strong>Requested hours</strong>: per PO/spec (e.g., 24–1,000 h)</li>
-          </ul>
-          <div class="note">*Values are widely used; defer to the latest standard/customer spec.</div>
-        </section>
-
-        <section id="specimen_en">
-          <h2 class="section">Specimen preparation</h2>
-          <ol>
-            <li><strong>Use production parts</strong> or representative panels; declare substrate/grade.</li>
-            <li><strong>Cleanliness</strong>: degrease + DI rinse; no bare-hand contact (powder-free gloves).</li>
-            <li><strong>Mask non-evaluated areas</strong>; drill drain holes to avoid water traps.</li>
-            <li><strong>Record pre-test data</strong>: coating thickness (µm), surface state, cure time.</li>
-            <li><strong>Post-treatment cure</strong>: many passivation/sealers need <strong>24–48 h</strong> before testing.</li>
-            <li><strong>Labeling</strong>: non-corrosive tags/inks only.</li>
-          </ol>
-        </section>
-
-        <section id="conditions_en">
-          <h2 class="section">NSS / AASS / CASS summary</h2>
-          <table aria-label="Conditions summary">
-            <thead>
-              <tr><th>Parameter</th><th>NSS</th><th>AASS</th><th>CASS</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>NaCl</td><td>5&nbsp;±&nbsp;1% m/m</td><td>5&nbsp;±&nbsp;1% m/m</td><td>5&nbsp;±&nbsp;1% m/m</td></tr>
-              <tr><td>Additives</td><td>—</td><td>Acetic acid to pH</td><td>CuCl₂·2H₂O ~0.25 g/L + acetic acid to pH</td></tr>
-              <tr><td>Solution pH</td><td>6.5–7.2</td><td>3.1–3.3</td><td>3.1–3.3</td></tr>
-              <tr><td>Chamber temp</td><td>35&nbsp;°C</td><td>35&nbsp;°C</td><td>50&nbsp;°C</td></tr>
-              <tr><td>Collection rate</td><td colspan="3">1.0–2.0 mL/h per 80&nbsp;cm² (uniformity required)</td></tr>
-              <tr><td>Specimen angle</td><td colspan="3">15–30° from vertical; no stacking/water traps</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id="reading_en">
-          <h2 class="section">Reading criteria</h2>
-          <ul>
-            <li><strong>Zinc/Zn-alloy</strong>: distinguish <em>white corrosion</em> (zinc products) vs <em>red rust</em> (steel substrate). Typically fail = first red rust in evaluated area.</li>
-            <li><strong>Al/Anodize/Conversion</strong>: pits/powder/filiform; specify % area or count.</li>
-            <li><strong>Painted/Topcoated</strong>: blistering and <em>scribe creep</em>; specify limits (e.g., ≤ X mm per referenced method).</li>
-            <li><strong>Time points</strong>: define reporting hours (24/48/96/240/…/1000 h) and pass/fail at each point.</li>
-          </ul>
-        </section>
-
-        <section id="checklist_en">
-          <h2 class="section">Pre-submission checklist</h2>
-          <ul>
-            <li>Standard & condition: ASTM B117 / ISO 9227 (NSS, AASS, or CASS)</li>
-            <li>Requested hours & reading time points</li>
-            <li>Pass/fail definition (e.g., red rust excluding racks/contacts = fail)</li>
-            <li>Specimen orientation/placement</li>
-            <li>Post-treatment cure before test (e.g., 24–48 h)</li>
-            <li>Replicates: ≥2–3 pcs per condition</li>
-            <li>Pre-test photos + thickness/cure/sealer records</li>
-            <li>Ask lab for calibration sheets, pH logs & collection-rate records</li>
-          </ul>
-        </section>
-
-        <section id="troubleshoot_en">
-          <h2 class="section">Troubleshooting</h2>
-          <table>
-            <thead><tr><th>Symptom</th><th>Likely causes</th><th>Fix</th></tr></thead>
-            <tbody>
-              <tr><td>Early white corrosion (Zn)</td><td>Insufficient passivation cure · poor rinsing · sharp edges · thin coating</td><td>24–48 h cure · more DI/counter-flow · break edges · increase thickness/change alloy</td></tr>
-              <tr><td>Early red rust</td><td>Weak/wrong sealer · chloride drag-in · water traps</td><td>Change/add sealer (<a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective</a>) · control drag-in · re-orient/drain</td></tr>
-              <tr><td>Non-uniform results</td><td>Uneven collection rate · overloaded/stacked parts</td><td>Reduce loading · verify collectors · reposition</td></tr>
-              <tr><td>Run marks/water stains</td><td>Flat placement · no drainage</td><td>Tilt 15–30° · drill drains · avoid inverted pockets</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id="related_en">
-          <h2 class="section">Related links</h2>
-          <ul>
-            <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener">Protective Treatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/passivation/" target="_blank" rel="noopener">Passivation</a></li>
-            <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener">Pretreatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/equipment/" target="_blank" rel="noopener">Equipment</a></li>
-            <li><a href="https://www.baumechemical.com/products/service/" target="_blank" rel="noopener">On-site Service</a></li>
-          </ul>
-        </section>
+    <!-- 4. หน้าต่างและตัวแปรการทดสอบ -->
+    <section id="window" data-part="1" class="reveal section-block" aria-labelledby="win-h">
+      <h2 id="win-h" class="section" data-i18n-key="win_h">หน้าต่างและตัวแปรการทดสอบ (ควบคุมก่อน–ระหว่าง–หลัง)</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n-key="w_phase">ช่วง</th>
+              <th data-i18n-key="w_ctrl">ตัวแปรสำคัญ</th>
+              <th data-i18n-key="w_why">เหตุผล/ผลกระทบ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="w_before">ก่อนเริ่ม</td>
+              <td data-i18n-key="w_before_c">pH น้ำยา, ความเข้มข้น, อุณหภูมิห้อง, ความสะอาดหัวสเปรย์/อากาศอิ่มตัว, อัตรารับละออง (calibration)</td>
+              <td data-i18n-key="w_before_w">ตั้งค่าไม่ตรง → ผลลวง/ชิ้นงานเสียหายเร็วผิดปกติ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="w_during">ระหว่างทดสอบ</td>
+              <td data-i18n-key="w_during_c">อุณหภูมิ/ความผันผวน, pH drift, อัตรารับละออง, น้ำเติมถัง, แรงดัน/ความชื้นของลม</td>
+              <td data-i18n-key="w_during_w">ค่าหลุดกรอบ → การโจมตีเปลี่ยนไป/ไม่เทียบเคียงได้</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="w_after">หลังจบ</td>
+              <td data-i18n-key="w_after_c">การล้าง/ทำให้แห้งตามสเปก, เวลา “พักตัวอย่าง” ก่อนอ่านผล, การถ่ายภาพ/บันทึก</td>
+              <td data-i18n-key="w_after_w">ล้างผิดวิธี → เอาฟิล์มกัดกร่อนออกเกินจริง/ผิวเสีย</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </section>
 
-    </article>
+    <!-- 5. การจัดวาง -->
+    <section id="placement" data-part="2" class="reveal section-block" aria-labelledby="plc-h">
+      <h2 id="plc-h" class="section" data-i18n-key="plc_h">การจัดวางชิ้นงานในห้องทดสอบ</h2>
+      <ul>
+        <li data-i18n-key="plc_angle">ตั้งชิ้นเอียงจากแนวตั้งประมาณ 15–25° (หลีกเลี่ยงน้ำขัง/หยดย้อน)</li>
+        <li data-i18n-key="plc_shade">ไม่บังเงากันเอง ระยะห่างสม่ำเสมอ และไม่สัมผัสกัน</li>
+        <li data-i18n-key="plc_height">ความสูงชั้นวางใกล้เคียงกันทั้งแบทช์ เพื่อลดความต่างของอัตรารับละออง</li>
+        <li data-i18n-key="plc_clip">ใช้คลิป/ตะขอที่ไม่ทำปฏิกิริยาและไม่ทำเป็น “ทางน้ำ” มาลงผิว</li>
+        <li data-i18n-key="plc_label">วางป้าย/QR นอกพื้นที่วัดผลหรือหลังชิ้นงาน</li>
+      </ul>
+    </section>
+
+    <!-- 6. การดูแลห้องทดสอบ & คุณภาพ -->
+    <section id="chamber" data-part="2" class="reveal section-block" aria-labelledby="cmb-h">
+      <h2 id="cmb-h" class="section" data-i18n-key="cmb_h">การดูแลห้องทดสอบ & การคุมคุณภาพ</h2>
+      <ul>
+        <li data-i18n-key="cmb_water">ใช้น้ำ DI/RO และเกลือคุณภาพสูง โลหะหนักต่ำ</li>
+        <li data-i18n-key="cmb_filter">กรองสารละออง/น้ำเกลือ เปลี่ยนไส้กรองตามชั่วโมงใช้งาน</li>
+        <li data-i18n-key="cmb_air">ระบบลม: มีตัวดูดความชื้น/กรองน้ำมัน ตรวจ saturator ตามระยะ</li>
+        <li data-i18n-key="cmb_rate">สอบเทียบอัตรารับละออง (collection rate) จุดต่างๆ ในห้องอย่างสม่ำเสมอ</li>
+        <li data-i18n-key="cmb_clean">ทำความสะอาดห้อง/หัวสเปรย์ตามรอบ ป้องกันตะกรัน/แบคทีเรีย/คราบเกลือสะสม</li>
+        <li data-i18n-key="cmb_record">บันทึก log: pH/อุณหภูมิ/อัตรารับละออง/เติมน้ำ/เวลาหยุด ทำกราฟแนวโน้ม</li>
+      </ul>
+    </section>
+
+    <!-- 7. ตารางปัญหาพบเจอบ่อย -->
+    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="def-h2">
+      <h2 id="def-h2" class="section" data-i18n-key="tbl_h">ตารางปัญหาพบเจอบ่อย</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n-key="sym">อาการ</th>
+              <th data-i18n-key="cause">สาเหตุราก</th>
+              <th data-i18n-key="fix">วิธีแก้/แนวทาง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="s_whiterust">ซิงค์ขึ้น White rust เร็วกว่าที่คาด</td>
+              <td data-i18n-key="c_whiterust">pH/อัตรารับละอองหลุดกรอบ, ล้างชิ้นก่อนทดสอบไม่ดี, โครเมต/ซีลไม่สมบูรณ์</td>
+              <td data-i18n-key="f_whiterust">รีเช็ก pH/collection rate, ทบทวนล้าง/แห้ง, ตรวจขั้น passivation/ซีล</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="s_redrust">เกิด Red rust เร็ว</td>
+              <td data-i18n-key="c_redrust">ความหนาเคลือบต่ำบริเวณขอบ/จุดรับละอองมาก, จัดวางผิดองศา</td>
+              <td data-i18n-key="f_redrust">แก้องศา/เงา, ตรวจความหนา/การกระจาย, ใช้ shields/ปรับฟิกซ์เจอร์</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="s_droplet">คราบหยด/เส้นน้ำ</td>
+              <td data-i18n-key="c_droplet">วางแนวนอนเกินไป, มี “ทางน้ำ” จากคลิป/ขอบ, อัตราละอองสูงเกิน</td>
+              <td data-i18n-key="f_droplet">ปรับองศา 15–25°, เปลี่ยนคลิป/ตำแหน่ง, รีเช็ก collection rate</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="s_patch">เกิดคราบมืดเป็นปื้น</td>
+              <td data-i18n-key="c_patch">ปนเปื้อนโลหะหนักในน้ำเกลือ/ลม, หัวสเปรย์สกปรก</td>
+              <td data-i18n-key="f_patch">เปลี่ยนน้ำ/กรอง, ทำความสะอาดระบบ, ตรวจคุณภาพเกลือ/ลม</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="s_incons">ผลแกว่งระหว่างตำแหน่ง</td>
+              <td data-i18n-key="c_incons">อัตรารับละอองไม่สม่ำเสมอ, ความสูง/เงาบังต่างกัน</td>
+              <td data-i18n-key="f_incons">สอบเทียบหลายจุด, จัดวางใหม่ให้กระจายสม่ำเสมอ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="s_postwash">ผิวหลุดลอกหลังล้างออกจากเครื่อง</td>
+              <td data-i18n-key="c_postwash">ล้างแรง/ถูแรงเกิน, ขั้นตอนหลังทดสอบไม่ตรงสเปก</td>
+              <td data-i18n-key="f_postwash">ทำตามสเปกการล้าง/เป่า/รอพัก และถ่ายภาพก่อนสัมผัส</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 8. ลิงก์ที่เกี่ยวข้อง -->
+    <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
+      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/">Salt Spray: คู่มืออ่านผลเร็ว</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">โครเมตบนซิงค์ให้ตรงโทน</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/">ซีล/ท็อปโค้ทสำหรับโครเมต 3</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/anti-tarnish-selection/">คู่มือเลือกสารกันหมอง (Anti-tarnish)</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/">Zinc Plating Troubleshooting (ซีรีส์)</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/plating-basics/">พื้นฐานงานชุบโลหะ</a></p>
+    </section>
   </main>
 
-  <!-- === Footer (เหมือนหน้าหลัก) === -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
-          </div>
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -524,7 +432,6 @@
             <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
             <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
             <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
             <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
           </ul>
         </nav>
@@ -538,41 +445,144 @@
           </ul>
         </section>
       </div>
-
-      <div class="footer-bottom">
-        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
-      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
 
-  <!-- === JS: reveal + i18n (toggle blocks) === -->
+  <!-- JS: Reveal on scroll -->
   <script>
-    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
     }, {threshold:.18});
     revealEls.forEach(el=>revObs.observe(el));
+  </script>
 
-    /* i18n dictionary (nav/back/hero/footer) */
+  <!-- JS: i18n -->
+  <script>
     const I18N = {
       th: {
         nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
-        back_blog:"← ย้อนกลับ",
-        hero_title: "Salt Spray Test: NSS/ASS/CASS แบบเข้าใจง่าย",
-        hero_tagline: "เตรียมชิ้นทดสอบให้ถูกต้อง กำหนดเงื่อนไข NSS/ASS/CASS ตามมาตรฐาน อ่านผลให้ตรงสเปก พร้อมเช็กลิสต์ส่งแล็บ — ลิงก์ไปยัง Protective, Passivation และ Pretreatment",
-        footer_products: "หมวดผลิตภัณฑ์",
-        footer_contact: "ติดต่อเรา",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+        back_home:"← กลับเมนูหลัก",
+        hero_title:"คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test (NSS/AASS/CASS)",
+        hero_tagline:"เลือกชนิดทดสอบ → เตรียมผิว/มาร์ก/มาสก์ → จัดวางในเครื่อง → ควบคุม pH/อุณหภูมิ/อัตรารับละออง → ตารางปัญหาพบเจอบ่อย",
+
+        part1:"พาร์ต 1: ค่าเริ่มต้น/เตรียมผิว/หน้าต่างการทดสอบ",
+        part2:"พาร์ต 2: การจัดวาง/ดูแลห้อง/ตารางปัญหา/ลิงก์",
+
+        toc_title:"สารบัญ", toc_defaults:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิว/มาร์ก/มาสก์", toc_window:"หน้าต่างและตัวแปรการทดสอบ", toc_placement:"การจัดวางชิ้นในห้องทดสอบ", toc_chamber:"การดูแลห้อง & การคุมคุณภาพ", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้อง",
+
+        def_h:"ค่าเริ่มต้นที่แนะนำ (อ้างอิงแนวปฏิบัติทั่วไป NSS/AASS/CASS)",
+        def_lead:"ใช้เป็นจุดตั้งต้นและตรวจสอบกับสเปกของลูกค้าหรือมาตรฐานที่ใช้งาน (ASTM/ISO) อีกครั้งก่อนทดสอบจริง",
+        t_std:"ชนิดทดสอบ", t_temp:"อุณหภูมิห้อง", t_ph:"pH สารละออง", t_na:"NaCl", t_col:"อัตรารับละออง", t_note:"หมายเหตุ",
+        nss:"NSS (Neutral)", nss_t:"35 ± 2 °C", nss_ph:"~6.5–7.2", nss_na:"NaCl ~5% m/m ในน้ำ DI", nss_col:"~1.0–2.0 mL/h ต่อ 80 cm²", nss_note:"เหมาะสำหรับสังกะสี โครเมต และชิ้นเคลือบทั่วไป",
+        aass:"AASS (Acetic)", aass_t:"35 ± 2 °C", aass_ph:"~3.1–3.3 (ปรับด้วยกรดอะซิติก)", aass_na:"NaCl ~5% m/m", aass_col:"~1.0–2.0 mL/h ต่อ 80 cm²", aass_note:"สำหรับชิ้นงานที่ต้องการความเร่งเพิ่มขึ้นจาก NSS",
+        cass:"CASS (Copper-accelerated)", cass_t:"50 ± 2 °C", cass_ph:"~3.1–3.3", cass_na:"NaCl ~5% m/m + เกลือทองแดงตามสเปก", cass_col:"~1.0–2.0 mL/h ต่อ 80 cm²", cass_note:"ใช้สำหรับระบบเคลือบที่ทนการกัดกร่อนสูง",
+        def_warn:"Tip: ใช้น้ำ DI/RO เกลือบริสุทธิ์ต่ำโลหะหนัก กรองละออง/ลม และสอบเทียบอัตรารับละอองก่อนเริ่ม",
+
+        prep_h:"การเตรียมผิว/มาร์ก/มาสก์ก่อนเข้า Salt Spray",
+        p_clean:"ล้างไขมันหลายขั้น (ด่าง/อิมัลซิไฟ/อัลตร้าโซนิก) → ล้าง DI → เป่าแห้ง หลีกเลี่ยงการสัมผัสนิ้ว",
+        p_handle:"จับด้วยถุงมือสะอาด/แหนบพลาสติก ไม่ให้เกิดคราบน้ำมันมือ",
+        p_mask:"ถ้าต้องทดสอบเฉพาะพื้นที่ ให้ใช้มาสก์ที่ทนไอเกลือและไม่ทำปฏิกิริยา",
+        p_mark:"มาร์ก/ทำหมายเลขด้วยแท็กแยกหรือสลักนอกพื้นที่ทดสอบ (หลีกเลี่ยงการทำรอยบนผิวที่ต้องการวัด)",
+        p_scribe:"หากสเปกระบุการกรีด (scribe) ให้ใช้ใบมีด/เทมเพลตมาตรฐาน ลึก/กว้างตามสเปก และสะอาดปราศจากครีบ",
+        p_cond:"ทิ้งชิ้นงานหลังเตรียมไม่เกินเวลาที่กำหนด (เช่น ≤ 1–4 ชม.) ก่อนเริ่มทดสอบ เพื่อหลีกเลี่ยงการเกิดฟิล์ม/การปนเปื้อน",
+
+        win_h:"หน้าต่างและตัวแปรการทดสอบ (ควบคุมก่อน–ระหว่าง–หลัง)",
+        w_phase:"ช่วง", w_ctrl:"ตัวแปรสำคัญ", w_why:"เหตุผล/ผลกระทบ",
+        w_before:"ก่อนเริ่ม", w_before_c:"pH น้ำยา, ความเข้มข้น, อุณหภูมิห้อง, ความสะอาดหัวสเปรย์/อากาศอิ่มตัว, อัตรารับละออง (calibration)", w_before_w:"ตั้งค่าไม่ตรง → ผลลวง/ชิ้นงานเสียหายเร็วผิดปกติ",
+        w_during:"ระหว่างทดสอบ", w_during_c:"อุณหภูมิ/ความผันผวน, pH drift, อัตรารับละออง, น้ำเติมถัง, แรงดัน/ความชื้นของลม", w_during_w:"ค่าหลุดกรอบ → การโจมตีเปลี่ยนไป/ไม่เทียบเคียงได้",
+        w_after:"หลังจบ", w_after_c:"การล้าง/ทำให้แห้งตามสเปก, เวลา “พักตัวอย่าง” ก่อนอ่านผล, การถ่ายภาพ/บันทึก", w_after_w:"ล้างผิดวิธี → เอาฟิล์มกัดกร่อนออกเกินจริง/ผิวเสีย",
+
+        plc_h:"การจัดวางชิ้นงานในห้องทดสอบ",
+        plc_angle:"ตั้งชิ้นเอียงจากแนวตั้งประมาณ 15–25° (หลีกเลี่ยงน้ำขัง/หยดย้อน)",
+        plc_shade:"ไม่บังเงากันเอง ระยะห่างสม่ำเสมอ และไม่สัมผัสกัน",
+        plc_height:"ความสูงชั้นวางใกล้เคียงกันทั้งแบทช์ เพื่อลดความต่างของอัตรารับละออง",
+        plc_clip:"ใช้คลิป/ตะขอที่ไม่ทำปฏิกิริยาและไม่ทำเป็น “ทางน้ำ” มาลงผิว",
+        plc_label:"วางป้าย/QR นอกพื้นที่วัดผลหรือหลังชิ้นงาน",
+
+        cmb_h:"การดูแลห้องทดสอบ & การคุมคุณภาพ",
+        cmb_water:"ใช้น้ำ DI/RO และเกลือคุณภาพสูง โลหะหนักต่ำ",
+        cmb_filter:"กรองสารละออง/น้ำเกลือ เปลี่ยนไส้กรองตามชั่วโมงใช้งาน",
+        cmb_air:"ระบบลม: มีตัวดูดความชื้น/กรองน้ำมัน ตรวจ saturator ตามระยะ",
+        cmb_rate:"สอบเทียบอัตรารับละออง (collection rate) จุดต่างๆ ในห้องอย่างสม่ำเสมอ",
+        cmb_clean:"ทำความสะอาดห้อง/หัวสเปรย์ตามรอบ ป้องกันตะกรัน/แบคทีเรีย/คราบเกลือสะสม",
+        cmb_record:"บันทึก log: pH/อุณหภูมิ/อัตรารับละออง/เติมน้ำ/เวลาหยุด ทำกราฟแนวโน้ม",
+
+        tbl_h:"ตารางปัญหาพบเจอบ่อย",
+        sym:"อาการ", cause:"สาเหตุราก", fix:"วิธีแก้/แนวทาง",
+        s_whiterust:"ซิงค์ขึ้น White rust เร็วกว่าที่คาด", c_whiterust:"pH/อัตรารับละอองหลุดกรอบ, ล้างชิ้นก่อนทดสอบไม่ดี, โครเมต/ซีลไม่สมบูรณ์", f_whiterust:"รีเช็ก pH/collection rate, ทบทวนล้าง/แห้ง, ตรวจขั้น passivation/ซีล",
+        s_redrust:"เกิด Red rust เร็ว", c_redrust:"ความหนาเคลือบต่ำบริเวณขอบ/จุดรับละอองมาก, จัดวางผิดองศา", f_redrust:"แก้องศา/เงา, ตรวจความหนา/การกระจาย, ใช้ shields/ปรับฟิกซ์เจอร์",
+        s_droplet:"คราบหยด/เส้นน้ำ", c_droplet:"วางแนวนอนเกินไป, มี “ทางน้ำ” จากคลิป/ขอบ, อัตราละอองสูงเกิน", f_droplet:"ปรับองศา 15–25°, เปลี่ยนคลิป/ตำแหน่ง, รีเช็ก collection rate",
+        s_patch:"เกิดคราบมืดเป็นปื้น", c_patch:"ปนเปื้อนโลหะหนักในน้ำเกลือ/ลม, หัวสเปรย์สกปรก", f_patch:"เปลี่ยนน้ำ/กรอง, ทำความสะอาดระบบ, ตรวจคุณภาพเกลือ/ลม",
+        s_incons:"ผลแกว่งระหว่างตำแหน่ง", c_incons:"อัตรารับละอองไม่สม่ำเสมอ, ความสูง/เงาบังต่างกัน", f_incons:"สอบเทียบหลายจุด, จัดวางใหม่ให้กระจายสม่ำเสมอ",
+        s_postwash:"ผิวหลุดลอกหลังล้างออกจากเครื่อง", c_postwash:"ล้างแรง/ถูแรงเกิน, ขั้นตอนหลังทดสอบไม่ตรงสเปก", f_postwash:"ทำตามสเปกการล้าง/เป่า/รอพัก และถ่ายภาพก่อนสัมผัส",
+
+        links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
+
       en: {
         nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
-        back_blog:"← Back to Blog",
-        hero_title: "Salt Spray Test: NSS/AASS/CASS — Quick Guide",
-        hero_tagline: "Prep specimens correctly, set NSS/AASS/CASS per standard, read results to spec, and use the pre-lab checklist — with links to Protective, Passivation and Pretreatment.",
-        footer_products: "Products",
-        footer_contact: "Contact Us",
-        footer_copy: "© 2025 Baume Chemical. All rights reserved."
+        back_home:"← Back to Home",
+        hero_title:"Salt Spray Test (NSS/AASS/CASS): Sample Preparation Guide",
+        hero_tagline:"Choose test type → clean/mark/mask → place in chamber → control pH/temperature/collection rate → common issues table",
+
+        part1:"Part 1: Starters / Prep / Test Window",
+        part2:"Part 2: Placement / Chamber Care / Defect Table / Links",
+
+        toc_title:"Contents", toc_defaults:"Recommended starters", toc_prep:"Surface prep / marking / masking", toc_window:"Test window & variables", toc_placement:"Placement in chamber", toc_chamber:"Chamber care & QA", toc_defects:"Common issues", toc_links:"Related links",
+
+        def_h:"Recommended starters (typical NSS/AASS/CASS practices)",
+        def_lead:"Use these as a starting point and confirm against your customer spec or the governing standard (ASTM/ISO) before the run.",
+        t_std:"Test", t_temp:"Chamber temp", t_ph:"Spray pH", t_na:"NaCl", t_col:"Collection rate", t_note:"Notes",
+        nss:"NSS (Neutral)", nss_t:"35 ± 2 °C", nss_ph:"~6.5–7.2", nss_na:"~5% m/m NaCl in DI water", nss_col:"~1.0–2.0 mL/h per 80 cm²", nss_note:"Common for zinc/chromate and general coatings",
+        aass:"AASS (Acetic)", aass_t:"35 ± 2 °C", aass_ph:"~3.1–3.3 (acetic acid adjusted)", aass_na:"~5% m/m NaCl", aass_col:"~1.0–2.0 mL/h per 80 cm²", aass_note:"More aggressive than NSS",
+        cass:"CASS (Copper-accelerated)", cass_t:"50 ± 2 °C", cass_ph:"~3.1–3.3", cass_na:"~5% m/m NaCl + copper salt per spec", cass_col:"~1.0–2.0 mL/h per 80 cm²", cass_note:"For highly corrosion-resistant systems",
+        def_warn:"Tip: Use DI/RO water, low-impurity salt, filter spray/air, and verify collection rate before starting.",
+
+        prep_h:"Surface prep / marking / masking before salt spray",
+        p_clean:"Multi-stage degrease (alkaline/emulsifying/ultrasonic) → DI rinse → dry; avoid fingerprints",
+        p_handle:"Handle with clean gloves/plastic tweezers to prevent oil transfer",
+        p_mask:"Mask only the non-test area with salt-fog inert masking",
+        p_mark:"ID with separate tag or engraving outside test area",
+        p_scribe:"If scribing required, use standard blade/template to specified depth/width; deburr and clean",
+        p_cond:"Keep the time between prep and start within spec (e.g., ≤ 1–4 h) to avoid films/contamination",
+
+        win_h:"Test window & variables (before–during–after)",
+        w_phase:"Phase", w_ctrl:"Key controls", w_why:"Why it matters",
+        w_before:"Before", w_before_c:"Spray pH, concentration, chamber temp, clean nozzle/saturator air, collection-rate calibration", w_before_w:"Wrong setup → misleading results or premature failure",
+        w_during:"During", w_during_c:"Temp stability, pH drift, collection rate, make-up water, air pressure/humidity", w_during_w:"Out-of-window values undermine comparability",
+        w_after:"After", w_after_c:"Rinse/dry per spec, conditioning time before rating, photo & recordkeeping", w_after_w:"Wrong rinsing removes corrosion products or damages surface",
+
+        plc_h:"Placement in the chamber",
+        plc_angle:"Tilt 15–25° from vertical to prevent pooling/backflow",
+        plc_shade:"Avoid shading; keep uniform spacing and no contact",
+        plc_height:"Keep similar rack heights across a batch to reduce collection-rate bias",
+        plc_clip:"Use inert clips/hooks that don’t create run-off paths",
+        plc_label:"Place labels/QR outside rating area or behind parts",
+
+        cmb_h:"Chamber care & QA",
+        cmb_water:"Use DI/RO water and high-purity salt (low heavy metals)",
+        cmb_filter:"Filter the brine/spray; replace filter media on schedule",
+        cmb_air:"Dry, oil-free air; maintain saturator; inspect regularly",
+        cmb_rate:"Calibrate collection rate at multiple points routinely",
+        cmb_clean:"Clean chamber/nozzles periodically to prevent scale/biofilm/salt buildup",
+        cmb_record:"Log pH/temp/collection rate/top-ups/downtimes; chart trends",
+
+        tbl_h:"Common issues",
+        sym:"Symptom", cause:"Root cause", fix:"First-aid fix",
+        s_whiterust:"Zinc shows white rust too early", c_whiterust:"Off-spec pH/collection rate, poor pre-clean, weak chromate/seal", f_whiterust:"Re-verify pH/rate; review cleaning/drying; check passivation/seal",
+        s_redrust:"Premature red rust", c_redrust:"Thin coating at edges/high impingement; wrong angle", f_redrust:"Fix angle/shadows; check thickness distribution; add shields/fixturing",
+        s_droplet:"Droplet trails/streaks", c_droplet:"Too horizontal; runoff paths from clips/edges; high spray rate", f_droplet:"Set 15–25°; change clips/positions; re-check rate",
+        s_patch:"Dark patches/stains", c_patch:"Heavy-metal contamination; dirty nozzle", f_patch:"Renew brine/filters; clean system; verify salt/air quality",
+        s_incons:"Location-to-location inconsistency", c_incons:"Uneven collection rate; height/shadow differences", f_incons:"Calibrate multiple points; re-layout parts",
+        s_postwash:"Peel-off after post-wash", c_postwash:"Harsh rinsing/handling; off-spec post-process", f_postwash:"Follow spec for rinse/dry/condition; photograph before touching",
+
+        links_h:"Related links",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
@@ -595,8 +605,127 @@
     (function initLang(){
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
+        applyLang(btn.dataset.lang);
+        try{
+          const h = document.querySelector('.site-header').getBoundingClientRect().height|0;
+          document.documentElement.style.setProperty('--header-h', h + 'px');
+        }catch(e){}
+      }));
     })();
+  </script>
+
+  <!-- JS: Part switcher -->
+  <script>
+  (function(){
+    const buttons = document.querySelectorAll('.part-switch .part-btn');
+    const tocLinks = document.querySelectorAll('#toc a[data-part]');
+    const sections = document.querySelectorAll('section[data-part]');
+
+    function setPart(p){
+      const part = (p === '2') ? '2' : '1';
+      document.documentElement.setAttribute('data-part', part);
+      sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+      tocLinks.forEach(a => a.hidden = (a.dataset.part !== part));
+      buttons.forEach(b => {
+        const on = (b.dataset.part === part);
+        b.setAttribute('aria-pressed', String(on));
+        b.setAttribute('aria-selected', String(on));
+      });
+      try{ localStorage.setItem('sst_part', part); }catch(e){}
+    }
+
+    const urlPart = new URLSearchParams(location.search).get('part');
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('sst_part')) || '1';
+    setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+    buttons.forEach(b => b.addEventListener('click', ()=>{
+      setPart(b.dataset.part);
+      document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+  })();
+  </script>
+
+  <!-- JS: เมนูมือถือ + header height + FAB scroll behavior -->
+  <script>
+  (function(){
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    const scrim = document.querySelector('.menu-scrim');
+    const fab = document.querySelector('.lang-fab');
+
+    function updateHeaderH(){
+      const h = header.getBoundingClientRect().height|0;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
+    }
+    updateHeaderH();
+    window.addEventListener('load', updateHeaderH, {once:true});
+    window.addEventListener('resize', updateHeaderH, {passive:true});
+
+    let scrollTop = 0;
+    function setOpen(isOpen){
+      header.classList.toggle('open', isOpen);
+      toggle?.setAttribute('aria-expanded', String(isOpen));
+      if (scrim){ isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden',''); }
+      nav?.setAttribute('aria-hidden', String(!isOpen));
+      if (isOpen){
+        scrollTop = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollTop}px`;
+        document.body.style.width = '100%';
+      }else{
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollTop);
+      }
+    }
+    toggle?.addEventListener('click', ()=> setOpen(!header.classList.contains('open')));
+    scrim?.addEventListener('click', ()=> setOpen(false));
+    document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false); });
+    window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) setOpen(false); }, {passive:true});
+
+    // Highlight current nav
+    try{
+      const here = location.pathname.replace(/\/+$/,'');
+      nav?.querySelectorAll('a').forEach(a=>{
+        const path = new URL(a.href, location.origin).pathname.replace(/\/+$/,'');
+        if (path && (here === path || (here.startsWith(path) && path !== '/'))) a.setAttribute('aria-current','page');
+      });
+    }catch(e){}
+
+    // FAB hide/show on scroll (≤900px)
+    let onScroll, bound = false;
+    function bindFab(){
+      if (bound || !fab) return;
+      let lastY = window.scrollY, hidden = false;
+      const THRESHOLD = 8;
+      onScroll = ()=>{
+        const y = window.scrollY, dy = y - lastY;
+        if (Math.abs(dy) > THRESHOLD){
+          const shouldHide = dy > 0 && y > 40;
+          if (shouldHide !== hidden){
+            fab.classList.toggle('is-hide', shouldHide);
+            hidden = shouldHide;
+          }
+          lastY = y;
+        }
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+      bound = true;
+    }
+    function unbindFab(){
+      if (!bound) return;
+      window.removeEventListener('scroll', onScroll);
+      fab?.classList.remove('is-hide');
+      bound = false;
+    }
+    const mq = window.matchMedia('(max-width: 900px)');
+    function applyFab(e){ e.matches ? bindFab() : unbindFab(); }
+    applyFab(mq);
+    mq.addEventListener ? mq.addEventListener('change', applyFab) : mq.addListener(applyFab);
+  })();
   </script>
 </body>
 </html>
