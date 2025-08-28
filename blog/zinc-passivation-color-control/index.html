@@ -515,15 +515,6 @@
     </div>
   </footer>
 
-  <!-- JS: Reveal on scroll -->
-  <script>
-    const revealEls = document.querySelectorAll('.reveal');
-    const revObs = new IntersectionObserver((entries,obs)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
-    revealEls.forEach(el=>revObs.observe(el));
-  </script>
-
   <!-- JS: i18n -->
   <script>
     const I18N = {
