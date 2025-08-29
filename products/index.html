@@ -72,16 +72,27 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* ======= Site Header (Top Nav) — overlay on hero ======= */
+    /* ======= Site Header (Fixed & follows while scrolling) ======= */
     .site-header{
-      position:absolute; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      position:fixed; top:0; left:0; right:0; z-index:1400;
+      background:transparent;
       border-bottom:1px solid rgba(255,255,255,.14);
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.70); /* dark glass when scrolled */
+      border-bottom-color: rgba(255,255,255,.12);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      backdrop-filter: saturate(140%) blur(10px);
+      box-shadow: 0 8px 26px rgba(2,8,20,.18);
     }
     .site-header .header-inner{
       max-width:1200px; margin:0 auto;
       display:flex; align-items:center; justify-content:space-between;
       min-height:var(--header-h); padding:10px 16px;
+      gap:12px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{
@@ -90,6 +101,9 @@
       box-shadow:0 2px 8px rgba(2,8,20,.15)
     }
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+
+    .header-right{display:flex; align-items:center; gap:10px}
+
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{
@@ -100,6 +114,7 @@
     .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff; box-shadow:none }
     .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
     .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
     .nav-toggle{
       appearance:none; border:0; background:transparent; cursor:pointer;
       width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
@@ -110,24 +125,51 @@
       content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
     }
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
     @media (max-width: 920px){
       .menu{
         position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px);
         border:1px solid rgba(255,255,255,.18); border-radius:14px;
         transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400;
       }
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
 
+    /* scrim + body lock for mobile menu */
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100%; }
+
+    /* ===== Language switcher (inside header so it follows) ===== */
+    .lang-switch{
+      display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
+      background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .site-header.scrolled .lang-switch{ background:#ffffffd9 }
+    .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    @media (max-width:480px){ .lang-btn{ padding:6px 8px } }
+    .flag{
+      width:20px; height:15px; display:inline-block;
+      border-radius:2px; object-fit:cover;
+      box-shadow:0 0 0 1px rgba(0,0,0,.08);
+    }
+    .lang-btn span{ line-height:1 }
+
     /* ===== Hero (slider) ===== */
     .hero{
       position:relative; overflow:hidden; color:#fff; text-align:center;
       min-height: clamp(520px, 68vh, 760px);
       display:grid; place-items:center;
+      padding-top: var(--header-h); /* กัน header fixed ทับบนสุดของ hero */
     }
     .slides{position:absolute; inset:0; display:grid}
     .slide{
@@ -145,7 +187,7 @@
     .btn.ghost{background:transparent; border-color:#fff; color:#fff}
     .btn:hover{filter:brightness(.95)}
 
-    /* ===== Stats (count-up) ===== */
+    /* ===== Stats ===== */
     .stats{background:#ffffff; border-top:1px solid #e8eff0; border-bottom:1px solid #e8eff0}
     .stats-inner{max-width:1200px; margin:auto; padding:22px 16px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
     .stat{background:#f8fbf9; border:1px solid #e3ede6; border-radius:12px; padding:16px; text-align:center; box-shadow:var(--shadow-1)}
@@ -158,13 +200,11 @@
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
 
-    /* ===== Products grid (cards with lift) ===== */
+    /* ===== Products grid ===== */
     .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
     @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
     @media(max-width:640px){ .grid{grid-template-columns:1fr} }
     .card{background:#fff; border:1px solid #e3ece5; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-1); transition:transform .18s ease, box-shadow .18s ease}
-    /* ไม่ใช้ .card:hover ทั่วไป เพื่อเว้นให้ .card.lift คุมการยกการ์ด */
-
     .card picture, .card img{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; background:#eff5f0}
     .card .body{padding:14px}
     .badges{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
@@ -173,24 +213,14 @@
     .card p{margin:0; color:#5b6675; font-size:.96rem}
     .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
     .card .more:hover{ text-decoration:underline }
-
-    /* ยกการ์ดเฉพาะที่ใส่ .lift */
     .card.lift{ will-change: transform, box-shadow; }
     @media (hover:hover) and (pointer:fine){
-      .card.lift:hover, .card.lift:focus-within{
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-2);
-      }
+      .card.lift:hover, .card.lift:focus-within{ transform: translateY(-8px); box-shadow: var(--shadow-2); }
     }
-    @media (prefers-reduced-motion: reduce){
-      .card.lift{ transition: none; }
-    }
+    @media (prefers-reduced-motion: reduce){ .card.lift{ transition: none; } }
 
-    /* ===== Parallax band (subtle) ===== */
-    .band{
-      position:relative; overflow:hidden; color:#fff; text-align:center; border-radius:16px; margin-top:8px;
-      background:#214235;
-    }
+    /* ===== Parallax band ===== */
+    .band{ position:relative; overflow:hidden; color:#fff; text-align:center; border-radius:16px; margin-top:8px; background:#214235;}
     .band .layer{position:absolute; inset:-6% 0; background-size:cover; background-position:center; filter:brightness(.72); transform:translate3d(0,var(--py,0px),0) scale(1.08)}
     .band::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6))}
     .band .content{position:relative; z-index:1; padding:38px 16px}
@@ -262,74 +292,52 @@
     .backtop{position:fixed; right:16px; bottom:90px; z-index:900; display:none}
     .backtop.show{display:block}
     .backtop button{width:44px; height:44px; border-radius:999px; border:1px solid #c5d2cf; background:#fff; box-shadow:0 10px 26px rgba(0,0,0,.18); cursor:pointer}
-
-    /* ===== Floating Language Switcher (TH/EN) ===== */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    @media (max-width:480px){
-      .lang-fab{ top:10px; right:10px }
-      .lang-fab .lang-btn{ padding:6px 8px }
-    }
-    .lang-fab .flag{
-      width:20px; height:15px; display:inline-block;
-      border-radius:2px; object-fit:cover;
-      box-shadow:0 0 0 1px rgba(0,0,0,.08);
-    }
-    .lang-fab .lang-btn span{ line-height:1 }
-
-    /* ===== place language switcher below overlay header ===== */
-    .lang-fab{ top: calc(var(--header-h) + 10px) !important; }
   </style>
 </head>
 <body>
 
-<!-- === Site Header (Top Navigation) === -->
-<header class="site-header" role="banner">
+<!-- === Site Header (Fixed) === -->
+<header class="site-header" role="banner" aria-label="Site header">
   <div class="header-inner">
-    <!-- Brand: โลโก้ + ชื่อบริษัท -->
+    <!-- Brand -->
     <a class="brand" href="/" aria-label="Baume Chemical">
       <span class="brand-logo" aria-hidden="true"></span>
       <span class="brand-name">Baume Chemical</span>
     </a>
 
-    <!-- Hamburger (mobile) -->
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span class="bar" aria-hidden="true"></span>
-    </button>
+    <!-- Right cluster: nav + language + burger -->
+    <div class="header-right">
+      <!-- Primary Navigation -->
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <ul class="menu">
+          <li><a href="https://www.baumechemical.com/index.html" class="nav-link" aria-current="page">Home</a></li>
+          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+          <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
+          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
 
-    <!-- Primary Navigation -->
-    <nav class="primary-nav" aria-label="Primary">
-      <ul class="menu">
-        <li><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-        <li><a href="about-us.html" class="nav-link">About us</a></li>
-        <li><a href="products.html" class="nav-link">Products</a></li>
-        <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-      </ul>
-    </nav>
+      <!-- Language inside header so it follows -->
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+          <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+          <span>ไทย</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+          <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+          <span>EN</span>
+        </button>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+    </div>
   </div>
 </header>
-
-<!-- === Floating Language Switcher (TH/EN) === -->
-<div class="lang-fab" role="group" aria-label="Language switcher">
-  <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-    <img class="flag" src="https://flagcdn.com/24x18/th.png"
-         srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-    <span>ไทย</span>
-  </button>
-  <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-    <img class="flag" src="https://flagcdn.com/24x18/gb.png"
-         srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-    <span>EN</span>
-  </button>
-</div>
+<!-- scrim for mobile menu -->
+<div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero (slider) ===== -->
   <section class="hero" aria-label="ภาพรวมผลิตภัณฑ์">
@@ -383,7 +391,7 @@
           <div class="badges"><span class="badge">Pretreatment</span><span class="badge">Cleaning</span></div>
           <h3 data-i18n-key="card_pret_title">เคมีล้างผิวงาน</h3>
           <p data-i18n-key="card_pret_desc">ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิคช่วยกำจัดคราบน้ำมัน/สนิม เตรียมผิวพร้อมชุบ ลดของเสียในไลน์</p>
-          <a class="more" href="pretreatment/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./pretreatment/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Plating -->
@@ -393,7 +401,7 @@
           <div class="badges"><span class="badge">Plating</span><span class="badge">Zinc/Nickel/Copper/Brass</span></div>
           <h3 data-i18n-key="card_plating_title">น้ำยาชุบโลหะ</h3>
           <p data-i18n-key="card_plating_desc">เพิ่มความเงางามให้กับชิ้นงาน ซิงค์ นิกเกิล ทองแดง ทองเหลือง และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์</p>
-          <a class="more" href="products/platingcoating.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./platingcoating/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Blackening -->
@@ -403,7 +411,7 @@
           <div class="badges"><span class="badge">Blackening</span><span class="badge">Steel/Zinc/Copper/Brass/Aluminium</span></div>
           <h3 data-i18n-key="card_black_title">น้ำยารมดำโลหะ</h3>
           <p data-i18n-key="card_black_desc">งานรมดำ เพื่อเพิ่มความสวยงาม ป้องกันการกัดกร่อน และลดแสงสะท้อน สีสม่ำเสมอ คุมกระบวนการง่าย</p>
-          <a class="more" href="products/blackening.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./blackening/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Passivation -->
@@ -413,7 +421,7 @@
           <div class="badges"><span class="badge">Passivation</span><span class="badge">Zinc Chromate</span></div>
           <h3 data-i18n-key="card_pass_title">โครเมตบนซิงค์</h3>
           <p data-i18n-key="card_pass_desc">ชิ้นงานมีอายุการใช้งานที่ยาวขึ้น เพิ่มความทนการกัดกร่อน การเคลือบสีติดแน่นและทนทานมากขึ้น</p>
-          <a class="more" href="products/passivation.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./passivation/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Polishing -->
@@ -423,7 +431,7 @@
           <div class="badges"><span class="badge">Polishing</span><span class="badge">Brightening</span></div>
           <h3 data-i18n-key="card_polish_title">น้ำยากัดเงาบนโลหะ</h3>
           <p data-i18n-key="card_polish_desc">การกัดเงาด้วยสารเคมี รวมถึงเพิ่มความสวยงามให้กับผลิตภัณฑ์ ปรับผิวให้เงางามสม่ำเสมอ ลดรอยก่อนชุบ</p>
-          <a class="more" href="products/polishing.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./polishing/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Strippers -->
@@ -433,7 +441,7 @@
           <div class="badges"><span class="badge">Strippers</span><span class="badge">Selective</span></div>
           <h3 data-i18n-key="card_strip_title">น้ำยาลอกต่างๆ</h3>
           <p data-i18n-key="card_strip_desc">ลอกงานชุบ/สี ตรงจุด ควบคุมง่าย พร้อมสำหรับกระบวนการต่อไป เช่น การชุบ การพ่นสี หรือการเชื่อม</p>
-          <a class="more" href="products/strippers.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./strippers/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Protective Treatment -->
@@ -448,7 +456,7 @@
           </div>
           <h3 data-i18n-key="card_protect_title">น้ำยารักษาผิวชุบให้คงทน</h3>
           <p data-i18n-key="card_protect_desc">สร้างชั้นปกป้องให้กับพื้นผิวโลหะ ช่วยป้องกันการเกิดออกซิเดชั่นและการหมองคล้ำจากการใช้งานในระยะยาว</p>
-          <a class="more" href="products/protective.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./protective/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Service -->
@@ -458,7 +466,7 @@
           <div class="badges"><span class="badge">Service</span><span class="badge">On-site Support</span></div>
           <h3 data-i18n-key="card_service_title">งานบริการลูกค้า</h3>
           <p data-i18n-key="card_service_desc">ควบคุมคุณภาพอย่างละเอียด และให้คำปรึกษาโดยผู้เชี่ยวชาญ วางแผนคุมคุณภาพ และทดสอบหน้างาน</p>
-          <a class="more" href="products/service.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./service/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
       <!-- Equipment -->
@@ -468,13 +476,13 @@
           <div class="badges"><span class="badge">Equipment</span><span class="badge">Tools</span></div>
           <h3 data-i18n-key="card_equip_title">วัสดุอุปกรณ์</h3>
           <p data-i18n-key="card_equip_desc">การเลือกใช้อุปกรณ์และเครื่องมือที่เหมาะสม เป็นสิ่งสำคัญในกระบวนการชุบให้ได้ผลลัพธ์ที่มีคุณภาพสูง</p>
-          <a class="more" href="products/equipment.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
+          <a class="more" href="./equipment/index.html" target="_blank" rel="noopener" data-i18n-key="card_more">ดูรายละเอียด →</a>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- ===== Parallax Band (service highlight) ===== -->
+  <!-- ===== Parallax Band ===== -->
   <section class="wrap">
     <div class="band reveal" aria-label="บริการหน้างาน" style="--bgy:48%">
       <div class="layer" style="--py:0px; background-image:url('https://i.imgur.com/3xwVLZZ.jpeg')"></div>
@@ -607,26 +615,86 @@
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- ===== JS (slider, nav-toggle, count-up, reveal, parallax, testi, contact, i18n) ===== -->
+  <!-- ===== JS (วางส่วนที่ 2/2 ต่อจากนี้) ===== -->
   <script>
-    // --- Hero slider ---
-    const slides = [...document.querySelectorAll('.slide')];
-    let idx = 0;
-    setInterval(()=>{ slides[idx].classList.remove('active'); idx = (idx + 1) % slides.length; slides[idx].classList.add('active'); }, 5200);
+    /* ใส่สคริปต์ส่วนที่ 2/2 ต่อจากนี้ */
+  </script>
+</body>
+</html>
+<script>
+(function(){
+  const qs = (s,root=document)=>root.querySelector(s);
+  const qsa = (s,root=document)=>[...root.querySelectorAll(s)];
 
-    // --- Mobile nav toggle ---
-    (function(){
-      var header = document.querySelector('.site-header');
-      var toggle = document.querySelector('.site-header .nav-toggle');
-      if(!header || !toggle) return;
-      toggle.addEventListener('click', function(){
-        var opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
-    })();
+  /* ===== Header sizing & sticky state ===== */
+  const header = qs('.site-header');
+  const nav = qs('#primary-nav');
+  const toggle = qs('.site-header .nav-toggle');
+  const scrim = qs('.menu-scrim');
 
-    // --- Count up when visible ---
-    const counters = document.querySelectorAll('.num[data-count]');
+  function updateHeaderH(){
+    if(!header) return;
+    const h = header.getBoundingClientRect().height|0;
+    document.documentElement.style.setProperty('--header-h', h + 'px');
+  }
+  updateHeaderH();
+  window.addEventListener('load', updateHeaderH, {once:true});
+  window.addEventListener('resize', updateHeaderH, {passive:true});
+
+  // add 'scrolled' class once user scrolls a bit
+  function onScrollHeader(){
+    const y = window.scrollY || document.documentElement.scrollTop || 0;
+    header.classList.toggle('scrolled', y > 10);
+  }
+  onScrollHeader();
+  window.addEventListener('scroll', onScrollHeader, {passive:true});
+
+  /* ===== Mobile Nav: open/close + scrim + body-lock ===== */
+  let scrollTopLock = 0;
+  function setMenuOpen(isOpen){
+    header.classList.toggle('open', isOpen);
+    toggle?.setAttribute('aria-expanded', String(isOpen));
+    nav?.setAttribute('aria-hidden', String(!isOpen));
+    if (scrim){ isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden',''); }
+
+    if (isOpen){
+      // lock background scroll (iOS-safe)
+      scrollTopLock = window.scrollY;
+      document.body.classList.add('no-scroll');
+      document.body.style.top = `-${scrollTopLock}px`;
+      const first = nav?.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      first && first.focus({preventScroll:true});
+    }else{
+      document.body.classList.remove('no-scroll');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollTopLock);
+      toggle && toggle.focus({preventScroll:true});
+    }
+  }
+  toggle?.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
+  scrim?.addEventListener('click', ()=> setMenuOpen(false));
+  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setMenuOpen(false); });
+  window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
+
+  // highlight current nav link
+  try{
+    const here = location.pathname.replace(/\/+$/,'') || '/';
+    qsa('.menu a').forEach(a=>{
+      const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'') || '/';
+      if (here === path) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+  }catch(e){}
+
+  /* ===== Hero slider ===== */
+  const slides = qsa('.slide');
+  let sidx = 0;
+  if(slides.length){
+    setInterval(()=>{ slides[sidx].classList.remove('active'); sidx = (sidx + 1) % slides.length; slides[sidx].classList.add('active'); }, 5200);
+  }
+
+  /* ===== Count up when visible ===== */
+  const counters = qsa('.num[data-count]');
+  if(counters.length){
     const countObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(entry=>{
         if(!entry.isIntersecting) return;
@@ -637,230 +705,218 @@
         const tick = ()=>{ cur += step; if(cur >= target){ el.textContent = target + (target<30?'':'+'); } else { el.textContent = cur; requestAnimationFrame(tick); } };
         tick(); obs.unobserve(el);
       });
-    }, {threshold: .5});
+    }, {threshold:.5});
     counters.forEach(el=>countObs.observe(el));
+  }
 
-    // --- Reveal on scroll ---
-    const revealEls = document.querySelectorAll('.reveal');
-    const revObs = new IntersectionObserver((entries,obs)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} }); }, {threshold:.18});
-    revealEls.forEach(el=>revObs.observe(el));
+  /* ===== Reveal on scroll ===== */
+  (function(){
+    const els = qsa('.reveal');
+    if(!els.length) return;
+    const obs = new IntersectionObserver((entries,ob)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); ob.unobserve(e.target);} });
+    }, {threshold:.18});
+    els.forEach(el=>obs.observe(el));
+  })();
 
-    // --- Testimonials slider (dots) ---
-    const track = document.getElementById('testiTrack');
-    const dotsWrap = document.getElementById('testiDots');
-    if(track && dotsWrap){
-      const total = track.children.length;
-      let current = 0;
-      const makeDots = ()=>{ for(let i=0;i<total;i++){ const d=document.createElement('button'); d.className='dot'+(i===0?' active':''); d.type='button'; d.setAttribute('aria-label','ไปสไลด์ที่ '+(i+1)); d.addEventListener('click',()=>go(i)); dotsWrap.appendChild(d);} }
-      const go = (i)=>{ current=i; track.style.transform=`translateX(-${i*100}%)`; [...dotsWrap.children].forEach((b,n)=>b.classList.toggle('active',n===i)); }
-      makeDots(); setInterval(()=>go((current+1)%total), 5200);
+  /* ===== Testimonials slider (dots) ===== */
+  (function(){
+    const track = qs('#testiTrack');
+    const dotsWrap = qs('#testiDots');
+    if(!track || !dotsWrap) return;
+    const total = track.children.length;
+    let current = 0;
+    function go(i){ current=i; track.style.transform=`translateX(-${i*100}%)`; [...dotsWrap.children].forEach((b,n)=>b.classList.toggle('active',n===i)); }
+    for(let i=0;i<total;i++){
+      const d=document.createElement('button');
+      d.className='dot'+(i===0?' active':''); d.type='button';
+      d.setAttribute('aria-label','ไปสไลด์ที่ '+(i+1));
+      d.addEventListener('click',()=>go(i));
+      dotsWrap.appendChild(d);
     }
+    setInterval(()=>go((current+1)%total), 5200);
+  })();
 
-    // --- Parallax band (subtle clamp ±24px) ---
-    const bandLayer = document.querySelector('.band .layer');
-    function bandTick(){ if(!bandLayer) return; const r = bandLayer.parentElement.getBoundingClientRect(); const vh = window.innerHeight || 800; const centerDelta = (r.top + r.height/2) - vh/2; const speed = .16, max = 24; const offset = Math.max(-max, Math.min(max, centerDelta * speed)); bandLayer.style.setProperty('--py', offset + 'px'); }
-    ['scroll','load','resize'].forEach(ev=> window.addEventListener(ev, bandTick, {passive:true}));
+  /* ===== Parallax band ===== */
+  const bandLayer = qs('.band .layer');
+  function bandTick(){
+    if(!bandLayer) return;
+    const r = bandLayer.parentElement.getBoundingClientRect();
+    const vh = window.innerHeight || 800;
+    const centerDelta = (r.top + r.height/2) - vh/2;
+    const speed = .16, max = 24;
+    const offset = Math.max(-max, Math.min(max, centerDelta * speed));
+    bandLayer.style.setProperty('--py', offset + 'px');
+  }
+  ['scroll','load','resize'].forEach(ev=> window.addEventListener(ev, bandTick, {passive:true}));
 
-    // --- Back to top ---
-    const backTop = document.getElementById('backTop');
-    window.addEventListener('scroll', ()=>{ backTop.classList.toggle('show', window.scrollY > 600); }, {passive:true});
-    backTop?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+  /* ===== Back to top ===== */
+  const backTop = qs('#backTop');
+  window.addEventListener('scroll', ()=>{ backTop && backTop.classList.toggle('show', window.scrollY > 600); }, {passive:true});
+  backTop?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
-    // --- Contact form (Apps Script + mailto fallback) ---
-    const ENDPOINT = "https://script.google.com/macros/s/AKfycbwBFX4pEIS-BS8d_7h-Ptlq79NwAj3jTj7mC_uVBQqU4JBs-hZfDgaWLY9HNts93CfErw/exec";
-    const form = document.getElementById('contactForm');
-    const sendBtn = document.getElementById('sendBtn');
-    const statusMsg = document.getElementById('statusMsg');
+  /* ===== Contact form (Apps Script + mailto fallback) ===== */
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycbwBFX4pEIS-BS8d_7h-Ptlq79NwAj3jTj7mC_uVBQqU4JBs-hZfDgaWLY9HNts93CfErw/exec";
+  const form = qs('#contactForm');
+  const sendBtn = qs('#sendBtn');
+  const statusMsg = qs('#statusMsg');
 
-    form?.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      if (form.company && form.company.value.trim() !== "") return; // honeypot
-
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      if(!name || !email){
-        statusMsg.textContent = "กรุณากรอกชื่อและอีเมล";
-        statusMsg.style.color = "#b91c1c";
-        return;
-      }
-
-      sendBtn.disabled = true; const original = sendBtn.textContent;
-      sendBtn.textContent = "กำลังส่ง…"; statusMsg.textContent = ""; statusMsg.removeAttribute('style');
-
-      try{
-        const fd = new FormData(form);
-        fd.append('source','products-home');
-        const res = await fetch(ENDPOINT, { method: "POST", body: new URLSearchParams(fd) });
-        const text = await res.text();
-        let ok = false;
-        try { ok = JSON.parse(text).ok === true; } catch(e) { ok = /ok/i.test(text); }
-
-        if(ok){
-          form.reset();
-          sendBtn.textContent = "ส่งแล้ว ขอบคุณครับ";
-          statusMsg.textContent = "ส่งข้อความสำเร็จ เราจะติดต่อกลับโดยเร็ว";
-          statusMsg.style.color = "#14532d";
-        } else { throw new Error("ส่งไม่สำเร็จ"); }
-      }catch(err){
-        const subject = encodeURIComponent('Website Inquiry — Baume Chemical');
-        const body = encodeURIComponent(
+  form?.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    if (form.company && form.company.value.trim() !== "") return; // honeypot
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    if(!name || !email){
+      statusMsg.textContent = "กรุณากรอกชื่อและอีเมล";
+      statusMsg.style.color = "#b91c1c";
+      return;
+    }
+    sendBtn.disabled = true; const original = sendBtn.textContent;
+    sendBtn.textContent = "กำลังส่ง…"; statusMsg.textContent = ""; statusMsg.removeAttribute('style');
+    try{
+      const fd = new FormData(form);
+      fd.append('source','products-home');
+      const res = await fetch(ENDPOINT, { method: "POST", body: new URLSearchParams(fd) });
+      const text = await res.text();
+      let ok = false;
+      try { ok = JSON.parse(text).ok === true; } catch(e) { ok = /ok/i.test(text); }
+      if(ok){
+        form.reset();
+        sendBtn.textContent = "ส่งแล้ว ขอบคุณครับ";
+        statusMsg.textContent = "ส่งข้อความสำเร็จ เราจะติดต่อกลับโดยเร็ว";
+        statusMsg.style.color = "#14532d";
+      } else { throw new Error("ส่งไม่สำเร็จ"); }
+    }catch(err){
+      const subject = encodeURIComponent('Website Inquiry — Baume Chemical');
+      const body = encodeURIComponent(
 `ชื่อ: ${form.name.value.trim()}
 อีเมล: ${form.email.value.trim()}
 โทร: ${form.phone.value.trim()}
 
 ข้อความ:
 ${form.message.value.trim()}`
-        );
-        window.location.href = `mailto:contact@baumechemical.com?subject=${subject}&body=${body}`;
-      }finally{
-        setTimeout(()=>{ sendBtn.textContent = original; sendBtn.disabled = false; }, 2200);
-      }
-    });
-
-    /* ===== i18n: ตั้งค่าเริ่มต้นภาษาไทย ===== */
-    const I18N = {
-      th: {
-        hero_title: "เคมีงานชุบและการเตรียมผิวครบวงจร",
-        hero_tagline: "เราดูแลงานชุบครบวงจรตั้งแต่การเตรียมผิว การชุบ การรมดำ การพาสซิเวชัน ไปจนถึงน้ำยาลอกคราบและการขัดเงา พร้อมทีมเทคนิคช่วยออกแบบสูตรและควบคุมคุณภาพอ่างชุบให้สอดคล้องกับไลน์การผลิตของคุณ พร้อมตรวจวิเคราะห์สารละลาย ปรับแต่งหน้างาน และควบคุมคุณภาพเพื่อให้ผิวชิ้นงานสม่ำเสมอได้มาตรฐาน.",
-        btn_products: "ดูหมวดผลิตภัณฑ์",
-        btn_consult: "ปรึกษาทีมเทคนิค",
-        stat_years: "ปีประสบการณ์",
-        stat_lines: "ไลน์ลูกค้าดูแล",
-        stat_formulas: "สูตร/กระบวนการ",
-        stat_categories: "หมวดผลิตภัณฑ์หลัก",
-        sec_products: "ผลิตภัณฑ์ของเรา",
-        sec_products_lead: "เลือกโซลูชันให้เหมาะกับวัสดุ ชิ้นงาน และมาตรฐานอุตสาหกรรมของคุณ",
-
-        /* Products cards (TH) */
-        card_pret_title: "เคมีล้างผิวงาน",
-        card_pret_desc: "ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิคช่วยกำจัดคราบน้ำมัน/สนิม เตรียมผิวพร้อมชุบ ลดของเสียในไลน์",
-
-        card_plating_title: "น้ำยาชุบโลหะ",
-        card_plating_desc: "เพิ่มความเงางามให้กับชิ้นงาน ซิงค์ นิกเกิล ทองแดง ทองเหลือง และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์",
-
-        card_black_title: "น้ำยารมดำโลหะ",
-        card_black_desc: "งานรมดำ เพื่อเพิ่มความสวยงาม ป้องกันการกัดกร่อน และลดแสงสะท้อน สีสม่ำเสมอ คุมกระบวนการง่าย",
-
-        card_pass_title: "โครเมตบนซิงค์",
-        card_pass_desc: "ชิ้นงานมีอายุการใช้งานที่ยาวขึ้น เพิ่มความทนการกัดกร่อน การเคลือบสีติดแน่นและทนทานมากขึ้น",
-
-        card_polish_title: "น้ำยากัดเงาบนโลหะ",
-        card_polish_desc: "การกัดเงาด้วยสารเคมี รวมถึงเพิ่มความสวยงามให้กับผลิตภัณฑ์ ปรับผิวให้เงางามสม่ำเสมอ ลดรอยก่อนชุบ",
-
-        card_strip_title: "น้ำยาลอกต่างๆ",
-        card_strip_desc: "ลอกงานชุบ/สี ตรงจุด ควบคุมง่าย พร้อมสำหรับกระบวนการต่อไป เช่น การชุบ การพ่นสี หรือการเชื่อม",
-
-        card_protect_title: "น้ำยารักษาผิวชุบให้คงทน",
-        card_protect_desc: "สร้างชั้นปกป้องให้กับพื้นผิวโลหะ ช่วยป้องกันการเกิดออกซิเดชั่นและการหมองคล้ำจากการใช้งานในระยะยาว",
-
-        card_service_title: "งานบริการลูกค้า",
-        card_service_desc: "ควบคุมคุณภาพอย่างละเอียด และให้คำปรึกษาโดยผู้เชี่ยวชาญ วางแผนคุมคุณภาพ และทดสอบหน้างาน",
-
-        card_equip_title: "วัสดุอุปกรณ์",
-        card_equip_desc: "การเลือกใช้อุปกรณ์และเครื่องมือที่เหมาะสม เป็นสิ่งสำคัญในกระบวนการชุบให้ได้ผลลัพธ์ที่มีคุณภาพสูง",
-
-        card_more: "ดูรายละเอียด →",
-
-        band_title: "บริการหน้างานโดยทีมเทคนิค",
-        band_text: "ช่วยติดตั้งบ่อชุบ วิเคราะห์ความเข้มข้นของสารเคมีในน้ำยา (Titration), วางแผนเติมเคมีหรือเปลี่ยนน้ำยา, และจัดทำมาตรฐานคุณภาพให้ผลิตงานได้สม่ำเสมอ",
-        band_cta: "บทความ & คู่มือ",
-
-        sec_testi: "ลูกค้าบอกต่อ",
-        sec_testi_lead: "ผลลัพธ์จริงจากหน้างาน",
-        sec_faq: "คำถามที่พบบ่อย",
-        contact_title: "ติดต่อทีม Baume Chemical",
-        form_submit: "ส่งเข้าที่อีเมล",
-        form_add_line: "แอด LINE",
-        form_note: "ระบบจะส่งอีเมลอัตโนมัติผ่านเซิร์ฟเวอร์ (Apps Script) และจะเด้งเป็นเมลบนเครื่อง หากเซิร์ฟเวอร์ไม่พร้อม",
-
-        footer_products: "หมวดผลิตภัณฑ์",
-        footer_contact: "ติดต่อเรา"
-      },
-      en: {
-        hero_title: "Electroplating Chemicals & Surface Preparation",
-        hero_tagline: "From Pretreatment, Plating, Blackening, Passivation to Strippers and Polishing — our technical team helps tailor formulas and control bath quality for your line.",
-        btn_products: "Browse Products",
-        btn_consult: "Talk to a Specialist",
-        stat_years: "Years of Experience",
-        stat_lines: "Customer Lines Served",
-        stat_formulas: "Formulas / Processes",
-        stat_categories: "Core Product Categories",
-        sec_products: "Our Products",
-        sec_products_lead: "Choose solutions that fit your material, parts, and industrial standards.",
-
-        /* Products cards (EN) */
-        card_pret_title: "Pretreatment & Cleaning",
-        card_pret_desc: "Acid/alkaline degreasers and ultrasonic cleaning remove oil/rust, preparing surfaces for plating and reducing line rejects.",
-
-        card_plating_title: "Metal Plating Chemistry",
-        card_plating_desc: "Bright, consistent finishes: zinc, nickel, copper, brass, and cyanide-free white bronze.",
-
-        card_black_title: "Blackening Solutions",
-        card_black_desc: "Attractive matte protection with reduced glare and corrosion; even color and easy process control.",
-
-        card_pass_title: "Passivation on Zinc",
-        card_pass_desc: "Extend service life and corrosion resistance; improve paint adhesion and durability.",
-
-        card_polish_title: "Chemical Polishing",
-        card_polish_desc: "Enhance appearance and uniform gloss; smooth out scratches prior to plating.",
-
-        card_strip_title: "Selective Strippers",
-        card_strip_desc: "Targeted removal of plating/paint for rework—easy control and ready for the next process.",
-
-        card_protect_title: "Protective Treatment",
-        card_protect_desc: "Topcoats/sealants that shield metal surfaces from oxidation and long-term tarnishing.",
-
-        card_service_title: "Customer Service",
-        card_service_desc: "Detailed QA control and expert consulting, planning, and on-site testing.",
-
-        card_equip_title: "Equipment & Tools",
-        card_equip_desc: "Choosing the right equipment is key to achieving high-quality plating results.",
-
-        card_more: "View details →",
-
-        band_title: "On-site Service by Technical Team",
-        band_text: "We help set up plating baths, run titration, plan replenishment/solution change, and standardize QA to keep output consistent.",
-        band_cta: "Get Started",
-
-        sec_testi: "What Customers Say",
-        sec_testi_lead: "Real on-site results",
-        sec_faq: "Frequently Asked Questions",
-        contact_title: "Contact Baume Chemical Team",
-        form_submit: "Send via Email",
-        form_add_line: "Add LINE",
-        form_note: "The system sends email via server (Apps Script). If unavailable, your email client will open as fallback.",
-
-        footer_products: "Products",
-        footer_contact: "Contact Us"
-      }
-    };
-
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
-    };
-
-    function applyLang(lang){
-      document.documentElement.lang = lang;
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
-      els.translatables().forEach(node => {
-        const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[lang] && I18N[lang][key]) node.textContent = I18N[lang][key];
-      });
-      try{ localStorage.setItem('lang', lang); }catch(e){}
+      );
+      window.location.href = `mailto:contact@baumechemical.com?subject=${subject}&body=${body}`;
+    }finally{
+      setTimeout(()=>{ sendBtn.textContent = original; sendBtn.disabled = false; }, 2200);
     }
+  });
 
-    // ค่าเริ่มต้นเป็นภาษาไทย (อ่านของเดิมจาก localStorage ถ้ามี)
-    (function initLang(){
-      const defaultLang = 'th';
-      let saved = null;
-      try {
-        const v = localStorage.getItem('lang');
-        if (v === 'en' || v === 'th') saved = v;
-      } catch(e){}
-      applyLang(saved || defaultLang);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
-    })();
-  </script>
-</body>
-</html>
+  /* ===== i18n (TH/EN) ===== */
+  const I18N = {
+    th: {
+      hero_title: "เคมีงานชุบและการเตรียมผิวครบวงจร",
+      hero_tagline: "เราดูแลงานชุบครบวงจรตั้งแต่การเตรียมผิว การชุบ การรมดำ การพาสซิเวชัน ไปจนถึงน้ำยาลอกคราบและการขัดเงา พร้อมทีมเทคนิคช่วยออกแบบสูตรและควบคุมคุณภาพอ่างชุบให้สอดคล้องกับไลน์การผลิตของคุณ พร้อมตรวจวิเคราะห์สารละลาย ปรับแต่งหน้างาน และควบคุมคุณภาพเพื่อให้ผิวชิ้นงานสม่ำเสมอได้มาตรฐาน.",
+      btn_products: "ดูหมวดผลิตภัณฑ์",
+      btn_consult: "ปรึกษาทีมเทคนิค",
+      stat_years: "ปีประสบการณ์",
+      stat_lines: "ไลน์ลูกค้าดูแล",
+      stat_formulas: "สูตร/กระบวนการ",
+      stat_categories: "หมวดผลิตภัณฑ์หลัก",
+      sec_products: "ผลิตภัณฑ์ของเรา",
+      sec_products_lead: "เลือกโซลูชันให้เหมาะกับวัสดุ ชิ้นงาน และมาตรฐานอุตสาหกรรมของคุณ",
+      card_pret_title: "เคมีล้างผิวงาน",
+      card_pret_desc: "ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิคช่วยกำจัดคราบน้ำมัน/สนิม เตรียมผิวพร้อมชุบ ลดของเสียในไลน์",
+      card_plating_title: "น้ำยาชุบโลหะ",
+      card_plating_desc: "เพิ่มความเงางามให้กับชิ้นงาน ซิงค์ นิกเกิล ทองแดง ทองเหลือง และไวท์บรอนซ์แบบไม่ใช้ไซยาไนด์",
+      card_black_title: "น้ำยารมดำโลหะ",
+      card_black_desc: "งานรมดำ เพื่อเพิ่มความสวยงาม ป้องกันการกัดกร่อน และลดแสงสะท้อน สีสม่ำเสมอ คุมกระบวนการง่าย",
+      card_pass_title: "โครเมตบนซิงค์",
+      card_pass_desc: "ชิ้นงานมีอายุการใช้งานที่ยาวขึ้น เพิ่มความทนการกัดกร่อน การเคลือบสีติดแน่นและทนทานมากขึ้น",
+      card_polish_title: "น้ำยากัดเงาบนโลหะ",
+      card_polish_desc: "การกัดเงาด้วยสารเคมี รวมถึงเพิ่มความสวยงามให้กับผลิตภัณฑ์ ปรับผิวให้เงางามสม่ำเสมอ ลดรอยก่อนชุบ",
+      card_strip_title: "น้ำยาลอกต่างๆ",
+      card_strip_desc: "ลอกงานชุบ/สี ตรงจุด ควบคุมง่าย พร้อมสำหรับกระบวนการต่อไป เช่น การชุบ การพ่นสี หรือการเชื่อม",
+      card_protect_title: "น้ำยารักษาผิวชุบให้คงทน",
+      card_protect_desc: "สร้างชั้นปกป้องให้กับพื้นผิวโลหะ ช่วยป้องกันการเกิดออกซิเดชั่นและการหมองคล้ำจากการใช้งานในระยะยาว",
+      card_service_title: "งานบริการลูกค้า",
+      card_service_desc: "ควบคุมคุณภาพอย่างละเอียด และให้คำปรึกษาโดยผู้เชี่ยวชาญ วางแผนคุมคุณภาพ และทดสอบหน้างาน",
+      card_equip_title: "วัสดุอุปกรณ์",
+      card_equip_desc: "การเลือกใช้อุปกรณ์และเครื่องมือที่เหมาะสม เป็นสิ่งสำคัญในกระบวนการชุบให้ได้ผลลัพธ์ที่มีคุณภาพสูง",
+      card_more: "ดูรายละเอียด →",
+      band_title: "บริการหน้างานโดยทีมเทคนิค",
+      band_text: "ช่วยติดตั้งบ่อชุบ วิเคราะห์ความเข้มข้นของสารเคมีในน้ำยา (Titration), วางแผนเติมเคมีหรือเปลี่ยนน้ำยา, และจัดทำมาตรฐานคุณภาพให้ผลิตงานได้สม่ำเสมอ",
+      band_cta: "บทความ & คู่มือ",
+      sec_testi: "ลูกค้าบอกต่อ",
+      sec_testi_lead: "ผลลัพธ์จริงจากหน้างาน",
+      sec_faq: "คำถามที่พบบ่อย",
+      contact_title: "ติดต่อทีม Baume Chemical",
+      form_submit: "ส่งเข้าที่อีเมล",
+      form_add_line: "แอด LINE",
+      form_note: "ระบบจะส่งอีเมลอัตโนมัติผ่านเซิร์ฟเวอร์ (Apps Script) และจะเด้งเป็นเมลบนเครื่อง หากเซิร์ฟเวอร์ไม่พร้อม",
+      footer_products: "หมวดผลิตภัณฑ์",
+      footer_contact: "ติดต่อเรา"
+    },
+    en: {
+      hero_title: "Electroplating Chemicals & Surface Preparation",
+      hero_tagline: "From Pretreatment, Plating, Blackening, Passivation to Strippers and Polishing — our technical team helps tailor formulas and control bath quality for your line.",
+      btn_products: "Browse Products",
+      btn_consult: "Talk to a Specialist",
+      stat_years: "Years of Experience",
+      stat_lines: "Customer Lines Served",
+      stat_formulas: "Formulas / Processes",
+      stat_categories: "Core Product Categories",
+      sec_products: "Our Products",
+      sec_products_lead: "Choose solutions that fit your material, parts, and industrial standards.",
+      card_pret_title: "Pretreatment & Cleaning",
+      card_pret_desc: "Acid/alkaline degreasers and ultrasonic cleaning remove oil/rust, preparing surfaces for plating and reducing line rejects.",
+      card_plating_title: "Metal Plating Chemistry",
+      card_plating_desc: "Bright, consistent finishes: zinc, nickel, copper, brass, and cyanide-free white bronze.",
+      card_black_title: "Blackening Solutions",
+      card_black_desc: "Attractive matte protection with reduced glare and corrosion; even color and easy process control.",
+      card_pass_title: "Passivation on Zinc",
+      card_pass_desc: "Extend service life and corrosion resistance; improve paint adhesion and durability.",
+      card_polish_title: "Chemical Polishing",
+      card_polish_desc: "Enhance appearance and uniform gloss; smooth out scratches prior to plating.",
+      card_strip_title: "Selective Strippers",
+      card_strip_desc: "Targeted removal of plating/paint for rework—easy control and ready for the next process.",
+      card_protect_title: "Protective Treatment",
+      card_protect_desc: "Topcoats/sealants that shield metal surfaces from oxidation and long-term tarnishing.",
+      card_service_title: "Customer Service",
+      card_service_desc: "Detailed QA control and expert consulting, planning, and on-site testing.",
+      card_equip_title: "Equipment & Tools",
+      card_equip_desc: "Choosing the right equipment is key to achieving high-quality plating results.",
+      card_more: "View details →",
+      band_title: "On-site Service by Technical Team",
+      band_text: "We help set up plating baths, run titration, plan replenishment/solution change, and standardize QA to keep output consistent.",
+      band_cta: "Get Started",
+      sec_testi: "What Customers Say",
+      sec_testi_lead: "Real on-site results",
+      sec_faq: "Frequently Asked Questions",
+      contact_title: "Contact Baume Chemical Team",
+      form_submit: "Send via Email",
+      form_add_line: "Add LINE",
+      form_note: "The system sends email via server (Apps Script). If unavailable, your email client will open as fallback.",
+      footer_products: "Products",
+      footer_contact: "Contact Us"
+    }
+  };
+
+  const langBtns = ()=> qsa('.lang-switch .lang-btn, .lang-fab .lang-btn'); // รองรับทั้งกรณีใน header และเดิม
+  const transEls = ()=> qsa('[data-i18n-key]');
+
+  function applyLang(lang){
+    const sel = (lang === 'en') ? 'en' : 'th';
+    document.documentElement.lang = sel;
+    langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+    transEls().forEach(node => {
+      const key = node.getAttribute('data-i18n-key');
+      if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+    });
+    try{ localStorage.setItem('lang', sel); }catch(e){}
+    // ภาษาเปลี่ยน ความกว้างปุ่มเปลี่ยน → อัปเดต header height
+    updateHeaderH();
+  }
+
+  (function initLang(){
+    let saved = null;
+    try {
+      const v = localStorage.getItem('lang');
+      if (v === 'en' || v === 'th') saved = v;
+    } catch(e){}
+    applyLang(saved || 'th');
+    langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+  })();
+
+})(); // end IIFE
+</script>

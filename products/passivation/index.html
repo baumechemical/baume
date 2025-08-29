@@ -135,6 +135,15 @@
     .btn{appearance:none;border:1px solid var(--brand);background:var(--accent);color:#1b2637;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
     .btn.ghost{background:transparent;border-color:#fff;color:#fff}
 
+    /* Hero buttons = orange like other pages */
+.hero .btn:not(.ghost){
+  border-color:#ff9800;
+  background:#ff9800;
+  color:#fff;              /* เปลี่ยนเป็นตัวอักษรสีขาวให้คอนทราสต์ดี */
+}
+.hero .btn:not(.ghost):hover{ opacity:.92 }
+
+
     /* === Layout === */
     .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
     h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
@@ -189,10 +198,10 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-            <li><a href="/index.html" class="nav-link">Home</a></li>
-            <li><a href="/about-us.html" class="nav-link">About us</a></li>
-            <li><a href="/products.html" class="nav-link">Products</a></li>
-            <li><a href="/contact-us.html" class="nav-link">Contact Us</a></li>
+          <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+          <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
           </ul>
         </nav>
 
@@ -214,24 +223,14 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- === Language FAB (synced) === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
-
   <!-- === Hero === -->
   <section class="hero" aria-label="Passivation hero">
     <div class="hero-inner">
       <h1 data-i18n-key="hero_title">โครเมตบนซิงค์ (Passivation)</h1>
       <p data-i18n-key="hero_tagline">เพิ่มความทนการกัดกร่อน การยึดเกาะสี ลด White Rust และเพิ่มความสวยงาม — มีทั้ง Cr3/Cr6: ฟ้า/ขาว, ดำ, รุ้ง, เหลือง และ Olive Drab ให้เลือกตามสเปกงาน</p>
       <div class="actions">
-        <a class="btn ghost" href="/index.html" data-i18n-key="btn_home">← กลับหน้าแรก</a>
-        <a class="btn" href="/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+        <a class="btn ghost" href="https://www.baumechemical.com/index.html" data-i18n-key="btn_home">← กลับหน้าแรก</a>
+        <a class="btn" href="https://www.baumechemical.com/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
       </div>
     </div>
   </section>
