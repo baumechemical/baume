@@ -220,6 +220,15 @@
     .btn:hover{filter:none; opacity:.92}
     .hero .actions .btn[data-i18n-key="btn_open_map"]{ font-weight: 600 !important; }
 
+    /* Hero buttons = orange like other pages */
+.hero .btn:not(.ghost){
+  border-color:#ff9800;
+  background:#ff9800;
+  color:#fff;              /* เปลี่ยนเป็นตัวอักษรสีขาวให้คอนทราสต์ดี */
+}
+.hero .btn:not(.ghost):hover{ opacity:.92 }
+
+
     /* ===== Language Switcher — hero FAB (kept & synced) ===== */
     .lang-fab{
       position:absolute; right:14px; bottom:14px; z-index:2;
