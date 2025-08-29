@@ -36,7 +36,6 @@
 <meta name="twitter:image" content="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
 <meta name="twitter:image:alt" content="ห้องแล็บทดสอบและงานบริการของ Baume Chemical" data-i18n-attr="content:og_img_alt">
 
-
   <!-- Perf: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,18 +81,8 @@
       "@type": "BreadcrumbList",
       "@id": "https://www.baumechemical.com/about-us.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "หน้าแรก",
-          "item": "https://www.baumechemical.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "เกี่ยวกับเรา",
-          "item": "https://www.baumechemical.com/about-us.html"
-        }
+        { "@type": "ListItem","position": 1,"name": "หน้าแรก","item": "https://www.baumechemical.com/" },
+        { "@type": "ListItem","position": 2,"name": "เกี่ยวกับเรา","item": "https://www.baumechemical.com/about-us.html" }
       ]
     },
     {
@@ -123,7 +112,7 @@
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b; /* ปรับปุ่มเป็นเขียวทั้งเว็บ */
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b;
       --ink:#434343; --muted:#546477; --surface:#ffffff; --bg:#d5e4d9;
       --logo:url('https://img2.pic.in.th/pic/Baume.jpg');
       --header-h:64px;
@@ -136,17 +125,25 @@
       background:var(--bg);
     }
 
-    /* === HEADER (จากที่จำไว้ — overlay on hero) === */
+    /* === HEADER: Fixed + scrolled glass (เหมือนหน้าหลัก) === */
     .site-header{
-      position:absolute; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      position:fixed; top:0; left:0; right:0; z-index:1400;
+      background:transparent;
       border-bottom:1px solid rgba(255,255,255,.14);
-      -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
+      -webkit-backdrop-filter:none; backdrop-filter:none;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.70);
+      border-bottom-color:rgba(255,255,255,.12);
+      -webkit-backdrop-filter:saturate(140%) blur(10px);
+      backdrop-filter:saturate(140%) blur(10px);
+      box-shadow:0 8px 26px rgba(2,8,20,.18);
     }
     .site-header .header-inner{
       max-width:var(--container); margin:0 auto;
       display:flex; align-items:center; justify-content:space-between;
-      min-height:var(--header-h); padding:10px 16px;
+      min-height:var(--header-h); padding:10px 16px; gap:12px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{
@@ -156,6 +153,7 @@
     }
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
+    .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{
@@ -177,24 +175,46 @@
       content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
     }
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
     @media (max-width: 920px){
       .menu{
         position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px);
         border:1px solid rgba(255,255,255,.18); border-radius:14px;
         transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400;
       }
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
 
+    /* scrim + body-lock */
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100%; }
+
+    /* Language switcher (อยู่ใน header ให้ตามติด) */
+    .lang-switch{
+      display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px;
+      background:#ffffffcc; backdrop-filter: blur(8px);
+      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .site-header.scrolled .lang-switch{ background:#ffffffd9 }
+    .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
+      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    }
+    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    @media (max-width:480px){ .lang-btn{ padding:6px 8px } }
+    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .lang-btn span{ line-height:1 }
+
     /* ===== Hero (Parallax) ===== */
     .parallax{
       position:relative; min-height: clamp(460px, 58vh, 760px);
       display:grid; place-items:center; text-align:center; color:#fff; overflow:hidden;
-      padding: calc(var(--header-h) + 24px) 16px 32px; /* เผื่อพื้นที่ใต้ header */
+      padding: calc(var(--header-h) + 24px) 16px 32px; /* กัน header fixed */
       isolation:isolate;
     }
     .px-layer{position:absolute; inset:-14% 0; background-size:cover; background-position:center; transform:translate3d(0,var(--py,0px),0) scale(1.12); filter:brightness(.82); will-change:transform}
@@ -205,21 +225,6 @@
     .brandbar .name{font-weight:800; letter-spacing:.2px; font-size: clamp(13px,1.5vw,15px)}
     .hero-title{margin:0; font-weight:800; letter-spacing:.2px; font-size: clamp(28px, 4.2vw, 52px); text-shadow:0 6px 28px rgba(0,0,0,.5)}
     .hero-sub{margin:.5rem auto 0; max-width:900px; color:#e7f0f6; font-size: clamp(14px,1.6vw,18px)}
-
-    /* ===== Floating Language Switcher — bottom-right on hero (จากที่จำไว้) ===== */
-    .lang-fab{
-      position:absolute; right:18px; bottom:18px; z-index:3;
-      display:flex; gap:6px; padding:4px;
-      border:1px solid #e2e8f0; border-radius:999px;
-      background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* ===== Layout & Cards ===== */
     .wrap{max-width:1200px; margin:auto; padding:48px 20px}
@@ -259,7 +264,7 @@
     .btn{appearance:none; border:1px solid var(--accent); background:var(--accent); color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; text-decoration:none}
     .btn.outline{background:transparent; color:#fff; border-color:#cfe7dc}
 
-    /* ===== FOOTER (จากที่จำไว้) ===== */
+    /* ===== FOOTER ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -282,8 +287,8 @@
 </head>
 <body>
 
-  <!-- === HEADER (นำจากโค้ดที่จำไว้) === -->
-  <header class="site-header" role="banner">
+  <!-- === HEADER (fixed + language inside) === -->
+  <header class="site-header" role="banner" aria-label="Site header">
     <div class="header-inner">
       <!-- Brand -->
       <a class="brand" href="/" aria-label="Baume Chemical">
@@ -291,49 +296,54 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <!-- Right cluster -->
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+          <ul class="menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about-us.html" class="nav-link" aria-current="page">About us</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about-us" class="nav-link" aria-current="page">About us</a></li>
-          <li><a href="products.html" class="nav-link">Products</a></li>
-          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+        <!-- Language switcher (follows with header) -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+            <span>ไทย</span>
+          </button>
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+            <span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
+  <!-- scrim for mobile menu -->
+  <div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero Parallax ===== -->
   <section class="parallax" aria-label="เกี่ยวกับ Baume Chemical">
-  <div class="px-layer"
-       style="
-         background-image:
-           url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg'),
-           url('https://img2.pic.in.th/pic/thumbnail-6.jpg');
-         background-size: cover;
-         background-position: center;
-       "></div>
+    <div class="px-layer"
+         style="
+           background-image:
+             url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg'),
+             url('https://img2.pic.in.th/pic/thumbnail-6.jpg');
+           background-size: cover;
+           background-position: center;
+         "></div>
 
     <div class="parallax-content">
       <h1 class="hero-title" data-i18n-key="hero_title">เกี่ยวกับ Baume Chemical</h1>
       <p class="hero-sub" data-i18n-key="hero_sub">ผู้นำเข้าและจัดหาเคมีภัณฑ์งานชุบเคลือบผิวโลหะคุณภาพสูง มากกว่า 30 ปี พร้อมบริการวิเคราะห์และที่ปรึกษาหน้างาน</p>
-    </div>
-
-    <!-- ปุ่มสลับภาษาแบบ FAB (จากโค้ดที่จำไว้) -->
-    <div class="lang-fab" role="group" aria-label="Language switcher">
-      <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-        <span>ไทย</span>
-      </button>
-      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
-        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-        <span>EN</span>
-      </button>
     </div>
   </section>
 
@@ -430,21 +440,9 @@
         </div>
       </div>
     </div>
-
-    <!-- ภาษา FAB ซ้ำที่ hero ท้ายหน้า (ถ้าต้องการให้แสดงทุกพารัลแลกซ์ ให้คงไว้) -->
-    <div class="lang-fab" role="group" aria-label="Language switcher">
-      <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-        <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-        <span>ไทย</span>
-      </button>
-      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
-        <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-        <span>EN</span>
-      </button>
-    </div>
   </section>
 
-  <!-- ===== FOOTER (นำจากโค้ดที่จำไว้) ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -499,30 +497,66 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
 
   <script>
-    /* --- วัดความสูง header -> --header-h สำหรับเผื่อพื้นที่ hero --- */
+    /* --- Header: set --header-h + scrolled state + current link --- */
     (function(){
       const header = document.querySelector('.site-header');
       const setH = () => {
         const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
         document.documentElement.style.setProperty('--header-h', h + 'px');
       };
+      const onScroll = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        header && header.classList.toggle('scrolled', y > 10);
+      };
       window.addEventListener('load', setH, {once:true});
       window.addEventListener('resize', setH);
-      setH();
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
+      // highlight current page
+      try{
+        const here = location.pathname.replace(/\/+$/,'') || '/';
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'') || '/';
+          if (here === path) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
     })();
 
-    /* --- Mobile nav toggle (ตามที่จำไว้) --- */
+    /* --- Mobile nav: open/close + scrim + body-lock --- */
     (function(){
       const header = document.querySelector('.site-header');
       const toggle = document.querySelector('.site-header .nav-toggle');
-      if(!header || !toggle) return;
-      toggle.addEventListener('click', function(){
-        const opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
-      header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
-        header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-      }));
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+      if(!header || !toggle || !nav || !scrim) return;
+
+      let scrollTopLock = 0;
+      function setMenuOpen(isOpen){
+        header.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        nav.setAttribute('aria-hidden', String(!isOpen));
+        isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+
+        if(isOpen){
+          scrollTopLock = window.scrollY;
+          document.body.classList.add('no-scroll');
+          document.body.style.top = `-${scrollTopLock}px`;
+          const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+          first && first.focus({preventScroll:true});
+        }else{
+          document.body.classList.remove('no-scroll');
+          document.body.style.top = '';
+          window.scrollTo(0, scrollTopLock);
+          toggle.focus({preventScroll:true});
+        }
+      }
+
+      toggle.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
+      scrim.addEventListener('click', ()=> setMenuOpen(false));
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && header.classList.contains('open')) setMenuOpen(false); });
+      window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
+      header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
     })();
 
     /* --- Parallax driver --- */
@@ -539,7 +573,7 @@
     tick();
     window.addEventListener('scroll', ()=> requestAnimationFrame(tick), {passive:true});
 
-    /* --- i18n: ใช้ระบบเดิมของหน้านี้ ปุ่ม .lang-btn ทุกที่ใช้ร่วมกันได้ --- */
+    /* --- i18n: เดิม + ให้รีคัลก์ความสูงเฮดเดอร์หลังเปลี่ยนภาษา --- */
     const I18N = {
       th: {
         meta_title: "เกี่ยวกับเรา | Baume Chemical",
@@ -592,9 +626,7 @@
         cta_title: "ต้องการทีมช่วยออกแบบ/แก้ปัญหากระบวนการ?",
         cta_text: "คุยกับทีมเทคนิคเพื่อประเมินหน้างานและเลือกโซลูชันให้เหมาะกับไลน์ชุบของคุณ",
         cta_btn_line: "แอด LINE",
-        cta_btn_mail: "ส่งอีเมล",
-
-        /* footer text ของหน้านี้เราใช้ footer แบบคงที่จากเทมเพลตที่จำไว้ */
+        cta_btn_mail: "ส่งอีเมล"
       },
       en: {
         meta_title: "About Us | Baume Chemical",
@@ -654,7 +686,7 @@
     function applyLang(lang){
       document.documentElement.lang = lang;
 
-      // toggle all lang buttons (รวม FAB)
+      // toggle buttons
       document.querySelectorAll('.lang-btn')
         .forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
 
@@ -663,13 +695,10 @@
         const key = node.getAttribute('data-i18n-key');
         const isHTML = node.hasAttribute('data-i18n-html');
         const value = I18N[lang] && I18N[lang][key];
-        if(value != null){
-          if(isHTML){ node.innerHTML = value; }
-          else { node.textContent = value; }
-        }
+        if(value != null){ isHTML ? node.innerHTML = value : node.textContent = value; }
       });
 
-      // attribute mapping: e.g. content:meta_desc
+      // attribute mapping
       document.querySelectorAll('[data-i18n-attr]').forEach(node=>{
         const pairs = node.getAttribute('data-i18n-attr').split(',');
         pairs.forEach(pair=>{
@@ -679,13 +708,18 @@
         });
       });
 
-      // also set meta og:locale
+      // og:locale
       const ogLoc = document.getElementById('ogLocale');
       if(ogLoc) ogLoc.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH');
 
       // sync <title>
       const titleNode = document.querySelector('title[data-i18n-key="meta_title"]');
       if(titleNode) document.title = titleNode.textContent;
+
+      // recalc header height (ปุ่มภาษาเปลี่ยนข้อความ → ความกว้าง/สูงอาจเปลี่ยน)
+      const header = document.querySelector('.site-header');
+      const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
 
       try{ localStorage.setItem('lang', lang); }catch(e){}
     }

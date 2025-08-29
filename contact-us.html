@@ -105,7 +105,7 @@
     :root{
       --brand:#2c5e4e;
       --brand-2:#387b5b;
-      --accent:#ff9800;
+      --accent:#387b5b;
       --ink:#0f172a;
       --bg:#f4f6f5;
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
@@ -113,20 +113,29 @@
       --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --header-h:64px;
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* ======= Site Header (Top Nav) — overlay on hero ======= */
+    /* ======= Site Header (Fixed + glass on scroll) ======= */
     .site-header{
-      position:absolute; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
-      border-bottom:1px solid rgba(255,255,255,.14);
+      position:fixed; top:0; left:0; right:0; z-index:1400;
+      background:transparent; border-bottom:1px solid rgba(255,255,255,.12);
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
+      -webkit-backdrop-filter:none; backdrop-filter:none;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.70);
+      border-bottom-color:rgba(255,255,255,.12);
+      -webkit-backdrop-filter:saturate(140%) blur(10px);
+      backdrop-filter:saturate(140%) blur(10px);
+      box-shadow:0 8px 26px rgba(2,8,20,.18);
     }
     .site-header .header-inner{
-      max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
+      max-width:var(--container); margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
       min-height:var(--header-h); padding:10px 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
@@ -136,6 +145,8 @@
       box-shadow:0 2px 8px rgba(2,8,20,.15)
     }
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+
+    .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{
@@ -156,18 +167,32 @@
       content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
     }
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* Language switcher (in header) */
+    .lang-switch{
+      display:flex; gap:6px; padding:4px; border:1px solid rgba(226,232,240,.9); border-radius:999px;
+      background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12);
+    }
+    .site-header.scrolled .lang-switch{ background:#ffffffdd }
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
     @media (max-width: 920px){
       .menu{
         position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px);
         border:1px solid rgba(255,255,255,.18); border-radius:14px;
         transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400;
       }
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100%; }
 
     /* ===== Hero (use contact banner) ===== */
     .hero{
@@ -190,11 +215,12 @@
 
     /* ===== CTA buttons (optional) ===== */
     .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
-    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#fff; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none}
     .btn.ghost{background:transparent; border-color:#fff; color:#fff}
-    .btn:hover{filter:brightness(.95)}
+    .btn:hover{filter:none; opacity:.92}
+    .hero .actions .btn[data-i18n-key="btn_open_map"]{ font-weight: 600 !important; }
 
-    /* ===== Language Switcher — bottom-right on hero ===== */
+    /* ===== Language Switcher — hero FAB (kept & synced) ===== */
     .lang-fab{
       position:absolute; right:14px; bottom:14px; z-index:2;
       display:flex; gap:6px; padding:4px;
@@ -202,12 +228,7 @@
       background:#ffffffcc; backdrop-filter: blur(8px);
       box-shadow:0 10px 26px rgba(2,8,20,.12);
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .lang-fab .lang-btn{ padding:6px 10px; }
 
     /* ===== Layout & Cards for content ===== */
     .wrap{max-width:1100px;margin:auto;padding:28px 16px}
@@ -228,18 +249,19 @@
     /* Contact list */
     .list{display:grid;gap:8px;margin:8px 0 0;padding:0}
     .list li{list-style:none;border:1px dashed #d9e7de;border-radius:10px;padding:10px;background:#f7fbf8}
-    .list a{color:var(--brand);text-decoration:none}
+    .list a{color:var(--brand-2);text-decoration:none}
     .list a:hover{text-decoration:underline}
 
     /* Map */
     .map-embed{aspect-ratio:16/9;border:0;width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(2,8,20,.08)}
     .map-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .map-actions .btn[data-i18n-key="map_open"]{ font-weight: 600 !important; }
 
     /* ===== Footer (template) ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:28px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
     .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
@@ -249,82 +271,56 @@
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
-/* === Buttons -> #387b5b (ทุกปุ่ม) === */
-:root{
-  --accent:#387b5b;   /* เผื่อที่อื่นอ้างอิง var นี้ */
-  --brand-2:#387b5b;  /* ให้ตรงกัน */
-}
 
-.btn{
-  border:1px solid var(--accent) !important;
-  background:var(--accent) !important;
-  color:#fff !important;
-}
-
-/* โทน hover กลางๆ */
-.btn:hover{ filter:none; opacity:.92; }
-
-/* ปรับ ghost ให้อ่านชัดบนพื้นขาว (ในการ์ด) */
-.card .btn.ghost{
-  background:transparent !important;
-  border:1px solid var(--accent) !important;
-  color:var(--accent) !important;
-}
-
-/* แต่ใน hero (พื้นมืด) ให้ ghost เป็นเส้น/ตัวอักษรสีขาว */
-.hero .btn.ghost{
-  background:transparent !important;
-  border:1px solid #fff !important;
-  color:#fff !important;
-}
-/* ลดความหนาตัวหนังสือเฉพาะปุ่มแผนที่ */
-.hero .actions .btn[data-i18n-key="btn_open_map"]{
-  font-weight: 600 !important; /* เดิมใช้ 800 */
-}
-
-/* ปุ่ม "เปิดใน Google Maps" ใต้แผนที่ */
-.map-actions .btn[data-i18n-key="map_open"]{
-  font-weight: 600 !important;
-}
-
-/* ถ้าอยากบางกว่านี้อีก ให้เปลี่ยน 600 เป็น 400 */
+    @media (prefers-reduced-motion: reduce){ .slide,.btn{transition:none} }
+    [hidden]{ display:none !important; }
   </style>
 </head>
 <body>
 
-  <!-- === Site Header (Top Navigation) === -->
-  <header class="site-header" role="banner">
+  <!-- === Site Header (Fixed, with language switch) === -->
+  <header class="site-header" role="banner" id="siteHeader" aria-label="Site header">
     <div class="header-inner">
-      <!-- Brand -->
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+          <ul class="menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about-us.html" class="nav-link">About us</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about-us.html" class="nav-link">About us</a></li>
-          <li><a href="products.html" class="nav-link">Products</a></li>
-          <li><a href="contact-us.html" class="nav-link" aria-current="page">Contact Us</a></li>
-        </ul>
-      </nav>
+        <!-- Language switcher (header) -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
+  <div class="menu-scrim" hidden></div>
 
-  <!-- ===== Hero (single slide for contact) ===== -->
+  <!-- ===== Hero ===== -->
   <section class="hero" aria-label="ติดต่อ Baume Chemical">
     <div class="slides" id="slides">
       <div class="slide active" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg')"></div>
     </div>
 
-    <!-- ✅ ย้ายออกมาเป็นลูกของ .hero เพื่อยึดขวาล่างของฮีโร่จริง ๆ -->
+    <!-- FAB ภาษาในฮีโร่ (ซิงก์กับปุ่มบนเฮดเดอร์) -->
     <div class="lang-fab" role="group" aria-label="Language switcher">
       <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
         <img class="flag" src="https://flagcdn.com/24x18/th.png"
@@ -398,11 +394,10 @@
     </div>
   </section>
 
-  <!-- ===== Footer (template) ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
-        <!-- แบรนด์ + ที่อยู่/เวลา/โทร -->
         <section class="footer-brand">
           <div class="ft-head">
             <div class="ft-logo" aria-hidden="true"></div>
@@ -416,7 +411,6 @@
           </ul>
         </section>
 
-        <!-- หมวดผลิตภัณฑ์ -->
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
           <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
@@ -432,7 +426,6 @@
           </ul>
         </nav>
 
-        <!-- ช่องทางติดต่อ -->
         <section aria-label="ติดต่อเรา">
           <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
           <ul class="footer-list">
@@ -449,45 +442,80 @@
     </div>
   </footer>
 
-  <!-- ===== JS (header height, slider, mobile nav, i18n, form submit) ===== -->
   <script>
-    // --- Measure header height to space hero nicely ---
+    // --- Measure header height & glass on scroll ---
     (function(){
-      const header = document.querySelector('.site-header');
+      const header = document.getElementById('siteHeader');
       const setH = () => {
         const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
         document.documentElement.style.setProperty('--header-h', h + 'px');
       };
+      const onScroll = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        header && header.classList.toggle('scrolled', y > 10);
+      };
       window.addEventListener('load', setH, {once:true});
       window.addEventListener('resize', setH);
-      setH();
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
     })();
 
-    // --- Hero slider (handles single slide fine) ---
-    const slides = [...document.querySelectorAll('.slide')];
-    let idx = 0;
-    if (slides.length > 0){
-      setInterval(()=>{ slides[idx].classList.remove('active'); idx = (idx + 1) % slides.length; slides[idx].classList.add('active'); }, 5200);
-    }
-
-    // --- Mobile nav toggle ---
+    // --- Hero slider (single slide ok) ---
     (function(){
-      const header = document.querySelector('.site-header');
-      const toggle = document.querySelector('.site-header .nav-toggle');
-      if(!header || !toggle) return;
-      toggle.addEventListener('click', function(){
-        const opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
-      header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=>{
-        header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-      }));
+      const slides = [...document.querySelectorAll('.slide')];
+      let idx = 0;
+      if (slides.length > 1){
+        setInterval(()=>{ slides[idx].classList.remove('active'); idx = (idx + 1) % slides.length; slides[idx].classList.add('active'); }, 5200);
+      }
     })();
 
-    /* ===== i18n (extends template keys with page content) ===== */
+    // --- Mobile nav (scrim + body lock) + current-page highlight ---
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+      if(toggle && nav && scrim){
+        let scrollTopLock = 0;
+        function setMenuOpen(isOpen){
+          header.classList.toggle('open', isOpen);
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          nav.setAttribute('aria-hidden', String(!isOpen));
+          isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+
+          if(isOpen){
+            scrollTopLock = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${scrollTopLock}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, scrollTopLock);
+            toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> setMenuOpen(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && header.classList.contains('open')) setMenuOpen(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
+      }
+
+      // highlight current page
+      try{
+        const here = location.pathname.replace(/\/+$/,'') || '/';
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'') || '/';
+          if (here === path) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    /* ===== i18n ===== */
     const I18N = {
       th: {
-        /* Meta */
         meta_title: "ติดต่อเรา | Baume Chemical",
         meta_desc: "ติดต่อ Baume Chemical เพื่อให้ทีมงานติดต่อกลับผ่านอีเมล ช่องเดียว กรอกอีเมลแล้วส่งได้ทันที พร้อมข้อมูลติดต่ออื่นๆ และแผนที่บริษัท",
         og_title: "ติดต่อเรา | Baume Chemical",
@@ -495,13 +523,11 @@
         tw_title: "ติดต่อเรา | Baume Chemical",
         tw_desc: "กรอกอีเมลเพื่อให้เราติดต่อกลับได้ทันที พร้อมดูเบอร์โทรและแผนที่บริษัท",
 
-        /* Hero */
         hero_title: "ติดต่อเรา",
         hero_tagline: "โปรดใส่อีเมลของคุณ แล้วเราจะติดต่อกลับโดยเร็วที่สุด",
         btn_email_us: "อีเมลถึงเรา",
         btn_open_map: "เปิดแผนที่",
 
-        /* Form & content */
         form_title: "ขอให้ติดต่อกลับทางอีเมล",
         email_label: "อีเมลของคุณ*",
         email_placeholder: "you@example.com",
@@ -519,7 +545,6 @@
         map_open: "เปิดใน Google Maps",
         map_directions: "ขอเส้นทาง",
 
-        /* Footer */
         footer_products: "หมวดผลิตภัณฑ์",
         footer_contact: "ติดต่อเรา",
         addr1: "📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
@@ -531,13 +556,11 @@
         footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
         copyright: "© 2025 Baume Chemical. All rights reserved.",
 
-        /* Status */
         sending: "กำลังส่ง…",
         need_email: "กรุณากรอกอีเมล",
         sent_ok: "ส่งเรียบร้อย ขอบคุณครับ — เราจะติดต่อกลับโดยเร็ว"
       },
       en: {
-        /* Meta */
         meta_title: "Contact Us (Email Only) | Baume Chemical",
         meta_desc: "Contact Baume Chemical and we’ll get back to you via email. Enter your email and send instantly. See other contact info and our location map.",
         og_title: "Contact Us | Baume Chemical",
@@ -545,13 +568,11 @@
         tw_title: "Contact Us | Baume Chemical",
         tw_desc: "Leave your email for a quick call-back, see phone numbers and our location map.",
 
-        /* Hero */
         hero_title: "Contact Us",
         hero_tagline: "Leave your email and we’ll get back to you as soon as possible.",
         btn_email_us: "Email us",
         btn_open_map: "Open Map",
 
-        /* Form & content */
         form_title: "Contact Me via Email",
         email_label: "Your email*",
         email_placeholder: "you@example.com",
@@ -569,7 +590,6 @@
         map_open: "Open in Google Maps",
         map_directions: "Get Directions",
 
-        /* Footer */
         footer_products: "Products",
         footer_contact: "Contact Us",
         addr1: "📍 31 Soi Phetkasem 48, Yak 24, Bang Waek",
@@ -581,7 +601,6 @@
         footer_web: "🌐 : <a href=\"https://www.baumechemical.com/\">baumechemical.com</a>",
         copyright: "© 2025 Baume Chemical. All rights reserved.",
 
-        /* Status */
         sending: "Sending…",
         need_email: "Please enter your email",
         sent_ok: "Submitted. Thank you — we’ll get back to you shortly."
@@ -589,7 +608,7 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-btn'), // both header & hero
       translatables: () => document.querySelectorAll('[data-i18n-key]'),
       metaTitle: document.getElementById('metaTitle'),
       metaDesc: document.getElementById('metaDesc'),
@@ -611,7 +630,6 @@
         const key = node.getAttribute('data-i18n-key');
         const t = I18N[lang];
         if (key && t && t[key] !== undefined){
-          // allow HTML for keys that contain links/tags
           if (/<\/?[a-z][\s\S]*>/i.test(t[key])) node.innerHTML = t[key];
           else node.textContent = t[key];
         }
@@ -619,34 +637,28 @@
 
       const t = I18N[lang];
       if(t){
-        if(els.metaTitle){ els.metaTitle.textContent = t.meta_title; document.title = t.meta_title; }
-        if(els.metaDesc){ els.metaDesc.setAttribute('content', t.meta_desc); }
-        if(els.ogTitle){ els.ogTitle.setAttribute('content', t.og_title || t.meta_title); }
-        if(els.ogDesc){ els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc); }
-        if(els.twTitle){ els.twTitle.setAttribute('content', t.tw_title || t.meta_title); }
-        if(els.twDesc){ els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc); }
-        if(els.ogLocale){ els.ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH'); }
-        if(els.emailInput && t.email_placeholder){ els.emailInput.placeholder = t.email_placeholder; }
-        if(els.sendBtn && t.send_btn){ els.sendBtn.textContent = t.send_btn; }
+        els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
+        els.metaDesc && els.metaDesc.setAttribute('content', t.meta_desc);
+        els.ogTitle && els.ogTitle.setAttribute('content', t.og_title || t.meta_title);
+        els.ogDesc && els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc);
+        els.twTitle && els.twTitle.setAttribute('content', t.tw_title || t.meta_title);
+        els.twDesc && els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc);
+        els.ogLocale && els.ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH');
+        els.emailInput && t.email_placeholder && (els.emailInput.placeholder = t.email_placeholder);
+        els.sendBtn && t.send_btn && (els.sendBtn.textContent = t.send_btn);
       }
       try{ localStorage.setItem('lang', lang); }catch(e){}
     }
 
-    // init lang (default TH)
     (function initLang(){
       const defaultLang = 'th';
       let saved = null;
-      try {
-        const v = localStorage.getItem('lang');
-        if (v === 'en' || v === 'th') saved = v;
-      } catch(e){}
+      try { const v = localStorage.getItem('lang'); if (v === 'en' || v === 'th') saved = v; } catch(e){}
       applyLang(saved || defaultLang);
-      // wire buttons
-      document.querySelectorAll('.lang-fab .lang-btn')
-        .forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+      document.querySelectorAll('.lang-btn').forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
 
-    // ===== Email-only form submit via Apps Script =====
+    // ===== Email-only form submit (Apps Script endpoint preserved) =====
     const ENDPOINT = "https://script.google.com/macros/s/AKfycbwBFX4pEIS-BS8d_7h-Ptlq79NwAj3jTj7mC_uVBQqU4JBs-hZfDgaWLY9HNts93CfErw/exec";
     const form = document.getElementById('emailForm');
     const renderedAt = document.getElementById('renderedAt');
@@ -668,10 +680,8 @@
       const lang = localStorage.getItem('lang') || 'th';
       const t = I18N[lang];
 
-      // honeypot
-      if (form.company && form.company.value.trim() !== "") return;
-      // time trap: >= 2.5s after render
-      if (renderedAt && Date.now() - (+renderedAt.value || 0) < 2500) return;
+      if (form.company && form.company.value.trim() !== "") return;           // honeypot
+      if (renderedAt && Date.now() - (+renderedAt.value || 0) < 2500) return; // time trap
 
       const email = (form.email.value || "").trim();
       if (!email){ return setStatus(t.need_email, true); }
@@ -691,11 +701,10 @@
         if (ok){ form.reset(); setStatus(t.sent_ok, false); }
         else{ throw new Error("failed"); }
       }catch(err){
-        // fallback: open mail client
         const subject = encodeURIComponent(lang==='th' ? "ขอติดต่อกลับ — Email only" : "Callback request — Email only");
-        const body = encodeURIComponent((lang==='th'
+        const body = encodeURIComponent(lang==='th'
           ? `กรุณาติดต่อกลับที่อีเมลนี้: ${email}`
-          : `Please contact me back at this email: ${email}`));
+          : `Please contact me back at this email: ${email}`);
         window.location.href = `mailto:contact@baumechemical.com?subject=${subject}&body=${body}`;
       }finally{
         lock(false, t);
