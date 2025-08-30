@@ -196,6 +196,13 @@
     .dot{width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.5); border:1px solid rgba(0,0,0,.2)}
     .dot[aria-current="true"]{background:#fff}
 
+    .hero .btn:not(.ghost){
+  border-color:#ff9800;
+  background:#ff9800;
+  color:#fff;              /* เปลี่ยนเป็นตัวอักษรสีขาวให้คอนทราสต์ดี */
+}
+.hero .btn:not(.ghost):hover{ opacity:.92 }
+
     /* ===== Sub-hero ===== */
     .subhero{background:#fff; border-radius:0 0 var(--radius-lg) var(--radius-lg); box-shadow:0 10px 30px rgba(2,8,20,.06); margin-top:-14px}
     .subhero .container{max-width:var(--container); margin:0 auto; padding:18px}
