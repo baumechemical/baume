@@ -1,51 +1,131 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- === SEO Basics === -->
   <title data-i18n-key="meta_title">Blackening - น้ำยาจุ่มดำ รมดำ | Baume Chemical</title>
-  <meta name="description" content="น้ำยาจุ่มดำทองเหลือง-ทองแดงแบบหัวเชื้อเข้มข้น ให้ฟิล์มออกไซด์ตั้งแต่สีน้ำตาลอ่อน บรอนซ์ จนถึงดำสนิท ใช้งานได้ทั้งงานแขวน/ถังกลิ้ง จุ่ม 30–120 วินาที ที่อุณหภูมิห้อง พร้อมวิธีใช้และการแก้ปัญหา">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#2c5e4e">
+  <meta name="description" content="น้ำยาจุ่มดำทองเหลือง-ทองแดงแบบหัวเชื้อเข้มข้น ให้ฟิล์มออกไซด์ตั้งแต่สีน้ำตาลอ่อน บรอนซ์ จนถึงดำสนิท ใช้งานได้ทั้งงานแขวน/ถังกลิ้ง จุ่ม 30–120 วินาที ที่อุณหภูมิห้อง พร้อมวิธีใช้และการแก้ปัญหา" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#2c5e4e" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="product">
-  <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Blackening - น้ำยาจุ่มดำ รมดำ">
-  <meta property="og:description" content="หัวเชื้อเข้มข้นสำหรับรมดำทองเหลือง-ทองแดง จุ่ม 30–120 วินาที ที่อุณหภูมิห้อง ได้เฉดตั้งแต่บรอนซ์ถึงดำสนิท">
-  <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Baume Chemical" />
+  <meta property="og:title" content="Blackening - น้ำยาจุ่มดำ รมดำ" />
+  <meta property="og:description" content="หัวเชื้อเข้มข้นสำหรับรมดำทองเหลือง-ทองแดง จุ่ม 30–120 วินาที ที่อุณหภูมิห้อง ได้เฉดตั้งแต่บรอนซ์ถึงดำสนิท" />
+  <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- (Optional) JSON-LD minimal -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Blackening Solutions","inLanguage":"th","url":"https://www.baumechemical.com/products/blackening/","description":"Blackening concentrate for brass/copper, room temp 30–120s, troubleshooting included."}</script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" />
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
+    /* === Sticky Site Header (menu bar) === */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18);
+      box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    /* Hero */
+    .header-right{display:flex; align-items:center; gap:10px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* === Language switcher (in menu bar) === */
+    .lang-inline{
+      display:none; align-items:center; gap:6px; padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px; background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      padding:6px 10px; border-radius:999px; font-weight:800;
+      display:flex; align-items:center; gap:6px; color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile language row inside dropdown menu */
+    .menu .lang-li{
+      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
+    }
+    .menu .lang-li .lang-group{
+      display:flex; gap:6px; padding:4px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+    }
+    .menu .lang-li .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px
+    }
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    /* Responsive show/hide */
+    @media (min-width: 921px){
+      .lang-inline{display:flex}
+      .menu .lang-li{display:none}
+    }
+    @media (max-width: 920px){
+      .lang-inline{display:none}
+      .menu .lang-li{display:block}
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* === Hero === */
     .hero{
       position:relative; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(380px, 60svh, 640px);
@@ -57,29 +137,33 @@
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
-    /* Layout & cards */
+    /* Back button on hero */
+    .back-wrap{
+      position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2;
+      display:flex; align-items:center; gap:8px;
+    }
+    .btn.back{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff;
+      padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px);
+    }
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
+
+    /* === Layout & cards === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
-    /* Pills */
-    .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
-    @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
-    .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
-    .pill h3{margin:4px 0 6px;font-size:1.02rem;color:#203126}
-    .pill p{margin:0;color:#5b6675}
-    .ic{font-size:20px}
-
-    /* Tables */
+    /* === Tables === */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
     table{border-collapse:collapse;width:100%;min-width:760px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
-
     .note{font-style:italic;color:#9a3412}
 
-    /* Footer */
+    /* === Footer === */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
@@ -87,7 +171,7 @@
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center}
     .ft-name{font-weight:800;color:#fff}
     .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
@@ -97,18 +181,68 @@
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
+  <!-- === Site Header (Top Navigation) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- Hero -->
-  <section class="hero">
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language switcher (inline on the bar) -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- === Hero === -->
+  <section class="hero" aria-label="Blackening Hero">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/blackening/" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">Blackening</span>
@@ -308,11 +442,55 @@
     </div>
   </footer>
 
-  <!-- i18n -->
+  <!-- === JS: nav-toggle + sticky bg + back + i18n === -->
   <script>
+    // --- Mobile nav toggle + auto-close + sticky bg ---
+    (function(){
+      var header = document.querySelector('.site-header');
+      var toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+
+      toggle.addEventListener('click', function(){
+        var opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+
+      // ปิดเมนูเมื่อกดลิงก์หรือกดปุ่มภาษา (เฉพาะมือถือ)
+      document.addEventListener('click', function(e){
+        var t = e.target.closest('.menu a, .menu .lang-btn');
+        if (t && window.innerWidth <= 920) {
+          header.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+
+      // Sticky: เติมพื้นหลังทึบเมื่อเลื่อน
+      var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+
+    // --- Back button ---
+    (function(){
+      var btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          var ref = document.referrer;
+          var sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin){ history.back(); return; }
+        }catch(_){}
+        // Fallback: go to parent directory or fixed category
+        var parent = location.pathname.replace(/[^\/]+\/?$/, '');
+        location.href = parent || '/products/blackening/';
+      });
+    })();
+
+    // --- i18n ---
     const I18N = {
       th:{
         meta_title:"Blackening - น้ำยาจุ่มดำ รมดำ | Baume Chemical",
+        btn_back:"ย้อนกลับ",
 
         badge1:"Blackening", badge2:"Brass & Copper", badge3:"Room Temp • 30–120 s",
         hero_title:"Blackening - น้ำยาจุ่มดำ รมดำ",
@@ -385,6 +563,7 @@
       },
       en:{
         meta_title:"Blackening Solution for Brass & Copper | Baume Chemical",
+        btn_back:"Back",
 
         badge1:"Blackening", badge2:"Brass & Copper", badge3:"Room Temp • 30–120 s",
         hero_title:"Blackening – Brass & Copper",
@@ -458,7 +637,7 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -466,7 +645,7 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
       const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+      if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
 
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
       els.translatables().forEach(node=>{
@@ -475,7 +654,7 @@
         if(typeof val !== 'undefined') node.textContent = val;
       });
 
-      try{ localStorage.setItem('lang', L); }catch(e){}
+      try{ localStorage.setItem('lang', L); }catch(_){}
     }
 
     (function initLang(){

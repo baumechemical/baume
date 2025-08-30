@@ -23,54 +23,11 @@
   <meta property="og:image:alt" content="Zinc plating bath with bright finish">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":"https://www.baumechemical.com/assets/logo.png",
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
-  </script>
-  <!-- JSON-LD: CollectionPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Zinc Plating Solutions",
-    "inLanguage":"th",
-    "url":"https://www.baumechemical.com/products/platingcoating/zincplating/",
-    "description":"Cyanide, Ammonium Acid, and Cyanide-free zinc plating solutions for rack and barrel with strong brightness and distribution."
-  }
-  </script>
-  <!-- JSON-LD: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},
-      {"@type":"ListItem","position":3,"name":"Zinc Plating Solutions","item":"https://www.baumechemical.com/products/platingcoating/zincplating/"}
-    ]
-  }
-  </script>
-  <!-- JSON-LD: ItemList (anchors) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Zinc Plating Types",
-    "itemListOrder":"https://schema.org/ItemListOrderAscending",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"#cyanide"},
-      {"@type":"ListItem","position":2,"url":"#ammonium-acid"},
-      {"@type":"ListItem","position":3,"url":"#non-cyanide"}
-    ]
-  }
-  </script>
+  <!-- JSON-LD (compressed) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Zinc Plating Solutions","inLanguage":"th","url":"https://www.baumechemical.com/products/platingcoating/zincplating/","description":"Cyanide, Ammonium Acid, and Cyanide-free zinc plating solutions for rack and barrel with strong brightness and distribution."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},{"@type":"ListItem","position":3,"name":"Zinc Plating Solutions","item":"https://www.baumechemical.com/products/platingcoating/zincplating/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Zinc Plating Types","itemListOrder":"https://schema.org/ItemListOrderAscending","itemListElement":[{"@type":"ListItem","position":1,"url":"#cyanide"},{"@type":"ListItem","position":2,"url":"#ammonium-acid"},{"@type":"ListItem","position":3,"url":"#non-cyanide"}]}</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -87,46 +44,83 @@
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.65}
+    html{scroll-padding-top:calc(var(--header-h) + 8px)} /* กัน anchor โดนเมนู */
 
-    /* === Site Header (overlay on hero) === */
+    /* === Sticky Site Header (menu bar) === */
     .site-header{
-      position:absolute; top:0; left:0; right:0; z-index:1400;
+      position:sticky; top:0; left:0; right:0; z-index:1400;
       background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
       border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18);
+      box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
     .site-header .header-inner{
       max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
       min-height:var(--header-h); padding:10px 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{
-      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
-      background:#e8f1ec var(--logo-url) center/cover no-repeat;
-      box-shadow:0 2px 8px rgba(2,8,20,.15)
-    }
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+
+    .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{
-      display:inline-block; padding:10px 12px; border-radius:10px;
-      color:#fff; text-decoration:none; font-weight:600;
-    }
-    .menu a:hover{ background:rgba(255,255,255,.12); color:#fff }
-    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18); color:#fff; box-shadow:none }
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
     .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
     .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
     .nav-toggle{
       appearance:none; border:0; background:transparent; cursor:pointer;
       width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
     }
     .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before,.nav-toggle .bar::after{
-      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
-    }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* === Language switcher inside menu bar === */
+    .lang-inline{
+      display:none; align-items:center; gap:6px; padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px; background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      padding:6px 10px; border-radius:999px; font-weight:800;
+      display:flex; align-items:center; gap:6px; color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile language row inside dropdown menu */
+    .menu .lang-li{
+      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
+    }
+    .menu .lang-li .lang-group{
+      display:flex; gap:6px; padding:4px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+    }
+    .menu .lang-li .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px
+    }
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    /* Responsive show/hide */
+    @media (min-width: 921px){
+      .lang-inline{display:flex}
+      .menu .lang-li{display:none}
+    }
     @media (max-width: 920px){
+      .lang-inline{display:none}
+      .menu .lang-li{display:block}
       .menu{
         position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px);
@@ -138,19 +132,6 @@
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
-
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top: calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* === Hero === */
     .hero{
@@ -167,30 +148,16 @@
     .btn.ghost{background:transparent; border-color:#fff; color:#fff}
     .btn:hover{filter:brightness(.95)}
 
-    /* Back button (top-left over hero) */
-    .back-wrap{
-      position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2;
-      display:flex; align-items:center; gap:8px;
-    }
-    .btn.back{
-      display:inline-flex; align-items:center; gap:8px;
-      background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff;
-      padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px);
-    }
+    /* Back button over hero */
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
     .btn.back:hover{ background:#ffffff33 }
     .btn.back svg{width:18px; height:18px; display:block}
 
-    /* Nice bullets in hero */
+    /* Bullets */
     .bullets{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px}
-    .bullet{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px;
-      border:1px solid rgba(255,255,255,.5); border-radius:999px; background:rgba(255,255,255,.12);
-      font-weight:600; color:#eaf4f2; backdrop-filter: blur(6px);
-    }
-    .bullet .icon{
-      display:grid; place-items:center; width:22px; height:22px; border-radius:999px;
-      background:#fff; color:#0f172a; font-weight:800; font-size:12px;
-    }
+    .bullet{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid rgba(255,255,255,.5); border-radius:999px; background:rgba(255,255,255,.12); font-weight:600; color:#eaf4f2; backdrop-filter: blur(6px)}
+    .bullet .icon{display:grid; place-items:center; width:22px; height:22px; border-radius:999px; background:#fff; color:#0f172a; font-weight:800; font-size:12px}
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -245,43 +212,53 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-          <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
-          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language switcher (inline on the bar) -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
-
-  <!-- === Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
 
   <!-- === Hero === -->
   <header class="hero" aria-label="Zinc Plating Hero">
     <!-- Back button -->
     <div class="back-wrap">
       <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span data-i18n-key="btn_back">ย้อนกลับ</span>
       </a>
     </div>
@@ -292,18 +269,9 @@
 
       <!-- Pretty bullets (3 items) -->
       <div class="bullets" aria-label="Key highlights">
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b1">เงาสูง กระจายผิวกว้าง</span>
-        </div>
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b2">รองรับ Rack/Barrel</span>
-        </div>
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b3">เลือกได้ CYA/Acid/NCN</span>
-        </div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b1">เงาสูง กระจายผิวกว้าง</span></div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b2">รองรับ Rack/Barrel</span></div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b3">เลือกได้ CYA/Acid/NCN</span></div>
       </div>
 
       <div class="actions">
@@ -407,10 +375,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
-          </div>
+          <div class="ft-head"><div class="ft-logo" aria-hidden="true"></div><div class="ft-name">Baume Chemical</div></div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -450,9 +415,9 @@
     </div>
   </footer>
 
-  <!-- === JS: nav-toggle + back + i18n === -->
+  <!-- === JS: nav-toggle + sticky bg + back + i18n === -->
   <script>
-    // --- Mobile nav toggle ---
+    // --- Mobile nav toggle + auto-close ---
     (function(){
       var header = document.querySelector('.site-header');
       var toggle = document.querySelector('.site-header .nav-toggle');
@@ -461,21 +426,30 @@
         var opened = header.classList.toggle('open');
         toggle.setAttribute('aria-expanded', String(opened));
       });
+      // ปิดเมนูเมื่อกดลิงก์หรือกดปุ่มภาษา (มือถือ)
+      document.addEventListener('click', function(e){
+        var t = e.target.closest('.menu a, .menu .lang-btn');
+        if(t && window.innerWidth <= 920){
+          header.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+      // Sticky: เติมพื้นหลังทึบเมื่อเลื่อน
+      var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
     })();
 
     // --- Back button ---
     (function(){
-      const btn = document.getElementById('backBtn');
+      var btn = document.getElementById('backBtn');
       if(!btn) return;
       btn.addEventListener('click', function(e){
         e.preventDefault();
         try{
-          const ref = document.referrer;
-          const sameOrigin = ref && new URL(ref).origin === location.origin;
-          if(sameOrigin) { history.back(); return; }
-        }catch(e){}
-        // Fallback: go to parent directory (products/platingcoating/)
-        const parent = location.pathname.replace(/[^\/]+\/?$/, '');
+          var ref = document.referrer;
+          if(ref && new URL(ref).origin === location.origin){ history.back(); return; }
+        }catch(_){}
+        var parent = location.pathname.replace(/[^\/]+\/?$/, '');
         location.href = parent || '/products/platingcoating/';
       });
     })();
@@ -486,12 +460,8 @@
         meta_title:"น้ำยาชุบสังกะสี (Zinc Plating Solutions) | Baume Chemical",
         hero_title:"Zinc Plating Solution",
         hero_tagline:"โซลูชันชุบสังกะสีสำหรับงานอุตสาหกรรม ครอบคลุมระบบไซยาไนด์ กรดแอมโมเนียม และแบบไร้ไซยาไนด์ เหมาะกับถังกลิ้ง/ถังแขวน เน้นความเงา การกระจายตัว และความทนการกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน",
-        btn_products:"ดูหมวดผลิตภัณฑ์",
-        btn_consult:"ปรึกษาทีมเทคนิค",
-        btn_back:"ย้อนกลับ",
-        b1:"เงาสูง กระจายผิวกว้าง",
-        b2:"รองรับ Rack/Barrel",
-        b3:"เลือกได้ CYA/Acid/NCN",
+        btn_products:"ดูหมวดผลิตภัณฑ์", btn_consult:"ปรึกษาทีมเทคนิค", btn_back:"ย้อนกลับ",
+        b1:"เงาสูง กระจายผิวกว้าง", b2:"รองรับ Rack/Barrel", b3:"เลือกได้ CYA/Acid/NCN",
         sec_products:"ผลิตภัณฑ์ในกลุ่มนี้",
         sec_products_lead:"การเลือกสูตรที่เหมาะสมกับงาน ไม่ว่าจะเป็นสูตรไซยาไนด์ กรดแอมโมเนียม หรือสูตรไร้ไซยาไนด์ ล้วนช่วยมอบความเงางาม การกระจายตัวที่สม่ำเสมอ และความทนทานต่อการกัดกร่อน พร้อมทั้งควบคุมต้นทุนให้คุ้มค่า",
         cya_title:"Cyanide Zinc Plating Solution",
@@ -506,20 +476,14 @@
         row_acid_type:"ซิงค์กรด", row_acid_mat:"เหล็กรีดร้อน, เหล็กคาร์โบนิไตรด์, ซิงค์ไดคาสต์", row_acid_feat:"ครอบคลุมพื้นที่กระแสต่ำ/ซอกลึก ละลาย/ล้างง่าย", row_acid_app:"ถังกลิ้งและถังแขวน", row_acid_note:"ช่วยการยึดติดของโครเมตดีขึ้น",
         row_ncn_type:"ซิงค์ไร้ไซยาไนด์", row_ncn_mat:"เหล็ก, เหล็กผสมตะกั่ว, ซิงค์ไดคาสต์", row_ncn_feat:"ปลอดไซยาไนด์ เงาสูง คุมง่าย ใช้ได้กับโซดาไฟและโพแทสเซียม", row_ncn_app:"ถังกลิ้งและถังแขวน", row_ncn_note:"โซดาไฟเร็วกว่าโพแทสเซียม ~1.3× ที่ซิงค์เท่ากัน",
         tbl_footnote:"หมายเหตุ: อุณหภูมิ/เวลา/ความเข้มข้น กำหนดจากการทดลองหน้างานและมาตรฐานไลน์ของคุณ",
-        footer_products:"หมวดผลิตภัณฑ์",
-        footer_contact:"ติดต่อเรา",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{
         meta_title:"Zinc Plating Solutions | Baume Chemical",
         hero_title:"Zinc Plating Solution",
         hero_tagline:"Industrial zinc plating solutions covering Cyanide, Ammonium Acid, and Cyanide-Free systems for rack/barrel lines—bright finishes, strong distribution, and corrosion resistance.",
-        btn_products:"Browse Products",
-        btn_consult:"Talk to a Specialist",
-        btn_back:"Back",
-        b1:"High gloss, wide throwing",
-        b2:"Works with Rack/Barrel",
-        b3:"Pick CYA / Acid / NCN",
+        btn_products:"Browse Products", btn_consult:"Talk to a Specialist", btn_back:"Back",
+        b1:"High gloss, wide throwing", b2:"Works with Rack/Barrel", b3:"Pick CYA / Acid / NCN",
         sec_products:"Products in this group",
         sec_products_lead:"Select the right formula: Cyanide / Ammonium Acid / Non-Cyanide for brightness, distribution uniformity, and corrosion resistance at optimal cost.",
         cya_title:"Cyanide Zinc Plating Solution",
@@ -534,14 +498,12 @@
         row_acid_type:"Ammonium Acid", row_acid_mat:"Hot-rolled steel, carbo-nitrided steel, die-cast zinc", row_acid_feat:"Covers low-current/recess areas; dissolves/rinses easily", row_acid_app:"Rack / Barrel", row_acid_note:"Improves chromate adhesion",
         row_ncn_type:"Non-Cyanide", row_ncn_mat:"Steel, leaded steel, die-cast zinc", row_ncn_feat:"Cyanide-free, high gloss, easy control, NaOH/KOH compatible", row_ncn_app:"Rack / Barrel", row_ncn_note:"NaOH ~1.3× deposition rate vs KOH at equal Zn metal",
         tbl_footnote:"Note: Operating parameters (temperature/time/concentration) must be set by on-site trials and your line standards.",
-        footer_products:"Products",
-        footer_contact:"Contact Us",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -555,7 +517,7 @@
         const key = node.getAttribute('data-i18n-key');
         if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key];
       });
-      try{ localStorage.setItem('lang', L); }catch(e){}
+      try{ localStorage.setItem('lang', L); }catch(_){}
     }
 
     (function initLang(){

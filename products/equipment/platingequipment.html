@@ -31,25 +31,100 @@
       --shadow-1:0 10px 26px rgba(2,8,20,.10);
       --shadow-2:0 16px 40px rgba(2,8,20,.18);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* === Site Header (menu bar) === */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18);
+      box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    /* Hero (match site look) */
+    .header-right{display:flex; align-items:center; gap:10px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
+    }
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* === Language switcher (in menu bar) === */
+    .lang-inline{
+      display:none; align-items:center; gap:6px; padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px; background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      padding:6px 10px; border-radius:999px; font-weight:800;
+      display:flex; align-items:center; gap:6px; color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile language row inside dropdown menu */
+    .menu .lang-li{
+      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
+    }
+    .menu .lang-li .lang-group{
+      display:flex; gap:6px; padding:4px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+    }
+    .menu .lang-li .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px
+    }
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    /* Responsive show/hide */
+    @media (min-width: 921px){
+      .lang-inline{display:flex}
+      .menu .lang-li{display:none}
+    }
+    @media (max-width: 920px){
+      .lang-inline{display:none}
+      .menu .lang-li{display:block}
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* === Hero === */
     .hero{
       position:relative; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(380px, 60svh, 640px);
@@ -61,6 +136,19 @@
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
+    /* Back button on hero */
+    .back-wrap{
+      position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2;
+      display:flex; align-items:center; gap:8px;
+    }
+    .btn.back{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff;
+      padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px);
+    }
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
+
     /* Layout & section cards */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
@@ -68,7 +156,7 @@
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
     /* Tools grid */
-    .tools{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))}
+    .tools{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))}
     .tool{
       background:#fff; border:1px solid #e6ecf3; border-radius:14px; overflow:hidden;
       box-shadow:var(--shadow-1);
@@ -78,9 +166,15 @@
       will-change: transform;
     }
     .tool.in{ transform:none; opacity:1; }
-    .tool:focus-within,
-    .tool:hover{ transform: translateY(-6px); box-shadow:var(--shadow-2); }
-    .tool img{ width:100%; height:200px; object-fit:cover; display:block }
+    .tool:hover, .tool:focus-within{ transform: translateY(-6px); box-shadow:var(--shadow-2); }
+
+    /* Unified image sizing (clean, no duplicates) */
+    .tool img{
+      width:100%; aspect-ratio:16/10; height:auto;
+      object-fit:cover; object-position:center; display:block;
+      border-bottom:1px solid #e6ecf3;
+      background:#fff;
+    }
     .tool .body{ padding:14px }
     .tool h3{ margin:4px 0 6px; font-size:1.06rem; color:#2c5e4e; font-weight:800 }
     .tool p{ margin:0; color:#556477 }
@@ -103,97 +197,72 @@
     @media (prefers-reduced-motion: reduce){
       .tool{ transition:none }
     }
-/* Enlarge every card image by 50% on both width & height */
-.tools .tool img{
-  width:80%;          /* +50% width */
-  height:400px;        /* เดิม 200px → +50% = 300px */
-  margin-center;    /* เลื่อนซ้าย 25% เพื่อกึ่งกลางรูป (เพราะกว้าง 150%) */
-  object-fit:cover;
-  object-position:center;
-  display:block;
-}
-/* === Enlarge CARD only (keep image size) === */
-
-/* +50% ความกว้างการ์ด: 350px -> 525px (เฉพาะจอ ≥ 769px) */
-@media (min-width: 769px){
-  .services{
-    grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
-    gap: 26px;
-  }
-}
-
-/* เพิ่มพื้นที่ภายในการ์ดให้อวบขึ้น แต่ไม่ยุ่งกับรูป */
-.service-item{
-  padding: 30px 28px; /* เดิม 20px → ฟูขึ้น แต่รูปไม่ขยาย */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* ให้รูป/ข้อความอยู่กึ่งกลาง */
-}
-
-/* ล็อคขนาดรูปให้คงเดิม (ไม่ขยายตามความกว้างการ์ด) */
-.service-item img{
-  width: min(350px, 100%);  /* คงความกว้างเดิม ~350px บนเดสก์ท็อป, ย่อได้บนจอเล็ก */
-  height: 250px;            /* คงความสูงเดิม */
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  margin: 0 auto 14px;
-}
-/* === Card images: fill card width, show whole image (no crop) === */
-.tools .tool img{
-  width: 100% !important;     /* เต็มการ์ดด้านกว้าง */
-  height: auto !important;    /* สูงแปรผันตามสัดส่วนรูป */
-  aspect-ratio: 16 / 10;      /* ให้การ์ดสูงเท่ากันทุกใบ (เปลี่ยนเป็น 4/3 หรือ 1/1 ได้) */
-  object-fit: contain !important;  /* เห็นรูปครบทุกมุม ไม่ครอป */
-  object-position: center;
-  display: block;
-  background: #fff;           /* พื้นหลังรองรับ “ขอบดำ/ขาว” ถ้าสัดส่วนไม่พอดี */
-  border-bottom: 1px solid #e6ecf3; /* เส้นคั่นเล็กน้อย (เอาออกได้) */
-}
-
-/* ปิดทับสไตล์ที่ทำให้รูปแคบลง/สูงตายตัว */
-.tools .tool img{
-  max-width: 100% !important;
-}
-/* === Enlarge ONLY the cards; images scale with them (+50%) === */
-@media (min-width: 769px){
-  /* เดิม: minmax(280px, 1fr) → ขยาย 50% เป็น 420px */
-  .tools{
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)) !important;
-    gap: 24px; /* ฟูขึ้นนิดนึงให้หายอึดอัด */
-  }
-
-  /* เนื้อในการ์ดฟูขึ้นตามสัดส่วน (~1.5x ของ 14px) */
-  .tool .body{
-    padding: 21px !important;
-  }
-}
-
-/* รูปขยายตามการ์ด (จากเดิมสูง 200px → 300px = +50%) */
-.tools .tool img{
-  width: 100% !important;     /* เต็มความกว้างการ์ด */
-  height: 350px !important;   /* 200px × 1.5 */
-  object-fit: cover;          /* เติมพื้นที่ให้เต็ม ดูเต็มใบ */
-  object-position: center;
-  display: block;
-}
-
   </style>
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
+  <!-- === Site Header (Top Navigation with language) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language switcher (inline on the bar) -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" aria-label="Plating Tools Hero">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/equipment/index.html" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">Plating Tools</span>
@@ -217,7 +286,7 @@
       </p>
     </section>
 
-    <!-- Tools grid (ทุก “บูลเล็ต” = แต่ละการ์ด ยกตัวได้) -->
+    <!-- Tools grid -->
     <section class="card">
       <h2 class="section" data-i18n-key="sec_tools">รายการอุปกรณ์</h2>
       <div class="tools" id="tools">
@@ -358,11 +427,55 @@
   }
   </script>
 
-  <!-- i18n + card lift on reveal -->
+  <!-- JS: nav-toggle + sticky bg + back + i18n + card lift -->
   <script>
+    // --- Mobile nav toggle + auto-close + sticky bg ---
+    (function(){
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.site-header .nav-toggle');
+      if(!header || !toggle) return;
+
+      toggle.addEventListener('click', function(){
+        const opened = header.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+      });
+
+      // Close menu on link or language click (mobile)
+      document.addEventListener('click', function(e){
+        const t = e.target.closest('.menu a, .menu .lang-btn');
+        if (t && window.innerWidth <= 920) {
+          header.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+
+      // Sticky background on scroll
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+
+    // --- Back button ---
+    (function(){
+      const btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          const ref = document.referrer;
+          const sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin){ history.back(); return; }
+        }catch(_){}
+        // Fallback: parent directory or /products/equipment/
+        const parent = location.pathname.replace(/[^\/]+\/?$/, '');
+        location.href = parent || 'https://www.baumechemical.com/products/equipment/index.html';
+      });
+    })();
+
+    // --- i18n ---
     const I18N = {
       th:{
         page_title:"อุปกรณ์งานชุบ (Plating Tools) | Baume Chemical",
+        btn_back:"ย้อนกลับ",
         badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
         hero_title:"อุปกรณ์งานชุบ (Plating Tools)",
         hero_tagline:"อุปกรณ์สำคัญเพื่อคุณภาพงานชุบ—ตั้งแต่ถังชุบ ระบบไฟฟ้า การกรอง อัลตร้าโซนิค การควบคุมอุณหภูมิ จนถึงการทำแห้ง (TH/EN)",
@@ -392,6 +505,7 @@
       },
       en:{
         page_title:"Plating Tools | Baume Chemical",
+        btn_back:"Back",
         badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
         hero_title:"Plating Tools",
         hero_tagline:"Essential tools for electroplating — tanks, power, filtration, ultrasonic, thermal control and drying (EN/TH).",
@@ -420,12 +534,14 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
+      // text nodes
       document.querySelectorAll('[data-i18n-key]').forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const val = I18N[L][key];
         if(typeof val!=='undefined') node.textContent = val;
       });
 
+      // title & meta description
       const titleEl = document.querySelector('title');
       const descEl  = document.querySelector('meta[name="description"]');
       if(titleEl) titleEl.textContent = I18N[L].page_title;
@@ -437,14 +553,15 @@
         );
       }
 
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+      // pressed state for ALL language buttons (desktop + mobile)
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
         btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
       });
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
-    // Reveal/lift every card (“ยกด้วยทุกบูลเล็ต”)
+    // Reveal/lift each card on scroll
     function initLift(){
       const els = document.querySelectorAll('.tool');
       const io = new IntersectionObserver((entries)=>{
@@ -458,7 +575,9 @@
     (function init(){
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
+
+      // Bind all language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
         btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
       });
 

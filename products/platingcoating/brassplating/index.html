@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- === SEO Basics === -->
-  <title data-i18n-key="meta_title">น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical</title>
-  <meta name="description" content="โซลูชันชุบเหลือง (Brass): Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide-Free) สำหรับงาน Rack/Barrel เน้นโทนสีทอง ความเงา การยึดเกาะ และการทนกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน.">
+  <!-- === SEO (i18n-ready) === -->
+  <title id="metaTitle">น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="โซลูชันชุบเหลือง (Brass): Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide-Free) สำหรับงาน Rack/Barrel เน้นโทนสีทอง ความเงา การยึดเกาะ และการทนกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/brassplating/">
   <meta name="theme-color" content="#2c5e4e">
@@ -14,62 +14,40 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:locale" content="th_TH">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:title" content="Brass Plating Solutions | Baume Chemical">
-  <meta property="og:description" content="Dark Yellow / Greenish Yellow / Cyanide-Free Imitation Gold for rack and barrel—gold-like appearance with good adhesion and corrosion resistance.">
+  <meta property="og:title" id="ogTitle" content="Brass Plating Solutions | Baume Chemical">
+  <meta property="og:description" id="ogDesc" content="Dark Yellow / Greenish Yellow / Cyanide-Free Imitation Gold for rack and barrel—gold-like appearance with good adhesion and corrosion resistance.">
   <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/brassplating/">
   <meta property="og:image" content="https://i.imgur.com/ikv1kfr.jpeg">
   <meta property="og:image:alt" content="Brass plating bath with rich golden finish">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="Brass Plating Solutions | Baume Chemical">
+  <meta name="twitter:description" id="twDesc" content="Dark Yellow / Greenish Yellow / Cyanide-Free Imitation Gold for rack and barrel—gold-like appearance with good adhesion and corrosion resistance.">
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":"https://www.baumechemical.com/assets/logo.png",
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}
   </script>
   <!-- JSON-LD: CollectionPage -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Brass Plating Solutions",
-    "inLanguage":"th",
-    "url":"https://www.baumechemical.com/products/platingcoating/brassplating/",
-    "description":"Dark Yellow Brass, Greenish Yellow Brass, and Cyanide-free Imitation Gold systems for rack and barrel plating."
-  }
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Brass Plating Solutions","inLanguage":"th","url":"https://www.baumechemical.com/products/platingcoating/brassplating/","description":"Dark Yellow Brass, Greenish Yellow Brass, and Cyanide-free Imitation Gold systems for rack and barrel plating."}
   </script>
   <!-- JSON-LD: Breadcrumb -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},
-      {"@type":"ListItem","position":3,"name":"Brass Plating Solutions","item":"https://www.baumechemical.com/products/platingcoating/brassplating/"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+    {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},
+    {"@type":"ListItem","position":3,"name":"Brass Plating Solutions","item":"https://www.baumechemical.com/products/platingcoating/brassplating/"}
+  ]}
   </script>
   <!-- JSON-LD: ItemList (anchors) -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Brass Systems",
-    "itemListOrder":"https://schema.org/ItemListOrderAscending",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"#dark-yellow"},
-      {"@type":"ListItem","position":2,"url":"#greenish-yellow"},
-      {"@type":"ListItem","position":3,"url":"#imitation-gold-nc"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"ItemList","name":"Brass Systems","itemListOrder":"https://schema.org/ItemListOrderAscending","itemListElement":[
+    {"@type":"ListItem","position":1,"url":"#dark-yellow"},
+    {"@type":"ListItem","position":2,"url":"#greenish-yellow"},
+    {"@type":"ListItem","position":3,"url":"#imitation-gold-nc"}
+  ]}
   </script>
 
   <!-- Fonts -->
@@ -82,94 +60,91 @@
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); --header-h:64px;
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); --header-h:64px; --container:1200px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
+    *{box-sizing:border-box} html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.65}
 
-    /* === Site Header (overlay on hero) === */
+    /* === Header: fixed glass + mobile menu === */
     .site-header{
-      position:absolute; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
-      border-bottom:1px solid rgba(255,255,255,.14);
+      position:fixed; inset:0 0 auto 0; z-index:1400;
+      background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
+      -webkit-backdrop-filter:none; backdrop-filter:none;
     }
-    .site-header .header-inner{
-      max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
-      min-height:var(--header-h); padding:10px 16px;
+    .site-header.scrolled{
+      background:rgba(15,23,42,.70);
+      -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
+      box-shadow:0 8px 26px rgba(2,8,20,.18);
     }
-    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{
-      width:42px;height:42px;border-radius:10px;flex:0 0 42px;
-      background:#e8f1ec var(--logo-url) center/cover no-repeat;
-      box-shadow:0 2px 8px rgba(2,8,20,.15)
-    }
-    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
-    .primary-nav{display:flex; align-items:center; gap:12px}
-    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{
-      display:inline-block; padding:10px 12px; border-radius:10px;
-      color:#fff; text-decoration:none; font-weight:600;
-    }
-    .menu a:hover{ background:rgba(255,255,255,.12) }
-    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
-    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
-    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
-    .nav-toggle{
-      appearance:none; border:0; background:transparent; cursor:pointer;
-      width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
-    }
-    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
-    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before,.nav-toggle .bar::after{
-      content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
-    }
-    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
-    @media (max-width: 920px){
-      .menu{
-        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
-        background:#0f172acc; backdrop-filter: blur(8px);
-        border:1px solid rgba(255,255,255,.18); border-radius:14px;
-        transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
-      }
-      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
-      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
-      .nav-toggle{ display:inline-flex }
-    }
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
 
-    /* === Floating Language Switcher (below header) === */
-    .lang-fab{position:fixed; top: calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .header-right{display:flex;align-items:center;gap:10px}
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease, opacity .2s ease;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
+    }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* === Language switchers (header + FAB) === */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.scrolled .lang-switch{background:#ffffffdd}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     /* === Hero === */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(480px, 66vh, 740px); background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)), url('https://i.imgur.com/ikv1kfr.jpeg') center/cover no-repeat; padding:22px 16px}
-    .hero-inner{position:relative; z-index:1}
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(28px,4.4vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto 14px; color:#e6f2ef}
-    .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
-    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
-    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    .hero{
+      position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;
+      min-height:clamp(480px,66vh,740px);
+      background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)), url('https://i.imgur.com/ikv1kfr.jpeg') center/cover no-repeat;
+      padding:22px 16px; padding-top:var(--header-h);
+    }
+    .hero-inner{position:relative;z-index:1}
+    .hero h1{margin:0 0 10px;font-weight:800;font-size:clamp(28px,4.4vw,48px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto 14px;color:#e6f2ef}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .btn{appearance:none;border:1px solid var(--brand);background:var(--accent);color:#1b2637;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
+    .btn.ghost{background:transparent;border-color:#fff;color:#fff}
     .btn:hover{filter:brightness(.95)}
 
     /* Back button on hero */
-    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
-    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
-    .btn.back:hover{ background:#ffffff33 }
-    .btn.back svg{width:18px; height:18px; display:block}
+    .back-wrap{position:absolute;left:16px;top:calc(var(--header-h) + 12px);z-index:2;display:flex;align-items:center;gap:8px}
+    .btn.back{display:inline-flex;align-items:center;gap:8px;background:#ffffff22;border:1px solid rgba(255,255,255,.55);color:#fff;padding:8px 12px;border-radius:12px;font-weight:800;text-decoration:none;backdrop-filter: blur(6px)}
+    .btn.back:hover{background:#ffffff33}
+    .btn.back svg{width:18px;height:18px;display:block}
 
     /* Hero bullets (3 chips) */
-    .bullets{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:12px}
-    .bullet{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid rgba(255,255,255,.5); border-radius:999px; background:rgba(255,255,255,.12); font-weight:600; color:#eaf4f2; backdrop-filter: blur(6px)}
-    .bullet .icon{display:grid; place-items:center; width:22px; height:22px; border-radius:999px; background:#fff; color:#0f172a; font-weight:800; font-size:12px}
+    .bullets{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+    .bullet{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(255,255,255,.12);font-weight:600;color:#eaf4f2;backdrop-filter: blur(6px)}
+    .bullet .icon{display:grid;place-items:center;width:22px;height:22px;border-radius:999px;background:#fff;color:#0f172a;font-weight:800;font-size:12px}
 
     /* === Layout === */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
 
     /* === Cards grid (lift) === */
     .grid{display:grid;gap:16px;grid-template-columns:1fr}
@@ -179,11 +154,11 @@
     .card .body{padding:14px}
     .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
     .badge{font-size:12px;background:#fff3ec;border:1px solid #ffd6b3;color:#9a5a00;padding:2px 8px;border-radius:999px}
-    .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
-    .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
-    .card .more:hover{ text-decoration:underline }
-    .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) }
+    .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
+    .card p{margin:0;color:#5b6675;font-size:.96rem}
+    .card .more{display:inline-block;margin-top:10px;color:var(--accent);font-weight:800;text-decoration:none}
+    .card .more:hover{text-decoration:underline}
+    .card.lift:hover,.card.lift:focus-within{transform:translateY(-8px);box-shadow:var(--shadow-2)}
 
     /* === Table === */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
@@ -192,70 +167,68 @@
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
 
     /* === Footer === */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
-    .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .ft-desc{margin:6px 0 0; color:#93a4b8; font-size:.96rem}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
   </style>
 </head>
 <body>
 
-  <!-- === Site Header (Top Navigation) === -->
-  <header class="site-header" role="banner">
+  <!-- === Header (fixed glass) === -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="header-inner">
-      <!-- Brand -->
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-          <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
-          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+        <!-- Header language switch -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
-
-  <!-- === Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
+  <div class="menu-scrim" hidden></div>
 
   <!-- === Hero === -->
   <header class="hero" aria-label="Brass Plating Hero">
-    <!-- Back button -->
     <div class="back-wrap">
       <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span data-i18n-key="btn_back">ย้อนกลับ</span>
       </a>
     </div>
@@ -264,24 +237,14 @@
       <h1 data-i18n-key="hero_title">Brass Plating</h1>
       <p data-i18n-key="hero_tagline">ชุบเหลืองเพื่อผิวโทนทอง สวยหรู พร้อมการยึดเกาะและความทนกัดกร่อน—รองรับ Dark Yellow / Greenish Yellow และ Imitation Gold (ปลอดไซยาไนด์) สำหรับ Rack/Barrel</p>
 
-      <!-- Pretty bullets (3) -->
       <div class="bullets" aria-label="Key highlights">
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b1">โทนสีทองปรับเฉดได้</span>
-        </div>
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b2">Dark / Greenish / Imitation Gold (NC)</span>
-        </div>
-        <div class="bullet">
-          <span class="icon">✓</span>
-          <span data-i18n-key="b3">รองรับ Rack/Barrel งานตกแต่ง</span>
-        </div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b1">โทนสีทองปรับเฉดได้</span></div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b2">Dark / Greenish / Imitation Gold (NC)</span></div>
+        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b3">รองรับ Rack/Barrel งานตกแต่ง</span></div>
       </div>
 
       <div class="actions">
-        <a class="btn" href="/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
+        <a class="btn" href="https://www.baumechemical.com/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
         <a class="btn ghost" href="https://www.baumechemical.com/contact-us/" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
       </div>
     </div>
@@ -293,11 +256,8 @@
       <p class="lead" data-i18n-key="sec_products_lead">ชุบเหลือง (ทองแดง+สังกะสี) เพื่อความสวยงาม การนำไฟฟ้า และการป้องกันการกัดกร่อน ใช้ในจิวเวลรี่ งานตกแต่ง ฮาร์ดแวร์ เครื่องดนตรี และชิ้นส่วนยานยนต์</p>
 
       <div class="grid">
-        <!-- Dark Yellow Brass -->
         <article id="dark-yellow" class="card lift reveal">
-          <picture>
-            <img src="https://i.imgur.com/ikv1kfr.jpeg" alt="Dark Yellow Brass – rich gold tone for decorative parts">
-          </picture>
+          <picture><img src="https://i.imgur.com/ikv1kfr.jpeg" alt="Dark Yellow Brass – rich gold tone for decorative parts"></picture>
           <div class="body">
             <div class="badges"><span class="badge">Brass</span><span class="badge">Dark Yellow</span></div>
             <h3 data-i18n-key="dy_title">Dark Yellow Brass Salt</h3>
@@ -306,11 +266,8 @@
           </div>
         </article>
 
-        <!-- Greenish Yellow Brass -->
         <article id="greenish-yellow" class="card lift reveal">
-          <picture>
-            <img src="https://i.imgur.com/ZASo1u0.jpeg" alt="Greenish Yellow Brass – distinctive yellow-green tone">
-          </picture>
+          <picture><img src="https://i.imgur.com/ZASo1u0.jpeg" alt="Greenish Yellow Brass – distinctive yellow-green tone"></picture>
           <div class="body">
             <div class="badges"><span class="badge">Brass</span><span class="badge">Yellow-Green</span></div>
             <h3 data-i18n-key="gy_title">Greenish Yellow Brass Salt</h3>
@@ -319,11 +276,8 @@
           </div>
         </article>
 
-        <!-- Cyanide-Free Imitation Gold -->
         <article id="imitation-gold-nc" class="card lift reveal">
-          <picture>
-            <img src="https://img2.pic.in.th/pic/thumbnail-1.jpg" alt="Cyanide-Free Imitation Gold – safer brass process">
-          </picture>
+          <picture><img src="https://img2.pic.in.th/pic/thumbnail-1.jpg" alt="Cyanide-Free Imitation Gold – safer brass process"></picture>
           <div class="body">
             <div class="badges"><span class="badge">Imitation Gold</span><span class="badge">Cyanide-Free</span></div>
             <h3 data-i18n-key="ig_title">Cyanide-Free Imitation Gold</h3>
@@ -381,10 +335,7 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
-          </div>
+          <div class="ft-head"><div class="ft-logo" aria-hidden="true"></div><div class="ft-name">Baume Chemical</div></div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -428,29 +379,74 @@
   <script>
     (function(){
       var els = document.querySelectorAll('.reveal');
-      if(!('IntersectionObserver' in window)) return els.forEach(function(n){ n.classList.add('show') });
+      if(!('IntersectionObserver' in window)) { els.forEach(function(n){ n.classList.add('show') }); return; }
       var io = new IntersectionObserver(function(entries,obs){
         entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); } });
       },{threshold:.18});
       els.forEach(function(n){ io.observe(n) });
     })();
   </script>
-  <style>.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}.reveal.show{opacity:1;transform:none}</style>
 
-  <!-- === JS: nav-toggle + back + i18n === -->
+  <!-- === JS: header glass, mobile nav (scrim+lock), back, i18n + meta sync, auto-highlight === -->
   <script>
-    // --- Mobile nav toggle ---
+    // Header height + glass on scroll
     (function(){
-      var header = document.querySelector('.site-header');
-      var toggle = document.querySelector('.site-header .nav-toggle');
-      if(!header || !toggle) return;
-      toggle.addEventListener('click', function(){
-        var opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH);
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
     })();
 
-    // --- Back button ---
+    // Mobile nav (scrim + body lock) + highlight current (Products)
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+      if(toggle && nav && scrim){
+        let scrollTopLock = 0;
+        function setMenuOpen(isOpen){
+          header.classList.toggle('open', isOpen);
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          nav.setAttribute('aria-hidden', String(!isOpen));
+          isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(isOpen){
+            scrollTopLock = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${scrollTopLock}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, scrollTopLock);
+            toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> setMenuOpen(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) setMenuOpen(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
+      }
+
+      // highlight "Products" when under /products
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          const isProducts = here.startsWith('/products');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // Back button smart behavior
     (function(){
       const btn = document.getElementById('backBtn');
       if(!btn) return;
@@ -461,16 +457,21 @@
           const sameOrigin = ref && new URL(ref).origin === location.origin;
           if(sameOrigin) { history.back(); return; }
         }catch(e){}
-        // Fallback: go to parent directory (products/platingcoating/)
         const parent = location.pathname.replace(/[^\/]+\/?$/, '');
         location.href = parent || '/products/platingcoating/';
       });
     })();
 
-    // --- i18n ---
+    // i18n + meta sync (shared keys)
     const I18N = {
       th:{
         meta_title:"น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical",
+        meta_desc:"โซลูชันชุบเหลือง (Brass): Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide-Free) สำหรับงาน Rack/Barrel เน้นโทนสีทอง ความเงา การยึดเกาะ และการทนกัดกร่อน พร้อมทีมเทคนิคดูแลหน้างาน.",
+        og_title:"Brass Plating Solutions | Baume Chemical",
+        og_desc:"Dark Yellow / Greenish Yellow / Imitation Gold (Cyanide-Free) — โทนคล้ายทอง การยึดเกาะดีและทนกัดกร่อน",
+        tw_title:"Brass Plating Solutions | Baume Chemical",
+        tw_desc:"Brass: Dark / Greenish / Imitation Gold (NC) สำหรับ Rack/Barrel",
+
         hero_title:"Brass Plating",
         hero_tagline:"ชุบเหลืองเพื่อผิวโทนทอง สวยหรู พร้อมการยึดเกาะและความทนกัดกร่อน—รองรับ Dark Yellow / Greenish Yellow และ Imitation Gold (ปลอดไซยาไนด์) สำหรับ Rack/Barrel",
         btn_products:"ดูหมวดผลิตภัณฑ์",
@@ -494,6 +495,12 @@
       },
       en:{
         meta_title:"Brass Plating Solutions | Baume Chemical",
+        meta_desc:"Dark Yellow / Greenish Yellow / Cyanide-Free Imitation Gold for rack/barrel—gold-like appearance with strong adhesion and corrosion resistance.",
+        og_title:"Brass Plating Solutions | Baume Chemical",
+        og_desc:"Dark / Greenish / Imitation Gold (NC) systems for decorative and durable brass finishes.",
+        tw_title:"Brass Plating Solutions | Baume Chemical",
+        tw_desc:"Gold-tone brass for rack & barrel; includes cyanide-free option.",
+
         hero_title:"Brass Plating",
         hero_tagline:"Gold-tone brass finishes with strong adhesion and corrosion resistance—Dark Yellow, Greenish Yellow, and Cyanide-Free Imitation Gold for rack/barrel lines.",
         btn_products:"Browse Products",
@@ -517,20 +524,50 @@
       }
     };
 
-    const els = { langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'), translatables: () => document.querySelectorAll('[data-i18n-key]') };
+    const els = {
+      langBtns: ()=>document.querySelectorAll('.lang-btn'), // header + FAB
+      translatables: ()=>document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc')
+    };
 
     function applyLang(lang){
-      const L = (lang==='en')?'en':'th';
+      const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
-      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
+      // sync header + FAB buttons
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-      els.translatables().forEach(node=>{ const key = node.getAttribute('data-i18n-key'); if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key]; });
+
+      // translate content
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const dict = I18N[L];
+        if(key && dict && dict[key] !== undefined) node.textContent = dict[key];
+      });
+
+      // update SEO/OG/Twitter meta
+      const t = I18N[L];
+      if(t){
+        els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
+        els.metaDesc && els.metaDesc.setAttribute('content', t.meta_desc || '');
+        els.ogTitle && els.ogTitle.setAttribute('content', t.og_title || t.meta_title);
+        els.ogDesc && els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc || '');
+        els.twTitle && els.twTitle.setAttribute('content', t.tw_title || t.meta_title);
+        els.twDesc && els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc || '');
+        els.ogLocale && els.ogLocale.setAttribute('content', L==='en' ? 'en_US' : 'th_TH');
+      }
+
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
     (function initLang(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      let saved = 'th';
+      try{ const v = localStorage.getItem('lang'); if (v==='en'||v==='th') saved = v; }catch(e){}
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();

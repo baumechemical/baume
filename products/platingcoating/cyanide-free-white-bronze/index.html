@@ -25,56 +25,19 @@
 
   <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":"https://www.baumechemical.com/assets/logo.png",
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}
   </script>
   <!-- JSON-LD: Breadcrumb -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},
-      {"@type":"ListItem","position":3,"name":"317M White Bronze","item":"https://www.baumechemical.com/products/317m-white-bronze/"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"},{"@type":"ListItem","position":3,"name":"317M White Bronze","item":"https://www.baumechemical.com/products/317m-white-bronze/"}]}
   </script>
   <!-- JSON-LD: ItemList (anchors) -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"317M Sections",
-    "itemListOrder":"https://schema.org/ItemListOrderAscending",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"#overview"},
-      {"@type":"ListItem","position":2,"url":"#bath"},
-      {"@type":"ListItem","position":3,"url":"#operating"},
-      {"@type":"ListItem","position":4,"url":"#equipment"},
-      {"@type":"ListItem","position":5,"url":"#troubleshooting"},
-      {"@type":"ListItem","position":6,"url":"#safety"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"ItemList","name":"317M Sections","itemListOrder":"https://schema.org/ItemListOrderAscending","itemListElement":[{"@type":"ListItem","position":1,"url":"#overview"},{"@type":"ListItem","position":2,"url":"#bath"},{"@type":"ListItem","position":3,"url":"#operating"},{"@type":"ListItem","position":4,"url":"#equipment"},{"@type":"ListItem","position":5,"url":"#troubleshooting"},{"@type":"ListItem","position":6,"url":"#safety"}]}
   </script>
   <!-- JSON-LD: Product -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"317M Cyanide-Free White Bronze",
-    "brand":{"@type":"Brand","name":"Baume Chemical"},
-    "category":"Electroplating",
-    "description":"Cyanide-free white bronze process delivering bright silver color, hard and wear-resistant deposits for rack and barrel.",
-    "url":"https://www.baumechemical.com/products/317m-white-bronze/",
-    "image":"https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg"
-  }
+  {"@context":"https://schema.org","@type":"Product","name":"317M Cyanide-Free White Bronze","brand":{"@type":"Brand","name":"Baume Chemical"},"category":"Electroplating","description":"Cyanide-free white bronze process delivering bright silver color, hard and wear-resistant deposits for rack and barrel.","url":"https://www.baumechemical.com/products/317m-white-bronze/","image":"https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg"}
   </script>
 
   <!-- Fonts -->
@@ -101,8 +64,9 @@
     }
     .site-header .header-inner{
       max-width:1200px; margin:0 auto; min-height:var(--header-h);
-      display:flex; align-items:center; justify-content:space-between; padding:10px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 16px;
     }
+    .header-right{display:flex; align-items:center; gap:10px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover;box-shadow:0 2px 8px rgba(2,8,20,.15)}
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem}
@@ -114,19 +78,56 @@
     .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+
+    /* Desktop language switcher on header */
+    .lang-inline{
+      display:none; align-items:center; gap:6px; padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px; background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;
+      display:flex;align-items:center;gap:6px;color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
     @media (max-width: 920px){
-      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
         background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px;
-        transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:.2s}
+        transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:.2s
+      }
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
       .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
       .nav-toggle{display:inline-flex}
     }
 
-    /* Language FAB */
-    .lang-fab{position:fixed; top: calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    /* Mobile-only language row inside the menu */
+    .menu .lang-li{
+      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
+    }
+    .menu .lang-li .lang-group{
+      display:flex; gap:6px; padding:4px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+    }
+    .menu .lang-li .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px
+    }
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    /* Show/hide by viewport */
+    @media (min-width: 921px){
+      .lang-inline{display:flex}
+      .menu .lang-li{display:none}
+    }
+    @media (max-width: 920px){
+      .lang-inline{display:none}
+      .menu .lang-li{display:block}
+    }
 
     /* Hero */
     .hero{position:relative; display:grid; place-items:center; text-align:center; color:#fff;
@@ -136,27 +137,16 @@
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
-
     .hero-inner{position:relative; z-index:1}
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(28px,4.4vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto 14px; color:#e6f2ef}
     .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
     .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
     .btn.ghost{background:transparent; border-color:#fff; color:#fff}
     .btn:hover{filter:brightness(.95)}
 
-    /* กันโดนเมนูมือถือ/เฮดเดอร์ทับ */
-.hero { position: relative; }
-.hero .hero-inner,
-.hero .badges,
-.hero .back-wrap { position: relative; z-index: 1501; }
-
-/* กันโดนตั้งค่าอื่นเผลอซ่อนไว้ */
-.badges, .back-wrap { display: block; visibility: visible; opacity: 1; }
-
-/* ระยะปุ่มย้อนกลับ ให้โผล่ใต้เฮดเดอร์แน่นอน */
-.back-wrap { position: absolute; left: 16px; top: calc(var(--header-h) + 12px); }
-
+    /* Ensure hero elements stay above */
+    .hero .hero-inner,.hero .badges,.hero .back-wrap{position:relative; z-index:1501}
+    .badges,.back-wrap{display:block;visibility:visible;opacity:1}
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px)}
 
     /* Layout & cards */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -167,29 +157,15 @@
     .card.reveal.show{opacity:1;transform:none}
 
     /* Back button on hero */
-    .back-wrap{
-      position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2;
-      display:flex; align-items:center; gap:8px;
-    }
-    .btn.back{
-      display:inline-flex; align-items:center; gap:8px;
-      background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff;
-      padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px);
-    }
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
     .btn.back:hover{ background:#ffffff33 }
     .btn.back svg{width:18px; height:18px; display:block}
-    /* ให้คอนเทนต์ hero อยู่เหนือพื้นหลังเสมอ */
-.hero .wrap { position: relative; z-index: 1; }
-/* กันกรณีมีอะไรทับ การคลิก */
-.actions a { pointer-events: auto; }
-
 
     /* Tables */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
     table{border-collapse:collapse;width:100%;min-width:760px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
-
     .note{font-style:italic;color:#9a3412}
 
     /* Footer */
@@ -206,78 +182,85 @@
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
-</style>
+  </style>
 </head>
 <body>
 
   <!-- === Site Header (Top Navigation) === -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <!-- Brand -->
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-          <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
-          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+            <!-- Mobile-only language row in menu -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language (on header bar) -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
-
   <!-- Hero -->
-<section class="hero" aria-label="317M White Bronze">
-  <!-- Back button -->
-  <div class="back-wrap">
-    <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span data-i18n-key="btn_back">ย้อนกลับ</span>
-    </a>
-  </div>
-
-  <div class="wrap hero-inner" style="padding:22px 16px">
-    <div class="badges">
-      <span class="badge" data-i18n-key="badge1">Cyanide-Free White Bronze</span>
-      <span class="badge" data-i18n-key="badge2">Bright • Hard • Wear-Resistant</span>
-      <span class="badge" data-i18n-key="badge3">Rack / Barrel</span>
+  <section class="hero" aria-label="317M White Bronze">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/platingcoating/index.html" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
     </div>
 
-    <h1 data-i18n-key="hero_title">317M — ไวท์บรอนซ์ (ปราศจากไซยาไนด์)</h1>
-    <p data-i18n-key="hero_tagline">
-      กระบวนการชุบไวท์บรอนซ์สีเงินสว่าง ปลอดไซยาไนด์ ชุบเร็ว ฟิล์มแข็ง ~600HV (0.05) สม่ำเสมอ ทนการสึก/สารเคมี ทำงานอุณหภูมิต่ำ ช่วงกระแสกว้าง เหมาะกับชิ้นงานแร็ค/บาร์เรล และสอดคล้องข้อกำหนดโลหะอันตราย EU/USA/Japan
-    </p>
+    <div class="wrap hero-inner" style="padding:22px 16px">
+      <div class="badges">
+        <span class="badge" data-i18n-key="badge1">Cyanide-Free White Bronze</span>
+        <span class="badge" data-i18n-key="badge2">Bright • Hard • Wear-Resistant</span>
+        <span class="badge" data-i18n-key="badge3">Rack / Barrel</span>
+      </div>
 
-    <div class="actions">
-      <a class="btn" href="https://www.baumechemical.com/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
-      <a class="btn ghost" href="https://www.baumechemical.com/contact-us/" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+      <h1 data-i18n-key="hero_title">317M — ไวท์บรอนซ์ (ปราศจากไซยาไนด์)</h1>
+      <p data-i18n-key="hero_tagline">กระบวนการชุบไวท์บรอนซ์สีเงินสว่าง ปลอดไซยาไนด์ ชุบเร็ว ฟิล์มแข็ง ~600HV (0.05) สม่ำเสมอ ทนการสึก/สารเคมี ทำงานอุณหภูมิต่ำ ช่วงกระแสกว้าง เหมาะกับชิ้นงานแร็ค/บาร์เรล และสอดคล้องข้อกำหนดโลหะอันตราย EU/USA/Japan</p>
+
+      <div class="actions">
+        <a class="btn" href="https://www.baumechemical.com/products.html" data-i18n-key="btn_products">ดูหมวดผลิตภัณฑ์</a>
+        <a class="btn ghost" href="https://www.baumechemical.com/contact-us/" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <main class="wrap">
     <!-- Overview -->
@@ -467,7 +450,7 @@
     })();
   </script>
 
-  <!-- JS: nav toggle + i18n -->
+  <!-- JS: nav toggle + back + i18n -->
   <script>
     // Mobile nav
     (function(){
@@ -477,6 +460,15 @@
       toggle.addEventListener('click', function(){
         var opened = header.classList.toggle('open');
         toggle.setAttribute('aria-expanded', String(opened));
+      });
+      // ปิดเมนูอัตโนมัติเมื่อคลิกลิงก์หรือเปลี่ยนภาษา (บนมือถือ)
+      document.querySelectorAll('.menu a, .menu .lang-btn').forEach(function(el){
+        el.addEventListener('click', function(){
+          if (window.innerWidth <= 920) {
+            header.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
       });
     })();
 
@@ -543,7 +535,7 @@
     };
 
     const els = {
-      btns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      btns: () => document.querySelectorAll('.lang-btn'),
       nodes: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -568,14 +560,13 @@
           : "317M ไวท์บรอนซ์ปราศจากไซยาไนด์ — องค์ประกอบบ่อชุบ ช่วงการทำงาน (แร็ค/บาร์เรล) อุปกรณ์ และการแก้ปัญหา (TH/EN).";
       }
 
-      // FAB state
+      // Sync pressed state for ALL lang buttons (header + mobile menu)
       els.btns().forEach(b=> b.setAttribute('aria-pressed', String(b.dataset.lang===L)));
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
     (function init(){
-      // i18n init
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
       els.btns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));

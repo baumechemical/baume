@@ -95,7 +95,7 @@
     }
     .site-header .header-inner{
       max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
       min-height:var(--header-h); padding:10px 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
@@ -105,6 +105,9 @@
       box-shadow:0 2px 8px rgba(2,8,20,.15)
     }
     .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+
+    .header-right{display:flex; align-items:center; gap:10px}
+
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{
@@ -115,6 +118,7 @@
     .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
     .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
     .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
     .nav-toggle{
       appearance:none; border:0; background:transparent; cursor:pointer;
       width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center;
@@ -125,6 +129,7 @@
       content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px
     }
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
     @media (max-width: 920px){
       .menu{
         position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
@@ -138,11 +143,44 @@
       .nav-toggle{ display:inline-flex }
     }
 
-    /* === Floating Language Switcher (below header) === */
-    .lang-fab{position:fixed; top: calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    /* === Desktop language switcher (on header bar) === */
+    .lang-inline{
+      display:none; align-items:center; gap:6px; padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px; background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      padding:6px 10px; border-radius:999px; font-weight:800;
+      display:flex; align-items:center; gap:6px; color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* === Mobile language row inside menu === */
+    .menu .lang-li{
+      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
+    }
+    .menu .lang-li .lang-group{
+      display:flex; gap:6px; padding:4px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+    }
+    .menu .lang-li .lang-btn{
+      appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px
+    }
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    /* Show/hide by viewport */
+    @media (min-width: 921px){
+      .lang-inline{display:flex}
+      .menu .lang-li{display:none}
+    }
+    @media (max-width: 920px){
+      .lang-inline{display:none}
+      .menu .lang-li{display:block}
+    }
 
     /* === Hero === */
     .hero{
@@ -223,34 +261,50 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
 
-      <!-- Primary Navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <ul class="menu">
-          <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-          <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-          <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
-          <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+                  <span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+                  <span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language on header bar -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
+            <span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
+            <span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
-
-  <!-- === Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
 
   <!-- === Hero === -->
   <header class="hero" aria-label="E-coat Hero">
@@ -432,6 +486,14 @@
         var opened = header.classList.toggle('open');
         toggle.setAttribute('aria-expanded', String(opened));
       });
+      // ปิดเมนูเมื่อคลิกลิงก์หรือสลับภาษา (เฉพาะมือถือ)
+      document.addEventListener('click', function(e){
+        var t = e.target.closest('.menu a, .menu .lang-btn');
+        if (t && window.innerWidth <= 920) {
+          header.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
     })();
 
     // --- Back button ---
@@ -501,7 +563,10 @@
       }
     };
 
-    const els = { langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'), translatables: () => document.querySelectorAll('[data-i18n-key]') };
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    };
 
     function applyLang(lang){
       const L = (lang==='en')?'en':'th';
@@ -509,7 +574,10 @@
       const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
       if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-      els.translatables().forEach(node=>{ const key = node.getAttribute('data-i18n-key'); if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key]; });
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if(key && I18N[L] && typeof I18N[L][key] !== 'undefined') node.textContent = I18N[L][key];
+      });
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
