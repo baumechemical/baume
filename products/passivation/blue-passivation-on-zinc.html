@@ -2,60 +2,103 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title data-i18n-key="meta_title">Tri Blue (Trivalent) • สีฟ้า/ขาว โครม 3 บนซิงค์</title>
-  <meta name="description" content="Tri Blue โครเมตไตรวาเลนท์ (ไม่มีโครม 6) สำหรับงานชุบซิงค์ ให้ฟิล์มสีขาวอมฟ้า ทนสนิมขาวได้ &gt;96 ชั่วโมงที่ 5% v/v พร้อมช่วงการทำงาน 18–35°C, pH 1.8–2.2." />
+  <!-- === SEO (i18n-ready) === -->
+  <title id="metaTitle">Tri Blue (Trivalent) • สีฟ้า/ขาว โครม 3 บนซิงค์</title>
+  <meta name="description" id="metaDesc" content="Tri Blue โครเมตไตรวาเลนท์ (ไม่มีโครม 6) สำหรับงานชุบซิงค์ ให้ฟิล์มสีขาวอมฟ้า ทนสนิมขาว >96 ชั่วโมงที่ 5% v/v พร้อมช่วงการทำงาน 18–35°C, pH 1.8–2.2.">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html">
   <meta name="theme-color" content="#2c5e4e">
-  <!-- Open Graph -->
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" id="ogLocale" content="th_TH">
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Tri Blue (Trivalent) • Blue/White Chromate on Zinc">
-  <meta property="og:description" content="Trivalent chromate on zinc; whitish-blue film; &gt;96 h white rust at 5% v/v.">
+  <meta property="og:title" id="ogTitle" content="Tri Blue (Trivalent) • Blue/White Chromate on Zinc">
+  <meta property="og:description" id="ogDesc" content="Trivalent chromate on zinc; whitish-blue film; >96 h white rust at 5% v/v.">
+  <meta property="og:url" content="https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html">
   <meta property="og:image" content="https://i.imgur.com/nwKlx5m.jpeg">
+  <meta property="og:image:alt" content="Trivalent blue/white chromate on zinc - Baume Chemical">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="Tri Blue (Trivalent) • Blue/White Chromate on Zinc">
+  <meta name="twitter:description" id="twDesc" content="Whitish-blue film, >96 h white rust at 5% v/v; operates 18–35°C; pH 1.8–2.2.">
 
-  <!-- Fonts -->
+  <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="https://i.imgur.com/nwKlx5m.jpeg">
+  <link rel="preload" as="image" href="https://i.imgur.com/nwKlx5m.jpeg"/>
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --bg:#d5e4d9; --ink:#0f172a; --muted:#5b6775;
-      --card:#fff; --radius:14px; --shadow:0 8px 26px rgba(2,8,20,.06);
-      /* ⬇️ Footer logo from your reference */
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* Language Switcher */
-    .lang-fab{position:fixed;top:14px;right:14px;z-index:10;display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter:blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    /* ===== Header: fixed glass (MATCH TEMPLATE) ===== */
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
+    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
+    .header-right{display:flex;align-items:center;gap:10px}
+
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
+    }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* Language switchers (MATCH TEMPLATE) */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.scrolled .lang-switch{background:#ffffffdd}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
     .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
     .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
-
-    /* HERO — ⬇️ Header image comes from your link */
-    .hero{
-      position:relative;display:grid;place-items:center;text-align:center;color:#fff;
-      min-height:clamp(360px,56svh,560px);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
-        url('https://i.imgur.com/nwKlx5m.jpeg') center/cover no-repeat;
-    }
-    .hero h1{margin:10px 0 8px;font-size:clamp(26px,4.2vw,44px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{margin:0 auto;max-width:900px;color:#e6f2ef}
+    /* ===== Hero (Tri Blue) ===== */
+    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);padding-top:var(--header-h);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)), url('https://i.imgur.com/nwKlx5m.jpeg') center/cover no-repeat}
+    .hero-inner{position:relative;z-index:1;padding:26px 16px;max-width:var(--container);width:100%}
+    .hero h1{margin:0 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
-    .card{background:var(--card);border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#203126}
+    .back-home{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;padding:6px 12px;border-radius:999px;background:#ffffffcc;color:#0f172a;border:1px solid #e2e8f0;text-decoration:none;font-weight:800;backdrop-filter: blur(6px)}
+    .back-home:hover{background:#fff}
+
+    /* ===== Layout & Cards ===== */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:var(--radius);box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
     p.lead{margin:0 0 14px;color:#5f6d7c}
 
     .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
@@ -68,15 +111,13 @@
     table{border-collapse:collapse;width:100%;min-width:720px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
-
-    ol{margin:0 0 0 22px}
     .note{font-style:italic;color:#9a3412}
 
-    /* FOOTER — ⬇️ Logo uses your CSS background */
+    /* ===== Footer ===== */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -89,8 +130,43 @@
   </style>
 </head>
 <body>
+  <!-- ===== Header (MATCH TEMPLATE) ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- Language Switcher -->
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header language switch -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- FAB language (synced) -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
       <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -100,9 +176,11 @@
     </button>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap" style="padding:22px 16px">
+  <!-- ===== Hero (Tri Blue) ===== -->
+  <section class="hero" aria-label="Tri Blue hero">
+    <div class="hero-inner">
+      <a class="back-home" href="/index.html" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับหน้าแรก</a>
+
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">Trivalent (Cr(III))</span>
         <span class="badge" data-i18n-key="badge2">Hex-Chrome Free</span>
@@ -113,6 +191,7 @@
     </div>
   </section>
 
+  <!-- ===== Content ===== -->
   <main class="wrap">
     <!-- FEATURES -->
     <section class="card">
@@ -217,17 +296,16 @@
           </tbody>
         </table>
       </div>
-      <p class="note" data-i18n-key="safety_note">**สวม PPE: ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท • อ้างอิง TDS/SDS เสมอ</p>
+      <p class="note" data-i18n-key="safety_note">**สวม PPE: ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท • อ้างอิง TDS/SDS เสมอ**</p>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
           <div class="ft-head">
-            <!-- ⬇️ Footer logo uses your link via CSS var -->
             <div class="ft-logo" aria-hidden="true"></div>
             <div class="ft-name">Baume Chemical</div>
           </div>
@@ -239,7 +317,7 @@
           </ul>
         </section>
 
-        <nav aria-label="Products">
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
           <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
             <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
@@ -254,7 +332,7 @@
           </ul>
         </nav>
 
-        <section>
+        <section aria-label="ติดต่อเรา">
           <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
           <ul class="footer-list">
             <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
@@ -270,11 +348,67 @@
     </div>
   </footer>
 
-  <!-- i18n -->
+  <!-- ===== JS: header glass, mobile nav (scrim+lock), i18n + meta sync (MATCH TEMPLATE) ===== -->
   <script>
+    // Header glass + set CSS var
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH);
+      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+    })();
+
+    // Mobile nav: scrim + body lock + highlight current
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+      // highlight "Products" when under /products
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          const isProducts = here.startsWith('/products');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // i18n + meta sync (header + FAB synced)
     const I18N = {
       th:{
         meta_title:"Tri Blue (Trivalent) • สีฟ้า/ขาว โครม 3 บนซิงค์",
+        meta_desc:"Tri Blue โครเมตไตรวาเลนท์ (ไม่มีโครม 6) สำหรับงานชุบซิงค์ ให้ฟิล์มสีขาวอมฟ้า ทนสนิมขาว >96 ชั่วโมงที่ 5% v/v พร้อมช่วงการทำงาน 18–35°C, pH 1.8–2.2.",
+        og_title:"Tri Blue (Trivalent) • สีฟ้า/ขาว โครม 3 บนซิงค์",
+        og_desc:"โครเมตไตรวาเลนท์บนซิงค์ ฟิล์มขาวอมฟ้า ทนสนิมขาวสูง",
+        tw_title:"Tri Blue • โครม 3 บนซิงค์",
+        tw_desc:"ฟิล์มฟ้า/ขาว >96 ชม. @5% v/v • 18–35°C • pH 1.8–2.2",
+
+        back_home:"← กลับหน้าแรก",
         badge1:"Trivalent (Cr(III))", badge2:"ไม่มีโครม 6", badge3:"ฟิล์มฟ้า/ขาวบนซิงค์",
         hero_title:"Tri Blue — สีฟ้า (สีขาว) โครม 3 บนซิงค์",
         hero_tagline:"ฟิล์มขาวอมฟ้า ทนสนิมขาว >96 ชม. ที่ 5% v/v • ใช้งานที่ 18–35°C • คุม pH 1.8–2.2 (HNO₃ 50%)",
@@ -323,13 +457,18 @@
         safety_note:"**สวม PPE: ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท • อ้างอิง TDS/SDS เสมอ**",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
-        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น."
       },
       en:{
         meta_title:"Tri Blue (Trivalent) • Blue/White Chromate on Zinc",
+        meta_desc:"Trivalent chromate (no hex chrome) for zinc; whitish-blue film; >96 h white rust at 5% v/v; run 18–35°C, pH 1.8–2.2.",
+        og_title:"Tri Blue (Trivalent) • Blue/White on Zinc",
+        og_desc:"Cr(III) chromate on zinc with high white-rust resistance.",
+        tw_title:"Tri Blue • Cr(III) on Zinc",
+        tw_desc:"Whitish-blue film >96 h @5% v/v • 18–35°C • pH 1.8–2.2",
+
+        back_home:"← Back to Home",
         badge1:"Trivalent (Cr(III))", badge2:"Hex-Chrome Free", badge3:"Blue/White on Zinc",
         hero_title:"Tri Blue — Trivalent Blue/White Chromate",
         hero_tagline:"Whitish-blue film, >96 h white rust at 5% v/v • Operates 18–35°C • Control pH 1.8–2.2 (HNO₃ 50%)",
@@ -378,27 +517,57 @@
         safety_note:"**Wear PPE (gloves/goggles/resp.), ensure ventilation, and always consult product TDS/SDS.**",
 
         footer_products:"Products", footer_contact:"Contact Us",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
-        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
-        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
-        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
+        footer_hours:"🕒 Office hours 08:00–17:00"
       }
     };
 
-    const els = { btns: () => document.querySelectorAll('.lang-btn'), nodes: () => document.querySelectorAll('[data-i18n-key]') };
-    function applyLang(L){
-      const lang = (L==='en') ? 'en' : 'th';
-      document.documentElement.lang = lang;
-      const t = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(t) t.textContent = I18N[lang].meta_title;
-      els.btns().forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang===lang)));
-      els.nodes().forEach(n=>{ const k=n.getAttribute('data-i18n-key'); if(I18N[lang][k]!==undefined) n.textContent=I18N[lang][k]; });
-      try{ localStorage.setItem('lang', lang); }catch(e){}
+    const els = {
+      langBtns: ()=>document.querySelectorAll('.lang-btn'), // header + FAB
+      translatables: ()=>document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc')
+    };
+
+    function applyLang(lang){
+      const L = (lang==='en') ? 'en' : 'th';
+      document.documentElement.lang = L;
+
+      // sync header + FAB buttons
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // translate text nodes
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        const dict = I18N[L];
+        if (key && dict && dict[key] !== undefined) node.textContent = dict[key];
+      });
+
+      // update SEO/OG/Twitter meta
+      const t = I18N[L];
+      if(t){
+        els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
+        els.metaDesc && els.metaDesc.setAttribute('content', t.meta_desc);
+        els.ogTitle && els.ogTitle.setAttribute('content', t.og_title || t.meta_title);
+        els.ogDesc && els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc);
+        els.twTitle && els.twTitle.setAttribute('content', t.tw_title || t.meta_title);
+        els.twDesc && els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc);
+        els.ogLocale && els.ogLocale.setAttribute('content', L==='en' ? 'en_US' : 'th_TH');
+      }
+
+      try{ localStorage.setItem('lang', L); }catch(e){}
     }
-    (function init(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+
+    (function initLang(){
+      let saved = 'th';
+      try{ const v = localStorage.getItem('lang'); if (v==='en'||v==='th') saved = v; }catch(e){}
       applyLang(saved);
-      els.btns().forEach(b=> b.addEventListener('click', ()=> applyLang(b.dataset.lang)));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 </body>
