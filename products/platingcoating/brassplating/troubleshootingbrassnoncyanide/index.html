@@ -2,54 +2,86 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title data-i18n-key="meta_title">Imitation Brass (Non-Cyanide) • กระบวนการชุบทองเหลืองเลียนแบบ | Baume Chemical</title>
-  <meta name="description" content="ชุบทองเหลืองเลียนแบบแบบไม่ใช้ไซยาไนด์ สีทอง-โรสโกลด์ (≈14–22K) ควบคุมง่าย ใช้ได้ทั้งแร็ค/บาร์เรล แนะนำ 55 °C pH≈12 กรองต่อเนื่อง 10 µm พร้อมแนวทางตั้งบ่อ/ดูแล/แก้ปัญหา">
+  <!-- === SEO (i18n-ready) === -->
+  <title id="metaTitle">Imitation Brass (Non-Cyanide) • กระบวนการชุบทองเหลืองเลียนแบบ | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="ชุบทองเหลืองเลียนแบบแบบไม่ใช้ไซยาไนด์ สีทอง-โรสโกลด์ (≈14–22K) ควบคุมง่าย ใช้ได้ทั้งแร็ค/บาร์เรล แนะนำ 55 °C pH≈12 กรองต่อเนื่อง 10 µm พร้อมแนวทางตั้งบ่อ/ดูแล/แก้ปัญหา">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Imitation Brass (Non-Cyanide) • Decorative Brass">
-  <meta property="og:description" content="Non-cyanide brass, tunable gold→rose gold tone, easy control, rack & barrel ready.">
+  <meta property="og:title" id="ogTitle" content="Imitation Brass (Non-Cyanide) • Decorative Brass">
+  <meta property="og:description" id="ogDesc" content="Non-cyanide brass, tunable gold→rose gold tone, easy control, rack & barrel ready.">
   <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail-1.jpg">
+  <meta property="og:image:alt" content="Non-cyanide imitation brass plating tone from gold to rose-gold">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="Imitation Brass (Non-Cyanide) • Decorative Brass">
+  <meta name="twitter:description" id="twDesc" content="Non-cyanide brass, tunable gold→rose gold tone, easy control, rack & barrel ready.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail-1.jpg">
+  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/thumbnail-1.jpg"/>
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
-      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
+      --bg:#dfe9e3; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --container:1200px; --header-h:64px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.68}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ===== Header: fixed glass ===== */
+    .site-header{position:fixed;left:0;right:0;top:0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s,backdrop-filter .2s,box-shadow .2s}
+    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
+
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .header-right{display:flex;align-items:center;gap:10px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s,opacity .2s;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* Language (header switch + FAB) */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     /* Hero */
     .hero{
-      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(380px, 60svh, 640px);
+      position:relative;display:grid;place-items:center;text-align:center;color:#fff;
+      min-height:clamp(380px,60svh,640px);
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
                  url('https://img2.pic.in.th/pic/thumbnail-1.jpg') center/cover no-repeat;
     }
@@ -59,9 +91,9 @@
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
     /* Layout & cards */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
     /* Pills */
@@ -77,14 +109,13 @@
     table{border-collapse:collapse;width:100%;min-width:760px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
-
     .note{font-style:italic;color:#9a3412}
 
     /* Footer */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -97,8 +128,42 @@
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link" data-i18n-key="nav_home">หน้าหลัก</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link" data-i18n-key="nav_about">เกี่ยวกับเรา</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" data-i18n-key="nav_products">ผลิตภัณฑ์</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link" data-i18n-key="nav_contact">ติดต่อเรา</a></li>
+          </ul>
+        </nav>
 
-  <!-- Language Switcher -->
+        <!-- Header language switch -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Floating Language Switcher (synced with header) -->
   <div class="lang-fab" role="group" aria-label="Language switcher">
     <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
       <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -109,7 +174,7 @@
   </div>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" aria-label="Non-cyanide imitation brass hero">
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">Non-Cyanide</span>
@@ -308,11 +373,75 @@
     </div>
   </footer>
 
-  <!-- i18n -->
+  <!-- ===== JS: header glass, mobile nav (scrim+lock), i18n meta sync, auto-highlight Products ===== -->
   <script>
+    // Header glass + CSS var
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH);
+      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+    })();
+
+    // Mobile nav: scrim + body lock + ARIA + auto-highlight
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      function updateAriaForViewport(){
+        const desktop = window.matchMedia('(min-width: 921px)').matches;
+        if (desktop) { nav?.removeAttribute('aria-hidden'); toggle?.setAttribute('aria-expanded','false'); }
+        else { nav?.setAttribute('aria-hidden', String(!header.classList.contains('open'))); }
+      }
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); updateAriaForViewport(); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        updateAriaForViewport();
+      }
+
+      // auto-highlight "Products" when under /products*
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          const isProducts = here.startsWith('/products');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // ===== i18n + meta (SEO/OG/Twitter) sync =====
     const I18N = {
       th:{
         meta_title:"Imitation Brass (Non-Cyanide) • กระบวนการชุบทองเหลืองเลียนแบบ | Baume Chemical",
+        meta_desc:"ชุบทองเหลืองเลียนแบบแบบไม่ใช้ไซยาไนด์ สีทอง-โรสโกลด์ (≈14–22K) ควบคุมง่าย ใช้ได้ทั้งแร็ค/บาร์เรล แนะนำ 55 °C pH≈12 กรองต่อเนื่อง 10 µm พร้อมแนวทางตั้งบ่อ/ดูแล/แก้ปัญหา",
+        og_title:"Imitation Brass (Non-Cyanide) • Decorative Brass",
+        og_desc:"Non-cyanide brass: gold→rose-gold tone, easy control, rack & barrel.",
+        tw_title:"Imitation Brass (Non-Cyanide) • Decorative Brass",
+        tw_desc:"โทนทอง→โรสโกลด์ คุมง่าย เหมาะสายการผลิต",
+
         badge1:"Non-Cyanide", badge2:"Gold → Rose-Gold", badge3:"Rack & Barrel",
         hero_title:"กระบวนการชุบทองเหลืองเลียนแบบแบบไม่ใช้ไซยาไนด์",
         hero_tagline:"โทนสีปรับได้ 14–22K งานเงางาม ปลอดไซยาไนด์ ควบคุมง่าย เหมาะทั้งงานแขวน/งานกลิ้ง",
@@ -353,14 +482,10 @@
         m5:"กรณีปนเปื้อนอินทรีย์ → บำบัดผงคาร์บอน + ดัมมี่ แล้วกรองใส",
 
         process_title:"ลำดับกระบวนการแนะนำ",
-        pr1:"ต้มล้างไขมัน → ล้าง",
-        pr2:"แยกไฟฟ้า → ล้าง",
-        pr3:"จุ่มกรดอ่อน (สำหรับเหล็ก/ทองเหลือง) → ล้าง",
-        pr4:"ชุบทองเหลืองเลียนแบบ (Non-Cyanide) ที่ค่าที่แนะนำ",
-        pr5:"ล้าง → จุ่มกันหมองทองแดง-ทองเหลือง (ถ้ามี) → เป่า/อบแห้ง",
+        pr1:"ต้มล้างไขมัน → ล้าง", pr2:"แยกไฟฟ้า → ล้าง", pr3:"จุ่มกรดอ่อน (สำหรับเหล็ก/ทองเหลือง) → ล้าง",
+        pr4:"ชุบทองเหลืองเลียนแบบ (Non-Cyanide) ที่ค่าที่แนะนำ", pr5:"ล้าง → จุ่มกันหมองทองแดง-ทองเหลือง (ถ้ามี) → เป่า/อบแห้ง",
 
-        tr_title:"แนวทางแก้ปัญหาเบื้องต้น",
-        tr_p:"ปัญหา", tr_s:"วิธีแก้ไข",
+        tr_title:"แนวทางแก้ปัญหาเบื้องต้น", tr_p:"ปัญหา", tr_s:"วิธีแก้ไข",
         tr1_p:"สีทองจาง/แคบโทน", tr1_s:"เติมสารทำให้เข้ม/Make-up salt ตามสเปก; เพิ่มตัวปรับสี",
         tr2_p:"สีทองจางเร็ว", tr2_s:"ฟิล์มบาง → เพิ่มพื้นที่แอโนด/เวลาชุบ; ปรับ pH ให้เหมาะ และคุม Make-up salt ให้พอ",
         tr3_p:"ประสิทธิภาพกระแสต่ำ", tr3_s:"pH ต่ำ → ปรับด้วย KOH; Make-up salt ต่ำ → เติม; ปนเปื้อนอินทรีย์ → บำบัดคาร์บอน",
@@ -373,13 +498,18 @@
         ehs3:"ของเสียมีโลหะ — บำบัด/ทิ้งตามข้อกำหนดกฎหมายและควบคุม pH",
         ehs4:"ผงคาร์บอน/สารเคมีอื่นให้ใช้อย่างระมัดระวัง และกรองให้ใสก่อนกลับสู่การผลิต",
 
-        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
-        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        nav_home:"หน้าหลัก", nav_about:"เกี่ยวกับเรา", nav_products:"ผลิตภัณฑ์", nav_contact:"ติดต่อเรา"
       },
       en:{
         meta_title:"Imitation Brass (Non-Cyanide) • Decorative Brass Plating | Baume Chemical",
+        meta_desc:"Non-cyanide imitation brass with adjustable gold→rose-gold tone (≈14–22K). Easy control for rack & barrel; ~55 °C, pH≈12, continuous 10 µm filtration. Make-up/maintenance/troubleshooting included.",
+        og_title:"Imitation Brass (Non-Cyanide) • Decorative Brass",
+        og_desc:"Tunable gold→rose-gold tone, easy control, rack & barrel ready.",
+        tw_title:"Imitation Brass (Non-Cyanide) • Decorative Brass",
+        tw_desc:"Adjustable tone, simple controls, production-friendly.",
+
         badge1:"Non-Cyanide", badge2:"Gold → Rose-Gold", badge3:"Rack & Barrel",
         hero_title:"Imitation Brass Plating — Non-Cyanide",
         hero_tagline:"Adjustable 14–22K tone, glossy decorative finish, easy control for rack & barrel lines.",
@@ -426,12 +556,11 @@
         pr4:"Imitation brass (Non-Cyanide) at recommended conditions",
         pr5:"Rinse → anti-tarnish for Cu/Brass (optional) → blow off / dry",
 
-        tr_title:"Basic Troubleshooting",
-        tr_p:"Problem", tr_s:"Solution",
+        tr_title:"Basic Troubleshooting", tr_p:"Problem", tr_s:"Solution",
         tr1_p:"Pale gold / narrow tone", tr1_s:"Increase make-up/tone intensity; add tone additive",
         tr2_p:"Color fades quickly", tr2_s:"Coating too thin → increase anode area/time; correct pH and maintain make-up level",
-        tr3_p:"Low current efficiency", tr3_s:"pH too low → add KOH; make-up low → add; organic contamination → carbon treat",
-        tr4_p:"Too red / skip-plating", tr4_s:"Increase tone additive; keep make-up adequate; carbon treat & dummy, verify via Hull Cell",
+        tr3_p:"Low current efficiency", tr3_s:"pH too low → add KOH; make-up low → add; organics → carbon treat",
+        tr4_p:"Too red / skip-plating", tr4_s:"Increase tone additive; keep make-up adequate; carbon treat & dummy; verify via Hull Cell",
         tr5_p:"Greenish tone", tr5_s:"Increase tone additive; maintain make-up within spec",
 
         ehs_title:"Safety & Environment (Non-Cyanide)",
@@ -440,38 +569,60 @@
         ehs3:"Metal-bearing waste: treat/dispose per local regulations; control pH.",
         ehs4:"Handle carbon powder/chemicals carefully and filter clear before returning to production.",
 
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
-        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
-        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
-        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment"
+        footer_products:"Products", footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us"
       }
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
+      // both header + FAB buttons
+      langBtns: ()=> document.querySelectorAll('.lang-btn'),
+      translatables: ()=> document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc')
     };
 
     function applyLang(lang){
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // Title & meta
-      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
-
+      // sync both switchers
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // translate visible strings
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
-        const val = I18N[L][key];
-        if(typeof val !== 'undefined') node.textContent = val;
+        const dict = I18N[L];
+        if (key && dict && dict[key] !== undefined) {
+          if (node.hasAttribute('data-i18n-html')) node.innerHTML = dict[key];
+          else node.textContent = dict[key];
+        }
       });
+
+      // update SEO/OG/Twitter
+      const t = I18N[L];
+      if(t){
+        els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
+        els.metaDesc && els.metaDesc.setAttribute('content', t.meta_desc || '');
+        els.ogTitle && els.ogTitle.setAttribute('content', t.og_title || t.meta_title);
+        els.ogDesc && els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc);
+        els.twTitle && els.twTitle.setAttribute('content', t.tw_title || t.meta_title);
+        els.twDesc && els.twDesc.setAttribute('content', t.tw_desc || t.meta_desc);
+        els.ogLocale && els.ogLocale.setAttribute('content', L==='en' ? 'en_US' : 'th_TH');
+      }
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
     (function initLang(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      let saved = 'th';
+      try{ const v = localStorage.getItem('lang'); if (v==='en'||v==='th') saved = v; }catch(e){}
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
