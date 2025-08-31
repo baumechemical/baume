@@ -1,56 +1,94 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- Primary SEO -->
-  <title data-i18n-key="page_title">EPA 2020 แลคเกอร์ไฟฟ้า & แลคเกอร์น้ำ 2200 | Baume Chemical</title>
-  <meta name="description" content="คู่มือแลคเกอร์ใส 2 ระบบในหน้าเดียว: EPA 2020 (แลคเกอร์ไฟฟ้า E-coat) และ แลคเกอร์น้ำ 2200 (Water-based Chromium-free) พร้อมวิธีผสม/สภาวะ/อบ/แก้ปัญหา/อุปกรณ์ และสวิตช์ภาษา TH/EN.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#2c5e4e">
+  <!-- SEO (i18n-ready) -->
+  <title id="metaTitle" data-i18n-key="page_title">EPA 2020 แลคเกอร์ไฟฟ้า & แลคเกอร์น้ำ 2200 | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="คู่มือแลคเกอร์ใส 2 ระบบในหน้าเดียว: EPA 2020 (แลคเกอร์ไฟฟ้า E-coat) และ แลคเกอร์น้ำ 2200 (Water-based Chromium-free) พร้อมวิธีผสม/สภาวะ/อบ/แก้ปัญหา/อุปกรณ์ และสวิตช์ภาษา TH/EN.">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#2c5e4e" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="product.group">
-  <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="EPA 2020 & Water Lacquer 2200 • Clear Protective Coats">
-  <meta property="og:description" content="E-coat clear lacquer & water-based chromium-free lacquer in one page: specs, make-up, curing, troubleshooting.">
-  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph / Twitter (i18n-updatable) -->
+  <meta property="og:type" content="product.group" />
+  <meta property="og:site_name" content="Baume Chemical" />
+  <meta property="og:title" id="ogTitle" content="EPA 2020 & Water Lacquer 2200 • Clear Protective Coats" />
+  <meta property="og:description" id="ogDesc" content="E-coat clear lacquer & water-based chromium-free lacquer in one page: specs, make-up, curing, troubleshooting." />
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg" />
+  <meta property="og:image:alt" content="Clear lacquer coating products" />
+  <meta property="og:locale" id="ogLocale" content="th_TH" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twTitle" content="EPA 2020 & Water Lacquer 2200 • Clear Protective Coats" />
+  <meta name="twitter:description" id="twDesc" content="E-coat and water-based clear coats — specs, make-up, curing & troubleshooting." />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg" />
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --container:1200px; --header-h:64px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
+    *{box-sizing:border-box} html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ===== Header: fixed glass ===== */
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;border-bottom:1px solid rgba(255,255,255,.14);background:transparent;transition:background .2s,backdrop-filter .2s,box-shadow .2s}
+    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem}
+
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .header-right{display:flex;align-items:center;gap:10px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s,opacity .2s;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* Back button row (below header, above hero) */
+    .back-row{position:relative;margin-top:calc(var(--header-h) + 8px)}
+    .back-inner{max-width:var(--container);margin:0 auto;padding:6px 16px 0}
+    .back-btn{appearance:none;border:1px solid #e2e8f0;background:#ffffffcc;backdrop-filter:blur(8px);box-shadow:var(--shadow-1);border-radius:999px;padding:8px 12px;display:inline-flex;gap:8px;align-items:center;font-weight:800;color:#0f172a;cursor:pointer}
+    .back-btn:hover{background:#fff}
+    .back-btn:focus-visible{outline:2px solid #0ea5e9;outline-offset:2px}
+
+    /* Language (header switch + FAB) */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     /* Hero */
     .hero{
-      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
-      min-height: clamp(380px, 60svh, 640px);
+      position:relative;display:grid;place-items:center;text-align:center;color:#fff;
+      min-height:clamp(380px,60svh,640px);
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
                  url('https://img5.pic.in.th/file/secure-sv1/image0-174d2122a9ed67635.jpeg') center/cover no-repeat;
     }
@@ -59,19 +97,15 @@
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
-    /* Wrap & cards */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
+    /* Layout & cards */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    h2.section{margin:0 0 10px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
+    p.lead{margin:0 0 16px;color:#5f6d7c}
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
     /* Tabs */
     .tabs{display:flex;gap:8px;justify-content:center;margin-top:-22px}
-    .tab-btn{
-      appearance:none;border:1px solid #e3ece5;background:#fff;color:#1f2a24;
-      padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:800;
-      box-shadow:var(--shadow-1)
-    }
+    .tab-btn{appearance:none;border:1px solid #e3ece5;background:#fff;color:#1f2a24;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:800;box-shadow:var(--shadow-1)}
     .tab-btn[aria-selected="true"]{background:var(--brand-2);color:#fff;border-color:#2c7756}
 
     /* Feature pills */
@@ -95,7 +129,7 @@
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -108,19 +142,54 @@
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.baumechemical.com/index.html" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link" data-i18n-key="nav_home">หน้าหลัก</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link" data-i18n-key="nav_about">เกี่ยวกับเรา</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" data-i18n-key="nav_products">ผลิตภัณฑ์</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link" data-i18n-key="nav_contact">ติดต่อเรา</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header language switch -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Back button row (below header, above hero) -->
+  <div class="back-row" role="navigation" aria-label="Back row">
+    <div class="back-inner">
+      <button id="backBtn" class="back-btn">
+        <span aria-hidden="true">←</span>
+        <span data-i18n-key="back_label">ย้อนกลับ</span>
+      </button>
+    </div>
   </div>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" aria-label="Lacquer hero">
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">แลคเกอร์ใส</span>
@@ -145,7 +214,6 @@
       <h2 class="section" data-i18n-key="epa_info_title">ข้อมูลผลิตภัณฑ์: Teknoclear EPA 2020 (แลคเกอร์ไฟฟ้า)</h2>
       <p class="lead" data-i18n-key="epa_info_lead">แลคเกอร์ใสแบบ E-coat เงา ใส ฟิล์มแข็ง ทนกัดกร่อน ใช้กับผิวโลหะ/ผิวชุบ (เช่น เงิน ทองเหลือง เครื่องประดับ ฯลฯ) เพื่อกันสนิม/เพิ่มความเงางาม</p>
 
-      <!-- 6 Feature pills -->
       <div class="pill-grid">
         <div class="pill"><div class="ic">✨</div><h3 data-i18n-key="epa_feat1_t">ฟิล์มใสเงา</h3><p data-i18n-key="epa_feat1_d">บาง สม่ำเสมอ ไม่เป็นหยด</p></div>
         <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="epa_feat2_t">ทนกัดกร่อน</h3><p data-i18n-key="epa_feat2_d">เพิ่มอายุการใช้งานพื้นผิว</p></div>
@@ -273,12 +341,10 @@
 
   <!-- PAGE: Lacquer 2200 -->
   <main id="panel-2200" class="wrap hide" role="tabpanel" aria-labelledby="tab-2200">
-    <!-- Product info -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_info_title">ข้อมูลผลิตภัณฑ์: แลคเกอร์น้ำ 2200 (Chromium-free)</h2>
       <p class="lead" data-i18n-key="lac_info_lead">แลคเกอร์ใสน้ำ เทคโนโลยีล่าสุด ไม่ใช้โครเมียม ฟิล์มแข็ง ทนกัดกร่อน เพิ่มประสิทธิภาพชิ้นงานชุบสังกะสี และกันหมองทองแดง/ทองเหลือง/นิเกิล</p>
 
-      <!-- 6 Feature pills -->
       <div class="pill-grid">
         <div class="pill"><div class="ic">💧</div><h3 data-i18n-key="lac_feat1_t">Water-based</h3><p data-i18n-key="lac_feat1_d">เบสน้ำ ใช้ง่าย กลิ่นต่ำ</p></div>
         <div class="pill"><div class="ic">♻️</div><h3 data-i18n-key="lac_feat2_t">Chromium-free</h3><p data-i18n-key="lac_feat2_d">สอดคล้องข้อกำหนด</p></div>
@@ -289,7 +355,6 @@
       </div>
     </section>
 
-    <!-- Usage -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_usage_title">วิธีการใช้ / อัตราส่วน</h2>
       <div class="table">
@@ -307,13 +372,11 @@
       </div>
     </section>
 
-    <!-- Curing -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_cure_title">การอบ (Curing)</h2>
       <p data-i18n-key="lac_cure_text">อบ 60–70 °C 5–10 นาที (ดีขึ้นที่ 120–130 °C ขึ้นกับชนิดโลหะ)</p>
     </section>
 
-    <!-- Equipment -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_equip_title">อุปกรณ์</h2>
       <ul style="margin:0 0 0 18px">
@@ -321,13 +384,11 @@
       </ul>
     </section>
 
-    <!-- Maintenance -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_maint_title">การบำรุงรักษาน้ำยา</h2>
       <p data-i18n-key="lac_maint_text">คุม pH 8.5–9.0 ด้วยแอมโมเนียน้ำ/แอมโมเนียมไฮดรอกไซด์</p>
     </section>
 
-    <!-- Process -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_steps_title">ขั้นตอนการทำงาน (แนะนำ)</h2>
       <ul style="margin:0 0 0 18px">
@@ -338,7 +399,6 @@
       <p class="note" data-i18n-key="lac_note">*ใช้น้ำกลั่น/น้ำกรองสำหรับล้างและผสม (ไม่ใช้น้ำบาดาล)</p>
     </section>
 
-    <!-- EHS -->
     <section class="card">
       <h2 class="section" data-i18n-key="lac_ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
       <ul style="margin:0 0 0 18px">
@@ -419,11 +479,88 @@
   }
   </script>
 
-  <!-- i18n + Tab Router -->
+  <!-- ===== i18n + header/mobile + back + meta sync + Products auto-highlight ===== -->
   <script>
+    // Header glass + CSS var
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH);
+      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+    })();
+
+    // Mobile nav: scrim + body lock + ARIA + auto-highlight
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      function updateAriaForViewport(){
+        const desktop = window.matchMedia('(min-width: 921px)').matches;
+        if (desktop) { nav?.removeAttribute('aria-hidden'); toggle?.setAttribute('aria-expanded','false'); }
+        else { nav?.setAttribute('aria-hidden', String(!header.classList.contains('open'))); }
+      }
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus?.({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); updateAriaForViewport(); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        updateAriaForViewport();
+      }
+
+      // auto-highlight "Products" under /products*
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          const isProducts = here.startsWith('/products');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // Back button (history.back with same-origin check; fallback → /products/equipment/)
+    (function(){
+      const btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=>{
+        try{
+          const ref = document.referrer;
+          if(ref){
+            const r = new URL(ref);
+            if(r.origin === location.origin){ history.back(); return; }
+          }
+        }catch(e){}
+        location.href = '/products/equipment/';
+      });
+    })();
+
+    // ===== i18n dictionaries =====
     const I18N = {
       th:{
         page_title:"EPA 2020 แลคเกอร์ไฟฟ้า & แลคเกอร์น้ำ 2200 | Baume Chemical",
+        back_label:"ย้อนกลับ",
+        nav_home:"หน้าหลัก", nav_about:"เกี่ยวกับเรา", nav_products:"ผลิตภัณฑ์", nav_contact:"ติดต่อเรา",
+
         badge1:"แลคเกอร์ใส", badge2:"E-coat & Water-based", badge3:"Rack",
         hero_title:"EPA 2020 แลคเกอร์ไฟฟ้า + แลคเกอร์น้ำ 2200",
         hero_tagline:"สองโซลูชันเคลือบใสพร้อมใช้งาน: E-coat (EPA 2020) & Water-based 2200 — วิธีผสม สภาวะ อบ และแก้ปัญหา ครบในหน้าเดียว",
@@ -480,11 +617,6 @@
         ts13i:"การนำไฟฟ้าต่ำ", ts13f:"แลคเกอร์/solvent ต่ำ → ปรับ",
         ts14i:"การนำไฟฟ้าสูง >1300 μS", ts14f:"แลคเกอร์/solvent สูง หรือไอออนปน → UF",
 
-        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
-        ehs1:"ใช้น้ำกลั่น/กรองคุณภาพสูง (Conductivity < 5 μS สำหรับล้าง/ผสม)",
-        ehs2:"สวม PPE (ถุงมือ/แว่น/หน้ากาก) และระบายอากาศให้พอ",
-        ehs3:"ของเสียมีสารอินทรีย์/โลหะ → บำบัดตามระเบียบ",
-
         lac_info_title:"ข้อมูลผลิตภัณฑ์: แลคเกอร์น้ำ 2200 (Chromium-free)",
         lac_info_lead:"แลคเกอร์ใสน้ำ เทคโนโลยีล่าสุด ไม่ใช้โครเมียม ฟิล์มแข็ง ทนกัดกร่อน เพิ่มประสิทธิภาพชิ้นงานชุบสังกะสี และกันหมองทองแดง/ทองเหลือง/นิเกิล",
         lac_feat1_t:"Water-based", lac_feat1_d:"เบสน้ำ ใช้ง่าย กลิ่นต่ำ",
@@ -513,17 +645,19 @@
         lac_ehs2:"ควบคุมการทิ้งของเสียตามข้อกำหนด",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น."
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{
         page_title:"EPA 2020 E-coat & Water Lacquer 2200 | Baume Chemical",
+        back_label:"Back",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us",
+
         badge1:"Clear Lacquer", badge2:"E-coat & Water-based", badge3:"Rack",
         hero_title:"EPA 2020 (E-coat) + Water Lacquer 2200",
         hero_tagline:"Two clear-coat solutions in one page — specs, make-up, curing & troubleshooting for E-coat and water-based systems.",
 
         epa_info_title:"Product Info: Teknoclear EPA 2020 (Electrophoretic)",
         epa_info_lead:"Glossy clear E-coat film, hard and corrosion-resistant for metal/finished surfaces (silver, brass, jewelry, etc.).",
-
         epa_feat1_t:"High-gloss clear film", epa_feat1_d:"Thin, uniform, non-droplet",
         epa_feat2_t:"Corrosion resistance", epa_feat2_d:"Extends surface lifetime",
         epa_feat3_t:"Controlled thickness", epa_feat3_d:"0.05–0.1 A/dm², ~8 µm in 30 s",
@@ -574,11 +708,6 @@
         ts13i:"Low conductivity", ts13f:"Raise lacquer/solvent as specified",
         ts14i:"High conductivity >1300 μS", ts14f:"Reduce lacquer/solvent or UF to purge ions",
 
-        ehs_title:"Safety & Environment",
-        ehs1:"Use high-purity DI (conductivity < 5 μS) for rinse/make-up",
-        ehs2:"Wear PPE (gloves/goggles/respirator) with proper ventilation",
-        ehs3:"Treat organic/metal-bearing waste per regulation",
-
         lac_info_title:"Product Info: Water Lacquer 2200 (Chromium-free)",
         lac_info_lead:"Water-based clear coat, hard and corrosion-resistant; boosts Zn finishes and prevents tarnish on Cu/Brass/Ni.",
         lac_feat1_t:"Water-based", lac_feat1_d:"Low odor, easy handling",
@@ -600,7 +729,6 @@
         lac2k_step1:"Post-plate parts → DI rinse ×2",
         lac2k_step2:"Dip in Lacquer 2200",
         lac2k_step3:"Thermal dry",
-
         lac_note:"*Use DI/filtered water for rinse and make-up (avoid well water).",
 
         lac_ehs_title:"Safety & Environment",
@@ -608,48 +736,74 @@
         lac_ehs2:"Dispose per local regulations",
 
         footer_products:"Products", footer_contact:"Contact Us",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00"
+        footer_hours:"🕒 Hours 08:00–17:00", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
+    // Per-tab meta (both languages)
     const pageMeta = {
       epa2020: {
-        title_th:"EPA 2020 แลคเกอร์ไฟฟ้า | Baume Chemical",
-        title_en:"EPA 2020 Electrophoretic Clear Lacquer | Baume Chemical",
-        desc_th:"แลคเกอร์ใสแบบ E-coat: วิธีผสม สเปก RI/pH/μS กระแส/เวลา อบ และแก้ปัญหา ครบ.",
-        desc_en:"E-coat clear lacquer: make-up, RI/pH/μS, current/time, curing & troubleshooting."
+        th: { title:"EPA 2020 แลคเกอร์ไฟฟ้า | Baume Chemical",
+              desc:"แลคเกอร์ใสแบบ E-coat: วิธีผสม สเปก RI/pH/μS กระแส/เวลา อบ และแก้ปัญหา ครบ." },
+        en: { title:"EPA 2020 Electrophoretic Clear Lacquer | Baume Chemical",
+              desc:"E-coat clear lacquer: make-up, RI/pH/μS, current/time, curing & troubleshooting." }
       },
       lacquer2200: {
-        title_th:"แลคเกอร์น้ำ 2200 | Baume Chemical",
-        title_en:"Water Lacquer 2200 | Baume Chemical",
-        desc_th:"แลคเกอร์ใสน้ำ Chromium-free: วิธีผสม จุ่ม อบ pH และการบำรุงรักษา.",
-        desc_en:"Water-based chromium-free clear coat: mix, dip, dry, pH & maintenance."
+        th: { title:"แลคเกอร์น้ำ 2200 | Baume Chemical",
+              desc:"แลคเกอร์ใสน้ำ Chromium-free: วิธีผสม จุ่ม อบ pH และการบำรุงรักษา." },
+        en: { title:"Water Lacquer 2200 | Baume Chemical",
+              desc:"Water-based chromium-free clear coat: mix, dip, dry, pH & maintenance." }
       }
     };
+
+    const els = {
+      langBtns: ()=> document.querySelectorAll('.lang-btn'),
+      translatables: ()=> document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc'),
+    };
+
+    function updateMeta(L, route){
+      const tab = (route==='lacquer2200') ? 'lacquer2200' : 'epa2020';
+      const m = pageMeta[tab][L];
+      // title + description
+      els.metaTitle && (els.metaTitle.textContent = m.title, document.title = m.title);
+      els.metaDesc && els.metaDesc.setAttribute('content', m.desc);
+      // OG/Twitter mirrors title/desc
+      els.ogTitle && els.ogTitle.setAttribute('content', m.title);
+      els.ogDesc && els.ogDesc.setAttribute('content', m.desc);
+      els.twTitle && els.twTitle.setAttribute('content', m.title);
+      els.twDesc && els.twDesc.setAttribute('content', m.desc);
+      els.ogLocale && els.ogLocale.setAttribute('content', L==='en' ? 'en_US' : 'th_TH');
+    }
 
     function applyLang(lang){
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // apply text
-      document.querySelectorAll('[data-i18n-key]').forEach(node=>{
+      // translate visible content
+      els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
-        const val = I18N[L][key];
-        if(typeof val !== 'undefined') node.textContent = val;
+        const dict = I18N[L];
+        if (key && dict && dict[key] !== undefined) node.textContent = dict[key];
       });
 
-      // update title/description for current tab
-      const hash = (location.hash||'#epa2020').replace('#','');
-      const meta = pageMeta[hash==='lacquer2200'?'lacquer2200':'epa2020'];
-      const titleEl = document.querySelector('title');
-      const descEl = document.querySelector('meta[name="description"]');
-      if(titleEl) titleEl.textContent = (L==='en') ? meta.title_en : meta.title_th;
-      if(descEl) descEl.setAttribute('content', (L==='en') ? meta.desc_en : meta.desc_th);
-
-      // update buttons state
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
-        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
+      // nav labels too
+      document.querySelectorAll('.menu a.nav-link').forEach(a=>{
+        const k = a.getAttribute('data-i18n-key'); if(k && I18N[L][k]!==undefined) a.textContent = I18N[L][k];
       });
+
+      // sync both switchers
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // update SEO metas for current tab
+      const currentRoute = (location.hash || '#epa2020').slice(1);
+      updateMeta(L, currentRoute);
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
@@ -664,13 +818,9 @@
       p2.classList.toggle('hide', isEPA);
       t1.setAttribute('aria-selected', String(isEPA));
       t2.setAttribute('aria-selected', String(!isEPA));
-
+      // update metas on tab change
       const L = (localStorage.getItem('lang') || 'th');
-      const meta = pageMeta[isEPA?'epa2020':'lacquer2200'];
-      const titleEl = document.querySelector('title');
-      const descEl = document.querySelector('meta[name="description"]');
-      if(titleEl) titleEl.textContent = (L==='en') ? meta.title_en : meta.title_th;
-      if(descEl) descEl.setAttribute('content', (L==='en') ? meta.desc_en : meta.desc_th);
+      updateMeta(L, route);
     }
 
     // Init
@@ -678,10 +828,10 @@
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
 
-      document.querySelectorAll('.lang-fab .lang-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
-      });
+      // language clicks (header + fab)
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
 
+      // tabs
       document.getElementById('tab-epa').addEventListener('click', ()=> { history.replaceState(null,"","#epa2020"); showPanel('epa2020'); });
       document.getElementById('tab-2200').addEventListener('click', ()=> { history.replaceState(null,"","#lacquer2200"); showPanel('lacquer2200'); });
 
@@ -699,4 +849,3 @@
   </script>
 </body>
 </html>
- 

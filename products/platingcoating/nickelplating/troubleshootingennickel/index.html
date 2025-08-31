@@ -4,18 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title data-i18n-key="meta_title">KEMTEK NI-508 • ชุบนิกเกิลไม่ใช้ไฟฟ้า (ฟอสฟอรัสปานกลาง) | Baume Chemical</title>
-  <meta name="description" content="กระบวนการ EN (Mid-P ≥7%P) เสถียร เงาสูง แข็ง/ทนสึกหรอ อัตราการสะสม ~13–20 µm/h ใช้ได้ทั้งถังแขวนและถังกลิ้ง พร้อมสเปก/สูตรผสม/การดูแลครบ">
+  <!-- === SEO (i18n-ready) === -->
+  <title id="metaTitle" data-i18n-key="meta_title">KEMTEK NI-508 • ชุบนิกเกิลไม่ใช้ไฟฟ้า (ฟอสฟอรัสปานกลาง) | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="กระบวนการ EN (Mid-P ≥7%P) เสถียร เงาสูง แข็ง/ทนสึกหรอ อัตราการสะสม ~13–20 µm/h ใช้ได้ทั้งถังแขวนและถังกลิ้ง พร้อมสเปก/สูตรผสม/การดูแลครบ">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph -->
+  <!-- === Open Graph / Twitter (i18n-updatable) === -->
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="KEMTEK NI-508 • Electroless Nickel (Mid-P)">
-  <meta property="og:description" content="EN Mid-P เสถียร เงาสูง แข็ง ทนกัดกร่อน อัตราการสะสม ~13–20 µm/h พร้อมแนวทางควบคุม/ปรับเติม">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
+  <meta property="og:title" id="ogTitle" content="KEMTEK NI-508 • Electroless Nickel (Mid-P)">
+  <meta property="og:description" id="ogDesc" content="EN Mid-P เสถียร เงาสูง แข็ง ทนกัดกร่อน อัตราการสะสม ~13–20 µm/h พร้อมแนวทางควบคุม/ปรับเติม">
+  <meta property="og:url" id="ogURL" content="">
   <meta property="og:image" content="https://i.imgur.com/j7SpCDD.jpeg">
+  <meta property="og:image:alt" content="Electroless Nickel plating bath">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="KEMTEK NI-508 • Electroless Nickel (Mid-P)">
+  <meta name="twitter:description" id="twDesc" content="Stable Mid-P EN with ~13–20 µm/h rate; bright, hard, corrosion-resistant.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -28,43 +35,76 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --container:1200px; --header-h:64px; --vh:1vh;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
+    *{box-sizing:border-box} html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    /* ===== Header: glass fixed ===== */
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;border-bottom:1px solid rgba(255,255,255,.14);background:transparent;transition:background .2s,backdrop-filter .2s,box-shadow .2s}
+    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem}
 
-    /* Hero */
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .header-right{display:flex;align-items:center;gap:10px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s,opacity .2s;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
+    }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* ===== Back row (under header, above hero) ===== */
+    .back-row{position:relative;margin-top:calc(var(--header-h) + 8px)}
+    .back-inner{max-width:var(--container);margin:0 auto;padding:6px 16px 0}
+    .back-btn{appearance:none;border:1px solid #e2e8f0;background:#ffffffcc;backdrop-filter:blur(8px);box-shadow:var(--shadow-1);border-radius:999px;padding:8px 12px;display:inline-flex;gap:8px;align-items:center;font-weight:800;color:#0f172a;cursor:pointer}
+    .back-btn:hover{background:#fff}
+    .back-btn:focus-visible{outline:2px solid #0ea5e9;outline-offset:2px}
+
+    /* ===== Language switchers (header + FAB sync) ===== */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* ===== Hero ===== */
     .hero{
-      position:relative; display:grid; place-items:center; text-align:center; color:#fff;
+      position:relative;display:grid;place-items:center;text-align:center;color:#fff;
       min-height: clamp(380px, 60svh, 640px);
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
-                 url('https://i.imgur.com/j7SpCDD.jpeg') center/cover no-repeat;
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)), url('https://i.imgur.com/j7SpCDD.jpeg') center/cover no-repeat;
     }
     .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
-    /* Layout & cards */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    /* ===== Layout & cards ===== */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
-    /* Feature pills */
+    /* ===== Feature pills ===== */
     .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
     @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
     .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
@@ -72,20 +112,19 @@
     .pill p{margin:0;color:#5b6675}
     .ic{font-size:20px}
 
-    /* Tables */
+    /* ===== Tables ===== */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
     table{border-collapse:collapse;width:100%;min-width:760px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
 
-    /* Notes */
     .note{font-style:italic;color:#9a3412}
 
-    /* Footer */
+    /* ===== Footer ===== */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -98,29 +137,65 @@
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.baumechemical.com/index.html" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- === Floating Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link" data-i18n-key="nav_home">หน้าหลัก</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link" data-i18n-key="nav_about">เกี่ยวกับเรา</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" data-i18n-key="nav_products">ผลิตภัณฑ์</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link" data-i18n-key="nav_contact">ติดต่อเรา</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header language switch -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Back button row (under header, above hero) -->
+  <div class="back-row" role="navigation" aria-label="Back row">
+    <div class="back-inner">
+      <button id="backBtn" class="back-btn">
+        <span aria-hidden="true">←</span>
+        <span data-i18n-key="back_label">ย้อนกลับ</span>
+      </button>
+    </div>
   </div>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-label="KEMTEK NI-508 hero">
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
         <span class="badge" data-i18n-key="badge1">Electroless Nickel (Mid-P ≥ 7%)</span>
-        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+        <span class="badge" data-i18n-key="badge2">Rack &amp; Barrel</span>
       </div>
       <h1 data-i18n-key="hero_title">KEMTEK NI-508</h1>
       <p data-i18n-key="hero_tagline">กระบวนการชุบนิกเกิลไม่ใช้ไฟฟ้าที่เสถียร เงาสูง แข็ง/ทนสึกหรอ และต้านการกัดกร่อน อัตราสะสม ~0.5–0.8 mil/h (≈13–20 µm/h) เหมาะกับงานหลากหลายวัสดุ</p>
     </div>
   </section>
 
+  <!-- ===== Main ===== -->
   <main class="wrap">
     <!-- Features -->
     <section id="features" class="card">
@@ -160,7 +235,7 @@
             <tr><td data-i18n-key="specs_row1">อุณหภูมิ</td><td data-i18n-key="specs_row1_v">82–91 °C (เหมาะสุด ~88 °C)</td></tr>
             <tr><td data-i18n-key="specs_row2">pH (ทั่วไป)</td><td data-i18n-key="specs_row2_v">4.6–4.8 (เป้าหมาย 4.7–4.8)</td></tr>
             <tr><td data-i18n-key="specs_row3">pH (งานอลูมิเนียม)</td><td data-i18n-key="specs_row3_v">ไม่เกิน ~5.2</td></tr>
-            <tr><td data-i18n-key="specs_row4" data-i18n-html>นิกเกิลละลาย</td><td data-i18n-key="specs_row4_v">5–6 กรัม/ลิตร (ควรรักษา ≥5.3 g/L)</td></tr>
+            <tr><td data-i18n-key="specs_row4">นิกเกิลละลาย</td><td data-i18n-key="specs_row4_v">5–6 กรัม/ลิตร (ควรรักษา ≥5.3 g/L)</td></tr>
             <tr><td data-i18n-key="specs_row5">การกวน</td><td data-i18n-key="specs_row5_v">เขย่า/กวนแนวตั้ง หรือใช้ลมเบาที่กรองแล้ว</td></tr>
             <tr><td data-i18n-key="specs_row6">การกรอง</td><td data-i18n-key="specs_row6_v">กรองต่อเนื่อง ~15 µm; ออฟไลน์ ~3 µm</td></tr>
             <tr><td data-i18n-key="specs_row7">อัตราสะสม</td><td data-i18n-key="specs_row7_v">≈0.5–0.8 mil/h (13–20 µm/h)</td></tr>
@@ -279,7 +354,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -327,14 +402,91 @@
     </div>
   </footer>
 
-  <!-- === i18n === -->
+  <!-- ===== Scripts: header glass, menu, back, i18n SEO ===== -->
   <script>
+    // Header glass + dynamic --header-h
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+    })();
+
+    // Mobile nav: scrim + body lock + ARIA + auto-highlight
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      function updateAriaForViewport(){
+        const desktop = window.matchMedia('(min-width: 921px)').matches;
+        if (desktop) { nav?.removeAttribute('aria-hidden'); toggle?.setAttribute('aria-expanded','false'); }
+        else { nav?.setAttribute('aria-hidden', String(!header.classList.contains('open'))); }
+      }
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus?.({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); updateAriaForViewport(); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        updateAriaForViewport();
+      }
+
+      // auto-highlight "Products" under /products*
+      try{
+        const here = location.pathname.replace(/\/+$/,'').toLowerCase();
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'').toLowerCase();
+          const isProducts = here.startsWith('/products');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // Back button: history.back if same-origin; fallback → /products/
+    (function(){
+      const btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=>{
+        try{
+          const ref = document.referrer;
+          if(ref){
+            const r = new URL(ref);
+            if(r.origin === location.origin){ history.back(); return; }
+          }
+        }catch(e){}
+        location.href = '/products/';
+      });
+    })();
+
+    // i18n dictionaries
     const I18N = {
       th:{
         meta_title:"KEMTEK NI-508 • ชุบนิกเกิลไม่ใช้ไฟฟ้า (ฟอสฟอรัสปานกลาง) | Baume Chemical",
         meta_desc:"กระบวนการ EN (Mid-P ≥7%P) เสถียร เงาสูง แข็ง/ทนสึกหรอ อัตราการสะสม ~13–20 µm/h ใช้ได้ทั้งถังแขวนและถังกลิ้ง พร้อมสเปก/สูตรผสม/การดูแลครบ",
         og_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P)",
         og_desc:"EN Mid-P เสถียร เงาสูง แข็ง ทนกัดกร่อน อัตราการสะสม ~13–20 µm/h พร้อมแนวทางควบคุม/ปรับเติม",
+
+        back_label:"ย้อนกลับ",
+        nav_home:"หน้าหลัก", nav_about:"เกี่ยวกับเรา", nav_products:"ผลิตภัณฑ์", nav_contact:"ติดต่อเรา",
 
         badge1:"ชุบนิกเกิลไม่ใช้ไฟฟ้า (Mid-P ≥ 7%)",
         badge2:"Rack & Barrel",
@@ -440,23 +592,16 @@
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.",
-        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-
-        cat_pretreat:"เตรียมผิว (Pretreatment)",
-        cat_plating:"ชุบเคลือบ (Plating)",
-        cat_black:"ดำเคมี (Blackening)",
-        cat_passivation:"พาสซิเวชัน (Passivation)",
-        cat_polishing:"ขัดเงา (Polishing)",
-        cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)",
-        cat_service:"บริการ (Customer Service)",
-        cat_equipment:"อุปกรณ์ (Equipment)"
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น."
       },
       en:{
         meta_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P) | Baume Chemical",
         meta_desc:"Stable EN (Mid-P ≥7%P): high brightness, hard/wear-resistant, corrosion-resistant. Deposition ~13–20 µm/h for rack & barrel. Includes specs, make-up, control.",
         og_title:"KEMTEK NI-508 • Electroless Nickel (Mid-P)",
         og_desc:"Stable Mid-P EN with ~13–20 µm/h rate; bright, hard, corrosion-resistant. Practical control/addition guidance.",
+
+        back_label:"Back",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us",
 
         badge1:"Electroless Nickel (Mid-P ≥ 7%)",
         badge2:"Rack & Barrel",
@@ -562,61 +707,85 @@
         footer_products:"Products",
         footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.",
-        footer_hours:"🕒 Hours 08:00–17:00",
-
-        cat_pretreat:"Pretreatment",
-        cat_plating:"Plating",
-        cat_black:"Blackening",
-        cat_passivation:"Passivation",
-        cat_polishing:"Polishing",
-        cat_strippers:"Strippers",
-        cat_protective:"Protective Treatment",
-        cat_service:"Customer Service",
-        cat_equipment:"Equipment"
+        footer_hours:"🕒 Hours 08:00–17:00"
       }
     };
 
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
+    // Per-language meta text for SEO/OG/Twitter
+    const META = {
+      th:{ title:I18N.th.meta_title, desc:I18N.th.meta_desc, locale:"th_TH" },
+      en:{ title:I18N.en.meta_title, desc:I18N.en.meta_desc, locale:"en_US" }
     };
+
+    const els = {
+      langBtns: ()=> document.querySelectorAll('.lang-btn'),
+      translatables: ()=> document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      ogURL: document.getElementById('ogURL'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc'),
+    };
+
+    function updateMeta(L){
+      const m = META[L] || META.th;
+      const title = m.title, desc = m.desc;
+      els.metaTitle && (els.metaTitle.textContent = title, document.title = title);
+      els.metaDesc && els.metaDesc.setAttribute('content', desc);
+      els.ogTitle && els.ogTitle.setAttribute('content', title);
+      els.ogDesc && els.ogDesc.setAttribute('content', desc);
+      els.twTitle && els.twTitle.setAttribute('content', title);
+      els.twDesc && els.twDesc.setAttribute('content', desc);
+      els.ogLocale && els.ogLocale.setAttribute('content', m.locale);
+      els.ogURL && els.ogURL.setAttribute('content', location.href.split('#')[0]);
+    }
 
     function applyLang(lang){
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // Title & meta
-      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
-      try{
-        const md = document.querySelector('meta[name="description"]');
-        if(md && I18N[L].meta_desc) md.setAttribute('content', I18N[L].meta_desc);
-        const ogt = document.querySelector('meta[property="og:title"]');
-        if(ogt && I18N[L].og_title) ogt.setAttribute('content', I18N[L].og_title);
-        const ogd = document.querySelector('meta[property="og:description"]');
-        if(ogd && I18N[L].og_desc) ogd.setAttribute('content', I18N[L].og_desc);
-      }catch(e){}
-
-      // Toggle button state
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-
-      // Swap texts (support innerHTML when node has data-i18n-html)
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
-        if(!key) return;
-        const val = I18N[L][key];
-        if(typeof val === 'undefined') return;
-        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val;
-        else node.textContent = val;
+        const dict = I18N[L];
+        if (key && dict && dict[key] !== undefined){
+          if(node.hasAttribute('data-i18n-html')) node.innerHTML = dict[key];
+          else node.textContent = dict[key];
+        }
+      });
+
+      // sync language buttons (header + FAB)
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // update meta tags
+      updateMeta(L);
+
+      // update nav labels too
+      document.querySelectorAll('.menu a.nav-link').forEach(a=>{
+        const k = a.getAttribute('data-i18n-key'); if(k && I18N[L][k]!==undefined) a.textContent = I18N[L][k];
       });
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
-    (function initLang(){
+    // Init + canonical + iOS 100vh fix
+    (function init(){
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+
+      try{
+        const link = document.createElement('link');
+        link.setAttribute('rel','canonical');
+        link.setAttribute('href', location.href.split('#')[0]);
+        document.head.appendChild(link);
+      }catch(e){}
+
+      // iOS svh fallback
+      function setVH(){ document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px'); }
+      setVH(); window.addEventListener('resize', setVH, {passive:true}); window.addEventListener('orientationchange', setVH, {passive:true});
     })();
   </script>
 </body>

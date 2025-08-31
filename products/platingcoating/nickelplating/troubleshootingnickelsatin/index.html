@@ -4,18 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title data-i18n-key="meta_title">Nickel Satin SM • น้ำยาชุบนิเกิ้ลซาติน | Baume Chemical</title>
-  <meta name="description" content="ชุดน้ำยาซาตินนิเกิ้ล (Satin Nickel) สำหรับงาน Rack/Barrel ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี รองรับโครเมี่ยม พร้อมสเปก/สูตรผสม/แนวทางควบคุมครบ">
+  <!-- === SEO (i18n-ready) === -->
+  <title id="metaTitle" data-i18n-key="meta_title">Nickel Satin SM • น้ำยาชุบนิเกิ้ลซาติน | Baume Chemical</title>
+  <meta name="description" id="metaDesc" content="ชุดน้ำยาซาตินนิเกิ้ล (Satin Nickel) สำหรับงาน Rack/Barrel ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี รองรับโครเมี่ยม พร้อมสเปก/สูตรผสม/แนวทางควบคุมครบ">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter (i18n-updatable) -->
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Nickel Satin SM • Satin Nickel System">
-  <meta property="og:description" content="Adjustable matte level, smooth satin grain, wide current range, chrome-ready. Includes specs & make-up/control guidance.">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
+  <meta property="og:title" id="ogTitle" content="Nickel Satin SM • Satin Nickel System">
+  <meta property="og:description" id="ogDesc" content="Adjustable matte level, smooth satin grain, wide current range, chrome-ready. Includes specs & make-up/control guidance.">
+  <meta property="og:url" id="ogURL" content="">
   <meta property="og:image" content="https://i.imgur.com/j7SpCDD.jpeg">
+  <meta property="og:image:alt" content="Satin nickel finish">
+  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twTitle" content="Nickel Satin SM • Satin Nickel System">
+  <meta name="twitter:description" id="twDesc" content="Adjustable matte level, smooth satin grain, wide current range, chrome-ready.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -28,25 +35,60 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --container:1200px; --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-    }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    /* ===== Header: glass fixed ===== */
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;border-bottom:1px solid rgba(255,255,255,.14);background:transparent;transition:background .2s,backdrop-filter .2s,box-shadow .2s}
+    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem}
 
-    /* === Hero === */
+    .primary-nav{display:flex;align-items:center;gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+
+    .header-right{display:flex;align-items:center;gap:10px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s,opacity .2s;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
+    }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* ===== Back row (under header, above hero) ===== */
+    .back-row{position:relative;margin-top:calc(var(--header-h) + 8px)}
+    .back-inner{max-width:var(--container);margin:0 auto;padding:6px 16px 0}
+    .back-btn{appearance:none;border:1px solid #e2e8f0;background:#ffffffcc;backdrop-filter:blur(8px);box-shadow:var(--shadow-1);border-radius:999px;padding:8px 12px;display:inline-flex;gap:8px;align-items:center;font-weight:800;color:#0f172a;cursor:pointer}
+    .back-btn:hover{background:#fff}
+    .back-btn:focus-visible{outline:2px solid #0ea5e9;outline-offset:2px}
+
+    /* ===== Language switchers (header + FAB sync) ===== */
+    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    /* ===== Hero ===== */
     .hero{
       position:relative; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(380px, 60svh, 640px);
@@ -58,13 +100,13 @@
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
-    /* === Layout & cards === */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    /* ===== Layout & cards ===== */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
     .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
-    /* === Feature pills === */
+    /* ===== Feature pills ===== */
     .pill-grid{display:grid;gap:14px;grid-template-columns:1fr}
     @media(min-width:900px){.pill-grid{grid-template-columns:repeat(3,1fr)}}
     .pill{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px}
@@ -72,21 +114,20 @@
     .pill p{margin:0;color:#5b6675}
     .ic{font-size:20px}
 
-    /* === Tables === */
+    /* ===== Tables ===== */
     .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
     table{border-collapse:collapse;width:100%;min-width:760px}
     th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
     th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
 
-    /* Notes */
     .note{font-style:italic;color:#9a3412}
     .muted{color:#5b6775}
 
-    /* === Footer === */
+    /* ===== Footer ===== */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -99,18 +140,53 @@
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.baumechemical.com/index.html" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- === Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link" data-i18n-key="nav_home">หน้าหลัก</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link" data-i18n-key="nav_about">เกี่ยวกับเรา</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" data-i18n-key="nav_products">ผลิตภัณฑ์</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link" data-i18n-key="nav_contact">ติดต่อเรา</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header language switch (synced with FAB) -->
+        <div class="lang-switch" role="group" aria-label="Language switcher (header)">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Back button row (under menu, above hero) -->
+  <div class="back-row" role="navigation" aria-label="Back row">
+    <div class="back-inner">
+      <button id="backBtn" class="back-btn">
+        <span aria-hidden="true">←</span>
+        <span data-i18n-key="back_label">ย้อนกลับ</span>
+      </button>
+    </div>
   </div>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
@@ -122,6 +198,7 @@
     </div>
   </section>
 
+  <!-- ===== Main ===== -->
   <main class="wrap">
     <!-- Features -->
     <section id="features" class="card">
@@ -157,10 +234,7 @@
       <div class="table" style="margin-bottom:12px">
         <table aria-label="Operating conditions">
           <thead>
-            <tr>
-              <th data-i18n-key="specs_head_param">พารามิเตอร์</th>
-              <th data-i18n-key="specs_head_value">ค่าแนะนำ</th>
-            </tr>
+            <tr><th data-i18n-key="specs_head_param">พารามิเตอร์</th><th data-i18n-key="specs_head_value">ค่าแนะนำ</th></tr>
           </thead>
           <tbody>
             <tr><td data-i18n-key="s_row1">อุณหภูมิ</td><td data-i18n-key="s_row1_v">50–60 °C (แนะนำ ~55 °C)</td></tr>
@@ -177,11 +251,7 @@
       <div class="table">
         <table aria-label="Make-up per liter">
           <thead>
-            <tr>
-              <th data-i18n-key="mix_head_comp">ส่วนประกอบ</th>
-              <th data-i18n-key="mix_head_amt">ปริมาณ</th>
-              <th data-i18n-key="mix_head_std">ค่ามาตรฐาน</th>
-            </tr>
+            <tr><th data-i18n-key="mix_head_comp">ส่วนประกอบ</th><th data-i18n-key="mix_head_amt">ปริมาณ</th><th data-i18n-key="mix_head_std">ค่ามาตรฐาน</th></tr>
           </thead>
           <tbody>
             <tr><td data-i18n-key="mix_row1">นิเกิ้ลซัลเฟต</td><td>—</td><td data-i18n-key="mix_row1_v">400–450 กรัม/ลิตร</td></tr>
@@ -203,10 +273,7 @@
       <div class="table">
         <table aria-label="Operating additions">
           <thead>
-            <tr>
-              <th data-i18n-key="add_head_item">รายการ</th>
-              <th data-i18n-key="add_head_dose">อัตราการใช้</th>
-            </tr>
+            <tr><th data-i18n-key="add_head_item">รายการ</th><th data-i18n-key="add_head_dose">อัตราการใช้</th></tr>
           </thead>
           <tbody>
             <tr><td>Satin Carrier A</td><td data-i18n-key="add_a">0.5–1.5 ลิตร ต่อ 10,000 A·h</td></tr>
@@ -273,7 +340,7 @@
     <p class="note" data-i18n-key="note_ppe">*ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างกระบวนการ</p>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -321,11 +388,98 @@
     </div>
   </footer>
 
-  <!-- === i18n === -->
+  <!-- ===== Scripts: header glass, menu scrim/lock, back, i18n SEO/OG/Twitter, auto-highlight ===== -->
   <script>
+    // Header glass + dynamic --header-h
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const setH = ()=>{ const h = header? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+    })();
+
+    // Mobile nav: scrim + body lock + ARIA + auto-highlight
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      function updateAriaForViewport(){
+        const desktop = window.matchMedia('(min-width: 921px)').matches;
+        if (desktop) { nav?.removeAttribute('aria-hidden'); toggle?.setAttribute('aria-expanded','false'); }
+        else { nav?.setAttribute('aria-hidden', String(!header.classList.contains('open'))); }
+      }
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus?.({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); updateAriaForViewport(); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        updateAriaForViewport();
+      }
+
+      // auto-highlight "Products" for product-category URLs
+      try{
+        const here = location.pathname.replace(/\/+$/,'').toLowerCase();
+        const productBuckets = [
+          '/products', '/products/pretreatment', '/products/platingcoating', '/products/blackening',
+          '/products/passivation', '/products/polishing', '/products/strippers',
+          '/products/protective', '/products/service', '/products/equipment'
+        ];
+        const isProductish = productBuckets.some(p => here.startsWith(p));
+        const links = document.querySelectorAll('.menu a');
+        links.forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'').toLowerCase();
+          if (isProductish && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+    })();
+
+    // Back button: history.back if same-origin; fallback → /products/
+    (function(){
+      const btn = document.getElementById('backBtn');
+      if(!btn) return;
+      btn.addEventListener('click', ()=>{
+        try{
+          const ref = document.referrer;
+          if(ref){
+            const r = new URL(ref);
+            if(r.origin === location.origin){ history.back(); return; }
+          }
+        }catch(e){}
+        location.href = '/products/';
+      });
+    })();
+
+    // ===== i18n dictionaries (content + SEO/OG/Twitter + nav/back) =====
     const I18N = {
       th:{
         meta_title:"Nickel Satin SM • น้ำยาชุบนิเกิ้ลซาติน | Baume Chemical",
+        meta_desc:"ชุดน้ำยาซาตินนิเกิ้ล (Satin Nickel) สำหรับงาน Rack/Barrel ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี รองรับโครเมี่ยม พร้อมสเปก/สูตรผสม/แนวทางควบคุมครบ",
+        og_title:"Nickel Satin SM • Satin Nickel System",
+        og_desc:"ปรับระดับความด้านได้ เม็ดซาตินเนียน ช่วงกระแสกว้าง รองรับโครเมี่ยม (พร้อมสเปก/แนวทางควบคุม)",
+
+        back_label:"ย้อนกลับ",
+        nav_home:"หน้าหลัก", nav_about:"เกี่ยวกับเรา", nav_products:"ผลิตภัณฑ์", nav_contact:"ติดต่อเรา",
+
         badge1:"ระบบซาตินนิเกิ้ล", badge2:"Rack & Barrel",
         hero_title:"Nickel Satin SM",
         hero_tagline:"ชุดน้ำยาซาตินนิเกิ้ลสำหรับงานตกแต่ง ปรับระดับความด้านได้ ผิวเนียนสม่ำเสมอ ครอบคลุมซอกมุมดี และรองรับการชุบโครเมี่ยมต่อ",
@@ -406,20 +560,17 @@
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.",
-        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-
-        cat_pretreat:"เตรียมผิว (Pretreatment)",
-        cat_plating:"ชุบเคลือบ (Plating)",
-        cat_black:"ดำเคมี (Blackening)",
-        cat_passivation:"พาสซิเวชัน (Passivation)",
-        cat_polishing:"ขัดเงา (Polishing)",
-        cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)",
-        cat_service:"บริการ (Customer Service)",
-        cat_equipment:"อุปกรณ์ (Equipment)"
+        footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น."
       },
       en:{
         meta_title:"Nickel Satin SM • Satin Nickel Additive | Baume Chemical",
+        meta_desc:"Satin nickel system for rack & barrel: adjustable matte level, smooth uniform grain, strong LCD coverage, chrome-ready. Full specs, make-up, and control guidance.",
+        og_title:"Nickel Satin SM • Satin Nickel System",
+        og_desc:"Adjustable matte, fine satin grain, wide current range, chrome-ready (with specs & controls).",
+
+        back_label:"Back",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us",
+
         badge1:"Satin Nickel System", badge2:"Rack & Barrel",
         hero_title:"Nickel Satin SM",
         hero_tagline:"Satin nickel system for decorative work: adjustable matte level, smooth uniform grain, strong LCD coverage, and chrome-ready base.",
@@ -500,59 +651,72 @@
         footer_products:"Products",
         footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.",
-        footer_hours:"🕒 Hours 08:00–17:00",
-
-        cat_pretreat:"Pretreatment",
-        cat_plating:"Plating",
-        cat_black:"Blackening",
-        cat_passivation:"Passivation",
-        cat_polishing:"Polishing",
-        cat_strippers:"Strippers",
-        cat_protective:"Protective Treatment",
-        cat_service:"Customer Service",
-        cat_equipment:"Equipment"
+        footer_hours:"🕒 Hours 08:00–17:00"
       }
     };
 
+    // Per-language meta text for SEO/OG/Twitter
+    const META = { th:{title:I18N.th.meta_title,desc:I18N.th.meta_desc,locale:"th_TH"}, en:{title:I18N.en.meta_title,desc:I18N.en.meta_desc,locale:"en_US"} };
+
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
+      langBtns: ()=> document.querySelectorAll('.lang-btn'),
+      translatables: ()=> document.querySelectorAll('[data-i18n-key]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
+      ogURL: document.getElementById('ogURL'),
+      twTitle: document.getElementById('twTitle'),
+      twDesc: document.getElementById('twDesc'),
     };
+
+    function updateMeta(L){
+      const m = META[L] || META.th;
+      els.metaTitle && (els.metaTitle.textContent = m.title, document.title = m.title);
+      els.metaDesc && els.metaDesc.setAttribute('content', m.desc);
+      els.ogTitle && els.ogTitle.setAttribute('content', I18N[L].og_title || m.title);
+      els.ogDesc && els.ogDesc.setAttribute('content', I18N[L].og_desc || m.desc);
+      els.twTitle && els.twTitle.setAttribute('content', I18N[L].og_title || m.title);
+      els.twDesc && els.twDesc.setAttribute('content', I18N[L].og_desc || m.desc);
+      els.ogLocale && els.ogLocale.setAttribute('content', m.locale);
+      els.ogURL && els.ogURL.setAttribute('content', location.href.split('#')[0]);
+    }
 
     function applyLang(lang){
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // <title> & meta
-      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
-      try{
-        const md = document.querySelector('meta[name="description"]');
-        if(md && I18N[L].meta_desc) md.setAttribute('content', I18N[L].meta_desc);
-        const ogt = document.querySelector('meta[property="og:title"]');
-        if(ogt && I18N[L].og_title) ogt.setAttribute('content', I18N[L].og_title);
-        const ogd = document.querySelector('meta[property="og:description"]');
-        if(ogd && I18N[L].og_desc) ogd.setAttribute('content', I18N[L].og_desc);
-      }catch(e){}
-
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-
+      // swap texts (supports data-i18n-html if present)
       els.translatables().forEach(node=>{
-        const key = node.getAttribute('data-i18n-key');
-        if(!key) return;
-        const val = I18N[L][key];
-        if(typeof val === 'undefined') return;
-        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val;
-        else node.textContent = val;
+        const key = node.getAttribute('data-i18n-key'); if(!key) return;
+        const val = I18N[L][key]; if(typeof val === 'undefined') return;
+        if(node.hasAttribute('data-i18n-html')) node.innerHTML = val; else node.textContent = val;
       });
 
+      // sync all language buttons (header + FAB)
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
+      // update nav labels
+      document.querySelectorAll('.menu a.nav-link').forEach(a=>{
+        const k = a.getAttribute('data-i18n-key'); if(k && I18N[L][k]!==undefined) a.textContent = I18N[L][k];
+      });
+
+      updateMeta(L);
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
-    (function initLang(){
+    (function init(){
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+
+      // canonical
+      try{
+        const link = document.createElement('link');
+        link.setAttribute('rel','canonical'); link.setAttribute('href', location.href.split('#')[0]);
+        document.head.appendChild(link);
+      }catch(e){}
     })();
   </script>
 </body>
