@@ -29,7 +29,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Product category pages from your footer/menu -->
+  <!-- Product category pages from menu/footer -->
   <url>
     <loc>https://www.baumechemical.com/products/pretreatment/</loc>
     <lastmod>2025-08-23</lastmod>
@@ -42,42 +42,50 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-    <url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/zincplating/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-      <url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/nickelplating/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-        <url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/copperplating/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-        <url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/brassplating/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-        <url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/electrophoreticlacquer/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-        <url>
+  <!-- Troubleshooting subpage referenced on Protective -->
+  <url>
+    <loc>https://www.baumechemical.com/products/platingcoating/electrophoreticlacquer/troubleshootingelectrophoreticlacquer</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.baumechemical.com/products/platingcoating/cyanide-free-white-bronze/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.baumechemical.com/products/blackening/</loc>
     <lastmod>2025-08-23</lastmod>
@@ -96,31 +104,97 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Strippers (category + subpages) -->
   <url>
     <loc>https://www.baumechemical.com/products/strippers/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/strippers/stripper-steel</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/strippers/stripper-brass</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/strippers/stripper-steel-electroplating</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <!-- EN category for Strippers -->
+  <url>
+    <loc>https://www.baumechemical.com/en/products/strippers/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Protective (category + subpages) -->
   <url>
     <loc>https://www.baumechemical.com/products/protective/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.baumechemical.com/products/protective/antitarnish-for-copper</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/protective/anti-tarnish-bu-186</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/protective/anti-tarnish-bu-20</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://www.baumechemical.com/products/protective/tin-anti-tarnish-b100</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
+  <!-- EN category for Protective -->
+  <url>
+    <loc>https://www.baumechemical.com/en/products/protective/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Service -->
+  <url>
     <loc>https://www.baumechemical.com/products/service/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <lastmod>2025-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- Equipment -->
   <url>
     <loc>https://www.baumechemical.com/products/equipment/</loc>
     <lastmod>2025-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
+
+  <!-- Blog -->
+  <url>
     <loc>https://www.baumechemical.com/blog/</loc>
     <lastmod>2025-08-26</lastmod>
     <changefreq>monthly</changefreq>
