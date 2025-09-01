@@ -8,6 +8,7 @@
   <title data-i18n-key="meta_title">MILLENIUM NCZ 1221 • น้ำยาชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ | Baume Chemical</title>
   <meta name="description" content="MILLENIUM NCZ 1221 ระบบชุบสังกะสีอัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น ใช้ได้ทั้งถังแขวนและถังกลิ้ง ค่ามาตรฐาน/การเติม/บำรุงรักษาครบในหน้าเดียว">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/zincplating/troubleshootingnoncyanidezinc/index.html">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
@@ -17,6 +18,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="MILLENIUM NCZ 1221 • Non-Cyanide Alkaline Zinc | Baume Chemical">
   <meta property="og:description" content="High-performance non-cyanide alkaline zinc: high gloss, wide window, uniform LCD-HCD, rack & barrel ready.">
+  <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/zincplating/troubleshootingnoncyanidezinc/index.html">
   <meta property="og:url" content="">
   <meta property="og:image" content="https://img2.pic.in.th/pic/thumbnail-7.jpg">
   <meta property="og:image:alt" content="Non-Cyanide Alkaline Zinc plating bath">
@@ -47,35 +49,74 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --vh: 1vh; /* iOS viewport height fix */
+      --header-h:64px; --vh:1vh; /* iOS viewport height fix */
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    html{scroll-padding-top:calc(var(--header-h) + 8px)}
 
-    /* (CSS ของ header คงไว้ได้ แต่เราเอาตัว header ออกแล้ว) */
-    .site-header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(180%) blur(10px); background:#ffffffcc; border-bottom:1px solid rgba(2,8,20,.06)}
-    .nav{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:16px; justify-content:space-between}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--brand)}
-    .logo{width:36px; height:36px; border-radius:8px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 2px 8px rgba(0,0,0,.2)}
-    .links{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .links a{color:#1f2937; text-decoration:none; font-weight:700}
-    .links .sep{color:#94a3b8}
-    .cta{display:inline-block; padding:8px 12px; background:var(--brand-2); color:#fff; border-radius:10px; text-decoration:none; font-weight:800}
-    .cta:hover{filter:brightness(.96)}
+    /* === Sticky Site Header (เหมือนเดิม) === */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18); box-shadow:0 6px 22px rgba(2,8,20,.16);
+    }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .header-right{display:flex; align-items:center; gap:10px}
 
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
-    }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Desktop language switcher (เหมือนเดิม) */
+    .lang-inline{display:none; align-items:center; gap:6px; padding:4px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.14); box-shadow:0 6px 18px rgba(2,8,20,.12)}
+    .lang-inline .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#fff}
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile language row (เหมือนเดิม) */
+    .menu .lang-li{display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)}
+    .menu .lang-li .lang-group{display:flex; gap:6px; padding:4px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)}
+    .menu .lang-li .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    @media (min-width: 921px){ .lang-inline{display:flex} .menu .lang-li{display:none} }
+    @media (max-width: 920px){ .lang-inline{display:none} .menu .lang-li{display:block} }
 
     /* === Hero (patched for iOS vh) === */
     .hero{
@@ -89,12 +130,15 @@
     .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin-bottom:10px}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
 
+    /* Back button on hero (เหมือนเดิม) */
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
+
     /* === Hero badges === */
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
-    .badge{
-      padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;
-      font-weight:700;backdrop-filter:blur(6px)
-    }
+    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -133,44 +177,74 @@
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
-
-    /* ===== Passive iframe (option: use when you embed iframes) ===== */
-    .embed-passive{ position:relative; }
-    .embed-passive iframe{
-      width:100%; height:100%; border:0;
-      pointer-events:none;
-    }
-    .embed-passive.is-active iframe{ pointer-events:auto; }
-    .embed-passive .tap-ovl{
-      position:absolute; inset:0;
-      display:flex; align-items:center; justify-content:center;
-      font:600 14px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color:#0f172a; background:transparent;
-      cursor:pointer; user-select:none;
-    }
-    .embed-passive.is-active .tap-ovl{ display:none; }
   </style>
 </head>
 <body>
 
-  <!-- === Floating Language Switcher (คงไว้) === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
+  <!-- === Site Header (เหมือนเดิม) === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- === (ลบ header ออกตามที่ขอ) === -->
+      <div class="header-right">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language on header bar -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <!-- === Hero === -->
-  <section class="hero">
+  <section class="hero" aria-label="MILLENIUM NCZ 1221">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/platingcoating/zincplating/index.html" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
-        <span class="badge" data-i18n-key="badge1">Non-Cyanide Alkaline Zinc</span>
-        <span class="badge" data-i18n-key="badge2">Rack & Barrel</span>
+        <span class="badge" data-i18n-key="badge1">ซิงค์อัลคาไลน์ไร้ไซยาไนด์</span>
+        <span class="badge" data-i18n-key="badge2">ถังแขวน & ถังกลิ้ง</span>
       </div>
       <h1 data-i18n-key="hero_title">MILLENIUM NCZ 1221</h1>
       <p data-i18n-key="hero_tagline">ระบบชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น เหมาะทั้งถังแขวนและถังกลิ้ง</p>
@@ -316,17 +390,50 @@
     </div>
   </footer>
 
+  <!-- === Nav toggle + sticky header === -->
+  <script>
+    (function(){
+      var header=document.querySelector('.site-header');
+      var toggle=document.querySelector('.site-header .nav-toggle');
+      if(header && toggle){
+        toggle.addEventListener('click', function(){
+          var opened=header.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(opened));
+        });
+        document.addEventListener('click', function(e){
+          var t=e.target.closest('.menu a, .menu .lang-btn');
+          if(t && window.innerWidth<=920){ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+        });
+      }
+      var onScroll=function(){ header && header.classList.toggle('scrolled', window.scrollY>10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+  </script>
+
+  <!-- Back button -->
+  <script>
+    (function(){
+      var btn=document.getElementById('backBtn'); if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          var ref=document.referrer;
+          if(ref && new URL(ref).origin===location.origin){ history.back(); return; }
+        }catch(_){}
+        var parent=location.pathname.replace(/[^\/]+\/?$/, '');
+        location.href=parent || '/products/platingcoating/';
+      });
+    })();
+  </script>
+
   <!-- === i18n === -->
   <script>
     const I18N = {
       th:{ meta_title:"MILLENIUM NCZ 1221 • น้ำยาชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ | Baume Chemical",
-        nav_features:"คุณสมบัติ", nav_specs:"ค่ามาตรฐาน", nav_additions:"การเติมน้ำยา", nav_maintenance:"บำรุงรักษา", nav_troubleshooting:"ปัญหา/วิธีแก้", nav_line:"LINE @baumechemical",
-        /* Hero */
-        badge1:"ซิงค์อัลคาไลน์ไร้ไซยาไนด์",
-        badge2:"ถังแขวน & ถังกลิ้ง",
+        btn_back:"ย้อนกลับ",
+        badge1:"ซิงค์อัลคาไลน์ไร้ไซยาไนด์", badge2:"ถังแขวน & ถังกลิ้ง",
         hero_title:"MILLENIUM NCZ 1221",
         hero_tagline:"ระบบชุบซิงค์อัลคาไลน์ไร้ไซยาไนด์ เงาสูง กระจายผิวดี หนาพร้อมยืดหยุ่น เหมาะทั้งถังแขวนและถังกลิ้ง",
-        /* Features */
         sec_features:"คุณสมบัติหลัก", sec_features_lead:"ออกแบบเพื่อหน้าต่างการผลิตกว้าง ครอบคลุมรูปทรงชิ้นงานและโหลดที่หลากหลาย",
         f1_t:"ความยืดหยุ่นดีเยี่ยม", f1_d:"หนาแล้วไม่ลอก/ไม่พอง ทนต่อการขึ้นรูปและการจับยึด",
         f2_t:"กระจายผิวสม่ำเสมอ", f2_d:"ความหนา LCD→HCD ต่ำกว่าอาบซิงค์กรด (~1:1.5 เทียบ ~1:3.5)",
@@ -334,17 +441,13 @@
         f4_t:"ช่วงทำงานกว้าง", f4_d:"0.2–4.0 A/dm² และ 20–35 °C ให้อภัยต่อโหลดผสม",
         f5_t:"รองรับ Rack & Barrel", f5_d:"เสถียรและให้ความเงาเหมาะกับทั้งสองระบบ",
         f6_t:"รองรับโครเมต", f6_d:"ผิวละเอียดสะอาด ช่วยการยึดติดของโครเมตทุกเฉด",
-        /* Specs */
         sec_specs:"การเตรียมและเงื่อนไขการทำงาน", tbl_detail:"รายละเอียด", tbl_optimum:"ค่าสุดเหมาะสม", tbl_range:"ช่วงค่า",
         naoh_zn:"NaOH : Zn", temp:"อุณหภูมิ", cd:"ความหนาแน่นกระแส", ratio_ca:"Cathode : Anode",
         zno_opt:"12 กรัม/ลิตร", zno_rng:"8 – 15 กรัม/ลิตร",
-        /* Additions */
         sec_additions:"การเติมน้ำยา (ml/KAH)", prod_name:"ชื่อผลิตภัณฑ์", dosage:"ปริมาณที่แนะนำ (มล./KAH)", poor_water:"หากคุณภาพน้ำไม่ดี",
-        /* Maintenance */
         sec_maint:"การบำรุงรักษา", m1:"วิเคราะห์ Zn และ NaOH เป็นระยะ", m2:"ควบคุมอุณหภูมิ 25–30 °C",
         m3:"ถังแขวน: 10 : 1 (NaOH : Zn)", m4:"ถังกลิ้ง: 12 : 1 (NaOH : Zn)", m5:"การเติมซิงค์ควรทำโดยบ่อพักภายนอก",
         ppe_note:"*สวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ระหว่างการทำงาน",
-        /* Troubleshooting */
         sec_tr:"แนวทางแก้ปัญหาเบื้องต้น", tr_slow_h:"ชุบติดช้า",
         tr_slow_1:"Zn metal ต่ำหรือยาพื้นมากไป → ปรับ Zn ให้อยู่ 8–22 g/L",
         tr_slow_2:"อุณหภูมิน้ำยาต่ำ → คุม 30–32 °C",
@@ -355,13 +458,10 @@
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{ meta_title:"MILLENIUM NCZ 1221 • Non-Cyanide Alkaline Zinc | Baume Chemical",
-        nav_features:"Features", nav_specs:"Specs", nav_additions:"Additions", nav_maintenance:"Maintenance", nav_troubleshooting:"Troubleshooting", nav_line:"LINE @baumechemical",
-        /* Hero */
-        badge1:"Non-Cyanide Alkaline Zinc",
-        badge2:"Rack & Barrel",
+        btn_back:"Back",
+        badge1:"Non-Cyanide Alkaline Zinc", badge2:"Rack & Barrel",
         hero_title:"MILLENIUM NCZ 1221",
         hero_tagline:"Non-cyanide alkaline zinc with high gloss, uniform distribution, and flexible thick deposits for both rack and barrel lines.",
-        /* Features */
         sec_features:"Key Features", sec_features_lead:"Engineered for wide production windows across varied part geometries and mixed loads.",
         f1_t:"Excellent Flexibility", f1_d:"Thick deposits without peeling/blistering; resilient during forming/handling",
         f2_t:"Superior Distribution", f2_d:"Lower LCD→HCD thickness spread vs. acid zinc (~1:1.5 vs. ~1:3.5)",
@@ -369,17 +469,13 @@
         f4_t:"Wide Operating Window", f4_d:"0.2–4.0 A/dm² and 20–35 °C; forgiving in mixed-load scenarios",
         f5_t:"Rack & Barrel Ready", f5_d:"Stability and bright throwing power for both systems",
         f6_t:"Chromate-Friendly", f6_d:"Clean, fine-grained deposits for strong chromate adhesion",
-        /* Specs */
         sec_specs:"Preparation & Operating Conditions", tbl_detail:"Detail", tbl_optimum:"Optimum", tbl_range:"Range",
         naoh_zn:"NaOH : Zn", temp:"Temperature", cd:"Current density", ratio_ca:"Cathode : Anode",
         zno_opt:"12 g/L", zno_rng:"8 – 15 g/L",
-        /* Additions */
         sec_additions:"Additions (ml/KAH)", prod_name:"Product", dosage:"Recommended dosage (ml/KAH)", poor_water:"If water quality is poor",
-        /* Maintenance */
         sec_maint:"Maintenance", m1:"Analyze Zn and NaOH regularly", m2:"Maintain 25–30 °C",
         m3:"Rack: 10 : 1 (NaOH : Zn)", m4:"Barrel: 12 : 1 (NaOH : Zn)", m5:"Add zinc through an external make-up tank",
         ppe_note:"*Wear appropriate PPE (gloves, goggles, mask) during operation.",
-        /* Troubleshooting */
         sec_tr:"Basic Troubleshooting", tr_slow_h:"Slow to start depositing",
         tr_slow_1:"Low Zn or excessive base → adjust Zn to 8–22 g/L",
         tr_slow_2:"Bath too cold → control at 30–32 °C",
@@ -392,7 +488,7 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -404,7 +500,9 @@
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
-        if(key && I18N[L] && I18N[L][key]) node.textContent = I18N[L][key];
+        if(key && I18N[L] && typeof I18N[L][key] !== 'undefined'){
+          node.textContent = I18N[L][key];
+        }
       });
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
@@ -426,32 +524,6 @@
       setVH();
       window.addEventListener('resize', setVH, {passive:true});
       window.addEventListener('orientationchange', setVH, {passive:true});
-    })();
-  </script>
-
-  <!-- Passive iframe (optional) -->
-  <script>
-    (function(){
-      const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
-      if(!isIOS) return;
-      function activate(container){
-        container.classList.add('is-active');
-        clearTimeout(container._timer);
-        container._timer = setTimeout(()=> container.classList.remove('is-active'), 10000);
-      }
-      document.querySelectorAll('iframe[data-passive]').forEach((frame)=>{
-        if(frame.closest('.embed-passive')) return;
-        const wrap = document.createElement('div');
-        wrap.className = 'embed-passive';
-        frame.parentNode.insertBefore(wrap, frame);
-        wrap.appendChild(frame);
-        const ovl = document.createElement('div');
-        ovl.className = 'tap-ovl';
-        ovl.textContent = 'แตะเพื่อโต้ตอบ';
-        wrap.appendChild(ovl);
-        ovl.addEventListener('touchstart', ()=> activate(wrap), {passive:true});
-        ovl.addEventListener('click', ()=> activate(wrap));
-      });
     })();
   </script>
 </body>

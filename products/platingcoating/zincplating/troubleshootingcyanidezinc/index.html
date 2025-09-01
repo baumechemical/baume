@@ -8,6 +8,7 @@
   <title data-i18n-key="meta_title">BRIGHTNER ZINC 111B • ยาเงาซิงค์ไซยาไนด์ | Baume Chemical</title>
   <meta name="description" content="Brightner Zinc 111B ยาเงาซิงค์ระบบไซยาไนด์ เงาสูงทั่วช่วงกระแส ทนความร้อนถึง ~50°C ใช้ได้ทั้งถังแขวน/ถังกลิ้ง เหมาะงาน LCD-HCD และรองรับโครเมตทุกเฉด">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/zincplating/troubleshootingcyanidezinc/index.html">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
@@ -17,6 +18,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="BRIGHTNER ZINC 111B • Cyanide Zinc Brightener | Baume Chemical">
   <meta property="og:description" content="High-gloss cyanide zinc brightener across LCD–HCD, low organics, flexible deposits; rack & barrel ready; up to ~50 °C.">
+  <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/zincplating/troubleshootingcyanidezinc/index.html">
   <meta property="og:url" content="">
   <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/thumbnail-8.jpg">
   <meta property="og:image:alt" content="Cyanide zinc brightener bath">
@@ -46,29 +48,90 @@
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#f4f6f5; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --vh:1vh; /* iOS viewport height fix */
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg'); --header-h:64px; --vh:1vh;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    html{scroll-padding-top:calc(var(--header-h) + 8px)}
+    html.no-scroll, body.no-scroll{overflow:hidden}
 
-    /* (header ถูกลบตามรูปแบบเดิม) */
-
-    /* === Floating Language Switcher === */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* === Sticky Site Header (glass) === */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18); box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    /* === Hero (patched for iOS vh) === */
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+    }
+
+    /* Mobile scrim */
+    .nav-scrim{
+      position:fixed; inset:0; background:rgba(0,0,0,.38); z-index:1300;
+      opacity:0; pointer-events:none; transition:opacity .2s ease;
+    }
+    .site-header.open ~ .nav-scrim{ opacity:1; pointer-events:auto }
+
+    /* === Language switcher (นั่งข้างเมนูเสมอ) === */
+    .lang-inline{
+      display:flex; align-items:center; gap:6px;
+      padding:4px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      box-shadow:0 6px 18px rgba(2,8,20,.12)
+    }
+    .lang-inline .lang-btn{
+      appearance:none; border:0; background:transparent; cursor:pointer;
+      padding:6px 10px; border-radius:999px; font-weight:800;
+      display:flex; align-items:center; gap:6px; color:#fff
+    }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    @media (max-width:920px){
+      .lang-inline{ padding:3px; }
+      .lang-inline .lang-btn{ padding:6px 8px; }
+    }
+
+    /* === Hero (iOS vh fix) === */
     .hero{
       position:relative; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(420px, calc(var(--vh, 1vh) * 60), 640px);
@@ -77,8 +140,22 @@
     @supports (height: 100svh){
       .hero{ min-height: clamp(420px, 60svh, 640px); }
     }
-    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin-bottom:10px}
-    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin-bottom:10px;letter-spacing:.3px;line-height:1.1;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef;font-size:clamp(14px,1.9vw,16px);text-shadow:0 2px 16px rgba(0,0,0,.45)}
+
+    /* === Back button on hero === */
+    .back-wrap{
+      position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2;
+      display:flex; align-items:center; gap:8px;
+    }
+    .btn-back{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff;
+      padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none;
+      backdrop-filter: blur(6px);
+    }
+    .btn-back:hover{ background:#ffffff33 }
+    .btn-back svg{width:18px; height:18px; display:block}
 
     /* === Layout === */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -120,100 +197,92 @@
 
     /* ===== Passive iframe helper (for Google Sites) ===== */
     .embed-passive{ position:relative; }
-    .embed-passive iframe{
-      width:100%; height:100%; border:0;
-      pointer-events:none;
-    }
+    .embed-passive iframe{ width:100%; height:100%; border:0; pointer-events:none; }
     .embed-passive.is-active iframe{ pointer-events:auto; }
     .embed-passive .tap-ovl{
-      position:absolute; inset:0;
-      display:flex; align-items:center; justify-content:center;
+      position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
       font:600 14px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      color:#0f172a; background:transparent;
-      cursor:pointer; user-select:none;
+      color:#0f172a; background:transparent; cursor:pointer; user-select:none;
     }
     .embed-passive.is-active .tap-ovl{ display:none; }
-/* ==== HERO BADGES UPLIFT (no HTML changes) ==== */
-.badges{
-  display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
-  align-items:center;
-}
-.badge{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:8px 14px;
-  border-radius:999px;
-  font-weight:800; font-size:clamp(12px,1.4vw,14px);
-  letter-spacing:.2px;
-  color:#fff;
-  background:
-    radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
-    linear-gradient(180deg, rgba(44,94,78,.92), rgba(56,123,91,.88));
-  border:1px solid rgba(255,255,255,.28);
-  box-shadow:0 10px 26px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.25);
-  backdrop-filter: blur(6px);
-  text-shadow: none;
-  transform: translateY(6px);
-  opacity:0;
-  animation: badgeIn .8s ease forwards;
-}
-.badge:focus-visible{
-  outline:2px solid #fff; outline-offset:2px;
-}
 
-/* ใส่ไอคอนตามคีย์ i18n — ไม่ต้องแก้ข้อความ */
-.badge[data-i18n-key="badge_brightener"]::before{ content:"🧪"; }
-.badge[data-i18n-key="badge_rackbarrel"]::before{ content:"🧲"; } /* แทนความเป็นงานชุบ/ฟิกซ์เจอร์ */
-/* ถ้าชอบเป็นชั้นวางกับถัง ใช้แบบนี้แทน:
-.badge[data-i18n-key="badge_rackbarrel"]::before{ content:"🗜️"; }
-*/
-
-@keyframes badgeIn{
-  to{ transform: translateY(0); opacity:1; }
-}
-.badge:nth-child(1){ animation-delay:.05s; }
-.badge:nth-child(2){ animation-delay:.18s; }
-
-/* เพิ่มความชัดของหัวข้อบนภาพ */
-.hero h1{
-  letter-spacing:.3px;
-  line-height:1.1;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,.45));
-}
-.hero p{
-  font-size:clamp(14px,1.9vw,16px);
-  text-shadow:0 2px 16px rgba(0,0,0,.45);
-}
-
-/* รองรับโหมดลดแอนิเมชัน */
-@media (prefers-reduced-motion: reduce){
-  .badge{ animation:none; transform:none; opacity:1; }
-}
-
-/* ปรับระยะหายใจบนจอเล็กให้ป้ายไม่ชนขอบ */
-@media (max-width:480px){
-  .hero .wrap{ padding:26px 14px !important; }
-  .badges{ gap:8px; }
-  .badge{ padding:7px 12px; }
-}
+    /* ==== HERO BADGES UPLIFT ==== */
+    .badges{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; align-items:center; }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 14px; border-radius:999px; font-weight:800; font-size:clamp(12px,1.4vw,14px);
+      letter-spacing:.2px; color:#fff;
+      background:
+        radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, rgba(44,94,78,.92), rgba(56,123,91,.88));
+      border:1px solid rgba(255,255,255,.28);
+      box-shadow:0 10px 26px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.25);
+      backdrop-filter: blur(6px);
+      text-shadow: none;
+      transform: translateY(6px); opacity:0; animation: badgeIn .8s ease forwards;
+    }
+    .badge:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+    .badge[data-i18n-key="badge_brightener"]::before{ content:"🧪"; }
+    .badge[data-i18n-key="badge_rackbarrel"]::before{ content:"🧲"; }
+    @keyframes badgeIn{ to{ transform: translateY(0); opacity:1; } }
+    .badge:nth-child(1){ animation-delay:.05s; } .badge:nth-child(2){ animation-delay:.18s; }
 
   </style>
 </head>
 <body>
 
-  <!-- === Floating Language Switcher === -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
+  <!-- === Site Header === -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <div class="header-right" style="display:flex;align-items:center;gap:10px">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Language switcher (อยู่ข้างแถบเมนูเสมอ) -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Scrim for mobile menu -->
+  <div class="nav-scrim" hidden></div>
 
   <!-- === Hero === -->
-  <section class="hero">
+  <section class="hero" aria-label="BRIGHTNER ZINC 111B">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="https://www.baumechemical.com/products/platingcoating/zincplating/index.html" class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="wrap" style="padding:22px 16px">
-      <div class="badges" style="display:flex;gap:8px;justify-content:center;margin-bottom:10px">
+      <div class="badges" style="margin-bottom:10px">
         <span class="badge" data-i18n-key="badge_brightener">Zinc Cyanide Brightener</span>
         <span class="badge" data-i18n-key="badge_rackbarrel">Rack & Barrel</span>
       </div>
@@ -298,7 +367,7 @@
           </thead>
           <tbody>
             <tr><td data-i18n-key="add_row1_topic">ครั้งแรก (ชาร์จบ่อ)</td><td data-i18n-key="add_row1_amount">111B 1 ลิตร ต่อบ่อ 1,000 ลิตร</td></tr>
-            <tr><td data-i18n-key="add_row2_topic">การปรับเติมระหว่างผลิต</td><td data-i18n-key="add_row2_amount">111B 1 ลิตร ต่อ 6,000–8,000 Ah (≈ <strong>125–167 มล./KAH</strong>)</td></tr>
+            <tr><td data-i18n-key="add_row2_topic">การปรับเติมระหว่างผลิต</td><td data-i18n-key="add_row2_amount">111B 1 ลิตร ต่อ 6,000–8,000 Ah (≈ 125–167 มล./KAH)</td></tr>
           </tbody>
         </table>
       </div>
@@ -406,53 +475,39 @@
     </div>
   </footer>
 
-  <!-- === i18n (เพิ่ม key สำหรับทุกบูลเล็ต) === -->
+  <!-- === i18n (เพิ่ม key ปุ่มย้อนกลับ) === -->
   <script>
     const I18N = {
       th:{
         meta_title:"BRIGHTNER ZINC 111B • ยาเงาซิงค์ไซยาไนด์ | Baume Chemical",
         hero_title:"BRIGHTNER ZINC 111B",
         hero_tagline:"ยาเงาซิงค์ระบบไซยาไนด์ เงาสูงทั่วช่วงกระแส LCD–HCD อินทรีย์ต่ำ ยืดหยุ่น ใช้ได้ทั้งกระแสต่ำ/สูง เหมาะทั้งถังแขวนและถังกลิ้ง ทนอุณหภูมิ ~50 °C",
+        btn_back:"ย้อนกลับ",
         badge_brightener:"Zinc Cyanide Brightener",
         badge_rackbarrel:"Rack & Barrel",
 
         sec_features:"คุณสมบัติหลัก",
         features_lead:"สว่างเงาสูง ครอบคลุมชิ้นงานซอกลึกและโหลดมาก พร้อมรองรับโครเมตทุกเฉด",
-        pill1_title:"เงาสูงทั่วช่วงกระแส",
-        pill1_desc:"ตั้งแต่ LCD ถึง HCD ได้ผิวเงาสม่ำเสมอ",
-        pill2_title:"อินทรีย์ต่ำ",
-        pill2_desc:"ลดปัญหาฟิล์มเปราะ ให้ความยืดหยุ่นสูง",
-        pill3_title:"ทนอุณหภูมิ",
-        pill3_desc:"ใช้งานได้ถึง ~50 °C สำหรับงานต่อเนื่อง",
-        pill4_title:"กระแสต่ำ-สูงได้",
-        pill4_desc:"เหมาะทั้งงานกระแสต่ำและสูง ปรับกระบวนการง่าย",
-        pill5_title:"ซอกลึก/โหลดมาก",
-        pill5_desc:"ดีสำหรับถังแขวนซอกลึกและถังกลิ้งจำนวนมาก",
-        pill6_title:"รองรับโครเมต",
-        pill6_desc:"ผิวพร้อมรับการโครเมตทุกเฉดสี",
+        pill1_title:"เงาสูงทั่วช่วงกระแส", pill1_desc:"ตั้งแต่ LCD ถึง HCD ได้ผิวเงาสม่ำเสมอ",
+        pill2_title:"อินทรีย์ต่ำ", pill2_desc:"ลดปัญหาฟิล์มเปราะ ให้ความยืดหยุ่นสูง",
+        pill3_title:"ทนอุณหภูมิ", pill3_desc:"ใช้งานได้ถึง ~50 °C สำหรับงานต่อเนื่อง",
+        pill4_title:"กระแสต่ำ-สูงได้", pill4_desc:"เหมาะทั้งงานกระแสต่ำและสูง ปรับกระบวนการง่าย",
+        pill5_title:"ซอกลึก/โหลดมาก", pill5_desc:"ดีสำหรับถังแขวนซอกลึกและถังกลิ้งจำนวนมาก",
+        pill6_title:"รองรับโครเมต", pill6_desc:"ผิวพร้อมรับการโครเมตทุกเฉดสี",
 
         specs_title:"ส่วนผสมน้ำยาชุบ & ความเข้มข้น",
-        specs_col_chem:"น้ำยาชุบ",
-        specs_col_conc:"ความเข้มข้นแนะนำ",
-        specs_zn:"ซิงค์ (Zn)",
-        specs_zn_val:"25 – 35 กรัม/ลิตร",
-        specs_nacn:"โซเดียมไซยาไนด์ (NaCN)",
-        specs_nacn_val:"60 – 90 กรัม/ลิตร",
-        specs_naoh:"โซดาไฟ (NaOH)",
-        specs_naoh_val:"ประมาณ 75 กรัม/ลิตร",
-        specs_111b:"Brightner Zinc 111B",
-        specs_111b_val:"0.5 – 2 ซีซี/ลิตร",
+        specs_col_chem:"น้ำยาชุบ", specs_col_conc:"ความเข้มข้นแนะนำ",
+        specs_zn:"ซิงค์ (Zn)", specs_zn_val:"25 – 35 กรัม/ลิตร",
+        specs_nacn:"โซเดียมไซยาไนด์ (NaCN)", specs_nacn_val:"60 – 90 กรัม/ลิตร",
+        specs_naoh:"โซดาไฟ (NaOH)", specs_naoh_val:"ประมาณ 75 กรัม/ลิตร",
+        specs_111b:"Brightner Zinc 111B", specs_111b_val:"0.5 – 2 ซีซี/ลิตร",
         specs_note:"* ปรับค่าตามชิ้นงาน กระแส และสภาพไลน์จริง",
 
         req_title:"ข้อกำหนดถังชุบ",
-        req_tank_label:"ถัง:",
-        req_tank_text:"ถัง PP หรือเหล็กเคลือบ PP",
-        req_filtration_label:"การกรอง:",
-        req_filtration_text:"กรองต่อเนื่อง (หลีกเลี่ยงใช้กระดาษ)",
-        req_cooling_label:"การทำความเย็น:",
-        req_cooling_text:"จำเป็นเมื่อชุบต่อเนื่องนาน ขึ้นกับปริมาตรน้ำยา",
-        req_aeration_label:"การระบายอากาศ:",
-        req_aeration_text:"ต้องมี",
+        req_tank_label:"ถัง:", req_tank_text:"ถัง PP หรือเหล็กเคลือบ PP",
+        req_filtration_label:"การกรอง:", req_filtration_text:"กรองต่อเนื่อง (หลีกเลี่ยงใช้กระดาษ)",
+        req_cooling_label:"การทำความเย็น:", req_cooling_text:"จำเป็นเมื่อชุบต่อเนื่องนาน ขึ้นกับปริมาตรน้ำยา",
+        req_aeration_label:"การระบายอากาศ:", req_aeration_text:"ต้องมี",
 
         makeup_title:"การเตรียมบ่อชุบ",
         makeup_li1:"ทำความสะอาดถัง/ถังผสม เติมน้ำสะอาด ~ครึ่งถัง",
@@ -463,57 +518,22 @@
         makeup_li6:"ค่อยๆ เติม 111B ตามต้องการ แล้วคนให้เข้ากัน",
 
         add_title:"การบำรุงรักษาน้ำยา & การเติม",
-        add_col_topic:"หัวข้อ",
-        add_col_amount:"ปริมาณแนะนำ",
-        add_row1_topic:"ครั้งแรก (ชาร์จบ่อ)",
-        add_row1_amount:"111B 1 ลิตร ต่อบ่อ 1,000 ลิตร",
-        add_row2_topic:"การปรับเติมระหว่างผลิต",
-        add_row2_amount:"111B 1 ลิตร ต่อ 6,000–8,000 Ah (≈ 125–167 มล./KAH)",
+        add_col_topic:"หัวข้อ", add_col_amount:"ปริมาณแนะนำ",
+        add_row1_topic:"ครั้งแรก (ชาร์จบ่อ)", add_row1_amount:"111B 1 ลิตร ต่อบ่อ 1,000 ลิตร",
+        add_row2_topic:"การปรับเติมระหว่างผลิต", add_row2_amount:"111B 1 ลิตร ต่อ 6,000–8,000 Ah (≈ 125–167 มล./KAH)",
 
         ts_title:"แนวทางแก้ปัญหาเบื้องต้น",
-        ts1_head:"1) ฟองมาก (Foaming)",
-        ts1_li1:"ลดกระแสให้เหมาะสม ตรวจสอบ pH/องค์ประกอบ",
-        ts1_li2:"เพิ่มการระบายอากาศ และใช้สาร defoamer ตามเหมาะสม",
-
-        ts2_head:"2) เคลือบไม่เสมอ (Uneven Coating)",
-        ts2_li1:"ตรวจค่าอุณหภูมิ กระแส ค่า pH ให้คงที่",
-        ts2_li2:"ตรวจการต่อขั้ว Anode/Cathode ให้แน่นและกระจายกระแสดี",
-
-        ts3_head:"3) ผิวเป็นรอย/ผิวสาก (Rough/Pitted)",
-        ts3_li1:"ทบทวนสูตรและอุณหภูมิไม่ให้เกินช่วง",
-        ts3_li2:"คุมกระแสและเวลาจุ่มให้เหมาะสม",
-
-        ts4_head:"4) การยึดเกาะไม่ดี (Poor Adhesion)",
-        ts4_li1:"ทำความสะอาดผิวชิ้นงานอย่างทั่วถึง",
-        ts4_li2:"คุมอุณหภูมิ/กระแสตามชนิดงาน และปรับเวลาชุบ",
-
-        ts5_head:"5) ฟองเกลือ/ตกตะกอน (Salt Precipitation)",
-        ts5_li1:"คุม pH ให้อยู่ในช่วงเหมาะสม",
-        ts5_li2:"ใช้ซิงค์ดัสช่วยตกตะกอน Pb/Cd/Cu และติดตามความเข้มข้น",
-
-        ts6_head:"6) pH แกว่ง (Unstable pH)",
-        ts6_li1:"ตรวจวัดสม่ำเสมอและปรับสูตร",
-        ts6_li2:"ใช้สารเคมีคุณภาพ ลดสิ่งปนเปื้อน",
-
-        ts7_head:"7) แตกร้าว/หลุดหลังชุบ (Cracking/Peeling)",
-        ts7_li1:"ลดกระแสเกินช่วง ปรับเวลาจุ่ม และทวนขั้นตอน",
-
-        ts8_head:"8) ความหนาไม่ตรง (Thickness Off-Spec)",
-        ts8_li1:"ทวนกระแส อุณหภูมิ เวลา และใช้เครื่องวัดความหนาเพื่อติดตาม",
-
+        ts1_head:"1) ฟองมาก (Foaming)", ts1_li1:"ลดกระแสให้เหมาะสม ตรวจสอบ pH/องค์ประกอบ", ts1_li2:"เพิ่มการระบายอากาศ และใช้สาร defoamer ตามเหมาะสม",
+        ts2_head:"2) เคลือบไม่เสมอ (Uneven Coating)", ts2_li1:"ตรวจค่าอุณหภูมิ กระแส ค่า pH ให้คงที่", ts2_li2:"ตรวจการต่อขั้ว Anode/Cathode ให้แน่นและกระจายกระแสดี",
+        ts3_head:"3) ผิวเป็นรอย/ผิวสาก (Rough/Pitted)", ts3_li1:"ทบทวนสูตรและอุณหภูมิไม่ให้เกินช่วง", ts3_li2:"คุมกระแสและเวลาจุ่มให้เหมาะสม",
+        ts4_head:"4) การยึดเกาะไม่ดี (Poor Adhesion)", ts4_li1:"ทำความสะอาดผิวชิ้นงานอย่างทั่วถึง", ts4_li2:"คุมอุณหภูมิ/กระแสตามชนิดงาน และปรับเวลาชุบ",
+        ts5_head:"5) ฟองเกลือ/ตกตะกอน (Salt Precipitation)", ts5_li1:"คุม pH ให้อยู่ในช่วงเหมาะสม", ts5_li2:"ใช้ซิงค์ดัสช่วยตกตะกอน Pb/Cd/Cu และติดตามความเข้มข้น",
+        ts6_head:"6) pH แกว่ง (Unstable pH)", ts6_li1:"ตรวจวัดสม่ำเสมอและปรับสูตร", ts6_li2:"ใช้สารเคมีคุณภาพ ลดสิ่งปนเปื้อน",
+        ts7_head:"7) แตกร้าว/หลุดหลังชุบ (Cracking/Peeling)", ts7_li1:"ลดกระแสเกินช่วง ปรับเวลาจุ่ม และทวนขั้นตอน",
+        ts8_head:"8) ความหนาไม่ตรง (Thickness Off-Spec)", ts8_li1:"ทวนกระแส อุณหภูมิ เวลา และใช้เครื่องวัดความหนาเพื่อติดตาม",
         ts_note:"* สวม PPE (ถุงมือ แว่นตานิรภัย หน้ากาก) ระหว่างการทำงาน",
 
         ft_cat_title:"หมวดผลิตภัณฑ์",
-        ft_cat_pretreat:"Pretreatment",
-        ft_cat_plating:"Plating",
-        ft_cat_black:"Blackening",
-        ft_cat_pass:"Passivation",
-        ft_cat_polish:"Polishing",
-        ft_cat_strip:"Strippers",
-        ft_cat_protect:"Protective Treatment",
-        ft_cat_service:"Customer Service",
-        ft_cat_equipment:"Equipment",
-
         ft_contact_title:"ติดต่อเรา",
         ft_addr1:"📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
         ft_addr2:"📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160",
@@ -523,46 +543,32 @@
         meta_title:"BRIGHTNER ZINC 111B • Cyanide Zinc Brightener | Baume Chemical",
         hero_title:"BRIGHTNER ZINC 111B",
         hero_tagline:"High-gloss cyanide zinc brightener across LCD–HCD, low organics & flexible deposits; works at low/high current, rack & barrel; up to ~50 °C.",
+        btn_back:"Back",
         badge_brightener:"Zinc Cyanide Brightener",
         badge_rackbarrel:"Rack & Barrel",
 
         sec_features:"Key Features",
         features_lead:"High brightness, covers deep recesses and heavy loads, compatible with all chromate shades.",
-        pill1_title:"High gloss across current range",
-        pill1_desc:"Uniform brightness from LCD to HCD",
-        pill2_title:"Low organics",
-        pill2_desc:"Reduces brittleness, improves flexibility",
-        pill3_title:"Heat tolerant",
-        pill3_desc:"Operates up to ~50 °C for continuous work",
-        pill4_title:"Handles low & high current",
-        pill4_desc:"Easy process tuning for various jobs",
-        pill5_title:"Deep recess / heavy load",
-        pill5_desc:"Great for deep-rack parts and high-load barrels",
-        pill6_title:"Chromate-ready",
-        pill6_desc:"Deposit compatible with all chromate colors",
+        pill1_title:"High gloss across current range", pill1_desc:"Uniform brightness from LCD to HCD",
+        pill2_title:"Low organics", pill2_desc:"Reduces brittleness, improves flexibility",
+        pill3_title:"Heat tolerant", pill3_desc:"Operates up to ~50 °C for continuous work",
+        pill4_title:"Handles low & high current", pill4_desc:"Easy process tuning for various jobs",
+        pill5_title:"Deep recess / heavy load", pill5_desc:"Great for deep-rack parts and high-load barrels",
+        pill6_title:"Chromate-ready", pill6_desc:"Deposit compatible with all chromate colors",
 
         specs_title:"Bath Make-up & Concentrations",
-        specs_col_chem:"Component",
-        specs_col_conc:"Recommended concentration",
-        specs_zn:"Zinc (Zn)",
-        specs_zn_val:"25 – 35 g/L",
-        specs_nacn:"Sodium Cyanide (NaCN)",
-        specs_nacn_val:"60 – 90 g/L",
-        specs_naoh:"Sodium Hydroxide (NaOH)",
-        specs_naoh_val:"~75 g/L",
-        specs_111b:"Brightner Zinc 111B",
-        specs_111b_val:"0.5 – 2 cc/L",
+        specs_col_chem:"Component", specs_col_conc:"Recommended concentration",
+        specs_zn:"Zinc (Zn)", specs_zn_val:"25 – 35 g/L",
+        specs_nacn:"Sodium Cyanide (NaCN)", specs_nacn_val:"60 – 90 g/L",
+        specs_naoh:"Sodium Hydroxide (NaOH)", specs_naoh_val:"~75 g/L",
+        specs_111b:"Brightner Zinc 111B", specs_111b_val:"0.5 – 2 cc/L",
         specs_note:"* Adjust based on parts, current, and actual line conditions.",
 
         req_title:"Tank Requirements",
-        req_tank_label:"Tank:",
-        req_tank_text:"PP tank or steel tank lined with PP",
-        req_filtration_label:"Filtration:",
-        req_filtration_text:"Continuous filtration (avoid paper media)",
-        req_cooling_label:"Cooling:",
-        req_cooling_text:"Required for long continuous plating; depends on bath volume",
-        req_aeration_label:"Aeration:",
-        req_aeration_text:"Required",
+        req_tank_label:"Tank:", req_tank_text:"PP tank or steel tank lined with PP",
+        req_filtration_label:"Filtration:", req_filtration_text:"Continuous filtration (avoid paper media)",
+        req_cooling_label:"Cooling:", req_cooling_text:"Required for long continuous plating; depends on bath volume",
+        req_aeration_label:"Aeration:", req_aeration_text:"Required",
 
         makeup_title:"Bath Make-up Procedure",
         makeup_li1:"Clean tank/mix tank and fill ~half with clean water",
@@ -573,57 +579,22 @@
         makeup_li6:"Slowly add 111B as needed and mix thoroughly",
 
         add_title:"Bath Maintenance & Additions",
-        add_col_topic:"Topic",
-        add_col_amount:"Recommended amount",
-        add_row1_topic:"Initial charge",
-        add_row1_amount:"111B 1 L per 1,000 L bath",
-        add_row2_topic:"Production replenishment",
-        add_row2_amount:"111B 1 L per 6,000–8,000 Ah (≈ 125–167 mL/KAH)",
+        add_col_topic:"Topic", add_col_amount:"Recommended amount",
+        add_row1_topic:"Initial charge", add_row1_amount:"111B 1 L per 1,000 L bath",
+        add_row2_topic:"Production replenishment", add_row2_amount:"111B 1 L per 6,000–8,000 Ah (≈ 125–167 mL/KAH)",
 
         ts_title:"Troubleshooting",
-        ts1_head:"1) Excess foam (Foaming)",
-        ts1_li1:"Reduce current; verify pH/chemistry",
-        ts1_li2:"Increase aeration and use defoamer appropriately",
-
-        ts2_head:"2) Uneven coating",
-        ts2_li1:"Stabilize temperature, current, and pH",
-        ts2_li2:"Check anode/cathode connections and current distribution",
-
-        ts3_head:"3) Rough/pitted surface",
-        ts3_li1:"Review formulation and keep temperature within range",
-        ts3_li2:"Control current and immersion time",
-
-        ts4_head:"4) Poor adhesion",
-        ts4_li1:"Thoroughly clean substrate surface",
-        ts4_li2:"Control temperature/current per part and adjust plating time",
-
-        ts5_head:"5) Salt precipitation",
-        ts5_li1:"Maintain pH in the proper range",
-        ts5_li2:"Use zinc dust to drop Pb/Cd/Cu and monitor concentrations",
-
-        ts6_head:"6) Unstable pH",
-        ts6_li1:"Measure frequently and tune formulation",
-        ts6_li2:"Use quality chemicals to reduce contaminants",
-
-        ts7_head:"7) Cracking/peeling after plating",
-        ts7_li1:"Reduce over-current, adjust time, and review steps",
-
-        ts8_head:"8) Thickness off-spec",
-        ts8_li1:"Review current, temperature, time, and monitor with thickness gauge",
-
+        ts1_head:"1) Excess foam (Foaming)", ts1_li1:"Reduce current; verify pH/chemistry", ts1_li2:"Increase aeration and use defoamer appropriately",
+        ts2_head:"2) Uneven coating", ts2_li1:"Stabilize temperature, current, and pH", ts2_li2:"Check anode/cathode connections and current distribution",
+        ts3_head:"3) Rough/pitted surface", ts3_li1:"Review formulation and keep temperature within range", ts3_li2:"Control current and immersion time",
+        ts4_head:"4) Poor adhesion", ts4_li1:"Thoroughly clean substrate surface", ts4_li2:"Control temperature/current per part and adjust plating time",
+        ts5_head:"5) Salt precipitation", ts5_li1:"Maintain pH in the proper range", ts5_li2:"Use zinc dust to drop Pb/Cd/Cu and monitor concentrations",
+        ts6_head:"6) Unstable pH", ts6_li1:"Measure frequently and tune formulation", ts6_li2:"Use quality chemicals to reduce contaminants",
+        ts7_head:"7) Cracking/peeling after plating", ts7_li1:"Reduce over-current, adjust time, and review steps",
+        ts8_head:"8) Thickness off-spec", ts8_li1:"Review current, temperature, time, and monitor with thickness gauge",
         ts_note:"* Wear PPE (gloves, safety glasses, mask) while working.",
 
         ft_cat_title:"Product Categories",
-        ft_cat_pretreat:"Pretreatment",
-        ft_cat_plating:"Plating",
-        ft_cat_black:"Blackening",
-        ft_cat_pass:"Passivation",
-        ft_cat_polish:"Polishing",
-        ft_cat_strip:"Strippers",
-        ft_cat_protect:"Protective Treatment",
-        ft_cat_service:"Customer Service",
-        ft_cat_equipment:"Equipment",
-
         ft_contact_title:"Contact Us",
         ft_addr1:"📍 31 Soi Phetkasem 48, Yak 24, Bang Waek",
         ft_addr2:"📍 Phasi Charoen, Bangkok 10160",
@@ -632,7 +603,7 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -641,14 +612,16 @@
       document.documentElement.lang = L;
       const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
       if(titleEl && I18N[L] && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
+
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
+
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
-        if(key && I18N[L] && I18N[L][key]){
-          // ใช้ textContent เพื่อความปลอดภัย (เว้นค่าที่มี <strong> อยู่แล้วใน DOM)
+        if(key && I18N[L] && typeof I18N[L][key] !== 'undefined'){
           node.textContent = I18N[L][key];
         }
       });
+
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
@@ -669,6 +642,70 @@
       setVH();
       window.addEventListener('resize', setVH, {passive:true});
       window.addEventListener('orientationchange', setVH, {passive:true});
+    })();
+  </script>
+
+  <!-- Nav: toggle + scrim + scroll-lock + sticky highlight -->
+  <script>
+    (function(){
+      var header=document.querySelector('.site-header');
+      var toggle=document.querySelector('.site-header .nav-toggle');
+      var scrim=document.querySelector('.nav-scrim');
+
+      function closeMenu(){
+        header.classList.remove('open');
+        toggle && toggle.setAttribute('aria-expanded','false');
+        scrim && (scrim.hidden=true);
+        document.documentElement.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');
+      }
+      function openMenu(){
+        header.classList.add('open');
+        toggle && toggle.setAttribute('aria-expanded','true');
+        scrim && (scrim.hidden=false);
+        document.documentElement.classList.add('no-scroll');
+        document.body.classList.add('no-scroll');
+      }
+
+      if(toggle){
+        toggle.addEventListener('click', function(){
+          if(header.classList.contains('open')) closeMenu(); else openMenu();
+        });
+      }
+      if(scrim){ scrim.addEventListener('click', closeMenu); }
+
+      document.addEventListener('click', function(e){
+        var t=e.target.closest('.menu a');
+        if(t && window.innerWidth<=920){ closeMenu(); }
+      });
+
+      var onScroll=function(){ header && header.classList.toggle('scrolled', window.scrollY>10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+      var links=[].slice.call(document.querySelectorAll('.menu a.nav-link'));
+      function setCurrent(a){ links.forEach(function(x){ x.removeAttribute('aria-current'); }); a && a.setAttribute('aria-current','page'); }
+      var found=links.find(function(a){ return /products/i.test(a.textContent); });
+      if(found) setCurrent(found);
+    })();
+  </script>
+
+  <!-- Back button logic -->
+  <script>
+    (function(){
+      var btn=document.getElementById('backBtn'); if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          var ref=document.referrer;
+          if(ref && new URL(ref).origin===location.origin){
+            history.back();
+            return;
+          }
+        }catch(_){}
+        // fallback: go to parent path or products root
+        var parent=location.pathname.replace(/[^\/]+\/?$/, '');
+        location.href = parent || '/products/';
+      });
     })();
   </script>
 
