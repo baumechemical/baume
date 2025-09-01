@@ -8,7 +8,7 @@
   <title data-i18n-key="meta_title">สารล้างไขมัน B1 / E60 (แบบแช่ & แบบไฟฟ้า) | Baume Chemical</title>
   <meta name="description" content="รวม 2 โซลูชันล้างไขมันก่อนชุบ: Soak Cleaner B1 (แช่/ต้ม/ถังกลิ้ง/อัลตร้าโซนิค) และ Degreaser E60 (ล้างไขมันด้วยไฟฟ้า). เลือกใช้ให้เหมาะกับวัสดุและไลน์งานของคุณ พร้อมคำแนะนำจากทีมเทคนิค.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <!-- <link rel="canonical" href="https://www.baumechemical.com/home/pretreatment/degreaser-b1-e60"> -->
+  <link rel="canonical" href="https://www.baumechemical.com//products/pretreatment/soakclean.html">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
@@ -18,6 +18,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="สารล้างไขมัน B1 / E60 (แบบแช่ & แบบไฟฟ้า) | Baume Chemical">
   <meta property="og:description" content="Soak Cleaner B1 และ Degreaser E60 สำหรับการเตรียมผิวก่อนชุบ เลือกใช้ตามวัสดุ/คราบ/กระบวนการ.">
+  <meta property="og:url" content="https://www.baumechemical.com//products/pretreatment/soakclean.html">
   <meta property="og:image" content="https://i.imgur.com/2hf2uIE.jpeg">
   <meta property="og:image:alt" content="Degreaser B1/E60 — โซลูชันล้างไขมันก่อนชุบ">
   <meta name="twitter:card" content="summary_large_image">
@@ -62,26 +63,74 @@
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+    html{scroll-padding-top:calc(var(--header-h) + 8px)}
     [hidden]{display:none !important}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ===== Sticky Header (Nickel style) ===== */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18); box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .site-header .header-inner{
+      max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px;
+      min-height:var(--header-h); padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    /* Hero */
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:700}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* Desktop language switcher (beside menu) */
+    .lang-inline{display:none; align-items:center; gap:6px; padding:4px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.14); box-shadow:0 6px 18px rgba(2,8,20,.12)}
+    .lang-inline .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#fff}
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile dropdown menu */
+    .menu .lang-li{display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)}
+    .menu .lang-li .lang-group{display:flex; gap:6px; padding:4px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)}
+    .menu .lang-li .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    @media (min-width: 921px){ .lang-inline{display:flex} .menu .lang-li{display:none} }
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+      .menu .lang-li{display:block}
+    }
+
+    /* ===== Hero ===== */
     .hero{
       position:relative; overflow:hidden; color:#fff; text-align:center;
       min-height: clamp(380px, 56vh, 560px); display:grid; place-items:center;
@@ -91,6 +140,13 @@
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:900px; margin:0 auto; color:#e6f2ef}
 
+    /* Back button on hero */
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
+
+    /* ===== Content ===== */
     .wrap{max-width:1200px; margin:auto; padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(20px,2.4vw,28px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
@@ -119,7 +175,7 @@
     .btn{appearance:none; border:1px solid var(--brand); background:var(--brand); color:#fff; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
     .btn.ghost{background:#fff; color:var(--brand)}
 
-    /* Footer (เหมือนหน้าอื่น) */
+    /* Footer */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:28px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -137,20 +193,66 @@
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
+  <!-- ===== Site Header (Nickel style) ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
 
-  <!-- Hero -->
+      <div class="header-right" style="display:flex;align-items:center;gap:10px">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language switcher -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
   <header class="hero">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="#" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="hero-inner">
       <h1 data-i18n-key="hero_title">สารล้างไขมัน B1 / E60 — แบบแช่ & แบบไฟฟ้า</h1>
       <p data-i18n-key="hero_tag">เลือกโหมดให้เหมาะกับชิ้นงาน คราบ และไลน์ผลิต: แช่/ต้ม/ถังกลิ้ง/อัลตร้าโซนิค (B1) หรือแยกด้วยไฟฟ้า (E60)</p>
@@ -333,12 +435,50 @@
     </div>
   </footer>
 
+  <!-- ===== Nav toggle + sticky header ===== -->
+  <script>
+    (function(){
+      var header=document.querySelector('.site-header');
+      var toggle=document.querySelector('.site-header .nav-toggle');
+      if(header && toggle){
+        toggle.addEventListener('click', function(){
+          var opened=header.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(opened));
+        });
+        // Close menu on link/lang click (mobile)
+        document.addEventListener('click', function(e){
+          var t=e.target.closest('.menu a, .menu .lang-btn');
+          if(t && window.innerWidth<=920){ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+        });
+      }
+      var onScroll=function(){ header && header.classList.toggle('scrolled', window.scrollY>10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+  </script>
+
+  <!-- Back button -->
+  <script>
+    (function(){
+      var btn=document.getElementById('backBtn'); if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          var ref=document.referrer;
+          if(ref && new URL(ref).origin===location.origin){ history.back(); return; }
+        }catch(_){}
+        // Fallback: กลับไปหมวด Pretreatment (ปรับได้ตามต้องการ)
+        location.href='/products/pretreatment/';
+      });
+    })();
+  </script>
+
   <!-- Language + Variant Switch JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       /* ===== i18n (TH default) ===== */
       var I18N = {
         th:{ meta_title:"สารล้างไขมัน B1 / E60 (แบบแช่ & แบบไฟฟ้า) | Baume Chemical",
+          btn_back:"ย้อนกลับ",
           hero_title:"สารล้างไขมัน B1 / E60 — แบบแช่ & แบบไฟฟ้า",
           hero_tag:"เลือกโหมดให้เหมาะกับชิ้นงาน คราบ และไลน์ผลิต: แช่/ต้ม/ถังกลิ้ง/อัลตร้าโซนิค (B1) หรือแยกด้วยไฟฟ้า (E60)",
           b1_h:"Soak Cleaner B1", b1_p:"ยาต้มล้างไขมัน บี 1 เป็นยาต้มล้างไขมันแบบต้มแช่ แบบกลิ้งขัดสะอาดหรืออัลตร้าโซนิคบนงานเหล็กและโลหะที่ไม่ใช่เหล็ก อาทิ ทองเหลือง ทองแดง ขี้ตะกั่ว สแตนเลส มีคุณสมบัติล้างคราบน้ำมันและสนิมแดง ๆ รวมไปถึงรอยสะเก็ดรอยถลอกจากผิวงานอย่างมีประสิทธิภาพ",
@@ -356,6 +496,7 @@
           footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
         },
         en:{ meta_title:"Degreaser B1 / E60 (Soak & Electro) | Baume Chemical",
+          btn_back:"Back",
           hero_title:"Degreaser B1 / E60 — Soak & Electro",
           hero_tag:"Choose the right mode for your parts, soils, and line: soak/boil/barrel/ultrasonic (B1) or electro-degreasing (E60).",
           b1_h:"Soak Cleaner B1", b1_p:"Fatty-acid cleaner for oils/rust on steel, stainless, and non-ferrous metals (brass, copper, zinc, etc.). Supports soak/boil/barrel/ultrasonic; provides pre-polish effect in barrel.",
@@ -374,7 +515,7 @@
         }
       };
 
-      var langBtns = document.querySelectorAll('.lang-fab .lang-btn');
+      var langBtns = document.querySelectorAll('.lang-btn');
       var transEls = document.querySelectorAll('[data-i18n-key]');
       var titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
 
@@ -401,7 +542,9 @@
       }catch(e){}
       applyLang(savedLang);
       for (var k=0;k<langBtns.length;k++){
-        langBtns[k].addEventListener('click', function(){ applyLang(this.getAttribute('data-lang')); });
+        langBtns[k].addEventListener('click', function(){
+          applyLang(this.getAttribute('data-lang'));
+        });
       }
 
       /* ===== Variant Switch (B1 / E60) ===== */
@@ -423,7 +566,6 @@
       btnB1.addEventListener('click', function(){ showVariant('b1'); });
       btnE60.addEventListener('click', function(){ showVariant('e60'); });
 
-      // เปิดตามค่าที่เคยใช้ล่าสุด (เริ่ม B1 ถ้าไม่มี)
       var savedVariant = 'b1';
       try{
         var sv = localStorage.getItem('variant');

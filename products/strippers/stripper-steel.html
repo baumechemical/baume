@@ -4,59 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title data-i18n-key="meta_title">NEOBRITE RS-109 — ยาลอกนิเกิ้ลบนเหล็ก | Baume Chemical</title>
-  <meta name="description" content="NEOBRITE RS-109 ยาลอกนิเกิ้ลบนเหล็ก ใช้ร่วมกับโซเดียมไซยาไนด์ 120–180 กรัม/ลิตร ที่ 50–70 °C แช่ 5–10 นาที มีตัวอย่างผสม 100 ลิตร ขั้นตอนใช้งาน และข้อควรปลอดภัย (ห้ามสัมผัสกรด)">
+  <title data-i18n-key="meta_title">Steel Striper TH-9 — ยาลอกโลหะบนเหล็กแบบใช้ไฟฟ้า | Baume Chemical</title>
+  <meta name="description" content="Steel Striper TH-9 ยาลอกนิเกิ้ลบนเหล็กแบบใช้ไฟฟ้า ทำงานที่อุณหภูมิห้อง pH 6–8 (ปรับด้วยกรดอะซิติก/แอมโมเนีย) 6–10 V, 5–25 A/dm² พร้อมขั้นตอนฟื้นฟูน้ำยาโดยตกตะกอนโลหะ">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph -->
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="NEOBRITE RS-109 — Nickel Stripper (Steel)">
-  <meta property="og:description" content="Cyanide-based nickel stripper for steel: RS-109 60 g/L + NaCN 120–180 g/L, 50–70 °C, 5–10 min. Includes 100 L mixing example and safety notes.">
-  <meta property="og:image" content="https://i.imgur.com/8we2wHm.jpeg">
+  <meta property="og:title" content="Steel Striper TH-9 — Electrolytic Nickel Stripper (Steel)">
+  <meta property="og:description" content="Room-temp electrolytic nickel stripping for steel: TH-9 150 g/L, pH 6–8, 6–10 V, 5–25 A/dm². Includes bath metal removal & pH adjustment steps.">
+  <meta property="og:image" content="https://i.imgur.com/ukJr5Po.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://i.imgur.com/8we2wHm.jpeg">
+  <link rel="preload" as="image" href="https://i.imgur.com/ukJr5Po.jpeg">
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
       --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    html{scroll-padding-top:calc(var(--header-h) + 8px)}
+    [hidden]{display:none !important}
 
-    /* Language FAB */
-    .lang-fab{
-      position:fixed; top:14px; right:14px; z-index:1100; display:flex; gap:6px;
-      padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
+    /* ===== Sticky Header (Nickel style) ===== */
+    .site-header{
+      position:sticky; top:0; left:0; right:0; z-index:1400;
+      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
-    .lang-fab .lang-btn{
-      appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px;
-      font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a;
+    .site-header.scrolled{
+      background:#0f172acc; border-color:rgba(255,255,255,.18); box-shadow:0 6px 22px rgba(2,8,20,.16);
     }
-    .lang-fab .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
-    .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .header-inner{
+      max-width:1200px; margin:0 auto; min-height:var(--header-h);
+      display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 16px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    /* Hero */
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:700}
+    .menu a:hover{ background:rgba(255,255,255,.12) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
+    .menu a.cta:hover{ background:#fff; color:#0f172a; border-color:#fff }
+
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+
+    /* Desktop language switcher (beside menu) */
+    .lang-inline{display:none; align-items:center; gap:6px; padding:4px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.14); box-shadow:0 6px 18px rgba(2,8,20,.12)}
+    .lang-inline .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#fff}
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    /* Mobile dropdown menu (slide down) */
+    .menu .lang-li{display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)}
+    .menu .lang-li .lang-group{display:flex; gap:6px; padding:4px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)}
+    .menu .lang-li .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
+    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
+
+    @media (min-width: 921px){ .lang-inline{display:flex} .menu .lang-li{display:none} }
+    @media (max-width: 920px){
+      .menu{
+        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px);
+        background:#0f172acc; backdrop-filter: blur(8px);
+        border:1px solid rgba(255,255,255,.18); border-radius:14px;
+        transform:translateY(-12px); opacity:0; pointer-events:none;
+        display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s;
+      }
+      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
+      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
+      .nav-toggle{ display:inline-flex }
+      .menu .lang-li{display:block}
+    }
+
+    /* ===== Hero ===== */
     .hero{
       position:relative; display:grid; place-items:center; text-align:center; color:#fff;
       min-height: clamp(380px, 60svh, 640px);
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
-                 url('https://i.imgur.com/8we2wHm.jpeg') center/cover no-repeat;
+                 url('https://i.imgur.com/ukJr5Po.jpeg') center/cover no-repeat;
     }
     .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
     .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
     .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
+
+    /* Back button on hero */
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:2; display:flex; align-items:center; gap:8px}
+    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
+    .btn.back:hover{ background:#ffffff33 }
+    .btn.back svg{width:18px; height:18px; display:block}
 
     /* Layout & cards */
     .wrap{max-width:1200px;margin:auto;padding:34px 16px}
@@ -98,26 +153,73 @@
 </head>
 <body>
 
-  <!-- Language Switcher -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-    </button>
-  </div>
+  <!-- ===== Site Header (Nickel style) ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <!-- Brand -->
+      <a class="brand" href="/" aria-label="Baume Chemical">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <div class="header-right" style="display:flex;align-items:center;gap:10px">
+        <!-- Primary Navigation -->
+        <nav class="primary-nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+            <!-- Mobile language row -->
+            <li class="lang-li">
+              <div class="lang-group" role="group" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+                </button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop language switcher -->
+        <div class="lang-inline" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
+    <!-- Back button -->
+    <div class="back-wrap">
+      <a href="#" class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n-key="btn_back">ย้อนกลับ</span>
+      </a>
+    </div>
+
     <div class="wrap" style="padding:22px 16px">
       <div class="badges">
-        <span class="badge" data-i18n-key="badge1">Nickel Stripper</span>
+        <span class="badge" data-i18n-key="badge1">Electrolytic Stripper</span>
         <span class="badge" data-i18n-key="badge2">Steel</span>
-        <span class="badge" data-i18n-key="badge3">50–70 °C • 5–10 min</span>
+        <span class="badge" data-i18n-key="badge3">Room temp • 6–10 V</span>
       </div>
-      <h1 data-i18n-key="hero_title">NEOBRITE RS-109 — ยาลอกนิเกิ้ลบนเหล็ก</h1>
-      <p data-i18n-key="hero_tagline">ลอกนิเกิ้ลจากเหล็กอย่างรวดเร็ว สูตรไซยาไนด์ภายใต้การควบคุม • มีตัวอย่างผสม 100 L</p>
+      <h1 data-i18n-key="hero_title">Steel Striper TH-9 — ยาลอกโลหะบนเหล็กแบบใช้ไฟฟ้า</h1>
+      <p data-i18n-key="hero_tagline">ลอกนิเกิ้ลบนเหล็กอย่างรวดเร็ว ควบคุมด้วยไฟตรง pH 6–8 ที่อุณหภูมิห้อง</p>
     </div>
   </section>
 
@@ -126,12 +228,12 @@
     <section id="features" class="card">
       <h2 class="section" data-i18n-key="features_title">คุณสมบัติพิเศษ</h2>
       <div class="pill-grid">
-        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f1_t">ลอกไว รอบสั้น</h3><p data-i18n-key="f1_d">เหมาะสายการผลิต ต้องการเวลาพักแช่สั้น</p></div>
-        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f2_t">ถนอมผิวเหล็ก</h3><p data-i18n-key="f2_d">ออกแบบเพื่อคงสภาพพื้นผิวฐาน</p></div>
-        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f3_t">อัตราส่วนชัดเจน</h3><p data-i18n-key="f3_d">RS-109 60 g/L + NaCN 120–180 g/L</p></div>
-        <div class="pill"><div class="ic">🌡️</div><h3 data-i18n-key="f4_t">ช่วงอุณหภูมิกว้าง</h3><p data-i18n-key="f4_d">ทำงานได้ที่ 50–70 °C เพื่อเร่งปฏิกิริยา</p></div>
-        <div class="pill"><div class="ic">🔁</div><h3 data-i18n-key="f5_t">ต่อชุบได้ทันที</h3><p data-i18n-key="f5_d">รองรับลำดับลอก → copper strike → ชุบใหม่</p></div>
-        <div class="pill"><div class="ic">📦</div><h3 data-i18n-key="f6_t">สเกลง่าย</h3><p data-i18n-key="f6_d">มีตัวอย่างผสมตั้งบ่อ 100 ลิตร</p></div>
+        <div class="pill"><div class="ic">⚡</div><h3 data-i18n-key="f1_t">เร็ว คุมได้ด้วยไฟ</h3><p data-i18n-key="f1_d">วงจรการลอกสั้น ปรับผลด้วยโวลต์/แอมป์</p></div>
+        <div class="pill"><div class="ic">🛡️</div><h3 data-i18n-key="f2_t">ถนอมผิวเหล็ก</h3><p data-i18n-key="f2_d">ออกแบบให้ลดความเสียหายพื้นผิวฐาน</p></div>
+        <div class="pill"><div class="ic">🌡️</div><h3 data-i18n-key="f3_t">อุณหภูมิห้อง</h3><p data-i18n-key="f3_d">ทำงานได้ดีโดยไม่ต้องให้ความร้อน</p></div>
+        <div class="pill"><div class="ic">📏</div><h3 data-i18n-key="f4_t">หน้าต่างการทำงานชัด</h3><p data-i18n-key="f4_d">TH-9 150 g/L • pH 6–8 • 6–10 V • 5–25 A/dm²</p></div>
+        <div class="pill"><div class="ic">🔄</div><h3 data-i18n-key="f5_t">ฟื้นฟูน้ำยาได้</h3><p data-i18n-key="f5_d">ตกตะกอนโลหะด้วยการปรับ pH แล้วกรองออก</p></div>
+        <div class="pill"><div class="ic">🧪</div><h3 data-i18n-key="f6_t">คุม pH ง่าย</h3><p data-i18n-key="f6_d">ปรับด้วยกรดอะซิติกหรือแอมโมเนียน้ำ</p></div>
       </div>
     </section>
 
@@ -139,14 +241,14 @@
     <section id="product" class="card">
       <h2 class="section" data-i18n-key="product_title">ข้อมูลผลิตภัณฑ์</h2>
       <p class="lead" data-i18n-key="product_lead">
-        ยาลอกนิเกิ้ลสำหรับชิ้นงานเหล็ก ใช้ร่วมกับโซเดียมไซยาไนด์เพื่อเร่งการลอก ภายใต้สภาพด่างจัด
-        เหมาะสำหรับการแก้ไขงานชุบเสียหรือเตรียมผิวก่อนชุบใหม่
+        น้ำยาลอกนิเกิ้ลสำหรับชิ้นงานเหล็กแบบใช้ไฟฟ้า เหมาะกับการลอกชั้นชุบเดิมอย่างรวดเร็วเพื่อเตรียมชุบใหม่ โดยควบคุมผ่านแรงดันและความหนาแน่นกระแส
+        ใช้งานที่อุณหภูมิห้อง pH กึ่งกลางอ่อน ๆ (6–8)
       </p>
       <ul style="margin:0 0 8px 18px">
-        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> ยาลอกนิเกิ้ลบนเหล็ก (ไซยาไนด์เบส)</li>
+        <li data-i18n-key="pi_type"><strong>ประเภท:</strong> ยาลอกนิเกิ้ลบนเหล็ก (Electrolytic)</li>
         <li data-i18n-key="pi_sub"><strong>วัสดุ:</strong> เหล็ก/เหล็กคาร์บอนต่ำ</li>
-        <li data-i18n-key="pi_form"><strong>รูปแบบ:</strong> ผง RS-109 ผสมน้ำ + เติมโซเดียมไซยาไนด์</li>
-        <li data-i18n-key="pi_ops"><strong>เงื่อนไขทำงาน:</strong> RS-109 60 g/L + NaCN 120–180 g/L; 50–70 °C; 5–10 นาที; คุม pH &gt; 10</li>
+        <li data-i18n-key="pi_form"><strong>ความเข้มข้น:</strong> TH-9 150 กรัม/ลิตร</li>
+        <li data-i18n-key="pi_ops"><strong>เงื่อนไขทำงาน:</strong> pH 6–8 (กรดอะซิติก/แอมโมเนีย), อุณหภูมิห้อง, 6–10 V, 5–25 A/dm², แคโทดสแตนเลส</li>
       </ul>
     </section>
 
@@ -159,15 +261,16 @@
             <tr>
               <th data-i18n-key="head_param">พารามิเตอร์</th>
               <th data-i18n-key="head_opt">ค่า/ช่วง</th>
+              <th data-i18n-key="head_note">หมายเหตุ</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td data-i18n-key="sp_rs">NEOBRITE RS-109</td><td data-i18n-key="sp_rs_val">60 กรัม/ลิตร</td></tr>
-            <tr><td data-i18n-key="sp_nacn">โซเดียมไซยาไนด์ (NaCN)</td><td data-i18n-key="sp_nacn_val">120–180 กรัม/ลิตร</td></tr>
-            <tr><td data-i18n-key="sp_temp">อุณหภูมิ</td><td data-i18n-key="sp_temp_val">50–70 °C (ร้อนสม่ำเสมอช่วยให้ลอกเร็ว)</td></tr>
-            <tr><td data-i18n-key="sp_time">เวลาแช่</td><td data-i18n-key="sp_time_val">5–10 นาที หรือจนเกิดฟิล์มดำทั่ว</td></tr>
-            <tr><td data-i18n-key="sp_pH">pH</td><td data-i18n-key="sp_pH_val">&gt; 10 (ด่างจัด — ห้ามสัมผัสกรด)</td></tr>
-            <tr><td data-i18n-key="sp_tank">วัสดุถัง/อุปกรณ์</td><td data-i18n-key="sp_tank_val">วัสดุทนด่าง/ไซยาไนด์ (PP/PE/PVC) แยกโซนจากกรด</td></tr>
+            <tr><td data-i18n-key="sp_th9">Steel Striper TH-9</td><td data-i18n-key="sp_th9_val">150 กรัม/ลิตร</td><td data-i18n-key="sp_th9_note">ผสมน้ำสะอาด</td></tr>
+            <tr><td data-i18n-key="sp_pH">pH</td><td data-i18n-key="sp_pH_val">6–8</td><td data-i18n-key="sp_pH_note">ปรับด้วยกรดอะซิติก/แอมโมเนียน้ำ</td></tr>
+            <tr><td data-i18n-key="sp_temp">อุณหภูมิ</td><td data-i18n-key="sp_temp_val">อุณหภูมิห้อง</td><td>—</td></tr>
+            <tr><td data-i18n-key="sp_volt">แรงดันไฟ DC</td><td data-i18n-key="sp_volt_val">6–10 V</td><td>—</td></tr>
+            <tr><td data-i18n-key="sp_cd">ความหนาแน่นกระแส</td><td data-i18n-key="sp_cd_val">5–25 A/dm²</td><td>—</td></tr>
+            <tr><td data-i18n-key="sp_cath">ขั้วลบ (แคโทด)</td><td data-i18n-key="sp_cath_val">สแตนเลส</td><td data-i18n-key="sp_cath_note">งานเป็นแอโนด (+)</td></tr>
           </tbody>
         </table>
       </div>
@@ -185,55 +288,52 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td data-i18n-key="mix_rs">NEOBRITE RS-109 (ผง)</td><td data-i18n-key="mix_rs_q">6 กก.</td></tr>
-            <tr><td data-i18n-key="mix_nacn">โซเดียมไซยาไนด์</td><td data-i18n-key="mix_nacn_q">12 กก.</td></tr>
+            <tr><td data-i18n-key="mix_th9">Steel Striper TH-9</td><td data-i18n-key="mix_th9_q">15 กก. (150 กรัม/ลิตร)</td></tr>
             <tr><td data-i18n-key="mix_water">น้ำสะอาด/DI</td><td data-i18n-key="mix_water_q">เติมจนครบ 100 ลิตร</td></tr>
+            <tr><td data-i18n-key="mix_pH">ตั้ง pH</td><td data-i18n-key="mix_pH_q">ปรับให้ 6–8 ด้วยกรดอะซิติก/แอมโมเนีย</td></tr>
           </tbody>
         </table>
       </div>
       <ol style="margin:10px 0 0 22px">
-        <li data-i18n-key="mix_step1">เตรียมน้ำในถังทนด่าง/ไซยาไนด์ ละลาย RS-109 ให้เข้ากัน</li>
-        <li data-i18n-key="mix_step2">เติม NaCN อย่างระมัดระวัง ใต้ระบบระบายอากาศที่ดี</li>
-        <li data-i18n-key="mix_step3">คุมให้เป็นด่างตลอด (pH &gt; 10) และห้ามมีกรดอยู่ใกล้บ่อ</li>
+        <li data-i18n-key="mix_step1">ชาร์จน้ำนิ่ง 70–80% ของปริมาตร → ละลาย TH-9 ให้เข้ากัน</li>
+        <li data-i18n-key="mix_step2">ปรับ pH เข้าเป้า (6–8) และปรับปริมาตรจนครบ</li>
+        <li data-i18n-key="mix_step3">ทดสอบแถบ pH อีกครั้งก่อนเริ่มเดินไฟ</li>
       </ol>
     </section>
 
-    <!-- Process line: stripping -->
-    <section id="process_strip" class="card">
-      <h2 class="section" data-i18n-key="process_title1">ขั้นตอนการลอกนิเกิ้ลออกจากชิ้นงานเหล็ก</h2>
+    <!-- Process -->
+    <section id="process" class="card">
+      <h2 class="section" data-i18n-key="process_title">ขั้นตอนการทำงาน</h2>
       <ol style="margin:0 0 0 22px">
-        <li data-i18n-key="ps1">ลอกนิเกิ้ลด้วย RS-109 ตามสัดส่วน ขณะ 50–70 °C ~5–10 นาที หรือจนฟิล์มดำทั่ว</li>
-        <li data-i18n-key="ps2">แช่โซเดียมไซยาไนด์ 10% 15–60 วินาที เพื่อให้ฟิล์มดำหลุด</li>
-        <li data-i18n-key="ps3">ล้างน้ำสะอาดหลายครั้ง</li>
-        <li data-i18n-key="ps4">ลงชุบทองแดงด่าง (copper strike) → ล้าง</li>
-        <li data-i18n-key="ps5">จุ่มกรดอ่อนอย่างปลอดภัยหลังจากล้างจนปราศจากไซยาไนด์ → ล้าง</li>
-        <li data-i18n-key="ps6">ชุบนิเกิ้ลใหม่ → ล้าง → จุ่มโครมิก (ตามกระบวนการโรงงาน)</li>
+        <li data-i18n-key="pr1">ชิ้นงานเหล็กผ่านการล้างไขมัน/ล้างน้ำสะอาด</li>
+        <li data-i18n-key="pr2">จัดขั้ว: ชิ้นงานเป็นแอโนด (+) คู่กับแคโทดสแตนเลส</li>
+        <li data-i18n-key="pr3">ตั้ง 6–10 V และ 5–25 A/dm² ลอกจนครบ (สังเกตฟิล์ม/ผิว)</li>
+        <li data-i18n-key="pr4">ล้างน้ำสะอาดหลายครั้ง</li>
+        <li data-i18n-key="pr5">เตรียมเข้าสู่กระบวนการถัดไป (เช่น strike ตามกระบวนการโรงงาน)</li>
       </ol>
     </section>
 
-    <!-- Process line: replate path -->
-    <section id="process_replate" class="card">
-      <h2 class="section" data-i18n-key="process_title2">ขั้นตอนการชุบนิเกิ้ลใหม่บนงานที่ชุบเสียแล้ว</h2>
-      <ol style="margin:0 0 0 22px">
-        <li data-i18n-key="pr1">ลอกนิเกิ้ลด้วย RS-109 จนลอกหมด → ล้าง</li>
-        <li data-i18n-key="pr2">กลิ้งทำความสะอาดด้วย S-2000 (ในถังกลิ้ง) → ล้าง</li>
-        <li data-i18n-key="pr3">ทองแดงด่าง (strike) → ล้าง</li>
-        <li data-i18n-key="pr4">กรดอ่อน (หลังแน่ใจว่าไม่มีคราบไซยาไนด์จากขั้นก่อน) → ล้าง</li>
-        <li data-i18n-key="pr5">ชุบนิเกิ้ล → ล้าง → จุ่มโครมิก</li>
-      </ol>
+    <!-- Bath metal removal / regeneration -->
+    <section id="regen" class="card">
+      <h2 class="section" data-i18n-key="regen_title">การกำจัดโลหะในน้ำยา (ฟื้นฟูประสิทธิภาพ)</h2>
+      <ul style="margin:0 0 8px 18px">
+        <li data-i18n-key="rg1">เมื่อโลหะละลายสะสม → ลอกช้าลง ให้ตกตะกอนโลหะโดยปรับ pH ~10 ด้วยแอมโมเนียน้ำ</li>
+        <li data-i18n-key="rg2">กรองเอาตะกอนโลหะออกจนใส</li>
+        <li data-i18n-key="rg3">ปรับ pH กลับมาที่ 6–7 ด้วยกรดอะซิติก แล้วทดสอบก่อนใช้งาน</li>
+        <li data-i18n-key="rg4">คำเตือน: ตะกั่วที่ละลายในบ่อจะทำให้น้ำยาเสื่อม ควรหลีกเลี่ยง/ควบคุม</li>
+      </ul>
     </section>
 
     <!-- EHS -->
     <section id="ehs" class="card">
-      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม (ไซยาไนด์)</h2>
+      <h2 class="section" data-i18n-key="ehs_title">ความปลอดภัย & สิ่งแวดล้อม</h2>
       <ul style="margin:0 0 8px 18px">
-        <li data-i18n-key="ehs1">ห้ามสัมผัสกรดโดยเด็ดขาดกับสารละลายไซยาไนด์ — รักษา pH &gt; 10 ตลอดเวลา</li>
-        <li data-i18n-key="ehs2">แยกโซนบ่อไซยาไนด์ออกจากบ่อกรด/ล้างกรด ใช้ราวแขวน/อุปกรณ์เฉพาะ</li>
-        <li data-i18n-key="ehs3">ใส่ PPE ครบ (ถุงมือ กันสารเคมี แว่นตา หน้ากาก เหมาะสม) และทำงานในที่อากาศถ่ายเท</li>
-        <li data-i18n-key="ehs4">ฝึกอบรมผู้ปฏิบัติการ, มีแผนฉุกเฉินและอุปกรณ์ตรวจจับไอ/ก๊าซตามความเหมาะสม</li>
-        <li data-i18n-key="ehs5">ของเสีย/น้ำล้างที่มีไซยาไนด์ ให้บำบัด/ส่งกำจัดโดยผู้ได้รับอนุญาต (เช่น ขั้นตอนด่างคลอรีเนชันภายใต้ผู้เชี่ยวชาญ) ตามกฎหมาย</li>
+        <li data-i18n-key="ehs1">ใส่ PPE ครบ (ถุงมือกันสารเคมี แว่นตา หน้ากากที่เหมาะสม) และทำงานในที่อากาศถ่ายเท</li>
+        <li data-i18n-key="ehs2">ควบคุม pH ตามช่วงที่กำหนด หลีกเลี่ยงการกระเด็น/ฟุ้งกระจายขณะปรับกรด–ด่าง</li>
+        <li data-i18n-key="ehs3">จัดการตะกอนโลหะ/น้ำทิ้งตามกฎหมายท้องถิ่น ส่งกำจัดโดยผู้ได้รับอนุญาต</li>
+        <li data-i18n-key="ehs4">แยกอุปกรณ์/ตะขอเฉพาะไลน์ลอก หลีกเลี่ยงการปนเปื้อนข้ามขั้น</li>
       </ul>
-      <p class="note" data-i18n-key="note_ppe">*อ้างอิง SDS/TDS และระเบียบความปลอดภัยของสถานประกอบการอย่างเคร่งครัด</p>
+      <p class="note" data-i18n-key="note_ppe">*โปรดอ้างอิง SDS/TDS และมาตรการความปลอดภัยของสถานประกอบการ</p>
     </section>
   </main>
 
@@ -285,71 +385,106 @@
     </div>
   </footer>
 
+  <!-- ===== Nav toggle + sticky header ===== -->
+  <script>
+    (function(){
+      var header=document.querySelector('.site-header');
+      var toggle=document.querySelector('.site-header .nav-toggle');
+      if(header && toggle){
+        toggle.addEventListener('click', function(){
+          var opened=header.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(opened));
+        });
+        // Close menu on link/lang click (mobile)
+        document.addEventListener('click', function(e){
+          var t=e.target.closest('.menu a, .menu .lang-btn');
+          if(t && window.innerWidth<=920){ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
+        });
+      }
+      var onScroll=function(){ header && header.classList.toggle('scrolled', window.scrollY>10); };
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+  </script>
+
+  <!-- Back button -->
+  <script>
+    (function(){
+      var btn=document.getElementById('backBtn'); if(!btn) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        try{
+          var ref=document.referrer;
+          if(ref && new URL(ref).origin===location.origin){ history.back(); return; }
+        }catch(_){}
+        // Fallback: กลับไปหมวด Strippers
+        location.href='/products/strippers/';
+      });
+    })();
+  </script>
+
   <!-- i18n -->
   <script>
     const I18N = {
       th:{
-        meta_title:"NEOBRITE RS-109 — ยาลอกนิเกิ้ลบนเหล็ก | Baume Chemical",
+        btn_back:"ย้อนกลับ",
+        meta_title:"Steel Striper TH-9 — ยาลอกโลหะบนเหล็กแบบใช้ไฟฟ้า | Baume Chemical",
 
-        badge1:"Nickel Stripper", badge2:"Steel", badge3:"50–70 °C • 5–10 min",
-        hero_title:"NEOBRITE RS-109 — ยาลอกนิเกิ้ลบนเหล็ก",
-        hero_tagline:"ลอกนิเกิ้ลจากเหล็กอย่างรวดเร็ว สูตรไซยาไนด์ภายใต้การควบคุม • มีตัวอย่างผสม 100 L",
+        badge1:"Electrolytic Stripper", badge2:"Steel", badge3:"Room temp • 6–10 V",
+        hero_title:"Steel Striper TH-9 — ยาลอกโลหะบนเหล็กแบบใช้ไฟฟ้า",
+        hero_tagline:"ลอกนิเกิ้ลบนเหล็กอย่างรวดเร็ว ควบคุมด้วยไฟตรง pH 6–8 ที่อุณหภูมิห้อง",
 
         features_title:"คุณสมบัติพิเศษ",
-        f1_t:"ลอกไว รอบสั้น", f1_d:"เหมาะสายการผลิต ต้องการเวลาพักแช่สั้น",
-        f2_t:"ถนอมผิวเหล็ก", f2_d:"ออกแบบเพื่อคงสภาพพื้นผิวฐาน",
-        f3_t:"อัตราส่วนชัดเจน", f3_d:"RS-109 60 g/L + NaCN 120–180 g/L",
-        f4_t:"ช่วงอุณหภูมิกว้าง", f4_d:"ทำงานได้ที่ 50–70 °C เพื่อเร่งปฏิกิริยา",
-        f5_t:"ต่อชุบได้ทันที", f5_d:"รองรับลำดับลอก → copper strike → ชุบใหม่",
-        f6_t:"สเกลง่าย", f6_d:"มีตัวอย่างผสมตั้งบ่อ 100 ลิตร",
+        f1_t:"เร็ว คุมได้ด้วยไฟ", f1_d:"วงจรการลอกสั้น ปรับผลด้วยโวลต์/แอมป์",
+        f2_t:"ถนอมผิวเหล็ก", f2_d:"ออกแบบให้ลดความเสียหายพื้นผิวฐาน",
+        f3_t:"อุณหภูมิห้อง", f3_d:"ทำงานได้ดีโดยไม่ต้องให้ความร้อน",
+        f4_t:"หน้าต่างการทำงานชัด", f4_d:"TH-9 150 g/L • pH 6–8 • 6–10 V • 5–25 A/dm²",
+        f5_t:"ฟื้นฟูน้ำยาได้", f5_d:"ตกตะกอนโลหะด้วยการปรับ pH แล้วกรองออก",
+        f6_t:"คุม pH ง่าย", f6_d:"ปรับด้วยกรดอะซิติกหรือแอมโมเนียน้ำ",
 
         product_title:"ข้อมูลผลิตภัณฑ์",
-        product_lead:"ยาลอกนิเกิ้ลสำหรับชิ้นงานเหล็ก ใช้ร่วมกับโซเดียมไซยาไนด์เพื่อเร่งการลอก ภายใต้สภาพด่างจัด เหมาะสำหรับการแก้ไขงานชุบเสียหรือเตรียมผิวก่อนชุบใหม่",
-        pi_type:"ประเภท: ยาลอกนิเกิ้ลบนเหล็ก (ไซยาไนด์เบส)",
+        product_lead:"น้ำยาลอกนิเกิ้ลสำหรับชิ้นงานเหล็กแบบใช้ไฟฟ้า เหมาะกับการลอกชั้นชุบเดิมอย่างรวดเร็วเพื่อเตรียมชุบใหม่ โดยควบคุมผ่านแรงดันและความหนาแน่นกระแส ใช้งานที่อุณหภูมิห้อง pH กึ่งกลางอ่อน ๆ (6–8)",
+        pi_type:"ประเภท: ยาลอกนิเกิ้ลบนเหล็ก (Electrolytic)",
         pi_sub:"วัสดุ: เหล็ก/เหล็กคาร์บอนต่ำ",
-        pi_form:"รูปแบบ: ผง RS-109 ผสมน้ำ + เติมโซเดียมไซยาไนด์",
-        pi_ops:"เงื่อนไขทำงาน: RS-109 60 g/L + NaCN 120–180 g/L; 50–70 °C; 5–10 นาที; คุม pH > 10",
+        pi_form:"ความเข้มข้น: TH-9 150 กรัม/ลิตร",
+        pi_ops:"เงื่อนไขทำงาน: pH 6–8 (กรดอะซิติก/แอมโมเนีย), อุณหภูมิห้อง, 6–10 V, 5–25 A/dm², แคโทดสแตนเลส",
 
         specs_title:"สเปก & สภาพการทำงาน",
-        head_param:"พารามิเตอร์", head_opt:"ค่า/ช่วง",
-        sp_rs:"NEOBRITE RS-109", sp_rs_val:"60 กรัม/ลิตร",
-        sp_nacn:"โซเดียมไซยาไนด์ (NaCN)", sp_nacn_val:"120–180 กรัม/ลิตร",
-        sp_temp:"อุณหภูมิ", sp_temp_val:"50–70 °C (ร้อนสม่ำเสมอช่วยให้ลอกเร็ว)",
-        sp_time:"เวลาแช่", sp_time_val:"5–10 นาที หรือจนเกิดฟิล์มดำทั่ว",
-        sp_pH:"pH", sp_pH_val:"> 10 (ด่างจัด — ห้ามสัมผัสกรด)",
-        sp_tank:"วัสดุถัง/อุปกรณ์", sp_tank_val:"วัสดุทนด่าง/ไซยาไนด์ (PP/PE/PVC) แยกโซนจากกรด",
+        head_param:"พารามิเตอร์", head_opt:"ค่า/ช่วง", head_note:"หมายเหตุ",
+        sp_th9:"Steel Striper TH-9", sp_th9_val:"150 กรัม/ลิตร", sp_th9_note:"ผสมน้ำสะอาด",
+        sp_pH:"pH", sp_pH_val:"6–8", sp_pH_note:"ปรับด้วยกรดอะซิติก/แอมโมเนียน้ำ",
+        sp_temp:"อุณหภูมิ", sp_temp_val:"อุณหภูมิห้อง",
+        sp_volt:"แรงดันไฟ DC", sp_volt_val:"6–10 V",
+        sp_cd:"ความหนาแน่นกระแส", sp_cd_val:"5–25 A/dm²",
+        sp_cath:"ขั้วลบ (แคโทด)", sp_cath_val:"สแตนเลส", sp_cath_note:"งานเป็นแอโนด (+)",
 
         mix_title:"ตัวอย่างการผสม (100 ลิตร)",
         mix_item:"ส่วนผสม", mix_qty:"ปริมาณ",
-        mix_rs:"NEOBRITE RS-109 (ผง)", mix_rs_q:"6 กก.",
-        mix_nacn:"โซเดียมไซยาไนด์", mix_nacn_q:"12 กก.",
+        mix_th9:"Steel Striper TH-9", mix_th9_q:"15 กก. (150 กรัม/ลิตร)",
         mix_water:"น้ำสะอาด/DI", mix_water_q:"เติมจนครบ 100 ลิตร",
-        mix_step1:"เตรียมน้ำในถังทนด่าง/ไซยาไนด์ ละลาย RS-109 ให้เข้ากัน",
-        mix_step2:"เติม NaCN อย่างระมัดระวัง ใต้ระบบระบายอากาศที่ดี",
-        mix_step3:"คุมให้เป็นด่างตลอด (pH > 10) และห้ามมีกรดอยู่ใกล้บ่อ",
+        mix_pH:"ตั้ง pH", mix_pH_q:"ปรับให้ 6–8 ด้วยกรดอะซิติก/แอมโมเนีย",
+        mix_step1:"ชาร์จน้ำนิ่ง 70–80% ของปริมาตร → ละลาย TH-9 ให้เข้ากัน",
+        mix_step2:"ปรับ pH เข้าเป้า (6–8) และปรับปริมาตรจนครบ",
+        mix_step3:"ทดสอบแถบ pH อีกครั้งก่อนเริ่มเดินไฟ",
 
-        process_title1:"ขั้นตอนการลอกนิเกิ้ลออกจากชิ้นงานเหล็ก",
-        ps1:"ลอกนิเกิ้ลด้วย RS-109 ตามสัดส่วน ขณะ 50–70 °C ~5–10 นาที หรือจนฟิล์มดำทั่ว",
-        ps2:"แช่โซเดียมไซยาไนด์ 10% 15–60 วินาที เพื่อให้ฟิล์มดำหลุด",
-        ps3:"ล้างน้ำสะอาดหลายครั้ง",
-        ps4:"ลงชุบทองแดงด่าง (copper strike) → ล้าง",
-        ps5:"จุ่มกรดอ่อนอย่างปลอดภัยหลังจากล้างจนปราศจากไซยาไนด์ → ล้าง",
-        ps6:"ชุบนิเกิ้ลใหม่ → ล้าง → จุ่มโครมิก (ตามกระบวนการโรงงาน)",
+        process_title:"ขั้นตอนการทำงาน",
+        pr1:"ชิ้นงานเหล็กผ่านการล้างไขมัน/ล้างน้ำสะอาด",
+        pr2:"จัดขั้ว: ชิ้นงานเป็นแอโนด (+) คู่กับแคโทดสแตนเลส",
+        pr3:"ตั้ง 6–10 V และ 5–25 A/dm² ลอกจนครบ (สังเกตฟิล์ม/ผิว)",
+        pr4:"ล้างน้ำสะอาดหลายครั้ง",
+        pr5:"เตรียมเข้าสู่กระบวนการถัดไป (เช่น strike ตามกระบวนการโรงงาน)",
 
-        process_title2:"ขั้นตอนการชุบนิเกิ้ลใหม่บนงานที่ชุบเสียแล้ว",
-        pr1:"ลอกนิเกิ้ลด้วย RS-109 จนลอกหมด → ล้าง",
-        pr2:"กลิ้งทำความสะอาดด้วย S-2000 (ในถังกลิ้ง) → ล้าง",
-        pr3:"ทองแดงด่าง (strike) → ล้าง",
-        pr4:"กรดอ่อน (หลังแน่ใจว่าไม่มีคราบไซยาไนด์จากขั้นก่อน) → ล้าง",
-        pr5:"ชุบนิเกิ้ล → ล้าง → จุ่มโครมิก",
+        regen_title:"การกำจัดโลหะในน้ำยา (ฟื้นฟูประสิทธิภาพ)",
+        rg1:"เมื่อโลหะละลายสะสม → ลอกช้าลง ให้ตกตะกอนโลหะโดยปรับ pH ~10 ด้วยแอมโมเนียน้ำ",
+        rg2:"กรองเอาตะกอนโลหะออกจนใส",
+        rg3:"ปรับ pH กลับมาที่ 6–7 ด้วยกรดอะซิติก แล้วทดสอบก่อนใช้งาน",
+        rg4:"คำเตือน: ตะกั่วที่ละลายในบ่อจะทำให้น้ำยาเสื่อม ควรหลีกเลี่ยง/ควบคุม",
 
-        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม (ไซยาไนด์)",
-        ehs1:"ห้ามสัมผัสกรดโดยเด็ดขาดกับสารละลายไซยาไนด์ — รักษา pH > 10 ตลอดเวลา",
-        ehs2:"แยกโซนบ่อไซยาไนด์ออกจากบ่อกรด/ล้างกรด ใช้ราวแขวน/อุปกรณ์เฉพาะ",
-        ehs3:"ใส่ PPE ครบ (ถุงมือ กันสารเคมี แว่นตา หน้ากาก เหมาะสม) และทำงานในที่อากาศถ่ายเท",
-        ehs4:"ฝึกอบรมผู้ปฏิบัติการ, มีแผนฉุกเฉินและอุปกรณ์ตรวจจับไอ/ก๊าซตามความเหมาะสม",
-        ehs5:"ของเสีย/น้ำล้างที่มีไซยาไนด์ ให้บำบัด/ส่งกำจัดโดยผู้ได้รับอนุญาต (เช่น ขั้นตอนด่างคลอรีเนชันภายใต้ผู้เชี่ยวชาญ) ตามกฎหมาย",
-        note_ppe:"*อ้างอิง SDS/TDS และระเบียบความปลอดภัยของสถานประกอบการอย่างเคร่งครัด",
+        ehs_title:"ความปลอดภัย & สิ่งแวดล้อม",
+        ehs1:"ใส่ PPE ครบ (ถุงมือกันสารเคมี แว่นตา หน้ากากที่เหมาะสม) และทำงานในที่อากาศถ่ายเท",
+        ehs2:"ควบคุม pH ตามช่วงที่กำหนด หลีกเลี่ยงการกระเด็น/ฟุ้งกระจายขณะปรับกรด–ด่าง",
+        ehs3:"จัดการตะกอนโลหะ/น้ำทิ้งตามกฎหมายท้องถิ่น ส่งกำจัดโดยผู้ได้รับอนุญาต",
+        ehs4:"แยกอุปกรณ์/ตะขอเฉพาะไลน์ลอก หลีกเลี่ยงการปนเปื้อนข้ามขั้น",
+        note_ppe:"*โปรดอ้างอิง SDS/TDS และมาตรการความปลอดภัยของสถานประกอบการ",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
@@ -358,67 +493,65 @@
         cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)"
       },
       en:{
-        meta_title:"NEOBRITE RS-109 — Nickel Stripper for Steel | Baume Chemical",
+        btn_back:"Back",
+        meta_title:"Steel Striper TH-9 — Electrolytic Nickel Stripper for Steel | Baume Chemical",
 
-        badge1:"Nickel Stripper", badge2:"Steel", badge3:"50–70 °C • 5–10 min",
-        hero_title:"NEOBRITE RS-109 — Nickel Stripper (Steel)",
-        hero_tagline:"Fast cyanide-based stripping under controlled alkaline conditions • Includes 100 L mixing example",
+        badge1:"Electrolytic Stripper", badge2:"Steel", badge3:"Room temp • 6–10 V",
+        hero_title:"Steel Striper TH-9 — Electrolytic Nickel Stripper (Steel)",
+        hero_tagline:"Fast nickel removal at room temperature, pH 6–8 under DC control",
 
         features_title:"Key Features",
-        f1_t:"Fast cycles", f1_d:"Short dwell time suited for production",
-        f2_t:"Steel-safe", f2_d:"Designed to preserve the steel substrate",
-        f3_t:"Clear ratios", f3_d:"RS-109 60 g/L + NaCN 120–180 g/L",
-        f4_t:"Broad temperature window", f4_d:"Operates at 50–70 °C for faster action",
-        f5_t:"Re-plate ready", f5_d:"Supports strip → copper strike → re-nickel sequence",
-        f6_t:"Scalable setup", f6_d:"100 L bath mixing example provided",
+        f1_t:"Fast & controllable", f1_d:"Short cycles tuned by voltage/current",
+        f2_t:"Steel-safe", f2_d:"Formulated to protect the steel substrate",
+        f3_t:"Room-temperature", f3_d:"No external heating required",
+        f4_t:"Clear operating window", f4_d:"TH-9 150 g/L • pH 6–8 • 6–10 V • 5–25 A/dm²",
+        f5_t:"Regenerable bath", f5_d:"Raise pH to precipitate metals, then filter",
+        f6_t:"Simple pH control", f6_d:"Adjust with acetic acid or ammonium hydroxide",
 
         product_title:"Product Information",
-        product_lead:"Nickel stripper for steel using sodium cyanide in strong alkaline conditions. Ideal for rework or surface preparation prior to re-plating.",
-        pi_type:"Type: Nickel stripper for steel (cyanide-based)",
+        product_lead:"Electrolytic nickel stripper for steel, ideal for rapid rework prior to re-plating. Operates at room temperature with a mildly neutral pH (6–8).",
+        pi_type:"Type: Electrolytic nickel stripper (steel)",
         pi_sub:"Substrates: Steel/low-carbon steel",
-        pi_form:"Form: RS-109 powder in water + sodium cyanide addition",
-        pi_ops:"Operating: RS-109 60 g/L + NaCN 120–180 g/L; 50–70 °C; 5–10 min; keep pH > 10",
+        pi_form:"Concentration: TH-9 at 150 g/L",
+        pi_ops:"Operating: pH 6–8 (acetic acid/ammonia), room temp, 6–10 V, 5–25 A/dm², stainless cathode",
 
         specs_title:"Specs & Operating Conditions",
-        head_param:"Parameter", head_opt:"Value/Range",
-        sp_rs:"NEOBRITE RS-109", sp_rs_val:"60 g/L",
-        sp_nacn:"Sodium cyanide (NaCN)", sp_nacn_val:"120–180 g/L",
-        sp_temp:"Temperature", sp_temp_val:"50–70 °C (uniform heat improves rate)",
-        sp_time:"Dwell time", sp_time_val:"5–10 min or until black film forms",
-        sp_pH:"pH", sp_pH_val:"> 10 (strongly alkaline — never contact acids)",
-        sp_tank:"Tank/equipment", sp_tank_val:"Alkali/cyanide-resistant (PP/PE/PVC); segregate from acid lines",
+        head_param:"Parameter", head_opt:"Value/Range", head_note:"Notes",
+        sp_th9:"Steel Striper TH-9", sp_th9_val:"150 g/L", sp_th9_note:"Dissolve in clean/DI water",
+        sp_pH:"pH", sp_pH_val:"6–8", sp_pH_note:"Adjust with acetic acid/ammonia",
+        sp_temp:"Temperature", sp_temp_val:"Room temperature",
+        sp_volt:"DC voltage", sp_volt_val:"6–10 V",
+        sp_cd:"Current density", sp_cd_val:"5–25 A/dm²",
+        sp_cath:"Cathode", sp_cath_val:"Stainless steel", sp_cath_note:"Workpiece as anode (+)",
 
         mix_title:"Mixing Example (100 L)",
         mix_item:"Component", mix_qty:"Quantity",
-        mix_rs:"NEOBRITE RS-109 (powder)", mix_rs_q:"6 kg",
-        mix_nacn:"Sodium cyanide", mix_nacn_q:"12 kg",
+        mix_th9:"Steel Striper TH-9", mix_th9_q:"15 kg (150 g/L)",
         mix_water:"Water (DI/clean)", mix_water_q:"Top up to 100 L",
-        mix_step1:"Charge water to a cyanide-compatible tank and dissolve RS-109.",
-        mix_step2:"Add NaCN carefully under good ventilation.",
-        mix_step3:"Keep pH > 10 at all times and keep acids away from cyanide areas.",
+        mix_pH:"Set pH", mix_pH_q:"Adjust to 6–8 with acetic acid/ammonia",
+        mix_step1:"Charge ~70–80% water, dissolve TH-9 thoroughly.",
+        mix_step2:"Adjust pH into range (6–8), then top up to final volume.",
+        mix_step3:"Verify pH again before energizing the bath.",
 
-        process_title1:"Stripping Sequence (Steel Parts)",
-        ps1:"Strip in RS-109 at 50–70 °C for ~5–10 min or until black film forms",
-        ps2:"Dip in 10% NaCN for 15–60 s to remove the black film",
-        ps3:"Rinse thoroughly multiple times",
-        ps4:"Alkaline copper strike → rinse",
-        ps5:"Mild acid dip only after thorough de-cyanidation → rinse",
-        ps6:"Re-nickel → rinse → chromic dip (per plant process)",
+        process_title:"Process Steps",
+        pr1:"Degrease and rinse steel parts",
+        pr2:"Set polarity: work as anode (+), stainless as cathode",
+        pr3:"Apply 6–10 V and 5–25 A/dm² until stripping is complete",
+        pr4:"Rinse thoroughly",
+        pr5:"Proceed to next steps (e.g., strike) per plant practice",
 
-        process_title2:"Re-plating Flow After Failed Nickel",
-        pr1:"Strip completely with RS-109 → rinse",
-        pr2:"Barrel clean with S-2000 → rinse",
-        pr3:"Alkaline copper strike → rinse",
-        pr4:"Mild acid (only after confirming no cyanide carryover) → rinse",
-        pr5:"Nickel plate → rinse → chromic dip",
+        regen_title:"Metal Removal / Bath Regeneration",
+        rg1:"When dissolved metals build up, raise pH to ~10 with ammonia to precipitate metals",
+        rg2:"Filter out the precipitates until clear",
+        rg3:"Adjust pH back to 6–7 with acetic acid; verify before use",
+        rg4:"Note: Lead contamination degrades the bath; avoid/control lead sources",
 
-        ehs_title:"Safety & Environment (Cyanide)",
-        ehs1:"Never contact acids with cyanide solutions — maintain pH > 10 at all times",
-        ehs2:"Physically segregate cyanide tanks from acid/rinse tanks; dedicated racks and hooks",
-        ehs3:"Wear full PPE and work under good ventilation",
-        ehs4:"Train operators; maintain emergency plans and gas detection as appropriate",
-        ehs5:"Treat cyanide-bearing waste via licensed processes (e.g., alkaline chlorination by qualified personnel) per law",
-        note_ppe:"*Follow the product SDS/TDS and your facility’s EHS procedures strictly.",
+        ehs_title:"Safety & Environment",
+        ehs1:"Wear full PPE (chemical gloves, goggles, appropriate mask) and ensure ventilation",
+        ehs2:"Control pH within target range; avoid splashes while adjusting acids/bases",
+        ehs3:"Handle metal sludge/wastewater per local regulations via licensed disposal",
+        ehs4:"Use dedicated tooling for stripping lines to prevent cross-contamination",
+        note_ppe:"*Follow product SDS/TDS and your facility’s EHS procedures*",
 
         footer_products:"Products", footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
@@ -428,32 +561,37 @@
       }
     };
 
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
-    };
-
     function applyLang(lang){
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
+      // Title
       const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
       if(titleEl && I18N[L].meta_title) titleEl.textContent = I18N[L].meta_title;
 
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-      els.translatables().forEach(node=>{
+      // Translate all nodes
+      document.querySelectorAll('[data-i18n-key]').forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const val = I18N[L][key];
         if(typeof val !== 'undefined') node.textContent = val;
+      });
+
+      // Update states for ALL lang buttons (desktop + mobile)
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
       });
 
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
     (function initLang(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
+      let saved='th';
+      try{
+        const v = localStorage.getItem('lang');
+        if(v==='en' || v==='th') saved=v;
+      }catch(e){}
       applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+      document.querySelectorAll('.lang-btn').forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 </body>
