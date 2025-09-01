@@ -152,6 +152,30 @@
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+  /* Back chip on hero */
+.back-chip{
+  position:absolute;
+  top:calc(var(--header-h) + 10px);
+  left:16px;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#fff;
+  color:#0f172a;
+  text-decoration:none;
+  font-weight:800;
+  line-height:1;
+  border:1px solid rgba(2,8,20,.08);
+  box-shadow:var(--shadow-1);
+}
+.back-chip:focus-visible{outline:2px solid #0f172a; outline-offset:2px}
+@media (hover:hover) and (pointer:fine){
+  .back-chip:hover{transform:translateY(-1px)}
+}
+
   </style>
 </head>
 <body>
@@ -193,6 +217,7 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero" aria-label="Strippers hero">
+    <a class="back-chip" href="https://www.baumechemical.com/products.html" data-back>← กลับหน้าหลัก</a>
     <div class="hero-inner">
       <h1 data-i18n-key="hero_title">น้ำยาลอกผิว/ลอกชุบ (Strippers)</h1>
       <p data-i18n-key="hero_tagline">ลอกชั้นชุบ ออกไซด์ สี และคราบบนผิวโลหะอย่างแม่นยำ เตรียมพร้อมสำหรับขั้นตอนต่อไป เช่น ชุบ พ่นสี หรือเชื่อม — สูตรคุมง่าย และช่วยลดของเสียในไลน์</p>
@@ -454,5 +479,19 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
+  <script>
+  (function(){
+    const btn = document.querySelector('[data-back]');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){
+      try{
+        const ref = document.referrer;
+        const sameOrigin = ref && new URL(ref).origin === location.origin;
+        if(sameOrigin){ e.preventDefault(); history.back(); }
+      }catch(err){}
+    });
+  })();
+</script>
+
 </body>
 </html>
