@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>คู่มือ Electropolishing อลูมิเนียม | Baume Chemical Blog</title>
 
-  <!-- === SEO base === -->
+  <!-- === SEO base (unchanged) === -->
   <meta name="description" content="คู่มือ Electropolishing อลูมิเนียม: การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง วิธีคุมให้เงาเรียบเสมอ">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <link rel="canonical" href="https://www.baumechemical.com/blog/aluminum-electropolishing/">
@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/aluminum-electropolishing/">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Twitter (unchanged) -->
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Aluminum Electropolishing Guide — Baume Chemical Blog">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data (JSON-LD) — unchanged -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -104,101 +104,80 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:56px; /* จะถูกตั้งตามความสูงจริงด้วย JS */
+      --header-h:64px; /* will be synced via JS */
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* ===== Header ===== */
-    .site-header{
-      position:sticky; top:0; z-index:1200;
-      backdrop-filter:saturate(140%) blur(8px);
-      background:rgba(255,255,255,.78);
-      border-bottom:1px solid #e6ece8;
-    }
-    .nav-bar{ max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
+    /* ===== GLASS HEADER: transparent start, dark on scroll, sticky on top ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:10px 16px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-    .brand-name{font-weight:800; color:#1d2b23}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
 
-    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
-    .primary-nav a:hover{ background:#ecf4ef }
-    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-    @media(max-width:760px){ .brand-name{display:none} }
+    .header-right{display:flex; align-items:center; gap:10px}
+    .primary-nav{display:flex; align-items:center; gap:12px}
+    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:700}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
 
-    /* เบอร์เกอร์ */
-    .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-    .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-    .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
-    /* มือถือ: เมนูเลื่อนลง + scrim */
-    @media (max-width:900px){
-      .nav-toggle{ display:inline-block; }
-      .primary-nav{
-        position:fixed; left:0; right:0; top:var(--header-h);
-        background:#fff; border-bottom:1px solid #e6ece8; box-shadow:0 12px 30px rgba(2,8,20,.12);
-        display:none; flex-direction:column; gap:6px; padding:12px 16px; z-index:1190;
-      }
-      .primary-nav a{ padding:12px 10px; font-size:15px }
-      .site-header.open .primary-nav{ display:flex; }
-      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1185; display:none }
-      body.no-scroll{ overflow:hidden }
+    /* Language switch (desktop next to menu; on mobile lives inside menu) */
+    .lang-switch{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    @media (max-width:920px){
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
+      /* Make language switch live inside the dropdown visually */
+      .primary-nav{align-items:stretch}
+      .primary-nav .lang-switch{margin-top:6px;border-color:rgba(255,255,255,.35);background:#ffffff1c;box-shadow:none}
+      .primary-nav .lang-btn{color:#fff}
+      .primary-nav .lang-btn[aria-pressed="true"]{background:#ffffff; color:#0f172a}
     }
-    /* scrim via [hidden] */
-    .menu-scrim{ display:none }
-    .menu-scrim:not([hidden]){ display:block }
 
-    /* ===== Lang switcher FAB ===== */
-    .lang-fab{
-      position:fixed;
-      top:calc(env(safe-area-inset-top, 0px) + 14px);
-      right:calc(env(safe-area-inset-right, 0px) + 14px);
-      z-index:1300; display:flex; gap:6px; padding:4px;
-      border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px);
-      box-shadow:0 10px 26px rgba(2,8,20,.12);
-      transition:transform .18s ease, opacity .18s ease;
-    }
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-    .lang-fab.is-hide{ opacity:0; transform:translateY(-10px); pointer-events:none }
-
-    @media (max-width:900px){
-      .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); right:auto; left:auto; margin:8px 12px 0 auto; background:#fff; backdrop-filter:none; box-shadow:0 8px 26px rgba(2,8,20,.06); }
-      .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 }
-      .lang-fab .flag{ width:18px; height:13px }
-    }
-    @media (max-width:420px){ .lang-fab .lang-btn span{ display:none } }
-    @media (prefers-reduced-motion: reduce){ .lang-fab{ transition:none } }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Layout & cards ===== */
+    /* ===== Layout & tables ===== */
     .wrap{max-width:1200px; margin:auto; padding:34px 16px}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     .lead{margin:0 0 16px; color:#5f6d7c}
-    .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
-    @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
-    @media(max-width:640px){ .grid{grid-template-columns:1fr} }
-    .card{background:#fff; border:1px solid #e3ece5; border-radius:14px; overflow:hidden; box-shadow:0 8px 26px rgba(2,8,20,.06); transition:transform .18s ease, box-shadow .18s ease}
-    .card picture,.card img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#eff5f0}
-    .card .body{padding:14px}
-    .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
-    .badge{font-size:12px; background:#eff7f1; border:1px solid #d8e7dd; color:#2f6b52; padding:2px 8px; border-radius:999px}
-    .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
-    .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:#ff9800; font-weight:800; text-decoration:none}
-    .card .more:hover{ text-decoration:underline }
-    @media (hover:hover) and (pointer:fine){ .card:hover{ transform:translateY(-8px); box-shadow:0 16px 40px rgba(2,8,20,.14) } }
 
-    /* ===== Footer ===== */
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:#f4faf7}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+
+    /* Part switcher */
+    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
+    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
+    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* Footer (unchanged styles) */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
@@ -214,83 +193,124 @@
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
     /* Utils */
+    html{scroll-behavior:smooth}
+    [hidden]{display:none !important}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
   </style>
+  <style id="beautify-main">
+    /* ===== Page layout: two-column with sticky TOC on wide screens ===== */
+    @media (min-width: 1100px){
+      main.wrap{
+        display:grid;
+        grid-template-columns: 300px minmax(0,1fr);
+        gap:20px;
+        align-items:start;
+      }
+      /* place elements */
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px); }
+      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
+      section.section-block{ grid-column:2; }
+    }
 
-  <!-- Extra styles for nicer visuals & anchors -->
-  <style>
-    html{scroll-behavior:smooth}
-    [hidden]{display:none !important}
-    .section{position:relative}
-    .section::after{content:"";display:block;height:3px;width:72px;margin:8px 0 0;background:linear-gradient(90deg,var(--brand-2),#59a286,transparent);border-radius:2px}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc p{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
-    .toc-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:700}
-    .toc-chip:hover{background:#e4f0ea}
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:#f4faf7}
-    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
-    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    /* ===== Section cards & headings ===== */
+    section.section-block{
+      background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1);
+      position:relative; overflow:hidden; margin-bottom:16px;
+    }
+    section.section-block::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
+      background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85;
+    }
+    h2.section{ display:flex; align-items:center; gap:10px; font-weight:800; }
+    /* Emoji icons per section (no extra markup) */
+    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+    #rec>h2.section{ --icon:"📊" }
+    #prep>h2.section{ --icon:"🧼" }
+    #window>h2.section{ --icon:"🎛️" }
+    #fixture>h2.section{ --icon:"🧰" }
+    #care>h2.section{ --icon:"🛡️" }
+    #defects>h2.section{ --icon:"🚨" }
+    #links>h2.section{ --icon:"🔗" }
+    /* Hover anchor hint */
+    .section-block>h2.section{ position:relative }
+    .section-block>h2.section::after{ content:"#"; position:absolute; right:10px; top:50%; transform:translateY(-50%);
+      opacity:0; transition:opacity .2s ease; font-weight:800; color:var(--muted); font-size:.92rem }
+    .section-block:hover>h2.section::after{ opacity:.85 }
 
-    /* Part switcher */
-    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
-    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
-    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    /* ===== TOC styling (card + active chip) ===== */
+    #toc{ border-radius:16px }
+    #toc h2.section{ font-size:1rem; margin-bottom:4px }
+    #toc p{ display:grid; gap:8px; margin:10px 0 0 }
+    .toc-chip{ display:flex; align-items:center; justify-content:space-between; width:100%; font-weight:800 }
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"]{ background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12) }
+
+    /* ===== Tables polish ===== */
+    .table table{ border-radius:14px }
+    .table thead th{ position:sticky; top:0; z-index:1 }
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Subtle background accents for sections ===== */
+    .section-block::before{ content:""; position:absolute; width:220px; height:220px; right:-60px; top:-60px; border-radius:50%;
+      background:radial-gradient(closest-side, #e9f5ef 0%, #f7fbf9 60%, transparent 100%); filter:saturate(120%); pointer-events:none }
+
+    /* Part switcher buttons refinement */
+    .part-switch{ background:#fff; border:1px solid #e3ece5; border-radius:999px; padding:6px; box-shadow:var(--shadow-1) }
+    .part-btn{ background:#f2f7f4; border-color:#d8e7dd }
+    .part-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; border-color:transparent }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header" role="banner" aria-label="Site header">
-    <div class="nav-bar">
+  <!-- ===== Header (transparent start → dark on scroll) ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="header-inner">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <!-- ปุ่มเบอร์เกอร์ (แสดงเฉพาะมือถือ) -->
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
+      <div class="header-right">
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+          <ul class="menu">
+            <li><a href="https://www.baumechemical.com/index.html">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a></li>
+          </ul>
+          <!-- Language switch: beside menu on desktop, inside dropdown on mobile -->
+          <div class="lang-switch" id="langSwitch" role="group" aria-label="Language switcher">
+            <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+              <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+            </button>
+            <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+              <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+            </button>
+          </div>
+        </nav>
 
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
-        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
-        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
-        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
-        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
-      </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
-  <!-- scrim คลิกเพื่อปิดเมนู -->
   <div class="menu-scrim" hidden></div>
 
-  <!-- Lang switcher (ลอย/Sticky) -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
-
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/" data-back>← กลับเมนูหลัก</a>
     <div class="wrap">
-      <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
       <h1 data-i18n-key="hero_title">คู่มือ Electropolishing อลูมิเนียม</h1>
       <p data-i18n-key="hero_tagline">การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลบ่อกัดเงา และวิธีคุมให้เงาเรียบเสมอ</p>
     </div>
   </header>
 
-  <!-- Main -->
+  <!-- ===== Main content (unchanged text/sections) ===== -->
   <main class="wrap">
     <!-- Part Switcher -->
     <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
@@ -312,7 +332,7 @@
       </p>
     </nav>
 
-    <!-- ค่าเริ่มต้นที่แนะนำ -->
+    <!-- Sections — content unchanged -->
     <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
       <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
       <p data-i18n-key="rec_p1">ค่าด้านล่างเป็นแนวทางเริ่มต้นสำหรับอะลูมิเนียมทั่วไป ปรับตามเกรดผิว รูปร่างชิ้นงาน และมาตรฐานที่ต้องการ เริ่มจากค่ากลางและปรับทีละตัวเพื่อดูผล</p>
@@ -356,7 +376,6 @@
       </div>
     </section>
 
-    <!-- การเตรียมผิวก่อนกัดเงา -->
     <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
       <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนกัดเงา</h2>
       <p data-i18n-key="prep_p1">ความสะอาดของผิวและการขจัดชั้นออกไซด์ส่งผลต่อความเงาและความสม่ำเสมอโดยตรง เริ่มจากล้างคราบน้ำมันและไขมันด้วยน้ำยาด่างหรือทำความสะอาดด้วยคลื่นเสียงความถี่สูง แล้วล้างออกด้วยน้ำสะอาดต่อด้วยการลอกชั้นออกไซด์แบบอ่อนเพื่อกำจัดคราบและผิวด้าน จากนั้นล้างน้ำออกจากผิวให้หมด</p>
@@ -364,7 +383,6 @@
       <p data-i18n-key="prep_p3">ตรวจสภาพผิวด้วยแสงส่องเฉียงมุมต่ำก่อนนำชิ้นงานลงบ่อกัดเงา ให้แน่ใจว่าผิวสะอาด ปราศจากคราบน้ำมัน และไม่มีคราบน้ำเกาะผิว</p>
     </section>
 
-    <!-- หน้าต่างกระบวนการ -->
     <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
       <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
       <p data-i18n-key="window_p1">หน้าต่างกระบวนการคือช่วงอุณหภูมิ กระแส และเวลา ที่ให้เงาเรียบสม่ำเสมอโดยไม่เกิดไหม้ขอบหรือผิวด้าน เริ่มจากค่ากลาง แล้วขยับทีละตัวและบันทึกผล</p>
@@ -407,21 +425,18 @@
       <p data-i18n-key="window_p2">ควบคุมให้ผิวอลูมิเนียมเรียบเนียนและเงาสม่ำเสมอ ลดรอยจากการกลึง การเจียร หรือการกัดด้วยกรด โดยทำงานในสารละลายกรด ใช้ไฟฟ้ากระแสตรง และกำหนดอุณหภูมิกับเวลาให้เหมาะสม</p>
     </section>
 
-    <!-- การจัดวาง -->
     <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
       <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
       <p data-i18n-key="fixture_p1">จัดชิ้นงานให้หันด้านสำคัญรับการไหลของกระแสเท่าๆ กัน ลดจุดบอดและเงาไม่สม่ำเสมอ ระยะขั้วให้เหมาะกับรูปทรง ไม่ชิดเกินไปเพื่อหลีกเลี่ยงการไหม้ขอบและไม่ห่างเกินไปจนไม่เงา ใช้แผ่นบังจุดที่กระแสสูงช่วยป้องกันผิวเสีย</p>
       <p data-i18n-key="fixture_p2">วางชิ้นงานในแนวตั้งเพื่อช่วยให้ฟองก๊าซลอยออกจากผิวได้ง่าย ผิวจึงเงาสม่ำเสมอ จุดคีบต้องสะอาด แข็งแรง ตรวจสอบด้วยว่ามีซอกหรือรูเยอะ เพื่อเช็คกระแสไฟเกินหรือน้อยไป</p>
     </section>
 
-    <!-- การดูแลบ่อกัดเงาและคุณภาพ -->
     <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
       <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อกัดเงาและคุณภาพ</h2>
       <p data-i18n-key="care_p1">การกัดเงาอะลูมิเนียม เป็นกระบวนการที่ทำให้อะลูมิเนียมมีพื้นผิวที่เงาและเรียบลื่นคล้ายกระจก โดยใช้สารเคมีกัดกรดเพื่อขจัดชั้นผิวที่ไม่เรียบออกไป</p>
       <p data-i18n-key="care_p2">การกัดเงาอะลูมิเนียมต้องอาศัยการควบคุมกระบวนการอย่างพิถีพิถัน เริ่มจากการติดตามปริมาณโลหะและส่วนประกอบในอ่าง แล้วเติมสารเคมีให้เหมาะสมกับปริมาณไฟฟ้าที่ใช้ ควบคุมคุณภาพน้ำล้างให้คงที่และไหลย้อนกลับเพื่อลดคราบสะสมในอ่าง ต้องกรองสิ่งสกปรกอย่างต่อเนื่องและทำความสะอาดถุงแอโนดตามรอบ การควบคุมปัจจัยเหล่านี้จะช่วยให้ได้ชิ้นงานที่เงางามและมีคุณภาพสม่ำเสมอ</p>
     </section>
 
-    <!-- ตารางปัญหาพบเจอบ่อย -->
     <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
       <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
       <div class="table">
@@ -464,7 +479,6 @@
       </div>
     </section>
 
-    <!-- ลิงก์ที่เกี่ยวข้อง -->
     <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
       <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
       <p><a class="more" href="https://www.baumechemical.com/products/polishing/" data-i18n-key="link_polish">หมวดน้ำยากัดเงาและขัดเงาโลหะ</a></p>
@@ -475,7 +489,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer (content unchanged) ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -523,7 +537,8 @@
     </div>
   </footer>
 
-  <!-- JS: Reveal on scroll -->
+  <!-- ===== JS ===== -->
+  <!-- Reveal on scroll -->
   <script>
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
@@ -532,25 +547,18 @@
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n -->
+  <!-- i18n (keep texts unchanged, only wiring the switch) -->
   <script>
     const I18N = {
       th: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
         back_home:"← กลับเมนูหลัก",
         hero_title: "คู่มือ Electropolishing อลูมิเนียม",
         hero_tagline: "การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง และวิธีคุมให้เงาเรียบเสมอ",
-        sec_latest: "บทความเด่น",
-        sec_lead: "ไกด์ฉบับเดียว ครอบคลุมตั้งแต่การเตรียมผิวจนถึงการคุมคุณภาพ",
-        read_more: "อ่านบทความเต็ม →",
-
         /* Part switcher */
         part1:"พาร์ต 1: ตั้งต้น & กระบวนการ",
         part2:"พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ปัญหา",
-
         /* TOC */
         toc_title:"สารบัญ", toc_rec:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนกัดเงา", toc_window:"หน้าต่างกระบวนการ", toc_fixture:"การจัดวาง", toc_care:"การดูแลบ่อกัดเงาและคุณภาพ", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
-
         /* Sections */
         rec_h:"ค่าเริ่มต้นที่แนะนำ",
         rec_p1:"ค่าด้านล่างเป็นแนวทางเริ่มต้นสำหรับอะลูมิเนียมทั่วไป ปรับตามเกรดผิว รูปร่างชิ้นงาน และมาตรฐานที่ต้องการ เริ่มจากค่ากลางและปรับทีละตัวเพื่อดูผล",
@@ -560,27 +568,22 @@
         rec_t_time:"เวลา", rec_v_time:"1–5 นาที", rec_n_time:"พอให้ผิวเรียบและเงาโดยไม่ไหม้ขอบ",
         rec_t_flow:"การกวนและการกรอง", rec_v_flow:"ไหลเวียนต่อเนื่อง กรองละเอียด", rec_n_flow:"ช่วยลดชิ้นงานเป็นรูและคราบหมอก",
         rec_t_ratio:"อัตราส่วนแคโทดต่อแอโนด", rec_v_ratio:"1:1 ถึง 2:1", rec_n_ratio:"ให้กระแสกระจายสม่ำเสมอ",
-
         prep_h:"การเตรียมผิวก่อนกัดเงา",
         prep_p1:"ความสะอาดของผิวและการขจัดชั้นออกไซด์ส่งผลต่อความเงาและความสม่ำเสมอโดยตรง เริ่มจากล้างคราบน้ำมันและไขมันด้วยน้ำยาด่างหรือทำความสะอาดด้วยคลื่นเสียงความถี่สูง แล้วล้างออกด้วยน้ำสะอาดต่อด้วยการลอกชั้นออกไซด์แบบอ่อนเพื่อกำจัดคราบและผิวด้าน จากนั้นล้างน้ำออกจากผิวให้หมด",
         prep_p2:"กำจัดคราบดำหลังการกัดบนผิวอลูมิเนียมโดยใช้น้ำยาที่ไม่ใช้กรดดินประสิว เลือกชนิดน้ำยาให้เหมาะกับชนิดอลูมิเนียมและลักษณะงาน เช่น หากชิ้นงานมีรอยตัดหรือมีคราบสี ควรเพิ่มระยะเวลาในขั้นตอนเตรียมผิวให้พอเหมาะ และลดช่วงรอระหว่างแต่ละขั้นตอนให้สั้นที่สุดเพื่อป้องกันคราบตกค้างบนผิวงาน",
         prep_p3:"ตรวจสภาพผิวด้วยแสงส่องเฉียงมุมต่ำก่อนนำชิ้นงานลงบ่อกัดเงา ให้แน่ใจว่าผิวสะอาด ปราศจากคราบน้ำมัน และไม่มีคราบน้ำเกาะผิว",
-
         window_h:"หน้าต่างกระบวนการ",
         window_p1:"หน้าต่างกระบวนการคือช่วงอุณหภูมิ กระแส และเวลา ที่ให้เงาเรียบสม่ำเสมอโดยไม่เกิดไหม้ขอบหรือผิวด้าน เริ่มจากค่ากลาง แล้วขยับทีละตัวและบันทึกผล",
         win_th_cond:"เงื่อนไข", win_th_low:"ต่ำ", win_th_mid:"กลาง", win_th_high:"สูง", win_th_obs:"สังเกตการณ์",
         win_r_temp:"อุณหภูมิ", win_v_temp_low:"ต่ำกว่าค่ากลางเล็กน้อย", win_v_temp_mid:"ค่ากลางที่คงที่", win_v_temp_high:"สูงกว่าค่ากลางเล็กน้อย", win_n_temp:"อุณหภูมิสูงไปเพิ่มโอกาสไหม้ขอบ",
         win_r_cd:"ความหนาแน่นกระแส", win_v_cd_low:"ให้เงาช้า", win_v_cd_mid:"เงาสม่ำเสมอ", win_v_cd_high:"เสี่ยงไหม้ขอบและริ้ว", win_n_cd:"เฝ้าดูโซนมุมและขอบชิ้นงาน",
         win_r_time:"เวลา", win_v_time_low:"ยังไม่เรียบ", win_v_time_mid:"เรียบและเงา", win_v_time_high:"ผิวเริ่มด้านหรือเกิดคราบ", win_n_time:"ตั้งเวลาเท่ากันทั้งชุดทดสอบ",
-
         fixture_h:"การจัดวาง",
         fixture_p1:"จัดวางชิ้นงานให้ด้านสำคัญรับการไหลของกระแสอย่างสม่ำเสมอ เพื่อลดจุดบอดและความเงาไม่เสมอ คุมระยะห่างระหว่างขั้วให้เหมาะกับรูปทรง ไม่ชิดจนขอบไหม้และไม่ห่างจนเงาไม่ขึ้น ใช้แผ่นบังช่วยในตำแหน่งที่กระแสหนาแน่นเพื่อลดกระแสเกินเฉพาะจุด",
         fixture_p2:"วางชิ้นงานในแนวตั้งเพื่อให้ฟองแก๊สลอยตัวออกได้ดี จุดคีบต้องสะอาดและแน่นหนา ทดสอบการกระจายกระแสด้วยชิ้นงานรูปทรงยากเพื่อตรวจว่าไม่มีโซนกระแสเกินและโซนกระแสขาดก่อนลงงานจริง",
-
         care_h:"การดูแลบ่อกัดเงาและคุณภาพ",
         care_p1:"ติดตามปริมาณโลหะที่ละลายและส่วนประกอบหลักของบ่อกัดเงา เติมสารตามปริมาณไฟฟ้าสะสม คุมคุณภาพน้ำให้คงที่ ตรวจคุณภาพน้ำล้างและจัดล้างแบบไหลทวนหลายช่วงเพื่อลดการพาคราบย้อนกลับเข้าบ่อ กรองอย่างต่อเนื่องด้วยไส้กรองละเอียดและทำความสะอาดถุงขั้วบวกตามรอบที่กำหนด",
         care_p2:"บันทึกอุณหภูมิ ค่ากรดด่าง กระแส และเวลาในทุกกะ ตรวจชิ้นงานตามตัวชี้วัดสำคัญอย่างความเงา ความสม่ำเสมอ การยึดเกาะ และความทนต่อการกัดกร่อน วางแผนบำรุงรักษารายสัปดาห์และรายเดือน เช่น เปลี่ยนไส้กรอง ตรวจจุดสัมผัส ปรับเทียบเครื่องมือ และทบทวนแนวโน้มจากกราฟควบคุม",
-
         def_h:"ตารางปัญหาพบเจอบ่อย",
         def_th_sym:"อาการ", def_th_cause:"สาเหตุหลัก", def_th_fix:"แนวทางแก้",
         def_r1_s:"ไม่เงา ผิวด้าน", def_r1_c:"กระแสต่ำ การกวนไม่พอ ผิวไม่สะอาด", def_r1_f:"เพิ่มกระแสทีละน้อย เพิ่มการไหลเวียนและตรวจขั้นเตรียมผิว",
@@ -588,59 +591,41 @@
         def_r3_s:"ชิ้นงานเป็นรู", def_r3_c:"ฟองหรืออนุภาคปนเปื้อน น้ำล้างสกปรก สารลดแรงตึงผิวไม่พอ", def_r3_f:"ปรับการกวนและกรอง เติมสารช่วยเปียก ตรวจและรีเฟรชน้ำล้าง",
         def_r4_s:"ริ้วเงาไม่สม่ำเสมอ", def_r4_c:"อุณหภูมิไม่นิ่ง กระแสแปรปรวน การจัดวางไม่สมดุล", def_r4_f:"คุมอุณหภูมิให้คงที่ ปรับแหล่งจ่ายไฟ และทบทวนการจัดวาง",
         def_r5_s:"คราบหลังล้างและเก็บ", def_r5_c:"น้ำกระด้าง คราบสารค้างผิว ไม่มีการปกป้องหลังงาน", def_r5_f:"ใช้ระบบน้ำคุณภาพดี เพิ่มขั้นล้างและอบแห้งเร็ว ใช้น้ำยาปกป้องผิวที่เหมาะสม",
-
         links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
         link_polish:"หมวดน้ำยากัดเงาและขัดเงาโลหะ", link_pretreat:"หมวด Pretreatment สำหรับการเตรียมผิว", link_salt:"คู่มือ Salt Spray และการอ่านผล", link_pass:"โครเมตบนซิงค์และงานปกป้องผิว", link_equip:"อุปกรณ์งานชุบและระบบกรอง",
-
         footer_products: "หมวดผลิตภัณฑ์", footer_contact: "ติดต่อเรา", footer_copy: "© 2025 Baume Chemical. All rights reserved."
       },
-
       en: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
         back_home:"← Back to Home",
         hero_title: "Aluminum Electropolishing Guide",
         hero_tagline: "Surface preparation, current/temperature window, fixturing, bath recipe & care, and techniques for uniform gloss.",
-        sec_latest: "Featured Article",
-        sec_lead: "One practical guide from prep through quality control.",
-        read_more: "Read the full guide →",
-
-        /* Part switcher */
         part1:"Part 1: Basics & Process",
         part2:"Part 2: Fixturing/QA/Troubleshooting",
-
-        /* TOC */
         toc_title:"Contents", toc_rec:"Recommended starting values", toc_prep:"Surface preparation", toc_window:"Process window", toc_fixture:"Fixturing", toc_care:"Bath care & Quality", toc_defects:"Common defects table", toc_links:"Related links",
-
-        /* Sections */
         rec_h:"Recommended starting values",
         rec_p1:"Use these as a baseline for common aluminum grades. Start at mid-range and adjust one variable at a time.",
         rec_th_param:"Parameter", rec_th_range:"Baseline range", rec_th_note:"Notes",
         rec_t_temp:"Bath temperature", rec_v_temp:"60-80 °C", rec_n_temp:"Keep steady to avoid streaky gloss",
         rec_t_cd:"Current density", rec_v_cd:"10–30 A/dm²", rec_n_cd:"Increase/decrease gradually for target gloss",
-        rec_t_time:"Time", rec_v_time:"1–5 Second", rec_n_time:"Smooth & bright without edge burn",
+        rec_t_time:"Time", rec_v_time:"1–5 นาที", rec_n_time:"Smooth & bright without edge burn",
         rec_t_flow:"Agitation & filtration", rec_v_flow:"Continuous flow, fine filtration", rec_n_flow:"Reduces pitting and haze",
         rec_t_ratio:"Cathode/Anode ratio", rec_v_ratio:"1:1 to 2:1", rec_n_ratio:"For even current distribution",
-
         prep_h:"Surface preparation",
         prep_p1:"Degrease (alkaline/ultrasonic), rinse with good water, light de-oxidize, then multi-stage rinse.",
         prep_p2:"De-smut with non-nitric options where possible. Tune dwell times for alloy & condition. Minimize delays between steps.",
         prep_p3:"Inspect under low-angle light; surface must be clean and water-break free.",
-
         window_h:"Process window",
         window_p1:"Define the temperature, current, and time ranges that yield uniform gloss without edge burn.",
         win_th_cond:"Condition", win_th_low:"Low", win_th_mid:"Mid", win_th_high:"High", win_th_obs:"Observation",
         win_r_temp:"Temperature", win_v_temp_low:"Slightly below mid", win_v_temp_mid:"Stable mid", win_v_temp_high:"Slightly above mid", win_n_temp:"Higher temp increases edge-burn risk",
         win_r_cd:"Current density", win_v_cd_low:"Slow brightening", win_v_cd_mid:"Uniform gloss", win_v_cd_high:"Edge burn/streak risk", win_n_cd:"Watch corners/edges",
         win_r_time:"Time", win_v_time_low:"Not smooth yet", win_v_time_mid:"Smooth & bright", win_v_time_high:"Haze/over-etched", win_n_time:"Use the same time across trials",
-
         fixture_h:"Fixturing",
         fixture_p1:"Orient critical faces evenly to current flow; use thieves/masks for hot spots.",
         fixture_p2:"Hang vertical to vent bubbles; keep strong, clean contacts; verify with difficult test shapes.",
-
         care_h:"Bath care & Quality",
         care_p1:"Track dissolved metal & key components; top-up by amp-hours; maintain rinses and recirculation/filtration.",
         care_p2:"Record temperature, pH/acid, current, time; audit parts for gloss, uniformity, adhesion, corrosion; plan weekly/monthly PM.",
-
         def_h:"Common defects table",
         def_th_sym:"Symptom", def_th_cause:"Likely causes", def_th_fix:"Fix",
         def_r1_s:"Dull finish", def_r1_c:"Low current, poor agitation, dirty surface", def_r1_f:"Step up current, improve flow, re-prep surface",
@@ -648,16 +633,14 @@
         def_r3_s:"Pitting", def_r3_c:"Gas/particulates, dirty rinse, low wetting", def_r3_f:"Improve agitation/filtration, add wetter, refresh rinses",
         def_r4_s:"Streaky gloss", def_r4_c:"Unstable temp, pulsing current, poor fixturing", def_r4_f:"Stabilize temp/supply, re-balance fixturing",
         def_r5_s:"Post-rinse stains", def_r5_c:"Hard water, residues, no final protection", def_r5_f:"DI water, faster dry, suitable after-treat",
-
         links_h:"Related links",
         link_polish:"Polishing & Electropolishing", link_pretreat:"Pretreatment", link_salt:"Salt Spray quick guide", link_pass:"Zinc passivation & protective", link_equip:"Equipment & filtration",
-
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -677,15 +660,16 @@
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
         applyLang(btn.dataset.lang);
+        // update header var in case text length changes
         try{
-          const h = document.querySelector('.site-header').getBoundingClientRect().height|0;
+          const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
           document.documentElement.style.setProperty('--header-h', h + 'px');
         }catch(e){}
       }));
     })();
   </script>
 
-  <!-- JS: Part switcher (Part 1 / Part 2 with deep-link & persistence) -->
+  <!-- Part switcher (persist & deep-link) -->
   <script>
   (function(){
     const buttons = document.querySelectorAll('.part-switch .part-btn');
@@ -705,12 +689,10 @@
       try{ localStorage.setItem('ep_part', part); }catch(e){}
     }
 
-    // Init part from URL ?part=1/2 or localStorage
     const urlPart = new URLSearchParams(location.search).get('part');
     const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ep_part')) || '1';
     setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
 
-    // Click handlers
     buttons.forEach(b => b.addEventListener('click', ()=>{
       setPart(b.dataset.part);
       document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
@@ -718,100 +700,107 @@
   })();
   </script>
 
-  <!-- JS: เมนูมือถือ + อัปเดต header height + FAB hide/show บนมือถือ -->
+  <!-- Header glass, mobile menu (scrim+lock), back-chip smart, highlight current -->
   <script>
-  (function(){
-    const header = document.querySelector('.site-header');
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-    const scrim = document.querySelector('.menu-scrim');
-    const fab = document.querySelector('.lang-fab');
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
 
-    // อัปเดตตัวแปร --header-h ตามความสูงจริงของ header
-    function updateHeaderH(){
-      const h = header.getBoundingClientRect().height|0;
-      document.documentElement.style.setProperty('--header-h', h + 'px');
-    }
-    updateHeaderH();
-    window.addEventListener('load', updateHeaderH, {once:true});
-    window.addEventListener('resize', updateHeaderH, {passive:true});
-
-    // เปิด/ปิดเมนูมือถือ + A11y
-    let scrollTop = 0;
-    function setOpen(isOpen){
-      header.classList.toggle('open', isOpen);
-      toggle?.setAttribute('aria-expanded', String(isOpen));
-      if (scrim){
-        if (isOpen){ scrim.removeAttribute('hidden'); }
-        else { scrim.setAttribute('hidden',''); }
-      }
-      if (nav){
-        nav.setAttribute('aria-hidden', String(!isOpen));
-        if (isOpen){
-          const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
-          first?.focus();
-        }else{
-          toggle?.focus();
-        }
-      }
-      // กันพื้นหลังสกรอลล์ (ทน iOS)
-      if (isOpen){
-        scrollTop = window.scrollY;
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollTop}px`;
-        document.body.style.width = '100%';
-      }else{
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, scrollTop);
-      }
-    }
-    toggle?.addEventListener('click', ()=> setOpen(!header.classList.contains('open')));
-    scrim?.addEventListener('click', ()=> setOpen(false));
-    document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false); });
-    window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) setOpen(false); }, {passive:true});
-
-    // ไฮไลต์ลิงก์ปัจจุบัน (ถ้า path ตรง/ขึ้นต้น)
-    try{
-      const here = location.pathname.replace(/\/+$/,'');
-      nav?.querySelectorAll('a').forEach(a=>{
-        const path = new URL(a.href, location.origin).pathname.replace(/\/+$/,'');
-        if (path && (here === path || (here.startsWith(path) && path !== '/'))) a.setAttribute('aria-current','page');
-      });
-    }catch(e){}
-
-    // FAB: ซ่อนตอนเลื่อนลง โชว์ตอนเลื่อนขึ้น (จอ ≤900px)
-    let onScroll, bound = false;
-    function bindFab(){
-      if (bound || !fab) return;
-      let lastY = window.scrollY, hidden = false;
-      const THRESHOLD = 8;
-      onScroll = ()=>{
-        const y = window.scrollY, dy = y - lastY;
-        if (Math.abs(dy) > THRESHOLD){
-          const shouldHide = dy > 0 && y > 40;
-          if (shouldHide !== hidden){
-            fab.classList.toggle('is-hide', shouldHide);
-            hidden = shouldHide;
-          }
-          lastY = y;
-        }
-      };
+      // Set header height var & glass on scroll
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
       window.addEventListener('scroll', onScroll, {passive:true});
-      bound = true;
-    }
-    function unbindFab(){
-      if (!bound) return;
-      window.removeEventListener('scroll', onScroll);
-      fab?.classList.remove('is-hide');
-      bound = false;
-    }
-    const mq = window.matchMedia('(max-width: 900px)');
-    function applyFab(e){ e.matches ? bindFab() : unbindFab(); }
-    applyFab(mq);
-    mq.addEventListener ? mq.addEventListener('change', applyFab) : mq.addListener(applyFab);
-  })();
+      setH(); onScroll();
+
+      // Mobile menu open/close with body lock
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // Highlight current page; force Products when under /products/*
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        document.querySelectorAll('.menu a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // Back smart: prefer history if same-origin
+      (function(){
+        const btn = document.querySelector('[data-back]');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+  <script id="toc-scrollspy">
+    // Clickable heading anchors (adds #id when clicking the H2)
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    // TOC scroll-spy: highlight current section chip
+    (function(){
+      const chips = Array.from(document.querySelectorAll('#toc .toc-chip'));
+      if(!chips.length) return;
+      const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const secById = new Map();
+      chips.forEach(a=>{ const id=(a.getAttribute('href')||'').replace('#',''); const sec=document.getElementById(id); if(sec) secById.set(id,{sec,chip:a}); });
+
+      function setActive(){
+        let nearestId=null, nearest=Infinity, headerH=getHeaderH();
+        secById.forEach(({sec,chip},id)=>{
+          if(sec.hidden) return; // skip hidden part
+          const rect = sec.getBoundingClientRect();
+          const dist = Math.abs(rect.top - (headerH + 14));
+          if(rect.bottom>headerH+40 && rect.top < window.innerHeight*0.6 && dist < nearest){ nearest=dist; nearestId=id; }
+        });
+        chips.forEach(c=> c.setAttribute('aria-current','false'));
+        if(nearestId){ const c = secById.get(nearestId)?.chip; c && c.setAttribute('aria-current','true'); }
+      }
+      ['scroll','resize','load'].forEach(ev=> window.addEventListener(ev, setActive, {passive:true}));
+      setActive();
+    })();
   </script>
 </body>
 </html>
