@@ -1,67 +1,48 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>คู่มือคุมโทนสีโครเมตบนซิงค์ | Baume Chemical Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>โครเมตบนซิงค์: คุมโทนสีให้ตรงสเปก (pH·เวลา·อุณหภูมิ) | Baume Chemical Blog</title>
 
   <!-- === SEO base === -->
-  <meta name="description" content="เทคนิคคุมโทนสีโครเมตบนซิงค์ให้ตรงสเปก: ค่าเริ่มต้น pH/เวลา/อุณหภูมิ การเตรียมผิว การจัดวาง ชุดควบคุมกระบวนการ การดูแลบ่อ และตารางแก้ปัญหาโทนสี พร้อมลิงก์บทความที่เกี่ยวข้อง">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <link rel="canonical" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
-  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
-  <meta name="theme-color" content="#2c5e4e">
+  <meta name="description" content="คู่มือคุมโทนสีโครเมต/พาสซิเวชันบนซิงค์: แผนที่โทน–หลักการ, ค่าเริ่มต้น, การเตรียมผิว, หน้าต่างกระบวนการ, การจัดวาง, การดูแลบ่อ, QC และตารางปัญหา" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" />
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" />
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/" />
+  <meta name="theme-color" content="#2c5e4e" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="คู่มือคุมโทนสีโครเมตบนซิงค์ — ตั้งค่าให้ตรงโทน & วิธีแก้เมื่อสีเพี้ยน">
-  <meta property="og:description" content="ค่าเริ่มต้น pH/เวลา/อุณหภูมิ การเตรียมผิว การจัดวาง การดูแลบ่อ และตารางแก้ปัญหาโทนสี">
-  <meta property="og:url" content="https://www.baumechemical.com/blog/zinc-passivation-color-control/">
-  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
-  <meta property="og:image:alt" content="Zinc Chromate Color Control — Baume Chemical">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph -->
+  <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Baume Chemical" />
+  <meta property="og:title" content="คุมโทนสีโครเมตบนซิงค์ — Baume Chemical Blog" />
+  <meta property="og:description" content="ตั้งค่า pH/เวลา/อุณหภูมิให้ได้โทนสีตามสเปก พร้อมแผน QC และตารางแก้ปัญหา" />
+  <meta property="og:url" content="https://www.baumechemical.com/blog/zinc-passivation-color-control/" />
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg" />
+  <meta property="og:image:alt" content="Zinc Chromate Color Control — Baume Chemical Blog" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"คู่มือคุมโทนสีโครเมตบนซิงค์ — ตั้งค่าให้ตรงโทน & วิธีแก้เมื่อสีเพี้ยน",
-    "url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/",
-    "inLanguage":"th",
-    "description":"ค่าเริ่มต้น pH/เวลา/อุณหภูมิ การเตรียมผิว การจัดวาง การดูแลบ่อ และตารางแก้ปัญหาโทนสี",
-    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
-    "image":"https://i.imgur.com/3mWQsKe.jpeg"
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},"sameAs":["https://line.me/ti/p/~baumechemical"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
     {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
-    {"@type":"ListItem","position":3,"name":"Chromate Color Control","item":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"}
+    {"@type":"ListItem","position":3,"name":"Zinc Passivation Color Control","item":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"}
   ]}
   </script>
 
-  <!-- Fonts & Perf -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
 
   <style>
@@ -69,104 +50,125 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:56px;
+      --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
     html{scroll-behavior:smooth}
 
-    /* ===== Header ===== */
-    .site-header{ position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8; }
-    .nav-bar{ max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
+    /* ===== GLASS HEADER — transparent over hero, darker on scroll ===== */
+    .site-header{
+      position:sticky; top:0; z-index:1400;
+      background:linear-gradient(180deg,rgba(10,14,20,.22),rgba(10,14,20,.12));
+      backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .18s ease, border-color .18s ease, box-shadow .18s ease;
+      color:#fff;
+    }
+    .site-header.is-scrolled{
+      background:rgba(17,24,39,.82);
+      border-bottom-color:rgba(255,255,255,.25);
+      box-shadow:0 12px 38px rgba(2,8,20,.32);
+    }
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-    .brand-name{font-weight:800; color:#1d2b23}
-    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
-    .primary-nav a:hover{ background:#ecf4ef }
-    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand) var(--logo-url) center/cover no-repeat; box-shadow:0 3px 10px rgba(0,0,0,.25)}
+    .brand-name{font-weight:800; color:#fff}
     @media(max-width:760px){ .brand-name{display:none} }
 
-    /* Burger */
-    .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-    .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
+    /* Primary nav + Lang switch (desktop inline / mobile inside menu) */
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+    .menu a{ text-decoration:none; color:#fff; padding:8px 10px; border-radius:10px; font-weight:700 }
+    .menu a:hover{ background:rgba(255,255,255,.08) }
+    .menu a[aria-current="page"]{ background:rgba(255,255,255,.14); font-weight:800 }
+    .lang-switch{display:flex; gap:6px; margin-left:12px}
+    .lang-btn{appearance:none; border:1px solid rgba(255,255,255,.28); background:rgba(255,255,255,.06); color:#fff;
+      padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; }
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); border-color:transparent }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(255,255,255,.25) }
+
+    /* Burger + dropdown */
+    .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid rgba(255,255,255,.3); border-radius:10px; background:rgba(255,255,255,.1); cursor:pointer }
+    .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#fff; border-radius:2px; }
     .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
     @media (max-width:900px){
       .nav-toggle{ display:inline-block; }
-      .primary-nav{ position:fixed; left:0; right:0; top:var(--header-h); background:#fff; border-bottom:1px solid #e6ece8; box-shadow:0 12px 30px rgba(2,8,20,.12); display:none; flex-direction:column; gap:6px; padding:12px 16px; z-index:1190; }
-      .primary-nav a{ padding:12px 10px; font-size:15px }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0b1220; border:1px solid rgba(255,255,255,.16);
+        box-shadow:0 18px 40px rgba(2,8,20,.48); display:none; flex-direction:column; gap:10px; padding:14px; border-radius:14px; z-index:1450; }
+      .primary-nav .menu{ flex-direction:column; gap:6px }
+      .primary-nav .menu a{ padding:12px; font-size:15px; background:rgba(255,255,255,.04) }
       .site-header.open .primary-nav{ display:flex; }
-      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1185; display:none }
+      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.5); z-index:1400; display:none }
+      /* Lang switch moves inside menu */
+      .lang-switch{ width:100%; margin:2px 0 0; padding-top:8px; border-top:1px dashed rgba(255,255,255,.18); }
     }
     .menu-scrim{ display:none } .menu-scrim:not([hidden]){ display:block }
-
-    /* ===== Lang FAB ===== */
-    .lang-fab{ position:fixed; top:calc(env(safe-area-inset-top, 0px) + 14px); right:calc(env(safe-area-inset-right, 0px) + 14px); z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition:transform .18s ease, opacity .18s ease;}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-    .lang-fab.is-hide{ opacity:0; transform:translateY(-10px); pointer-events:none }
-    @media (max-width:900px){ .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); margin:8px 12px 0 auto; background:#fff; box-shadow:0 8px 26px rgba(2,8,20,.06);} .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 } .lang-fab .flag{ width:18px; height:13px } }
-    @media (max-width:420px){ .lang-fab .lang-btn span{ display:none } }
-    @media (prefers-reduced-motion: reduce){ .lang-fab{ transition:none } }
+    body.no-scroll{position:fixed;width:100%}
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff;
+      min-height: clamp(420px, 60vh, 620px);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffffea; color:#0f172a; border:1px solid rgba(2,8,20,.08); box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Base layout ===== */
-    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
+    /* ===== Layout & components ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     .lead{margin:0 0 16px; color:#5f6d7c}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    .section{position:relative}
-    .section::after{content:"";display:block;height:3px;width:72px;margin:8px 0 0;background:linear-gradient(90deg,var(--brand-2),#59a286,transparent);border-radius:2px}
+    [hidden]{display:none !important}
 
-    /* Components */
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc p{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
-    .toc-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:700}
-    .toc-chip:hover{background:#e4f0ea}
+    /* Two-column layout (sticky TOC left) */
+    @media (min-width:1100px){
+      main.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
+      section.section-block{ grid-column:2 }
+    }
 
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:#f4faf7}
+    /* Section cards + gradient stripe + emoji icon */
+    section.section-block{
+      background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;
+      box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px;scroll-margin-top:calc(var(--header-h) + 18px)
+    }
+    section.section-block::after{
+      content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+      background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9);opacity:.85
+    }
+    .section-block>h2.section{display:flex;align-items:center;gap:10px}
+    .section-block>h2.section::before{content:var(--icon,"📘");font-size:20px;line-height:1}
+    #map>h2.section{--icon:"🎨"} #rec>h2.section{--icon:"📊"} #prep>h2.section{--icon:"🧼"} #window>h2.section{--icon:"🎛️"}
+    #fixture>h2.section{--icon:"🧰"} #care>h2.section{--icon:"🛡️"} #defects>h2.section{--icon:"🚨"} #links>h2.section{--icon:"🔗"}
+
+    /* TOC (card + pill items) */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1)}
+    #toc h2.section{font-size:1rem;margin:0 0 6px}
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;
+      padding:12px 14px;border-radius:12px;background:#f2f7f4;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip:hover{filter:brightness(.98)}
+    .toc-chip::after{content:"›";opacity:.55;color:var(--brand-2);font-weight:900}
+    .toc-chip[aria-current="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    .toc-chip[aria-current="true"]::after{color:#fff;opacity:.9}
+
+    /* Tables: glossy */
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:14px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:relative}
+    .table thead th::after{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,#d9efe4,transparent)}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{background:#f6fbf8}
 
-    .hint{background:#fff8e6;border:1px solid #ffe4b5;color:#7a4a00;padding:10px 12px;border-radius:12px;margin:10px 0}
-    .ok{background:#e8fbf1;border:1px solid #b8efd0;color:#0f5132;padding:10px 12px;border-radius:12px;margin:10px 0}
+    /* Part switcher */
+    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
+    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
+    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* Color chips */
-    .color-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    @media(max-width:900px){.color-grid{grid-template-columns:repeat(2,1fr)}}
-    .color-card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);overflow:hidden}
-    .swatch{height:80px}
-    .swatch.clear{background:linear-gradient(135deg,#eaf3ff,#ffffff)}
-    .swatch.yellow{background:linear-gradient(135deg,#ffe08a,#ffd24d)}
-    .swatch.irides{background:linear-gradient(135deg,#b9d8ff,#ffef9a,#b5e2c2)}
-    .swatch.black{background:linear-gradient(135deg,#111,#333)}
-    .color-card .body{padding:12px}
-    .color-card h3{margin:0 0 6px;font-size:1rem}
-    .color-card p{margin:0;color:#5b6675;font-size:.95rem}
-
-    /* Footer */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
-    .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    /* Footer base (in Part B) */
 
     /* Reveal */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
@@ -175,8 +177,8 @@
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header" role="banner" aria-label="Site header">
+  <!-- ===== Header (GLASS) ===== -->
+  <header class="site-header" role="banner" aria-label="Site header" id="siteHeader">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
@@ -187,473 +189,443 @@
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
+      <!-- Global menu + language switch -->
       <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
-        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
-        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
-        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
-        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+        <ul class="menu">
+          <li><a href="https://www.baumechemical.com/" data-i18n-key="nav_home">Home</a></li>
+          <li><a href="https://www.baumechemical.com/about/" data-i18n-key="nav_about">About us</a></li>
+          <li><a href="https://www.baumechemical.com/products/" data-i18n-key="nav_products">Products</a></li>
+          <li><a href="https://www.baumechemical.com/contact/" data-i18n-key="nav_contact">Contact Us</a></li>
+          <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a></li>
+        </ul>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher" id="langSwitch">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Lang FAB -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
-
   <!-- Hero -->
   <header class="hero">
-    <div class="wrap">
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:var(--container); margin:auto">
       <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
-      <h1 data-i18n-key="hero_title">คู่มือคุมโทนสีโครเมตบนซิงค์</h1>
-      <p data-i18n-key="hero_tagline">ตั้งค่า pH/เวลา/อุณหภูมิให้ตรงโทน + จัดวาง/ล้าง/อบแห้งให้สม่ำเสมอ พร้อมแผนคุมคุณภาพและตารางแก้ปัญหาโทนสี</p>
+      <h1 data-i18n-key="hero_title">โครเมตบนซิงค์: คุมโทนสีให้ตรงสเปก</h1>
+      <p data-i18n-key="hero_tagline">แผนที่โทน–หลักการ + ค่าเริ่มต้น + เตรียมผิว + หน้าต่างกระบวนการ + การจัดวาง + ดูแลบ่อ + QC + ตารางแก้ปัญหา</p>
     </div>
   </header>
 
-  <!-- TOC -->
   <main class="wrap">
+    <!-- Part Switcher -->
+    <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
+      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: แผนที่โทน/ค่าเริ่มต้น/เตรียมผิว/หน้าต่าง</span></button>
+      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: จัดวาง/ดูแลบ่อ/QC/ปัญหา/ลิงก์</span></button>
+    </div>
+
+    <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
       <p>
-        <a class="toc-chip" href="#map" data-i18n-key="toc_map">แผนที่โทนสี & หลักการ</a>
-        <a class="toc-chip" href="#defaults" data-i18n-key="toc_defaults">ค่าเริ่มต้นที่แนะนำ</a>
-        <a class="toc-chip" href="#prep" data-i18n-key="toc_prep">การเตรียมผิวก่อนโครเมต</a>
-        <a class="toc-chip" href="#window" data-i18n-key="toc_window">ตัวแปรที่ขับสี (Process Window)</a>
-        <a class="toc-chip" href="#placement" data-i18n-key="toc_placement">การจัดวาง & การระบายน้ำ</a>
-        <a class="toc-chip" href="#bath" data-i18n-key="toc_bath">การดูแลบ่อ & แผนคุมคุณภาพ</a>
-        <a class="toc-chip" href="#defects" data-i18n-key="toc_defects">ตารางปัญหาโทนสี</a>
-        <a class="toc-chip" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
+        <a class="toc-chip" href="#map" data-part="1" data-i18n-key="toc_map">แผนที่โทน & หลักการ</a>
+        <a class="toc-chip" href="#rec" data-part="1" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a>
+        <a class="toc-chip" href="#prep" data-part="1" data-i18n-key="toc_prep">การเตรียมผิวก่อนโครเมต</a>
+        <a class="toc-chip" href="#window" data-part="1" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a>
+        <a class="toc-chip" href="#fixture" data-part="2" data-i18n-key="toc_fixture">การจัดวาง</a>
+        <a class="toc-chip" href="#care" data-part="2" data-i18n-key="toc_care">การดูแลบ่อ & คุณภาพ</a>
+        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a>
+        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
       </p>
     </nav>
 
-    <!-- 1. แผนที่โทนสี & หลักการ -->
-    <section id="map" class="reveal section-block">
-      <h2 class="section" data-i18n-key="map_h">แผนที่โทนสี & หลักการ</h2>
-      <p class="lead" data-i18n-key="map_lead">โดยทั่วไป: <strong>pH ต่ำ / เวลาแช่นาน / อุณหภูมิสูง</strong> → ฟิล์มหนา สีเข้มขึ้น (เหลือง/รุ้ง/ดำ) ส่วน <strong>pH สูง / เวลาแช่สั้น / อุณหภูมิต่ำ</strong> → ฟิล์มบาง สีใส/ฟ้า</p>
-      <div class="color-grid">
-        <article class="color-card">
-          <div class="swatch clear" aria-hidden="true"></div>
-          <div class="body">
-            <h3 data-i18n-key="chip_clear_h">ใส/ฟ้า (Clear/Blue)</h3>
-            <p data-i18n-key="chip_clear_p">นิยม Cr³⁺ + ซีล/ท็อปโค้ท คุมคราบหยดและน้ำล้างสุดท้ายสำคัญมาก</p>
-          </div>
-        </article>
-        <article class="color-card">
-          <div class="swatch yellow" aria-hidden="true"></div>
-          <div class="body">
-            <h3 data-i18n-key="chip_yellow_h">เหลือง/ทอง (Yellow/Gold)</h3>
-            <p data-i18n-key="chip_yellow_p">มักใช้ Cr⁶⁺ หรือ Cr³⁺ แบบหนา pH ต่ำกว่า และแช่นาน/อุ่นกว่า</p>
-          </div>
-        </article>
-        <article class="color-card">
-          <div class="swatch irides" aria-hidden="true"></div>
-          <div class="body">
-            <h3 data-i18n-key="chip_irid_h">รุ้ง/ออกเขียว (Iridescent/Olive)</h3>
-            <p data-i18n-key="chip_irid_p">ฟิล์มหนาขึ้นอีก โทนไวต่อพารามิเตอร์และคุณภาพการล้าง</p>
-          </div>
-        </article>
-        <article class="color-card">
-          <div class="swatch black" aria-hidden="true"></div>
-          <div class="body">
-            <h3 data-i18n-key="chip_black_h">ดำ (Black)</h3>
-            <p data-i18n-key="chip_black_p">Cr³⁺ ดำ + ซีล จำเป็นต่อความทน/การถูและรอยนิ้ว</p>
-          </div>
-        </article>
-      </div>
-      <div class="hint" data-i18n-key="map_hint">หมายเหตุ: สูตรจริง/แบรนด์มีหน้าต่างต่างกัน ให้ใช้สเปกผู้ผลิตเป็นหลัก แล้วจูนภายในกรอบด้านล่าง</div>
-    </section>
-
-    <!-- 2. ค่าเริ่มต้นที่แนะนำ -->
-    <section id="defaults" class="reveal section-block">
-      <h2 class="section" data-i18n-key="def_h">ค่าเริ่มต้นที่แนะนำ (เป้าโทนสี)</h2>
-      <p class="lead" data-i18n-key="def_lead">ใช้เป็นจุดเริ่ม แล้วไตเตรต/ปรับตามสเปกน้ำยาจริงและโทนสีที่ลูกค้าต้องการ</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="d_color">โทนสี</th>
-              <th data-i18n-key="d_sys">ระบบโดยทั่วไป</th>
-              <th data-i18n-key="d_ph">pH บ่อ</th>
-              <th data-i18n-key="d_time">เวลาแช่</th>
-              <th data-i18n-key="d_temp">อุณหภูมิ</th>
-              <th data-i18n-key="d_note">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="c_clear">ใส/ฟ้า</td>
-              <td data-i18n-key="c_clear_sys">Cr³⁺ + ซีล</td>
-              <td data-i18n-key="c_clear_ph">~1.8–2.4</td>
-              <td data-i18n-key="c_clear_time">10–25 วินาที</td>
-              <td data-i18n-key="c_clear_temp">22–30°C</td>
-              <td data-i18n-key="c_clear_note">หลีกเลี่ยงฟิล์มหนาเกิน → สีหม่น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_yellow">เหลือง/ทอง</td>
-              <td data-i18n-key="c_yellow_sys">Cr⁶⁺ (หรือ Cr³⁺ หนา)</td>
-              <td data-i18n-key="c_yellow_ph">~1.0–1.4</td>
-              <td data-i18n-key="c_yellow_time">5–15 วินาที</td>
-              <td data-i18n-key="c_yellow_temp">20–30°C</td>
-              <td data-i18n-key="c_yellow_note">ฟิล์มหนา โทนจัด ไวต่อพารามิเตอร์</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_irid">รุ้ง/ออกเขียว</td>
-              <td data-i18n-key="c_irid_sys">Cr⁶⁺ หนา (หรือระบบเฉพาะ Cr³⁺)</td>
-              <td data-i18n-key="c_irid_ph">~1.0–1.4</td>
-              <td data-i18n-key="c_irid_time">10–30 วินาที</td>
-              <td data-i18n-key="c_irid_temp">22–32°C</td>
-              <td data-i18n-key="c_irid_note">ควบคุมการล้าง/การแห้ง ลดรอยไล่เฉด</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_black">ดำ</td>
-              <td data-i18n-key="c_black_sys">Cr³⁺ ดำ + ซีล/ท็อปโค้ท</td>
-              <td data-i18n-key="c_black_ph">~2.0–2.6</td>
-              <td data-i18n-key="c_black_time">30–60 วินาที</td>
-              <td data-i18n-key="c_black_temp">20–35°C</td>
-              <td data-i18n-key="c_black_note">ซีลมีผลมากต่อความทนการถู/รอยนิ้ว</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="ok" data-i18n-key="def_ok">ทริค: ทำ “บอร์ดตัวอย่าง” (Master panel) ต่อรุ่นงาน แล้ววัด/เทียบทุกกะ ลดความแปรปรวนสีระหว่างล็อต</div>
-    </section>
-
-    <!-- 3. การเตรียมผิว -->
-    <section id="prep" class="reveal section-block">
-      <h2 class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนโครเมต</h2>
+    <!-- 1) Tone map & principles -->
+    <section id="map" data-part="1" class="reveal section-block" aria-labelledby="map-h">
+      <h2 id="map-h" class="section" data-i18n-key="map_h">แผนที่โทน & หลักการ</h2>
+      <p data-i18n-key="map_p1">โทนสีเกิดจาก “ความหนา/องค์ประกอบ” ของฟิล์มโครเมตบนซิงค์: pH ต่ำ/เวลาแช่นาน/อุณหภูมิสูง → ฟิล์มหนา สีเข้มขึ้น (เหลือง/รุ้ง/เขียวคล้ำ); pH สูง/เวลาสั้น/อุณหภูมิต่ำ → ฟิล์มบาง สีใส/ฟ้า</p>
       <ul>
-        <li data-i18n-key="p_clean">ล้างไขมันหลายขั้น + ล้าง DI สุดท้าย ลดคราบ additive จากบ่อซิงค์</li>
-        <li data-i18n-key="p_act">Activate อ่อน (กรดเจือจาง) 2–10 วินาที เพื่อตัด ZnO/คราบขาว</li>
-        <li data-i18n-key="p_rinse">โซ่ล้างแบบ counter-flow 2–3 ขั้นก่อนเข้าโครเมต ลดลากเข้า</li>
-        <li data-i18n-key="p_handle">ใช้ถุงมือสะอาด/แหนบ จัดการสัมผัส ลดรอยนิ้ว/คราบน้ำมัน</li>
+        <li data-i18n-key="map_b1">คุมทีละตัว: ปรับ pH หรือเวลาอย่างละนิด แล้วดูผลสี–ความทน</li>
+        <li data-i18n-key="map_b2">ล้างแบบ DI ไหลทวนและทำให้แห้งเร็ว ลดคราบหยด/คราบขาว</li>
+        <li data-i18n-key="map_b3">โทนเข้มไวต่อพารามิเตอร์และการสัมผัส ควรพิจารณาซีล/ท็อปโค้ท</li>
       </ul>
     </section>
 
-    <!-- 4. ตัวแปรที่ขับสี -->
-    <section id="window" class="reveal section-block">
-      <h2 class="section" data-i18n-key="win_h">ตัวแปรที่ขับสี (Process Window)</h2>
+    <!-- 2) Recommended baselines -->
+    <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
+      <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
+      <p data-i18n-key="rec_p1">ใช้เป็นกรอบตั้งต้น—ยึดตามสเปกน้ำยาจริงและปรับทีละตัว เพื่อให้โทนตรงและความทนตามต้องการ</p>
       <div class="table">
         <table>
           <thead>
             <tr>
-              <th data-i18n-key="w_var">ตัวแปร</th>
-              <th data-i18n-key="w_trend">แนวโน้มต่อโทนสี</th>
-              <th data-i18n-key="w_notes">หมายเหตุ</th>
+              <th data-i18n-key="rec_th_tone">โทน</th>
+              <th data-i18n-key="rec_th_ph">pH</th>
+              <th data-i18n-key="rec_th_time">เวลาแช่</th>
+              <th data-i18n-key="rec_th_temp">อุณหภูมิ</th>
+              <th data-i18n-key="rec_th_note">หมายเหตุ</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-i18n-key="wv_ph">pH บ่อ</td>
-              <td data-i18n-key="wt_ph">pH ↓ → สีเข้ม/หนา, pH ↑ → สีใส/บาง</td>
-              <td data-i18n-key="wn_ph">อย่า “ฮีล” ด้วยการหยอดกรด/ด่างครั้งละมาก ๆ — ให้ค่อย ๆ ปรับ</td>
+              <td data-i18n-key="tone_clear">ใส/ฟ้า (Cr³⁺ + ซีล)</td>
+              <td data-i18n-key="tone_clear_ph">~1.8–2.4</td>
+              <td data-i18n-key="tone_clear_time">10–25 วินาที</td>
+              <td data-i18n-key="tone_clear_temp">22–30°C</td>
+              <td data-i18n-key="tone_clear_note">ซีลช่วยชั่วโมง NSS และลดรอยนิ้ว</td>
             </tr>
             <tr>
-              <td data-i18n-key="wv_time">เวลาแช่</td>
-              <td data-i18n-key="wt_time">นานขึ้น → เข้มขึ้น (ถึงจุดที่เป็นผง/เช็ดหลุด)</td>
-              <td data-i18n-key="wn_time">ทดสอบ Step test 3–5 จุด หา sweet spot</td>
+              <td data-i18n-key="tone_yellow">เหลือง/ทอง</td>
+              <td data-i18n-key="tone_yellow_ph">~1.0–1.4</td>
+              <td data-i18n-key="tone_yellow_time">5–15 วินาที</td>
+              <td data-i18n-key="tone_yellow_temp">20–30°C</td>
+              <td data-i18n-key="tone_yellow_note">บางระบบเป็น Cr⁶⁺ หรือ Cr³⁺ หนา</td>
             </tr>
             <tr>
-              <td data-i18n-key="wv_temp">อุณหภูมิ</td>
-              <td data-i18n-key="wt_temp">สูงขึ้น → เร่งปฏิกิริยา → เข้มขึ้น</td>
-              <td data-i18n-key="wn_temp">คุมแกว่งทั้งกะ ±1–2°C</td>
+              <td data-i18n-key="tone_irid">รุ้ง/ออกเขียว</td>
+              <td data-i18n-key="tone_irid_ph">~1.0–1.4</td>
+              <td data-i18n-key="tone_irid_time">10–30 วินาที</td>
+              <td data-i18n-key="tone_irid_temp">22–32°C</td>
+              <td data-i18n-key="tone_irid_note">ไวต่อการล้าง/การแห้ง</td>
             </tr>
             <tr>
-              <td data-i18n-key="wv_conc">ความเข้มข้น/บ่อแก่</td>
-              <td data-i18n-key="wt_conc">บ่อเข้ม/แก่ → สีเข้มขึ้นและไวต่อพารามิเตอร์</td>
-              <td data-i18n-key="wn_conc">ไตเตรต/รีเฟรชตามรอบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="wv_contam">ปนเปื้อน (Fe/Cu/น้ำมัน)</td>
-              <td data-i18n-key="wt_contam">ให้โทนเขียวคล้ำ/หม่น/ไล่เฉด</td>
-              <td data-i18n-key="wn_contam">กรอง/เปลี่ยนน้ำ/คาร์บอนทรีตตามอาการ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="wv_rinse">การล้าง/การแห้ง</td>
-              <td data-i18n-key="wt_rinse">ล้างไม่ดี → คราบหยด/รอยทางน้ำ สีไม่สม่ำเสมอ</td>
-              <td data-i18n-key="wn_rinse">ควบคุม “หยดสุดท้าย” ให้สวย, หลีกเลี่ยงลมแรงกับฟิล์มสด</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="wv_thick">ความหนาซิงค์พื้น</td>
-              <td data-i18n-key="wt_thick">บางมาก → โทนอ่อน/ขาวไว; หนามาก → โทนเข้มขึ้นเล็กน้อย</td>
-              <td data-i18n-key="wn_thick">ใช้สเปกชั้นซิงค์ที่สม่ำเสมอ</td>
+              <td data-i18n-key="tone_black">ดำ (Cr³⁺ ดำ + ซีล)</td>
+              <td data-i18n-key="tone_black_ph">~2.0–2.6</td>
+              <td data-i18n-key="tone_black_time">30–60 วินาที</td>
+              <td data-i18n-key="tone_black_temp">20–35°C</td>
+              <td data-i18n-key="tone_black_note">ซีล/ท็อปโค้ทสำคัญต่อการทนถู</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 5. การจัดวาง -->
-    <section id="placement" class="reveal section-block">
-      <h2 class="section" data-i18n-key="plc_h">การจัดวาง & การระบายน้ำ</h2>
+    <!-- 3) Surface prep -->
+    <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
+      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนโครเมต</h2>
       <ul>
-        <li data-i18n-key="plc_angle">จัดมุมชิ้นงานให้ทางน้ำไหลสวย ลด “รอยทางน้ำ/เส้นไหล”</li>
-        <li data-i18n-key="plc_gap">เว้นระยะชิ้นงานให้เกิดการไหลเวียน ลดจุดลมค้าง</li>
-        <li data-i18n-key="plc_hook">ตะขอ/คลิปเฉื่อย ไม่ทำปฏิกิริยา ไม่ครูดฟิล์ม</li>
+        <li data-i18n-key="prep_b1">ล้างไขมันหลายขั้น + DI ขั้นสุดท้าย ลดสารตกค้างจากบ่อซิงค์</li>
+        <li data-i18n-key="prep_b2">Activate อ่อน 2–10 วินาที เพื่อตัด ZnO ที่ผิว</li>
+        <li data-i18n-key="prep_b3">หลังโครเมต หลีกเลี่ยงลมแรง/ความร้อนสูงระหว่างฟิล์มยังสด ให้ไหล/แห้งตามธรรมชาติ</li>
+        <li data-i18n-key="prep_b4">จัดการสัมผัส: ถุงมือสะอาด/คีบ ลด “รอยนิ้ว”</li>
       </ul>
     </section>
 
-    <!-- 6. ดูแลบ่อ & QA -->
-    <section id="bath" class="reveal section-block">
-      <h2 class="section" data-i18n-key="bath_h">การดูแลบ่อ & แผนคุมคุณภาพโทนสี</h2>
-      <ul>
-        <li data-i18n-key="b_filter">กรองต่อเนื่อง 5–10 µm เฝ้าตะกอน/สีบ่อ</li>
-        <li data-i18n-key="b_titrate">ไตเตรต/วัด pH & อุณหภูมิทุกกะ + บันทึกแนวโน้ม</li>
-        <li data-i18n-key="b_panel">ทำ Master panel ต่อรุ่น/สี วัด ΔE เทียบ (หรือเทียบแผ่นอ้างอิง)</li>
-        <li data-i18n-key="b_seal">Cr³⁺ แนะนำซีล/ท็อปโค้ท — ช่วยเสถียรโทนและลดรอยนิ้ว</li>
-        <li data-i18n-key="b_refresh">กำหนดรอบรีเฟรช/คาร์บอนทรีตเมื่อมีอินทรีย์สะสม</li>
-      </ul>
-      <div class="ok" data-i18n-key="bath_ok">Quick SOP: (1) ตรวจ pH/อุณหภูมิ/เวลา (2) ตรวจการล้าง & หยดสุดท้าย (3) เทียบสีบน Master panel ทุกกะ</div>
-    </section>
-
-    <!-- 7. ตารางปัญหาโทนสี -->
-    <section id="defects" class="reveal section-block">
-      <h2 class="section" data-i18n-key="tbl_h">ตารางปัญหาโทนสี (โครเมตบนซิงค์)</h2>
+    <!-- 4) Process window -->
+    <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
+      <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
       <div class="table">
         <table>
           <thead>
             <tr>
-              <th data-i18n-key="sym">อาการ</th>
-              <th data-i18n-key="cause">สาเหตุราก</th>
-              <th data-i18n-key="fix">วิธีแก้/แนวทาง</th>
+              <th data-i18n-key="win_th_step">ขั้น</th>
+              <th data-i18n-key="win_th_vars">ตัวแปร</th>
+              <th data-i18n-key="win_th_obs">ผลต่อสี/ความทน</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-i18n-key="s_too_light">สีอ่อน/ไม่ขึ้นโทน</td>
-              <td data-i18n-key="c_too_light">pH สูง, เวลา/อุณหภูมิต่ำ, ผิวสกปรก/มี ZnO</td>
-              <td data-i18n-key="f_too_light">ลด pH ทีละน้อย เพิ่มเวลา/อุณหภูมิ ทำความสะอาด–activate ใหม่</td>
+              <td data-i18n-key="win_pre">ก่อนโครเมต</td>
+              <td data-i18n-key="win_pre_v">ความสะอาดผิว, เวลาแห้ง, คุณภาพ DI</td>
+              <td data-i18n-key="win_pre_n">คราบ/น้ำกระด้าง → สีด่าง/ขาว ความทนตก</td>
             </tr>
             <tr>
-              <td data-i18n-key="s_too_dark">เข้มเกิน/น้ำตาลคล้ำ</td>
-              <td data-i18n-key="c_too_dark">เวลาเกิน, pH ต่ำมาก, บ่อแก่/เข้ม</td>
-              <td data-i18n-key="f_too_dark">ลดเวลา/เพิ่ม pH ภายในกรอบ รีเฟรชบ่อบางส่วน</td>
+              <td data-i18n-key="win_dip">ระหว่างโครเมต</td>
+              <td data-i18n-key="win_dip_v">pH, อุณหภูมิ, เวลา, การกวน, ปนเปื้อน</td>
+              <td data-i18n-key="win_dip_n">pH/เวลาเพี้ยน → ฟิล์มหนา/บาง/ผงหลุด/สีเพี้ยน</td>
             </tr>
             <tr>
-              <td data-i18n-key="s_gradient">ไล่เฉด/เป็นด่าง</td>
-              <td data-i18n-key="c_gradient">ล้างไม่ดี/ทางน้ำ, การแห้งไม่สม่ำเสมอ, การจัดวางไม่เหมาะ</td>
-              <td data-i18n-key="f_gradient">เพิ่มขั้นล้าง DI ปรับการจัดวาง คุมการแห้งให้ไหลเรียบ</td>
+              <td data-i18n-key="win_post">หลังโครเมต</td>
+              <td data-i18n-key="win_post_v">วิธีล้าง, การทำให้แห้ง, ซีล/ท็อปโค้ท</td>
+              <td data-i18n-key="win_post_n">ล้างแรงเกิน = ฟิล์มเสีย; ไม่มีซีล = โทนไวต่อรอยนิ้ว</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lead" data-i18n-key="window_p2">ปรับค่าให้อยู่ “ช่วงกลาง” แล้วบันทึกสแตนดาร์ดโทนพร้อมตัวอย่างชิ้นงาน</p>
+    </section>
+    <!-- 5) Fixturing -->
+    <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
+      <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
+      <p data-i18n-key="fixture_p1">จัดมุมแขวนให้ไหลดี ไม่มี “ทางน้ำ” เป็นเส้น; เว้นระยะให้การไหลเวียนทั่ว ลดจุดลมค้าง/คราบ</p>
+      <p data-i18n-key="fixture_p2">ตะขอ/คลิปต้องไม่ทำปฏิกิริยาและสะอาด; กำหนดเวลา drain ระหว่างขั้น ลด drag-out</p>
+    </section>
+
+    <!-- 6) Care & Quality -->
+    <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
+      <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อ & การคุมคุณภาพ</h2>
+      <ul>
+        <li data-i18n-key="care_b1">กรองต่อเนื่อง 5–10 µm; เฝ้าดูตะกอน/สีบ่อ และปนเปื้อนโลหะหนัก/น้ำมัน</li>
+        <li data-i18n-key="care_b2">ไตเตรต/บันทึก pH–อุณหภูมิ–เวลา; รีเฟรชตามรอบ</li>
+        <li data-i18n-key="care_b3">ระบบ Cr³⁺: ซีล/ท็อปโค้ทมีผลอย่างมากต่อ NSS/ASS</li>
+        <li data-i18n-key="care_b4">ทำแผงมาสเตอร์/สวอตช์ ตรวจ ΔE โทนและความสม่ำเสมอ</li>
+      </ul>
+    </section>
+
+    <!-- 7) Defects table -->
+    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
+      <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n-key="def_th_sym">อาการ</th>
+              <th data-i18n-key="def_th_cause">สาเหตุหลัก</th>
+              <th data-i18n-key="def_th_fix">แนวทางแก้</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="d1_s">สีอ่อน/ไม่ขึ้น</td>
+              <td data-i18n-key="d1_c">pH สูง, เวลาแช่สั้น, ผิวมีน้ำมัน/ออกไซด์</td>
+              <td data-i18n-key="d1_f">ลด pH/เพิ่มเวลา, ทำความสะอาด–activate ใหม่, ปรับการกวน</td>
             </tr>
             <tr>
-              <td data-i18n-key="s_greenish">ออกเขียวคล้ำ/หม่น</td>
-              <td data-i18n-key="c_greenish">ปนเปื้อน Fe/Cu/น้ำมัน หรือบ่อแก่</td>
-              <td data-i18n-key="f_greenish">กรอง/คาร์บอนทรีต เปลี่ยนน้ำบางส่วน ตรวจลากเข้าจากบ่อก่อน</td>
+              <td data-i18n-key="d2_s">ฟิล์มเป็นผง/เช็ดหลุด</td>
+              <td data-i18n-key="d2_c">เวลาเกิน/อุณหภูมิสูง/พลังงานปฏิกิริยามาก</td>
+              <td data-i18n-key="d2_f">ลดเวลา/อุณหภูมิ, รีเฟรชบ่อ, ตรวจปนเปื้อนโลหะหนัก</td>
             </tr>
             <tr>
-              <td data-i18n-key="s_fingerprint">รอยนิ้ว/คราบสัมผัส</td>
-              <td data-i18n-key="c_fingerprint">จับฟิล์มขณะสด/ไม่มีซีล</td>
-              <td data-i18n-key="f_fingerprint">ควบคุมการจับ/ใช้ถุงมือ เพิ่มซีล/ท็อปโค้ท</td>
+              <td data-i18n-key="d3_s">คราบด่าง/รอยหยด</td>
+              <td data-i18n-key="d3_c">ล้างไม่พอ/DI ไม่สะอาด/เกิด “ทางน้ำ”</td>
+              <td data-i18n-key="d3_f">เพิ่ม DI ไหลทวน, ปรับการจัดวาง, ตรวจคุณภาพน้ำ</td>
             </tr>
             <tr>
-              <td data-i18n-key="s_powder">ฟิล์มเป็นผง/เช็ดหลุด</td>
-              <td data-i18n-key="c_powder">เวลาเกิน/pH ต่ำ/อุณหภูมิสูง</td>
-              <td data-i18n-key="f_powder">ย้อนสู่ sweet spot ลดเวลา/อุณหภูมิ ปรับ pH ตามกรอบ</td>
+              <td data-i18n-key="d4_s">รอยนิ้วติด</td>
+              <td data-i18n-key="d4_c">จับขณะฟิล์มยังสด/ไม่มีซีล</td>
+              <td data-i18n-key="d4_f">ควบคุมการสัมผัส, เพิ่มซีล/ท็อปโค้ท</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="d5_s">สีไม่ตรงโทน/ไล่เฉด</td>
+              <td data-i18n-key="d5_c">pH/เวลา/อุณหภูมิแกว่ง, เข้มข้นเปลี่ยน, ปนเปื้อน</td>
+              <td data-i18n-key="d5_f">คุมพารามิเตอร์, ไตเตรตปรับเติม, คาร์บอนทรีตเมื่ออินทรีย์สะสม</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="d6_s">White rust มาเร็ว</td>
+              <td data-i18n-key="d6_c">ฟิล์มบาง/ซีลไม่ดี/การล้างไม่พอ</td>
+              <td data-i18n-key="d6_f">เพิ่มความเข้ม/เวลาในกรอบ, ซีลให้เหมาะ, ปรับโซ่ล้าง</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="d7_s">ลอก/พอง</td>
+              <td data-i18n-key="d7_c">ผิวไม่สะอาด/ปนเปื้อนน้ำมัน/โลหะหนัก</td>
+              <td data-i18n-key="d7_f">ย้อนทำความสะอาด–activate, เปลี่ยนน้ำ/กรอง, ตรวจระบบลม/น้ำ</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 8. ลิงก์ -->
-    <section id="links" class="reveal section-block">
-      <h2 class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
-      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/">ชุบซิงค์โครเมต: Cr³⁺ vs Cr⁶⁺</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/">ซีล/ท็อปโค้ทสำหรับโครเมต 3</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/">Zinc Plating Troubleshooting (ซีรีส์)</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/">Salt Spray: คู่มืออ่านผลเร็ว</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/plating-basics/">พื้นฐานงานชุบโลหะ</a></p>
+    <!-- 8) Related links -->
+    <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/" data-i18n-key="link_cr">ชุบซิงค์โครเมต: Cr³⁺ vs Cr⁶⁺</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-passivation-seal-topcoat-cr3/" data-i18n-key="link_seal">ซีล/ท็อปโค้ทสำหรับโครเมต 3</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">Salt Spray: คู่มืออ่านผลเร็ว</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/zinc-plating-series/" data-i18n-key="link_series">Zinc Plating Troubleshooting (ซีรีส์)</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/plating-basics/" data-i18n-key="link_basic">พื้นฐานงานชุบโลหะ</a></p>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-grid">
+  <footer class="site-footer" style="background:#0f172a; color:#cbd5e1; margin-top:24px">
+    <div class="footer-inner" style="max-width:1200px; margin:0 auto; padding:38px 20px">
+      <div class="footer-grid" style="display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr">
         <section class="footer-brand">
-          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
-          <ul class="footer-list">
+          <div class="ft-head" style="display:flex; align-items:center; gap:12px; margin:0 0 10px">
+            <div class="ft-logo" style="width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)"></div>
+            <div class="ft-name" style="font-weight:800; color:#fff">Baume Chemical</div>
+          </div>
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
             <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
-            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+            <li>📱 <a href="tel:+66925469887" style="color:#e2e8f0">092 546 9887</a></li>
           </ul>
         </section>
 
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
-          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
-          <ul class="footer-list">
-            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
-            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
-            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
-            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
-            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
-            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          <h3 class="footer-title" style="margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/" style="color:#e2e8f0">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/" style="color:#e2e8f0">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/" style="color:#e2e8f0">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/" style="color:#e2e8f0">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/" style="color:#e2e8f0">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/" style="color:#e2e8f0">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/" style="color:#e2e8f0">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/" style="color:#e2e8f0">Equipment</a></li>
           </ul>
         </nav>
 
         <section aria-label="ติดต่อเรา">
-          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
-          <ul class="footer-list">
-            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
-            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
-            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          <h3 class="footer-title" style="margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com" style="color:#e2e8f0">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" style="color:#e2e8f0">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/" style="color:#e2e8f0">baumechemical.com</a></li>
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+      <div class="footer-bottom" style="border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6">
+        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      </div>
     </div>
   </footer>
+
+  <!-- JS: Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
 
   <!-- JS: i18n -->
   <script>
     const I18N = {
       th: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← กลับเมนูหลัก",
-        hero_title:"คู่มือคุมโทนสีโครเมตบนซิงค์",
-        hero_tagline:"ตั้งค่า pH/เวลา/อุณหภูมิให้ตรงโทน + จัดวาง/ล้าง/อบแห้งให้สม่ำเสมอ พร้อมแผนคุมคุณภาพและตารางแก้ปัญหาโทนสี",
+        hero_title:"โครเมตบนซิงค์: คุมโทนสีให้ตรงสเปก",
+        hero_tagline:"แผนที่โทน–หลักการ + ค่าเริ่มต้น + เตรียมผิว + หน้าต่างกระบวนการ + การจัดวาง + ดูแลบ่อ + QC + ตารางแก้ปัญหา",
 
-        toc_title:"สารบัญ", toc_map:"แผนที่โทนสี & หลักการ", toc_defaults:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนโครเมต", toc_window:"ตัวแปรที่ขับสี (Process Window)", toc_placement:"การจัดวาง & การระบายน้ำ", toc_bath:"การดูแลบ่อ & แผนคุมคุณภาพ", toc_defects:"ตารางปัญหาโทนสี", toc_links:"ลิงก์ที่เกี่ยวข้อง",
+        part1:"พาร์ต 1: แผนที่โทน/ค่าเริ่มต้น/เตรียมผิว/หน้าต่าง",
+        part2:"พาร์ต 2: จัดวาง/ดูแลบ่อ/QC/ปัญหา/ลิงก์",
 
-        map_h:"แผนที่โทนสี & หลักการ",
-        map_lead:"โดยทั่วไป: pH ต่ำ / เวลาแช่นาน / อุณหภูมิสูง → ฟิล์มหนา สีเข้มขึ้น; pH สูง / เวลาแช่สั้น / อุณหภูมิต่ำ → ฟิล์มบาง สีใส/ฟ้า",
-        chip_clear_h:"ใส/ฟ้า (Clear/Blue)", chip_clear_p:"นิยม Cr³⁺ + ซีล/ท็อปโค้ท คุมคราบหยดและน้ำล้างสุดท้ายสำคัญมาก",
-        chip_yellow_h:"เหลือง/ทอง (Yellow/Gold)", chip_yellow_p:"มักใช้ Cr⁶⁺ หรือ Cr³⁺ แบบหนา pH ต่ำกว่า และแช่นาน/อุ่นกว่า",
-        chip_irid_h:"รุ้ง/ออกเขียว (Iridescent/Olive)", chip_irid_p:"ฟิล์มหนาขึ้นอีก โทนไวต่อพารามิเตอร์และคุณภาพการล้าง",
-        chip_black_h:"ดำ (Black)", chip_black_p:"Cr³⁺ ดำ + ซีล จำเป็นต่อความทน/การถูและรอยนิ้ว",
-        map_hint:"หมายเหตุ: สูตรจริง/แบรนด์มีหน้าต่างต่างกัน ให้ใช้สเปกผู้ผลิตเป็นหลัก แล้วจูนภายในกรอบด้านล่าง",
+        toc_title:"สารบัญ", toc_map:"แผนที่โทน & หลักการ", toc_rec:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนโครเมต", toc_window:"หน้าต่างกระบวนการ", toc_fixture:"การจัดวาง", toc_care:"การดูแลบ่อ & คุณภาพ", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้อง",
 
-        def_h:"ค่าเริ่มต้นที่แนะนำ (เป้าโทนสี)", def_lead:"ใช้เป็นจุดเริ่ม แล้วไตเตรต/ปรับตามสเปกน้ำยาจริงและโทนสีที่ลูกค้าต้องการ",
-        d_color:"โทนสี", d_sys:"ระบบโดยทั่วไป", d_ph:"pH บ่อ", d_time:"เวลาแช่", d_temp:"อุณหภูมิ", d_note:"หมายเหตุ",
-        c_clear:"ใส/ฟ้า", c_clear_sys:"Cr³⁺ + ซีล", c_clear_ph:"~1.8–2.4", c_clear_time:"10–25 วินาที", c_clear_temp:"22–30°C", c_clear_note:"หลีกเลี่ยงฟิล์มหนาเกิน → สีหม่น",
-        c_yellow:"เหลือง/ทอง", c_yellow_sys:"Cr⁶⁺ (หรือ Cr³⁺ หนา)", c_yellow_ph:"~1.0–1.4", c_yellow_time:"5–15 วินาที", c_yellow_temp:"20–30°C", c_yellow_note:"ฟิล์มหนา โทนจัด ไวต่อพารามิเตอร์",
-        c_irid:"รุ้ง/ออกเขียว", c_irid_sys:"Cr⁶⁺ หนา (หรือระบบเฉพาะ Cr³⁺)", c_irid_ph:"~1.0–1.4", c_irid_time:"10–30 วินาที", c_irid_temp:"22–32°C", c_irid_note:"ควบคุมการล้าง/การแห้ง ลดรอยไล่เฉด",
-        c_black:"ดำ", c_black_sys:"Cr³⁺ ดำ + ซีล/ท็อปโค้ท", c_black_ph:"~2.0–2.6", c_black_time:"30–60 วินาที", c_black_temp:"20–35°C", c_black_note:"ซีลมีผลมากต่อความทนการถู/รอยนิ้ว",
-        def_ok:"ทริค: ทำ “บอร์ดตัวอย่าง” (Master panel) ต่อรุ่นงาน แล้ววัด/เทียบทุกกะ ลดความแปรปรวนสีระหว่างล็อต",
+        map_h:"แผนที่โทน & หลักการ",
+        map_p1:"pH ต่ำ/เวลานาน/อุณหภูมิสูง → ฟิล์มหนา สีเข้ม (เหลือง/รุ้ง/เขียวคล้ำ); pH สูง/เวลาสั้น/อุณหภูมิต่ำ → ฟิล์มบาง สีใส/ฟ้า",
+        map_b1:"คุมทีละตัว: ปรับ pH หรือเวลาอย่างละนิด แล้วดูผลสี–ความทน",
+        map_b2:"ล้างแบบ DI ไหลทวนและทำให้แห้งเร็ว ลดคราบหยด/คราบขาว",
+        map_b3:"โทนเข้มไวต่อพารามิเตอร์และการสัมผัส ควรพิจารณาซีล/ท็อปโค้ท",
+
+        rec_h:"ค่าเริ่มต้นที่แนะนำ",
+        rec_p1:"ใช้เป็นกรอบตั้งต้น—ยึดตามสเปกน้ำยาจริงและปรับทีละตัว",
+        rec_th_tone:"โทน", rec_th_ph:"pH", rec_th_time:"เวลาแช่", rec_th_temp:"อุณหภูมิ", rec_th_note:"หมายเหตุ",
+        tone_clear:"ใส/ฟ้า (Cr³⁺ + ซีล)", tone_clear_ph:"~1.8–2.4", tone_clear_time:"10–25 วินาที", tone_clear_temp:"22–30°C", tone_clear_note:"ซีลช่วยชั่วโมง NSS และลดรอยนิ้ว",
+        tone_yellow:"เหลือง/ทอง", tone_yellow_ph:"~1.0–1.4", tone_yellow_time:"5–15 วินาที", tone_yellow_temp:"20–30°C", tone_yellow_note:"บางระบบเป็น Cr⁶⁺ หรือ Cr³⁺ หนา",
+        tone_irid:"รุ้ง/ออกเขียว", tone_irid_ph:"~1.0–1.4", tone_irid_time:"10–30 วินาที", tone_irid_temp:"22–32°C", tone_irid_note:"ไวต่อการล้าง/การแห้ง",
+        tone_black:"ดำ (Cr³⁺ ดำ + ซีล)", tone_black_ph:"~2.0–2.6", tone_black_time:"30–60 วินาที", tone_black_temp:"20–35°C", tone_black_note:"ซีล/ท็อปโค้ทสำคัญต่อการทนถู",
 
         prep_h:"การเตรียมผิวก่อนโครเมต",
-        p_clean:"ล้างไขมันหลายขั้น + ล้าง DI สุดท้าย ลดคราบ additive จากบ่อซิงค์",
-        p_act:"Activate อ่อน (กรดเจือจาง) 2–10 วินาที เพื่อตัด ZnO/คราบขาว",
-        p_rinse:"โซ่ล้างแบบ counter-flow 2–3 ขั้นก่อนเข้าโครเมต ลดลากเข้า",
-        p_handle:"ใช้ถุงมือสะอาด/แหนบ จัดการสัมผัส ลดรอยนิ้ว/คราบน้ำมัน",
+        prep_b1:"ล้างไขมันหลายขั้น + DI ขั้นสุดท้าย",
+        prep_b2:"Activate อ่อน 2–10 วินาที เพื่อตัด ZnO",
+        prep_b3:"หลังโครเมต หลีกเลี่ยงลมแรง/ความร้อนสูงขณะฟิล์มยังสด",
+        prep_b4:"ใช้ถุงมือ/คีบสะอาด ลดรอยนิ้ว",
 
-        win_h:"ตัวแปรที่ขับสี (Process Window)",
-        w_var:"ตัวแปร", w_trend:"แนวโน้มต่อโทนสี", w_notes:"หมายเหตุ",
-        wv_ph:"pH บ่อ", wt_ph:"pH ↓ → สีเข้ม/หนา, pH ↑ → สีใส/บาง", wn_ph:"อย่าปรับครั้งละมาก ให้ค่อย ๆ ปรับ",
-        wv_time:"เวลาแช่", wt_time:"นานขึ้น → เข้มขึ้น (จนเป็นผงได้)", wn_time:"ทำ Step test หา sweet spot",
-        wv_temp:"อุณหภูมิ", wt_temp:"สูงขึ้น → เข้มขึ้น", wn_temp:"คุมแกว่งทั้งกะ ±1–2°C",
-        wv_conc:"ความเข้มข้น/บ่อแก่", wt_conc:"บ่อเข้ม/แก่ → เข้มขึ้นและไว", wn_conc:"ไตเตรต/รีเฟรชตามรอบ",
-        wv_contam:"ปนเปื้อน (Fe/Cu/น้ำมัน)", wt_contam:"โทนเขียวคล้ำ/หม่น/ไล่เฉด", wn_contam:"กรอง/คาร์บอนทรีต/เปลี่ยนน้ำ",
-        wv_rinse:"การล้าง/การแห้ง", wt_rinse:"ล้างไม่ดี → คราบหยด/รอยทางน้ำ", wn_rinse:"คุมหยดสุดท้าย หลีกเลี่ยงลมแรง",
-        wv_thick:"ความหนาซิงค์พื้น", wt_thick:"บางมาก → อ่อน/ขาวไว; หนามาก → เข้มขึ้นเล็กน้อย", wn_thick:"คุมให้สม่ำเสมอ",
+        window_h:"หน้าต่างกระบวนการ",
+        win_th_step:"ขั้น", win_th_vars:"ตัวแปร", win_th_obs:"ผลต่อสี/ความทน",
+        win_pre:"ก่อนโครเมต", win_pre_v:"ความสะอาดผิว, เวลาแห้ง, คุณภาพ DI", win_pre_n:"คราบ/น้ำกระด้าง → สีด่าง/ขาว ความทนตก",
+        win_dip:"ระหว่างโครเมต", win_dip_v:"pH, อุณหภูมิ, เวลา, การกวน, ปนเปื้อน", win_dip_n:"pH/เวลาเพี้ยน → ฟิล์มหนา/บาง/ผงหลุด/สีเพี้ยน",
+        win_post:"หลังโครเมต", win_post_v:"วิธีล้าง, ทำให้แห้ง, ซีล/ท็อปโค้ท", win_post_n:"ล้างแรงเกิน = ฟิล์มเสีย; ไม่มีซีล = ไวต่อรอยนิ้ว",
+        window_p2:"คงค่ากลางและทำสแตนดาร์ดสีพร้อมตัวอย่าง",
 
-        plc_h:"การจัดวาง & การระบายน้ำ",
-        plc_angle:"จัดมุมชิ้นงานให้ทางน้ำไหลสวย ลดรอยทางน้ำ",
-        plc_gap:"เว้นระยะให้เกิดการไหลเวียน ลดจุดลมค้าง",
-        plc_hook:"ตะขอ/คลิปเฉื่อย ไม่ทำปฏิกิริยา",
+        fixture_h:"การจัดวาง",
+        fixture_p1:"จัดมุมแขวนให้ไหลดี ไม่มีทางน้ำเป็นเส้น",
+        fixture_p2:"กำหนดเวลา drain ลด drag-out คงความเข้มข้น",
 
-        bath_h:"การดูแลบ่อ & แผนคุมคุณภาพโทนสี",
-        b_filter:"กรองต่อเนื่อง 5–10 µm เฝ้าตะกอน/สีบ่อ",
-        b_titrate:"ไตเตรต/วัด pH & อุณหภูมิทุกกะ + บันทึกแนวโน้ม",
-        b_panel:"ทำ Master panel ต่อรุ่น/สี วัด ΔE เทียบ หรือเทียบสายตากับแผ่น",
-        b_seal:"Cr³⁺ แนะนำซีล/ท็อปโค้ท เสถียรโทนและลดรอยนิ้ว",
-        b_refresh:"กำหนดรอบรีเฟรช/คาร์บอนทรีตเมื่อมีอินทรีย์สะสม",
-        bath_ok:"Quick SOP: (1) pH/อุณหภูมิ/เวลา (2) ล้าง/หยดสุดท้าย (3) เทียบ Master panel ทุกกะ",
+        care_h:"การดูแลบ่อ & คุณภาพ",
+        care_b1:"กรองต่อเนื่อง 5–10 µm; เฝ้าดูตะกอน/สีบ่อ/ปนเปื้อน",
+        care_b2:"ไตเตรตและบันทึก pH–อุณหภูมิ–เวลา; รีเฟรชตามรอบ",
+        care_b3:"Cr³⁺ ต้องพึ่งซีล/ท็อปโค้ทเพื่อความทนสูง",
+        care_b4:"ทำแผงมาสเตอร์ ตรวจ ΔE ความสม่ำเสมอ",
 
-        tbl_h:"ตารางปัญหาโทนสี (โครเมตบนซิงค์)",
-        sym:"อาการ", cause:"สาเหตุราก", fix:"วิธีแก้/แนวทาง",
-        s_too_light:"สีอ่อน/ไม่ขึ้นโทน", c_too_light:"pH สูง, เวลา/อุณหภูมิต่ำ, ผิวสกปรก/มี ZnO", f_too_light:"ลด pH, เพิ่มเวลา/อุณหภูมิ, ทำความสะอาด–activate",
-        s_too_dark:"เข้มเกิน/น้ำตาลคล้ำ", c_too_dark:"เวลาเกิน, pH ต่ำมาก, บ่อแก่", f_too_dark:"ลดเวลา, ปรับ pH ตามกรอบ, รีเฟรชบ่อ",
-        s_gradient:"ไล่เฉด/เป็นด่าง", c_gradient:"ล้างไม่ดี/ทางน้ำ, การแห้งไม่สม่ำเสมอ", f_gradient:"เพิ่ม DI, ปรับจัดวาง, คุมการแห้ง",
-        s_greenish:"ออกเขียวคล้ำ/หม่น", c_greenish:"ปนเปื้อน Fe/Cu/น้ำมัน หรือบ่อแก่", f_greenish:"กรอง/คาร์บอนทรีต, เปลี่ยนน้ำ, ลดลากเข้า",
-        s_fingerprint:"รอยนิ้ว/คราบสัมผัส", c_fingerprint:"จับฟิล์มสด/ไม่มีซีล", f_fingerprint:"ควบคุมสัมผัส/เพิ่มซีล",
-        s_powder:"ฟิล์มเป็นผง/เช็ดหลุด", c_powder:"เวลาเกิน/pH ต่ำ/อุณหภูมิสูง", f_powder:"ลดเวลา/อุณหภูมิ ปรับ pH",
+        def_h:"ตารางปัญหาพบเจอบ่อย",
+        def_th_sym:"อาการ", def_th_cause:"สาเหตุหลัก", def_th_fix:"แนวทางแก้",
+        d1_s:"สีอ่อน/ไม่ขึ้น", d1_c:"pH สูง/เวลาสั้น/ผิวสกปรก", d1_f:"ลด pH/เพิ่มเวลา/ทำความสะอาด–activate",
+        d2_s:"ฟิล์มเป็นผง/เช็ดหลุด", d2_c:"เวลา/อุณหภูมิสูงเกิน", d2_f:"ลดเวลา/อุณหภูมิ รีเฟรชบ่อ ตรวจโลหะหนัก",
+        d3_s:"คราบด่าง/รอยหยด", d3_c:"ล้างไม่พอ/DI ไม่สะอาด/ทางน้ำ", d3_f:"เพิ่ม DI ไหลทวน ปรับการจัดวาง",
+        d4_s:"รอยนิ้วติด", d4_c:"จับตอนฟิล์มสด/ไม่มีซีล", d4_f:"คุมสัมผัส เพิ่มซีล/ท็อปโค้ท",
+        d5_s:"สีไม่ตรงโทน/ไล่เฉด", d5_c:"pH/เวลา/อุณหภูมิแกว่ง เข้มข้นเปลี่ยน", d5_f:"คุมพารามิเตอร์ ไตเตรตปรับเติม คาร์บอนทรีต",
+        d6_s:"White rust มาเร็ว", d6_c:"ฟิล์มบาง/ซีลไม่ดี/ล้างไม่พอ", d6_f:"เพิ่มความเข้ม/เวลา ซีลเหมาะ ปรับโซ่ล้าง",
+        d7_s:"ลอก/พอง", d7_c:"ผิวไม่สะอาด/ปนเปื้อน", d7_f:"ย้อนทำความสะอาด–activate เปลี่ยนน้ำ/กรอง",
 
-        links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
+        links_h:"ลิงก์ที่เกี่ยวข้อง",
+        link_cr:"ชุบซิงค์โครเมต: Cr³⁺ vs Cr⁶⁺",
+        link_seal:"ซีล/ท็อปโค้ทสำหรับโครเมต 3",
+        link_salt:"Salt Spray: คู่มืออ่านผลเร็ว",
+        link_series:"Zinc Plating Troubleshooting (ซีรีส์)",
+        link_basic:"พื้นฐานงานชุบโลหะ",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
 
       en: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← Back to Home",
-        hero_title:"Chromate-on-Zinc Color Control",
-        hero_tagline:"Set pH/time/temp for target tone + consistent fixturing/rinsing/drying, with QA plan and troubleshooting table.",
+        hero_title:"Zinc Chromate/Passivation: Color Control",
+        hero_tagline:"Tone map & principles • baselines • prep • process window • fixturing • bath care • QC • troubleshooting.",
 
-        toc_title:"Contents", toc_map:"Color map & principles", toc_defaults:"Recommended starters", toc_prep:"Pre-passivation surface prep", toc_window:"Color-driving variables (process window)", toc_placement:"Fixturing & drainage", toc_bath:"Bath care & color QA", toc_defects:"Color defect table", toc_links:"Related links",
+        part1:"Part 1: Tone map / Baselines / Prep / Windows",
+        part2:"Part 2: Fixturing / Care / QC / Troubleshooting / Links",
 
-        map_h:"Color map & principles",
-        map_lead:"In general: lower pH / longer dip / higher temp → thicker film, deeper tone; higher pH / shorter dip / cooler bath → thinner film, clearer/blue.",
-        chip_clear_h:"Clear/Blue", chip_clear_p:"Typically Cr³⁺ + seal/topcoat. Final rinse & last droplet control are critical.",
-        chip_yellow_h:"Yellow/Gold", chip_yellow_p:"Often Cr⁶⁺ or thick Cr³⁺. Lower pH and longer/warmer dip.",
-        chip_irid_h:"Iridescent/Olive", chip_irid_p:"Thicker film; sensitive to parameters & rinsing quality.",
-        chip_black_h:"Black", chip_black_p:"Cr³⁺ black with seal is crucial for rub/fingerprint resistance.",
-        map_hint:"Note: Actual chemistries differ. Follow supplier spec, then fine-tune within the ranges below.",
+        toc_title:"Contents", toc_map:"Tone map & principles", toc_rec:"Recommended baselines", toc_prep:"Surface preparation", toc_window:"Process windows", toc_fixture:"Fixturing", toc_care:"Bath care & Quality", toc_defects:"Common defects", toc_links:"Related links",
 
-        def_h:"Recommended starting points (by target tone)", def_lead:"Start here, then titrate/tune per chemistry and customer tone.",
-        d_color:"Tone", d_sys:"Typical system", d_ph:"Bath pH", d_time:"Dip time", d_temp:"Temp", d_note:"Notes",
-        c_clear:"Clear/Blue", c_clear_sys:"Cr³⁺ + seal", c_clear_ph:"~1.8–2.4", c_clear_time:"10–25 s", c_clear_temp:"22–30°C", c_clear_note:"Avoid overly thick films → haze",
-        c_yellow:"Yellow/Gold", c_yellow_sys:"Cr⁶⁺ (or thick Cr³⁺)", c_yellow_ph:"~1.0–1.4", c_yellow_time:"5–15 s", c_yellow_temp:"20–30°C", c_yellow_note:"Thick, vivid, parameter-sensitive",
-        c_irid:"Iridescent/Olive", c_irid_sys:"Thick Cr⁶⁺ (or specific Cr³⁺)", c_irid_ph:"~1.0–1.4", c_irid_time:"10–30 s", c_irid_temp:"22–32°C", c_irid_note:"Control rinse/dry to avoid gradients",
-        c_black:"Black", c_black_sys:"Cr³⁺ black + seal/topcoat", c_black_ph:"~2.0–2.6", c_black_time:"30–60 s", c_black_temp:"20–35°C", c_black_note:"Seal strongly affects rub/fingerprint",
+        map_h:"Tone map & principles",
+        map_p1:"Lower pH / longer time / higher temp → thicker film, darker tones; higher pH / shorter time / lower temp → thinner film, clear/blue.",
+        map_b1:"Tune one variable at a time and evaluate tone vs. durability.",
+        map_b2:"DI counter-flow rinses + fast drying to prevent stains.",
+        map_b3:"Dark tones are sensitive; consider seal/topcoat.",
 
-        prep_h:"Pre-passivation surface prep",
-        p_clean:"Multi-stage degrease + final DI to remove plating additives/soils",
-        p_act:"Light activation (dilute acid) 2–10 s to cut ZnO/white film",
-        p_rinse:"2–3 DI counter-flow rinses before chromate to reduce drag-in",
-        p_handle:"Clean gloves/tweezers; control handling",
+        rec_h:"Recommended baselines",
+        rec_p1:"Use as a starting frame and adjust per chemistry spec.",
+        rec_th_tone:"Tone", rec_th_ph:"pH", rec_th_time:"Dip time", rec_th_temp:"Temp", rec_th_note:"Notes",
+        tone_clear:"Clear/Blue (Cr³⁺ + seal)", tone_clear_ph:"~1.8–2.4", tone_clear_time:"10–25 s", tone_clear_temp:"22–30°C", tone_clear_note:"Seal boosts NSS & fingerprint resistance",
+        tone_yellow:"Yellow/Gold", tone_yellow_ph:"~1.0–1.4", tone_yellow_time:"5–15 s", tone_yellow_temp:"20–30°C", tone_yellow_note:"Often Cr⁶⁺ or thicker Cr³⁺",
+        tone_irid:"Iridescent/Olive", tone_irid_ph:"~1.0–1.4", tone_irid_time:"10–30 s", tone_irid_temp:"22–32°C", tone_irid_note:"Sensitive to rinse/dry",
+        tone_black:"Black (Cr³⁺ black + seal)", tone_black_ph:"~2.0–2.6", tone_black_time:"30–60 s", tone_black_temp:"20–35°C", tone_black_note:"Seal/topcoat vital for rub resistance",
 
-        win_h:"Color-driving variables (process window)",
-        w_var:"Variable", w_trend:"Trend on tone", w_notes:"Notes",
-        wv_ph:"Bath pH", wt_ph:"pH ↓ → deeper/thicker; pH ↑ → clearer/thinner", wn_ph:"Avoid large one-shot pH changes",
-        wv_time:"Dip time", wt_time:"Longer → deeper (may turn powdery if excessive)", wn_time:"Run 3–5 step tests to find sweet spot",
-        wv_temp:"Temperature", wt_temp:"Higher → deeper", wn_temp:"Keep within ±1–2°C across shifts",
-        wv_conc:"Concentration/bath age", wt_conc:"Richer/aged bath → deeper & more sensitive", wn_conc:"Titrate/refresh on schedule",
-        wv_contam:"Contamination (Fe/Cu/oil)", wt_contam:"Greenish/dull/gradient tones", wn_contam:"Filter/partial dump/carbon treat",
-        wv_rinse:"Rinsing/drying", wt_rinse:"Poor rinse → run marks/stains, uneven tone", wn_rinse:"Control final droplet; avoid harsh air on fresh film",
-        wv_thick:"Zinc thickness", wt_thick:"Very thin → pale/white faster; very thick → slightly deeper", wn_thick:"Keep zinc thickness consistent",
+        prep_h:"Surface preparation",
+        prep_b1:"Multi-stage degrease + DI final rinse",
+        prep_b2:"Light activate 2–10 s to cut ZnO",
+        prep_b3:"Avoid strong air/heat while film is fresh",
+        prep_b4:"Clean handling (gloves/racks)",
 
-        plc_h:"Fixturing & drainage",
-        plc_angle:"Set angles for even drain; avoid run lines",
-        plc_gap:"Keep spacing for flow/air, reduce dead zones",
-        plc_hook:"Use inert hooks/clips; avoid scraping films",
+        window_h:"Process windows",
+        win_th_step:"Step", win_th_vars:"Variables", win_th_obs:"Effect on tone/durability",
+        win_pre:"Pre-chromate", win_pre_v:"Surface cleanliness, dry time, DI quality", win_pre_n:"Residues/hardness → blotchy/white, lower durability",
+        win_dip:"During chromate", win_dip_v:"pH, temp, time, agitation, contamination", win_dip_n:"Off-spec → thick/thin/powder/shifted color",
+        win_post:"Post-chromate", win_post_v:"Rinse method, drying, seal/topcoat", win_post_n:"Too-strong rinse damages film; no seal → fingerprint sensitive",
+        window_p2:"Lock mid-window values and create a visual standard panel.",
 
-        bath_h:"Bath care & color QA",
-        b_filter:"Continuous 5–10 µm filtration",
-        b_titrate:"Titrate & log pH/temperature each shift",
-        b_panel:"Use tone Master panels and measure ΔE or visual match",
-        b_seal:"Seal/topcoat recommended for Cr³⁺ to stabilize tone",
-        b_refresh:"Plan refresh/carbon treatment for organics",
-        bath_ok:"Quick SOP: (1) pH/T/time (2) rinsing/final droplet (3) match Master panel each shift",
+        fixture_h:"Fixturing",
+        fixture_p1:"Orient for smooth drainage; avoid run lines.",
+        fixture_p2:"Drain pauses to reduce drag-out.",
 
-        tbl_h:"Chromate-on-zinc color defects",
-        sym:"Symptom", cause:"Root cause", fix:"First-aid",
-        s_too_light:"Too light/no tone", c_too_light:"High pH, low time/temp, dirty surface/ZnO", f_too_light:"Lower pH; increase time/temp; re-clean-activate",
-        s_too_dark:"Too dark/brownish", c_too_dark:"Overtime, too-low pH, aged/rich bath", f_too_dark:"Shorten time; adjust pH within spec; partial refresh",
-        s_gradient:"Gradient/blotchy", c_gradient:"Poor rinse/run path/uneven dry/fixturing", f_gradient:"Improve DI rinses; adjust layout; controlled drying",
-        s_greenish:"Greenish/dull", c_greenish:"Fe/Cu/oil contamination; aged bath", f_greenish:"Filter; carbon treat; partial dump; reduce drag-in",
-        s_fingerprint:"Fingerprints", c_fingerprint:"Handling fresh film/no seal", f_fingerprint:"Control handling; add seal/topcoat",
-        s_powder:"Powdery/rubs off", c_powder:"Excess time/low pH/high temp", f_powder:"Return to sweet spot; lower time/temp; adjust pH",
+        care_h:"Bath care & Quality",
+        care_b1:"Continuous 5–10 µm filtration; watch sludge/color/contamination.",
+        care_b2:"Titrate & log pH/temp/time; refresh on schedule.",
+        care_b3:"For Cr³⁺, seal/topcoat strongly affects NSS/ASS.",
+        care_b4:"Use master panels and ΔE tracking.",
+
+        def_h:"Common defects",
+        def_th_sym:"Symptom", def_th_cause:"Likely causes", def_th_fix:"Fix",
+        d1_s:"Pale color / no build", d1_c:"High pH, short time, poor prep", d1_f:"Lower pH / increase time; re-clean & activate; adjust agitation",
+        d2_s:"Powdery / wipes off", d2_c:"Over-time / high temp / too reactive", d2_f:"Reduce time/temp; refresh bath; check heavy metals",
+        d3_s:"Alkaline stains / drip marks", d3_c:"Insufficient DI / run paths", d3_f:"Add DI counter-flow; improve fixturing",
+        d4_s:"Fingerprints visible", d4_c:"Handling while fresh / no seal", d4_f:"Control touch; add seal/topcoat",
+        d5_s:"Shade shift / gradient", d5_c:"pH/time/temp drift; concentration change", d5_f:"Stabilize parameters; titrate; carbon-treat organics",
+        d6_s:"Early white rust", d6_c:"Thin film / poor seal / rinsing issues", d6_f:"Increase within window; improve seal; fix rinse train",
+        d7_s:"Blister/peel", d7_c:"Unclean surface / contamination", d7_f:"Re-clean/activate; change/ filter water; audit utilities",
 
         links_h:"Related links",
+        link_cr:"Chromate on Zinc: Cr³⁺ vs Cr⁶⁺",
+        link_seal:"Seal/Topcoat for Cr³⁺ passivation",
+        link_salt:"Salt Spray quick guide",
+        link_series:"Zinc plating troubleshooting (series)",
+        link_basic:"Plating basics",
 
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('#langSwitch .lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -666,30 +638,67 @@
         if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
     }
 
     (function initLang(){
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
-        applyLang(btn.dataset.lang);
-        try{
-          const h = document.querySelector('.site-header').getBoundingClientRect().height|0;
-          document.documentElement.style.setProperty('--header-h', h + 'px');
-        }catch(e){}
-      }));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 
-  <!-- JS: เมนูมือถือ + header height + FAB scroll behavior + highlight nav -->
+  <!-- JS: Part switcher (persist + deep-link + click-TOC switches) -->
   <script>
   (function(){
-    const header = document.querySelector('.site-header');
+    const buttons = document.querySelectorAll('.part-switch .part-btn');
+    const tocLinks = document.querySelectorAll('#toc a[data-part]');
+    const sections = document.querySelectorAll('section[data-part]');
+
+    function setPart(p){
+      const part = (p === '2') ? '2' : '1';
+      document.documentElement.setAttribute('data-part', part);
+      sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+      tocLinks.forEach(a => a.hidden = (a.dataset.part !== part));
+      buttons.forEach(b => {
+        const on = (b.dataset.part === part);
+        b.setAttribute('aria-pressed', String(on));
+        b.setAttribute('aria-selected', String(on));
+      });
+      try{ localStorage.setItem('zp_part', part); }catch(e){}
+      const url = new URL(location);
+      url.searchParams.set('part', part);
+      history.replaceState(null,'',url);
+    }
+
+    const urlPart = new URLSearchParams(location.search).get('part');
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('zp_part')) || '1';
+    setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+    buttons.forEach(b => b.addEventListener('click', ()=>{
+      setPart(b.dataset.part);
+      document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+
+    // Ensure clicking a TOC chip switches to the right part first
+    tocLinks.forEach(a=>{
+      a.addEventListener('click', ()=> setPart(a.getAttribute('data-part')));
+    });
+  })();
+  </script>
+
+  <!-- JS: Header behaviors (glass→darker, mobile menu scrim+lock, nav highlight, smart back) -->
+  <script>
+  (function(){
+    const header = document.getElementById('siteHeader');
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('primary-nav');
     const scrim = document.querySelector('.menu-scrim');
-    const fab = document.querySelector('.lang-fab');
 
+    // header height var
     function updateHeaderH(){
       const h = header.getBoundingClientRect().height|0;
       document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -698,76 +707,92 @@
     window.addEventListener('load', updateHeaderH, {once:true});
     window.addEventListener('resize', updateHeaderH, {passive:true});
 
-    let scrollTop = 0;
-    function setOpen(isOpen){
-      header.classList.toggle('open', isOpen);
-      toggle?.setAttribute('aria-expanded', String(isOpen));
-      if (scrim){ isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden',''); }
-      nav?.setAttribute('aria-hidden', String(!isOpen));
-      if (isOpen){
-        scrollTop = window.scrollY;
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollTop}px`;
-        document.body.style.width = '100%';
+    // darken on scroll
+    const onScrollIntensity = ()=> header.classList.toggle('is-scrolled', (window.scrollY||0)>6);
+    onScrollIntensity();
+    window.addEventListener('scroll', onScrollIntensity, {passive:true});
+
+    // mobile menu + body lock
+    let lockY = 0;
+    function setOpen(v){
+      header.classList.toggle('open', v);
+      toggle?.setAttribute('aria-expanded', String(v));
+      nav?.setAttribute('aria-hidden', String(!v));
+      v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+      if(v){
+        lockY = window.scrollY;
+        document.body.classList.add('no-scroll');
+        document.body.style.top = `-${lockY}px`;
       }else{
-        document.body.style.position = '';
+        document.body.classList.remove('no-scroll');
         document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, scrollTop);
+        window.scrollTo(0, lockY);
+        toggle?.focus({preventScroll:true});
       }
     }
     toggle?.addEventListener('click', ()=> setOpen(!header.classList.contains('open')));
     scrim?.addEventListener('click', ()=> setOpen(false));
-    document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape' && header.classList.contains('open')) setOpen(false); });
     window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) setOpen(false); }, {passive:true});
+    nav?.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> setOpen(false)));
 
-    // Highlight current nav
+    // Highlight current nav + /products/* auto-highlight on Products
     try{
       const here = location.pathname.replace(/\/+$/,'');
-      nav?.querySelectorAll('a').forEach(a=>{
+      document.querySelectorAll('.menu a').forEach(a=>{
         const path = new URL(a.href, location.origin).pathname.replace(/\/+$/,'');
-        if (path && (here === path || (here.startsWith(path) && path !== '/'))) a.setAttribute('aria-current','page');
+        a.removeAttribute('aria-current');
+        if (/^\/products(\/|$)/.test(here) && /\/products\/?$/.test(path)) {
+          a.setAttribute('aria-current','page');
+        } else if (here === path) {
+          a.setAttribute('aria-current','page');
+        }
       });
     }catch(e){}
 
-    // FAB hide/show on scroll (≤900px)
-    let onScroll, bound = false;
-    function bindFab(){
-      if (bound || !fab) return;
-      let lastY = window.scrollY, hidden = false;
-      const THRESHOLD = 8;
-      onScroll = ()=>{
-        const y = window.scrollY, dy = y - lastY;
-        if (Math.abs(dy) > THRESHOLD){
-          const shouldHide = dy > 0 && y > 40;
-          if (shouldHide !== hidden){
-            fab.classList.toggle('is-hide', shouldHide);
-            hidden = shouldHide;
-          }
-          lastY = y;
-        }
-      };
-      window.addEventListener('scroll', onScroll, {passive:true});
-      bound = true;
-    }
-    function unbindFab(){
-      if (!bound) return;
-      window.removeEventListener('scroll', onScroll);
-      fab?.classList.remove('is-hide');
-      bound = false;
-    }
-    const mq = window.matchMedia('(max-width: 900px)');
-    function applyFab(e){ e.matches ? bindFab() : unbindFab(); }
-    applyFab(mq);
-    mq.addEventListener ? mq.addEventListener('change', applyFab) : mq.addListener(applyFab);
+    // Smart back prefers history if same-origin
+    (function(){
+      const btn = document.querySelector('.back-chip');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        try{
+          const ref = document.referrer;
+          const sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin){ e.preventDefault(); history.back(); }
+        }catch(err){}
+      });
+    })();
   })();
+  </script>
 
-  // Reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
-  const revObs = new IntersectionObserver((entries,obs)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-  }, {threshold:.18});
-  revealEls.forEach(el=>revObs.observe(el));
+  <!-- JS: TOC scroll-spy -->
+  <script>
+  (function(){
+    const chips = Array.from(document.querySelectorAll('#toc .toc-chip[href^="#"]'));
+    if(!chips.length) return;
+    const map = new Map();
+    chips.forEach(a=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el) map.set(id, {link:a, el});
+    });
+
+    const clear = ()=> chips.forEach(a=> a.setAttribute('aria-current','false'));
+    const setActive = id => { clear(); const item = map.get(id); item && item.link.setAttribute('aria-current','true'); };
+
+    const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting && !e.target.hidden){
+          const id = e.target.id;
+          setActive(id);
+          history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+        }
+      });
+    }, {rootMargin: `-${getHeaderH()+14}px 0% -60% 0%`, threshold:.1});
+
+    map.forEach(({el})=> obs.observe(el));
+  })();
   </script>
 </body>
 </html>
