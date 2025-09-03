@@ -38,27 +38,6 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "inLanguage":"th"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"ทำไมต้องใช้ “กัดเงาทองเหลือง Laser-B” ให้ผิวกลับมาเหลืองไร้คราบแดง",
-    "url":"https://www.baumechemical.com/blog/brass-bright-dip-laser-b/",
-    "inLanguage":"th",
-    "description":"เหตุผลที่ควรใช้ Laser-B เพื่อกู้ผิวเหลืองสดใส ลดคราบแดงจากซัลไฟด์/ออกไซด์ พร้อมค่าเริ่มต้น การเตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ การดูแลอ่าง และการแก้ปัญหา",
-    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
-    "image":"https://i.imgur.com/3mWQsKe.jpeg"
-  }
-  </script>
-  <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
     {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
@@ -78,75 +57,111 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:56px;
+      --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* ===== Header ===== */
-    .site-header{ position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8; }
-    .nav-bar{ max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
+    /* ===== GLASS HEADER: darker on scroll ===== */
+    .site-header{position:sticky; top:0; z-index:1400; backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(255,255,255,.72); border-bottom:1px solid #e6ece8; transition:background .2s, box-shadow .2s, border-color .2s}
+    .site-header.is-scrolled{ background:rgba(255,255,255,.92); border-bottom-color:#d7e2db; box-shadow:0 10px 30px rgba(2,8,20,.1) }
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
+    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand) var(--logo-url) center/cover no-repeat; box-shadow:0 3px 10px rgba(0,0,0,.2)}
     .brand-name{font-weight:800; color:#1d2b23}
-    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
-    .primary-nav a:hover{ background:#ecf4ef }
-    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+
+    /* Primary nav + Lang switch (desktop inline / mobile inside menu) */
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+    .menu a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:700 }
+    .menu a:hover{ background:#ecf4ef }
+    .menu a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
     @media(max-width:760px){ .brand-name{display:none} }
 
-    /* Burger */
+    /* Burger + dropdown */
     .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
     .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
     .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
     @media (max-width:900px){
       .nav-toggle{ display:inline-block; }
-      .primary-nav{ position:fixed; left:0; right:0; top:var(--header-h); background:#fff; border-bottom:1px solid #e6ece8; box-shadow:0 12px 30px rgba(2,8,20,.12); display:none; flex-direction:column; gap:6px; padding:12px 16px; z-index:1190; }
-      .primary-nav a{ padding:12px 10px; font-size:15px }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#fff; border:1px solid #e6ece8;
+        box-shadow:0 12px 30px rgba(2,8,20,.12); display:none; flex-direction:column; gap:8px; padding:12px; border-radius:14px; z-index:1450; }
+      .primary-nav .menu{ flex-direction:column; gap:6px }
+      .primary-nav .menu a{ padding:12px; font-size:15px }
       .site-header.open .primary-nav{ display:flex; }
-      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1185; display:none }
+      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1400; display:none }
+      /* Lang switch moves inside menu */
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#0f172a }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
     .menu-scrim{ display:none } .menu-scrim:not([hidden]){ display:block }
-
-    /* ===== Lang FAB ===== */
-    .lang-fab{ position:fixed; top:calc(env(safe-area-inset-top, 0px) + 14px); right:calc(env(safe-area-inset-right, 0px) + 14px); z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition:transform .18s ease, opacity .18s ease;}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-    .lang-fab.is-hide{ opacity:0; transform:translateY(-10px); pointer-events:none }
-    @media (max-width:900px){ .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); margin:8px 12px 0 auto; background:#fff; box-shadow:0 8px 26px rgba(2,8,20,.06);} .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 } .lang-fab .flag{ width:18px; height:13px } }
-    @media (max-width:420px){ .lang-fab .lang-btn span{ display:none } }
-    @media (prefers-reduced-motion: reduce){ .lang-fab{ transition:none } }
+    body.no-scroll{position:fixed;width:100%}
 
     /* ===== Hero ===== */
     .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffffea; color:#0f172a; border:1px solid rgba(2,8,20,.08); box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Base layout ===== */
-    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
+    /* ===== Layout & components ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     .lead{margin:0 0 16px; color:#5f6d7c}
 
-    /* Decor & components */
-    html{scroll-behavior:smooth}
-    [hidden]{display:none !important}
-    .section{position:relative}
-    .section::after{content:"";display:block;height:3px;width:72px;margin:8px 0 0;background:linear-gradient(90deg,var(--brand-2),#59a286,transparent);border-radius:2px}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc p{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
-    .toc-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:700}
-    .toc-chip:hover{background:#e4f0ea}
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:#f4faf7}
+    /* Two-column layout (sticky TOC left) */
+    @media (min-width:1100px){
+      main.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
+      section.section-block{ grid-column:2 }
+    }
+
+    /* Section cards + gradient stripe + emoji icon */
+    section.section-block{
+      background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;
+      box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px;scroll-margin-top:calc(var(--header-h) + 18px)
+    }
+    section.section-block::after{
+      content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+      background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9);opacity:.85
+    }
+    .section-block>h2.section{display:flex;align-items:center;gap:10px}
+    .section-block>h2.section::before{content:var(--icon,"💡");font-size:20px;line-height:1}
+    #why>h2.section{--icon:"💡"} #rec>h2.section{--icon:"📊"} #prep>h2.section{--icon:"🧼"}
+    #window>h2.section{--icon:"🎛️"} #fixture>h2.section{--icon:"🧰"} #care>h2.section{--icon:"🛡️"} #defects>h2.section{--icon:"🚨"} #links>h2.section{--icon:"🔗"}
+
+    /* TOC (card + pill items) */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1)}
+    #toc h2.section{font-size:1rem;margin:0 0 6px}
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;
+      padding:12px 14px;border-radius:12px;background:#f2f7f4;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip:hover{filter:brightness(.98)}
+    .toc-chip::after{content:"›";opacity:.55;color:var(--brand-2);font-weight:900}
+    .toc-chip[aria-current="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    .toc-chip[aria-current="true"]::after{color:#fff;opacity:.9}
+
+    /* Tables: glossy */
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:14px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:relative}
+    .table thead th::after{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,#d9efe4,transparent)}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{background:#f6fbf8}
 
     /* Part switcher */
+    html{scroll-behavior:smooth}
+    [hidden]{display:none !important}
     .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
     .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
     .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
@@ -155,7 +170,7 @@
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
     .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
@@ -174,7 +189,7 @@
 <body>
 
   <!-- ===== Header ===== -->
-  <header class="site-header" role="banner" aria-label="Site header">
+  <header class="site-header" role="banner" aria-label="Site header" id="siteHeader">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
@@ -185,33 +200,32 @@
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
 
+      <!-- Global menu + language switch -->
       <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
-        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
-        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
-        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
-        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+        <ul class="menu">
+          <li><a href="https://www.baumechemical.com/" data-i18n-key="nav_home">Home</a></li>
+          <li><a href="https://www.baumechemical.com/about/" data-i18n-key="nav_about">About us</a></li>
+          <li><a href="https://www.baumechemical.com/products/" data-i18n-key="nav_products">Products</a></li>
+          <li><a href="https://www.baumechemical.com/contact/" data-i18n-key="nav_contact">Contact Us</a></li>
+          <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a></li>
+        </ul>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher" id="langSwitch">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Lang FAB -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
-
   <!-- Hero -->
   <header class="hero">
-    <div class="wrap">
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:var(--container); margin:auto">
       <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
       <h1 data-i18n-key="hero_title">ทำไมต้องใช้ “กัดเงาทองเหลือง Laser-B” ให้ผิวกลับมาเหลืองไร้คราบแดง</h1>
       <p data-i18n-key="hero_tagline">ฟื้นผิวเหลืองสดใส เร็ว คุมง่าย ลดคราบซัลไฟด์—ครบทั้งค่าเริ่มต้น การเตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ ดูแลอ่าง และแก้ปัญหา</p>
@@ -240,7 +254,7 @@
       </p>
     </nav>
 
-    <!-- 1. ทำไมต้อง Laser-B -->
+    <!-- Sections -->
     <section id="why" data-part="1" class="reveal section-block" aria-labelledby="why-h">
       <h2 id="why-h" class="section" data-i18n-key="why_h">ทำไมต้องใช้ Laser-B</h2>
       <ul>
@@ -251,7 +265,6 @@
       </ul>
     </section>
 
-    <!-- 2. ค่าเริ่มต้นที่แนะนำ -->
     <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
       <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
       <p data-i18n-key="rec_p1">ค่าเริ่มต้นด้านล่างเป็นกรอบตั้งต้น — ให้ทดสอบกับชิ้นงานจริงและปรับทีละตัวตามสเปกผู้ผลิต Laser-B ของคุณ</p>
@@ -295,7 +308,6 @@
       </div>
     </section>
 
-    <!-- 3. การเตรียมผิวก่อนกัดเงา -->
     <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
       <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนกัดเงา</h2>
       <p data-i18n-key="prep_p1">ล้างไขมัน (ด่าง/อัลตร้าโซนิก) → ล้างน้ำคุณภาพดีหลายขั้น → Neutralize/Activate บางกรณีเพื่อไล่ออกไซด์ทองแดง → ล้าง DI เข้ม → เข้ากัดเงา Laser-B</p>
@@ -303,7 +315,6 @@
       <p data-i18n-key="prep_p3">หลังกัดเงา ให้ล้าง DI แบบไหลทวนและทำให้แห้งทันที (มีดลม/อบอุ่น) ก่อนลงสารกันหมองหรือท็อปโค้ท</p>
     </section>
 
-    <!-- 4. หน้าต่างกระบวนการ -->
     <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
       <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
       <div class="table">
@@ -352,14 +363,12 @@
       <p data-i18n-key="window_p2">เมื่อได้ค่า “เหลืองใสไร้คราบแดง” ให้บันทึกสแตนดาร์ดพร้อมภาพตัวอย่างและเกณฑ์รับ–ไม่รับ</p>
     </section>
 
-    <!-- 5. การจัดวาง -->
     <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
       <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
       <p data-i18n-key="fixture_p1">แขวนแนวตั้ง/เอียงให้ของเหลวไหลออก ลดโพรงอากาศและคราบทางน้ำ เว้นระยะชิ้นงานไม่ให้บังกัน ใช้การกวนอ่อน</p>
       <p data-i18n-key="fixture_p2">ตั้งเวลา drain ระหว่างขั้นเพื่อลด drag-out รักษาความเข้มข้นอ่าง และลดคราบขาวหลังแห้ง</p>
     </section>
 
-    <!-- 6. การดูแลอ่างและคุณภาพ -->
     <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
       <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลอ่างและคุณภาพ</h2>
       <p data-i18n-key="care_p1">ติดตามความเข้มข้น-อุณหภูมิ-pH ตามคู่มือผู้ผลิต เติมตามปริมาณลากออก/พื้นที่งาน กรองเชิงกลเพื่อลดแขวนลอย และกำหนดรอบรีเฟรช</p>
@@ -367,7 +376,6 @@
       <p data-i18n-key="care_p3">QC แนะนำ: ความเหลือง/ความเงา (สเปกโตร/เทียบ swatch), การทนเหงื่อ/ซัลไฟด์, water-mark, การยึดเกาะของท็อปโค้ท</p>
     </section>
 
-    <!-- 7. ตารางปัญหาพบเจอบ่อย -->
     <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
       <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
       <div class="table">
@@ -410,7 +418,6 @@
       </div>
     </section>
 
-    <!-- 8. ลิงก์ที่เกี่ยวข้อง -->
     <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
       <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
       <p><a class="more" href="https://www.baumechemical.com/products/polishing/" data-i18n-key="link_polish">หมวด Polishing & Bright Dip</a></p>
@@ -461,7 +468,6 @@
       <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
-
   <!-- JS: Reveal on scroll -->
   <script>
     const revealEls = document.querySelectorAll('.reveal');
@@ -475,7 +481,7 @@
   <script>
     const I18N = {
       th: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← กลับเมนูหลัก",
         hero_title:"ทำไมต้องใช้ “กัดเงาทองเหลือง Laser-B” ให้ผิวกลับมาเหลืองไร้คราบแดง",
         hero_tagline:"ฟื้นผิวเหลืองสดใส เร็ว คุมง่าย ลดคราบซัลไฟด์—ครบทั้งค่าเริ่มต้น การเตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ ดูแลอ่าง และแก้ปัญหา",
@@ -540,7 +546,7 @@
       },
 
       en: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← Back to Home",
         hero_title:"Why Use Brass Bright Dip “Laser-B”: Restore Clean Yellow Without Red Stain",
         hero_tagline:"Fast, controllable, sulfide-free yellow — with baselines, prep, windows, fixturing, bath care, and troubleshooting.",
@@ -606,7 +612,7 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
@@ -619,22 +625,20 @@
         if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
     }
 
     (function initLang(){
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
-        applyLang(btn.dataset.lang);
-        try{
-          const h = document.querySelector('.site-header').getBoundingClientRect().height|0;
-          document.documentElement.style.setProperty('--header-h', h + 'px');
-        }catch(e){}
-      }));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 
-  <!-- JS: Part switcher -->
+  <!-- Part switcher (persist + deep-link + click-TOC switches) -->
   <script>
   (function(){
     const buttons = document.querySelectorAll('.part-switch .part-btn');
@@ -652,6 +656,9 @@
         b.setAttribute('aria-selected', String(on));
       });
       try{ localStorage.setItem('laserB_part', part); }catch(e){}
+      const url = new URL(location);
+      url.searchParams.set('part', part);
+      history.replaceState(null,'',url);
     }
 
     const urlPart = new URLSearchParams(location.search).get('part');
@@ -662,18 +669,23 @@
       setPart(b.dataset.part);
       document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
     }));
+
+    // Ensure clicking a TOC item switches to the right part first
+    tocLinks.forEach(a=>{
+      a.addEventListener('click', ()=> setPart(a.getAttribute('data-part')));
+    });
   })();
   </script>
 
-  <!-- JS: เมนูมือถือ + header height + FAB scroll behavior -->
+  <!-- Header: darken on scroll + mobile menu with scrim+lock + nav highlight + back smart -->
   <script>
   (function(){
-    const header = document.querySelector('.site-header');
+    const header = document.getElementById('siteHeader');
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('primary-nav');
     const scrim = document.querySelector('.menu-scrim');
-    const fab = document.querySelector('.lang-fab');
 
+    // header height var
     function updateHeaderH(){
       const h = header.getBoundingClientRect().height|0;
       document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -682,68 +694,91 @@
     window.addEventListener('load', updateHeaderH, {once:true});
     window.addEventListener('resize', updateHeaderH, {passive:true});
 
-    let scrollTop = 0;
-    function setOpen(isOpen){
-      header.classList.toggle('open', isOpen);
-      toggle?.setAttribute('aria-expanded', String(isOpen));
-      if (scrim){ isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden',''); }
-      nav?.setAttribute('aria-hidden', String(!isOpen));
-      if (isOpen){
-        scrollTop = window.scrollY;
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollTop}px`;
-        document.body.style.width = '100%';
+    // darken on scroll
+    const onScrollIntensity = ()=> header.classList.toggle('is-scrolled', (window.scrollY||0)>6);
+    onScrollIntensity();
+    window.addEventListener('scroll', onScrollIntensity, {passive:true});
+
+    // mobile menu + body lock
+    let lockY = 0;
+    function setOpen(v){
+      header.classList.toggle('open', v);
+      toggle?.setAttribute('aria-expanded', String(v));
+      nav?.setAttribute('aria-hidden', String(!v));
+      v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+      if(v){
+        lockY = window.scrollY;
+        document.body.classList.add('no-scroll');
+        document.body.style.top = `-${lockY}px`;
       }else{
-        document.body.style.position = '';
+        document.body.classList.remove('no-scroll');
         document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, scrollTop);
+        window.scrollTo(0, lockY);
+        toggle?.focus({preventScroll:true});
       }
     }
     toggle?.addEventListener('click', ()=> setOpen(!header.classList.contains('open')));
     scrim?.addEventListener('click', ()=> setOpen(false));
-    document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape' && header.classList.contains('open')) setOpen(false); });
     window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) setOpen(false); }, {passive:true});
+    nav?.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> setOpen(false)));
 
-    // Highlight current nav
+    // Highlight current nav + /products/* auto-highlight on Products
     try{
       const here = location.pathname.replace(/\/+$/,'');
-      nav?.querySelectorAll('a').forEach(a=>{
+      document.querySelectorAll('.menu a').forEach(a=>{
         const path = new URL(a.href, location.origin).pathname.replace(/\/+$/,'');
-        if (path && (here === path || (here.startsWith(path) && path !== '/'))) a.setAttribute('aria-current','page');
+        a.removeAttribute('aria-current');
+        if (/^\/products(\/|$)/.test(here) && /\/products\/?$/.test(path)) {
+          a.setAttribute('aria-current','page');
+        } else if (here === path) {
+          a.setAttribute('aria-current','page');
+        }
       });
     }catch(e){}
 
-    // FAB hide/show on scroll (≤900px)
-    let onScroll, bound = false;
-    function bindFab(){
-      if (bound || !fab) return;
-      let lastY = window.scrollY, hidden = false;
-      const THRESHOLD = 8;
-      onScroll = ()=>{
-        const y = window.scrollY, dy = y - lastY;
-        if (Math.abs(dy) > THRESHOLD){
-          const shouldHide = dy > 0 && y > 40;
-          if (shouldHide !== hidden){
-            fab.classList.toggle('is-hide', shouldHide);
-            hidden = shouldHide;
-          }
-          lastY = y;
+    // Back smart: prefer history if same-origin
+    (function(){
+      const btn = document.querySelector('.back-chip');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        try{
+          const ref = document.referrer;
+          const sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin){ e.preventDefault(); history.back(); }
+        }catch(err){}
+      });
+    })();
+  })();
+  </script>
+
+  <!-- TOC scroll-spy -->
+  <script>
+  (function(){
+    const chips = Array.from(document.querySelectorAll('#toc .toc-chip[href^="#"]'));
+    if(!chips.length) return;
+    const map = new Map();
+    chips.forEach(a=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el) map.set(id, {link:a, el});
+    });
+
+    const clear = ()=> chips.forEach(a=> a.setAttribute('aria-current','false'));
+    const setActive = id => { clear(); const item = map.get(id); item && item.link.setAttribute('aria-current','true'); };
+
+    const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting && !e.target.hidden){
+          const id = e.target.id;
+          setActive(id);
+          history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
         }
-      };
-      window.addEventListener('scroll', onScroll, {passive:true});
-      bound = true;
-    }
-    function unbindFab(){
-      if (!bound) return;
-      window.removeEventListener('scroll', onScroll);
-      fab?.classList.remove('is-hide');
-      bound = false;
-    }
-    const mq = window.matchMedia('(max-width: 900px)');
-    function applyFab(e){ e.matches ? bindFab() : unbindFab(); }
-    applyFab(mq);
-    mq.addEventListener ? mq.addEventListener('change', applyFab) : mq.addListener(applyFab);
+      });
+    }, {rootMargin: `-${getHeaderH()+14}px 0% -60% 0%`, threshold:.1});
+
+    map.forEach(({el})=> obs.observe(el));
   })();
   </script>
 </body>

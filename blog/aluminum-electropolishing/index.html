@@ -239,13 +239,66 @@
       opacity:0; transition:opacity .2s ease; font-weight:800; color:var(--muted); font-size:.92rem }
     .section-block:hover>h2.section::after{ opacity:.85 }
 
-    /* ===== TOC styling (card + active chip) ===== */
-    #toc{ border-radius:16px }
-    #toc h2.section{ font-size:1rem; margin-bottom:4px }
-    #toc p{ display:grid; gap:8px; margin:10px 0 0 }
-    .toc-chip{ display:flex; align-items:center; justify-content:space-between; width:100%; font-weight:800 }
-    .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip[aria-current="true"]{ background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12) }
+/* ===== TOC styling — Card + pill items (Sep-2025 look) ===== */
+#toc{
+  background:#fff;
+  border:1px solid #e3ece5;
+  border-radius:16px;
+  box-shadow:var(--shadow-1);
+  padding:12px;
+}
+#toc h2.section{ font-size:1rem; margin:2px 0 8px }
+
+#toc .toc-list{
+  /* เลิกบูเลท → ใช้แคปซูล */
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:8px;
+}
+
+/* รายการเริ่มต้น (เทาเขียวอ่อน) */
+#toc .toc-list li{
+  position:relative;
+  border:1px solid #d8e7dd;
+  background:#f2f7f4;
+  border-radius:12px;
+  transition:filter .15s ease, background .15s ease, border-color .15s ease;
+}
+#toc .toc-link{
+  display:block;
+  padding:12px 40px 12px 12px; /* เว้นที่ให้ลูกศรขวา */
+  text-decoration:none;
+  color:#1f2a24;
+  font-weight:800;
+  border-radius:10px;
+}
+#toc .toc-list li:hover{ filter:brightness(.98) }
+
+/* ลูกศรทางขวา */
+#toc .toc-list li::after{
+  content:"›";
+  position:absolute; right:12px; top:50%;
+  transform:translateY(-50%);
+  color:#2c5e4e; opacity:.55; font-weight:900;
+}
+
+/* สถานะ Active (เขียวเข้ม ตัวอักษรขาว) */
+#toc .toc-list li[aria-current="true"]{
+  background:var(--brand-2);
+  border-color:transparent;
+  box-shadow:0 6px 16px rgba(2,8,20,.12);
+}
+#toc .toc-list li[aria-current="true"] .toc-link{ color:#fff }
+#toc .toc-list li[aria-current="true"]::after{ color:#fff; opacity:.9 }
+
+/* โฟกัสด้วยคีย์บอร์ด */
+#toc .toc-link:focus-visible{
+  outline:2px solid var(--brand-2);
+  outline-offset:2px;
+}
+
 
     /* ===== Tables polish ===== */
     .table table{ border-radius:14px }
@@ -253,7 +306,7 @@
     .table tbody tr:hover{ background:#f6fbf8 }
 
     /* ===== Subtle background accents for sections ===== */
-    .section-block::before{ content:""; position:absolute; width:220px; height:220px; right:-60px; top:-60px; border-radius:50%;
+    .section-block::before{ content:""; position:absolute; width:140px; height:140px; right:-60px; top:-60px; border-radius:50%;
       background:radial-gradient(closest-side, #e9f5ef 0%, #f7fbf9 60%, transparent 100%); filter:saturate(120%); pointer-events:none }
 
     /* Part switcher buttons refinement */
@@ -318,19 +371,20 @@
       <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ปัญหา</span></button>
     </div>
 
-    <!-- TOC -->
-    <nav id="toc" class="reveal" aria-label="สารบัญ">
-      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#rec" data-part="1" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a>
-        <a class="toc-chip" href="#prep" data-part="1" data-i18n-key="toc_prep">การเตรียมผิวก่อนกัดเงา</a>
-        <a class="toc-chip" href="#window" data-part="1" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a>
-        <a class="toc-chip" href="#fixture" data-part="2" data-i18n-key="toc_fixture">การจัดวาง</a>
-        <a class="toc-chip" href="#care" data-part="2" data-i18n-key="toc_care">การดูแลบ่อกัดเงาและคุณภาพ</a>
-        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a>
-        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้องกับบทความนี้</a>
-      </p>
-    </nav>
+<!-- แทนที่ทั้ง <nav id="toc"> เดิมด้วยบล็อกนี้ -->
+<nav id="toc" class="reveal" aria-label="สารบัญ">
+  <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+  <ul class="toc-list" role="list">
+    <li data-part="1"><a class="toc-link" href="#rec" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a></li>
+    <li data-part="1"><a class="toc-link" href="#prep" data-i18n-key="toc_prep">การเตรียมผิวก่อนกัดเงา</a></li>
+    <li data-part="1"><a class="toc-link" href="#window" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a></li>
+    <li data-part="2"><a class="toc-link" href="#fixture" data-i18n-key="toc_fixture">การจัดวาง</a></li>
+    <li data-part="2"><a class="toc-link" href="#care" data-i18n-key="toc_care">การดูแลบ่อกัดเงาและคุณภาพ</a></li>
+    <li data-part="2"><a class="toc-link" href="#defects" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a></li>
+    <li data-part="2"><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้องกับบทความนี้</a></li>
+  </ul>
+</nav>
+
 
     <!-- Sections — content unchanged -->
     <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
@@ -669,36 +723,52 @@
     })();
   </script>
 
-  <!-- Part switcher (persist & deep-link) -->
-  <script>
-  (function(){
-    const buttons = document.querySelectorAll('.part-switch .part-btn');
-    const tocLinks = document.querySelectorAll('#toc a[data-part]');
-    const sections = document.querySelectorAll('section[data-part]');
+<script>
+(function(){
+  const buttons = document.querySelectorAll('.part-switch .part-btn');
+  const tocItems = document.querySelectorAll('#toc .toc-list li[data-part]');
+  const sections = document.querySelectorAll('section[data-part]');
 
-    function setPart(p){
-      const part = (p === '2') ? '2' : '1';
-      document.documentElement.setAttribute('data-part', part);
-      sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
-      tocLinks.forEach(a => a.hidden = (a.dataset.part !== part));
-      buttons.forEach(b => {
-        const on = (b.dataset.part === part);
-        b.setAttribute('aria-pressed', String(on));
-        b.setAttribute('aria-selected', String(on));
-      });
-      try{ localStorage.setItem('ep_part', part); }catch(e){}
-    }
+  function setPart(p){
+    const part = (p === '2') ? '2' : '1';
+    document.documentElement.setAttribute('data-part', part);
 
-    const urlPart = new URLSearchParams(location.search).get('part');
-    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ep_part')) || '1';
-    setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+    sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+    tocItems.forEach(li => li.hidden = (li.dataset.part !== part));
 
-    buttons.forEach(b => b.addEventListener('click', ()=>{
-      setPart(b.dataset.part);
-      document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
-    }));
-  })();
-  </script>
+    buttons.forEach(b => {
+      const on = (b.dataset.part === part);
+      b.setAttribute('aria-pressed', String(on));
+      b.setAttribute('aria-selected', String(on));
+    });
+
+    try{ localStorage.setItem('ep_part', part); }catch(e){}
+
+    // เขียน query ?part= ให้ deep-link
+    const url = new URL(location);
+    url.searchParams.set('part', part);
+    history.replaceState(null,'',url);
+  }
+
+  const urlPart = new URLSearchParams(location.search).get('part');
+  const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ep_part')) || '1';
+  setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+  buttons.forEach(b => b.addEventListener('click', ()=>{
+    setPart(b.dataset.part);
+    document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
+  }));
+
+  // คลิกจาก TOC → สลับพาร์ตก่อนเลื่อนไป
+  document.querySelectorAll('#toc .toc-link').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      const li = a.closest('li[data-part]');
+      if(li) setPart(li.dataset.part);
+    });
+  });
+})();
+</script>
+
 
   <!-- Header glass, mobile menu (scrim+lock), back-chip smart, highlight current -->
   <script>
@@ -770,37 +840,53 @@
       })();
     })();
   </script>
-  <script id="toc-scrollspy">
-    // Clickable heading anchors (adds #id when clicking the H2)
-    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
-      h.addEventListener('click', ()=>{
-        const sec = h.closest('.section-block');
-        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
-      });
+<script id="toc-scrollspy">
+  // คลิกหัวข้อ H2 ให้ขึ้น #anchor
+  document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+    h.addEventListener('click', ()=>{
+      const sec = h.closest('.section-block');
+      if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+    });
+  });
+
+  // Scroll-spy (กับ bullet list)
+  (function(){
+    const items = Array.from(document.querySelectorAll('#toc .toc-list li'));
+    if(!items.length) return;
+
+    const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+    const map = new Map();
+
+    items.forEach(li=>{
+      const a = li.querySelector('a.toc-link');
+      if(!a) return;
+      const id = (a.getAttribute('href')||'').replace('#','');
+      const sec = document.getElementById(id);
+      if(sec) map.set(id, {sec, li});
     });
 
-    // TOC scroll-spy: highlight current section chip
-    (function(){
-      const chips = Array.from(document.querySelectorAll('#toc .toc-chip'));
-      if(!chips.length) return;
-      const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
-      const secById = new Map();
-      chips.forEach(a=>{ const id=(a.getAttribute('href')||'').replace('#',''); const sec=document.getElementById(id); if(sec) secById.set(id,{sec,chip:a}); });
+    const setActive = (id)=>{
+      items.forEach(li=> li.setAttribute('aria-current','false'));
+      const found = map.get(id)?.li;
+      if(found) found.setAttribute('aria-current','true');
+    };
 
-      function setActive(){
-        let nearestId=null, nearest=Infinity, headerH=getHeaderH();
-        secById.forEach(({sec,chip},id)=>{
-          if(sec.hidden) return; // skip hidden part
-          const rect = sec.getBoundingClientRect();
-          const dist = Math.abs(rect.top - (headerH + 14));
-          if(rect.bottom>headerH+40 && rect.top < window.innerHeight*0.6 && dist < nearest){ nearest=dist; nearestId=id; }
-        });
-        chips.forEach(c=> c.setAttribute('aria-current','false'));
-        if(nearestId){ const c = secById.get(nearestId)?.chip; c && c.setAttribute('aria-current','true'); }
-      }
-      ['scroll','resize','load'].forEach(ev=> window.addEventListener(ev, setActive, {passive:true}));
-      setActive();
-    })();
-  </script>
+    const obs = new IntersectionObserver((entries)=>{
+      const headerH = getHeaderH();
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id = e.target.id;
+          // ข้ามเซคชันที่ถูกซ่อนเพราะพาร์ตไม่ตรง
+          if(e.target.hidden) return;
+          setActive(id);
+          history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+        }
+      });
+    }, {rootMargin:`-${getHeaderH()+24}px 0% -60% 0%`, threshold:.1});
+
+    map.forEach(({sec})=> obs.observe(sec));
+  })();
+</script>
+
 </body>
 </html>
