@@ -1,245 +1,210 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>บทความ & คู่มือ | Baume Chemical Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- === SEO base === -->
-  <meta name="description" content="บทความและคู่มือเชิงเทคนิคด้านงานชุบโลหะ: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing รวมเคสแก้ปัญหาและวิธีคุมคุณภาพ พร้อมลิงก์ไปยังสินค้าที่เกี่ยวข้อง">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <!-- === SEO (Blog Index) === -->
+  <title data-i18n-key="meta_title">บทความ & คู่มือ | Baume Chemical Blog</title>
+  <meta name="description" content="รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray" data-i18n-attr="content:meta_desc">
+
+  <!-- Canonical & Hreflang -->
   <link rel="canonical" href="https://www.baumechemical.com/blog/">
   <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/">
   <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/">
+
+  <!-- Robots & Theme -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Baume Chemical Blog — บทความ & คู่มือชุบโลหะ">
-  <meta property="og:description" content="ความรู้และคู่มือเชิงปฏิบัติ ครอบคลุม Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing">
+  <meta property="og:locale" content="th_TH" id="ogLocale">
+  <meta property="og:title" content="บทความ & คู่มือ | Baume Chemical Blog" data-i18n-attr="content:og_title" id="ogTitle">
+  <meta property="og:description" content="รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray" data-i18n-attr="content:og_desc" id="ogDesc">
   <meta property="og:url" content="https://www.baumechemical.com/blog/">
-  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
-  <meta property="og:image:alt" content="Baume Chemical Blog — บทความและคู่มือชุบโลหะ">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="แล็บและงานบริการ Baume Chemical" data-i18n-attr="content:og_img_alt">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="บทความ & คู่มือ | Baume Chemical Blog" data-i18n-attr="content:tw_title" id="twTitle">
+  <meta name="twitter:description" content="รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray" data-i18n-attr="content:tw_desc" id="twDesc">
+  <meta name="twitter:image" content="https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg">
+  <meta name="twitter:image:alt" content="แล็บและงานบริการ Baume Chemical" data-i18n-attr="content:og_img_alt">
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "inLanguage":"th"
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SiteNavigationElement",
-    "name":["Pretreatment","Plating","Blackening","Passivation","Polishing","Blog"],
-    "url":[
-      "https://www.baumechemical.com/products/pretreatment/",
-      "https://www.baumechemical.com/products/platingcoating/",
-      "https://www.baumechemical.com/products/blackening/",
-      "https://www.baumechemical.com/products/passivation/",
-      "https://www.baumechemical.com/products/polishing/",
-      "https://www.baumechemical.com/blog/"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Blog",
-    "name":"Baume Chemical Blog",
-    "url":"https://www.baumechemical.com/blog/",
-    "inLanguage":"th",
-    "description":"Technical articles and how-to guides for metal finishing and plating quality control.",
-    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
-    "blogPost":[
-      {"@type":"BlogPosting","headline":"กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ","url":"https://www.baumechemical.com/blog/aluminum-electropolishing/"},
-      {"@type":"BlogPosting","headline":"เลือก Anti-tarnish ยังไงให้ตรงสเปก","url":"https://www.baumechemical.com/blog/anti-tarnish-selection/"},
-      {"@type":"BlogPosting","headline":"ชุบลอก/ลอกไม่หมด สาเหตุและวิธีแก้","url":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"โครเมตบนซิงค์ให้ตรงโทน (Passivation)","url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"},
-      {"@type":"BlogPosting","headline":"รมดำให้ด้านสม่ำเสมอและทนการถู","url":"https://www.baumechemical.com/blog/blackening-uniform-matte/"},
-      {"@type":"BlogPosting","headline":"เตรียมชิ้นงาน Salt Spray Test: เตรียมชิ้นและอ่านผล","url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"},
-      {"@type":"BlogPosting","headline":"Bright Dip ทองเหลืองแบบเลเซอร์ B","url":"https://www.baumechemical.com/blog/brass-bright-dip-laser-b/"},
-      {"@type":"BlogPosting","headline":"ปัญหาชุบทองเหลืองบนเหล็กและทองแดง","url":"https://www.baumechemical.com/blog/brass-plating-on-steel-copper/"},
-      {"@type":"BlogPosting","headline":"ปัญหาแลคเกอร์ไฟฟ้า (E-coat) และการแก้","url":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"ชุบนิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?","url":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/"},
-      {"@type":"BlogPosting","headline":"ปัญหาการชุบนิกเกิลและแนวทางแก้","url":"https://www.baumechemical.com/blog/nickel-plating-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"Nickel Troubleshooting (รวมเคส)","url":"https://www.baumechemical.com/blog/nickel-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"พื้นฐานการชุบโลหะ: เคมี/อุปกรณ์/ดูแล","url":"https://www.baumechemical.com/blog/plating-basics/"},
-      {"@type":"BlogPosting","headline":"ชุบซิงค์: โครเมต Cr³⁺ vs Cr⁶⁺","url":"https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/"},
-      {"@type":"BlogPosting","headline":"เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล","url":"https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/"},
-      {"@type":"BlogPosting","headline":"Zinc Plating Troubleshooting (หน้ารวมซีรีส์)","url":"https://www.baumechemical.com/blog/zinc-plating-troubleshooting/"},
-      {"@type":"BlogPosting","headline":"ซีล/ท็อปโค้ทสำหรับโครเมต 3","url":"https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"ItemList","itemListElement":[
-      {"@type":"ListItem","position":1,"url":"https://www.baumechemical.com/blog/aluminum-electropolishing/"},
-      {"@type":"ListItem","position":2,"url":"https://www.baumechemical.com/blog/anti-tarnish-selection/"},
-      {"@type":"ListItem","position":3,"url":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/"},
-      {"@type":"ListItem","position":4,"url":"https://www.baumechemical.com/blog/zinc-passivation-color-control/"},
-      {"@type":"ListItem","position":5,"url":"https://www.baumechemical.com/blog/blackening-uniform-matte/"},
-      {"@type":"ListItem","position":6,"url":"https://www.baumechemical.com/blog/salt-spray-quick-guide/"},
-      {"@type":"ListItem","position":7,"url":"https://www.baumechemical.com/blog/brass-bright-dip-laser-b/"},
-      {"@type":"ListItem","position":8,"url":"https://www.baumechemical.com/blog/brass-plating-on-steel-copper/"},
-      {"@type":"ListItem","position":9,"url":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/"},
-      {"@type":"ListItem","position":10,"url":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/"},
-      {"@type":"ListItem","position":11,"url":"https://www.baumechemical.com/blog/nickel-plating-troubleshooting/"},
-      {"@type":"ListItem","position":12,"url":"https://www.baumechemical.com/blog/nickel-troubleshooting/"},
-      {"@type":"ListItem","position":13,"url":"https://www.baumechemical.com/blog/plating-basics/"},
-      {"@type":"ListItem","position":14,"url":"https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/"},
-      {"@type":"ListItem","position":15,"url":"https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/"},
-      {"@type":"ListItem","position":16,"url":"https://www.baumechemical.com/blog/zinc-plating-troubleshooting/"},
-      {"@type":"ListItem","position":17,"url":"https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"}
-  ]}
-  </script>
-
-  <!-- Fonts & Perf -->
+  <!-- Perf: Preconnect + Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
+
+  <!-- === JSON-LD: Org + Breadcrumb + CollectionPage === -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization","@id":"https://www.baumechemical.com/#org",
+        "name":"Baume Chemical",
+        "legalName":"บริษัท โบเม่ เคมิเคิล จำกัด",
+        "url":"https://www.baumechemical.com/",
+        "logo":{"@type":"ImageObject","url":"https://img2.pic.in.th/pic/Baume.jpg"},
+        "telephone":"+66-92-546-9887",
+        "contactPoint":[{"@type":"ContactPoint","contactType":"customer service","telephone":"+66-92-546-9887","areaServed":"TH","availableLanguage":["th","en"]}],
+        "address":{"@type":"PostalAddress","streetAddress":"31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก, เขต ภาษีเจริญ","addressLocality":"กรุงเทพมหานคร","postalCode":"10160","addressCountry":"TH"},
+        "foundingDate":"1987","sameAs":["https://line.me/ti/p/~baumechemical","https://www.baumechemical.com/"]
+      },
+      {
+        "@type":"BreadcrumbList","@id":"https://www.baumechemical.com/blog/#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://www.baumechemical.com/"},
+          {"@type":"ListItem","position":2,"name":"บทความ & คู่มือ","item":"https://www.baumechemical.com/blog/"}
+        ]
+      },
+      {
+        "@type":"CollectionPage","@id":"https://www.baumechemical.com/blog/#page",
+        "name":"บทความ & คู่มือ | Baume Chemical Blog",
+        "url":"https://www.baumechemical.com/blog/",
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg","width":1200,"height":630},
+        "publisher":{"@id":"https://www.baumechemical.com/#org"},
+        "breadcrumb":{"@id":"https://www.baumechemical.com/blog/#breadcrumb"},
+        "inLanguage":"th"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
-      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
-      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:64px; /* will be updated by JS */
-      --container:1200px;
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#546477; --surface:#ffffff; --bg:#f4f6f5;
+      --logo:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px; --radius:14px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+    body{margin:0; line-height:1.65; color:var(--ink); font-family:'Noto Sans Thai',system-ui,sans-serif; background:var(--bg)}
 
-    /* ===== Header: glass overlay (fixed), white menu text, darken on scroll ===== */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
-    .nav-bar{max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h)}
+    /* === HEADER (glass on scroll) === */
+    .site-header{position:fixed; inset:0 0 auto; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s,border-color .2s,box-shadow .2s,backdrop-filter .2s; -webkit-backdrop-filter:none; backdrop-filter:none}
+    .site-header.scrolled{background:rgba(15,23,42,.70); border-bottom-color:rgba(255,255,255,.12); -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; min-height:var(--header-h); padding:10px 16px; gap:12px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff; letter-spacing:.2px}
+    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
-    .primary-nav{display:flex; align-items:center; gap:12px}
-    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{ display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600 }
-    .menu a:hover{ background:rgba(255,255,255,.12) }
-    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
-
-    .nav-toggle{ appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center }
-    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
-
-    /* Language switch (desktop, next to menu) */
-    .lang-switch{display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{background:var(--brand-2); color:#fff}
-    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
-
+    .primary-nav .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
+    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
     .header-right{display:flex; align-items:center; gap:10px}
+    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+    .nav-toggle .bar{position:relative; width:22px; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
 
-    /* Mobile menu panel + scrim + body lock */
-    @media (max-width:900px){
-      .nav-toggle{display:inline-flex}
-      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease,opacity .2s ease; z-index:1400}
+    @media (max-width:920px){
+      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s; z-index:1400}
       .menu li a{display:block; padding:12px 14px; border-radius:10px}
       .site-header.open .menu{transform:none; opacity:1; pointer-events:auto}
-      .brand-name{display:none}
-      /* Desktop lang-switch hidden on mobile */
-      .lang-switch.desktop{display:none}
-      /* In-menu language switch (shown only on mobile) */
-      .lang-switch.inmenu{display:flex}
+      .nav-toggle{display:inline-flex}
     }
-    /* Default: hide in-menu language on desktop */
-    .lang-switch.inmenu{display:none}
-
     .menu-scrim{position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none}
     .menu-scrim:not([hidden]){display:block}
     body.no-scroll{position:fixed; width:100%}
 
-    /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top: var(--header-h)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+    /* === Lang switcher === */
+    .lang-switch{display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.scrolled .lang-switch{background:#ffffffd9}
+    .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2); color:#fff}
+    .flag{width:20px;height:15px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    @media (max-width:480px){.lang-btn{padding:6px 8px}}
 
-    /* ===== Layout & cards ===== */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    .lead{margin:0 0 16px; color:#5f6d7c}
-    .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
-    @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
-    @media(max-width:640px){ .grid{grid-template-columns:1fr} }
-    .card{background:#fff; border:1px solid #e3ece5; border-radius:14px; overflow:hidden; box-shadow:0 8px 26px rgba(2,8,20,.06); transition:transform .18s ease, box-shadow .18s ease}
-    .card picture,.card img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#eff5f0}
-    .card img{loading:lazy}
-    .card .body{padding:14px}
-    .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
-    .badge{font-size:12px; background:#eff7f1; border:1px solid #d8e7dd; color:#2f6b52; padding:2px 8px; border-radius:999px}
-    .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
-    .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:#ff9800; font-weight:800; text-decoration:none}
-    .card .more:hover{ text-decoration:underline }
-    @media (hover:hover) and (pointer:fine){ .card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-2) } }
+    /* === Hero Parallax === */
+    .parallax{position:relative; min-height: clamp(460px, 58vh, 760px); display:grid; place-items:center; text-align:center; color:#fff; overflow:hidden; padding: calc(var(--header-h) + 24px) 16px 32px; isolation:isolate}
+    .px-layer{position:absolute; inset:-14% 0; background-size:cover; background-position:center; transform:translate3d(0,var(--py,0px),0) scale(1.12); filter:brightness(.85); will-change:transform}
+    .parallax::after{content:""; position:absolute; inset:0; --ov1: rgba(0,0,0,.25); --ov2: rgba(0,0,0,.55); background:linear-gradient(180deg, var(--ov1), var(--ov2))}
+    .parallax-content{position:relative; z-index:2; padding:24px}
+    .hero-title{margin:0; font-weight:800; letter-spacing:.2px; font-size:clamp(28px, 4.2vw, 52px); text-shadow:0 6px 28px rgba(0,0,0,.5)}
+    .hero-sub{margin:.7rem auto 0; max-width:900px; color:#e7f0f6; font-size:clamp(14px,1.6vw,18px)}
 
-    /* ===== Footer ===== */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
-    .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    /* Back chip: TOP-LEFT of hero */
+    .back-chip{
+      position:absolute; z-index:3;
+      top:calc(var(--header-h) + 12px); left:18px;
+      display:inline-flex; align-items:center; gap:10px; padding:8px 14px; border-radius:999px;
+      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.28);
+      color:#fff; text-decoration:none; font-weight:800; box-shadow:0 10px 24px rgba(2,8,20,.18); backdrop-filter: blur(8px);
+    }
+    .back-chip:hover{ background:rgba(255,255,255,.24) }
+    .back-chip i{ font-size:14px }
 
-    /* Utils */
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
-    .reveal.show{opacity:1; transform:none}
+    /* === Layout & Cards === */
+    .wrap{max-width:1200px; margin:auto; padding:48px 20px}
+    h2.section{font-size: clamp(22px,2.6vw,30px); margin:0 0 12px; color:#0f172a; font-weight:800}
+    .lead{color:#546477; margin:0 0 18px}
+    .posts{display:grid; gap:16px; grid-template-columns:1fr}
+    @media(min-width:720px){.posts{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1100px){.posts{grid-template-columns:repeat(3,1fr)}}
+
+    .post{background:var(--surface); border:1px solid #e6ecf2; border-radius:var(--radius); box-shadow:0 10px 34px rgba(2,8,20,.08); overflow:hidden; display:flex; flex-direction:column; transition:transform .2s, box-shadow .2s}
+    .post:hover{transform:translateY(-4px); box-shadow:0 16px 44px rgba(2,8,20,.12)}
+    .post .thumb{aspect-ratio: 16/10; width:100%; object-fit:cover; display:block}
+    .post .pad{padding:16px 16px 18px}
+    .post .cat{display:inline-block; font-size:.78rem; font-weight:800; color:#0f172a; background:#e9f4ef; border:1px solid #cfe7dc; padding:4px 8px; border-radius:999px; margin-bottom:8px}
+    .post h3{margin:6px 0 8px; font-size:1.02rem; color:#2b3744}
+    .post p{margin:0; color:#546477; font-size:.95rem}
+    .post .more{display:inline-block; margin-top:12px; font-weight:800; text-decoration:none; color:var(--brand-2)}
+    .post .more:hover{text-decoration:underline}
+
+    /* === CTA (see full background image + card centered, dark green) === */
+    .parallax.parallax-cta{ background:#0b1f19; } /* fallback color around the image */
+    .parallax.parallax-cta::after{ background:none } /* remove overlay so bg ชัดจริง */
+    .parallax.parallax-cta .px-layer{
+      background-size:contain;              /* โชว์ “เต็มรูป” ไม่ถูกครอป */
+      background-repeat:no-repeat;
+      background-position:center;
+      transform:translate3d(0,var(--py,0px),0) scale(1); /* no extra scale */
+      filter:none;                          /* ไม่ทำให้มืด */
+    }
+    .parallax.parallax-cta .parallax-content{ width:min(1000px,92%); }
+    .cta-card{
+      color:#fff; border-radius:18px; padding:28px 26px; margin-inline:auto; max-width:820px;
+      background:linear-gradient(135deg,#0e3a2a,#1f5c47); /* เขียวเข้ม */
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 22px 60px rgba(2,8,20,.35);
+      text-align:center;
+    }
+    .cta-title{margin:0 0 10px; font-weight:800}
+    .cta-text{margin:0 0 16px; opacity:.98}
+    .cta-actions{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
+    .btn-xl{
+      display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; font-weight:800;
+      text-decoration:none; transition:transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+      box-shadow:0 8px 24px rgba(2,8,20,.16)
+    }
+    .btn-xl:active{transform:translateY(1px)}
+    .btn-line{color:#0b2e23; background:linear-gradient(135deg,#bff0d1,#66d1a7)}
+    .btn-line:hover{box-shadow:0 12px 32px rgba(2,8,20,.26); filter:saturate(1.05)}
+    .btn-mail{color:#0f172a; background:#fff; border:1.5px solid #cfe7dc}
+    .btn-mail:hover{background:#f6fffb; border-color:#b9e2d2; box-shadow:0 12px 32px rgba(2,8,20,.22)}
+    .btn-xl i{font-size:18px}
+
+    @media (prefers-reduced-motion: reduce){.post{transition:none}}
   </style>
 </head>
 <body>
 
-  <!-- ===== Header (glass overlay, white text) ===== -->
-  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
-    <div class="nav-bar">
-      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+  <!-- === HEADER === -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
@@ -247,253 +212,296 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-            <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
-            <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
-            <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a></li>
-            <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
-            <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a></li>
-            <!-- Language switcher inside menu (mobile only) -->
-            <li>
-              <div class="lang-switch inmenu" role="group" aria-label="Language switcher (mobile)">
-                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-                </button>
-                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-                </button>
-              </div>
-            </li>
+            <li><a href="https://www.baumechemical.com/index.html">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html">About Us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a></li>
           </ul>
         </nav>
 
-        <!-- Language switcher next to menu (desktop only) -->
-        <div class="lang-switch desktop" role="group" aria-label="Language switcher">
-          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+        <!-- Language switcher -->
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" type="button" data-lang="th" aria-pressed="true" title="ภาษาไทย">
             <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
           </button>
-          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" title="English">
             <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
           </button>
         </div>
 
-        <!-- Burger (mobile) -->
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span class="bar" aria-hidden="true"></span>
         </button>
       </div>
     </div>
   </header>
-  <!-- scrim for mobile menu -->
   <div class="menu-scrim" hidden></div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="wrap">
-      <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
-      <h1 data-i18n-key="hero_title">บทความ &amp; คู่มือ</h1>
-      <p data-i18n-key="hero_tagline">ความรู้เชิงปฏิบัติสำหรับงานชุบโลหะ พร้อมลิงก์ไปยังผลิตภัณฑ์ที่เกี่ยวข้อง</p>
+  <!-- === HERO === -->
+  <section class="parallax" aria-label="บทความ & คู่มือ">
+    <div class="px-layer" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg')"></div>
+
+    <!-- ปุ่มกลับ: มุมซ้ายบนของ hero -->
+    <a id="back-chip" class="back-chip" href="/blog/" role="button" aria-label="Back to Blog">
+      <i class="fa-solid fa-arrow-left"></i><span data-i18n-key="back_text">กลับเมนูบทความ</span>
+    </a>
+
+    <div class="parallax-content">
+      <h1 class="hero-title" data-i18n-key="hero_title">บทความและคู่มือ</h1>
+      <p class="hero-sub" data-i18n-key="hero_sub">ความรู้เชิงปฏิบัติสำหรับงานชุบโลหะ พร้อมลิงก์ไปยังผลิตภัณฑ์ที่เกี่ยวข้อง</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Index (UNCHANGED content) -->
-  <main class="wrap">
-    <h2 class="section" data-i18n-key="sec_latest">บทความล่าสุด</h2>
-    <p class="lead" data-i18n-key="sec_lead">วิธีการดูแลรักษาและแนวทางคุมคุณภาพ</p>
+  <!-- === POSTS === -->
+  <main class="wrap" aria-label="โพสต์ล่าสุด">
+    <h2 class="section" data-i18n-key="posts_title">บทความล่าสุด</h2>
+    <div class="posts">
 
-    <div class="grid">
-      <!-- Cards remain exactly as provided -->
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image0-5.jpeg" alt="Aluminum Electropolishing"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Polishing</span><span class="badge">How-to</span></div>
-          <h3 data-i18n-key="post1_t">กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ</h3>
-          <p data-i18n-key="post1_d">ตั้งค่าอ่าง กระแส/เวลา การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอ</p>
-          <a class="more" href="aluminum-electropolishing/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Electropolishing Al -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/aluminum-electropolishing/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image0-5.jpeg" alt="Electropolishing อลูมิเนียม" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_electro">คู่มือกัดเงา</span>
+          <h3 data-i18n-key="post_electro">กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/aluminum-electropolishing/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg" alt="Select Anti-tarnish"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Protective</span><span class="badge">Guide</span></div>
-          <h3 data-i18n-key="post2_t">เลือก Anti-tarnish ยังไงให้ตรงสเปก</h3>
-          <p data-i18n-key="post2_d">เปรียบเทียบ Cold/Hot/Electro/Tin และวิธีทดสอบความทน</p>
-          <a class="more" href="anti-tarnish-selection/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Anti-tarnish Selection -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/anti-tarnish-selection/index.html">
+          <img class="thumb" src="https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg" alt="เลือก Anti-tarnish ให้ตรงงาน" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_protect">การปกป้องผิว</span>
+          <h3 data-i18n-key="post_antitarnish">เลือก Anti-tarnish ยังไงให้ตรงสเปก</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/anti-tarnish-selection/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="Plating peel troubleshooting"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Troubleshoot</span><span class="badge">Pretreatment</span></div>
-          <h3 data-i18n-key="post3_t">ชุบแล้วลอก/ติดไม่ทั่ว: สาเหตุ & วิธีแก้</h3>
-          <p data-i18n-key="post3_d">จากความสะอาด Activation Over-bright สภาพอ่าง และโปรไฟล์ไฟ</p>
-          <a class="more" href="plating-peeling-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Plating peel troubleshooting -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="ชุบแล้วลอก/ติดไม่ทั่ว" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_trouble_pretreat">แก้ปัญหาพรีทรีต</span>
+          <h3 data-i18n-key="post_peel">ชุบแล้วลอก/ติดไม่ทั่ว: สาเหตุและวิธีแก้</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Zinc passivation color control"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Passivation</span><span class="badge">QA</span></div>
-          <h3 data-i18n-key="post4_t">โครเมตบนซิงค์ให้ตรงโทน</h3>
-        <p data-i18n-key="post4_d">คุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่างให้คงสี</p>
-          <a class="more" href="zinc-passivation-color-control/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Zinc passivation color control -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/zinc-passivation-color-control/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="คุมโทนสีโครเมต/พาสซิเวชันบนซิงค์" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_passivation">ควบคุมคุณภาพพาสซิเวชัน</span>
+          <h3 data-i18n-key="post_color">โครเมตบนซิงค์ให้ตรงโทน</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/zinc-passivation-color-control/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" alt="Uniform blackening finish"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Blackening</span><span class="badge">Process</span></div>
-          <h3 data-i18n-key="post5_t">รมดำให้ด้านสม่ำเสมอและทนการถู</h3>
-          <p data-i18n-key="post5_d">เตรียมผิว อุณหภูมิ/เวลา ซีล และทดสอบการเสียดสี</p>
-          <a class="more" href="blackening-uniform-matte/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Blackening uniform matte -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/blackening-uniform-matte/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/thumbnail85e2847383c30223.jpg" alt="รมดำให้ผิวด้านสม่ำเสมอ" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_blackening">กระบวนการรมดำ</span>
+          <h3 data-i18n-key="post_black">รมดำให้ด้านสม่ำเสมอและทนการถู</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/blackening-uniform-matte/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="Salt spray quick guide"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Test</span><span class="badge">Corrosion</span></div>
-          <h3 data-i18n-key="post6_t">เตรียมชิ้นงาน Salt Spray Test</h3>
-          <p data-i18n-key="post6_d">เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์</p>
-          <a class="more" href="salt-spray-quick-guide/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Salt Spray quick guide -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image114fbf2a2922c2b5a1.png" alt="เตรียมชิ้นงาน Salt Spray Test" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_corrosion">การทดสอบการกัดกร่อน</span>
+          <h3 data-i18n-key="post_salt">เตรียมชิ้นงาน Salt Spray Test</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+        </div>
+      </article>
+      <!-- Brass Bright Dip Laser B -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/brass-bright-dip-laser-b/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image6-1.jpeg" alt="กัดเงาทองเหลือง Laser B" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_brass">กัดเงาทองเหลือง</span>
+          <h3 data-i18n-key="post_laserb">ทำไมต้องใช้กัดเงาทองเหลือง Laser B</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/brass-bright-dip-laser-b/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image6-1.jpeg" alt="Brass bright dip Laser B"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Brass</span><span class="badge">Bright Dip</span></div>
-          <h3 data-i18n-key="post7_t">ทำไมต้องใช้กัดเงาทองเหลือง Laser B</h3>
-          <p data-i18n-key="post7_d">ดึงผิวให้เหลืองสดใส ไร้คราบแดงจากกำมะถัน</p>
-          <a class="more" href="brass-bright-dip-laser-b/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Brass plating on steel/copper -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html">
+          <img class="thumb" src="https://i.imgur.com/DzCh11Q.jpeg" alt="ชุบทองเหลืองบนเหล็กและทองแดง" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_brass_trouble">แก้ปัญหาทองเหลือง</span>
+          <h3 data-i18n-key="post_brass_on_steel">ชุบทองเหลืองบนเหล็กและทองแดง</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/DzCh11Q.jpeg" alt="Brass on steel/copper"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Brass</span><span class="badge">Troubleshoot</span></div>
-          <h3 data-i18n-key="post8_t">ชุบทองเหลืองบนเหล็กและทองแดง</h3>
-          <p data-i18n-key="post8_d">อาการที่พบบ่อย วิธีดูแล และแนวทางแก้</p>
-          <a class="more" href="brass-plating-on-steel-copper/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Electrophoretic lacquer troubleshooting -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/index.html">
+          <img class="thumb" src="https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg" alt="ปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_coating">โค้ตติ้ง E-coat</span>
+          <h3 data-i18n-key="post_e_coat">ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg" alt="Electrophoretic lacquer issues"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Coating</span><span class="badge">E-coat</span></div>
-          <h3 data-i18n-key="post9_t">ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า</h3>
-          <p data-i18n-key="post9_d">สาเหตุหลัก การตั้งค่าอ่าง และวิธีแก้เบื้องต้น</p>
-          <a class="more" href="electrophoretic-lacquer-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Nickel on steel: copper undercoat? -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image2-1.jpeg" alt="นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_nickel_proc">กระบวนนิกเกิล</span>
+          <h3 data-i18n-key="post_cu_undercoat">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image2-1.jpeg" alt="Nickel on steel with copper undercoat"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Process</span></div>
-          <h3 data-i18n-key="post10_t">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?</h3>
-          <p data-i18n-key="post10_d">เทียบผลผ่าน/ไม่ผ่านทองแดงรองพื้นต่อการยึดเกาะ</p>
-          <a class="more" href="nickel-on-steel-copper-undercoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Nickel plating troubleshooting -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/nickel-plating-troubleshooting/index.html">
+          <img class="thumb" src="https://img5.pic.in.th/file/secure-sv1/image4-1.jpeg" alt="ปัญหาการชุบนิกเกิล & วิธีแก้" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_nickel_trouble">แก้ปัญหานิกเกิล</span>
+          <h3 data-i18n-key="post_nickel_trouble">ปัญหาการชุบนิกเกิล &amp; วิธีแก้</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/nickel-plating-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image4-1.jpeg" alt="Nickel plating troubleshooting"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Troubleshoot</span></div>
-          <h3 data-i18n-key="post11_t">ปัญหาการชุบนิกเกิล & วิธีแก้</h3>
-          <p data-i18n-key="post11_d">เงาไม่มา คราบ/ฝ้า ยึดติดไม่ดี พิตติ้ง ฯลฯ</p>
-          <a class="more" href="nickel-plating-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Nickel basics/hub -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/nickel-troubleshooting/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="ชุบนิกเกิ้ลคืออะไร อุปกรณ์และการเตรียมผิว" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_nickel_cases">กรณีศึกษา Nickel</span>
+          <h3 data-i18n-key="post_nickel_hub">ชุบนิกเกิ้ลคืออะไร ใช้อุปกรณ์อะไรบ้าง การเตรียมผิวก่อนชุบ</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/nickel-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image8-1.jpeg" alt="Nickel troubleshooting hub"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Nickel</span><span class="badge">Cases</span></div>
-          <h3 data-i18n-key="post12_t">ชุบนิกเกิ้ลคืออะไร ใช้อุปกรณ์อะไรบ้าง การเตรียมผิวก่อนชุบ</h3>
-          <p data-i18n-key="post12_d">ทำความเข้าใจการชุบนิกเกิ้ลตั้งแต่ศูนย์: ประเภทบ่อ อุปกรณ์ที่จำเป็น และขั้นตอนเตรียมผิวให้ยึดเกาะดี</p>
-          <a class="more" href="nickel-troubleshooting/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Plating basics -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/plating-basics/index.html">
+          <img class="thumb" src="https://i.imgur.com/3mWQsKe.jpeg" alt="ความรู้การชุบโลหะเบื้องต้น" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_basics">พื้นฐานการชุบ</span>
+          <h3 data-i18n-key="post_basics">ความรู้การชุบโลหะเบื้องต้น</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/plating-basics/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/3mWQsKe.jpeg" alt="Plating basics"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Basics</span><span class="badge">Guide</span></div>
-          <h3 data-i18n-key="post13_t">ความรู้การชุบโลหะเบื้องต้น</h3>
-          <p data-i18n-key="post13_d">เคมีหลัก อุปกรณ์สำคัญ การดูแลบ่อ และความปลอดภัย</p>
-          <a class="more" href="plating-basics/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Zinc: Cr3 vs Cr6 -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="ชุบซิงค์: โครเมต 3 vs 6" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_chromate">Chromate บนสังกะสี</span>
+          <h3 data-i18n-key="post_cr3cr6">ชุบซิงค์: โครเมต 3 vs โครเมต 6</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/zinc-chromate-cr3-vs-cr6/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image0bf24b1b63a4ca5fb.jpeg" alt="Chromate Cr3 vs Cr6"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Chromate</span><span class="badge">Zinc</span></div>
-          <h3 data-i18n-key="post14_t">ชุบซิงค์: โครเมต 3 vs โครเมต 6</h3>
-          <p data-i18n-key="post14_d">ต่างกันยังไง เรื่องกฎหมาย ปัญหา และความทนทาน</p>
-          <a class="more" href="zinc-chromate-cr3-vs-cr6/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Zinc die-cast to nickel -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/index.html">
+          <img class="thumb" src="https://img5.pic.in.th/file/secure-sv1/image3-1.jpeg" alt="เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_zinc_setup">ตั้งไลน์ซิงค์</span>
+          <h3 data-i18n-key="post_diecast">เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/zinc-diecast-plating-start-to-nickel/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image3-1.jpeg" alt="Zinc die-cast to nickel"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Setup</span></div>
-          <h3 data-i18n-key="post15_t">เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล</h3>
-          <p data-i18n-key="post15_d">ตั้งแต่ Pretreatment → Zinc → Passivation → เตรียมชุบนิกเกิล</p>
-          <a class="more" href="zinc-diecast-plating-start-to-nickel/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
+      <!-- Zinc troubleshooting series -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/index.html">
+          <img class="thumb" src="https://img5.pic.in.th/file/secure-sv1/image1-2.jpeg" alt="Zinc Plating Troubleshooting" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_zinc_series">ซีรีส์ Zinc</span>
+          <h3 data-i18n-key="post_zinc_series">Zinc Plating Troubleshooting (หน้ารวมซีรีส์)</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/zinc-plating-troubleshooting/index.html" data-i18n-key="read_more">เข้าไปดูซีรีส์ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image1-2.jpeg" alt="Zinc troubleshooting hub"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Series</span></div>
-          <h3 data-i18n-key="post16_t">Zinc Plating Troubleshooting (หน้ารวมซีรีส์)</h3>
-          <p data-i18n-key="post16_d">ดัชนีรวมลิงก์: ตั้งไลน์ → แก้ปัญหา → QA/Salt Spray</p>
-          <a class="more" href="zinc-plating-troubleshooting/index.html" data-i18n-key="read_more">เข้าไปดูซีรีส์ →</a>
+      <!-- Trivalent sealer/topcoat -->
+      <article class="post">
+        <a href="https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/index.html">
+          <img class="thumb" src="https://img2.pic.in.th/pic/image0-6.jpeg" alt="ซีล/ท็อปโค้ทสำหรับโครเมต 3 บนซิงค์" loading="lazy" decoding="async">
+        </a>
+        <div class="pad">
+          <span class="cat" data-i18n-key="cat_sealer">ซีล/ท็อปโค้ท</span>
+          <h3 data-i18n-key="post_sealer">ซีล/ท็อปโค้ทสำหรับโครเมต 3</h3>
+          <a class="more" href="https://www.baumechemical.com/blog/zinc-trivalent-seal-topcoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
         </div>
       </article>
 
-      <article class="card lift reveal">
-        <picture><img src="https://img2.pic.in.th/pic/image0-6.jpeg" alt="Trivalent seal & topcoat"></picture>
-        <div class="body">
-          <div class="badge-row"><span class="badge">Protective</span><span class="badge">Sealer</span></div>
-          <h3 data-i18n-key="post17_t">ซีล/ท็อปโค้ทสำหรับโครเมต 3</h3>
-          <p data-i18n-key="post17_d">เลือกชนิด ตั้งค่าอ่าง และทดสอบความทน</p>
-          <a class="more" href="zinc-trivalent-seal-topcoat/index.html" data-i18n-key="read_more">อ่านต่อ →</a>
-        </div>
-      </article>
     </div>
   </main>
 
-  <!-- Footer (UNCHANGED) -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
+  <!-- === CTA Parallax: FULL image visible + centered dark-green card === -->
+  <section class="parallax parallax-cta" aria-label="ติดต่อทีมงาน">
+    <div class="px-layer" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg')"></div>
+    <div class="parallax-content">
+      <div class="cta-card">
+        <h3 class="cta-title" data-i18n-key="cta_title">ต้องการทีมช่วยออกแบบ/แก้ปัญหากระบวนการ?</h3>
+        <p class="cta-text" data-i18n-key="cta_text">คุยกับทีมเทคนิคเพื่อประเมินหน้างานและเลือกโซลูชันให้เหมาะกับไลน์ชุบของคุณ</p>
+        <div class="cta-actions">
+          <a class="btn-xl btn-line" href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" data-i18n-key="cta_btn_line">
+            <i class="fa-brands fa-line" aria-hidden="true"></i><span>แอด LINE</span>
+          </a>
+          <a class="btn-xl btn-mail" href="mailto:contact@baumechemical.com" data-i18n-key="cta_btn_mail">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>ส่งอีเมล</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer class="site-footer" style="background:#0f172a; color:#cbd5e1; margin-top:24px">
+    <div class="footer-inner" style="max-width:1200px; margin:0 auto; padding:38px 20px">
+      <div class="footer-grid" style="display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr">
+        <section>
+          <div class="ft-head" style="display:flex; align-items:center; gap:12px; margin:0 0 10px">
+            <div class="ft-logo" style="width:44px; height:44px; border-radius:10px; background:#2c5e4e var(--logo) center/cover no-repeat; box-shadow:0 3px 10px rgba(0,0,0,.3)"></div>
+            <div class="ft-name" style="font-weight:800; color:#fff">Baume Chemical</div>
           </div>
-          <ul class="footer-list">
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
             <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
-            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+            <li>📱 <a href="tel:+66925469887" style="color:#e2e8f0">092 546 9887</a></li>
           </ul>
         </section>
-
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
-          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
-          <ul class="footer-list">
+          <h3 class="footer-title" style="margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
             <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
             <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
             <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
@@ -505,208 +513,266 @@
             <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
           </ul>
         </nav>
-
         <section aria-label="ติดต่อเรา">
-          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
-          <ul class="footer-list">
+          <h3 class="footer-title" style="margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem">ติดต่อเรา</h3>
+          <ul class="footer-list" style="list-style:none; margin:8px 0 0; padding:0">
             <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
             <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
             <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
           </ul>
         </section>
       </div>
-
-      <div class="footer-bottom">
-        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+      <div class="footer-bottom" style="border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6">
+        <div>© 2025 Baume Chemical. All rights reserved.</div>
       </div>
     </div>
   </footer>
 
-  <!-- JS: reveal on scroll -->
+  <!-- Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+
+  <!-- === JS (header/nav/parallax/i18n/back-btn) === -->
   <script>
-    (function(){
-      const els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('show')); return; }
-      const io = new IntersectionObserver((entries,obs)=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-      }, {threshold:.18});
-      els.forEach(el=>io.observe(el));
-    })();
-  </script>
-
-  <!-- JS: header glass + mobile menu (scrim+lock) + i18n -->
-  <script>
-    // Header glass + dynamic height + scroll state
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
-      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
-      window.addEventListener('load', setH, {once:true});
-      window.addEventListener('resize', setH);
-      window.addEventListener('scroll', onScroll, {passive:true});
-      setH(); onScroll();
-    })();
-
-    // Mobile nav: scrim + body lock + highlight current + Escape/resize handling
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const toggle = header?.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-nav');
-      const scrim = document.querySelector('.menu-scrim');
-      if(toggle && nav && scrim){
-        let lockY = 0;
-        function openMenu(v){
-          header.classList.toggle('open', v);
-          toggle.setAttribute('aria-expanded', String(v));
-          nav.setAttribute('aria-hidden', String(!v));
-          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
-          if(v){
-            lockY = window.scrollY;
-            document.body.classList.add('no-scroll');
-            document.body.style.top = `-${lockY}px`;
-            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
-            first && first.focus({preventScroll:true});
-          }else{
-            document.body.classList.remove('no-scroll');
-            document.body.style.top = '';
-            window.scrollTo(0, lockY);
-            toggle.focus({preventScroll:true});
-          }
-        }
-        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
-        scrim.addEventListener('click', ()=> openMenu(false));
-        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
-        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
-        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
-      }
-      // highlight current item (including /products/* prefix)
-      try{
-        const here = location.pathname.replace(/\/+$/,'');
-        document.querySelectorAll('.menu a').forEach(a=>{
-          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          const isProducts = here.startsWith('/products');
-          if(isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
-          else if (here === path) a.setAttribute('aria-current','page');
-          else a.removeAttribute('aria-current');
-        });
-      }catch(e){}
-    })();
-
-    // i18n minimal for visible strings (sync both language switchers)
-    const I18N = {
-      th: {
-        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับเมนูหลัก",
-        hero_title: "บทความ & คู่มือ",
-        hero_tagline: "ความรู้เชิงปฏิบัติสำหรับงานชุบโลหะ พร้อมลิงก์ไปยังผลิตภัณฑ์ที่เกี่ยวข้อง",
-        sec_latest: "บทความล่าสุด",
-        sec_lead: "วิธีการดูแลรักษาและแนวทางคุมคุณภาพ",
-        read_more: "อ่านต่อ →",
-        post1_t:"กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ",
-        post1_d:"ตั้งค่าอ่าง กระแส/เวลา การเตรียมผิว และการล้างหลังกัด เพื่อให้เงาเรียบสม่ำเสมอ",
-        post2_t:"เลือก Anti-tarnish ยังไงให้ตรงสเปก",
-        post2_d:"เปรียบเทียบ Cold/Hot/Electro/Tin และวิธีทดสอบความทน",
-        post3_t:"ชุบลอก/ลอกไม่หมด: สาเหตุ & วิธีแก้",
-        post3_d:"จากความสะอาด Activation Over-bright สภาพอ่าง และโปรไฟล์ไฟ",
-        post4_t:"โครเมตบนซิงค์ให้ตรงโทน",
-        post4_d:"คุมอุณหภูมิ/เวลา/ค่า pH และการรีเฟรชอ่างให้คงสี",
-        post5_t:"รมดำให้ด้านสม่ำเสมอและทนการถู",
-        post5_d:"เตรียมผิว อุณหภูมิ/เวลา ซีล และทดสอบการเสียดสี",
-        post6_t:"เตรียมชิ้นงาน Salt Spray Test",
-        post6_d:"เตรียมชิ้นทดสอบ NSS/ASS/CASS เกณฑ์อ่านผล และเช็กลิสต์",
-        post7_t:"ทำไมต้องใช้กัดเงาทองเหลือง Laser B",
-        post7_d:"ดึงผิวให้เหลืองสดใส ไร้คราบแดงจากกำมะถัน",
-        post8_t:"ชุบทองเหลืองบนเหล็กและทองแดง",
-        post8_d:"อาการที่พบบ่อย วิธีดูแล และแนวทางแก้",
-        post9_t:"ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า",
-        post9_d:"สาเหตุหลัก การตั้งค่าอ่าง และวิธีแก้เบื้องต้น",
-        post10_t:"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?",
-        post10_d:"เทียบผลผ่าน/ไม่ผ่านทองแดงรองพื้นต่อการยึดเกาะ",
-        post11_t:"ปัญหาการชุบนิกเกิล & วิธีแก้",
-        post11_d:"เงาไม่มา คราบ/ฝ้า ยึดติดไม่ดี พิตติ้ง ฯลฯ",
-        post12_t:"Nickel Troubleshooting (รวมเคส)",
-        post12_d:"อาการ–สาเหตุ–แนวทางแก้ แบบย่อยสั้นอ่านไว",
-        post13_t:"ความรู้การชุบโลหะเบื้องต้น",
-        post13_d:"เคมีหลัก อุปกรณ์สำคัญ การดูแลบ่อ และความปลอดภัย",
-        post14_t:"ชุบซิงค์: โครเมต 3 vs โครเมต 6",
-        post14_d:"ต่างกันยังไง เรื่องกฎหมาย ปัญหา และความทนทาน",
-        post15_t:"เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล",
-        post15_d:"ตั้งแต่ Pretreatment → Zinc → Passivation → เตรียมชุบนิกเกิล",
-        post16_t:"Zinc Plating Troubleshooting (หน้ารวมซีรีส์)",
-        post16_d:"ดัชนีรวมลิงก์: ตั้งไลน์ → แก้ปัญหา → QA/Salt Spray",
-        post17_t:"ซีล/ท็อปโค้ทสำหรับโครเมต 3",
-        post17_d:"เลือกชนิด ตั้งค่าอ่าง และทดสอบความทน",
-        footer_products: "หมวดผลิตภัณฑ์", footer_contact: "ติดต่อเรา", footer_copy: "© 2025 Baume Chemical. All rights reserved."
-      },
-      en: {
-        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Home",
-        hero_title: "Articles & Guides",
-        hero_tagline: "Practical know-how for metal finishing with links to relevant products.",
-        sec_latest: "Latest Articles",
-        sec_lead: "How-to, troubleshooting, and quality control.",
-        read_more: "Read more →",
-        post1_t:"Aluminum Electropolishing for Uniform Gloss",
-        post1_d:"Bath setup, current/time, surface prep, and post-rinse to achieve even brightness.",
-        post2_t:"How to Choose the Right Anti-tarnish",
-        post2_d:"Compare Cold/Hot/Electro/Tin types and durability testing methods.",
-        post3_t:"Plating Peeling / Incomplete Strip: Causes & Fixes",
-        post3_d:"From cleanliness & activation to over-bright, bath condition, and current profile.",
-        post4_t:"Zinc Passivation: Getting the Color Right",
-        post4_d:"Control temperature/time/pH and refresh to keep tone consistent.",
-        post5_t:"Uniform Matte Blackening & Abrasion Resistance",
-        post5_d:"Surface prep, time/temperature, sealing, and abrasion checks.",
-        post6_t:"Salt Spray: Quick Guide",
-        post6_d:"Specimen prep, NSS/ASS/CASS conditions, rating criteria, and checklist.",
-        post7_t:"Why Use Brass Bright Dip Laser B",
-        post7_d:"Restore a clean yellow without red sulfur stain.",
-        post8_t:"Brass Plating on Steel & Copper",
-        post8_d:"Common issues, maintenance, and quick fixes.",
-        post9_t:"Electrophoretic Lacquer: Common Problems",
-        post9_d:"Root causes, bath settings, and first-aid fixes.",
-        post10_t:"Nickel on Steel: Need a Copper Undercoat?",
-        post10_d:"Effect of with/without copper strike on adhesion.",
-        post11_t:"Nickel Plating Troubleshooting",
-        post11_d:"Dull/rough, haze, poor adhesion, pitting, etc.",
-        post12_t:"Nickel Troubleshooting (Case Digest)",
-        post12_d:"Short symptom–cause–fix snippets for quick reference.",
-        post13_t:"Plating Basics",
-        post13_d:"Core chemistries, key equipment, bath care, and safety.",
-        post14_t:"Zinc Chromate: Cr³⁺ vs Cr⁶⁺",
-        post14_d:"Differences, regulations, typical issues, and durability.",
-        post15_t:"Zinc Die-cast: From Start to Nickel",
-        post15_d:"Pretreatment → Zinc → Passivation → Prep for Nickel.",
-        post16_t:"Zinc Plating Troubleshooting (Series Hub)",
-        post16_d:"Index of links: setup → fixes → QA/Salt spray.",
-        post17_t:"Trivalent Chromate Seal / Topcoat",
-        post17_d:"Choosing type, bath setup, and durability checks.",
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
-      }
+  /* Header: set height + scrolled + current link */
+  (function(){
+    const header = document.querySelector('.site-header');
+    const setH = () => {
+      const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
     };
-
-    const $$ = {
-      langBtns: ()=> document.querySelectorAll('.lang-btn'),
-      trans: ()=> document.querySelectorAll('[data-i18n-key]')
+    const onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      header && header.classList.toggle('scrolled', y > 10);
     };
+    window.addEventListener('load', setH, {once:true});
+    window.addEventListener('resize', setH);
+    window.addEventListener('scroll', onScroll, {passive:true});
+    setH(); onScroll();
 
-    function applyLang(lang){
-      const L = (lang==='en') ? 'en' : 'th';
-      document.documentElement.lang = L;
-      $$.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-      $$.trans().forEach(node=>{
-        const key = node.getAttribute('data-i18n-key');
-        const dict = I18N[L];
-        if (key && dict && dict[key] !== undefined) node.textContent = dict[key];
+    // highlight current page
+    try{
+      const here = location.pathname.replace(/\/+$/,'') || '/';
+      document.querySelectorAll('.menu a').forEach(a=>{
+        const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'') || '/';
+        if(here === path) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
       });
-      try{ localStorage.setItem('lang', L); }catch(e){}
-    }
+    }catch(e){}
+  })();
 
-    (function initLang(){
-      let saved = 'th';
-      try{ const v = localStorage.getItem('lang'); if (v==='en'||v==='th') saved = v; }catch(e){}
-      applyLang(saved);
-      $$.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
-    })();
+  /* Mobile nav: open/close + scrim + body-lock */
+  (function(){
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.site-header .nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    const scrim = document.querySelector('.menu-scrim');
+    if(!header || !toggle || !nav || !scrim) return;
+    let scrollTopLock = 0;
+    function setMenuOpen(isOpen){
+      header.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      nav.setAttribute('aria-hidden', String(!isOpen));
+      isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+      if(isOpen){
+        scrollTopLock = window.scrollY;
+        document.body.classList.add('no-scroll');
+        document.body.style.top = `-${scrollTopLock}px`;
+        const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+        first && first.focus({preventScroll:true});
+      }else{
+        document.body.classList.remove('no-scroll');
+        document.body.style.top = '';
+        window.scrollTo(0, scrollTopLock);
+        toggle.focus({preventScroll:true});
+      }
+    }
+    toggle.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
+    scrim.addEventListener('click', ()=> setMenuOpen(false));
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && header.classList.contains('open')) setMenuOpen(false); });
+    window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
+    header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
+  })();
+
+  /* Parallax driver */
+  const pxSections = document.querySelectorAll('.parallax');
+  const tick = () => {
+    const y = window.scrollY || window.pageYOffset;
+    pxSections.forEach(sec=>{
+      const r = sec.getBoundingClientRect();
+      const base = (r.top + window.scrollY) * 0.18;
+      const layer = sec.querySelector('.px-layer');
+      if(layer) layer.style.setProperty('--py', (y - base) * -0.35 + 'px');
+    });
+  };
+  tick();
+  window.addEventListener('scroll', ()=> requestAnimationFrame(tick), {passive:true});
+
+  /* Back button (history first; fallback to /blog/) */
+  (function(){
+    const b = document.getElementById('back-chip');
+    if(!b) return;
+    b.addEventListener('click', function(e){
+      try{
+        const ref = document.referrer ? new URL(document.referrer) : null;
+        if(ref && ref.origin === location.origin){
+          e.preventDefault(); history.back(); return;
+        }
+      }catch(err){}
+      // fallback uses href
+    });
+  })();
+
+  /* i18n (TH/EN) — includes card texts */
+  const I18N = {
+    th:{
+      meta_title:"บทความ & คู่มือ | Baume Chemical Blog",
+      meta_desc:"รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray",
+      og_title:"บทความ & คู่มือ | Baume Chemical Blog",
+      og_desc:"รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray",
+      og_img_alt:"แล็บและงานบริการ Baume Chemical",
+      tw_title:"บทความ & คู่มือ | Baume Chemical Blog",
+      tw_desc:"รวมบทความและคู่มือสำหรับงานชุบ/เคลือบผิวโลหะ ตั้งแต่ตั้งไลน์ แก้ปัญหา QC จนถึงการทดสอบ Salt Spray",
+
+      back_text:"กลับเมนูบทความ",
+      hero_title:"บทความ & คู่มือ",
+      hero_sub:"ความรู้เชิงปฏิบัติสำหรับงานชุบโลหะ พร้อมลิงก์ไปยังผลิตภัณฑ์ที่เกี่ยวข้อง",
+      posts_title:"บทความล่าสุด",
+      read_more:"อ่านต่อ →",
+
+      /* categories */
+      cat_electro:"คู่มือกัดเงา",
+      cat_protect:"การปกป้องผิว",
+      cat_trouble_pretreat:"แก้ปัญหาพรีทรีต",
+      cat_passivation:"ควบคุมคุณภาพพาสซิเวชัน",
+      cat_blackening:"กระบวนการรมดำ",
+      cat_corrosion:"การทดสอบการกัดกร่อน",
+      cat_brass:"กัดเงาทองเหลือง",
+      cat_brass_trouble:"แก้ปัญหาทองเหลือง",
+      cat_coating:"โค้ตติ้ง E-coat",
+      cat_nickel_proc:"กระบวนนิกเกิล",
+      cat_nickel_trouble:"แก้ปัญหานิกเกิล",
+      cat_nickel_cases:"กรณีศึกษา Nickel",
+      cat_basics:"พื้นฐานการชุบ",
+      cat_chromate:"Chromate บนสังกะสี",
+      cat_zinc_setup:"ตั้งไลน์ซิงค์",
+      cat_zinc_series:"ซีรีส์ Zinc",
+      cat_sealer:"ซีล/ท็อปโค้ท",
+
+      /* titles */
+      post_electro:"กัดเงาอลูมิเนียมด้วยไฟฟ้าให้เงาเรียบเสมอ",
+      post_antitarnish:"เลือก Anti-tarnish ยังไงให้ตรงสเปก",
+      post_peel:"ชุบแล้วลอก/ติดไม่ทั่ว: สาเหตุ & วิธีแก้",
+      post_color:"โครเมตบนซิงค์ให้ตรงโทน",
+      post_black:"รมดำให้ด้านสม่ำเสมอและทนการถู",
+      post_salt:"เตรียมชิ้นงาน Salt Spray Test",
+      post_laserb:"ทำไมต้องใช้กัดเงาทองเหลือง Laser B",
+      post_brass_on_steel:"ชุบทองเหลืองบนเหล็กและทองแดง",
+      post_e_coat:"ปัญหาที่มักเกิดขึ้นกับแลคเกอร์ไฟฟ้า",
+      post_cu_undercoat:"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม?",
+      post_nickel_trouble:"ปัญหาการชุบนิกเกิล & วิธีแก้",
+      post_nickel_hub:"ชุบนิกเกิ้ลคืออะไร ใช้อุปกรณ์อะไรบ้าง การเตรียมผิวก่อนชุบ",
+      post_basics:"ความรู้การชุบโลหะเบื้องต้น",
+      post_cr3cr6:"ชุบซิงค์: โครเมต 3 vs โครเมต 6",
+      post_diecast:"เริ่มชุบซิงค์ไดคาสท์จนถึงนิกเกิล",
+      post_zinc_series:"Zinc Plating Troubleshooting (หน้ารวมซีรีส์)",
+      post_sealer:"ซีล/ท็อปโค้ทสำหรับโครเมต 3",
+
+      cta_title:"ต้องการทีมช่วยออกแบบ/แก้ปัญหากระบวนการ?",
+      cta_text:"คุยกับทีมเทคนิคเพื่อประเมินหน้างานและเลือกโซลูชันให้เหมาะกับไลน์ชุบของคุณ",
+      cta_btn_line:"แอด LINE",
+      cta_btn_mail:"ส่งอีเมล"
+    },
+    en:{
+      meta_title:"Articles & Guides | Baume Chemical Blog",
+      meta_desc:"Practical electroplating & finishing how-tos, troubleshooting, QC, and salt spray testing.",
+      og_title:"Articles & Guides | Baume Chemical Blog",
+      og_desc:"Practical how-tos and troubleshooting for metal finishing.",
+      og_img_alt:"Baume Chemical lab and service operations",
+      tw_title:"Articles & Guides | Baume Chemical Blog",
+      tw_desc:"How-tos, troubleshooting, and QC guides.",
+
+      back_text:"Back to Blog",
+      hero_title:"Articles & Guides",
+      hero_sub:"Hands-on knowledge for plating & finishing, with links to related products.",
+      posts_title:"Latest Posts",
+      read_more:"Read more →",
+
+      /* categories */
+      cat_electro:"Polishing How-to",
+      cat_protect:"Protective",
+      cat_trouble_pretreat:"Pretreat Troubleshooting",
+      cat_passivation:"Passivation QA",
+      cat_blackening:"Blackening Process",
+      cat_corrosion:"Corrosion Testing",
+      cat_brass:"Brass Bright Dip",
+      cat_brass_trouble:"Brass Troubleshooting",
+      cat_coating:"Coating E-coat",
+      cat_nickel_proc:"Nickel Process",
+      cat_nickel_trouble:"Nickel Troubleshooting",
+      cat_nickel_cases:"Nickel Cases",
+      cat_basics:"Basics Guide",
+      cat_chromate:"Zinc Chromate",
+      cat_zinc_setup:"Zinc Setup",
+      cat_zinc_series:"Zinc Series",
+      cat_sealer:"Sealer/Topcoat",
+
+      /* titles */
+      post_electro:"Electropolishing Aluminum for Uniform Gloss",
+      post_antitarnish:"How to Choose the Right Anti-tarnish",
+      post_peel:"Plating Peels/Non-Adhesion: Causes & Fixes",
+      post_color:"Get Chromate Colors on Zinc Right",
+      post_black:"Blackening: Uniform Matte & Rub Resistance",
+      post_salt:"Preparing Parts for Salt Spray Test",
+      post_laserb:"Why Use Brass Bright Dip Laser B",
+      post_brass_on_steel:"Brass Plating on Steel & Copper",
+      post_e_coat:"Common Issues in Electrophoretic Lacquer",
+      post_cu_undercoat:"Nickel on Steel: Need Copper Undercoat?",
+      post_nickel_trouble:"Nickel Plating Problems & Fixes",
+      post_nickel_hub:"What is Nickel Plating? Equipment & Pretreatment",
+      post_basics:"Metal Plating Basics",
+      post_cr3cr6:"Zinc Chromate: Trivalent vs Hexavalent",
+      post_diecast:"From Zinc Die-cast Plating to Nickel",
+      post_zinc_series:"Zinc Plating Troubleshooting (Series Hub)",
+      post_sealer:"Trivalent Chromate Sealer/Topcoat",
+
+      cta_title:"Need help designing or fixing your process?",
+      cta_text:"Talk to our technical team to assess your line and pick the right solution.",
+      cta_btn_line:"Add LINE",
+      cta_btn_mail:"Send Email"
+    }
+  };
+  function applyLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(btn=> btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+
+    document.querySelectorAll('[data-i18n-key]').forEach(node=>{
+      const key = node.getAttribute('data-i18n-key');
+      const isHTML = node.hasAttribute('data-i18n-html');
+      const value = I18N[lang] && I18N[lang][key];
+      if(value != null){ isHTML ? node.innerHTML = value : node.textContent = value; }
+    });
+
+    document.querySelectorAll('[data-i18n-attr]').forEach(node=>{
+      const pairs = node.getAttribute('data-i18n-attr').split(',');
+      pairs.forEach(pair=>{
+        const [attr,key] = pair.split(':'); const v = I18N[lang] && I18N[lang][key];
+        if(attr && key && v != null){ node.setAttribute(attr.trim(), v); }
+      });
+    });
+
+    const ogLoc = document.getElementById('ogLocale'); if(ogLoc) ogLoc.setAttribute('content', lang === 'en' ? 'en_US' : 'th_TH');
+    const titleNode = document.querySelector('title[data-i18n-key="meta_title"]'); if(titleNode) document.title = titleNode.textContent;
+
+    // recalc header height
+    const header = document.querySelector('.site-header'); const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+    document.documentElement.style.setProperty('--header-h', h + 'px');
+
+    try{ localStorage.setItem('lang', lang); }catch(e){}
+  }
+  (function initLang(){
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+    applyLang(saved);
+    document.querySelectorAll('.lang-btn').forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+  })();
   </script>
 </body>
 </html>
