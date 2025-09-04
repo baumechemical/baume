@@ -282,27 +282,6 @@ html, body{ max-width:100%; overflow-x:hidden; overscroll-behavior-x:none; }
   font-size:.92rem; color:#9fb1c6;
 }
 
-/* บีบ "หมวดผลิตภัณฑ์" ให้กินพื้นที่น้อยลงบนมือถือ (2 คอลัมน์) */
-@media (max-width:900px){
-  .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list{
-    column-count:2; column-gap:16px;
-  }
-  .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list li{
-    break-inside:avoid; margin:6px 0;
-  }
-}
-
-/* (ออปชัน) อยาก “ล็อก” ความสูง footer ไม่ให้ยาวเกินจอ—เปิดบล็อกนี้ได้
-@media (max-width:900px){
-  .site-footer .footer-inner{
-    max-height:55vh;          // สูงสุด ~ครึ่งจอ
-    overflow:auto;
-    -webkit-overflow-scrolling:touch;
-    padding-bottom:max(16px,var(--safeB));
-  }
-}
-*/
-
   </style>
 </head>
 <body>
