@@ -78,75 +78,102 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:56px;
+      --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* ===== Header ===== */
-    .site-header{ position:sticky; top:0; z-index:1200; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.78); border-bottom:1px solid #e6ece8; }
-    .nav-bar{ max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; }
+    /* ===== GLASS HEADER: transparent start → dark on scroll ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:38px;height:38px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.2)}
-    .brand-name{font-weight:800; color:#1d2b23}
-    .primary-nav{display:flex; gap:12px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#1f2a24; padding:8px 10px; border-radius:10px; font-weight:600 }
-    .primary-nav a:hover{ background:#ecf4ef }
-    .primary-nav a[aria-current="page"]{ background:#ecf4ef; font-weight:800 }
-    @media(max-width:760px){ .brand-name{display:none} }
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    /* Inline language switch */
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* Burger */
-    .nav-toggle{ display:none; position:relative; width:40px; height:36px; border:1px solid #e2e8f0; border-radius:10px; background:#fff; cursor:pointer }
-    .nav-toggle .bar{ position:absolute; left:8px; right:8px; height:2px; background:#0f172a; border-radius:2px; }
-    .nav-toggle .bar:nth-child(1){ top:10px } .nav-toggle .bar:nth-child(2){ top:17px } .nav-toggle .bar:nth-child(3){ top:24px }
-    @media (max-width:900px){
-      .nav-toggle{ display:inline-block; }
-      .primary-nav{ position:fixed; left:0; right:0; top:var(--header-h); background:#fff; border-bottom:1px solid #e6ece8; box-shadow:0 12px 30px rgba(2,8,20,.12); display:none; flex-direction:column; gap:6px; padding:12px 16px; z-index:1190; }
-      .primary-nav a{ padding:12px 10px; font-size:15px }
-      .site-header.open .primary-nav{ display:flex; }
-      .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1185; display:none }
-    }
-    .menu-scrim{ display:none } .menu-scrim:not([hidden]){ display:block }
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
-    /* ===== Lang FAB ===== */
-    .lang-fab{ position:fixed; top:calc(env(safe-area-inset-top, 0px) + 14px); right:calc(env(safe-area-inset-right, 0px) + 14px); z-index:1300; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition:transform .18s ease, opacity .18s ease;}
-    .lang-fab .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-fab .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .lang-fab .flag{ width:20px; height:15px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
-    .lang-fab.is-hide{ opacity:0; transform:translateY(-10px); pointer-events:none }
-    @media (max-width:900px){ .lang-fab{ position:sticky; top:calc(var(--header-h) + 8px); margin:8px 12px 0 auto; background:#fff; box-shadow:0 8px 26px rgba(2,8,20,.06);} .lang-fab .lang-btn{ padding:6px 8px; font-weight:700 } .lang-fab .flag{ width:18px; height:13px } }
-    @media (max-width:420px){ .lang-fab .lang-btn span{ display:none } }
-    @media (prefers-reduced-motion: reduce){ .lang-fab{ transition:none } }
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg') center/cover no-repeat; padding: 28px 16px}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#ffffff1a; border:1px solid #ffffff55; color:#fff; backdrop-filter: blur(4px)}
-    .back-chip:hover{ background:#ffffff2a; border-color:#ffffff90 }
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Base layout ===== */
-    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
+    /* ===== Layout (sticky TOC on wide screens) ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
+      section.section-block{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Section cards ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+    #rec>h2.section{ --icon:"🧪" }
+    #prep>h2.section{ --icon:"🧼" }
+    #window>h2.section{ --icon:"⏱️" }
+    #fixture>h2.section{ --icon:"🧰" }
+    #care>h2.section{ --icon:"🛡️" }
+    #defects>h2.section{ --icon:"⚠️" }
+    #links>h2.section{ --icon:"🔗" }
+    .section-block>h2.section::after{ content:"#"; position:absolute; right:10px; top:50%; transform:translateY(-50%); opacity:0; transition:opacity .2s ease; font-weight:800; color:var(--muted); font-size:.92rem }
+    .section-block:hover>h2.section::after{ opacity:.85 }
+
     .lead{margin:0 0 16px; color:#5f6d7c}
-
-    /* Decor & components */
-    html{scroll-behavior:smooth}
-    [hidden]{display:none !important}
-    .section{position:relative}
-    .section::after{content:"";display:block;height:3px;width:72px;margin:8px 0 0;background:linear-gradient(90deg,var(--brand-2),#59a286,transparent);border-radius:2px}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc p{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
-    .toc-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:700}
-    .toc-chip:hover{background:#e4f0ea}
     .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:#f4faf7}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table thead th::after{content:""; position:absolute; inset:0 0 auto 0; height:2px; background:linear-gradient(90deg,#d9efe4,transparent)}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
 
     /* Part switcher */
+    [hidden]{display:none !important}
     .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
     .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
     .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
@@ -155,7 +182,7 @@
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
     .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
@@ -169,12 +196,16 @@
     /* Reveal */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
   </style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header" role="banner" aria-label="Site header">
+  <!-- ===== Header (transparent → dark on scroll) ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
@@ -182,37 +213,34 @@
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <span class="bar"></span>
       </button>
 
+      <!-- Global menu + language switch -->
       <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-        <a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="nav_pretreat">Pretreatment</a>
-        <a href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="nav_plating">Plating</a>
-        <a href="https://www.baumechemical.com/products/blackening/" data-i18n-key="nav_black">Blackening</a>
-        <a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="nav_pass">Passivation</a>
-        <a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="nav_polishing">Polishing</a>
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
         <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
       </nav>
     </div>
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Lang FAB -->
-  <div class="lang-fab" role="group" aria-label="Language switcher">
-    <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-      <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH">
-      <span>ไทย</span>
-    </button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-      <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN">
-      <span>EN</span>
-    </button>
-  </div>
-
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
-    <div class="wrap">
-      <a class="back-chip" href="https://www.baumechemical.com/" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <a class="back-chip" href="https://www.baumechemical.com/" data-back data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
       <h1 data-i18n-key="hero_title">คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)</h1>
       <p data-i18n-key="hero_tagline">ตั้งค่าพื้นฐาน + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางแก้ไขปัญหาแบบยิงตรงจุด</p>
     </div>
@@ -401,7 +429,6 @@
         </table>
       </div>
     </section>
-
     <!-- 5. การจัดวาง -->
     <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
       <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
@@ -544,11 +571,11 @@
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n -->
+  <!-- JS: i18n (with header height recalculation) -->
   <script>
     const I18N = {
       th: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← กลับเมนูหลัก",
         hero_title:"คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)",
         hero_tagline:"ตั้งค่าพื้นฐาน + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางแก้ไขปัญหาแบบยิงตรงจุด",
@@ -629,7 +656,7 @@
       },
 
       en: {
-        nav_pretreat:"Pretreatment", nav_plating:"Plating", nav_black:"Blackening", nav_pass:"Passivation", nav_polishing:"Polishing", nav_blog:"Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
         back_home:"← Back to Home",
         hero_title:"Electrophoretic Lacquer (E-coat/ED) — Troubleshooting Guide",
         hero_tagline:"Baselines, process windows, fixturing, bath care, and a laser-focused defect–fix table.",
@@ -711,8 +738,9 @@
     };
 
     const els = {
-      langBtns: () => document.querySelectorAll('.lang-fab .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+      tocLinks: () => document.querySelectorAll('#toc a[href^="#"]'),
     };
 
     function applyLang(lang){
@@ -724,22 +752,21 @@
         if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
+      // recalc header height in case text wraps differently
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
     }
 
     (function initLang(){
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
-        applyLang(btn.dataset.lang);
-        try{
-          const h = document.querySelector('.site-header').getBoundingClientRect().height|0;
-          document.documentElement.style.setProperty('--header-h', h + 'px');
-        }catch(e){}
-      }));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 
-  <!-- JS: Part switcher -->
+  <!-- JS: Part switcher + deep-link persist -->
   <script>
   (function(){
     const buttons = document.querySelectorAll('.part-switch .part-btn');
@@ -757,6 +784,9 @@
         b.setAttribute('aria-selected', String(on));
       });
       try{ localStorage.setItem('ed_part', part); }catch(e){}
+      const url = new URL(location);
+      url.searchParams.set('part', part);
+      history.replaceState(null,'',url);
     }
 
     const urlPart = new URLSearchParams(location.search).get('part');
@@ -767,89 +797,129 @@
       setPart(b.dataset.part);
       document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
     }));
+
+    // TOC click switches to correct part before anchor scroll
+    document.querySelectorAll('#toc a[data-part]').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        const p = a.getAttribute('data-part');
+        setPart(p);
+      });
+    });
   })();
   </script>
 
-  <!-- JS: เมนูมือถือ + header height + FAB scroll behavior -->
+  <!-- JS: Header glass, mobile menu (scrim+lock), smart back, highlight current -->
   <script>
-  (function(){
-    const header = document.querySelector('.site-header');
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-    const scrim = document.querySelector('.menu-scrim');
-    const fab = document.querySelector('.lang-fab');
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
 
-    function updateHeaderH(){
-      const h = header.getBoundingClientRect().height|0;
-      document.documentElement.style.setProperty('--header-h', h + 'px');
-    }
-    updateHeaderH();
-    window.addEventListener('load', updateHeaderH, {once:true});
-    window.addEventListener('resize', updateHeaderH, {passive:true});
-
-    let scrollTop = 0;
-    function setOpen(isOpen){
-      header.classList.toggle('open', isOpen);
-      toggle?.setAttribute('aria-expanded', String(isOpen));
-      if (scrim){ isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden',''); }
-      nav?.setAttribute('aria-hidden', String(!isOpen));
-      if (isOpen){
-        scrollTop = window.scrollY;
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollTop}px`;
-        document.body.style.width = '100%';
-      }else{
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        window.scrollTo(0, scrollTop);
-      }
-    }
-    toggle?.addEventListener('click', ()=> setOpen(!header.classList.contains('open')));
-    scrim?.addEventListener('click', ()=> setOpen(false));
-    document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape' && header.classList.contains('open')) setOpen(false); });
-    window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) setOpen(false); }, {passive:true});
-
-    // Highlight current nav
-    try{
-      const here = location.pathname.replace(/\/+$/,'');
-      nav?.querySelectorAll('a').forEach(a=>{
-        const path = new URL(a.href, location.origin).pathname.replace(/\/+$/,'');
-        if (path && (here === path || (here.startsWith(path) && path !== '/'))) a.setAttribute('aria-current','page');
-      });
-    }catch(e){}
-
-    // FAB hide/show on scroll (≤900px)
-    let onScroll, bound = false;
-    function bindFab(){
-      if (bound || !fab) return;
-      let lastY = window.scrollY, hidden = false;
-      const THRESHOLD = 8;
-      onScroll = ()=>{
-        const y = window.scrollY, dy = y - lastY;
-        if (Math.abs(dy) > THRESHOLD){
-          const shouldHide = dy > 0 && y > 40;
-          if (shouldHide !== hidden){
-            fab.classList.toggle('is-hide', shouldHide);
-            hidden = shouldHide;
-          }
-          lastY = y;
-        }
-      };
+      // Set header height var & darken on scroll
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
       window.addEventListener('scroll', onScroll, {passive:true});
-      bound = true;
-    }
-    function unbindFab(){
-      if (!bound) return;
-      window.removeEventListener('scroll', onScroll);
-      fab?.classList.remove('is-hide');
-      bound = false;
-    }
-    const mq = window.matchMedia('(max-width: 900px)');
-    function applyFab(e){ e.matches ? bindFab() : unbindFab(); }
-    applyFab(mq);
-    mq.addEventListener ? mq.addEventListener('change', applyFab) : mq.addListener(applyFab);
-  })();
+      setH(); onScroll();
+
+      // Mobile menu open/close with body lock
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // Highlight current page; force Products when under /products/*
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        const navEl = document.getElementById('primary-nav');
+        navEl?.querySelectorAll('a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // Back smart: prefer history if same-origin
+      (function(){
+        const btn = document.querySelector('[data-back]');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+
+  <!-- JS: Scroll-spy for TOC + heading anchors -->
+  <script>
+    // Clickable heading anchors (adds #id when clicking the H2)
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
   </script>
 </body>
 </html>
