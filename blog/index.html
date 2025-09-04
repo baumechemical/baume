@@ -281,6 +281,22 @@ html, body{ max-width:100%; overflow-x:hidden; overscroll-behavior-x:none; }
   display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;
   font-size:.92rem; color:#9fb1c6;
 }
+/* Footer: คอลัมน์เดียวทุกขนาดหน้าจอ + ปล่อยให้ยาวลงได้ */
+.site-footer .footer-grid{
+  display:grid;
+  grid-template-columns:1fr !important; /* เดิม 2fr 1fr 1fr */
+  gap:22px;
+}
+.site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list{
+  column-count:1 !important;            /* ยกเลิก 2 คอลัมน์บนมือถือ */
+}
+
+/* ยืนยันว่าไม่ล็อกความสูง/ไม่สกรอลเฉพาะใน footer */
+.site-footer .footer-inner{
+  max-height:none !important;
+  overflow:visible !important;
+  padding-bottom:max(16px, env(safe-area-inset-bottom)); /* กันชนขอบล่าง iPhone */
+}
 
   </style>
 </head>
