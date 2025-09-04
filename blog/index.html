@@ -148,6 +148,27 @@
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
     .brand-name{font-weight:800; color:#fff; letter-spacing:.2px}
 
+    /* === Fix pack (mobile) === */
+
+/* ให้ลำดับซ้อนชั้นแน่นอน: เมนู > scrim > header */
+.site-header{ z-index:1500; }
+.menu{ z-index:1700; }           /* แผงเมนูมือถือ */
+.menu-scrim{ z-index:1600; }     /* ฉากหลังเมนู */
+
+/* ระยะบนของ hero เหมือนเทมเพลตเดิม + รองรับรอยบาก iOS */
+.hero{ padding-top: calc(env(safe-area-inset-top) + var(--header-h) + 12px); }
+
+/* (ตัวเลือก) ถ้าอยากให้โลโก้ตัวหนังสือแสดงบนมือถือเหมือนเทมเพลตเดิม */
+@media (max-width:900px){
+  .brand-name{ display:inline; } /* ลบได้ถ้าอยากซ่อนไว้เหมือนเดิม */
+}
+
+/* (สำรอง) ถ้าเบราว์เซอร์ไม่รองรับ backdrop-filter ก็ยังดูเข้มตอนเลื่อน */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .site-header.scrolled{ background: rgba(15,23,42,.85); }
+}
+
+
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
     .menu a{ display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600 }
