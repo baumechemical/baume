@@ -212,6 +212,24 @@
     .btn-xl i{font-size:18px}
 
     @media (prefers-reduced-motion: reduce){.post{transition:none}}
+
+    /* Footer links – สีอ่อน อ่านง่ายบนพื้นเข้ม */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited{
+  color:#e2e8f0;          /* สีลิงก์ปกติและลิงก์ที่เคยกด */
+  text-decoration:none;   /* ตัดเส้นใต้เริ่มต้น */
+}
+.site-footer a:hover,
+.site-footer a:focus-visible{
+  color:#ffffff;          /* ไฮไลต์ตอนโฮเวอร์/โฟกัส */
+  text-decoration:underline;
+}
+.footer-grid{ display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr; }
+@media (max-width:900px){
+  .footer-grid{ grid-template-columns:1fr; }
+}
+
   </style>
 </head>
 <body>
