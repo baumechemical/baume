@@ -229,58 +229,76 @@
 @media (max-width:900px){
   .footer-grid{ grid-template-columns:1fr; }
 }
-/* ========== 1) กันหน้า "ขยับได้" / ไม่เต็มจอบน iPhone  ========== */
-html, body{
-  max-width:100%;
-  overflow-x:hidden;                /* ตัดแนวนอน */
-  overscroll-behavior-x:none;       /* กันลากเด้งแนวนอน */
-}
-.parallax, .wrap, .site-header, .header-inner{ overflow-x:clip; } /* กัน element ภายในล้นขอบ */
-.menu, .site-header{ contain: paint; }   /* แก้เคส backdrop-filter ทำให้ล้นใน iOS */
-
+/* ===== Fix 1: กันหน้าขยับซ้าย-ขวา + เผื่อ safe-area ของ iPhone ===== */
+html, body{ max-width:100%; overflow-x:hidden; overscroll-behavior-x:none; }
+.parallax, .wrap, .site-header, .header-inner{ overflow-x:clip; }
 :root{
-  /* safe area สำหรับขอบจอ iPhone (ติ่ง/ขอบมน) */
   --safeL: env(safe-area-inset-left);
   --safeR: env(safe-area-inset-right);
   --safeB: env(safe-area-inset-bottom);
 }
-/* เติมระยะเผื่อ safe area ด้านซ้าย/ขวาให้ header/hero */
 .header-inner{
-  padding-left: max(16px, var(--safeL));
-  padding-right: max(16px, var(--safeR));
+  padding-left:max(16px,var(--safeL));
+  padding-right:max(16px,var(--safeR));
 }
 @media (max-width:920px){
-  /* เมนูมือถือให้ยึดขอบปลอดภัย ไม่ทำให้เกิดแถบขาวและไม่ต้องเลื่อนไปด้านข้าง */
   .primary-nav .menu{
-    left: max(12px, var(--safeL));
-    right: max(12px, var(--safeR));
+    left:max(12px,var(--safeL));
+    right:max(12px,var(--safeR));
   }
 }
 
-/* ========== 2) Footer กระชับ/อ่านง่ายบนมือถือ ========== */
-/* สีลิงก์ใน footer (เผื่อยังเห็นน้ำเงิน/ม่วงจากค่ามาตรฐาน) */
+/* ===== Fix 2: Footer ให้เหมือนในรูป (เข้ม กระชับ ลิงก์สีอ่อน) ===== */
+.site-footer{ background:#0f172a !important; color:#cbd5e1; }
+.site-footer .footer-inner{ max-width:1200px; margin:0 auto; padding:28px 20px; }
+.site-footer .footer-grid{ display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr; }
+@media (max-width:900px){
+  .site-footer .footer-grid{ grid-template-columns:1fr; }
+}
+
+/* หัว/โลโก้ */
+.site-footer .ft-head{ display:flex; align-items:center; gap:12px; margin:0 0 10px; }
+.site-footer .ft-logo{ width:44px; height:44px; border-radius:10px;
+  background:#2c5e4e var(--logo) center/cover no-repeat; box-shadow:0 3px 10px rgba(0,0,0,.3); }
+.site-footer .ft-name{ font-weight:800; color:#fff; }
+
+/* หัวข้อคอลัมน์ & รายการ */
+.site-footer .footer-title{ margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem; }
+.site-footer .footer-list{ list-style:none; margin:8px 0 0; padding:0; }
+.site-footer .footer-list li{ margin:6px 0; line-height:1.55; }
+
+/* ลิงก์ใน footer ให้เป็นสีอ่อนเหมือนรูป */
 .site-footer a,
 .site-footer a:link,
 .site-footer a:visited{ color:#e2e8f0; text-decoration:none; }
-.site-footer a:hover,.site-footer a:focus-visible{ color:#fff; text-decoration:underline; }
+.site-footer a:hover,
+.site-footer a:focus-visible{ color:#ffffff; text-decoration:underline; }
 
-/* บีบความสูงรายการ "หมวดผลิตภัณฑ์" ให้เป็น 2 คอลัมน์บนจอแคบ */
+/* เส้นคั่นด้านล่าง + ตัวอักษร */
+.site-footer .footer-bottom{
+  border-top:1px solid rgba(148,163,184,.25);
+  margin-top:22px; padding-top:16px;
+  display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+  font-size:.92rem; color:#9fb1c6;
+}
+
+/* บีบ "หมวดผลิตภัณฑ์" ให้กินพื้นที่น้อยลงบนมือถือ (2 คอลัมน์) */
 @media (max-width:900px){
   .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list{
     column-count:2; column-gap:16px;
   }
   .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list li{
-    break-inside:avoid; margin:6px 0; line-height:1.45;
+    break-inside:avoid; margin:6px 0;
   }
 }
 
-/* (ตัวเลือกเสริม) ถ้าอยาก "ล็อก" ความสูง footer ไม่ให้ยาวเกินจอ: เปิดบล็อกด้านล่างนี้ได้
+/* (ออปชัน) อยาก “ล็อก” ความสูง footer ไม่ให้ยาวเกินจอ—เปิดบล็อกนี้ได้
 @media (max-width:900px){
   .site-footer .footer-inner{
-    max-height:55vh;               /* ล็อกความสูงไม่เกิน 55% ของจอ */
-    overflow:auto;                 /* สกรอลเฉพาะใน footer ได้ */
+    max-height:55vh;          // สูงสุด ~ครึ่งจอ
+    overflow:auto;
     -webkit-overflow-scrolling:touch;
-    padding-bottom: max(16px, var(--safeB)); /* กันชนขอบล่าง iPhone */
+    padding-bottom:max(16px,var(--safeB));
   }
 }
 */
