@@ -229,6 +229,61 @@
 @media (max-width:900px){
   .footer-grid{ grid-template-columns:1fr; }
 }
+/* ========== 1) กันหน้า "ขยับได้" / ไม่เต็มจอบน iPhone  ========== */
+html, body{
+  max-width:100%;
+  overflow-x:hidden;                /* ตัดแนวนอน */
+  overscroll-behavior-x:none;       /* กันลากเด้งแนวนอน */
+}
+.parallax, .wrap, .site-header, .header-inner{ overflow-x:clip; } /* กัน element ภายในล้นขอบ */
+.menu, .site-header{ contain: paint; }   /* แก้เคส backdrop-filter ทำให้ล้นใน iOS */
+
+:root{
+  /* safe area สำหรับขอบจอ iPhone (ติ่ง/ขอบมน) */
+  --safeL: env(safe-area-inset-left);
+  --safeR: env(safe-area-inset-right);
+  --safeB: env(safe-area-inset-bottom);
+}
+/* เติมระยะเผื่อ safe area ด้านซ้าย/ขวาให้ header/hero */
+.header-inner{
+  padding-left: max(16px, var(--safeL));
+  padding-right: max(16px, var(--safeR));
+}
+@media (max-width:920px){
+  /* เมนูมือถือให้ยึดขอบปลอดภัย ไม่ทำให้เกิดแถบขาวและไม่ต้องเลื่อนไปด้านข้าง */
+  .primary-nav .menu{
+    left: max(12px, var(--safeL));
+    right: max(12px, var(--safeR));
+  }
+}
+
+/* ========== 2) Footer กระชับ/อ่านง่ายบนมือถือ ========== */
+/* สีลิงก์ใน footer (เผื่อยังเห็นน้ำเงิน/ม่วงจากค่ามาตรฐาน) */
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited{ color:#e2e8f0; text-decoration:none; }
+.site-footer a:hover,.site-footer a:focus-visible{ color:#fff; text-decoration:underline; }
+
+/* บีบความสูงรายการ "หมวดผลิตภัณฑ์" ให้เป็น 2 คอลัมน์บนจอแคบ */
+@media (max-width:900px){
+  .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list{
+    column-count:2; column-gap:16px;
+  }
+  .site-footer nav[aria-label="หมวดหมู่ผลิตภัณฑ์"] .footer-list li{
+    break-inside:avoid; margin:6px 0; line-height:1.45;
+  }
+}
+
+/* (ตัวเลือกเสริม) ถ้าอยาก "ล็อก" ความสูง footer ไม่ให้ยาวเกินจอ: เปิดบล็อกด้านล่างนี้ได้
+@media (max-width:900px){
+  .site-footer .footer-inner{
+    max-height:55vh;               /* ล็อกความสูงไม่เกิน 55% ของจอ */
+    overflow:auto;                 /* สกรอลเฉพาะใน footer ได้ */
+    -webkit-overflow-scrolling:touch;
+    padding-bottom: max(16px, var(--safeB)); /* กันชนขอบล่าง iPhone */
+  }
+}
+*/
 
   </style>
 </head>
