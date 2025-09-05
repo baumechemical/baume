@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">คู่มือ BASn 4140 — น้ำยาชุบดีบุกเงา | Baume Chemical Blog</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="BASn 4140 น้ำยาชุบดีบุกเงาคุณภาพสูง: สัดส่วนการผสม ขั้นตอนการชุบ พารามิเตอร์การทำงาน อุปกรณ์ที่จำเป็น และเหตุผลที่ควรใช้แอโนดดีบุกบริสุทธิ์ 99.9%">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/basn-4140-bright-tin-guide/">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="คู่มือ BASn 4140 — น้ำยาชุบดีบุกเงา">
+  <meta property="og:description" content="สัดส่วนการผสม ขั้นตอนชุบ พารามิเตอร์ อุปกรณ์ และเหตุผลที่ใช้ Tin Anode 99.9%">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/basn-4140-bright-tin-guide/">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:var(--header-h)}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff}
+
+    .primary-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .primary-nav a{text-decoration:none;color:#fff;padding:10px 12px;border-radius:10px;font-weight:700}
+    .primary-nav a:hover{background:rgba(255,255,255,.12)}
+    .primary-nav a[aria-current="page"]{background:rgba(255,255,255,.18)}
+
+    .lang-switch{display:flex;gap:6px;margin-left:auto;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-btn img{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    .nav-toggle{display:none;width:38px;height:38px;border-radius:9px;background:transparent;cursor:pointer;border:0}
+    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+      .primary-nav{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;border:1px solid rgba(255,255,255,.18);backdrop-filter: blur(8px);border-radius:14px;display:grid;gap:6px;padding:12px;z-index:1400;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
+      .primary-nav a{color:#fff;padding:12px 10px;}
+      .site-header.open .primary-nav{transform:none;opacity:1;pointer-events:auto}
+      .lang-switch{width:100%;margin:6px 0 0;background:#ffffff1c;border-color:rgba(255,255,255,.35);box-shadow:none}
+      .lang-btn{color:#fff}
+      .lang-btn[aria-pressed="true"]{background:#ffffff;color:#0f172a}
+    }
+
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim:not([hidden]){display:block}
+    body.no-scroll{position:fixed;width:100%}
+
+    /* ===== Hero ===== */
+    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
+    .back-chip{position:absolute;top:calc(var(--header-h) + 10px);left:16px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;font-weight:800;text-decoration:none;background:#fff;border:1px solid rgba(2,8,20,.08);color:#0f172a;box-shadow:var(--shadow-1)}
+    .back-chip:hover{transform:translateY(-1px)}
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
+      #toc{grid-column:1;position:sticky;top:calc(var(--header-h) + 10px)}
+      article{grid-column:2}
+    }
+
+    /* ===== TOC card ===== */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1)}
+    #toc h2.section{font-size:1rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{content:"›";opacity:.5}
+    .toc-chip[aria-current="true"],.toc-chip.is-active{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections & tables ===== */
+    section.section-block{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px}
+    section.section-block::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9);opacity:.85}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24;display:flex;align-items:center;gap:10px;position:relative}
+    .lead{margin:0 0 14px;color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:0;z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{background:#f6fbf8}
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer a{color:#e2e8f0;text-decoration:none}
+    .site-footer a:hover{color:#fff;text-decoration:underline}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+    .ft-logo{width:44px;height:44px;border-radius:10px;background:#2c5e4e;background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff}
+    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
+    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">คู่มือการใช้งาน BASn 4140: น้ำยาชุบดีบุกเงา</h1>
+      <p data-i18n-key="hero_tagline">สัดส่วนการผสม ขั้นตอนการชุบ พารามิเตอร์การทำงาน อุปกรณ์ที่จำเป็น และเหตุผลที่ควรใช้ Tin Anode 99.9%</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวมผลิตภัณฑ์</a>
+        <a class="toc-chip" href="#makeup" data-i18n-key="toc_makeup">ส่วนที่ 1: การเตรียมสารละลาย (Make-up)</a>
+        <a class="toc-chip" href="#process" data-i18n-key="toc_process">ส่วนที่ 2: ขั้นตอนการชุบ</a>
+        <a class="toc-chip" href="#conditions" data-i18n-key="toc_conditions">ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์</a>
+        <a class="toc-chip" href="#anode" data-i18n-key="toc_anode">ทำไมต้อง Tin Anode 99.9%</a>
+      </p>
+    </nav>
+
+    <article>
+
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวมผลิตภัณฑ์</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">
+            ผลิตภัณฑ์ BASn 4140 เป็นน้ำยาชุบดีบุกชนิดเงาคุณภาพสูง ให้ผิวเคลือบเงางาม ไม่เป็นฝ้า กระจายตัวดีเยี่ยม ใช้ได้กว้างทั้งอุณหภูมิและความเข้มข้น
+            เสถียรและคุ้มค่าเพราะไม่ต้องเติมบ่อย เหมาะกับงานอิเล็กทรอนิกส์ ยานยนต์ และงานที่ต้องการความเงางามของพื้นผิว
+          </p>
+        </div>
+      </section>
+
+      <!-- Make-up -->
+      <section id="makeup" class="reveal section-block" aria-labelledby="makeup-h">
+        <h2 id="makeup-h" class="section" data-i18n-key="makeup_h">ส่วนที่ 1: การเตรียมสารละลาย (Make-up)</h2>
+
+        <p class="lead" data-i18n-key="ratio_h">สัดส่วนแนะนำ</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="ratio_th_comp">ส่วนประกอบ</th>
+                <th data-i18n-key="ratio_th_rec">ค่าแนะนำ</th>
+                <th data-i18n-key="ratio_th_std">ค่ามาตรฐาน</th>
+                <th data-i18n-key="ratio_th_unit">หน่วย</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="ratio_c1">สแตนนัสซัลเฟต (Stannous Sulfate)</td>
+                <td data-i18n-key="ratio_c1_rec">30</td>
+                <td data-i18n-key="ratio_c1_std">14–40</td>
+                <td data-i18n-key="ratio_unit_gpl">กรัม/ลิตร</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="ratio_c2">กรดกำมะถัน (Sulfuric Acid)</td>
+                <td data-i18n-key="ratio_c2_rec">100</td>
+                <td data-i18n-key="ratio_c2_std">80–120</td>
+                <td data-i18n-key="ratio_unit_ccl">ซีซี/ลิตร</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="ratio_c3">BASn 4140 (Make-up)</td>
+                <td data-i18n-key="ratio_c3_rec">20</td>
+                <td data-i18n-key="ratio_c3_std">-</td>
+                <td data-i18n-key="ratio_unit_ccl">ซีซี/ลิตร</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="ratio_c4">BASn 4141 (Brightener)</td>
+                <td data-i18n-key="ratio_c4_rec">5</td>
+                <td data-i18n-key="ratio_c4_std">-</td>
+                <td data-i18n-key="ratio_unit_ccl">ซีซี/ลิตร</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="ratio_c5">BASn 4142 (Additive)</td>
+                <td data-i18n-key="ratio_c5_rec">4</td>
+                <td data-i18n-key="ratio_c5_std">-</td>
+                <td data-i18n-key="ratio_unit_ccl">ซีซี/ลิตร</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="lead" data-i18n-key="make_steps_h">ขั้นตอนการผสม</p>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="make_s1">เติมน้ำกลั่น ~50% ของปริมาตรบ่อ</li>
+            <li data-i18n-key="make_s2">เติมกรดกำมะถันช้า ๆ พร้อมคน สารละลายจะร้อน <strong>⚠️</strong> <em data-i18n-key="make_warn1">เติมกรดลงในน้ำเสมอ ห้ามเติมน้ำลงในกรด</em> รอเย็นถึงอุณหภูมิห้อง</li>
+            <li data-i18n-key="make_s3">เติมสแตนนัสซัลเฟต 3 กก. คนจนละลายหมด</li>
+            <li data-i18n-key="make_s4">เติมน้ำกลั่นเพิ่มจน ~90% ของปริมาตร</li>
+            <li data-i18n-key="make_s5">เปิดระบบทำความเย็นให้อ่าง ~25°C จากนั้นผสม BASn 4140/4141/4142 แยกกันในน้ำ 1:1 ก่อนเทลงอ่าง</li>
+            <li data-i18n-key="make_s6">เติม BASn 4140 (Make-up) → คน</li>
+            <li data-i18n-key="make_s7">เติม BASn 4141 (Brightener) → คน</li>
+            <li data-i18n-key="make_s8">เติม BASn 4142 (Additive) → คน</li>
+            <li data-i18n-key="make_s9">ปรับปริมาตรสุดท้ายด้วยน้ำกลั่น</li>
+          </ul>
+          <p><strong>⚠️</strong> <span data-i18n-key="make_warn2">ห้ามเติม BASn 4140/4141/4142 ในอุณหภูมิ > 30°C</span></p>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" class="reveal section-block" aria-labelledby="process-h">
+        <h2 id="process-h" class="section" data-i18n-key="process_h">ส่วนที่ 2: ขั้นตอนการชุบ</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="proc_1">เตรียมชิ้นงาน: ทำความสะอาด/รองพื้นตามเหมาะสม</li>
+            <li data-i18n-key="proc_2">กระตุ้นผิว: จุ่มกรดกำมะถัน 5–10%</li>
+            <li data-i18n-key="proc_3">ล้างน้ำสะอาด</li>
+            <li data-i18n-key="proc_4">ชุบดีบุก: ลงบ่อ BASn 4140</li>
+            <li data-i18n-key="proc_5">ล้างน้ำ 2–3 ขั้น</li>
+            <li data-i18n-key="proc_6">จุ่มด่าง: โซดาไฟ 2–5% เพื่อล้างผิว</li>
+            <li data-i18n-key="proc_7">ล้างน้ำ 2–3 ขั้น</li>
+            <li data-i18n-key="proc_8">อบแห้ง</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Conditions & Equipment -->
+      <section id="conditions" class="reveal section-block" aria-labelledby="cond-h">
+        <h2 id="cond-h" class="section" data-i18n-key="cond_h">ส่วนที่ 3: สภาพการทำงานและอุปกรณ์ที่จำเป็น</h2>
+
+        <p class="lead" data-i18n-key="cond_params_h">สภาพการทำงาน</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="cond_th_param">พารามิเตอร์</th>
+                <th data-i18n-key="cond_th_rec">ค่าแนะนำ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="cond_temp">อุณหภูมิ</td>
+                <td data-i18n-key="cond_temp_v">18–24 °C</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="cond_cd">ความหนาแน่นกระแสไฟ</td>
+                <td data-i18n-key="cond_cd_v">0.5–5 A/dm²</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="cond_anode">ตัวล่อ (แอโนด)</td>
+                <td data-i18n-key="cond_anode_v">ดีบุกบริสุทธิ์ 99.9% หุ้มถุงผ้าทนกรด</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="lead" data-i18n-key="equip_h">อุปกรณ์ที่จำเป็น</p>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="equip_1">บ่อชุบ: บุด้วยคลอโรซีล, PVC, PE หรือ PP</li>
+            <li data-i18n-key="equip_2">ท่อทำความเย็น: เทฟลอน</li>
+            <li data-i18n-key="equip_3">เครื่องกรอง: ไส้กรอง 10 ไมครอน</li>
+            <li data-i18n-key="equip_4">ระบบกวน: ถังแขวนใช้การแกว่งชิ้นงานช่วยกวนได้</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Tin Anode 99.9% -->
+      <section id="anode" class="reveal section-block" aria-labelledby="anode-h">
+        <h2 id="anode-h" class="section" data-i18n-key="anode_h">ทำไมต้องใช้แผ่น Tin Anode บริสุทธิ์ 99.9%?</h2>
+        <div class="content">
+          <p data-i18n-key="anode_p0">คุณภาพแอโนดมีผลโดยตรงต่อคุณภาพการชุบดีบุก—ดีบุกไวต่อสิ่งเจือปน จึงควรใช้แอโนดบริสุทธิ์ 99.9% เพื่อผลงานสม่ำเสมอและเสถียร</p>
+
+          <p class="lead" data-i18n-key="anode_1_h">1) ป้องกันการปนเปื้อนในบ่อชุบ</p>
+          <p data-i18n-key="anode_1_p">แอโนดบริสุทธิ์ต่ำอาจมี Pb/Sb/Bi ปน เมื่อหลุดลงบ่อจะลดประสิทธิภาพน้ำยา ทำให้ผิวหมองและความหนาไม่สม่ำเสมอ</p>
+
+          <p class="lead" data-i18n-key="anode_2_h">2) รักษาสมดุลและความเสถียรของสารละลาย</p>
+          <p data-i18n-key="anode_2_p">ดีบุกที่ละลายจากแอโนดบริสุทธิ์มีความสม่ำเสมอ ช่วยควบคุมความเข้มข้นโลหะได้แม่นยำ</p>
+
+          <p class="lead" data-i18n-key="anode_3_h">3) ยืดอายุการใช้งานของบ่อชุบ</p>
+          <p data-i18n-key="anode_3_p">ลดการสะสมสิ่งเจือปน ลดการถ่ายทิ้ง/ผสมใหม่ ช่วยประหยัดค่าใช้จ่ายระยะยาว</p>
+
+          <p data-i18n-key="anode_foot">บริษัทของเราจำหน่าย Tin Anode บริสุทธิ์ 99.9% เพื่อคุณภาพงานชุบดีบุกที่ไว้ใจได้ทุกครั้ง</p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+  <!-- Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
+
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title:"คู่มือ BASn 4140 — น้ำยาชุบดีบุกเงา | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับเมนูหลัก",
+        hero_title:"คู่มือการใช้งาน BASn 4140: น้ำยาชุบดีบุกเงา",
+        hero_tagline:"สัดส่วนการผสม ขั้นตอนการชุบ พารามิเตอร์การทำงาน อุปกรณ์ที่จำเป็น และเหตุผลที่ควรใช้ Tin Anode 99.9%",
+
+        toc_title:"สารบัญ", toc_intro:"ภาพรวมผลิตภัณฑ์", toc_makeup:"ส่วนที่ 1: การเตรียมสารละลาย (Make-up)", toc_process:"ส่วนที่ 2: ขั้นตอนการชุบ", toc_conditions:"ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์", toc_anode:"ทำไมต้อง Tin Anode 99.9%",
+
+        intro_h:"ภาพรวมผลิตภัณฑ์",
+        intro_p1:"ผลิตภัณฑ์ BASn 4140 เป็นน้ำยาชุบดีบุกชนิดเงาคุณภาพสูง ให้ผิวเคลือบเงางาม ไม่เป็นฝ้า กระจายตัวดีเยี่ยม ใช้ได้กว้างทั้งอุณหภูมิและความเข้มข้น เสถียรและคุ้มค่าเพราะไม่ต้องเติมบ่อย เหมาะกับงานอิเล็กทรอนิกส์ ยานยนต์ และงานที่ต้องการความเงางามของพื้นผิว",
+
+        makeup_h:"ส่วนที่ 1: การเตรียมสารละลาย (Make-up)",
+        ratio_h:"สัดส่วนแนะนำ",
+        ratio_th_comp:"ส่วนประกอบ", ratio_th_rec:"ค่าแนะนำ", ratio_th_std:"ค่ามาตรฐาน", ratio_th_unit:"หน่วย",
+        ratio_c1:"สแตนนัสซัลเฟต (Stannous Sulfate)", ratio_c1_rec:"30", ratio_c1_std:"14–40",
+        ratio_c2:"กรดกำมะถัน (Sulfuric Acid)", ratio_c2_rec:"100", ratio_c2_std:"80–120",
+        ratio_c3:"BASn 4140 (Make-up)", ratio_c3_rec:"20", ratio_c3_std:"-",
+        ratio_c4:"BASn 4141 (Brightener)", ratio_c4_rec:"5", ratio_c4_std:"-",
+        ratio_c5:"BASn 4142 (Additive)", ratio_c5_rec:"4", ratio_c5_std:"-",
+        ratio_unit_gpl:"กรัม/ลิตร", ratio_unit_ccl:"ซีซี/ลิตร",
+
+        make_steps_h:"ขั้นตอนการผสม",
+        make_s1:"เติมน้ำกลั่น ~50% ของปริมาตรบ่อ",
+        make_s2:"เติมกรดกำมะถันช้า ๆ พร้อมคน สารละลายจะร้อน ⚠️ เติมกรดลงในน้ำเสมอ ห้ามเติมน้ำลงในกรด รอเย็นถึงอุณหภูมิห้อง",
+        make_s3:"เติมสแตนนัสซัลเฟต 3 กก. คนจนละลายหมด",
+        make_s4:"เติมน้ำกลั่นเพิ่มจน ~90% ของปริมาตร",
+        make_s5:"เปิดระบบทำความเย็นให้อ่าง ~25°C แล้วผสม BASn 4140/4141/4142 แยกกันในน้ำ 1:1 ก่อนเท",
+        make_s6:"เติม BASn 4140 (Make-up) → คน",
+        make_s7:"เติม BASn 4141 (Brightener) → คน",
+        make_s8:"เติม BASn 4142 (Additive) → คน",
+        make_s9:"ปรับปริมาตรสุดท้ายด้วยน้ำกลั่น",
+        make_warn1:"เติมกรดลงในน้ำเสมอ ห้ามเติมน้ำลงในกรด",
+        make_warn2:"ห้ามเติม BASn 4140/4141/4142 ในอุณหภูมิ > 30°C",
+
+        process_h:"ส่วนที่ 2: ขั้นตอนการชุบ",
+        proc_1:"เตรียมชิ้นงาน: ทำความสะอาด/รองพื้นตามเหมาะสม",
+        proc_2:"กระตุ้นผิว: จุ่มกรดกำมะถัน 5–10%",
+        proc_3:"ล้างน้ำสะอาด",
+        proc_4:"ชุบดีบุก: ลงบ่อ BASn 4140",
+        proc_5:"ล้างน้ำ 2–3 ขั้น",
+        proc_6:"จุ่มด่าง: โซดาไฟ 2–5% เพื่อล้างผิว",
+        proc_7:"ล้างน้ำ 2–3 ขั้น",
+        proc_8:"อบแห้ง",
+
+        cond_h:"ส่วนที่ 3: สภาพการทำงานและอุปกรณ์ที่จำเป็น",
+        cond_params_h:"สภาพการทำงาน",
+        cond_th_param:"พารามิเตอร์", cond_th_rec:"ค่าแนะนำ",
+        cond_temp:"อุณหภูมิ", cond_temp_v:"18–24 °C",
+        cond_cd:"ความหนาแน่นกระแสไฟ", cond_cd_v:"0.5–5 A/dm²",
+        cond_anode:"ตัวล่อ (แอโนด)", cond_anode_v:"ดีบุกบริสุทธิ์ 99.9% หุ้มถุงผ้าทนกรด",
+        equip_h:"อุปกรณ์ที่จำเป็น",
+        equip_1:"บ่อชุบ: บุด้วยคลอโรซีล, PVC, PE หรือ PP",
+        equip_2:"ท่อทำความเย็น: เทฟลอน",
+        equip_3:"เครื่องกรอง: ไส้กรอง 10 ไมครอน",
+        equip_4:"ระบบกวน: ถังแขวนใช้การแกว่งชิ้นงานช่วยกวนได้",
+
+        anode_h:"ทำไมต้องใช้แผ่น Tin Anode บริสุทธิ์ 99.9%?",
+        anode_p0:"คุณภาพแอโนดมีผลโดยตรงต่อคุณภาพการชุบดีบุก—ดีบุกไวต่อสิ่งเจือปน จึงควรใช้แอโนดบริสุทธิ์ 99.9% เพื่อผลงานสม่ำเสมอและเสถียร",
+        anode_1_h:"1) ป้องกันการปนเปื้อนในบ่อชุบ",
+        anode_1_p:"แอโนดบริสุทธิ์ต่ำอาจมี Pb/Sb/Bi ปน เมื่อหลุดลงบ่อจะลดประสิทธิภาพน้ำยา ทำให้ผิวหมองและความหนาไม่สม่ำเสมอ",
+        anode_2_h:"2) รักษาสมดุลและความเสถียรของสารละลาย",
+        anode_2_p:"ดีบุกที่ละลายจากแอโนดบริสุทธิ์มีความสม่ำเสมอ ช่วยควบคุมความเข้มข้นโลหะได้แม่นยำ",
+        anode_3_h:"3) ยืดอายุการใช้งานของบ่อชุบ",
+        anode_3_p:"ลดการสะสมสิ่งเจือปน ลดการถ่ายทิ้ง/ผสมใหม่ ช่วยประหยัดค่าใช้จ่ายระยะยาว",
+        anode_foot:"เราจำหน่าย Tin Anode บริสุทธิ์ 99.9% เพื่อคุณภาพงานชุบดีบุกที่ไว้ใจได้ทุกครั้ง",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+
+      en: {
+        title:"BASn 4140 Bright Tin Plating — Practical Guide | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Home",
+        hero_title:"BASn 4140 Bright Tin Plating: How to Use",
+        hero_tagline:"Make-up ratios, plating steps, operating window, required equipment, and why to use 99.9% Tin Anode",
+
+        toc_title:"Contents", toc_intro:"Product overview", toc_makeup:"Part 1: Make-up", toc_process:"Part 2: Plating steps", toc_conditions:"Part 3: Operating conditions & equipment", toc_anode:"Why 99.9% Tin Anode",
+
+        intro_h:"Product overview",
+        intro_p1:"BASn 4140 is a high-quality bright tin process delivering glossy, haze-free deposits with excellent throwing power. It operates effectively across a wide range of temperatures and concentrations, remains stable with low additive consumption, and suits electronics, automotive, and any finish that demands high gloss.",
+
+        makeup_h:"Part 1: Make-up",
+        ratio_h:"Recommended ratios",
+        ratio_th_comp:"Component", ratio_th_rec:"Recommended", ratio_th_std:"Standard range", ratio_th_unit:"Unit",
+        ratio_c1:"Stannous sulfate", ratio_c1_rec:"30", ratio_c1_std:"14–40",
+        ratio_c2:"Sulfuric acid",   ratio_c2_rec:"100", ratio_c2_std:"80–120",
+        ratio_c3:"BASn 4140 (Make-up)", ratio_c3_rec:"20", ratio_c3_std:"-",
+        ratio_c4:"BASn 4141 (Brightener)", ratio_c4_rec:"5", ratio_c4_std:"-",
+        ratio_c5:"BASn 4142 (Additive)",   ratio_c5_rec:"4", ratio_c5_std:"-",
+        ratio_unit_gpl:"g/L", ratio_unit_ccl:"cc/L",
+
+        make_steps_h:"Make-up steps",
+        make_s1:"Add DI water to ~50% of tank volume.",
+        make_s2:"Slowly add sulfuric acid with stirring; solution will heat up. ⚠️ Always add acid to water, never water to acid. Let cool to room temperature.",
+        make_s3:"Add 3 kg stannous sulfate; stir until fully dissolved.",
+        make_s4:"Add DI water to ~90% of final volume.",
+        make_s5:"Start cooling to ~25 °C, then pre-dilute BASn 4140/4141/4142 separately 1:1 with water before charging.",
+        make_s6:"Charge BASn 4140 (Make-up) and mix.",
+        make_s7:"Charge BASn 4141 (Brightener) and mix.",
+        make_s8:"Charge BASn 4142 (Additive) and mix.",
+        make_s9:"Top up with DI water to final volume.",
+        make_warn1:"Always add acid to water; never water to acid.",
+        make_warn2:"Do not add BASn 4140/4141/4142 when bath > 30 °C.",
+
+        process_h:"Part 2: Plating steps",
+        proc_1:"Prep part: clean / appropriate undercoats as needed.",
+        proc_2:"Activate: dip in 5–10% H₂SO₄.",
+        proc_3:"Rinse well.",
+        proc_4:"Bright tin plate in BASn 4140.",
+        proc_5:"Rinse 2–3 stages.",
+        proc_6:"Alkaline dip: 2–5% NaOH to de-film.",
+        proc_7:"Rinse 2–3 stages.",
+        proc_8:"Dry/bake dry.",
+
+        cond_h:"Part 3: Operating conditions & required equipment",
+        cond_params_h:"Operating window",
+        cond_th_param:"Parameter", cond_th_rec:"Recommended",
+        cond_temp:"Temperature", cond_temp_v:"18–24 °C",
+        cond_cd:"Current density", cond_cd_v:"0.5–5 A/dm²",
+        cond_anode:"Anode", cond_anode_v:"99.9% pure tin sheet in acid-resistant bags",
+        equip_h:"Required equipment",
+        equip_1:"Tank: lined with Chlorosulphorinated PE (CSP), PVC, PE, or PP",
+        equip_2:"Cooling coils: PTFE (Teflon)",
+        equip_3:"Filtration: 10 µm cartridge",
+        equip_4:"Agitation: for rack, use work-swing or mild movement",
+
+        anode_h:"Why 99.9% Tin Anode?",
+        anode_p0:"Anode quality directly impacts tin deposit quality. Tin is sensitive to impurities; 99.9% purity ensures stable, consistent performance.",
+        anode_1_h:"1) Prevents bath contamination",
+        anode_1_p:"Lower-purity anodes introduce Pb/Sb/Bi, degrading chemistry, dulling deposits, and causing uneven thickness.",
+        anode_2_h:"2) Keeps bath balance stable",
+        anode_2_p:"Dissolution from high-purity tin is consistent, making metal control precise.",
+        anode_3_h:"3) Extends bath life",
+        anode_3_p:"Less impurity build-up means fewer dumps/remakes and lower long-term cost.",
+        anode_foot:"We supply 99.9% Tin Anodes for dependable bright tin results.",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+
+      // update buttons
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+      // translate texts
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
+          node.textContent = I18N[sel][key];
+        }
+      });
+
+      // update <title>
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+      // persist + recalc header height
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle?.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // highlight current
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        nav?.querySelectorAll('a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // smart back
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors -->
+  <script>
+    // Clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
+  </script>
+</body>
+</html>
