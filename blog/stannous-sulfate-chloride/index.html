@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">SnSO₄ vs SnCl₂ — การใช้งานและความต่าง | Baume Chemical Blog</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="สแตนนัสซัลเฟต (SnSO₄) และสแตนนัสคลอไรด์ (SnCl₂): การใช้งานในอุตสาหกรรมชุบดีบุก อิเล็กทรอนิกส์ เซมิคอนดักเตอร์ กระจกเงา สิ่งทอ โพลิเมอร์ พร้อมตารางเปรียบเทียบคุณสมบัติ จุดเด่น และข้อจำกัด">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/stannous-sulfate-vs-chloride/">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="SnSO₄ vs SnCl₂ — การใช้งานและความต่าง">
+  <meta property="og:description" content="บทความสรุปการใช้งานของ Stannous sulfate และ Stannous chloride พร้อมตารางเปรียบเทียบ">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/stannous-sulfate-vs-chloride/">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      article{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections + table ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">Stannous sulfate (SnSO₄) vs Stannous chloride (SnCl₂)</h1>
+      <p data-i18n-key="hero_tagline">สรุปการใช้งานหลักในอุตสาหกรรมชุบดีบุก อิเล็กทรอนิกส์ เซมิคอนดักเตอร์ กระจกเงา สิ่งทอ โพลิเมอร์ และตารางเปรียบเทียบ</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวม</a>
+        <a class="toc-chip" href="#sulfate" data-i18n-key="toc_sulfate">การใช้งานของ SnSO₄</a>
+        <a class="toc-chip" href="#chloride" data-i18n-key="toc_chloride">การใช้งานของ SnCl₂</a>
+        <a class="toc-chip" href="#compare" data-i18n-key="toc_compare">ตารางเปรียบเทียบ</a>
+        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">บทสรุป</a>
+      </p>
+    </nav>
+
+    <article>
+
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวม</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">บทความนี้สรุปความต่างด้านการใช้งานของสแตนนัสซัลเฟต (SnSO₄) และสแตนนัสคลอไรด์ (SnCl₂) โดยเน้นงานชุบดีบุก อิเล็กทรอนิกส์ และอุตสาหกรรมที่เกี่ยวข้อง</p>
+        </div>
+      </section>
+
+      <!-- SnSO4 -->
+      <section id="sulfate" class="reveal section-block" aria-labelledby="sulfate-h">
+        <h2 id="sulfate-h" class="section" data-i18n-key="sulfate_h">สแตนนัสซัลเฟต (Stannous sulfate, SnSO₄)</h2>
+        <div class="content">
+          <p class="lead" data-i18n-key="sulfate_lead">1) อุตสาหกรรมชุบดีบุก (Tin plating industry)</p>
+          <p data-i18n-key="sulfate_p1">นี่คือการใช้งานหลักของ SnSO₄ โดยเฉพาะในอ่างชุบกรด (acid tin) ไอออน Sn²⁺ จากซัลเฟตมีความเสถียรในกรด ให้ผิวเคลือบเรียบ สีขาวเงิน และคุมความหนาได้ดี</p>
+          <ul>
+            <li data-i18n-key="sulfate_l1">บรรจุภัณฑ์อาหาร (Tinplate steel): เหล็กชุบดีบุกสำหรับกระป๋อง อ่อนโยน ไม่เป็นพิษ และป้องกันการกัดกร่อน</li>
+            <li data-i18n-key="sulfate_l2">ชิ้นส่วนอิเล็กทรอนิกส์: เคลือบทองแดงใน PCB/สายไฟ เพื่อกันออกซิเดชันและรักษาสภาพการบัดกรี</li>
+            <li data-i18n-key="sulfate_l3">เครื่องใช้ไฟฟ้า/การเชื่อม: ผิวดีบุกช่วยให้การบัดกรีติดง่าย</li>
+          </ul>
+          <p class="lead" data-i18n-key="sulfate_lead2">2) การชุบโลหะผสม (Alloy electroplating)</p>
+          <ul>
+            <li data-i18n-key="sulfate_l4">ทองแดง–ดีบุก (Bronze): สีทองแดงอมเหลือง ใช้ตกแต่ง/งานศิลป์</li>
+            <li data-i18n-key="sulfate_l5">นิกเกิล–ดีบุก: ผิวแข็งและทนทานในงานอิเล็กทรอนิกส์</li>
+            <li data-i18n-key="sulfate_l6">ตะกั่ว–ดีบุก (Solder alloy): ช่วยการบัดกรีและกันกัดกร่อน</li>
+          </ul>
+          <p class="lead" data-i18n-key="sulfate_lead3">3) อิเล็กทรอนิกส์และเซมิคอนดักเตอร์</p>
+          <p data-i18n-key="sulfate_p2">ฟิล์มดีบุกจาก SnSO₄ ยึดเกาะสูง เหมาะกับขั้วต่อและฟินิช PCB เพื่อความนำไฟฟ้าและกันออกซิเดชัน</p>
+          <p class="lead" data-i18n-key="sulfate_lead4">4) การผลิตสารเคมีและตัวเร่ง</p>
+          <p data-i18n-key="sulfate_p3">ใช้เป็นสารตั้งต้นผลิต SnO หรือตัวเร่งในเคมีอินทรีย์ รวมถึงอุตสาหกรรมแก้ว/เซรามิกส์</p>
+        </div>
+      </section>
+
+      <!-- SnCl2 -->
+      <section id="chloride" class="reveal section-block" aria-labelledby="chloride-h">
+        <h2 id="chloride-h" class="section" data-i18n-key="chloride_h">สแตนนัสคลอไรด์ (Stannous chloride, SnCl₂)</h2>
+        <div class="content">
+          <p class="lead" data-i18n-key="chloride_lead1">1) สารรีดิวซ์ (Reducing agent)</p>
+          <ul>
+            <li data-i18n-key="chloride_l1">แยกโลหะมีค่า: รีดิวซ์ Au³⁺/Ag⁺ ให้เป็นโลหะ เพื่อเคลือบ/สกัด</li>
+            <li data-i18n-key="chloride_l2">เคมีอินทรีย์: รีดิวซ์ไนโตรเบนซีนเป็นอะนิลีน และใช้ผลิตสี/ยา</li>
+          </ul>
+          <p class="lead" data-i18n-key="chloride_lead2">2) อุตสาหกรรมชุบดีบุก</p>
+          <p data-i18n-key="chloride_p2">ใช้ในอ่างกรดแบบคลอไรด์ (acid tin chloride) สำหรับงานที่ต้องการผิวละเอียด เงามาก เช่น คอนเนคเตอร์/ลวดเชื่อม/PCB</p>
+          <p class="lead" data-i18n-key="chloride_lead3">3) ทำกระจกเงา</p>
+          <p data-i18n-key="chloride_p3">เคลือบผิวแก้วเป็นชั้นรอง แล้วรีดิวซ์ AgNO₃ ให้เป็นฟิล์มเงินสะท้อนแสง</p>
+          <p class="lead" data-i18n-key="chloride_lead4">4) สิ่งทอ</p>
+          <p data-i18n-key="chloride_p4">ทำหน้าที่เป็นมอร์แดนต์ (mordant) ช่วยยึดสี โดยเฉพาะสีย้อมที่ต้องใช้โลหะช่วย</p>
+          <p class="lead" data-i18n-key="chloride_lead5">5) โพลิเมอร์/พลาสติก</p>
+          <p data-i18n-key="chloride_p5">เป็นตัวเร่งในการผลิตโพลีเอสเตอร์/อีพ็อกซี่ ช่วยเร่งการแข็งตัว</p>
+          <p class="lead" data-i18n-key="chloride_lead6">6) ห้องปฏิบัติการ</p>
+          <ul>
+            <li data-i18n-key="chloride_l6">สารมาตรฐานไทเทรชันรีด็อกซ์ (เช่น Fe³⁺/Au³⁺)</li>
+            <li data-i18n-key="chloride_l7">ควบคุมสถานะออกซิเดชันในสารละลายโลหะ</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Compare -->
+      <section id="compare" class="reveal section-block" aria-labelledby="compare-h">
+        <h2 id="compare-h" class="section" data-i18n-key="compare_h">เปรียบเทียบสั้น ๆ ระหว่าง SnSO₄ และ SnCl₂</h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="t_prop">คุณสมบัติ</th>
+                <th>SnSO₄</th>
+                <th>SnCl₂</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="t_use_main">การใช้งานหลัก</td>
+                <td data-i18n-key="t_s_use">เกลือหลักในอ่างชุบดีบุกแบบกรด ผิวเสถียร เรียบเนียน</td>
+                <td data-i18n-key="t_c_use">รีดิวซ์โลหะมีค่า, กระจกเงา, มอร์แดนต์/ตัวเร่ง, และอ่างชุบดีบุกบางประเภท</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="t_stab">ความเสถียร</td>
+                <td data-i18n-key="t_s_stab">เสถียรในสภาวะซัลเฟต เหมาะกับอ่างระยะยาว</td>
+                <td data-i18n-key="t_c_stab">ไวต่อออกซิเดชัน ต้องใช้กรด/รีดิวซ์ชันป้องกัน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="t_elec">การใช้งานในอิเล็กทรอนิกส์</td>
+                <td data-i18n-key="t_s_elec">ใช้มากใน PCB finish/สายไฟ</td>
+                <td data-i18n-key="t_c_elec">ผิวละเอียด เงาสูง เหมาะกับคอนเนคเตอร์</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="t_pro">ข้อเด่น</td>
+                <td data-i18n-key="t_s_pro">คุมความหนาดี ฟิล์มเสถียร ไม่ปนเปื้อนคลอไรด์</td>
+                <td data-i18n-key="t_c_pro">อเนกประสงค์ ใช้ได้ทั้งแล็บและอุตสาหกรรม</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="t_con">ข้อจำกัด</td>
+                <td data-i18n-key="t_s_con">ราคาสูงกว่า และละลายน้ำได้น้อยกว่า</td>
+                <td data-i18n-key="t_c_con">ออกซิไดซ์ง่าย ต้องควบคุมการเก็บรักษา</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="reveal section-block" aria-labelledby="summary-h">
+        <h2 id="summary-h" class="section" data-i18n-key="summary_h">บทสรุป</h2>
+        <div class="content">
+          <p data-i18n-key="summary_p1"><strong>SnSO₄</strong>: เหมาะกับการชุบดีบุกคุณภาพสูง สม่ำเสมอ โดยเฉพาะอาหารและอิเล็กทรอนิกส์</p>
+          <p data-i18n-key="summary_p2"><strong>SnCl₂</strong>: งานหลากหลายตั้งแต่รีดิวซ์โลหะ กระจกเงา สิ่งทอ ไปจนถึงตัวเร่งในเรซิน และงานชุบที่ต้องผิวเงาสูง</p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+  <!-- Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
+
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title:"SnSO₄ vs SnCl₂ — การใช้งานและความต่าง | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับเมนูหลัก",
+        hero_title:"Stannous sulfate (SnSO₄) vs Stannous chloride (SnCl₂)",
+        hero_tagline:"สรุปการใช้งานหลักในอุตสาหกรรมชุบดีบุก อิเล็กทรอนิกส์ เซมิคอนดักเตอร์ กระจกเงา สิ่งทอ โพลิเมอร์ และตารางเปรียบเทียบ",
+
+        toc_title:"สารบัญ", toc_intro:"ภาพรวม", toc_sulfate:"การใช้งานของ SnSO₄", toc_chloride:"การใช้งานของ SnCl₂", toc_compare:"ตารางเปรียบเทียบ", toc_summary:"บทสรุป",
+
+        intro_h:"ภาพรวม",
+        intro_p1:"บทความนี้สรุปความต่างด้านการใช้งานของสแตนนัสซัลเฟต (SnSO₄) และสแตนนัสคลอไรด์ (SnCl₂) โดยเน้นงานชุบดีบุก อิเล็กทรอนิกส์ และอุตสาหกรรมที่เกี่ยวข้อง",
+
+        sulfate_h:"สแตนนัสซัลเฟต (Stannous sulfate, SnSO₄)",
+        sulfate_lead:"1) อุตสาหกรรมชุบดีบุก (Tin plating industry)",
+        sulfate_p1:"นี่คือการใช้งานหลักของ SnSO₄ โดยเฉพาะในอ่างชุบกรด (acid tin) ไอออน Sn²⁺ จากซัลเฟตมีความเสถียรในกรด ให้ผิวเคลือบเรียบ สีขาวเงิน และคุมความหนาได้ดี",
+        sulfate_l1:"บรรจุภัณฑ์อาหาร (Tinplate steel): เหล็กชุบดีบุกสำหรับกระป๋อง อ่อนโยน ไม่เป็นพิษ และป้องกันการกัดกร่อน",
+        sulfate_l2:"ชิ้นส่วนอิเล็กทรอนิกส์: เคลือบทองแดงใน PCB/สายไฟ เพื่อกันออกซิเดชันและรักษาสภาพการบัดกรี",
+        sulfate_l3:"เครื่องใช้ไฟฟ้า/การเชื่อม: ผิวดีบุกช่วยให้การบัดกรีติดง่าย",
+        sulfate_lead2:"2) การชุบโลหะผสม (Alloy electroplating)",
+        sulfate_l4:"ทองแดง–ดีบุก (Bronze): สีทองแดงอมเหลือง ใช้ตกแต่ง/งานศิลป์",
+        sulfate_l5:"นิกเกิล–ดีบุก: ผิวแข็งและทนทานในงานอิเล็กทรอนิกส์",
+        sulfate_l6:"ตะกั่ว–ดีบุก (Solder alloy): ช่วยการบัดกรีและกันกัดกร่อน",
+        sulfate_lead3:"3) อิเล็กทรอนิกส์และเซมิคอนดักเตอร์",
+        sulfate_p2:"ฟิล์มดีบุกจาก SnSO₄ ยึดเกาะสูง เหมาะกับขั้วต่อและฟินิช PCB เพื่อความนำไฟฟ้าและกันออกซิเดชัน",
+        sulfate_lead4:"4) การผลิตสารเคมีและตัวเร่ง",
+        sulfate_p3:"ใช้เป็นสารตั้งต้นผลิต SnO หรือตัวเร่งในเคมีอินทรีย์ รวมถึงอุตสาหกรรมแก้ว/เซรามิกส์",
+
+        chloride_h:"สแตนนัสคลอไรด์ (Stannous chloride, SnCl₂)",
+        chloride_lead1:"1) สารรีดิวซ์ (Reducing agent)",
+        chloride_l1:"แยกโลหะมีค่า: รีดิวซ์ Au³⁺/Ag⁺ ให้เป็นโลหะ เพื่อเคลือบ/สกัด",
+        chloride_l2:"เคมีอินทรีย์: รีดิวซ์ไนโตรเบนซีนเป็นอะนิลีน และใช้ผลิตสี/ยา",
+        chloride_lead2:"2) อุตสาหกรรมชุบดีบุก",
+        chloride_p2:"ใช้ในอ่างกรดแบบคลอไรด์ (acid tin chloride) สำหรับงานที่ต้องการผิวละเอียด เงามาก เช่น คอนเนคเตอร์/ลวดเชื่อม/PCB",
+        chloride_lead3:"3) ทำกระจกเงา",
+        chloride_p3:"เคลือบผิวแก้วเป็นชั้นรอง แล้วรีดิวซ์ AgNO₃ ให้เป็นฟิล์มเงินสะท้อนแสง",
+        chloride_lead4:"4) สิ่งทอ",
+        chloride_p4:"ทำหน้าที่เป็นมอร์แดนต์ (mordant) ช่วยยึดสี โดยเฉพาะสีย้อมที่ต้องใช้โลหะช่วย",
+        chloride_lead5:"5) โพลิเมอร์/พลาสติก",
+        chloride_p5:"เป็นตัวเร่งในการผลิตโพลีเอสเตอร์/อีพ็อกซี่ ช่วยเร่งการแข็งตัว",
+        chloride_lead6:"6) ห้องปฏิบัติการ",
+        chloride_l6:"สารมาตรฐานไทเทรชันรีด็อกซ์ (เช่น Fe³⁺/Au³⁺)",
+        chloride_l7:"ควบคุมสถานะออกซิเดชันในสารละลายโลหะ",
+
+        compare_h:"เปรียบเทียบสั้น ๆ ระหว่าง SnSO₄ และ SnCl₂",
+        t_prop:"คุณสมบัติ", t_use_main:"การใช้งานหลัก", t_stab:"ความเสถียร", t_elec:"การใช้งานในอิเล็กทรอนิกส์", t_pro:"ข้อเด่น", t_con:"ข้อจำกัด",
+        t_s_use:"เกลือหลักในอ่างชุบดีบุกแบบกรด ผิวเสถียร เรียบเนียน",
+        t_c_use:"รีดิวซ์โลหะมีค่า, กระจกเงา, มอร์แดนต์/ตัวเร่ง, และอ่างชุบดีบุกบางประเภท",
+        t_s_stab:"เสถียรในสภาวะซัลเฟต เหมาะกับอ่างระยะยาว",
+        t_c_stab:"ไวต่อออกซิเดชัน ต้องใช้กรด/รีดิวซ์ชันป้องกัน",
+        t_s_elec:"ใช้มากใน PCB finish/สายไฟ",
+        t_c_elec:"ผิวละเอียด เงาสูง เหมาะกับคอนเนคเตอร์",
+        t_s_pro:"คุมความหนาดี ฟิล์มเสถียร ไม่ปนเปื้อนคลอไรด์",
+        t_c_pro:"อเนกประสงค์ ใช้ได้ทั้งแล็บและอุตสาหกรรม",
+        t_s_con:"ราคาสูงกว่า และละลายน้ำได้น้อยกว่า",
+        t_c_con:"ออกซิไดซ์ง่าย ต้องควบคุมการเก็บรักษา",
+
+        summary_h:"บทสรุป",
+        summary_p1:"SnSO₄: เหมาะกับการชุบดีบุกคุณภาพสูง สม่ำเสมอ โดยเฉพาะอาหารและอิเล็กทรอนิกส์",
+        summary_p2:"SnCl₂: ใช้งานหลากหลายตั้งแต่รีดิวซ์โลหะ กระจกเงา สิ่งทอ ไปจนถึงตัวเร่งในเรซิน และงานชุบที่ต้องผิวเงาสูง",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+
+      en: {
+        title:"SnSO₄ vs SnCl₂ — Uses & Differences | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Home",
+        hero_title:"Stannous sulfate (SnSO₄) vs Stannous chloride (SnCl₂)",
+        hero_tagline:"Key uses in acid tin plating, electronics/semiconductors, mirror making, textiles, polymers, plus a comparison table.",
+
+        toc_title:"Contents", toc_intro:"Overview", toc_sulfate:"SnSO₄ uses", toc_chloride:"SnCl₂ uses", toc_compare:"Comparison table", toc_summary:"Summary",
+
+        intro_h:"Overview",
+        intro_p1:"This article summarizes practical differences between stannous sulfate (SnSO₄) and stannous chloride (SnCl₂), focusing on tin plating, electronics, and related industries.",
+
+        sulfate_h:"Stannous sulfate (SnSO₄)",
+        sulfate_lead:"1) Tin plating industry",
+        sulfate_p1:"Primary use is acid tin baths. Sn²⁺ from sulfate is stable in acidic media, giving smooth, silvery deposits with good thickness control.",
+        sulfate_l1:"Food packaging (tinplate steel): safe, corrosion-resistant coating for cans.",
+        sulfate_l2:"Electronics: coat copper on PCBs/wires to prevent oxidation and keep solderability.",
+        sulfate_l3:"Appliances/soldering: tin improves solder wetting.",
+        sulfate_lead2:"2) Alloy electroplating",
+        sulfate_l4:"Cu–Sn (bronze): warm coppery tone for decorative/artwork.",
+        sulfate_l5:"Ni–Sn: hard, durable electronic finishes.",
+        sulfate_l6:"Pb–Sn (solder alloy): aids solderability and corrosion protection.",
+        sulfate_lead3:"3) Electronics & semiconductors",
+        sulfate_p2:"SnSO₄ films adhere well; used for connectors and PCB finishes for oxidation resistance and conductivity.",
+        sulfate_lead4:"4) Chemical/catalyst precursor",
+        sulfate_p3:"Precursor for SnO and catalysts; also glass/ceramics industry.",
+
+        chloride_h:"Stannous chloride (SnCl₂)",
+        chloride_lead1:"1) Reducing agent",
+        chloride_l1:"Precious metals: reduce Au³⁺/Ag⁺ to metal for plating or extraction.",
+        chloride_l2:"Organic reactions: reduce nitrobenzene to aniline; used in pigments/pharma syntheses.",
+        chloride_lead2:"2) Tin electroplating",
+        chloride_p2:"Used in acid tin chloride baths for very fine, bright deposits (connectors, solder wire, high-solderability PCB).",
+        chloride_lead3:"3) Mirror manufacturing",
+        chloride_p3:"Sensitize glass then reduce AgNO₃ to a reflective silver film.",
+        chloride_lead4:"4) Textiles",
+        chloride_p4:"Acts as a mordant to fix dyes that require metal assistance.",
+        chloride_lead5:"5) Polymers/plastics",
+        chloride_p5:"Catalyst in polyester/epoxy resins to speed cure.",
+        chloride_lead6:"6) Laboratory",
+        chloride_l6:"Standard for redox titration (e.g., Fe³⁺/Au³⁺).",
+        chloride_l7:"Control oxidation states in metal solutions.",
+
+        compare_h:"Quick comparison: SnSO₄ vs SnCl₂",
+        t_prop:"Property", t_use_main:"Primary use", t_stab:"Stability", t_elec:"Electronics use", t_pro:"Strengths", t_con:"Limitations",
+        t_s_use:"Main salt for acid tin; stable, smooth deposits.",
+        t_c_use:"Precious-metal reducer, mirrors, mordant/catalyst, some tin baths.",
+        t_s_stab:"Stable in sulfate media; good for long-running baths.",
+        t_c_stab:"Oxidizes easily; requires acid/reducing protection.",
+        t_s_elec:"Common for PCB finishes/wires.",
+        t_c_elec:"Ultra-fine, bright connector finishes.",
+        t_s_pro:"Good thickness control; chloride-free.",
+        t_c_pro:"Versatile across lab and industry.",
+        t_s_con:"Higher cost; lower water solubility.",
+        t_c_con:"Prone to oxidation; storage control needed.",
+
+        summary_h:"Summary",
+        summary_p1:"SnSO₄: best for high-quality, uniform tin plating, especially in food and electronics.",
+        summary_p2:"SnCl₂: broad utility—reduction, mirrors, textiles, resin catalysis, and very bright tin finishes.",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+
+      // update button state
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+      // swap texts
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
+          node.textContent = I18N[sel][key];
+        }
+      });
+
+      // update <title>
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+      // persist + recalc header height
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle?.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // highlight current nav
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        nav?.querySelectorAll('a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // smart back
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors -->
+  <script>
+    // clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
+  </script>
+</body>
+</html>
