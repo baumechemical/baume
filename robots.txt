@@ -1,5 +1,12 @@
+# robots.txt for baumechemical.com
 User-agent: *
 Allow: /
 
-# ชี้ sitemap ให้บอท
+# บล็อกหน้าระบบ/ซ้ำที่ไม่อยากให้ไต่
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*?*    # กันพารามิเตอร์ที่ทำให้ซ้ำ (ถ้าเว็บมีหน้าค้นหาสำคัญ ให้เอาบรรทัดนี้ออก)
+
+# ชี้ไปที่ sitemap
 Sitemap: https://www.baumechemical.com/sitemap.xml
