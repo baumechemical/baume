@@ -1,146 +1,110 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ไม่พบหน้านี้ (404) | Baume Chemical</title>
 
-  <!-- Title & Meta -->
-  <title data-i18n-key="title">ไม่พบหน้านี้ (404) | Baume Chemical</title>
-  <meta name="description" content="ขออภัย ไม่พบหน้าที่คุณต้องการ คุณสามารถกลับไปยังหน้าหลักได้ที่นี่">
-  <meta name="robots" content="noindex, nofollow">
+  <!-- SEO for 404 -->
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
-  <meta name="theme-color" content="#387b5b">
 
-  <!-- OG -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" data-i18n-key="ogtitle" content="404 • Page not found">
-  <meta property="og:description" data-i18n-key="ogdesc" content="We couldn’t find that page. Head back home.">
-  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
-
-  <!-- Fonts -->
+  <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --brand:#2c5e4e; --accent:#387b5b;
-      --ink:#0f172a; --bg:#dfe9e6;
-      --radius:16px; --shadow-1:0 8px 24px rgba(2,8,20,.06);
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --container:1200px; --header-h:64px;
+      --header-h:64px; --container:1200px;
     }
-    *{box-sizing:border-box} html,body{margin:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-    html{scroll-padding-top:calc(var(--header-h) + 8px)}
-    [hidden]{display:none !important}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    a{color:var(--brand-2)}
 
-    /* ===== Header: Nickel style (sticky, gradient, white text) ===== */
-    .site-header{
-      position:sticky; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(4,10,22,.66), rgba(4,10,22,0));
-      border-bottom:1px solid rgba(255,255,255,.12);
-      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
-      -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-    }
-    .site-header.scrolled{
-      background:#0f172acc; border-color:rgba(255,255,255,.2); box-shadow:0 6px 22px rgba(2,8,20,.18);
-    }
-    .header-inner{max-width:var(--container); margin:0 auto; min-height:var(--header-h);
-      display:flex; align-items:center; justify-content:space-between; padding:10px 16px;}
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:44px;height:44px;border-radius:10px;flex:0 0 44px;background:#dfe9e3 var(--logo-url) center/cover no-repeat; box-shadow:0 2px 9px rgba(2,8,20,.14)}
-    .brand-name{font-weight:800; color:#fff; font-size:1.04rem; letter-spacing:.2px}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
 
-    .header-right{display:flex; align-items:center; gap:10px}
-    .primary-nav{display:flex; align-items:center}
-    .menu{list-style:none; display:flex; gap:6px; margin:0; padding:0}
-    .menu a{display:inline-block; padding:10px 12px; border-radius:12px; color:#fff; text-decoration:none; font-weight:700; letter-spacing:.2px}
-    .menu a:hover{ background:rgba(255,255,255,.12) }
-    .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    /* Desktop language switcher (beside menu) */
-    .lang-inline{display:none; align-items:center; gap:6px; padding:4px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.12)}
-    .lang-inline .lang-btn{appearance:none; border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:999px; font-weight:800; display:flex; align-items:center; gap:6px; color:#fff}
-    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
-    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Mobile dropdown (slide-down) */
-    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px;height:38px;border-radius:9px;display:none; align-items:center; justify-content:center}
-    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before,.nav-toggle .bar::after{ content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
-    .menu .lang-li{display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)}
-    .menu .lang-li .lang-group{display:flex; gap:6px; padding:4px; border-radius:999px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28)}
-    .menu .lang-li .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px}
-    .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
-
-    @media (min-width: 921px){ .lang-inline{display:flex} .menu .lang-li{display:none} }
-    @media (max-width: 920px){
-      .menu{
-        position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 10px);
-        background:#0f172acc; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-        border:1px solid rgba(255,255,255,.16); border-radius:16px;
-        transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s, opacity .2s;
-      }
-      .menu li a{ display:block; padding:12px 14px; border-radius:12px }
-      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
-      .nav-toggle{ display:inline-flex }
-      .lang-inline{ display:none }
-      .menu .lang-li{display:block}
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
 
-    /* ===== Hero ===== */
-    .hero{
-      position:relative; color:#fff; text-align:center;
-      min-height:clamp(520px, 70vh, 760px);
-      display:grid; place-items:center; padding-top:var(--header-h);
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.7)),
-        url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
-      isolation:isolate;
-    }
-    .hero-inner{position:relative; z-index:2; max-width:900px; padding:18px}
-    .big404{
-      font-weight:800; font-size:clamp(72px, 18vw, 220px); line-height:1; margin:0 0 8px;
-      background: linear-gradient(90deg, #ffffff, #e6f3ed, #fbe8cc);
-      -webkit-background-clip:text; background-clip:text; color:transparent;
-      text-shadow:0 12px 40px rgba(0,0,0,.35);
-    }
-    .hero p{margin:0 auto 18px; color:#dbe6ea; max-width:760px}
+    /* ===== Hero (404) ===== */
+    .hero{position:relative; color:#fff; text-align:center; min-height: clamp(420px, 60vh, 620px);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;
+      padding-top: calc(var(--header-h) + 32px); display:grid; place-items:center}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
 
-    /* Back button on hero */
-    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:3; display:flex; align-items:center; gap:8px}
-    .btn.back{display:inline-flex; align-items:center; gap:8px; background:#ffffff22; border:1px solid rgba(255,255,255,.55); color:#fff; padding:8px 12px; border-radius:12px; font-weight:800; text-decoration:none; backdrop-filter: blur(6px)}
-    .btn.back:hover{ background:#ffffff33 }
-    .btn.back svg{width:18px; height:18px; display:block}
+    .search-bar{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:14px }
+    .input{appearance:none; width:min(680px,92vw); border:1px solid #cfdfd5; background:#fff; border-radius:12px; padding:12px 14px; font:inherit}
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#fff; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn.ghost{ background:transparent; border-color:#fff; color:#fff }
 
-    /* The ONLY button */
-    .btn{
-      appearance:none;border:1px solid var(--accent);background:var(--accent);color:#fff;
-      padding:12px 16px;border-radius:12px;font-weight:800;text-decoration:none;box-shadow:var(--shadow-1)
-    }
-    .btn:hover{filter:brightness(.95)}
-    .btn:focus-visible{outline:2px solid #fff; outline-offset:2px}
-    .actions{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+    /* ===== Layout & Cards ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    .grid{display:grid; gap:16px; grid-template-columns: 1fr}
+    @media(min-width:1024px){ .grid{ grid-template-columns:1fr 1fr } }
+
+    .card{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px;box-shadow:var(--shadow-1)}
+    h2{margin:0 0 8px; font-size:clamp(20px,2.4vw,28px); font-weight:800; color:#1f2a24}
+    ul.list{margin:10px 0 0; padding-left:18px}
+    .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; background:#ecf4ef; border:1px solid #d8e7dd; color:#1f2a24; text-decoration:none; font-weight:800}
 
     /* Footer */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:32px}
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
     .site-footer a:hover{color:#fff; text-decoration:underline}
     .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
     .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){ .footer-grid{ grid-template-columns:1fr } }
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
     .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:12px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
     .ft-name{font-weight:800; color:#fff}
     .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
@@ -149,86 +113,93 @@
   </style>
 </head>
 <body>
-  <!-- ===== HEADER (Nickel style) ===== -->
-  <header class="site-header" role="banner" id="siteHeader">
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Baume Chemical">
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <div class="header-right">
-        <!-- Primary Nav -->
-        <nav class="primary-nav" aria-label="Primary">
-          <ul class="menu">
-            <li><a href="https://www.baumechemical.com/index.html">Home</a></li>
-            <li><a href="https://www.baumechemical.com/about-us.html">About us</a></li>
-            <li><a href="https://www.baumechemical.com/products.html">Products</a></li>
-            <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
 
-            <!-- Mobile: language switcher inside menu -->
-            <li class="lang-li">
-              <div class="lang-group" role="group" aria-label="Language switcher">
-                <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-                  <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-                </button>
-                <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-                  <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-                </button>
-              </div>
-            </li>
-          </ul>
-        </nav>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
 
-        <!-- Desktop: language switcher beside menu -->
-        <div class="lang-inline" role="group" aria-label="Language switcher">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
           </button>
           <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
           </button>
         </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
 
-        <!-- Hamburger -->
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="bar" aria-hidden="true"></span>
-        </button>
-      </div>
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/index.html" data-back data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap">
+      <h1 data-i18n-key="hero_title">ไม่พบหน้านี้</h1>
+      <p data-i18n-key="hero_tagline">ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือไม่มีอยู่จริง ลองค้นหา หรือตรวจดูลิงก์ยอดนิยมด้านล่างได้เลย</p>
+      <form class="search-bar" id="siteSearch" role="search" aria-label="ค้นหา">
+        <input class="input" id="q" name="q" type="search" placeholder="พิมพ์คำค้นหา..." autocomplete="off" data-i18n-placeholder="search_ph">
+        <button class="btn" type="submit" data-i18n-key="search_btn">ค้นหา</button>
+        <a class="btn ghost" href="https://www.baumechemical.com/index.html" data-i18n-key="go_home">ไปหน้าแรก</a>
+      </form>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" aria-labelledby="h1">
-    <!-- Back button -->
-    <div class="back-wrap">
-      <a href="#" class="btn back" id="backBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span data-i18n-key="btn_back">ย้อนกลับ</span>
-      </a>
-    </div>
-
-    <div class="hero-inner">
-      <div class="big404" aria-hidden="true">404</div>
-      <h1 id="h1" data-i18n-key="h1">ไม่พบหน้านี้</h1>
-      <p data-i18n-key="h1_sub">ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ</p>
-
-      <!-- ✅ ปุ่มเดียวที่เหลือ -->
-      <div class="actions">
-        <a class="btn" href="https://www.baumechemical.com/" data-i18n-key="c1_btn_top">ไปหน้า Home</a>
+  <!-- ===== Main ===== -->
+  <main class="wrap grid">
+    <section class="card">
+      <h2 data-i18n-key="popular_h">ลิงก์ยอดนิยม</h2>
+      <ul class="list" id="popularLinks">
+        <li><a href="/products/pretreatment/" data-i18n-key="l_pretreat">Pretreatment</a></li>
+        <li><a href="/products/protective/" data-i18n-key="l_protect">Protective Treatment & Anti-tarnish</a></li>
+        <li><a href="/blog/anti-tarnish-selection/" data-i18n-key="l_at_blog">คู่มือเลือกสารกันหมอง (Anti-tarnish)</a></li>
+        <li><a href="/blog/salt-spray-quick-guide/" data-i18n-key="l_salt">Salt Spray — Quick Guide</a></li>
+        <li><a href="/contact-us.html" data-i18n-key="l_contact">ติดต่อเรา</a></li>
+      </ul>
+      <div class="chip-row" id="quickChips">
+        <a class="chip" href="/products/blackening/" data-i18n-key="c_black">Blackening</a>
+        <a class="chip" href="/products/passivation/" data-i18n-key="c_pass">Passivation</a>
+        <a class="chip" href="/products/polishing/" data-i18n-key="c_polish">Polishing</a>
+        <a class="chip" href="/products/platingcoating/" data-i18n-key="c_plating">Plating</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
+    <section class="card">
+      <h2 data-i18n-key="contact_h">ต้องการความช่วยเหลือ?</h2>
+      <p data-i18n-key="contact_p">ส่งอีเมลถึงเรา หรือแชทผ่าน LINE ทีมงานจะช่วยหาเนื้อหาที่คุณต้องการ</p>
+      <ul class="list">
+        <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+        <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" data-i18n-key="line_cta">เพิ่มเพื่อน/แชทกับเรา</a></li>
+        <li>📞 : <a href="tel:+66925469887">+66 92 546 9887</a></li>
+      </ul>
+      <div class="chip-row">
+        <a class="chip" href="/sitemap.xml" data-i18n-key="sitemap">Sitemap</a>
+        <a class="chip" href="mailto:contact@baumechemical.com?subject=Broken%20link%20report&body=I%20found%20a%20broken%20link%20on:%20" data-i18n-key="report">รายงานลิงก์เสีย</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
-          </div>
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -236,22 +207,23 @@
             <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
           </ul>
         </section>
+
         <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
-          <h3 class="footer-title">หมวดผลิตภัณฑ์</h3>
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
           <ul class="footer-list">
-            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
-            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
-            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
-            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
-            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
-            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
-            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+            <li><a href="/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="/products/platingcoating/">Plating</a></li>
+            <li><a href="/products/blackening/">Blackening</a></li>
+            <li><a href="/products/passivation/">Passivation</a></li>
+            <li><a href="/products/polishing/">Polishing</a></li>
+            <li><a href="/products/strippers/">Strippers</a></li>
+            <li><a href="/products/protective/">Protective Treatment</a></li>
+            <li><a href="/products/equipment/">Equipment</a></li>
           </ul>
         </nav>
+
         <section aria-label="ติดต่อเรา">
-          <h3 class="footer-title">ติดต่อเรา</h3>
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
           <ul class="footer-list">
             <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
             <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
@@ -259,107 +231,189 @@
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div>© 2025 Baume Chemical. All rights reserved.</div></div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
 
-  <!-- ===== Scripts ===== -->
+  <!-- ===== JS: Language (TH/EN), Header glass, Mobile nav, Search ===== -->
   <script>
-    // Sticky header state + mobile toggle + close on click
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const toggle = header?.querySelector('.nav-toggle');
-
-      const setH = () => {
-        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
-        document.documentElement.style.setProperty('--header-h', h + 'px');
-      };
-      setH(); window.addEventListener('resize', setH);
-
-      const onScroll = () => header && header.classList.toggle('scrolled', window.scrollY > 10);
-      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-
-      if(toggle){
-        toggle.addEventListener('click', function(){
-          const opened = header.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(opened));
-        });
-        // Close when clicking menu links or language buttons (mobile)
-        document.addEventListener('click', function(e){
-          const t = e.target.closest('.menu a, .menu .lang-btn');
-          if(t && window.innerWidth <= 920){
-            header.classList.remove('open'); toggle.setAttribute('aria-expanded','false');
-          }
-        });
-      }
-    })();
-
-    // Back button on hero (with fallback)
-    (function(){
-      const btn = document.getElementById('backBtn'); if(!btn) return;
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        try{
-          const ref=document.referrer;
-          if(ref && new URL(ref).origin===location.origin){ history.back(); return; }
-        }catch(_){}
-        // Fallback: go Home
-        location.href='https://www.baumechemical.com/';
-      });
-    })();
-
-    // i18n (only keys used) + shared language buttons (desktop + mobile)
+    // i18n dictionary
     const I18N = {
-      th:{
-        btn_back:"ย้อนกลับ",
-        title:"ไม่พบหน้านี้ (404) | Baume Chemical",
-        ogtitle:"404 • ไม่พบหน้านี้",
-        ogdesc:"เราไม่พบหน้าที่คุณต้องการ กลับไปหน้าแรกได้เลย",
-        h1:"ไม่พบหน้านี้",
-        h1_sub:"ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือหมดอายุ",
-        c1_btn_top:"ไปหน้า Home"
+      th: {
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับเมนูหลัก",
+        hero_title:"ไม่พบหน้านี้",
+        hero_tagline:"ลิงก์อาจถูกย้าย เปลี่ยนชื่อ หรือไม่มีอยู่จริง ลองค้นหา หรือตรวจดูลิงก์ยอดนิยมด้านล่างได้เลย",
+        search_btn:"ค้นหา", go_home:"ไปหน้าแรก", search_ph:"พิมพ์คำค้นหา...",
+        popular_h:"ลิงก์ยอดนิยม",
+        l_pretreat:"Pretreatment",
+        l_protect:"Protective Treatment & Anti-tarnish",
+        l_at_blog:"คู่มือเลือกสารกันหมอง (Anti-tarnish)",
+        l_salt:"Salt Spray — Quick Guide",
+        l_contact:"ติดต่อเรา",
+        c_black:"Blackening", c_pass:"Passivation", c_polish:"Polishing", c_plating:"Plating",
+        contact_h:"ต้องการความช่วยเหลือ?",
+        contact_p:"ส่งอีเมลถึงเรา หรือแชทผ่าน LINE ทีมงานจะช่วยหาเนื้อหาที่คุณต้องการ",
+        line_cta:"เพิ่มเพื่อน/แชทกับเรา",
+        sitemap:"Sitemap", report:"รายงานลิงก์เสีย",
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved.",
       },
-      en:{
-        btn_back:"Back",
-        title:"Page not found (404) | Baume Chemical",
-        ogtitle:"404 • Page not found",
-        ogdesc:"We couldn’t find that page. Head back home.",
-        h1:"Page not found",
-        h1_sub:"The link may have moved, been renamed, or expired.",
-        c1_btn_top:"Go Home"
+      en: {
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Home",
+        hero_title:"Page not found",
+        hero_tagline:"The link may have moved, been renamed, or never existed. Try searching or browse popular links below.",
+        search_btn:"Search", go_home:"Go Home", search_ph:"Type your search...",
+        popular_h:"Popular links",
+        l_pretreat:"Pretreatment",
+        l_protect:"Protective Treatment & Anti-tarnish",
+        l_at_blog:"Anti-tarnish selection guide",
+        l_salt:"Salt Spray — Quick Guide",
+        l_contact:"Contact us",
+        c_black:"Blackening", c_pass:"Passivation", c_polish:"Polishing", c_plating:"Plating",
+        contact_h:"Need help?",
+        contact_p:"Email us or chat via LINE — we’ll help you find what you need.",
+        line_cta:"Add friend / Chat with us",
+        sitemap:"Sitemap", report:"Report broken link",
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved.",
       }
     };
+
+    // Elements
+    const els = {
+      header: document.getElementById('siteHeader'),
+      nav: document.getElementById('primary-nav'),
+      toggle: document.querySelector('.nav-toggle'),
+      scrim: document.querySelector('.menu-scrim'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+      phNodes: () => document.querySelectorAll('[data-i18n-placeholder]'),
+    };
+
+    // Apply language
     function applyLang(lang){
-      const L = (lang==='en') ? 'en' : 'th';
-      document.documentElement.lang = L;
-
-      document.querySelectorAll('[data-i18n-key]').forEach(n=>{
-        const k = n.getAttribute('data-i18n-key');
-        const v = I18N[L][k];
-        if(typeof v!=='undefined') n.textContent = v;
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      document.querySelectorAll('.lang-switch .lang-btn')
+        .forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node=>{
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
-      document.title = I18N[L].title;
-      document.querySelector('meta[property="og:title"]')?.setAttribute('content', I18N[L].ogtitle);
-      document.querySelector('meta[property="og:description"]')?.setAttribute('content', I18N[L].ogdesc);
-
-      // Update state for all language buttons
-      document.querySelectorAll('.lang-btn').forEach(btn=>{
-        btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
+      els.phNodes().forEach(node=>{
+        const key = node.getAttribute('data-i18n-placeholder');
+        if (key && I18N[sel] && I18N[sel][key]) node.placeholder = I18N[sel][key];
       });
-
-      try{ localStorage.setItem('lang', L);}catch(e){}
-    }
-    (function initLang(){
-      let saved='th';
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+      // recalc header height (if text wrap changed)
       try{
-        const v=localStorage.getItem('lang');
-        if(v==='en'||v==='th') saved=v;
+        const h = els.header.getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
       }catch(e){}
+    }
+
+    // Init language
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      document.querySelectorAll('.lang-btn').forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+      document.querySelectorAll('.lang-switch .lang-btn')
+        .forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+
+    // Header: set height & glass on scroll
+    (function(){
+      const setH = ()=>{ const h = els.header ? Math.round(els.header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> els.header && els.header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+    })();
+
+    // Mobile menu with body lock
+    (function(){
+      const {header, toggle, nav, scrim} = els;
+      if(!toggle || !nav || !scrim) return;
+      let lockY = 0;
+      function openMenu(v){
+        header.classList.toggle('open', v);
+        toggle.setAttribute('aria-expanded', String(v));
+        nav.setAttribute('aria-hidden', String(!v));
+        v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+        if(v){
+          lockY = window.scrollY;
+          document.body.classList.add('no-scroll');
+          document.body.style.top = `-${lockY}px`;
+          const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+          first && first.focus({preventScroll:true});
+        }else{
+          document.body.classList.remove('no-scroll');
+          document.body.style.top = '';
+          window.scrollTo(0, lockY);
+          toggle.focus({preventScroll:true});
+        }
+      }
+      toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+      scrim.addEventListener('click', ()=> openMenu(false));
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+      window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+    })();
+
+    // Back smart (use history when same-origin)
+    (function(){
+      const btn = document.querySelector('[data-back]');
+      if(!btn) return;
+      btn.addEventListener('click', function(e){
+        try{
+          const ref = document.referrer;
+          const sameOrigin = ref && new URL(ref).origin === location.origin;
+          if(sameOrigin){ e.preventDefault(); history.back(); }
+        }catch(err){}
+      });
+    })();
+
+    // Highlight current page (none for 404, keep nav hover style only)
+
+    // Search: submit to Google site search + simple client-side suggestions
+    (function(){
+      const form = document.getElementById('siteSearch');
+      const q = document.getElementById('q');
+      const dataset = [
+        {t:'Pretreatment', u:'/products/pretreatment/'},
+        {t:'Plating', u:'/products/platingcoating/'},
+        {t:'Blackening', u:'/products/blackening/'},
+        {t:'Passivation', u:'/products/passivation/'},
+        {t:'Polishing', u:'/products/polishing/'},
+        {t:'Strippers', u:'/products/strippers/'},
+        {t:'Protective Treatment & Anti-tarnish', u:'/products/protective/'},
+        {t:'Equipment', u:'/products/equipment/'},
+        {t:'Contact Us', u:'/contact-us.html'},
+        {t:'Anti-tarnish selection guide', u:'/blog/anti-tarnish-selection/'},
+        {t:'Salt Spray quick guide', u:'/blog/salt-spray-quick-guide/'},
+      ];
+      // Simple inline suggestions under Popular if user types
+      q?.addEventListener('input', ()=>{
+        const v = (q.value||'').trim().toLowerCase();
+        const box = document.getElementById('popularLinks');
+        if(!box) return;
+        if(!v){ box.querySelectorAll('li').forEach(li=> li.style.display=''); return; }
+        box.querySelectorAll('li').forEach(li=>{
+          const a = li.querySelector('a'); const txt = (a?.textContent||'').toLowerCase();
+          li.style.display = txt.includes(v) ? '' : 'none';
+        });
+      });
+      form?.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const term = (q.value||'').trim();
+        if(!term){
+          // if empty, open blog index
+          location.href = 'https://www.baumechemical.com/404.html';
+          return;
+        }
+        const url = 'https://www.google.com/search?q=' + encodeURIComponent('site:baumechemical.com ' + term);
+        window.open(url, '_self');
+      });
     })();
   </script>
-
-  <!-- หมายเหตุ: ให้เซิร์ฟเวอร์ส่งสถานะ HTTP 404 สำหรับไฟล์นี้ -->
 </body>
 </html>
