@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED) | Baume Chemical Blog</title>
+  <title id="metaTitle">Electrophoretic Coating (E-coating) — EPA 2020 | Baume Chemical Blog</title>
 
   <!-- === SEO base === -->
-  <meta name="description" content="รวมปัญหายอดฮิตของแลคเกอร์ไฟฟ้า (E-coat/ED): ค่าเริ่มต้น การเตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ การดูแลบ่อ และตารางแก้ปัญหา (ฟอง/ฟิชอาย/พองหลังอบ/หนาไม่เข้า/เงาไม่ใส/สีเหลือง ฯลฯ)">
+  <meta name="description" id="metaDesc" content="E-coating คือการเคลือบแลคเกอร์ด้วยไฟฟ้าได้ฟิล์มบาง เรียบ สม่ำเสมอ ครอบคลุมซอกมุม บทความนี้สรุปจุดเด่น ขั้นตอนทำงาน สภาวะบ่อ กำลังไฟ การอบ การผสม ปรับน้ำยา และอุปกรณ์สำหรับ EPA 2020">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <link rel="canonical" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
-  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html">
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html">
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html">
+
+  <!-- Favicons (วางไฟล์ไว้ที่ราก / ตามที่ตั้งค่าไว้) -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
@@ -20,54 +22,31 @@
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale" content="th_TH" id="ogLocale">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED) — Baume Chemical Blog">
-  <meta property="og:description" content="ค่าเริ่มต้น เตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ ดูแลบ่อ และตารางปัญหา สำหรับงาน E-coat/ED">
-  <meta property="og:url" content="https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/">
-  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg">
-  <meta property="og:image:alt" content="Electrophoretic Lacquer (E-coat/ED) — Baume Chemical Blog">
+  <meta property="og:title" id="ogTitle" content="Electrophoretic Coating (E-coating) — EPA 2020 — Baume Chemical Blog">
+  <meta property="og:description" id="ogDesc" content="สรุปแนวทาง E-coating: จุดเด่น ขั้นตอนทำงาน สภาวะบ่อ/ไฟ การอบ การผสม/ปรับน้ำยา และอุปกรณ์">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta property="og:image:alt" content="E-coating EPA 2020 — Baume Chemical">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},
-    "sameAs":["https://line.me/ti/p/~baumechemical"]
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},"sameAs":["https://line.me/ti/p/~baumechemical"]}
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "inLanguage":"th"
-  }
+  {"@context":"https://schema.org","@type":"WebSite","name":"Baume Chemical","url":"https://www.baumechemical.com/","inLanguage":"th"}
   </script>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)",
-    "url":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/",
-    "inLanguage":"th",
-    "description":"แนวทางคุมคุณภาพและแก้ปัญหา ED: ค่าเริ่มต้น เตรียมผิว หน้าต่างกระบวนการ ฟิกซ์เจอร์ ดูแลบ่อ ตารางปัญหา",
-    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
-    "image":"https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg"
-  }
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Electrophoretic Coating (E-coating) — EPA 2020","url":"https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html","inLanguage":"th","description":"E-coating ให้ฟิล์มบาง เรียบ สม่ำเสมอ ครอบคลุมซอกมุม รวมสเปก EPA 2020: ขั้นตอน สภาวะบ่อ/ไฟ การอบ การผสม/ปรับน้ำยา และอุปกรณ์","publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},"image":"https://i.imgur.com/3mWQsKe.jpeg"}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
     {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
-    {"@type":"ListItem","position":3,"name":"E-coat/ED Troubleshooting","item":"https://www.baumechemical.com/blog/electrophoretic-lacquer-troubleshooting/"}
+    {"@type":"ListItem","position":3,"name":"E-coating EPA 2020","item":"https://www.baumechemical.com/blog/blog/electrophoretic-lacquer-troubleshooting/index.html"}
   ]}
   </script>
 
@@ -76,7 +55,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg"/>
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
 
   <style>
     :root{
@@ -89,7 +68,7 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
-    /* ===== GLASS HEADER: transparent start → dark on scroll ===== */
+    /* ===== GLASS HEADER: transparent → dark on scroll ===== */
     .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
     .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
@@ -101,15 +80,12 @@
     .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
-
-    /* Inline language switch */
     .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .site-header.is-scrolled .lang-switch{background:#ffffffdd}
     .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
     .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Burger */
     .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
@@ -131,13 +107,20 @@
     body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/image5-1.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+
+    /* Back button chip */
+    .back-chip{
+      position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1;
+      display:inline-flex; align-items:center; gap:6px;
+      padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none;
+      background:#fff; color:#0f172a; border:1px solid rgba(2,8,20,.08); box-shadow:var(--shadow-1)
+    }
     .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Layout (sticky TOC on wide screens) ===== */
+    /* ===== Layout & TOC ===== */
     .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
     @media (min-width:1100px){
       main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
@@ -146,7 +129,6 @@
       section.section-block{ grid-column:2 }
     }
 
-    /* ===== TOC card ===== */
     #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
     #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
     #toc p{display:grid;gap:8px;margin:10px 0 0}
@@ -154,17 +136,20 @@
     .toc-chip::after{ content:"›"; opacity:.5 }
     .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* ===== Section cards ===== */
     section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
     section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
     .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
-    #rec>h2.section{ --icon:"🧪" }
-    #prep>h2.section{ --icon:"🧼" }
-    #window>h2.section{ --icon:"⏱️" }
-    #fixture>h2.section{ --icon:"🧰" }
-    #care>h2.section{ --icon:"🛡️" }
-    #defects>h2.section{ --icon:"⚠️" }
+    #intro>h2.section{ --icon:"📖" }
+    #benefits>h2.section{ --icon:"✨" }
+    #product>h2.section{ --icon:"🧪" }
+    #workflow>h2.section{ --icon:"🛠️" }
+    #ops>h2.section{ --icon:"⚙️" }
+    #curing>h2.section{ --icon:"🔥" }
+    #mix>h2.section{ --icon:"🧴" }
+    #adjust>h2.section{ --icon:"🧭" }
+    #additives>h2.section{ --icon:"🧷" }
+    #equip>h2.section{ --icon:"🧰" }
     #links>h2.section{ --icon:"🔗" }
     .section-block>h2.section::after{ content:"#"; position:absolute; right:10px; top:50%; transform:translateY(-50%); opacity:0; transition:opacity .2s ease; font-weight:800; color:var(--muted); font-size:.92rem }
     .section-block:hover>h2.section::after{ opacity:.85 }
@@ -172,12 +157,11 @@
     .lead{margin:0 0 16px; color:#5f6d7c}
     .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
     .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
-    .table thead th::after{content:""; position:absolute; inset:0 0 auto 0; height:2px; background:linear-gradient(90deg,#d9efe4,transparent)}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
     .table tbody tr:hover{ background:#f6fbf8 }
 
-    /* Part switcher */
+    /* Switcher */
     [hidden]{display:none !important}
     .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
     .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
@@ -201,15 +185,13 @@
     /* Reveal */
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
-
-    /* Utils */
     html{scroll-behavior:smooth}
     .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
   </style>
 </head>
 <body>
 
-  <!-- ===== Header (transparent → dark on scroll) ===== -->
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -221,7 +203,6 @@
         <span class="bar"></span>
       </button>
 
-      <!-- Global menu + language switch -->
       <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
         <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
         <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
@@ -244,289 +225,202 @@
 
   <!-- ===== Hero ===== -->
   <header class="hero">
-    <a class="back-chip" href="https://www.baumechemical.com/" data-back data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับ</a>
     <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
-      <h1 data-i18n-key="hero_title">คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)</h1>
-      <p data-i18n-key="hero_tagline">ตั้งค่าพื้นฐาน + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางแก้ไขปัญหาแบบยิงตรงจุด</p>
+      <h1 data-i18n-key="hero_title">Electrophoretic Coating (E-coating) — EPA 2020</h1>
+      <p data-i18n-key="hero_tagline">ได้ฟิล์มเคลือบบาง เรียบ สม่ำเสมอ ครอบคลุมซอกมุม พร้อมสเปกการทำงานที่ใช้งานได้จริง</p>
     </div>
   </header>
 
   <main class="wrap">
     <!-- Part Switcher -->
     <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
-      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: ค่าเริ่มต้น & หน้าต่างกระบวนการ</span></button>
-      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ตารางปัญหา</span></button>
+      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: ภาพรวม & ขั้นตอนทำงาน</span></button>
+      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: สเปกบ่อ/ไฟ การอบ ผสม/ปรับน้ำยา</span></button>
     </div>
 
     <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
       <p>
-        <a class="toc-chip" href="#rec" data-part="1" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a>
-        <a class="toc-chip" href="#prep" data-part="1" data-i18n-key="toc_prep">การเตรียมผิวก่อนเคลือบ</a>
-        <a class="toc-chip" href="#window" data-part="1" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a>
-        <a class="toc-chip" href="#fixture" data-part="2" data-i18n-key="toc_fixture">การจัดวาง</a>
-        <a class="toc-chip" href="#care" data-part="2" data-i18n-key="toc_care">การดูแลบ่อและคุณภาพ</a>
-        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a>
-        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้องกับบทความนี้</a>
+        <a class="toc-chip" href="#intro" data-part="1" data-i18n-key="toc_intro">E-coating คืออะไร</a>
+        <a class="toc-chip" href="#benefits" data-part="1" data-i18n-key="toc_benefits">E-coating ช่วยอะไรบ้าง?</a>
+        <a class="toc-chip" href="#product" data-part="1" data-i18n-key="toc_product">EPA 2020</a>
+        <a class="toc-chip" href="#workflow" data-part="1" data-i18n-key="toc_workflow">ขั้นตอนการทำงาน</a>
+
+        <a class="toc-chip" href="#ops" data-part="2" data-i18n-key="toc_ops">สภาวะการทำงาน</a>
+        <a class="toc-chip" href="#curing" data-part="2" data-i18n-key="toc_curing">การอบ (Curing)</a>
+        <a class="toc-chip" href="#mix" data-part="2" data-i18n-key="toc_mix">การผสม & อัตราส่วน</a>
+        <a class="toc-chip" href="#adjust" data-part="2" data-i18n-key="toc_adjust">การปรับน้ำยา (RI/pH/MEQ ฯลฯ)</a>
+        <a class="toc-chip" href="#additives" data-part="2" data-i18n-key="toc_additives">ตัวทำละลาย/เสถียรภาพ</a>
+        <a class="toc-chip" href="#equip" data-part="2" data-i18n-key="toc_equip">อุปกรณ์ที่แนะนำ</a>
+        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
       </p>
     </nav>
 
-    <!-- 2. ค่าเริ่มต้นที่แนะนำ -->
-    <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
-      <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
-      <p data-i18n-key="rec_p1">ระบบ ED มีหลายชนิด (คาโทดิก/แอโนดิก อะคริลิก/ยูรีเทน) — ให้ยึดสเปกผู้ผลิตเป็นหลัก และปรับครั้งละตัวบนชิ้นงานจริง</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="rec_th_param">พารามิเตอร์</th>
-              <th data-i18n-key="rec_th_range">ช่วงตั้งต้น</th>
-              <th data-i18n-key="rec_th_note">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="ed_sys_t">ชนิดระบบ</td>
-              <td data-i18n-key="ed_sys_v">คาโทดิกใส (Jewelry/Decor)</td>
-              <td data-i18n-key="ed_sys_n">นิยมสำหรับใส/เงา และทนหมอง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_solids_t">ของแข็ง (Solids)</td>
-              <td data-i18n-key="ed_solids_v">8–15 %wt</td>
-              <td data-i18n-key="ed_solids_n">หนาฟิล์มสัมพันธ์กับ solids/แรงดัน/เวลา</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_temp_t">อุณหภูมิอ่าง</td>
-              <td data-i18n-key="ed_temp_v">25–30°C</td>
-              <td data-i18n-key="ed_temp_n">สูงไป → ฟอง/พิตติ้ง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_ph_t">pH</td>
-              <td data-i18n-key="ed_ph_v">5.0–7.0</td>
-              <td data-i18n-key="ed_ph_n">แล้วแต่ระบบ (ยึดสเปก)</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_cond_t">Conductivity</td>
-              <td data-i18n-key="ed_cond_v">500–1500 µS/cm</td>
-              <td data-i18n-key="ed_cond_n">ต่ำไป → เคลือบไม่เข้า, สูงไป → ฟอง/คราบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_v_t">แรงดัน (Ramp)</td>
-              <td data-i18n-key="ed_v_v">30→90–120 V ภายใน 30–90 s</td>
-              <td data-i18n-key="ed_v_n">เริ่มเบาแล้วไล่ขึ้น ลดไหม้/ฟอง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_time_t">เวลาแช่</td>
-              <td data-i18n-key="ed_time_v">30–120 s</td>
-              <td data-i18n-key="ed_time_n">นานไปเกิดหนาเกิน/รัน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_thk_t">ความหนาฟิล์ม</td>
-              <td data-i18n-key="ed_thk_v">5–20 µm</td>
-              <td data-i18n-key="ed_thk_n">ตามสเปกลูกค้า/การใช้งาน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_bake_t">อบคิวรีง</td>
-              <td data-i18n-key="ed_bake_v">150–170°C × 20–30 นาที</td>
-              <td data-i18n-key="ed_bake_n">คุมโปรไฟล์เตา/ไหลลม</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_rinse_t">การล้าง</td>
-              <td data-i18n-key="ed_rinse_v">DI ไหลทวน 2–3 ขั้น + UF Rinse</td>
-              <td data-i18n-key="ed_rinse_n">ลดคราบ/ลด drag-out</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="ed_agit_t">การกวน/การไหล</td>
-              <td data-i18n-key="ed_agit_v">อ่อน/สม่ำเสมอ</td>
-              <td data-i18n-key="ed_agit_n">แรงไปเกิดริ้ว/ฟอง</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="lead" data-i18n-key="safety_note">ความปลอดภัย: ปฏิบัติตามคู่มือผู้ผลิต ใช้ PPE และระบบระบายอากาศที่เหมาะสม</p>
+    <!-- ===== Sections: Part 1 ===== -->
+    <section id="intro" data-part="1" class="reveal section-block" aria-labelledby="intro-h">
+      <h2 id="intro-h" class="section" data-i18n-key="intro_h">E-coating คืออะไร</h2>
+      <p class="lead" data-i18n-key="intro_p1">การชุบแลคเกอร์ไฟฟ้า (Electrophoretic Coating หรือ E-coating)คือกระบวนการเคลือบพื้นผิวโลหะด้วยการใช้หลักการทางไฟฟ้าเพื่อดึงอนุภาคสีหรือแลคเกอร์ให้ไปเกาะติดกับชิ้นงาน กระบวนการนี้ทำให้ได้ชั้นเคลือบที่บาง เรียบเนียน และสม่ำเสมอทั่วทั้งชิ้นงาน แม้ในบริเวณที่เข้าถึงยาก เช่น ซอกมุมหรือรูเล็กๆ ไม่เพียงแต่ช่วยเพิ่มความสวยงามและความทนทานให้กับชิ้นงานเท่านั้น แต่ยังเป็นมิตรต่อสิ่งแวดล้อมและช่วยลดต้นทุนการผลิตอีกด้วย ทำให้เป็นทางเลือกยอดนิยมในอุตสาหกรรมต่างๆ ทั่วโลก</p>
     </section>
 
-    <!-- 3. การเตรียมผิวก่อนเคลือบ -->
-    <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
-      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนเคลือบ</h2>
+    <section id="benefits" data-part="1" class="reveal section-block" aria-labelledby="benefits-h">
+      <h2 id="benefits-h" class="section" data-i18n-key="benefits_h">E-coating ช่วยอะไรบ้าง?</h2>
       <ul>
-        <li data-i18n-key="prep_1">ล้างไขมัน (ด่าง/อัลตร้าโซนิก) → ล้างน้ำหลายขั้น</li>
-        <li data-i18n-key="prep_2">Neutralize/Activate ตามวัสดุชิ้นงาน → ล้าง DI เข้ม</li>
-        <li data-i18n-key="prep_3">เลี่ยงซิลิโคน/น้ำมันเข้าบ่อ (ฟิชอายตัวดี) — เช็กล้างมือ/ผ้า/สารเงา</li>
-        <li data-i18n-key="prep_4">พักระบายน้ำ (drain) ให้พอ ก่อนเข้าบ่อ ED</li>
-        <li data-i18n-key="prep_5">หลังเคลือบ ล้าง DI + UF Rinse → เป่าไล่น้ำ → เข้าเตาโดยเร็ว</li>
+        <li data-i18n-key="b1">ให้การเคลือบที่สม่ำเสมอและทั่วถึง: เนื่องจากใช้ไฟฟ้าในการดึงอนุภาคสี ทำให้สีเคลือบสามารถเข้าถึงทุกส่วนของชิ้นงานได้ดีกว่าการพ่นสีทั่วไป ช่วยลดปัญหาการเคลือบไม่ทั่วถึง และทำให้ชิ้นงานดูเรียบร้อยสวยงาม</li>
+        <li data-i18n-key="b2">เพิ่มความทนทานและการปกป้อง: ชั้นเคลือบที่ได้มีความแข็งแรง ทนทานต่อการขีดข่วน การกัดกร่อน และสารเคมีต่างๆ ได้ดีเยี่ยม จึงช่วยยืดอายุการใช้งานของชิ้นงาน และป้องกันการเกิดสนิม</li>
+        <li data-i18n-key="b3">เป็นมิตรต่อสิ่งแวดล้อม: สีที่ใช้ในกระบวนการ E-coating ส่วนใหญ่เป็นชนิดที่มีน้ำเป็นตัวทำละลาย (water-based) ทำให้ไม่มีสารระเหยที่เป็นอันตราย (VOCs) หรือมีในปริมาณที่น้อยมาก ลดผลกระทบต่อสิ่งแวดล้อมและสุขภาพของผู้ปฏิบัติงาน</li>
+        <li data-i18n-key="b4">ประหยัดต้นทุนและวัตถุดิบ: กระบวนการนี้มีการใช้สีอย่างมีประสิทธิภาพสูง อนุภาคสีส่วนเกินจะถูกดึงกลับมาใช้งานใหม่ ทำให้สิ้นเปลืองวัตถุดิบน้อยลง และยังช่วยลดต้นทุนการผลิตในระยะยาวอีกด้วย</li>
+        <li data-i18n-key="b5">เหมาะกับงานที่มีรายละเอียดซับซ้อน: ด้วยความสามารถในการเข้าถึงทุกซอกมุม ทำให้ E-coating เหมาะอย่างยิ่งสำหรับชิ้นงานที่มีรูปทรงซับซ้อน เช่น ชิ้นส่วนรถยนต์ อะไหล่อิเล็กทรอนิกส์ หรือเครื่องประดับ</li>
       </ul>
     </section>
 
-    <!-- 4. หน้าต่างกระบวนการ -->
-    <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
-      <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="win_th_cond">ตัวแปร</th>
-              <th data-i18n-key="win_th_low">ต่ำ</th>
-              <th data-i18n-key="win_th_mid">กลาง</th>
-              <th data-i18n-key="win_th_high">สูง</th>
-              <th data-i18n-key="win_th_obs">สังเกตการณ์</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="w_v">แรงดัน</td>
-              <td data-i18n-key="w_v_l">ต่ำ</td>
-              <td data-i18n-key="w_v_m">Ramp กลาง</td>
-              <td data-i18n-key="w_v_h">สูง</td>
-              <td data-i18n-key="w_v_n">ต่ำ → ฟิล์มบาง/ไม่เข้า; สูง → ฟอง/ไหม้/รัน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_time">เวลา</td>
-              <td data-i18n-key="w_time_l">สั้น</td>
-              <td data-i18n-key="w_time_m">เหมาะสม</td>
-              <td data-i18n-key="w_time_h">ยาว</td>
-              <td data-i18n-key="w_time_n">สั้น → บาง/รูพรุน; ยาว → หนาเกิน/รัน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_temp">อุณหภูมิ</td>
-              <td data-i18n-key="w_temp_l">ต่ำ</td>
-              <td data-i18n-key="w_temp_m">25–30°C</td>
-              <td data-i18n-key="w_temp_h">สูง</td>
-              <td data-i18n-key="w_temp_n">สูง → ฟอง/พิตติ้ง/หม่น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_solids">Solids</td>
-              <td data-i18n-key="w_solids_l">ต่ำ</td>
-              <td data-i18n-key="w_solids_m">8–15%</td>
-              <td data-i18n-key="w_solids_h">สูง</td>
-              <td data-i18n-key="w_solids_n">ต่ำ → บาง; สูง → หนา/รัน/หม่น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_cond">Conductivity</td>
-              <td data-i18n-key="w_cond_l">ต่ำ</td>
-              <td data-i18n-key="w_cond_m">500–1500</td>
-              <td data-i18n-key="w_cond_h">สูง</td>
-              <td data-i18n-key="w_cond_n">ต่ำ → เคลือบไม่ก่อฟิล์ม; สูง → ฟอง/คราบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_pH">pH</td>
-              <td data-i18n-key="w_pH_l">ต่ำ</td>
-              <td data-i18n-key="w_pH_m">5–7</td>
-              <td data-i18n-key="w_pH_h">สูง</td>
-              <td data-i18n-key="w_pH_n">ผิดช่วง → สี/เงาเพี้ยน การไหลตัวไม่ดี</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_flow">การกวน/การไหล</td>
-              <td data-i18n-key="w_flow_l">ไม่มี</td>
-              <td data-i18n-key="w_flow_m">อ่อน</td>
-              <td data-i18n-key="w_flow_h">แรง</td>
-              <td data-i18n-key="w_flow_n">แรง → ริ้ว/ฟอง; อ่อน → ไม่เสมอ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="w_bake">อบ</td>
-              <td data-i18n-key="w_bake_l">อ่อน</td>
-              <td data-i18n-key="w_bake_m">150–170°C×20–30′</td>
-              <td data-i18n-key="w_bake_h">แรง</td>
-              <td data-i18n-key="w_bake_n">อ่อน → ยึดเกาะไม่ดี; แรง → เหลือง/แตกลาย</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <!-- 5. การจัดวาง -->
-    <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
-      <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
-      <p data-i18n-key="fixture_p1">แขวนแนวที่ระบายก๊าซได้ดี หลีกเลี่ยงโพรงอากาศ ปรับมุมให้ของเหลวไหลออก ลดรัน/คราบน้ำ</p>
-      <p data-i18n-key="fixture_p2">คุมระยะขั้ว–ชิ้นงานให้สม่ำเสมอ ใช้แผ่นบัง (shield) ลด HCD บริเวณขอบ/สัน</p>
-      <p data-i18n-key="fixture_p3">ใช้ถุงแอโนด/ระบบแยก anolyte สำหรับคาโทดิก ED และคุมการไหลเวียน anolyte อย่างสม่ำเสมอ</p>
-      <p data-i18n-key="fixture_p4">รันแรงดันแบบ ramp (เช่น 0–30 V → 60–90 V) เพื่อให้ไล่ฟิล์มขึ้นอย่างนุ่ม</p>
-    </section>
-
-    <!-- 6. การดูแลบ่อและคุณภาพ -->
-    <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
-      <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อและคุณภาพ</h2>
+    <section id="product" data-part="1" class="reveal section-block" aria-labelledby="product-h">
+      <h2 id="product-h" class="section" data-i18n-key="product_h">EPA 2020 — แลคเกอร์ไฟฟ้า</h2>
+      <p data-i18n-key="product_p1">แลกเกอร์ไฟฟ้า (Electroplating Lacquer) เป็นกระบวนการเคลือบผิววัสดุด้วยการใช้งานไฟฟ้า เพื่อเพิ่มคุณสมบัติพิเศษให้กับชิ้นงาน เช่น ความต้านทานการกัดกร่อน การป้องกันสนิม หรือเพิ่มความเงางาม โดยสารเคลือบนี้จะช่วยเพิ่มความทนทานให้กับชิ้นงานที่ถูกเคลือบโดยไม่กระทบต่อลักษณะเดิมของวัสดุการใช้แลกเกอร์ไฟฟ้าจะช่วยให้ชิ้นงานมีความสวยงามและมีอายุการใช้งานที่ยาวนานขึ้น เหมาะสำหรับการใช้งานในหลายอุตสาหกรรม ไม่ว่าจะเป็นการผลิตเครื่องใช้ไฟฟ้า อุปกรณ์ทางอุตสาหกรรม หรือส่วนประกอบของยานยนต์</p>
+      <h3 data-i18n-key="product_h3_features">คุณสมบัติเด่น</h3>
       <ul>
-        <li data-i18n-key="care_1">ติดตาม Solids/pH/Conductivity/อุณหภูมิ และเติมตาม drag-out/UF balance</li>
-        <li data-i18n-key="care_2">ระบบ UF: รักษาอัตรา permeate/retentate ตามสเปก ช่วยคุมความสะอาดและลดฟอง</li>
-        <li data-i18n-key="care_3">Anolyte (คาโทดิก ED): คุมค่ากรด/การไหล เปลี่ยนตามรอบ</li>
-        <li data-i18n-key="care_4">คัดแยกน้ำมัน/ซิลิโคน: ใช้ถังดักน้ำมัน, หลีกเลี่ยงน้ำยา/ผ้าที่มีซิลิโคน, ใช้ defoamer แบบ non-silicone</li>
-        <li data-i18n-key="care_5">กรองต่อเนื่อง + คาร์บอนทรีตเมนต์ตามรอบเพื่อกำจัดสารอินทรีย์ที่เสื่อม</li>
-        <li data-i18n-key="care_6">QC: ความหนา (eddy current/น้ำหนัก), เงา/หมอก (gloss/haze), การยึดเกาะ (cross-hatch/tape), ทนเหงื่อ/สารเคมี, การทนเหลืองจากเตา</li>
+        <li data-i18n-key="pf1">ฟิล์มเงา ใส ไม่เป็นหยด</li>
+        <li data-i18n-key="pf2">ยึดเกาะดี คงทนหลังเคลือบ</li>
+        <li data-i18n-key="pf3">พิษต่ำ ปลอดภัยต่อผู้ปฏิบัติงาน</li>
+        <li data-i18n-key="pf4">เหมาะกับพื้นผิวโลหะ/ผิวชุบหลากหลาย</li>
       </ul>
     </section>
 
-    <!-- 7. ตารางปัญหาพบเจอบ่อย -->
-    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
-      <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
+    <section id="workflow" data-part="1" class="reveal section-block" aria-labelledby="workflow-h">
+      <h2 id="workflow-h" class="section" data-i18n-key="workflow_h">ขั้นตอนการทำงาน</h2>
+      <p data-i18n-key="wf_note">แนะนำใช้น้ำกลั่น (DI) เพื่อลดสิ่งปนเปื้อน ก่อนและหลังเคลือบ</p>
+      <ol>
+        <li data-i18n-key="wf1">เตรียมชิ้นงาน</li>
+        <li data-i18n-key="wf2">ล้างน้ำกลั่น 2 ครั้ง</li>
+        <li data-i18n-key="wf3">จุ่มปรับผิวด้วย 2% แลคเกอร์ 2020</li>
+        <li data-i18n-key="wf4">E-coat ด้วยแลคเกอร์ 2020 โดยใช้ไฟฟ้า</li>
+        <li data-i18n-key="wf5">ล้างน้ำกลั่น 2 ครั้ง</li>
+        <li data-i18n-key="wf6">จุ่มน้ำยากำจัดคราบน้ำ</li>
+        <li data-i18n-key="wf7">เป่าแห้ง</li>
+        <li data-i18n-key="wf8">อบชิ้นงาน (Curing)</li>
+      </ol>
+    </section>
+    <!-- ===== Sections: Part 2 ===== -->
+    <section id="ops" data-part="2" class="reveal section-block" aria-labelledby="ops-h">
+      <h2 id="ops-h" class="section" data-i18n-key="ops_h">สภาวะการทำงาน (Operating Conditions)</h2>
       <div class="table">
         <table>
           <thead>
             <tr>
-              <th data-i18n-key="def_th_sym">อาการ</th>
-              <th data-i18n-key="def_th_cause">สาเหตุหลัก</th>
-              <th data-i18n-key="def_th_fix">แนวทางแก้</th>
+              <th data-i18n-key="ops_th_param">พารามิเตอร์</th>
+              <th data-i18n-key="ops_th_value">ช่วง/ค่า</th>
+              <th data-i18n-key="ops_th_note">หมายเหตุ</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td data-i18n-key="d1_s">ฟิชอาย/คราเตอร์</td>
-              <td data-i18n-key="d1_c">ซิลิโคน/น้ำมันปน, ล้างไม่พอ</td>
-              <td data-i18n-key="d1_f">คัดแยกซิลิโคน, เพิ่มล้าง DI, คาร์บอนทรีตเมนต์, ใช้ defoamer non-silicone</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d2_s">พองหลังอบ (blister)</td>
-              <td data-i18n-key="d2_c">ก๊าซค้าง/ความชื้น, อบอ่อน, ปนเปื้อน</td>
-              <td data-i18n-key="d2_f">เป่าไล่น้ำก่อนอบ, เพิ่มเวลา/อุณหภูมิอบตามสเปก, ปรับ ramp</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d3_s">ฟอง/พิตติ้ง</td>
-              <td data-i18n-key="d3_c">อุณหภูมิสูง, กวนแรง, Conductivity สูง, ปนเปื้อน</td>
-              <td data-i18n-key="d3_f">ลดอุณหภูมิ/การกวน, ปรับค่า cond., กรอง/UF/คาร์บอน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d4_s">รัน/หนาไหล</td>
-              <td data-i18n-key="d4_c">แรงดันสูง/เวลายาว, ฟิล์มหนาเกิน, Drain ไม่พอ</td>
-              <td data-i18n-key="d4_f">ลดแรงดัน/เวลาหรือทำ ramp, เพิ่มเวลาพักไหล, ปรับของแข็ง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d5_s">เงาไม่ใส/หมอก</td>
-              <td data-i18n-key="d5_c">ของแข็งสูง, ปนเปื้อนอินทรีย์, อุณหภูมิสูง</td>
-              <td data-i18n-key="d5_f">ปรับ solids, คาร์บอนทรีตเมนต์, ลดอุณหภูมิ, เพิ่ม UF</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d6_s">ยึดเกาะไม่ดี</td>
-              <td data-i18n-key="d6_c">เตรียมผิวไม่สะอาด, อบอ่อน, pH/cond. นอกช่วง</td>
-              <td data-i18n-key="d6_f">รีทำความสะอาด–Activate, จูน pH/cond., ปรับโปรไฟล์อบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d7_s">เหลือง/สีเพี้ยน</td>
-              <td data-i18n-key="d7_c">อบแรงเกิน, ฟิล์มหนาเกิน, pH/สารเติมเพี้ยน</td>
-              <td data-i18n-key="d7_f">ลดอุณหภูมิ/เวลอบ, จูน pH/เติมสารตามคู่มือ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d8_s">ไม่เข้าโพรง/Throw power ต่ำ</td>
-              <td data-i18n-key="d8_c">แรงดันเริ่มต่ำเกิน/โปรไฟล์ ramp ไม่เหมาะ, cond. ต่ำ</td>
-              <td data-i18n-key="d8_f">ปรับ ramp/แรงดันเฉลี่ย, เพิ่ม cond. ภายในช่วง, ปรับจัดวาง/ระยะขั้ว</td>
-            </tr>
+            <tr><td>EPA 2020</td><td>330 g/L</td><td data-i18n-key="ops_note_lac">ความเข้มข้นแลคเกอร์หลัก</td></tr>
+            <tr><td>Dye (Optional)</td><td>0–1 ml/L</td><td data-i18n-key="ops_note_dye">เติมเฉพาะต้องการโทนสี</td></tr>
+            <tr><td>RI</td><td>12–14</td><td data-i18n-key="ops_note_ri">วัดด้วย refractometer</td></tr>
+            <tr><td>pH</td><td>4.4–5.2</td><td data-i18n-key="ops_note_ph">น้ำยาใหม่ประมาณ 4.2–5.2</td></tr>
+            <tr><td>Conductivity</td><td>900–1100 μS</td><td data-i18n-key="ops_note_cond">ถ้าสูงเกินปรับด้วย UF/เติมแลคเกอร์</td></tr>
+            <tr><td>Solvent</td><td>3–4 %</td><td data-i18n-key="ops_note_sol">ควบคุมสมดุลการไหล/ฟิล์ม</td></tr>
+            <tr><td data-i18n-key="ops_temp">อุณหภูมิ</td><td>23–27 °C</td><td data-i18n-key="ops_note_temp">ควบคุมให้เสถียร</td></tr>
+            <tr><td data-i18n-key="ops_anode">ตัวล่อ (anode)</td><td>Stainless 316</td><td data-i18n-key="ops_note_anode">แผ่น/ตะกร้า</td></tr>
+            <tr><td data-i18n-key="ops_cd">กระแสไฟ (CD)</td><td>0.05–0.1 A/dm²</td><td></td></tr>
+            <tr><td>แรงดัน</td><td>30–50 V</td><td></td></tr>
+            <tr><td data-i18n-key="ops_area">พื้นที่ตัวล่อ:ชิ้นงาน</td><td>2 : 1</td><td></td></tr>
+            <tr><td data-i18n-key="ops_rate">อัตราการเคลือบ</td><td>~8 μm (30 วินาทีแรก)</td><td></td></tr>
+            <tr><td data-i18n-key="ops_time">เวลาเคลือบ</td><td>10–120 วินาที</td><td></td></tr>
+            <tr><td data-i18n-key="ops_delay">ดีเลย์ก่อนจ่ายไฟ</td><td>10–15 วินาที</td><td></td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 8. ลิงก์ที่เกี่ยวข้อง -->
+    <section id="curing" data-part="2" class="reveal section-block" aria-labelledby="curing-h">
+      <h2 id="curing-h" class="section" data-i18n-key="curing_h">การอบ (Curing)</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr><th data-i18n-key="c_th_case">กรณี</th><th data-i18n-key="c_th_temp">อุณหภูมิ</th><th data-i18n-key="c_th_time">เวลา</th><th data-i18n-key="c_th_note">หมายเหตุ</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="c_std">มาตรฐาน</td><td>150–180 °C</td><td>20 min</td><td></td></tr>
+            <tr><td data-i18n-key="c_low">ชิ้นส่วนไวต่อความร้อน</td><td>120–140 °C</td><td>30 min</td><td data-i18n-key="c_low_note">ลดอุณหภูมิแต่เพิ่มเวลา</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n-key="curing_warn"><strong>หมายเหตุ:</strong> อบไม่พอ → ฟิล์มไม่แข็ง อาจเกิดรอยนิ้วมือ/รอยขีดได้</p>
+    </section>
+
+    <section id="mix" data-part="2" class="reveal section-block" aria-labelledby="mix-h">
+      <h2 id="mix-h" class="section" data-i18n-key="mix_h">การผสมน้ำยา & อัตราส่วน</h2>
+      <ol>
+        <li data-i18n-key="mix1">ผสมแลคเกอร์ 2020 กับสี (ถ้ามี) ให้เข้ากัน</li>
+        <li data-i18n-key="mix2">ค่อย ๆ เติมน้ำกลั่นพร้อมกวนจนเต็มถัง</li>
+        <li data-i18n-key="mix3">กวนต่อเนื่องอย่างน้อย 12–24 ชม.</li>
+        <li data-i18n-key="mix4">พร้อมใช้งาน (น้ำกลั่น Conductivity &lt; 5 μS)</li>
+      </ol>
+      <p data-i18n-key="mix_tip"><em>ทิป:</em> ถ้าใช้สี ให้ผสมนอกบ่อก่อน แล้วจึงเทลงบ่อหลักทุกครั้ง</p>
+
+      <h3 data-i18n-key="ratio_h">อัตราส่วนผสมแนะนำ</h3>
+      <div class="table">
+        <table>
+          <thead>
+            <tr><th data-i18n-key="r_item">รายการ</th><th data-i18n-key="r_rec">ค่าแนะนำ</th><th data-i18n-key="r_std">ค่ามาตรฐาน</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n-key="r_lac">แลคเกอร์ 2020 (%)</td><td>33</td><td>30–35</td></tr>
+            <tr><td data-i18n-key="r_dye">สีสำหรับแลคเกอร์ (%)</td><td>1</td><td>0.8–1.5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n-key="mix_after">หลังเติมแลคเกอร์/ตัวเติม ควรกวนอย่างน้อย 15–30 นาที ก่อนเริ่มผลิต</p>
+    </section>
+
+    <section id="adjust" data-part="2" class="reveal section-block" aria-labelledby="adjust-h">
+      <h2 id="adjust-h" class="section" data-i18n-key="adjust_h">การปรับน้ำยา (RI / Solvent / Conductivity / pH / MEQ)</h2>
+      <h3 data-i18n-key="adj_ri_h">ค่า RI</h3>
+      <p data-i18n-key="adj_ri_p">วัดด้วย refractometer เป้าหมาย ~11–14 ต้องการเพิ่ม 1 หน่วย → เติมแลคเกอร์ ~33 cc/L</p>
+
+      <h3 data-i18n-key="adj_sol_h">Solvent</h3>
+      <p data-i18n-key="adj_sol_p">ตรวจ RI ที่ permeate (UF) เป้าหมาย ~0.8–2.0 ต่ำกว่า 0.8 → เติม Flow Additive 1–2 ml/L สูงกว่า 2.0 → กรอง (UF)</p>
+
+      <h3 data-i18n-key="adj_cond_h">Conductivity</h3>
+      <p data-i18n-key="adj_cond_p">เป้าหมาย 900–1000 μS ถ้าสูง &gt;1000 μS → UF หรือเติมแลคเกอร์ 20 g/L</p>
+
+      <h3 data-i18n-key="adj_ph_h">ค่า pH</h3>
+      <p data-i18n-key="adj_ph_p">น้ำยาใหม่ ~4.2–5.2 ถ้าต่ำ/สูงผิดปกติ → อาจมีสิ่งเจือปน แก้ด้วย UF/ทิ้ง permeate และ/หรือ Emulsion Stabilizer ตามค่า MEQ</p>
+
+      <h3 data-i18n-key="adj_meq_h">ค่า MEQ</h3>
+      <p data-i18n-key="adj_meq_p">ไทเทรตด้วย 0.1 M KOH เป้าหมาย 27–33 เพิ่ม 1 หน่วย → เติม stabilizer ~0.1 cc/L; ถ้า MEQ สูง → UF และทิ้งน้ำจากเครื่องกรอง</p>
+    </section>
+
+    <section id="additives" data-part="2" class="reveal section-block" aria-labelledby="additives-h">
+      <h2 id="additives-h" class="section" data-i18n-key="add_h">ตัวทำละลาย & สารคงสภาพ</h2>
+      <ul>
+        <li data-i18n-key="add_flow">Flow additive จำเป็นต่อการคุมความเข้มข้นรวม ช่วงรวม 3–4%</li>
+        <li data-i18n-key="add_stab">Stabilizer ใช้เฉพาะจำเป็นเพื่อคุม pH/MEQ อัตรา 0.2–0.3 cc/L</li>
+      </ul>
+    </section>
+
+    <section id="equip" data-part="2" class="reveal section-block" aria-labelledby="equip-h">
+      <h2 id="equip-h" class="section" data-i18n-key="equip_h">อุปกรณ์ที่แนะนำ</h2>
+      <ul>
+        <li data-i18n-key="eq1">บ่อ PP/PVC พร้อมระบบกวน</li>
+        <li data-i18n-key="eq2">ปั๊มกวน ≥ 5× ปริมาตรบ่อต่อชั่วโมง + ไส้กรอง 1–3 μm</li>
+        <li data-i18n-key="eq3">แผ่นตัวล่อสแตนเลส 316</li>
+        <li data-i18n-key="eq4">ระบบ Ultrafiltration คุม Conductivity</li>
+        <li data-i18n-key="eq5">ตู้ไฟปรับได้ถึง ~60 V</li>
+        <li data-i18n-key="eq6">ตู้อบสำหรับ Curing</li>
+      </ul>
+    </section>
+
     <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
-      <p><a class="more" href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">หมวด Protective / เคลือบปกป้อง</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">อุปกรณ์: UF/กรอง/เตา/มีดลม</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment สำหรับเตรียมผิว</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/anti-tarnish-selection/" data-i18n-key="link_at">คู่มือเลือกสารกันหมอง (Anti-tarnish)</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_sst">เตรียมชิ้นงาน Salt Spray Test</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/plating-basics/" data-i18n-key="link_basic">ความรู้การชุบโลหะเบื้องต้น</a></p>
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+      <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="link_plating">หมวด Plating/Coating</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/blog/anti-tarnish-selection/" data-i18n-key="link_at">คู่มือเลือกสารกันหมอง</a></p>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -576,167 +470,219 @@
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n (with header height recalculation) -->
+  <!-- JS: i18n (TH/EN) + meta swap -->
   <script>
     const I18N = {
       th: {
+        meta_title:"Electrophoretic Coating (E-coating) — EPA 2020 | Baume Chemical Blog",
+        meta_desc:"E-coating ฟิล์มบาง เรียบ สม่ำเสมอ ครอบคลุมซอกมุม รวมสเปก EPA 2020: ขั้นตอน สภาวะบ่อ/ไฟ การอบ การผสม/ปรับน้ำยา และอุปกรณ์",
+        og_title:"E-coating — EPA 2020 — Baume Chemical Blog",
+        og_desc:"สรุปใช้งานจริง: ขั้นตอนทำงาน สเปกบ่อ/ไฟ การอบ การผสม/ปรับ และอุปกรณ์",
+
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับเมนูหลัก",
-        hero_title:"คู่มือรวมปัญหาแลคเกอร์ไฟฟ้า (E-coat/ED)",
-        hero_tagline:"ตั้งค่าพื้นฐาน + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางแก้ไขปัญหาแบบยิงตรงจุด",
+        back_home:"← กลับ",
+        hero_title:"Electrophoretic Coating (E-coating) — EPA 2020",
+        hero_tagline:"ได้ฟิล์มเคลือบบาง เรียบ สม่ำเสมอ ครอบคลุมซอกมุม พร้อมสเปกการทำงานที่ใช้งานได้จริง",
 
-        part1:"พาร์ต 1: ค่าเริ่มต้น & หน้าต่างกระบวนการ",
-        part2:"พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ตารางปัญหา",
+        part1:"พาร์ต 1: ภาพรวม & ขั้นตอนทำงาน",
+        part2:"พาร์ต 2: สเปกบ่อ/ไฟ การอบ ผสม/ปรับน้ำยา",
 
-        toc_title:"สารบัญ", toc_rec:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนเคลือบ", toc_window:"หน้าต่างกระบวนการ", toc_fixture:"การจัดวาง", toc_care:"การดูแลบ่อและคุณภาพ", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
+        toc_title:"สารบัญ", toc_intro:"E-coating คืออะไร", toc_benefits:"E-coating ช่วยอะไรบ้าง?", toc_product:"EPA 2020", toc_workflow:"ขั้นตอนการทำงาน", toc_ops:"สภาวะการทำงาน", toc_curing:"การอบ (Curing)", toc_mix:"การผสม & อัตราส่วน", toc_adjust:"การปรับน้ำยา (RI/pH/MEQ ฯลฯ)", toc_additives:"ตัวทำละลาย/เสถียรภาพ", toc_equip:"อุปกรณ์ที่แนะนำ", toc_links:"ลิงก์ที่เกี่ยวข้อง",
 
-        rec_h:"ค่าเริ่มต้นที่แนะนำ",
-        rec_p1:"ระบบ ED มีหลายชนิด—ยึดสเปกผู้ผลิตและปรับบนชิ้นงานจริง",
-        rec_th_param:"พารามิเตอร์", rec_th_range:"ช่วงตั้งต้น", rec_th_note:"หมายเหตุ",
-        ed_sys_t:"ชนิดระบบ", ed_sys_v:"คาโทดิกใส (Jewelry/Decor)", ed_sys_n:"นิยมสำหรับใส/เงา และทนหมอง",
-        ed_solids_t:"ของแข็ง (Solids)", ed_solids_v:"8–15 %wt", ed_solids_n:"หนาฟิล์มสัมพันธ์กับ solids/แรงดัน/เวลา",
-        ed_temp_t:"อุณหภูมิอ่าง", ed_temp_v:"25–30°C", ed_temp_n:"สูงไป → ฟอง/พิตติ้ง",
-        ed_ph_t:"pH", ed_ph_v:"5.0–7.0", ed_ph_n:"ขึ้นกับระบบ",
-        ed_cond_t:"Conductivity", ed_cond_v:"500–1500 µS/cm", ed_cond_n:"ต่ำ → ไม่เข้า; สูง → ฟอง/คราบ",
-        ed_v_t:"แรงดัน (Ramp)", ed_v_v:"30→90–120 V ภายใน 30–90 s", ed_v_n:"ไล่แรงดันนุ่ม ลดไหม้/ฟอง",
-        ed_time_t:"เวลาแช่", ed_time_v:"30–120 s", ed_time_n:"ยาวไป → รัน/หนาเกิน",
-        ed_thk_t:"ความหนาฟิล์ม", ed_thk_v:"5–20 µm", ed_thk_n:"ตามสเปกลูกค้า",
-        ed_bake_t:"อบคิวรีง", ed_bake_v:"150–170°C × 20–30 นาที", ed_bake_n:"คุมโปรไฟล์เตา",
-        ed_rinse_t:"การล้าง", ed_rinse_v:"DI ไหลทวน 2–3 ขั้น + UF Rinse", ed_rinse_n:"ลดคราบ/drag-out",
-        ed_agit_t:"การกวน/การไหล", ed_agit_v:"อ่อน/สม่ำเสมอ", ed_agit_n:"แรงไปเกิดริ้ว/ฟอง",
-        safety_note:"ความปลอดภัย: ใช้ PPE และระบายอากาศตามคู่มือผู้ผลิต",
+        intro_h:"E-coating คืออะไร",
+        intro_p1:"การชุบแลคเกอร์ไฟฟ้า (Electrophoretic Coating หรือ E-coating) คือกระบวนการเคลือบพื้นผิวโลหะด้วยการใช้หลักการทางไฟฟ้าเพื่อดึงอนุภาคสีหรือแลคเกอร์ให้ไปเกาะติดกับชิ้นงาน กระบวนการนี้ทำให้ได้ชั้นเคลือบที่บาง เรียบเนียน และสม่ำเสมอทั่วทั้งชิ้นงาน แม้ในบริเวณที่เข้าถึงยาก เช่น ซอกมุมหรือรูเล็กๆ ไม่เพียงแต่ช่วยเพิ่มความสวยงามและความทนทานให้กับชิ้นงานเท่านั้น แต่ยังเป็นมิตรต่อสิ่งแวดล้อมและช่วยลดต้นทุนการผลิตอีกด้วย ทำให้เป็นทางเลือกยอดนิยมในอุตสาหกรรมต่างๆ ทั่วโลก",
 
-        prep_h:"การเตรียมผิวก่อนเคลือบ",
-        prep_1:"ล้างไขมัน → ล้างหลายขั้น",
-        prep_2:"Neutralize/Activate → ล้าง DI เข้ม",
-        prep_3:"เลี่ยงซิลิโคน/น้ำมันทุกจุดสัมผัส",
-        prep_4:"พักระบายน้ำให้พอ ลด drag-in",
-        prep_5:"หลังเคลือบ ล้าง DI+UF → เป่า → เข้าเตาทันที",
+        benefits_h:"E-coating ช่วยอะไรบ้าง?",
+        b1:"ให้การเคลือบที่สม่ำเสมอและทั่วถึง: เนื่องจากใช้ไฟฟ้าในการดึงอนุภาคสี ทำให้สีเคลือบสามารถเข้าถึงทุกส่วนของชิ้นงานได้ดีกว่าการพ่นสีทั่วไป ช่วยลดปัญหาการเคลือบไม่ทั่วถึง และทำให้ชิ้นงานดูเรียบร้อยสวยงาม",
+        b2:"เพิ่มความทนทานและการปกป้อง: ชั้นเคลือบที่ได้มีความแข็งแรง ทนทานต่อการขีดข่วน การกัดกร่อน และสารเคมีต่างๆ ได้ดีเยี่ยม จึงช่วยยืดอายุการใช้งานของชิ้นงาน และป้องกันการเกิดสนิม",
+        b3:"เป็นมิตรต่อสิ่งแวดล้อม: สีที่ใช้ในกระบวนการ E-coating ส่วนใหญ่เป็นชนิดที่มีน้ำเป็นตัวทำละลาย (water-based) ทำให้ไม่มีสารระเหยที่เป็นอันตราย (VOCs) หรือมีในปริมาณที่น้อยมาก ลดผลกระทบต่อสิ่งแวดล้อมและสุขภาพของผู้ปฏิบัติงาน",
+        b4:"ประหยัดต้นทุนและวัตถุดิบ: กระบวนการนี้มีการใช้สีอย่างมีประสิทธิภาพสูง อนุภาคสีส่วนเกินจะถูกดึงกลับมาใช้งานใหม่ ทำให้สิ้นเปลืองวัตถุดิบน้อยลง และยังช่วยลดต้นทุนการผลิตในระยะยาวอีกด้วย",
+        b5:"เหมาะกับงานที่มีรายละเอียดซับซ้อน: ด้วยความสามารถในการเข้าถึงทุกซอกมุม ทำให้ E-coating เหมาะอย่างยิ่งสำหรับชิ้นงานที่มีรูปทรงซับซ้อน เช่น ชิ้นส่วนรถยนต์ อะไหล่อิเล็กทรอนิกส์ หรือเครื่องประดับ",
 
-        window_h:"หน้าต่างกระบวนการ",
-        win_th_cond:"ตัวแปร", win_th_low:"ต่ำ", win_th_mid:"กลาง", win_th_high:"สูง", win_th_obs:"สังเกตการณ์",
-        w_v:"แรงดัน", w_v_l:"ต่ำ", w_v_m:"Ramp กลาง", w_v_h:"สูง", w_v_n:"ต่ำ → บาง; สูง → ฟอง/ไหม้/รัน",
-        w_time:"เวลา", w_time_l:"สั้น", w_time_m:"เหมาะสม", w_time_h:"ยาว", w_time_n:"สั้น → บาง; ยาว → หนา/รัน",
-        w_temp:"อุณหภูมิ", w_temp_l:"ต่ำ", w_temp_m:"25–30°C", w_temp_h:"สูง", w_temp_n:"สูง → ฟอง/พิตติ้ง",
-        w_solids:"Solids", w_solids_l:"ต่ำ", w_solids_m:"8–15%", w_solids_h:"สูง", w_solids_n:"ต่ำ → บาง; สูง → หม่น/รัน",
-        w_cond:"Conductivity", w_cond_l:"ต่ำ", w_cond_m:"500–1500", w_cond_h:"สูง", w_cond_n:"ต่ำ → ไม่เข้า; สูง → ฟอง/คราบ",
-        w_pH:"pH", w_pH_l:"ต่ำ", w_pH_m:"5–7", w_pH_h:"สูง", w_pH_n:"นอกช่วง → สี/เงาเพี้ยน",
-        w_flow:"การกวน/การไหล", w_flow_l:"ไม่มี", w_flow_m:"อ่อน", w_flow_h:"แรง", w_flow_n:"แรง → ริ้ว; อ่อน → ไม่เสมอ",
-        w_bake:"อบ", w_bake_l:"อ่อน", w_bake_m:"150–170°C×20–30′", w_bake_h:"แรง", w_bake_n:"อ่อน → เกาะไม่ดี; แรง → เหลือง",
+        product_h:"EPA 2020 — แลคเกอร์ไฟฟ้า",
+        product_p1:"แลกเกอร์ไฟฟ้า (Electroplating Lacquer) เป็นกระบวนการเคลือบผิววัสดุด้วยการใช้งานไฟฟ้า เพื่อเพิ่มคุณสมบัติพิเศษให้กับชิ้นงาน เช่น ความต้านทานการกัดกร่อน การป้องกันสนิม หรือเพิ่มความเงางาม โดยสารเคลือบนี้จะช่วยเพิ่มความทนทานให้กับชิ้นงานที่ถูกเคลือบโดยไม่กระทบต่อลักษณะเดิมของวัสดุการใช้แลกเกอร์ไฟฟ้าจะช่วยให้ชิ้นงานมีความสวยงามและมีอายุการใช้งานที่ยาวนานขึ้น เหมาะสำหรับการใช้งานในหลายอุตสาหกรรม ไม่ว่าจะเป็นการผลิตเครื่องใช้ไฟฟ้า อุปกรณ์ทางอุตสาหกรรม หรือส่วนประกอบของยานยนต์",
+        product_h3_features:"คุณสมบัติเด่น",
+        pf1:"ฟิล์มเงา ใส ไม่เป็นหยด",
+        pf2:"ยึดเกาะดี คงทนหลังเคลือบ",
+        pf3:"พิษต่ำ ปลอดภัยต่อผู้ปฏิบัติงาน",
+        pf4:"เหมาะกับพื้นผิวโลหะ/ผิวชุบหลากหลาย",
 
-        fixture_h:"การจัดวาง",
-        fixture_p1:"แขวนให้ระบายก๊าซ/น้ำได้ดี ปรับมุมลดรัน",
-        fixture_p2:"ใช้แผ่นบังลด HCD ที่ขอบ/สัน",
-        fixture_p3:"คุม anolyte (คาโทดิก ED) ให้ไหลสม่ำเสมอ",
-        fixture_p4:"ใช้แรงดันแบบ ramp",
+        workflow_h:"ขั้นตอนการทำงาน",
+        wf_note:"แนะนำใช้น้ำกลั่น (DI) เพื่อลดสิ่งปนเปื้อน ก่อนและหลังเคลือบ",
+        wf1:"เตรียมชิ้นงาน",
+        wf2:"ล้างน้ำกลั่น 2 ครั้ง",
+        wf3:"จุ่มปรับผิวด้วย 2% แลคเกอร์ 2020",
+        wf4:"E-coat ด้วยแลคเกอร์ 2020 โดยใช้ไฟฟ้า",
+        wf5:"ล้างน้ำกลั่น 2 ครั้ง",
+        wf6:"จุ่มน้ำยากำจัดคราบน้ำ",
+        wf7:"เป่าแห้ง",
+        wf8:"อบชิ้นงาน (Curing)",
 
-        care_h:"การดูแลบ่อและคุณภาพ",
-        care_1:"ติดตาม Solids/pH/Cond./Temp และเติมตาม UF/drag-out",
-        care_2:"รักษาสมดุล UF (permeate/retentate)",
-        care_3:"ดูแล anolyte: กรด/การไหล/รอบเปลี่ยน",
-        care_4:"คัดแยกน้ำมัน/ซิลิโคน ใช้ defoamer non-silicone",
-        care_5:"กรองต่อเนื่อง + คาร์บอนทรีตเมนต์ตามรอบ",
-        care_6:"QC: ความหนา เงา/หมอก ยึดเกาะ ทนเหงื่อ/สารเคมี",
+        ops_h:"สภาวะการทำงาน (Operating Conditions)",
+        ops_th_param:"พารามิเตอร์", ops_th_value:"ช่วง/ค่า", ops_th_note:"หมายเหตุ",
+        ops_note_lac:"ความเข้มข้นแลคเกอร์หลัก",
+        ops_note_dye:"เติมเฉพาะต้องการโทนสี",
+        ops_note_ri:"วัดด้วย refractometer",
+        ops_note_ph:"น้ำยาใหม่ประมาณ 4.2–5.2",
+        ops_note_cond:"ถ้าสูงเกินปรับด้วย UF/เติมแลคเกอร์",
+        ops_note_sol:"ควบคุมสมดุลการไหล/ฟิล์ม",
+        ops_temp:"อุณหภูมิ",
+        ops_note_temp:"ควบคุมให้เสถียร",
+        ops_anode:"ตัวล่อ (anode)",
+        ops_note_anode:"แผ่น/ตะกร้า",
+        ops_cd:"กระแสไฟ (CD)",
+        ops_area:"พื้นที่ตัวล่อ:ชิ้นงาน",
+        ops_rate:"อัตราการเคลือบ",
+        ops_time:"เวลาเคลือบ",
+        ops_delay:"ดีเลย์ก่อนจ่ายไฟ",
 
-        def_h:"ตารางปัญหาพบเจอบ่อย",
-        def_th_sym:"อาการ", def_th_cause:"สาเหตุหลัก", def_th_fix:"แนวทางแก้",
-        d1_s:"ฟิชอาย/คราเตอร์", d1_c:"ซิลิโคน/น้ำมันปน; ล้างไม่พอ", d1_f:"ตัดแหล่งซิลิโคน; เพิ่ม DI; คาร์บอน; defoamer non-silicone",
-        d2_s:"พองหลังอบ", d2_c:"ก๊าซค้าง; อบอ่อน; ปนเปื้อน", d2_f:"ไล่น้ำก่อนอบ; จูนโปรไฟล์อบ; ปรับ ramp",
-        d3_s:"ฟอง/พิตติ้ง", d3_c:"อุณหภูมิสูง; กวนแรง; cond. สูง; ปนเปื้อน", d3_f:"ลดอุณหภูมิ/กวน; จูน cond.; กรอง/UF",
-        d4_s:"รัน/หนาไหล", d4_c:"แรงดันสูง/เวลายาว; drain ไม่พอ", d4_f:"ลดแรงดัน/เวลา; เพิ่มพักไหล; ลด solids",
-        d5_s:"เงาไม่ใส/หมอก", d5_c:"solids สูง; อินทรีย์เสื่อม; อุณหภูมิสูง", d5_f:"ลด solids; คาร์บอน; ลดอุณหภูมิ; เพิ่ม UF",
-        d6_s:"ยึดเกาะไม่ดี", d6_c:"เตรียมผิวไม่สะอาด; pH/cond. นอกช่วง; อบอ่อน", d6_f:"รีทำผิว; จูน pH/cond.; จูนอบ",
-        d7_s:"เหลือง/สีเพี้ยน", d7_c:"อบแรงเกิน; ฟิล์มหนาเกิน; สูตรผิดดุล", d7_f:"ลดอบ; จูนสูตรตามคู่มือ",
-        d8_s:"ไม่เข้าโพรง/Throw ต่ำ", d8_c:"ramp ไม่เหมาะ; cond. ต่ำ; ระยะขั้วไม่ดี", d8_f:"ปรับ ramp/cond.; ปรับระยะ/ทิศตั้ง",
+        curing_h:"การอบ (Curing)",
+        c_th_case:"กรณี", c_th_temp:"อุณหภูมิ", c_th_time:"เวลา", c_th_note:"หมายเหตุ",
+        c_std:"มาตรฐาน", c_low:"ชิ้นส่วนไวต่อความร้อน", c_low_note:"ลดอุณหภูมิแต่เพิ่มเวลา",
+        curing_warn:"หมายเหตุ: อบไม่พอ → ฟิล์มไม่แข็ง อาจเกิดรอยนิ้วมือ/รอยขีดได้",
 
-        links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
-        link_protect:"หมวด Protective / เคลือบปกป้อง",
-        link_equip:"อุปกรณ์: UF/กรอง/เตา/มีดลม",
-        link_pretreat:"หมวด Pretreatment สำหรับเตรียมผิว",
-        link_at:"คู่มือเลือกสารกันหมอง (Anti-tarnish)",
-        link_sst:"เตรียมชิ้นงาน Salt Spray Test",
-        link_basic:"ความรู้การชุบโลหะเบื้องต้น",
+        mix_h:"การผสมน้ำยา & อัตราส่วน",
+        mix1:"ผสมแลคเกอร์ 2020 กับสี (ถ้ามี) ให้เข้ากัน",
+        mix2:"ค่อย ๆ เติมน้ำกลั่นพร้อมกวนจนเต็มถัง",
+        mix3:"กวนต่อเนื่องอย่างน้อย 12–24 ชม.",
+        mix4:"พร้อมใช้งาน (น้ำกลั่น Conductivity < 5 μS)",
+        mix_tip:"ทิป: ถ้าใช้สี ให้ผสมนอกบ่อก่อน แล้วจึงเทลงบ่อหลักทุกครั้ง",
+
+        ratio_h:"อัตราส่วนผสมแนะนำ",
+        r_item:"รายการ", r_rec:"ค่าแนะนำ", r_std:"ค่ามาตรฐาน",
+        r_lac:"แลคเกอร์ 2020 (%)", r_dye:"สีสำหรับแลคเกอร์ (%)",
+        mix_after:"หลังเติมแลคเกอร์/ตัวเติม ควรกวนอย่างน้อย 15–30 นาที ก่อนเริ่มผลิต",
+
+        adjust_h:"การปรับน้ำยา (RI / Solvent / Conductivity / pH / MEQ)",
+        adj_ri_h:"ค่า RI", adj_ri_p:"วัดด้วย refractometer เป้าหมาย ~11–14 ต้องการเพิ่ม 1 หน่วย → เติมแลคเกอร์ ~33 cc/L",
+        adj_sol_h:"Solvent", adj_sol_p:"ตรวจ RI ที่ permeate (UF) เป้าหมาย ~0.8–2.0 ต่ำกว่า 0.8 → เติม Flow Additive 1–2 ml/L สูงกว่า 2.0 → กรอง (UF)",
+        adj_cond_h:"Conductivity", adj_cond_p:"เป้าหมาย 900–1000 μS ถ้าสูง >1000 μS → UF หรือเติมแลคเกอร์ 20 g/L",
+        adj_ph_h:"ค่า pH", adj_ph_p:"น้ำยาใหม่ ~4.2–5.2 ถ้าต่ำ/สูงผิดปกติ → อาจมีสิ่งเจือปน แก้ด้วย UF/ทิ้ง permeate และ/หรือ Emulsion Stabilizer ตามค่า MEQ",
+        adj_meq_h:"ค่า MEQ", adj_meq_p:"ไทเทรตด้วย 0.1 M KOH เป้าหมาย 27–33 เพิ่ม 1 หน่วย → เติม stabilizer ~0.1 cc/L; ถ้า MEQ สูง → UF และทิ้งน้ำจากเครื่องกรอง",
+
+        add_h:"ตัวทำละลาย & สารคงสภาพ",
+        add_flow:"Flow additive จำเป็นต่อการคุมความเข้มข้นรวม ช่วงรวม 3–4%",
+        add_stab:"Stabilizer ใช้เฉพาะจำเป็นเพื่อคุม pH/MEQ อัตรา 0.2–0.3 cc/L",
+
+        equip_h:"อุปกรณ์ที่แนะนำ",
+        eq1:"บ่อ PP/PVC พร้อมระบบกวน",
+        eq2:"ปั๊มกวน ≥ 5× ปริมาตรบ่อต่อชั่วโมง + ไส้กรอง 1–3 μm",
+        eq3:"แผ่นตัวล่อสแตนเลส 316",
+        eq4:"ระบบ Ultrafiltration คุม Conductivity",
+        eq5:"ตู้ไฟปรับได้ถึง ~60 V",
+        eq6:"ตู้อบสำหรับ Curing",
+
+        links_h:"ลิงก์ที่เกี่ยวข้อง",
+        link_plating:"หมวด Plating/Coating",
+        link_protect:"Protective Treatment",
+        link_at:"คู่มือเลือกสารกันหมอง",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
 
       en: {
+        meta_title:"Electrophoretic Coating (E-coating) — EPA 2020 | Baume Chemical Blog",
+        meta_desc:"E-coating yields thin, smooth, uniform films with deep recess coverage. Practical spec for EPA 2020: workflow, bath/power, curing, mixing/adjustments, and equipment.",
+        og_title:"E-coating — EPA 2020 — Baume Chemical Blog",
+        og_desc:"Hands-on guide: workflow, bath/power specs, curing, mixing/adjustments, and equipment.",
+
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Home",
-        hero_title:"Electrophoretic Lacquer (E-coat/ED) — Troubleshooting Guide",
-        hero_tagline:"Baselines, process windows, fixturing, bath care, and a laser-focused defect–fix table.",
+        back_home:"← Back",
+        hero_title:"Electrophoretic Coating (E-coating) — EPA 2020",
+        hero_tagline:"Thin, smooth, uniform film with excellent recess coverage — practical operating specs.",
 
-        part1:"Part 1: Baselines & Process Windows",
-        part2:"Part 2: Fixturing/Quality/Troubleshooting",
+        part1:"Part 1: Overview & Workflow",
+        part2:"Part 2: Bath/Power Specs, Curing, Mixing/Adjustments",
 
-        toc_title:"Contents", toc_rec:"Recommended baselines", toc_prep:"Surface preparation", toc_window:"Process windows", toc_fixture:"Fixturing", toc_care:"Bath care & Quality", toc_defects:"Common defects table", toc_links:"Related links",
+        toc_title:"Contents", toc_intro:"What is E-coating", toc_benefits:"Why E-coating?", toc_product:"EPA 2020", toc_workflow:"Workflow", toc_ops:"Operating conditions", toc_curing:"Curing", toc_mix:"Mix & ratios", toc_adjust:"Bath adjustments (RI/pH/MEQ…)", toc_additives:"Solvent/Stability", toc_equip:"Recommended equipment", toc_links:"Related links",
 
-        rec_h:"Recommended baselines",
-        rec_p1:"ED systems vary (cathodic/anodic, acrylic/urethane). Follow your maker’s spec and tune one variable at a time.",
-        rec_th_param:"Parameter", rec_th_range:"Baseline window", rec_th_note:"Notes",
-        ed_sys_t:"System type", ed_sys_v:"Clear cathodic (jewelry/decor)", ed_sys_n:"Popular for clarity/gloss and tarnish resistance",
-        ed_solids_t:"Solids", ed_solids_v:"8–15 %wt", ed_solids_n:"Thickness ~ solids × voltage × time",
-        ed_temp_t:"Bath temperature", ed_temp_v:"25–30°C", ed_temp_n:"High → foam/pitting",
-        ed_ph_t:"pH", ed_ph_v:"5.0–7.0", ed_ph_n:"System-dependent",
-        ed_cond_t:"Conductivity", ed_cond_v:"500–1500 µS/cm", ed_cond_n:"Low → poor build; high → foam/stains",
-        ed_v_t:"Voltage (ramp)", ed_v_v:"30→90–120 V over 30–90 s", ed_v_n:"Soft ramp lowers burn/foam",
-        ed_time_t:"Dwell time", ed_time_v:"30–120 s", ed_time_n:"Long → runs/excess thickness",
-        ed_thk_t:"Film thickness", ed_thk_v:"5–20 µm", ed_thk_n:"Per customer spec",
-        ed_bake_t:"Cure (oven)", ed_bake_v:"150–170°C × 20–30 min", ed_bake_n:"Control oven profile/airflow",
-        ed_rinse_t:"Rinsing", ed_rinse_v:"DI counter-flow 2–3 + UF rinse", ed_rinse_n:"Limits stains/drag-out",
-        ed_agit_t:"Agitation/flow", ed_agit_v:"Gentle, even", ed_agit_n:"Too strong → streaks/foam",
-        safety_note:"Safety: use proper PPE and ventilation per supplier manual.",
+        intro_h:"What is E-coating",
+        intro_p1:"Electrophoretic coating, also known as E-coating, is a process that uses electrical principles to apply a thin, smooth, and uniform layer of paint or lacquer onto a metal surface. This method ensures complete coverage, even in hard-to-reach areas like corners or small holes. The E-coating process not only enhances the aesthetic appeal and durability of the treated item but also stands out for being environmentally friendly and cost-effective, making it a popular choice across various industries worldwide.",
 
-        prep_h:"Surface preparation",
-        prep_1:"Degrease → multi-stage rinses",
-        prep_2:"Neutralize/Activate to suit substrate → strong DI rinse",
-        prep_3:"Eliminate silicone/oil sources (classic fish-eye cause)",
-        prep_4:"Allow sufficient drain time before ED",
-        prep_5:"After ED: DI+UF rinses → blow-off → into the oven promptly",
+        benefits_h:"Why E-coating?",
+        b1:"Uniform and complete coverage: Because an electric current is used to attract the paint particles, the coating can reach every part of the workpiece more effectively than traditional spraying. This prevents incomplete coverage and gives the product a clean, finished look.",
+        b2:"Increased durability and protection: The resulting layer is strong and highly resistant to scratches, corrosion, and various chemicals. This extends the lifespan of the workpiece and prevents rust.",
+        b3:"Environmentally friendly: The majority of E-coating paints are water-based, meaning they contain few or no volatile organic compounds (VOCs). This reduces the negative impact on the environment and the health of workers.",
+        b4:"Cost and material savings: The process is highly efficient with paint usage. Excess paint particles are reclaimed and reused, leading to less material waste and lower long-term production costs.",
+        b5:"Ideal for complex items: Due to its ability to cover every corner, E-coating is particularly well-suited for complex shapes, such as car parts, electronic components, or jewelry.",
 
-        window_h:"Process windows",
-        win_th_cond:"Variable", win_th_low:"Low", win_th_mid:"Mid", win_th_high:"High", win_th_obs:"Observation",
-        w_v:"Voltage", w_v_l:"Low", w_v_m:"Moderate ramp", w_v_h:"High", w_v_n:"Low → thin/poor build; High → foam/burn/runs",
-        w_time:"Time", w_time_l:"Short", w_time_m:"Optimal", w_time_h:"Long", w_time_n:"Short → thin/porous; Long → runs/excess",
-        w_temp:"Temperature", w_temp_l:"Low", w_temp_m:"25–30°C", w_temp_h:"High", w_temp_n:"High → foam/pitting/mute gloss",
-        w_solids:"Solids", w_solids_l:"Low", w_solids_m:"8–15%", w_solids_h:"High", w_solids_n:"Low → thin; High → haze/runs",
-        w_cond:"Conductivity", w_cond_l:"Low", w_cond_m:"500–1500", w_cond_h:"High", w_cond_n:"Low → poor film; High → foam/stains",
-        w_pH:"pH", w_pH_l:"Low", w_pH_m:"5–7", w_pH_h:"High", w_pH_n:"Off-window → color/gloss drift",
-        w_flow:"Agitation/flow", w_flow_l:"None", w_flow_m:"Light", w_flow_h:"Strong", w_flow_n:"Strong → streaks/foam; Light → non-uniform",
-        w_bake:"Cure", w_bake_l:"Under", w_bake_m:"150–170°C×20–30′", w_bake_h:"Over", w_bake_n:"Under → weak adhesion; Over → yellowing/crazing",
+        product_h:"EPA 2020 — Electro-lacquer",
+        product_p1:"Electroplating Lacquer is a process that uses an electrical current to apply a coating to a material's surface. This enhances the item with special properties like corrosion resistance, rust prevention, or a glossy finish. This coating increases the durability of the workpiece without affecting its original characteristics. Using electroplating lacquer improves the aesthetic appeal and extends the lifespan of the item, making it suitable for a wide range of industries, including the manufacturing of electrical appliances, industrial equipment, and automotive components.",
+        product_h3_features:"Key features",
+        pf1:"Glossy, clear, non-droplet film",
+        pf2:"Strong adhesion; touch-safe after process",
+        pf3:"Low toxicity; safer for operators",
+        pf4:"Works on many metal/plated substrates",
 
-        fixture_h:"Fixturing",
-        fixture_p1:"Orient for gas/water release; reduce runs.",
-        fixture_p2:"Use shields to tame HCD edges/corners.",
-        fixture_p3:"Maintain anolyte circulation for cathodic ED.",
-        fixture_p4:"Ramp voltage (e.g., 0–30 V → 60–90 V).",
+        workflow_h:"Workflow",
+        wf_note:"Use DI water to reduce contamination before/after coating.",
+        wf1:"Prepare the part",
+        wf2:"Rinse DI ×2",
+        wf3:"Surface adjust in 2% Lacquer 2020",
+        wf4:"E-coat with Lacquer 2020 under voltage",
+        wf5:"Rinse DI ×2",
+        wf6:"Water-spot remover dip",
+        wf7:"Dry with air",
+        wf8:"Cure (oven)",
 
-        care_h:"Bath care & Quality",
-        care_1:"Track Solids/pH/Cond./Temp; top-up per UF/drag-out.",
-        care_2:"Keep UF balance (permeate/retentate) healthy.",
-        care_3:"Anolyte care (cathodic ED): acidity/flow/changeouts.",
-        care_4:"Exclude oils/silicones; use non-silicone defoamer.",
-        care_5:"Continuous filtration + periodic carbon treatment.",
-        care_6:"QC: thickness, gloss/haze, adhesion, sweat/chemical resistance.",
+        ops_h:"Operating Conditions",
+        ops_th_param:"Parameter", ops_th_value:"Range/Value", ops_th_note:"Notes",
+        ops_note_lac:"Main lacquer concentration",
+        ops_note_dye:"Add only if tint required",
+        ops_note_ri:"Measure by refractometer",
+        ops_note_ph:"Fresh bath ~4.2–5.2",
+        ops_note_cond:"If high, UF or add lacquer",
+        ops_note_sol:"Controls flow/film",
+        ops_temp:"Temperature",
+        ops_note_temp:"Keep stable",
+        ops_anode:"Anode",
+        ops_note_anode:"Plate/basket",
+        ops_cd:"Current density",
+        ops_area:"Anode:part area ratio",
+        ops_rate:"Deposition rate",
+        ops_time:"Coating time",
+        ops_delay:"Pre-voltage delay",
 
-        def_h:"Common defects table",
-        def_th_sym:"Symptom", def_th_cause:"Likely causes", def_th_fix:"Fix",
-        d1_s:"Fish eyes/craters", d1_c:"Silicone/oil contamination; poor rinsing", d1_f:"Remove silicone sources; stronger DI; carbon; non-silicone defoamer",
-        d2_s:"Blisters after bake", d2_c:"Entrapped gas/moisture; under-cure; contamination", d2_f:"Better blow-off; tune oven; adjust ramp",
-        d3_s:"Foam/pitting", d3_c:"High temp; strong agitation; high conductivity; contamination", d3_f:"Lower temp/flow; tune cond.; filter/UF",
-        d4_s:"Runs/sagging", d4_c:"Excess voltage/time; insufficient drain; solids too high", d4_f:"Reduce V/time; add drain pause; lower solids",
-        d5_s:"Haze/low clarity", d5_c:"High solids; aged organics; high temperature", d5_f:"Reduce solids; carbon treat; lower temp; increase UF",
-        d6_s:"Poor adhesion", d6_c:"Poor pretreatment; off-window pH/cond.; under-cure", d6_f:"Re-prep; tune pH/cond.; proper cure",
-        d7_s:"Yellowing/color drift", d7_c:"Over-bake; over-thick; chemistry imbalance", d7_f:"Reduce bake; target thickness; rebalance per spec",
-        d8_s:"Low throw power", d8_c:"Weak ramp; low conductivity; poor spacing", d8_f:"Adjust ramp/cond.; refine spacing/orientation",
+        curing_h:"Curing",
+        c_th_case:"Case", c_th_temp:"Temp", c_th_time:"Time", c_th_note:"Notes",
+        c_std:"Standard", c_low:"Heat-sensitive parts", c_low_note:"Lower temp, longer time",
+        curing_warn:"Note: Under-bake → soft film; fingerprints/scratches likely.",
+
+        mix_h:"Mixing & Ratios",
+        mix1:"Blend Lacquer 2020 with dye (if used)",
+        mix2:"Slowly add DI water while stirring to volume",
+        mix3:"Continue agitation 12–24 h",
+        mix4:"Ready to use (DI Conductivity < 5 μS)",
+        mix_tip:"Tip: Pre-blend dye outside the tank, then charge.",
+
+        ratio_h:"Recommended ratios",
+        r_item:"Item", r_rec:"Recommended", r_std:"Standard",
+        r_lac:"Lacquer 2020 (%)", r_dye:"Lacquer dye (%)",
+        mix_after:"After adding lacquer/additives, agitate 15–30 min before production.",
+
+        adjust_h:"Adjustments (RI / Solvent / Conductivity / pH / MEQ)",
+        adj_ri_h:"RI", adj_ri_p:"Target ~11–14; +1 RI ≈ add ~33 cc/L lacquer.",
+        adj_sol_h:"Solvent", adj_sol_p:"Check UF permeate RI ~0.8–2.0. If <0.8 → Flow Additive 1–2 ml/L; if >2.0 → UF.",
+        adj_cond_h:"Conductivity", adj_cond_p:"Target 900–1000 μS; if >1000 μS → UF or add lacquer 20 g/L.",
+        adj_ph_h:"pH", adj_ph_p:"Fresh ~4.2–5.2; if off, suspect contamination → UF/purge permeate and/or Emulsion Stabilizer per MEQ.",
+        adj_meq_h:"MEQ", adj_meq_p:"Titrate with 0.1 M KOH; target 27–33. +1 MEQ ≈ Stabilizer ~0.1 cc/L; if high → UF & purge.",
+
+        add_h:"Solvent & Stabilizer",
+        add_flow:"Flow additive maintains total solvent ~3–4%.",
+        add_stab:"Stabilizer used sparingly to hold pH/MEQ at ~0.2–0.3 cc/L.",
+
+        equip_h:"Recommended equipment",
+        eq1:"PP/PVC tank with agitation",
+        eq2:"Pump ≥ 5× tank volume per hour + 1–3 μm filter",
+        eq3:"Stainless 316 anodes",
+        eq4:"Ultrafiltration for conductivity control",
+        eq5:"Power supply up to ~60 V",
+        eq6:"Oven for curing",
 
         links_h:"Related links",
-        link_protect:"Protective / Topcoats",
-        link_equip:"Equipment: UF/filters/ovens/air knives",
-        link_pretreat:"Pretreatment",
+        link_plating:"Plating/Coating category",
+        link_protect:"Protective Treatment",
         link_at:"Anti-tarnish selection guide",
-        link_sst:"Salt spray quick guide",
-        link_basic:"Plating basics",
 
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
@@ -745,7 +691,11 @@
     const els = {
       langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]'),
-      tocLinks: () => document.querySelectorAll('#toc a[href^="#"]'),
+      metaTitle: document.getElementById('metaTitle'),
+      metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'),
+      ogDesc: document.getElementById('ogDesc'),
+      ogLocale: document.getElementById('ogLocale'),
     };
 
     function applyLang(lang){
@@ -754,10 +704,21 @@
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+        if (key && I18N[sel] && I18N[sel][key]){
+          if (/<\/?[a-z][\s\S]*>/i.test(I18N[sel][key])) node.innerHTML = I18N[sel][key];
+          else node.textContent = I18N[sel][key];
+        }
       });
+      const t = I18N[sel];
+      if(t){
+        els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
+        els.metaDesc && els.metaDesc.setAttribute('content', t.meta_desc);
+        els.ogTitle && els.ogTitle.setAttribute('content', t.og_title || t.meta_title);
+        els.ogDesc && els.ogDesc.setAttribute('content', t.og_desc || t.meta_desc);
+        els.ogLocale && els.ogLocale.setAttribute('content', sel === 'en' ? 'en_US' : 'th_TH');
+      }
       try{ localStorage.setItem('lang', sel); }catch(e){}
-      // recalc header height in case text wraps differently
+      // recalc header height (wrap differences)
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
         document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -788,14 +749,14 @@
         b.setAttribute('aria-pressed', String(on));
         b.setAttribute('aria-selected', String(on));
       });
-      try{ localStorage.setItem('ed_part', part); }catch(e){}
+      try{ localStorage.setItem('e_coat_part', part); }catch(e){}
       const url = new URL(location);
       url.searchParams.set('part', part);
       history.replaceState(null,'',url);
     }
 
     const urlPart = new URLSearchParams(location.search).get('part');
-    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ed_part')) || '1';
+    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('e_coat_part')) || '1';
     setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
 
     buttons.forEach(b => b.addEventListener('click', ()=>{
@@ -804,7 +765,7 @@
     }));
 
     // TOC click switches to correct part before anchor scroll
-    document.querySelectorAll('#toc a[data-part]').forEach(a=>{
+    tocLinks.forEach(a=>{
       a.addEventListener('click', ()=>{
         const p = a.getAttribute('data-part');
         setPart(p);
@@ -813,7 +774,7 @@
   })();
   </script>
 
-  <!-- JS: Header glass, mobile menu (scrim+lock), smart back, highlight current -->
+  <!-- JS: Header glass, mobile menu, smart back, highlight current -->
   <script>
     (function(){
       const header = document.getElementById('siteHeader');
@@ -821,7 +782,6 @@
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
 
-      // Set header height var & darken on scroll
       const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
@@ -829,7 +789,6 @@
       window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
 
-      // Mobile menu open/close with body lock
       if(toggle && nav && scrim){
         let lockY = 0;
         function openMenu(v){
@@ -857,27 +816,26 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Products when under /products/*
+      // Highlight current page; force Blog when under /blog/*
       try{
         const here = location.pathname.replace(/\/+$/,'');
-        const isProducts = here.startsWith('/products');
-        const navEl = document.getElementById('primary-nav');
-        navEl?.querySelectorAll('a').forEach(a=>{
+        const isBlog = here.startsWith('/blog');
+        nav?.querySelectorAll('a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          if (isBlog && /\/blog\/?$/.test(path)) a.setAttribute('aria-current','page');
           else if (here === path) a.setAttribute('aria-current','page');
           else a.removeAttribute('aria-current');
         });
       }catch(e){}
 
-      // Back smart: prefer history if same-origin
+      // Smart Back: same-origin → history.back(); else follow href
       (function(){
         const btn = document.querySelector('[data-back]');
         if(!btn) return;
         btn.addEventListener('click', function(e){
           try{
             const ref = document.referrer;
-            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            const sameOrigin = ref && new URL(ref, location.href).origin === location.origin;
             if(sameOrigin){ e.preventDefault(); history.back(); }
           }catch(err){}
         });
@@ -885,9 +843,8 @@
     })();
   </script>
 
-  <!-- JS: Scroll-spy for TOC + heading anchors -->
+  <!-- JS: Scroll-spy for TOC + clickable H2 anchors -->
   <script>
-    // Clickable heading anchors (adds #id when clicking the H2)
     document.querySelectorAll('.section-block>h2.section').forEach(h=>{
       h.addEventListener('click', ()=>{
         const sec = h.closest('.section-block');
