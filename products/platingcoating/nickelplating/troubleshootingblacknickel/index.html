@@ -136,7 +136,7 @@
     body.no-scroll{position:fixed;width:100%}
 
     /* ===== Back button (glass chip over hero) ===== */
-    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:3; display:flex; align-items:center; gap:8px}
+    .back-wrap{position:absolute; left:16px; top:calc(var(--header-h) + 12px); z-index:1; display:flex; align-items:center; gap:8px}
     .btn{appearance:none;border:1px solid var(--brand);background:var(--accent);color:#1b2637;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
     .btn.back{display:inline-flex;align-items:center;gap:8px;background:#ffffff22;border:1px solid rgba(255,255,255,.55);color:#fff;padding:8px 12px;border-radius:12px;font-weight:800;text-decoration:none;backdrop-filter: blur(6px)}
     .btn.back:hover{background:#ffffff33}
@@ -246,23 +246,6 @@ body.no-scroll{ position:fixed; width:100% }
 }
 .menu .lang-li .lang-btn{ color:#fff }
 .menu .lang-li .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
-
-/* ให้ฮีโร่เป็นฐานวางเลเยอร์ */
-.hero{ position:relative; z-index:0 }
-
-/* ปุ่ม Back ให้อยู่สูงกว่า header */
-.back-wrap{
-  position:fixed;              /* ลอยเหนือฮีโร่ ปลอดภัยจากการโดนบัง */
-  left:16px;
-  top:calc(var(--header-h) + 12px);
-  z-index:2001;                /* > 1400 ของ header */
-  pointer-events:auto;
-}
-/* header ต่ำกว่าเล็กน้อย */
-.site-header{ z-index:2000 }
-
-/* กันกรณี scrim เผลอโผล่มาบัง */
-.menu-scrim[hidden]{ display:none !important; pointer-events:none !important }
 
   </style>
 </head>
@@ -468,25 +451,12 @@ body.no-scroll{ position:fixed; width:100% }
 
   <!-- ===== Scripts: header glass, menu, back, i18n (keeps GSC meta safe) ===== -->
   <script>
-(function(){
-  const header = document.getElementById('siteHeader');
-  if(!header) return;
-
-  // ใส->เข้มเมื่อเลื่อน
-  const onScroll = ()=> header.classList.toggle('scrolled', (window.scrollY||0) > 10);
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
-  // คำนวณความสูง header ไปผูกกับ --header-h ให้ปุ่ม back เลี่ยงได้เสมอ
-  const setH = ()=>{
-    const h = header.getBoundingClientRect().height || 64;
-    document.documentElement.style.setProperty('--header-h', h + 'px');
-  };
-  setH();
-  window.addEventListener('resize', setH, {passive:true});
-  window.addEventListener('load', setH, {once:true});
-  try{ document.fonts && document.fonts.ready.then(setH); }catch(e){}
-  try{ new ResizeObserver(setH).observe(header); }catch(e){}
-})();
+    // Sticky header: darken on scroll
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+    })();
 
     // Mobile nav: scrim + body lock
     (function(){
@@ -512,28 +482,17 @@ body.no-scroll{ position:fixed; width:100% }
     })();
 
     // Back button
-(function(){
-  const btn = document.getElementById('backBtn'); if(!btn) return;
-
-  const FALLBACK = 'https://www.baumechemical.com/products/platingcoating/';
-
-  btn.addEventListener('click', (e)=>{
-    e.preventDefault();
-
-    // ไปหน้าก่อนหน้าได้ ถ้าอยู่โดเมนเดียวกัน หรือมี history
-    try{
-      const ref = document.referrer;
-      const sameOrigin = ref && new URL(ref).origin === location.origin;
-      if (sameOrigin || history.length > 1) {
-        history.back();
-        return;
-      }
-    }catch(_){ /* ignore */ }
-
-    // กรณีเปิดไฟล์โลคัล/ข้ามโดเมน/ไม่มี history → ไปหมวดสินค้าทันที
-    location.assign(FALLBACK);
-  });
-})();
+    (function(){
+      const btn = document.getElementById('backBtn'); if(!btn) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        try{
+          const ref = document.referrer;
+          if(ref && new URL(ref).origin === location.origin){ history.back(); return; }
+        }catch(_){}
+        location.href = '/products/platingcoating/';
+      });
+    })();
 
     // ===== i18n =====
     const I18N = {
