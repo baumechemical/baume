@@ -247,6 +247,53 @@ body.no-scroll{ position:fixed; width:100% }
 .menu .lang-li .lang-btn{ color:#fff }
 .menu .lang-li .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
 
+/* วาง back ไว้กึ่งกลาง hero เหนือหัวข้อ */
+.back-wrap{
+  position:relative;
+  display:flex; justify-content:center; align-items:center;
+  margin: 6px auto 18px;  /* เว้นระยะเหนือ h1 */
+  z-index: 2;             /* อยู่เหนือพื้นหลัง hero แน่นอน */
+  pointer-events: auto;
+}
+
+/* ปุ่มย้อนกลับแบบชิปแก้ว */
+.btn.back{
+  --chip-bg: rgba(255,255,255,.16);
+  --chip-bg-hover: rgba(255,255,255,.22);
+  --chip-ring: rgba(255,255,255,.55);
+
+  display:inline-flex; align-items:center; gap:10px;
+  padding:10px 14px; border-radius:999px;
+  color:#fff; text-decoration:none; font-weight:800;
+
+  background:
+    linear-gradient(var(--chip-bg), var(--chip-bg)) padding-box,
+    linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.18)) border-box;
+  border:1px solid transparent;             /* ใช้ gradient เป็นกรอบ */
+  backdrop-filter: blur(6px) saturate(130%);
+  box-shadow: 0 8px 24px rgba(2,8,20,.28);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn.back svg{ width:18px; height:18px; display:block }
+.btn.back:hover{
+  transform: translateY(-1px);
+  background:
+    linear-gradient(var(--chip-bg-hover), var(--chip-bg-hover)) padding-box,
+    linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.22)) border-box;
+  box-shadow: 0 10px 28px rgba(2,8,20,.34);
+}
+.btn.back:active{ transform: translateY(0) scale(.99) }
+
+/* โฟกัสแบบชัดเจน */
+.btn.back:focus-visible{
+  outline: 3px solid #fff; outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(255,255,255,.25), 0 8px 24px rgba(2,8,20,.28);
+  border-color: var(--chip-ring);
+}
+
+/* กัน header มาบัง: hero เก็บเลเยอร์ตัวเองไว้ */
+.hero{ position:relative; z-index:0 }
+
   </style>
 </head>
 <body>
@@ -300,26 +347,32 @@ body.no-scroll{ position:fixed; width:100% }
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- ===== Hero ===== -->
-  <header class="hero" aria-label="Black Nickel Hero">
-    <!-- Back button -->
-    <div class="back-wrap">
-      <a href="https://www.baumechemical.com/products/platingcoating/nickelplating/index.html" class="btn back" id="backBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<header class="hero" aria-label="Black Nickel Hero">
+  <div class="hero-inner wrap" style="padding:22px 16px">
+    <!-- Back button (centered over topic) -->
+    <div class="back-wrap" role="navigation" aria-label="Go back">
+      <a href="https://www.baumechemical.com/products/platingcoating/nickelplating/index.html"
+         class="btn back" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
         <span data-i18n-key="btn_back">ย้อนกลับ</span>
       </a>
     </div>
 
-    <div class="hero-inner wrap" style="padding:22px 16px">
-      <h1 data-i18n-key="hero_title">Black Nickel Plating & BLACK NICKEL SALT</h1>
-      <p data-i18n-key="hero_tagline">คำอธิบายกระบวนการชุบนิกเกิลดำ ข้อดีการใช้งาน และสเปกผลิตภัณฑ์ BLACK NICKEL SALT: ช่วงอุณหภูมิ pH กระแสไฟ ตัวอย่างการผสม และคำแนะนำการปรับเติม</p>
-      <div class="bullets" aria-label="Key highlights">
-        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b1">ดำเงา/ด้าน สวยหรู</span></div>
-        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b2">ลดแสงสะท้อน เหมาะงานกล้อง/เครื่องมือ</span></div>
-        <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b3">เสริมทนการกัดกร่อน</span></div>
-      </div>
+    <h1 data-i18n-key="hero_title">Black Nickel Plating & BLACK NICKEL SALT</h1>
+    <p data-i18n-key="hero_tagline">
+      คำอธิบายกระบวนการชุบนิกเกิลดำ ข้อดีการใช้งาน และสเปกผลิตภัณฑ์ BLACK NICKEL SALT:
+      ช่วงอุณหภูมิ pH กระแสไฟ ตัวอย่างการผสม และคำแนะนำการปรับเติม
+    </p>
+    <div class="bullets" aria-label="Key highlights">
+      <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b1">ดำเงา/ด้าน สวยหรู</span></div>
+      <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b2">ลดแสงสะท้อน เหมาะงานกล้อง/เครื่องมือ</span></div>
+      <div class="bullet"><span class="icon">✓</span><span data-i18n-key="b3">เสริมทนการกัดกร่อน</span></div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- ===== Main ===== -->
   <main class="wrap">
