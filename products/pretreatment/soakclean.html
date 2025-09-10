@@ -194,6 +194,73 @@
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+  
+        /* === Anti-tarnish header & buttons — OVERRIDES === */
+.site-header{
+  position:fixed; inset:0 0 auto 0; z-index:1400;
+  background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
+  backdrop-filter:none; box-shadow:none;
+  transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.site-header.is-scrolled{
+  background:rgba(15,23,42,.70);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:0 8px 26px rgba(2,8,20,.18);
+}
+/* คง sticky-behavior เก่าไว้สำหรับ class .scrolled ที่มีในโค้ดเดิม */
+.site-header.scrolled{ background:rgba(15,23,42,.70) }
+
+/* กัน anchor โดนเมนู (fixed) */
+html{ scroll-padding-top:calc(var(--header-h) + 8px) }
+
+/* Mobile menu scrim (สร้างอัตโนมัติด้วย JS ถ้าไม่มี) */
+.menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+.menu-scrim:not([hidden]){ display:block }
+body.no-scroll{ position:fixed; width:100% }
+
+/* Language chip บนบาร์ให้เป็นแก้วใส ๆ เหมือน Anti-tarnish */
+.lang-inline{
+  border:1px solid #e2e8f0; background:#ffffffcc; color:#0f172a;
+  box-shadow:0 10px 26px rgba(2,8,20,.12)
+}
+.site-header.is-scrolled .lang-inline{ background:#ffffffdd }
+
+/* ปุ่ม Back ให้เป็นชิปขาวแบบแก้ว (CTA อื่นคงเดิม) */
+.btn.back{
+  background:#ffffffee; color:#0f172a; border:1px solid #e2e8f0;
+  box-shadow:0 6px 18px rgba(2,8,20,.08)
+}
+.site-header.is-scrolled .btn.back{ background:#ffffffdd }
+.btn.back:hover{ transform:translateY(-1px) }
+
+/* === Language switch — match Anti-tarnish === */
+/* กล่องภาษา (เดสก์ท็อปบนแถบเมนู) ใสแบบแก้ว */
+.lang-inline{
+  border:1px solid #e2e8f0;
+  background:#ffffffcc;          /* ใสๆ */
+  color:#0f172a;
+  box-shadow:0 10px 26px rgba(2,8,20,.12);
+}
+.site-header.is-scrolled .lang-inline{ background:#ffffffdd } /* เข้มขึ้นนิดเมื่อเลื่อน */
+
+/* ปุ่มภาษา (เดสก์ท็อป) — ปกติเป็นตัวหนังสือสีเข้มบนพื้นใส,
+   ถ้าเลือกอยู่ให้เป็นพื้น "เขียวแบรนด์" ตัวหนังสือสีขาว */
+.lang-inline .lang-btn{ color:#0f172a } /* override ของเดิมที่เป็น #fff */
+.lang-inline .lang-btn[aria-pressed="true"]{
+  background:var(--brand-2);   /* #387b5b */
+  color:#fff;
+}
+
+/* มือถือในเมนูดรอปดาวน์ — คงสไตล์เดียวกับ Anti-tarnish อยู่แล้ว:
+   ตัวปกติสีขาวบนพื้นมืด, ถ้า active เป็นพื้นขาวตัวอักษรเข้ม */
+.menu .lang-li .lang-group{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+}
+.menu .lang-li .lang-btn{ color:#fff }
+.menu .lang-li .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+
   </style>
 </head>
 <body>
@@ -215,6 +282,7 @@
             <li><a href="https://www.baumechemical.com/about-us.html">About us</a></li>
             <li><a href="https://www.baumechemical.com/products.html">Products</a></li>
             <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/index.html" class="nav-link">Blog</a></li>
 
             <!-- Mobile language row -->
             <li class="lang-li">
@@ -440,26 +508,61 @@
     </div>
   </footer>
 
-  <!-- ===== Nav toggle + sticky header ===== -->
-  <script>
-    (function(){
-      var header=document.querySelector('.site-header');
-      var toggle=document.querySelector('.site-header .nav-toggle');
-      if(header && toggle){
-        toggle.addEventListener('click', function(){
-          var opened=header.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(opened));
-        });
-        // Close menu on link/lang click (mobile)
-        document.addEventListener('click', function(e){
-          var t=e.target.closest('.menu a, .menu .lang-btn');
-          if(t && window.innerWidth<=920){ header.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); }
-        });
-      }
-      var onScroll=function(){ header && header.classList.toggle('scrolled', window.scrollY>10); };
-      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
-    })();
-  </script>
+<script>
+/* === Anti-tarnish header behavior: glass → dark on scroll, mobile lock & scrim === */
+(function(){
+  var header = document.querySelector('.site-header');
+  var toggle = document.querySelector('.site-header .nav-toggle');
+  var menu   = document.querySelector('.menu');
+
+  // สร้าง scrim อัตโนมัติถ้าไม่มีใน DOM
+  var scrim = document.querySelector('.menu-scrim');
+  if(!scrim){ scrim = document.createElement('div'); scrim.className = 'menu-scrim'; scrim.hidden = true; document.body.appendChild(scrim); }
+
+  function setHeaderH(){
+    if(!header) return;
+    var h = Math.round(header.getBoundingClientRect().height) || 64;
+    document.documentElement.style.setProperty('--header-h', h + 'px');
+  }
+  function onScroll(){
+    if(!header) return;
+    var s = (window.scrollY || 0) > 10;
+    header.classList.toggle('is-scrolled', s);
+    header.classList.toggle('scrolled', s); // เผื่อ style เก่า
+  }
+
+  function openMenu(v){
+    if(!header) return;
+    header.classList.toggle('open', v);
+    toggle && toggle.setAttribute('aria-expanded', String(v));
+    v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+
+    if(v){
+      // ล็อก body ไม่ให้เลื่อน
+      openMenu._y = window.scrollY || 0;
+      document.body.classList.add('no-scroll');
+      document.body.style.top = `-${openMenu._y}px`;
+    }else{
+      document.body.classList.remove('no-scroll');
+      document.body.style.top = '';
+      window.scrollTo(0, openMenu._y || 0);
+    }
+  }
+
+  toggle && toggle.addEventListener('click', function(){ openMenu(!header.classList.contains('open')); });
+  scrim.addEventListener('click', function(){ openMenu(false); });
+  document.addEventListener('click', function(e){
+    if(e.target.closest('.menu a, .menu .lang-btn')) openMenu(false);
+  });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+
+  // init
+  setHeaderH(); onScroll();
+  window.addEventListener('resize', setHeaderH, {passive:true});
+  window.addEventListener('load', setHeaderH, {once:true});
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+</script>
 
   <!-- Back button -->
   <script>
