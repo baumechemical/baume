@@ -32,29 +32,15 @@
   "name": "BASn 4140 — น้ำยาชุบดีบุกเงา",
   "description": "น้ำยาชุบดีบุกเงาคุณภาพสูง: สัดส่วนการผสม ขั้นตอนการชุบ พารามิเตอร์การทำงาน อุปกรณ์ที่จำเป็น และเหตุผลที่ควรใช้แอโนดดีบุกบริสุทธิ์ 99.9%",
   "image": "https://img5.pic.in.th/file/secure-sv1/thumbnail1.jpg",
-  "brand": {
-    "@type": "Brand",
-    "name": "Baume Chemical"
-  },
+  "brand": {"@type": "Brand","name": "Baume Chemical"},
   "category": "Tin Plating",
   "inLanguage": "th",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.baumechemical.com/products/platingcoating/tinplating/index.html",
-    "priceCurrency": "THB",
-    "price": "0.00",
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10"
-  }
+  "offers": {"@type": "Offer","url": "https://www.baumechemical.com/products/platingcoating/tinplating/index.html","priceCurrency": "THB","price": "0.00","availability": "https://schema.org/InStock"},
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"5","reviewCount":"10"}
 }
 </script>
 
-
-  <!-- Fonts & Perf -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://flagcdn.com" crossorigin>
@@ -120,19 +106,16 @@
 
     /* ===== Layout ===== */
     .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
-    @media (min-width:1100px){
-      main.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
-      #toc{grid-column:1;position:sticky;top:calc(var(--header-h) + 10px)}
-      article{grid-column:2}
-    }
 
-    /* ===== TOC card ===== */
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc h2.section{font-size:1rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+    /* ===== TOC (inline & sticky) ===== */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1);font-size:.94rem;margin-bottom:14px}
+    #toc h2.section{font-size:.95rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
     #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 10px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800;font-size:.94rem}
     .toc-chip::after{content:"›";opacity:.5}
     .toc-chip[aria-current="true"],.toc-chip.is-active{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    /* sticky ตามลงบนเดสก์ท็อป */
+    @media (min-width:900px){ #toc{ position:sticky; top:calc(var(--header-h) + 10px); z-index:10; } }
 
     /* ===== Sections & tables ===== */
     section.section-block{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px}
@@ -147,6 +130,17 @@
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
     .table tbody tr:hover{background:#f6fbf8}
+
+    /* ===== Features (Icon card grid) ===== */
+    .features .section{align-items:flex-start}
+    .features__grid{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:992px){ .features__grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width:640px){ .features__grid{grid-template-columns:1fr} }
+    .features__item{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;grid-template-areas:"icon title" "icon desc";gap:8px;padding:14px;border:1px solid #e7efe9;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f8fbf9);box-shadow:var(--shadow-1)}
+    .features__icon{grid-area:icon;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(180deg,#e9f6f0,#d7eee5);border:1px solid #cfe5da;font-size:26px}
+    .features__title{grid-area:title;margin:2px 0 2px;font-weight:800;color:#1f2a24}
+    .features__desc{grid-area:desc;margin:0;color:#5b6675}
+    .features__desc strong{color:#1f2a24}
 
     /* ===== Footer ===== */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
@@ -216,17 +210,6 @@
   </header>
 
   <main class="wrap">
-    <!-- TOC -->
-    <nav id="toc" class="reveal" aria-label="สารบัญ">
-      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวมผลิตภัณฑ์</a>
-        <a class="toc-chip" href="#makeup" data-i18n-key="toc_makeup">ส่วนที่ 1: การเตรียมสารละลาย (Make-up)</a>
-        <a class="toc-chip" href="#process" data-i18n-key="toc_process">ส่วนที่ 2: ขั้นตอนการชุบ</a>
-        <a class="toc-chip" href="#conditions" data-i18n-key="toc_conditions">ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์</a>
-        <a class="toc-chip" href="#anode" data-i18n-key="toc_anode">ทำไมต้อง Tin Anode 99.9%</a>
-      </p>
-    </nav>
 
     <article>
 
@@ -241,6 +224,61 @@
         </div>
       </section>
 
+      <!-- TOC (moved above features & sticky follow) -->
+      <nav id="toc" class="reveal" aria-label="สารบัญ">
+        <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+        <p>
+          <a class="toc-chip" href="#features" data-i18n-key="toc_features">จุดเด่น</a>
+          <a class="toc-chip" href="#makeup" data-i18n-key="toc_makeup">ส่วนที่ 1: การเตรียมสารละลาย (Make-up)</a>
+          <a class="toc-chip" href="#process" data-i18n-key="toc_process">ส่วนที่ 2: ขั้นตอนการชุบ</a>
+          <a class="toc-chip" href="#conditions" data-i18n-key="toc_conditions">ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์</a>
+          <a class="toc-chip" href="#anode" data-i18n-key="toc_anode">ทำไมต้อง Tin Anode 99.9%</a>
+        </p>
+      </nav>
+
+      <!-- Features (Icon card grid) -->
+      <section id="features" class="reveal section-block features" aria-labelledby="features-h">
+        <h2 id="features-h" class="section" data-i18n-key="features_h">จุดเด่นของ BASn 4140</h2>
+        <p class="lead" data-i18n-key="features_lead">สรุปคุณสมบัติสำคัญที่หน้างานต้องใช้จริง ครอบคลุมตั้งแต่ความเงา ความสม่ำเสมอ ไปจนถึงความเสถียรของบ่อ</p>
+
+        <div class="features__grid">
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">✨</div>
+            <h3 class="features__title" data-i18n-key="feat_1_t">เงาสูงทั่วช่วงกระแส</h3>
+            <p class="features__desc" data-i18n-key="feat_1_d">ตั้งแต่ <strong>LCD ถึง HCD</strong> ได้ผิวเงาสม่ำเสมอ ลดความต่างโทนระหว่างขอบกับร่องลึก</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">📈</div>
+            <h3 class="features__title" data-i18n-key="feat_2_t">หน้าต่างการทำงานกว้าง</h3>
+            <p class="features__desc" data-i18n-key="feat_2_d">ทนต่อความคลาดเคลื่อนของความเข้มข้นและอุณหภูมิ <strong>บ่อเสถียร เติมน้อย</strong></p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🎯</div>
+            <h3 class="features__title" data-i18n-key="feat_3_t">Throwing power ดี</h3>
+            <p class="features__desc" data-i18n-key="feat_3_d">ชิ้นงานขอบ–รู–ร่องลึกออกเต็ม ลดอาการไหม้ที่มุมคม</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🧹</div>
+            <h3 class="features__title" data-i18n-key="feat_4_t">กรองง่าย ตะกอนต่ำ</h3>
+            <p class="features__desc" data-i18n-key="feat_4_d">คงความใสของบ่อได้ยาวนาน สนับสนุนอายุการใช้งานบ่อ</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🔌</div>
+            <h3 class="features__title" data-i18n-key="feat_5_t">พร้อมงานอิเล็กทรอนิกส์</h3>
+            <p class="features__desc" data-i18n-key="feat_5_d">บัดกรีดี ผิวหมอกต่ำ เหมาะกับคอนเน็กเตอร์และแผ่นนำไฟฟ้า</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🛡️</div>
+            <h3 class="features__title" data-i18n-key="feat_6_t">วัสดุอุปกรณ์ปลอดภัยต่อบ่อ</h3>
+            <p class="features__desc" data-i18n-key="feat_6_d">รองรับอ่างบุ CSP/PVC/PE/PP คอยล์ PTFE และแอโนดดีบุก 99.9%</p>
+          </article>
+        </div>
+      </section>
       <!-- Make-up -->
       <section id="makeup" class="reveal section-block" aria-labelledby="makeup-h">
         <h2 id="makeup-h" class="section" data-i18n-key="makeup_h">ส่วนที่ 1: การเตรียมสารละลาย (Make-up)</h2>
@@ -428,6 +466,7 @@
       <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
+
   <!-- Reveal on scroll -->
   <script>
     const revealEls = document.querySelectorAll('.reveal');
@@ -447,10 +486,19 @@
         hero_title:"BASn 4140: น้ำยาชุบดีบุกเงา",
         hero_tagline:"สัดส่วนการผสม ขั้นตอนการชุบ พารามิเตอร์การทำงาน อุปกรณ์ที่จำเป็น และเหตุผลที่ควรใช้ Tin Anode 99.9%",
 
-        toc_title:"สารบัญ", toc_intro:"ภาพรวมผลิตภัณฑ์", toc_makeup:"ส่วนที่ 1: การเตรียมสารละลาย (Make-up)", toc_process:"ส่วนที่ 2: ขั้นตอนการชุบ", toc_conditions:"ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์", toc_anode:"ทำไมต้อง Tin Anode 99.9%",
+        toc_title:"สารบัญ", toc_features:"จุดเด่น", toc_makeup:"ส่วนที่ 1: การเตรียมสารละลาย (Make-up)", toc_process:"ส่วนที่ 2: ขั้นตอนการชุบ", toc_conditions:"ส่วนที่ 3: สภาพการทำงาน & อุปกรณ์", toc_anode:"ทำไมต้อง Tin Anode 99.9%",
 
         intro_h:"ภาพรวมผลิตภัณฑ์",
         intro_p1:"ผลิตภัณฑ์ BASn 4140 เป็นน้ำยาชุบดีบุกชนิดเงาคุณภาพสูง ให้ผิวเคลือบเงางาม ไม่เป็นฝ้า กระจายตัวดีเยี่ยม ใช้ได้กว้างทั้งอุณหภูมิและความเข้มข้น เสถียรและคุ้มค่าเพราะไม่ต้องเติมบ่อย เหมาะกับงานอิเล็กทรอนิกส์ ยานยนต์ และงานที่ต้องการความเงางามของพื้นผิว",
+
+        features_h:"จุดเด่นของ BASn 4140",
+        features_lead:"สรุปคุณสมบัติสำคัญที่หน้างานต้องใช้จริง ครอบคลุมตั้งแต่ความเงา ความสม่ำเสมอ ไปจนถึงความเสถียรของบ่อ",
+        feat_1_t:"เงาสูงทั่วช่วงกระแส", feat_1_d:"ตั้งแต่ LCD ถึง HCD ได้ผิวเงาสม่ำเสมอ ลดความต่างโทนระหว่างขอบกับร่องลึก",
+        feat_2_t:"หน้าต่างการทำงานกว้าง", feat_2_d:"ทนต่อความคลาดเคลื่อนของความเข้มข้นและอุณหภูมิ บ่อเสถียร เติมน้อย",
+        feat_3_t:"Throwing power ดี", feat_3_d:"ชิ้นงานขอบ–รู–ร่องลึกออกเต็ม ลดอาการไหม้ที่มุมคม",
+        feat_4_t:"กรองง่าย ตะกอนต่ำ", feat_4_d:"คงความใสของบ่อได้ยาวนาน สนับสนุนอายุการใช้งานบ่อ",
+        feat_5_t:"พร้อมงานอิเล็กทรอนิกส์", feat_5_d:"บัดกรีดี ผิวหมอกต่ำ เหมาะกับคอนเน็กเตอร์และแผ่นนำไฟฟ้า",
+        feat_6_t:"วัสดุอุปกรณ์ปลอดภัยต่อบ่อ", feat_6_d:"รองรับอ่างบุ CSP/PVC/PE/PP คอยล์ PTFE และแอโนดดีบุก 99.9%",
 
         makeup_h:"ส่วนที่ 1: การเตรียมสารละลาย (Make-up)",
         ratio_h:"สัดส่วนแนะนำ",
@@ -517,10 +565,19 @@
         hero_title:"BASn 4140 Bright Tin Plating",
         hero_tagline:"Make-up ratios, plating steps, operating window, required equipment, and why to use 99.9% Tin Anode",
 
-        toc_title:"Contents", toc_intro:"Product overview", toc_makeup:"Part 1: Make-up", toc_process:"Part 2: Plating steps", toc_conditions:"Part 3: Operating conditions & equipment", toc_anode:"Why 99.9% Tin Anode",
+        toc_title:"Contents", toc_features:"Key features", toc_makeup:"Part 1: Make-up", toc_process:"Part 2: Plating steps", toc_conditions:"Part 3: Operating conditions & equipment", toc_anode:"Why 99.9% Tin Anode",
 
         intro_h:"Product overview",
         intro_p1:"BASn 4140 is a high-quality bright tin process delivering glossy, haze-free deposits with excellent throwing power. It operates effectively across a wide range of temperatures and concentrations, remains stable with low additive consumption, and suits electronics, automotive, and any finish that demands high gloss.",
+
+        features_h:"BASn 4140 Highlights",
+        features_lead:"Practical advantages for the shop floor—from gloss and uniformity to bath robustness.",
+        feat_1_t:"High gloss across current range", feat_1_d:"From LCD to HCD, deposits stay uniformly bright with minimized edge-to-recess tone difference.",
+        feat_2_t:"Wide operating window", feat_2_d:"Tolerant to concentration/temperature drift; stable bath with low additive consumption.",
+        feat_3_t:"Strong throwing power", feat_3_d:"Edges, holes, and recesses cover well; reduces burning at sharp corners.",
+        feat_4_t:"Easy filtration, low sludge", feat_4_d:"Keeps bath clear longer and supports extended bath life.",
+        feat_5_t:"Electronics-ready", feat_5_d:"Good solderability and low haze; ideal for connectors and conductive parts.",
+        feat_6_t:"Equipment-safe bill of materials", feat_6_d:"Compatible with CSP/PVC/PE/PP tanks, PTFE coils, and 99.9% tin anodes.",
 
         makeup_h:"Part 1: Make-up",
         ratio_h:"Recommended ratios",
@@ -589,23 +646,13 @@
     function applyLang(lang){
       const sel = (lang === 'en') ? 'en' : 'th';
       document.documentElement.lang = sel;
-
-      // update buttons
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
-
-      // translate texts
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
-          node.textContent = I18N[sel][key];
-        }
+        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') node.textContent = I18N[sel][key];
       });
-
-      // update <title>
       const titleEl = document.querySelector('title[data-i18n-key="title"]');
       if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
-
-      // persist + recalc header height
       try{ localStorage.setItem('lang', sel); }catch(e){}
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
