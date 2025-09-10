@@ -512,17 +512,28 @@ body.no-scroll{ position:fixed; width:100% }
     })();
 
     // Back button
-    (function(){
-      const btn = document.getElementById('backBtn'); if(!btn) return;
-      btn.addEventListener('click', (e)=>{
-        e.preventDefault();
-        try{
-          const ref = document.referrer;
-          if(ref && new URL(ref).origin === location.origin){ history.back(); return; }
-        }catch(_){}
-        location.href = '/products/platingcoating/';
-      });
-    })();
+(function(){
+  const btn = document.getElementById('backBtn'); if(!btn) return;
+
+  const FALLBACK = 'https://www.baumechemical.com/products/platingcoating/';
+
+  btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    // ไปหน้าก่อนหน้าได้ ถ้าอยู่โดเมนเดียวกัน หรือมี history
+    try{
+      const ref = document.referrer;
+      const sameOrigin = ref && new URL(ref).origin === location.origin;
+      if (sameOrigin || history.length > 1) {
+        history.back();
+        return;
+      }
+    }catch(_){ /* ignore */ }
+
+    // กรณีเปิดไฟล์โลคัล/ข้ามโดเมน/ไม่มี history → ไปหมวดสินค้าทันที
+    location.assign(FALLBACK);
+  });
+})();
 
     // ===== i18n =====
     const I18N = {
