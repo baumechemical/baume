@@ -1,124 +1,157 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">คู่มือ Tri Yellow BM — สีเหลืองโครม 3 (Trivalent Chromate) | Baume Chemical Blog</title>
 
-  <!-- === SEO (i18n-ready) === -->
-  <title data-i18n-key="meta_title">Tri Yellow SC • สีเหลือง โครม 3 บนซิงค์ | Baume Chemical</title>
-  <meta name="description" content="Tri Yellow SC โครเมตไตรวาเลนท์โทนเหลือง-รุ้ง สำหรับงานชุบซิงค์ ปลอด Cr(VI) คุม pH 1.4–1.9 แนะนำ ~1.7 จุ่ม 30–90 วินาที เสริมความทนทานด้วยการอบ 120 °C" />
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <!-- SEO base -->
+  <meta name="description" content="Tri Yellow BM สีเหลืองโครเมท (Cr3+) บนผิวซิงค์: หลักการ/คุณสมบัติ ข้อดีต่อสิ่งแวดล้อม ช่วงใช้งาน วิธีผสม/จุ่ม การควบคุม pH และคำแนะนำอุปกรณ์ทนกรด">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <meta name="theme-color" content="#2c5e4e">
-  <link rel="canonical" href="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="product">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" content="Tri Yellow SC • Trivalent Yellow/Iridescent Chromate on Zinc">
-  <meta property="og:description" content="Cr(III) yellow/iridescent chromate for zinc. pH 1.4–1.9 (≈1.7), 30–90 s dip; bake 120 °C boosts NSS.">
+  <meta property="og:title" content="Tri Yellow BM — สีเหลืองโครม 3 บนงานซิงค์">
+  <meta property="og:description" content="โครเมท Cr3+ โทนเหลืองทอง: สวยงาม ปลอดภัยกว่า RoHS/REACH ทนกัดกร่อน พร้อมสเปกการใช้งานครบถ้วน">
   <meta property="og:url" content="https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html">
   <meta property="og:image" content="https://i.imgur.com/LAe2sGy.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Tri Yellow BM — Trivalent Yellow Chromate",
+  "description": "Cr3+ yellow/iridescent chromate for zinc: RoHS/REACH aligned, tunable shade via time, strong white-rust resistance, easy maintenance, and long bath life.",
+  "image": "https://i.imgur.com/LAe2sGy.jpeg",
+  "brand": {"@type": "Brand","name": "Baume Chemical"},
+  "category": "Zinc Passivation / Trivalent Yellow",
+  "inLanguage": "th",
+  "offers": {"@type": "Offer","url": "https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc.html","priceCurrency": "THB","price": "0.00","availability": "https://schema.org/InStock"},
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"22"}
+}
+</script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://i.imgur.com/LAe2sGy.jpeg">
+  <!-- Hero/thumbnail preload -->
+  <link rel="preload" as="image" href="https://i.imgur.com/LAe2sGy.jpeg"/>
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
-      --bg:#d5e4d9; --card:#fff; --radius:14px; --shadow:0 8px 26px rgba(2,8,20,.06);
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --accent:#2c5e4e; /* ใช้กับปุ่มภาษา */
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --container:1200px; --header-h:64px;
+      --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0}
-    body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* ===== Header: fixed glass (match template) ===== */
+    /* ===== Header (glass) ===== */
     .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
-    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
-    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:var(--header-h)}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
-    .header-right{display:flex;align-items:center;gap:10px}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff}
 
-    .primary-nav{display:flex;align-items:center;gap:12px}
-    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
-    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
-    .menu a:hover{background:rgba(255,255,255,.12)}
-    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
+    .primary-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .primary-nav a{text-decoration:none;color:#fff;padding:10px 12px;border-radius:10px;font-weight:700}
+    .primary-nav a:hover{background:rgba(255,255,255,.12)}
+    .primary-nav a[aria-current="page"]{background:rgba(255,255,255,.18)}
 
-    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
+    .lang-switch{display:flex;gap:6px;margin-left:auto;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{background:var(--accent);color:#fff}
+    .lang-btn img{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
+    .nav-toggle{display:none;width:38px;height:38px;border-radius:9px;background:transparent;cursor:pointer;border:0}
     .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
     .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
-    @media (max-width:920px){
-      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
-      .menu li a{display:block;padding:12px 14px;border-radius:10px}
-      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
-      .nav-toggle{display:inline-flex}
+    @media (max-width:900px){
+      .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+      .primary-nav{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;border:1px solid rgba(255,255,255,.18);backdrop-filter: blur(8px);border-radius:14px;display:grid;gap:6px;padding:12px;z-index:1400;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
+      .primary-nav a{color:#fff;padding:12px 10px;}
+      .site-header.open .primary-nav{transform:none;opacity:1;pointer-events:auto}
+      .lang-switch{width:100%;margin:6px 0 0;background:#ffffff1c;border-color:rgba(255,255,255,.35);box-shadow:none}
+      .lang-btn{color:#fff}
+      .lang-btn[aria-pressed="true"]{background:var(--accent);color:#fff}
     }
+
     .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
     .menu-scrim:not([hidden]){display:block}
     body.no-scroll{position:fixed;width:100%}
 
-    /* Language switchers (header + FAB synced) */
-    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
-
-    /* HERO */
-    .hero{
-      position:relative;display:grid;place-items:center;text-align:center;color:#fff;
-      min-height: clamp(380px, 60svh, 640px); padding-top:var(--header-h);
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
-                 url('https://i.imgur.com/LAe2sGy.jpeg') center/cover no-repeat;
-    }
-    .hero-inner{position:relative;z-index:1;max-width:var(--container);width:100%;padding:26px 16px}
-    .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
+    /* ===== Hero ===== */
+    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:
+      linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.7)),
+      url('https://i.imgur.com/LAe2sGy.jpeg') center/cover no-repeat;
+      padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
-    .badges{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
-    .badge{padding:6px 10px;background:#ffffff22;border:1px solid #ffffff55;border-radius:999px;font-weight:700;backdrop-filter:blur(6px)}
-    .back-home{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;padding:6px 12px;border-radius:999px;background:#ffffffcc;color:#0f172a;border:1px solid #e2e8f0;text-decoration:none;font-weight:800;backdrop-filter: blur(6px)}
-    .back-home:hover{background:#fff}
+    .back-chip{position:absolute;top:calc(var(--header-h) + 10px);left:16px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;font-weight:800;text-decoration:none;background:#fff;border:1px solid rgba(2,8,20,.08);color:#0f172a;box-shadow:var(--shadow-1)}
+    .back-chip:hover{transform:translateY(-1px)}
 
-    /* Layout & cards */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
-    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow);padding:18px;margin-bottom:16px}
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
 
-    /* Tables */
-    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
-    table{border-collapse:collapse;width:100%;min-width:760px}
-    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.98rem}
-    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
-    .note{font-style:italic;color:#9a3412}
+    /* ===== TOC (inline & sticky) ===== */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1);font-size:.9rem;margin-bottom:14px}
+    #toc h2.section{font-size:.9rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 10px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800;font-size:.9rem}
+    .toc-chip::after{content:"›";opacity:.5}
+    .toc-chip[aria-current="true"],.toc-chip.is-active{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    /* sticky บนเดสก์ท็อป */
+    @media (min-width:900px){ #toc{ position:sticky; top:calc(var(--header-h) + 10px); z-index:10; } }
 
-    /* Footer */
+    /* ===== Sections & tables ===== */
+    section.section-block{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px}
+    section.section-block::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,#f1c40f,#f59e0b,#fbbf24,#fde047);opacity:.9}
+    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24;display:flex;align-items:center;gap:10px;position:relative}
+    .lead{margin:0 0 14px;color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:0;z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{background:#f6fbf8}
+
+    /* ===== Features (Icon card grid) ===== */
+    .features .section{align-items:flex-start}
+    .features__grid{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:992px){ .features__grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width:640px){ .features__grid{grid-template-columns:1fr} }
+    .features__item{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;grid-template-areas:"icon title" "icon desc";gap:8px;padding:14px;border:1px solid #e7efe9;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f8fbf9);box-shadow:var(--shadow-1)}
+    .features__icon{grid-area:icon;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(180deg,#fff7d6,#fde68a);border:1px solid #f1c859;font-size:26px}
+    .features__title{grid-area:title;margin:2px 0 2px;font-weight:800;color:#1f2a24}
+    .features__desc{grid-area:desc;margin:0;color:#5b6675}
+    .features__desc strong{color:#1f2a24}
+
+    /* ===== Footer ===== */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -128,175 +161,265 @@
     .footer-list{list-style:none;margin:8px 0 0;padding:0}
     .footer-list li{margin:6px 0}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
   </style>
+</style>
 </head>
 <body>
 
-  <!-- ===== Header (MATCH TEMPLATE) ===== -->
+  <!-- Header -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
-    <div class="header-inner">
-      <a class="brand" href="/" aria-label="Baume Chemical">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <div class="header-right">
-        <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-          <ul class="menu">
-            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
-            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
-          </ul>
-        </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
 
-        <!-- Header language switch -->
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-            <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
           </button>
           <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-            <img class="flag" src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
           </button>
         </div>
-
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-          <span class="bar" aria-hidden="true"></span>
-        </button>
-      </div>
+      </nav>
     </div>
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- HEADER / HERO -->
-  <section class="hero" aria-label="Tri Yellow SC hero">
-    <div class="hero-inner">
-      <a class="back-home" href="/index.html" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับหน้าแรก</a>
-
-      <div class="badges">
-        <span class="badge" data-i18n-key="badge1">Trivalent (Cr(III))</span>
-        <span class="badge" data-i18n-key="badge2">Yellow / Iridescent</span>
-        <span class="badge" data-i18n-key="badge3">72–100 h NSS</span>
-        <span class="badge" data-i18n-key="badge4">Bake 120 °C ↑</span>
-      </div>
-      <h1 data-i18n-key="hero_title">Tri Yellow SC — สีเหลือง โครม 3 บนซิงค์</h1>
-      <p data-i18n-key="hero_tagline">โทนเหลือง-รุ้งคล้าย Cr(VI) • ปลอดเฮกซะวาเลนท์ • pH 1.4–1.9 (~1.7) • จุ่ม 30–90 วินาที</p>
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">Tri Yellow BM — สีเหลืองโครม 3 (Trivalent Chromate)</h1>
+      <p data-i18n-key="hero_tagline">โครเมทสีเหลืองทอง Cr3+ สวยงาม ปลอดภัยกว่า (RoHS/REACH) ทนสนิมขาว ~72–100 ชม. ปรับเฉดได้ด้วยเวลา</p>
     </div>
-  </section>
+  </header>
 
   <main class="wrap">
-    <!-- OVERVIEW -->
-    <section class="card">
-      <h2 class="section" data-i18n-key="ov_title">ภาพรวมผลิตภัณฑ์</h2>
-      <p class="lead" data-i18n-key="ov_p">
-        Tri Yellow SC เป็นโครเมตไตรวาเลนท์ให้โทนเหลือง/รุ้งบนซิงค์ ลักษณะสีใกล้เคียงโครม 6
-        เฉดเปลี่ยนตามเวลาจุ่มและสภาพบ่อ (เหลือง–แดง–เขียว) ทนสนิมขาวโดยทั่วไป ~72–100 ชม.
-        และสามารถเพิ่มได้เมื่ออบที่ ~120 °C หลังจุ่มสี
-      </p>
-    </section>
 
-    <!-- OPERATING -->
-    <section class="card">
-      <h2 class="section" data-i18n-key="ops_title">ช่วงการใช้งาน</h2>
-      <div class="table">
-        <table aria-label="Operating conditions">
-          <thead>
-            <tr>
-              <th data-i18n-key="head_param">พารามิเตอร์</th>
-              <th data-i18n-key="head_opt">ค่าที่เหมาะสม</th>
-              <th data-i18n-key="head_range">ช่วง</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Tri Yellow SC</td><td>100 cc/L</td><td>70–120 cc/L</td></tr>
-            <tr><td>Color Yellow Dye</td><td>10 cc/L</td><td>1–20 cc/L</td></tr>
-            <tr><td>pH</td><td>~1.7</td><td>1.4–1.9</td></tr>
-            <tr><td data-i18n-key="t_temp">อุณหภูมิ</td><td data-i18n-key="room">ห้อง</td><td data-i18n-key="room_dash">—</td></tr>
-            <tr><td data-i18n-key="t_dwell">เวลาจุ่ม</td><td>~45–60 s</td><td>30–90 s</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note" data-i18n-key="ops_note">ปรับ pH ลงด้วยกรดไนตริก (HNO₃) และปรับขึ้นด้วยโซดาไฟเจือจาง (NaOH) อย่างระมัดระวัง</p>
-    </section>
+    <article>
 
-    <!-- PROCESS -->
-    <section class="card">
-      <h2 class="section" data-i18n-key="proc_title">ขั้นตอนการทำงาน</h2>
-      <div class="table">
-        <table aria-label="Process sequence">
-          <thead>
-            <tr>
-              <th data-i18n-key="step_no">ขั้น</th>
-              <th data-i18n-key="step_desc">รายละเอียด</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td data-i18n-key="s1">ชิ้นงานชุบซิงค์เรียบร้อยแล้ว</td></tr>
-            <tr><td>2</td><td data-i18n-key="s2">ล้างน้ำสะอาด ×2</td></tr>
-            <tr><td>3</td><td data-i18n-key="s3">จุ่มกรดไนตริก 1–2% v/v</td></tr>
-            <tr><td>4</td><td data-i18n-key="s4">ล้างน้ำสะอาด</td></tr>
-            <tr><td>5</td><td data-i18n-key="s5">จุ่ม Tri Yellow SC (ที่ผสมแล้ว) 30–60 s</td></tr>
-            <tr><td>6</td><td data-i18n-key="s6">ล้างน้ำสะอาด ×2</td></tr>
-            <tr><td>7</td><td data-i18n-key="s7">จุ่ม Color Yellow Dye (ที่ผสมแล้ว) 30–60 s</td></tr>
-            <tr><td>8</td><td data-i18n-key="s8">ล้างน้ำสะอาด</td></tr>
-            <tr><td>9</td><td data-i18n-key="s9">เป่าลมร้อนหรืออบให้แห้ง (อบ ~120 °C เพื่อเพิ่มความทน NSS)</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวมกระบวนการ</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">
+            สีเหลืองโครม 3 คือการสร้างชั้นฟิล์มโครเมทสีเหลืองทองบนผิวซิงค์ด้วย <strong>โครเมียมไตรวาเลนต์ (Cr3+)</strong>
+            ช่วยเพิ่มความทนการกัดกร่อน ให้ลุคพรีเมียม และเป็นมิตรต่อสิ่งแวดล้อมกว่า Cr6+.
+          </p>
+        </div>
+      </section>
 
-    <!-- TROUBLESHOOTING -->
-    <section class="card">
-      <h2 class="section" data-i18n-key="tr_title">ปัญหาที่พบบ่อย & วิธีแก้</h2>
-      <div class="table">
-        <table aria-label="Troubleshooting">
-          <thead>
-            <tr>
-              <th data-i18n-key="tr_p">ปัญหา</th>
-              <th data-i18n-key="tr_s">แนวทางแก้ไข</th>
-            </tr>
-          </thead>
+      <!-- TOC -->
+      <nav id="toc" class="reveal" aria-label="สารบัญ">
+        <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+        <p>
+          <a class="toc-chip" href="#features" data-i18n-key="toc_features">จุดเด่น</a>
+          <a class="toc-chip" href="#principles" data-i18n-key="toc_makeup">ส่วนที่ 1: หลักการ & คุณสมบัติ</a>
+          <a class="toc-chip" href="#process" data-i18n-key="toc_process">ส่วนที่ 2: ขั้นตอนการใช้</a>
+          <a class="toc-chip" href="#conditions" data-i18n-key="toc_conditions">ส่วนที่ 3: ช่วงใช้งาน & การควบคุม</a>
+          <a class="toc-chip" href="#equip" data-i18n-key="toc_equip">ถัง/อุปกรณ์ & คำแนะนำ</a>
+        </p>
+      </nav>
+
+      <!-- Features (Icon card grid) -->
+      <section id="features" class="reveal section-block features" aria-labelledby="features-h">
+        <h2 id="features-h" class="section" data-i18n-key="features_h">จุดเด่นของ Tri Yellow BM</h2>
+        <p class="lead" data-i18n-key="features_lead">ผิวเหลืองทองโดดเด่น ควบคู่การปกป้องและความปลอดภัย</p>
+
+        <div class="features__grid">
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">✨</div>
+            <h3 class="features__title" data-i18n-key="feat_1_t">โทนเหลืองทองสวย</h3>
+            <p class="features__desc" data-i18n-key="feat_1_d">เฉดเหลือง–แดง–เขียว ปรับได้ด้วยเวลาจุ่ม</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🛡️</div>
+            <h3 class="features__title" data-i18n-key="feat_2_t">ทนสนิมขาว</h3>
+            <p class="features__desc" data-i18n-key="feat_2_d">โดยทั่วไป ~<strong>72–100 ชม.</strong> และเพิ่มได้เมื่ออบ 120°C</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">♻️</div>
+            <h3 class="features__title" data-i18n-key="feat_3_t">เคมี Cr3+ ปลอดภัยกว่า</h3>
+            <p class="features__desc" data-i18n-key="feat_3_d">สอดคล้อง <strong>RoHS/REACH</strong> ลดความเสี่ยงเทียบ Cr6+</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🎨</div>
+            <h3 class="features__title" data-i18n-key="feat_4_t">เสริม Dye สีเหลือง</h3>
+            <p class="features__desc" data-i18n-key="feat_4_d">เพิ่มมิติสีด้วย <strong>Color Yellow dye</strong></p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🔧</div>
+            <h3 class="features__title" data-i18n-key="feat_5_t">ยึดเกาะ/รองพื้นดี</h3>
+            <p class="features__desc" data-i18n-key="feat_5_d">พร้อมงานพ่นสีหรือเคลือบต่อยอด</p>
+          </article>
+
+          <article class="features__item">
+            <div class="features__icon" aria-hidden="true">🧪</div>
+            <h3 class="features__title" data-i18n-key="feat_6_t">ควบคุมง่าย</h3>
+            <p class="features__desc" data-i18n-key="feat_6_d">pH ~1.4–1.9 อุณหภูมิห้อง เวลาจุ่ม 30–90 วินาที</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Principles & properties -->
+      <section id="principles" class="reveal section-block" aria-labelledby="principles-h">
+        <h2 id="principles-h" class="section" data-i18n-key="makeup_h">ส่วนที่ 1: หลักการ & คุณสมบัติ</h2>
+        <div class="content">
+          <p data-i18n-key="principle_p1">
+            หลังชุบซิงค์ ชิ้นงานถูกจุ่มสารละลาย <strong>Cr3+</strong> เกิดฟิล์มโครเมทสีเหลืองบาง ๆ ที่ช่วยกันกัดกร่อน
+            ให้ลุคเหลืองทองคล้ายชุบทอง และเป็นพื้นผิวที่ดีต่อการเคลือบต่อไป.
+          </p>
+          <ul>
+            <li data-i18n-key="benefit_env">เป็นมิตรต่อสิ่งแวดล้อมกว่า Cr6+ (สอดคล้อง RoHS/REACH)</li>
+            <li data-i18n-key="benefit_cor">เพิ่มความทนทานต่อการพ่นละอองเกลือ</li>
+            <li data-i18n-key="benefit_look">ให้ภาพลักษณ์พรีเมียมสำหรับชิ้นส่วนที่โชว์ผิว</li>
+            <li data-i18n-key="benefit_ops">เพิ่มชั่วโมงทนสนิมขาวได้เมื่ออบที่ ~120°C</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" class="reveal section-block" aria-labelledby="process-h">
+        <h2 id="process-h" class="section" data-i18n-key="process_h">ส่วนที่ 2: ขั้นตอนการใช้</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="proc_0">ชุบซิงค์เสร็จ (แนะนำความหนา ≥ 8 ไมครอน)</li>
+            <li data-i18n-key="proc_1">ล้างน้ำสะอาด 2 หน</li>
+            <li data-i18n-key="proc_2">จุ่ม <strong>กรดไนตริก</strong> 1–2% เพื่อเปิดผิว</li>
+            <li data-i18n-key="proc_3">ล้างน้ำสะอาด</li>
+            <li data-i18n-key="proc_4">จุ่ม <strong>Tri Yellow BM</strong> 30–60 วินาที (ช่วงได้ 30–90 วินาที)</li>
+            <li data-i18n-key="proc_5">ล้างน้ำสะอาด 2 หน</li>
+            <li data-i18n-key="proc_6">จุ่ม <strong>Color Yellow dye</strong> 30–60 วินาที</li>
+            <li data-i18n-key="proc_7">ล้างน้ำสะอาด</li>
+            <li data-i18n-key="proc_8">เป่าลมร้อนหรืออบให้แห้ง</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Conditions & Working ranges -->
+      <section id="conditions" class="reveal section-block" aria-labelledby="cond-h">
+        <h2 id="cond-h" class="section" data-i18n-key="cond_h">ส่วนที่ 3: ช่วงใช้งาน & การควบคุม</h2>
+
+        <p class="lead" data-i18n-key="cond_params_h">ช่วงการใช้และค่าที่เหมาะสม</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="cond_th_param">พารามิเตอร์</th>
+                <th data-i18n-key="cond_th_range">ช่วงการใช้</th>
+                <th data-i18n-key="cond_th_best">ค่าที่เหมาะสม</th>
+                <th data-i18n-key="cond_th_unit">หน่วย</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <td data-i18n-key="tp1">ความต้านทานการกัดกร่อนต่ำ</td>
-                <td>
-                  <ul style="margin:0 0 0 18px">
-                    <li data-i18n-key="tp1_1">pH สูง (>1.9) → ปรับลงด้วย HNO₃ ให้ 1.4–1.9</li>
-                    <li data-i18n-key="tp1_2">pH ต่ำ (&lt;1.4) → ปรับขึ้นด้วย NaOH เจือจาง</li>
-                    <li data-i18n-key="tp1_3">อุณหภูมิสูงเกิน → ใช้ที่อุณหภูมิห้อง</li>
-                    <li data-i18n-key="tp1_4">ความเข้มข้นต่ำ → เพิ่มตามสเปก</li>
-                  </ul>
-                </td>
+                <td data-i18n-key="cond_tri">Tri Yellow BM (ความเข้มข้น)</td>
+                <td>70–120</td>
+                <td>100</td>
+                <td data-i18n-key="unit_ccl">ซีซี/ลิตร</td>
               </tr>
               <tr>
-                <td data-i18n-key="tp2">สีไม่สม่ำเสมอ</td>
-                <td>
-                  <ul style="margin:0 0 0 18px">
-                    <li data-i18n-key="tp2_1">เวลาจุ่มน้อย → เพิ่มเป็น 30–60 s</li>
-                    <li data-i18n-key="tp2_2">ความสม่ำเสมอการกวน/หมุนถังต่ำ → ปรับให้เสถียร</li>
-                  </ul>
-                </td>
+                <td data-i18n-key="cond_dye">Color Yellow dye</td>
+                <td>1–20</td>
+                <td>10</td>
+                <td data-i18n-key="unit_ccl">ซีซี/ลิตร</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="cond_ph">pH</td>
+                <td>1.4–1.9</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="cond_temp">อุณหภูมิ</td>
+                <td data-i18n-key="cond_room">อุณหภูมิห้อง</td>
+                <td data-i18n-key="cond_room2">อุณหภูมิห้อง</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="cond_time">เวลาจุ่มรวม</td>
+                <td>30–90</td>
+                <td>~60</td>
+                <td data-i18n-key="unit_s">วินาที</td>
               </tr>
             </tbody>
-        </table>
-      </div>
-      <p class="note" data-i18n-key="ppe">**PPE:** ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท และอ้างอิง TDS/SDS เสมอ</p>
-    </section>
+          </table>
+        </div>
+
+        <p class="lead" data-i18n-key="control_h">คำแนะนำการควบคุม</p>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="control_pH">ควบคุม pH ด้วยกรดไนตริก (ลดลง) / โซดาไฟ (เพิ่มขึ้น)</li>
+            <li data-i18n-key="control_rinse">ล้างระหว่างขั้นตอนให้สะอาด เพื่อลด drag-in/drag-out</li>
+            <li data-i18n-key="control_bake">การอบ ~120°C ช่วยเพิ่มชั่วโมงทนสนิมขาว</li>
+            <li data-i18n-key="control_shade">เฉดสีขึ้นกับเวลาและความเข้มข้น ปรับตามลุคที่ต้องการ</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Replenishment -->
+      <section id="replenish" class="reveal section-block" aria-labelledby="replenish-h">
+        <h2 id="replenish-h" class="section" data-i18n-key="mix_h">การปรับเติมน้ำยา</h2>
+        <div class="content">
+          <p data-i18n-key="mix_p1"><strong>แนวทางเติมเมื่อสีอ่อนลง:</strong></p>
+          <ul>
+            <li data-i18n-key="mix_tri">เติม <strong>Tri Yellow BM</strong> ~20 ซีซี/ลิตร</li>
+            <li data-i18n-key="mix_dye">เติม <strong>Color Yellow dye</strong> ~5 ซีซี/ลิตร</li>
+          </ul>
+          <p data-i18n-key="mix_note1">ตรวจเฉดและชั่วโมงทนสนิมขาวจริงหน้างาน แล้วปรับให้เหมาะกับสายการผลิต</p>
+        </div>
+      </section>
+
+      <!-- Equipment & tips -->
+      <section id="equip" class="reveal section-block" aria-labelledby="equip-h">
+        <h2 id="equip-h" class="section" data-i18n-key="equip_h">ถัง/อุปกรณ์ & คำแนะนำ</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="equip_tank">ใช้ถัง/อุปกรณ์ <strong>ทนกรด</strong> (เหล็กบุ PVC/ยาง ฯลฯ)</li>
+            <li data-i18n-key="equip_flow">จัดการน้ำจากถัง drag-out ให้กลับเข้าอ่างหลักเป็นระยะเพื่อคงความเข้มข้น</li>
+            <li data-i18n-key="equip_handle">หลังจุ่มใหม่ ๆ ฟิล์มไวต่อการขีดข่วน ควรจัดการอย่างระมัดระวัง</li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head">
-            <div class="ft-logo" aria-hidden="true"></div>
-            <div class="ft-name">Baume Chemical</div>
-          </div>
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
-            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
             <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
           </ul>
         </section>
@@ -311,7 +434,6 @@
             <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
             <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
             <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
-            <li><a href="https://www.baumechemical.com/products/service/">Customer service</a></li>
             <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
           </ul>
         </nav>
@@ -325,30 +447,224 @@
           </ul>
         </section>
       </div>
-
-      <div class="footer-bottom">
-        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
-      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
-
-  <!-- ===== JS: header glass, mobile nav (scrim+lock), i18n sync ===== -->
+  <!-- Reveal on scroll -->
   <script>
-    // Header glass + set CSS var
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
-      const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
-      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH);
-      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
-    })();
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
 
-    // Mobile nav: scrim + body lock + highlight current
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title:"คู่มือ Tri Yellow BM — สีเหลืองโครม 3 (Trivalent Chromate) | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับเมนูหลัก",
+
+        hero_title:"Tri Yellow BM — สีเหลืองโครม 3 (Trivalent Chromate)",
+        hero_tagline:"โครเมทสีเหลืองทอง Cr3+ สวยงาม ปลอดภัยกว่า (RoHS/REACH) ทนสนิมขาว ~72–100 ชม. ปรับเฉดได้ด้วยเวลา",
+
+        toc_title:"สารบัญ",
+        toc_features:"จุดเด่น",
+        toc_makeup:"ส่วนที่ 1: หลักการ & คุณสมบัติ",
+        toc_process:"ส่วนที่ 2: ขั้นตอนการใช้",
+        toc_conditions:"ส่วนที่ 3: ช่วงใช้งาน & การควบคุม",
+        toc_mix:"การปรับเติมน้ำยา",
+        toc_equip:"ถัง/อุปกรณ์ & คำแนะนำ",
+
+        intro_h:"ภาพรวมกระบวนการ",
+        intro_p1:"สีเหลืองโครม 3 คือการสร้างชั้นฟิล์มโครเมทสีเหลืองทองบนผิวซิงค์ด้วยโครเมียมไตรวาเลนต์ (Cr3+) เพิ่มความทนกัดกร่อน ให้ลุคพรีเมียม และเป็นมิตรต่อสิ่งแวดล้อมกว่า Cr6+.",
+
+        features_h:"จุดเด่นของ Tri Yellow BM",
+        features_lead:"ผิวเหลืองทองโดดเด่น ควบคู่การปกป้องและความปลอดภัย",
+        feat_1_t:"โทนเหลืองทองสวย",           feat_1_d:"เฉดเหลือง–แดง–เขียว ปรับได้ด้วยเวลาจุ่ม",
+        feat_2_t:"ทนสนิมขาว",                 feat_2_d:"โดยทั่วไป ~72–100 ชม. และเพิ่มได้เมื่ออบ 120°C",
+        feat_3_t:"เคมี Cr3+ ปลอดภัยกว่า",     feat_3_d:"สอดคล้อง RoHS/REACH ลดความเสี่ยงเทียบ Cr6+",
+        feat_4_t:"เสริม Dye สีเหลือง",        feat_4_d:"เพิ่มมิติสีด้วย Color Yellow dye",
+        feat_5_t:"ยึดเกาะ/รองพื้นดี",         feat_5_d:"พร้อมงานพ่นสีหรือเคลือบต่อยอด",
+        feat_6_t:"ควบคุมง่าย",                 feat_6_d:"pH ~1.4–1.9 อุณหภูมิห้อง เวลาจุ่ม 30–90 วินาที",
+
+        makeup_h:"ส่วนที่ 1: หลักการ & คุณสมบัติ",
+        principle_p1:"หลังชุบซิงค์ ชิ้นงานจุ่มสารละลาย Cr3+ เกิดฟิล์มโครเมทสีเหลืองบาง ๆ กันกัดกร่อน ให้ลุคเหลืองทองคล้ายชุบทอง และเป็นพื้นผิวที่ดีต่อการเคลือบต่อไป.",
+        benefit_env:"เป็นมิตรต่อสิ่งแวดล้อมกว่า Cr6+ (สอดคล้อง RoHS/REACH)",
+        benefit_cor:"เพิ่มความทนทานต่อการพ่นละอองเกลือ",
+        benefit_look:"ให้ภาพลักษณ์พรีเมียมสำหรับชิ้นส่วนที่โชว์ผิว",
+        benefit_ops:"เพิ่มชั่วโมงทนสนิมขาวได้เมื่ออบที่ ~120°C",
+
+        process_h:"ส่วนที่ 2: ขั้นตอนการใช้",
+        proc_0:"ชุบซิงค์เสร็จ (แนะนำความหนา ≥ 8 ไมครอน)",
+        proc_1:"ล้างน้ำสะอาด 2 หน",
+        proc_2:"จุ่มกรดไนตริก 1–2% เพื่อเปิดผิว",
+        proc_3:"ล้างน้ำสะอาด",
+        proc_4:"จุ่ม Tri Yellow BM 30–60 วินาที (ช่วงได้ 30–90 วินาที)",
+        proc_5:"ล้างน้ำสะอาด 2 หน",
+        proc_6:"จุ่ม Color Yellow dye 30–60 วินาที",
+        proc_7:"ล้างน้ำสะอาด",
+        proc_8:"เป่าลมร้อนหรืออบให้แห้ง",
+
+        cond_h:"ส่วนที่ 3: ช่วงใช้งาน & การควบคุม",
+        cond_params_h:"ช่วงการใช้และค่าที่เหมาะสม",
+        cond_th_param:"พารามิเตอร์", cond_th_range:"ช่วงการใช้", cond_th_best:"ค่าที่เหมาะสม", cond_th_unit:"หน่วย",
+        cond_tri:"Tri Yellow BM (ความเข้มข้น)",
+        cond_dye:"Color Yellow dye",
+        cond_ph:"pH",
+        cond_temp:"อุณหภูมิ",
+        cond_room:"อุณหภูมิห้อง",
+        cond_room2:"อุณหภูมิห้อง",
+        cond_time:"เวลาจุ่มรวม",
+        unit_ccl:"ซีซี/ลิตร", unit_s:"วินาที",
+
+        control_h:"คำแนะนำการควบคุม",
+        control_pH:"ควบคุม pH ด้วยกรดไนตริก (ลดลง) / โซดาไฟหรือสารละลายด่าง (เพิ่มขึ้น)",
+        control_rinse:"ล้างระหว่างขั้นตอนให้สะอาด เพื่อลด drag-in/drag-out",
+        control_bake:"การอบ ~120°C ช่วยเพิ่มชั่วโมงทนสนิมขาว",
+        control_shade:"เฉดสีขึ้นกับเวลาและความเข้มข้น ปรับตามลุคที่ต้องการ",
+
+        mix_h:"การปรับเติมน้ำยา",
+        mix_p1:"แนวทางเติมเมื่อสีอ่อนลง:",
+        mix_tri:"เติม Tri Yellow BM ~20 ซีซี/ลิตร",
+        mix_dye:"เติม Color Yellow dye ~5 ซีซี/ลิตร",
+        mix_note1:"ตรวจเฉดและชั่วโมงทนสนิมขาวจริงหน้างาน แล้วปรับให้เหมาะกับสายการผลิต",
+
+        equip_h:"ถัง/อุปกรณ์ & คำแนะนำ",
+        equip_tank:"ใช้ถัง/อุปกรณ์ทนกรด (เหล็กบุ PVC/ยาง ฯลฯ)",
+        equip_flow:"จัดการน้ำจากถัง drag-out ให้กลับเข้าอ่างหลักเป็นระยะเพื่อคงความเข้มข้น",
+        equip_handle:"หลังจุ่มใหม่ ๆ ฟิล์มไวต่อการขีดข่วน ควรจัดการอย่างระมัดระวัง",
+
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+
+      en: {
+        title:"Tri Yellow BM — Trivalent Yellow Chromate | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Home",
+
+        hero_title:"Tri Yellow BM — Yellow Chromate (Cr3+)",
+        hero_tagline:"Cr3+ yellow/iridescent finish—safer (RoHS/REACH). ~72–100 h white-rust; shade tunable with time.",
+
+        toc_title:"Contents",
+        toc_features:"Highlights",
+        toc_makeup:"Part 1: Principles & properties",
+        toc_process:"Part 2: Process steps",
+        toc_conditions:"Part 3: Working ranges & control",
+        toc_mix:"Replenishment",
+        toc_equip:"Tanks/gear & tips",
+
+        intro_h:"Process overview",
+        intro_p1:"Trivalent yellow chromate forms a yellow–gold film on zinc using Cr3+, improving corrosion resistance and offering a premium look with better environmental profile than Cr6+.",
+
+        features_h:"Tri Yellow BM Highlights",
+        features_lead:"Standout golden look with protection and safety.",
+        feat_1_t:"Attractive yellow–gold tone",  feat_1_d:"Yellow–red–green hues via time control",
+        feat_2_t:"White-rust resistance",        feat_2_d:"Typically ~72–100 h; higher after ~120°C bake",
+        feat_3_t:"Safer Cr3+ chemistry",         feat_3_d:"Aligned with RoHS/REACH; lower risk vs. Cr6+",
+        feat_4_t:"Yellow dye boost",             feat_4_d:"Add depth with Color Yellow dye",
+        feat_5_t:"Good adhesion/undercoat",      feat_5_d:"Ready for paint or topcoats",
+        feat_6_t:"Easy control",                 feat_6_d:"pH ~1.4–1.9, room temp, 30–90 s",
+
+        makeup_h:"Part 1: Principles & properties",
+        principle_p1:"After zinc plating, immersion in Cr3+ builds a thin yellow chromate film that resists corrosion, gives a gold-like appearance, and provides a good base for subsequent coatings.",
+        benefit_env:"More eco-friendly than Cr6+ (RoHS/REACH compliant)",
+        benefit_cor:"Improved salt-spray resistance",
+        benefit_look:"Premium appearance for visible parts",
+        benefit_ops:"White-rust hours can increase with ~120°C bake",
+
+        process_h:"Part 2: Process steps",
+        proc_0:"Zinc plated (≥ 8 µm recommended)",
+        proc_1:"Rinse twice with clean water",
+        proc_2:"Nitric acid dip 1–2% to activate",
+        proc_3:"Rinse clean",
+        proc_4:"Dip in Tri Yellow BM 30–60 s (range 30–90 s)",
+        proc_5:"Rinse twice",
+        proc_6:"Dip in Color Yellow dye 30–60 s",
+        proc_7:"Rinse clean",
+        proc_8:"Blow or oven dry",
+
+        cond_h:"Part 3: Working ranges & control",
+        cond_params_h:"Working ranges and recommended targets",
+        cond_th_param:"Parameter", cond_th_range:"Range", cond_th_best:"Recommended", cond_th_unit:"Unit",
+        cond_tri:"Tri Yellow BM (concentration)",
+        cond_dye:"Color Yellow dye",
+        cond_ph:"pH",
+        cond_temp:"Temperature",
+        cond_room:"Room temperature",
+        cond_room2:"Room temperature",
+        cond_time:"Total immersion time",
+        unit_ccl:"cc/L", unit_s:"seconds",
+
+        control_h:"Control tips",
+        control_pH:"Adjust pH: down with nitric acid; up with caustic/dilute alkali",
+        control_rinse:"Good inter-stage rinsing lowers drag-in/drag-out",
+        control_bake:"~120°C bake can extend white-rust hours",
+        control_shade:"Shade depends on time and concentration—tune to your look",
+
+        mix_h:"Replenishment",
+        mix_p1:"When tone fades, consider:",
+        mix_tri:"Add ~20 cc/L Tri Yellow BM",
+        mix_dye:"Add ~5 cc/L Color Yellow dye",
+        mix_note1:"Validate tone and white-rust hours on-line and adjust for your line",
+
+        equip_h:"Tanks/gear & tips",
+        equip_tank:"Use acid-resistant tanks/gear (steel lined with PVC/rubber, etc.)",
+        equip_flow:"Return drag-out to the main bath periodically to maintain concentration",
+        equip_handle:"Fresh films scratch easily—handle carefully",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') node.textContent = I18N[sel][key];
+      });
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
+
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
       if(toggle && nav && scrim){
         let lockY = 0;
         function openMenu(v){
@@ -356,155 +672,94 @@
           toggle.setAttribute('aria-expanded', String(v));
           nav.setAttribute('aria-hidden', String(!v));
           v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+
           if(v){
-            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
-            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector(`a,button,[tabindex]:not([tabindex="-1"])`);
+            if (first) first.focus({preventScroll:true});
           }else{
-            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus({preventScroll:true});
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            if (toggle) toggle.focus({preventScroll:true});
           }
         }
         toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
         scrim.addEventListener('click', ()=> openMenu(false));
         document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
-        window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
-        header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
-      // highlight "Products" under /products
+
+      // highlight current
       try{
         const here = location.pathname.replace(/\/+$/,'');
-        document.querySelectorAll('.menu a').forEach(a=>{
+        const isProducts = here.startsWith('/products');
+        const navEl = document.getElementById('primary-nav');
+        navEl?.querySelectorAll('a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          const isProducts = here.startsWith('/products');
-          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
           else if (here === path) a.setAttribute('aria-current','page');
           else a.removeAttribute('aria-current');
         });
       }catch(e){}
+
+      // smart back
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
     })();
+  </script>
 
-    // i18n (header + FAB synced) + title update
-    const I18N = {
-      th:{
-        meta_title:"Tri Yellow SC • สีเหลือง โครม 3 บนซิงค์ | Baume Chemical",
-        badge1:"Trivalent (Cr(III))", badge2:"Yellow / Iridescent", badge3:"72–100 ชม. NSS", badge4:"อบ 120 °C เพิ่มทน",
-        hero_title:"Tri Yellow SC — สีเหลือง โครม 3 บนซิงค์",
-        hero_tagline:"โทนเหลือง-รุ้งคล้าย Cr(VI) • ปลอดเฮกซะวาเลนท์ • pH 1.4–1.9 (~1.7) • จุ่ม 30–90 วินาที",
-
-        ov_title:"ภาพรวมผลิตภัณฑ์",
-        ov_p:"Tri Yellow SC เป็นโครเมตไตรวาเลนท์ให้โทนเหลือง/รุ้งบนซิงค์ ลักษณะสีใกล้เคียงโครม 6 เฉดเปลี่ยนตามเวลาจุ่มและสภาพบ่อ (เหลือง–แดง–เขียว) ทนสนิมขาวโดยทั่วไป ~72–100 ชม. และสามารถเพิ่มได้เมื่ออบที่ ~120 °C หลังจุ่มสี",
-
-        ops_title:"ช่วงการใช้งาน",
-        head_param:"พารามิเตอร์", head_opt:"ค่าที่เหมาะสม", head_range:"ช่วง",
-        t_temp:"อุณหภูมิ", t_dwell:"เวลาจุ่ม", room:"ห้อง", room_dash:"—",
-        ops_note:"ปรับ pH ลงด้วยกรดไนตริก (HNO₃) และปรับขึ้นด้วยโซดาไฟเจือจาง (NaOH) อย่างระมัดระวัง",
-
-        proc_title:"ขั้นตอนการทำงาน",
-        step_no:"ขั้น", step_desc:"รายละเอียด",
-        s1:"ชิ้นงานชุบซิงค์เรียบร้อยแล้ว",
-        s2:"ล้างน้ำสะอาด ×2",
-        s3:"จุ่มกรดไนตริก 1–2% v/v",
-        s4:"ล้างน้ำสะอาด",
-        s5:"จุ่ม Tri Yellow SC (ที่ผสมแล้ว) 30–60 s",
-        s6:"ล้างน้ำสะอาด ×2",
-        s7:"จุ่ม Color Yellow Dye (ที่ผสมแล้ว) 30–60 s",
-        s8:"ล้างน้ำสะอาด",
-        s9:"เป่าลมหรืออบให้แห้ง (อบ ~120 °C เพื่อเพิ่มความทน NSS)",
-
-        tr_title:"ปัญหาที่พบบ่อย & วิธีแก้",
-        tr_p:"ปัญหา", tr_s:"แนวทางแก้ไข",
-        tp1:"ความต้านทานการกัดกร่อนต่ำ",
-        tp1_1:"pH สูง (>1.9) → ปรับลงด้วย HNO₃ ให้ 1.4–1.9",
-        tp1_2:"pH ต่ำ (<1.4) → ปรับขึ้นด้วย NaOH เจือจาง",
-        tp1_3:"อุณหภูมิสูงเกิน → ใช้ที่อุณหภูมิห้อง",
-        tp1_4:"ความเข้มข้นต่ำ → เพิ่มตามสเปก",
-        tp2:"สีไม่สม่ำเสมอ",
-        tp2_1:"เวลาจุ่มน้อย → เพิ่มเป็น 30–60 s",
-        tp2_2:"ความสม่ำเสมอการกวน/หมุนถังต่ำ → ปรับให้เสถียร",
-
-        ppe:"**PPE:** ถุงมือ แว่นตานิรภัย หน้ากาก • ทำงานในที่อากาศถ่ายเท และอ้างอิง TDS/SDS เสมอ",
-
-        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)", cat_black:"ดำเคมี (Blackening)",
-        cat_passivation:"พาสซิเวชัน (Passivation)", cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)", cat_equipment:"อุปกรณ์ (Equipment)",
-
-        back_home:"← กลับหน้าแรก"
-      },
-      en:{
-        meta_title:"Tri Yellow SC • Trivalent Yellow/Iridescent Chromate on Zinc | Baume Chemical",
-        badge1:"Trivalent (Cr(III))", badge2:"Yellow / Iridescent", badge3:"72–100 h NSS", badge4:"120 °C bake ↑",
-        hero_title:"Tri Yellow SC — Yellow Chromate (Cr(III))",
-        hero_tagline:"Yellow/iridescent tone like hex-chrome, but Cr(III) • pH 1.4–1.9 (~1.7) • 30–90 s dip",
-
-        ov_title:"Product Overview",
-        ov_p:"Tri Yellow SC is a trivalent chromate yielding yellow/iridescent hues on zinc, similar to hex-chrome appearance. Hue varies with dwell and bath condition (yellow–red–green). Typical white-rust resistance ~72–100 h, and improves with a ~120 °C post-bake.",
-
-        ops_title:"Operating Window",
-        head_param:"Parameter", head_opt:"Optimal", head_range:"Range",
-        t_temp:"Temperature", t_dwell:"Dwell", room:"Room", room_dash:"—",
-        ops_note:"Lower pH with nitric acid (HNO₃); raise with dilute caustic (NaOH). Handle carefully.",
-
-        proc_title:"Process Sequence",
-        step_no:"Step", step_desc:"Details",
-        s1:"Zinc-plated work ready",
-        s2:"Rinse ×2",
-        s3:"Nitric acid 1–2% v/v",
-        s4:"Rinse",
-        s5:"Tri Yellow SC dip 30–60 s",
-        s6:"Rinse ×2",
-        s7:"Color Yellow Dye dip 30–60 s",
-        s8:"Rinse",
-        s9:"Hot blow or oven dry (bake ~120 °C to boost NSS)",
-
-        tr_title:"Troubleshooting",
-        tr_p:"Issue", tr_s:"Remedy",
-        tp1:"Low corrosion resistance",
-        tp1_1:"pH high (>1.9) → lower with HNO₃ to 1.4–1.9",
-        tp1_2:"pH low (<1.4) → raise with dilute NaOH",
-        tp1_3:"Temperature too high → run at room temp",
-        tp1_4:"Concentration low → raise within spec",
-        tp2:"Non-uniform color",
-        tp2_1:"Dwell too short → 30–60 s",
-        tp2_2:"Poor agitation/barrel rpm → stabilize",
-
-        ppe:"**PPE:** Gloves, goggles, respirator; ventilate properly; always refer to TDS/SDS.",
-
-        footer_products:"Products", footer_contact:"Contact Us",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.", footer_hours:"🕒 Hours 08:00–17:00",
-        cat_pretreat:"Pretreatment", cat_plating:"Plating", cat_black:"Blackening",
-        cat_passivation:"Passivation", cat_polishing:"Polishing", cat_strippers:"Strippers",
-        cat_protective:"Protective Treatment", cat_service:"Customer Service", cat_equipment:"Equipment",
-
-        back_home:"← Back to Home"
-      }
-    };
-
-    const els = {
-      langBtns: () => document.querySelectorAll('.lang-btn'), // header + FAB
-      translatables: () => document.querySelectorAll('[data-i18n-key]')
-    };
-
-    function applyLang(lang){
-      const L = (lang==='en') ? 'en' : 'th';
-      document.documentElement.lang = L;
-
-      const titleEl = document.querySelector('title[data-i18n-key="meta_title"]');
-      if(titleEl && I18N[L].meta_title){ titleEl.textContent = I18N[L].meta_title; document.title = I18N[L].meta_title; }
-
-      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
-      els.translatables().forEach(node=>{
-        const key = node.getAttribute('data-i18n-key');
-        const val = I18N[L][key];
-        if(typeof val !== 'undefined') node.textContent = val;
+  <!-- Scroll-spy for TOC + heading anchors -->
+  <script>
+    // Clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
       });
-      try{ localStorage.setItem('lang', L); }catch(e){}
-    }
+    });
 
-    (function initLang(){
-      const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
-      applyLang(saved);
-      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
     })();
   </script>
 </body>
