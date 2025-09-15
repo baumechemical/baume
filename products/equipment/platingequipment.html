@@ -6,7 +6,7 @@
 
   <!-- Primary SEO -->
   <title data-i18n-key="page_title">อุปกรณ์งานชุบ (Plating Tools) | Baume Chemical</title>
-  <meta name="description" content="อุปกรณ์สำหรับกระบวนการชุบโลหะ: Barrel/Rack Tank, Rectifier, Ultra Filtration, Ultrasonic, Heater/Chiller, Centrifugal Dryer — เค้าโครงเดียวกับหน้าอื่นๆ ของ Baume (TH/EN).">
+  <meta name="description" content="อุปกรณ์สำหรับกระบวนการชุบโลหะ: Barrel/Rack Tank, Rectifier, Ultra Filtration, Ultrasonic, Heater/Chiller, Centrifugal Dryer — จัดวางแบบการ์ดพร้อมรูป (TH/EN).">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://www.baumechemical.com/products/equipment/platingequipment.html">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -29,41 +29,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Preload key images (hero + a couple of cards) -->
   <link rel="preload" as="image" href="https://i.imgur.com/R7gYwSN.jpeg">
+  <link rel="preload" as="image" href="https://i.imgur.com/v3Bp18o.jpeg">
+  <link rel="preload" as="image" href="https://i.imgur.com/LVCcQGH.jpeg">
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6775;
-      --bg:#d5e4d9; --card:#fff; --radius:14px;
-      --shadow-1:0 10px 26px rgba(2,8,20,.10);
-      --shadow-2:0 16px 40px rgba(2,8,20,.18);
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#5b6775; --bg:#dfe8e3; --card:#fff;
+      --radius:14px; --shadow-1:0 10px 26px rgba(2,8,20,.10); --shadow-2:0 16px 40px rgba(2,8,20,.18);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
-      --header-h:64px;
+      --container:1200px; --header-h:64px;
     }
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* === FIX: Header โปร่งใสเริ่มต้น + กระจกใสตอนเลื่อน === */
-.site-header{
-  /* ลบไล่โทนดำเดิมทิ้ง แล้วทำให้ใส */
-  background: transparent !important;
-  border-bottom:1px solid rgba(255,255,255,.14);
-  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease, backdrop-filter .2s ease;
-}
-.site-header.scrolled{
-  /* โทนเข้มแบบกระจกใส ตามสไตล์ที่เคยใช้ */
-  background: rgba(15,23,42,.70) !important;
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
-  backdrop-filter: saturate(140%) blur(10px);
-  border-color: rgba(255,255,255,.18);
-  box-shadow: 0 8px 26px rgba(2,8,20,.18);
-}
-    
-    .site-header .header-inner{
-      max-width:1200px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      min-height:var(--header-h); padding:10px 16px;
+    /* === Header (glass on scroll, transparent at top) === */
+    .site-header{
+      position:fixed; inset:0 0 auto 0; z-index:1400;
+      background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease, backdrop-filter .2s ease;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.70); border-color:rgba(255,255,255,.18);
+      -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
+      box-shadow:0 8px 26px rgba(2,8,20,.18);
+    }
+    .header-inner{
+      max-width:var(--container); margin:0 auto; min-height:var(--header-h);
+      display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 16px;
     }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
@@ -72,7 +69,7 @@
     .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:700}
     .menu a:hover{ background:rgba(255,255,255,.12) }
     .menu a[aria-current="page"]{ background:rgba(255,255,255,.18) }
     .menu a.cta{ border:1px solid rgba(255,255,255,.35) }
@@ -87,28 +84,25 @@
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
 
-    /* === Language switcher (in menu bar) === */
+    /* === Language switcher (desktop inline chip, mobile row) === */
     .lang-inline{
       display:none; align-items:center; gap:6px; padding:4px;
-      border:1px solid rgba(255,255,255,.28);
-      border-radius:999px; background:rgba(255,255,255,.14);
-      box-shadow:0 6px 18px rgba(2,8,20,.12)
+      border:1px solid #e2e8f0; border-radius:999px;
+      background:#ffffffcc; box-shadow:0 10px 26px rgba(2,8,20,.12)
     }
+    .site-header.scrolled .lang-inline{ background:#ffffffdd }
     .lang-inline .lang-btn{
       appearance:none; border:0; background:transparent; cursor:pointer;
       padding:6px 10px; border-radius:999px; font-weight:800;
-      display:flex; align-items:center; gap:6px; color:#fff
+      display:flex; align-items:center; gap:6px; color:#0f172a
     }
-    .lang-inline .lang-btn[aria-pressed="true"]{ background:#fff; color:#0f172a }
+    .lang-inline .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
     .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Mobile language row inside dropdown menu */
-    .menu .lang-li{
-      display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18)
-    }
+    .menu .lang-li{ display:none; margin-top:6px; padding:10px; border-top:1px solid rgba(255,255,255,.18) }
     .menu .lang-li .lang-group{
       display:flex; gap:6px; padding:4px; border-radius:999px;
-      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28)
+      background:#ffffff1c; border:1px solid rgba(255,255,255,.35)
     }
     .menu .lang-li .lang-btn{
       appearance:none;border:0;background:transparent;cursor:pointer;
@@ -116,7 +110,6 @@
     }
     .menu .lang-li .lang-btn[aria-pressed="true"]{background:#fff;color:#0f172a}
 
-    /* Responsive show/hide */
     @media (min-width: 921px){
       .lang-inline{display:flex}
       .menu .lang-li{display:none}
@@ -129,68 +122,12 @@
         background:#0f172acc; backdrop-filter: blur(8px);
         border:1px solid rgba(255,255,255,.18); border-radius:14px;
         transform:translateY(-12px); opacity:0; pointer-events:none;
-        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease;
+        display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400;
       }
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
-
-    /* === FIX: Header โปร่งใสเริ่มต้น + กระจกใสตอนเลื่อน === */
-.site-header{
-  /* ลบไล่โทนดำเดิมทิ้ง แล้วทำให้ใส */
-  background: transparent !important;
-  border-bottom:1px solid rgba(255,255,255,.14);
-  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease, backdrop-filter .2s ease;
-}
-.site-header.scrolled{
-  /* โทนเข้มแบบกระจกใส ตามสไตล์ที่เคยใช้ */
-  background: rgba(15,23,42,.70) !important;
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
-  backdrop-filter: saturate(140%) blur(10px);
-  border-color: rgba(255,255,255,.18);
-  box-shadow: 0 8px 26px rgba(2,8,20,.18);
-}
-
-/* === FIX: สีปุ่มสลับภาษา (inline บนบาร์) ให้ตรงแบบเดิม === */
-.lang-inline{
-  display: flex;                /* โชว์บนเดสก์ท็อป */
-  gap: 6px; padding: 4px;
-  border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  background: #ffffffcc;        /* ชิปพื้นขาวโปร่ง */
-  box-shadow: 0 10px 26px rgba(2,8,20,.12);
-}
-.site-header.scrolled .lang-inline{
-  background: #ffffffdd;        /* ตอนเลื่อนให้ขาวขึ้นนิด */
-}
-.lang-inline .lang-btn{
-  appearance:none; border:0; background:transparent; cursor:pointer;
-  padding:6px 10px; border-radius:999px; font-weight:800;
-  display:flex; align-items:center; gap:6px;
-  color:#0f172a;                /* ตัวอักษรเข้มบนพื้นขาว */
-}
-.lang-inline .lang-btn[aria-pressed="true"]{
-  background: var(--brand-2);   /* ปุ่มที่เลือก = สีแบรนด์ */
-  color:#fff;
-}
-
-/* === FIX: แถวภาษาในเมนู (มือถือ) ให้ใกล้เคียงเดิม === */
-.menu .lang-li .lang-group{
-  background: #ffffff1c;
-  border: 1px solid rgba(255,255,255,.35);
-}
-.menu .lang-li .lang-btn{
-  color:#fff;
-}
-.menu .lang-li .lang-btn[aria-pressed="true"]{
-  background:#fff; color:#0f172a;
-}
-
-/* (เสริมเล็กน้อย) สี hover ของลิงก์เมนูให้กลมกลืนกับกระจก */
-.menu a:hover{ background: rgba(255,255,255,.12) }
-.menu a[aria-current="page"]{ background: rgba(255,255,255,.18) }
-
 
     /* === Hero === */
     .hero{
@@ -198,6 +135,7 @@
       min-height: clamp(380px, 60svh, 640px);
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)),
                  url('https://i.imgur.com/R7gYwSN.jpeg') center/cover no-repeat;
+      padding-top:calc(var(--header-h) + 16px);
     }
     .hero h1{font-size:clamp(26px,4.2vw,46px);font-weight:800;text-shadow:0 6px 28px rgba(0,0,0,.45);margin:0 0 10px}
     .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
@@ -218,40 +156,54 @@
     .btn.back svg{width:18px; height:18px; display:block}
 
     /* Layout & section cards */
-    .wrap{max-width:1200px;margin:auto;padding:34px 16px}
+    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
     h2.section{margin:0 0 10px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
     p.lead{margin:0 0 16px; color:#5f6d7c}
-    .card{background:#fff;border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
+    .card{background:var(--card);border:1px solid #e3ece5;border-radius:14px;box-shadow:var(--shadow-1);padding:18px;margin-bottom:16px}
 
-    /* Tools grid */
+    /* Tools grid + hover lift */
     .tools{display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))}
     .tool{
-      background:#fff; border:1px solid #e6ecf3; border-radius:14px; overflow:hidden;
+      background:var(--card); border:1px solid #e6ecf3; border-radius:14px; overflow:hidden;
       box-shadow:var(--shadow-1);
       transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease, opacity .4s ease;
-      transform: translateY(8px);
-      opacity: 0;
-      will-change: transform;
+      transform: translateY(8px); opacity: 0; will-change: transform;
     }
     .tool.in{ transform:none; opacity:1; }
     .tool:hover, .tool:focus-within{ transform: translateY(-6px); box-shadow:var(--shadow-2); }
-
-    /* Unified image sizing (clean, no duplicates) */
     .tool img{
-      width:100%; aspect-ratio:16/10; height:auto;
-      object-fit:cover; object-position:center; display:block;
-      border-bottom:1px solid #e6ecf3;
-      background:#fff;
+      width:100%; aspect-ratio:16/10; height:auto; object-fit:cover; object-position:center; display:block;
+      border-bottom:1px solid #e6ecf3; background:#fff;
     }
     .tool .body{ padding:14px }
     .tool h3{ margin:4px 0 6px; font-size:1.06rem; color:#2c5e4e; font-weight:800 }
     .tool p{ margin:0; color:#556477 }
 
+    /* TOC (smaller as requested) */
+    #toc{background:#fff;border:1px solid #e3ece5;border-radius:14px;padding:12px 14px;box-shadow:var(--shadow-1);font-size:.92rem;margin-bottom:14px}
+    #toc h2.section{font-size:.95rem;margin:0 0 6px}
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 10px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800;font-size:.92rem}
+    .toc-chip::after{content:"›";opacity:.5}
+    .toc-chip[aria-current="true"],.toc-chip.is-active{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    @media (min-width:900px){ #toc{ position:sticky; top:calc(var(--header-h) + 10px); z-index:10; } }
+
+    /* Feature cards / Icon card grid (3x2) */
+    .features .section{align-items:flex-start}
+    .features__grid{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:992px){ .features__grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+    @media (max-width:640px){ .features__grid{grid-template-columns:1fr} }
+    .features__item{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;grid-template-areas:"icon title" "icon desc";gap:8px;padding:14px;border:1px solid #e7efe9;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f8fbf9);box-shadow:var(--shadow-1)}
+    .features__icon{grid-area:icon;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(180deg,#e9f6f0,#d7eee5);border:1px solid #cfe5da;font-size:26px}
+    .features__title{grid-area:title;margin:2px 0 2px;font-weight:800;color:#1f2a24}
+    .features__desc{grid-area:desc;margin:0;color:#5b6675}
+    .features__desc strong{color:#1f2a24}
+
     /* Footer */
     .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:1200px;margin:0 auto;padding:38px 20px}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
     .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
     .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
@@ -273,7 +225,7 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <!-- Brand -->
-      <a class="brand" href="/" aria-label="Baume Chemical">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
         <span class="brand-name">Baume Chemical</span>
       </a>
@@ -282,10 +234,11 @@
         <!-- Primary Navigation -->
         <nav class="primary-nav" aria-label="Primary">
           <ul class="menu">
-            <li><a href="https://www.baumechemical.com/index.html" class="nav-link">Home</a></li>
-            <li><a href="https://www.baumechemical.com/about-us.html" class="nav-link">About us</a></li>
-            <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
-            <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
 
             <!-- Mobile language row -->
             <li class="lang-li">
@@ -346,7 +299,7 @@
 
   <main class="wrap">
     <!-- Intro -->
-    <section class="card">
+    <section class="card" id="intro">
       <h2 class="section" data-i18n-key="sec_intro">ภาพรวม</h2>
       <p class="lead" data-i18n-key="intro_p">
         กระบวนการชุบโลหะช่วยเพิ่มความทนทาน ป้องกันการกัดกร่อน และปรับปรุงผิวชิ้นงานให้เหมาะกับการใช้งาน
@@ -354,9 +307,62 @@
       </p>
     </section>
 
+    <!-- TOC (smaller) -->
+    <nav id="toc" aria-label="สารบัญ" class="card">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#features" data-i18n-key="toc_features">จุดเด่น</a>
+        <a class="toc-chip" href="#catalog" data-i18n-key="toc_tools">รายการอุปกรณ์</a>
+      </p>
+    </nav>
+
+    <!-- Feature cards / Icon card grid (6 items, 3x2) -->
+    <section id="features" class="card features" aria-labelledby="features-h">
+      <h2 id="features-h" class="section" data-i18n-key="features_h">จุดเด่น</h2>
+      <p class="lead" data-i18n-key="features_lead">สรุปข้อดีของชุดอุปกรณ์—พลังงานเสถียร คุมอุณหภูมิแม่น ระบบกรองสะอาด และงาน QC ที่ง่ายขึ้น</p>
+
+      <div class="features__grid">
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">⚡</div>
+          <h3 class="features__title" data-i18n-key="feat_1_t">ไฟเสถียร งานสม่ำเสมอ</h3>
+          <p class="features__desc" data-i18n-key="feat_1_d">เรคติไฟเออร์คุณภาพช่วยให้กระแสคงที่ ลดผิวไหม้และฟิล์มไม่สม่ำเสมอ</p>
+        </article>
+
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">🌡️</div>
+          <h3 class="features__title" data-i18n-key="feat_2_t">คุมอุณหภูมิเป๊ะ</h3>
+          <p class="features__desc" data-i18n-key="feat_2_d">ฮีตเตอร์/ชิลเลอร์ทำงานร่วมกัน ให้บ่ออยู่ในช่วงที่ดีที่สุดตลอด</p>
+        </article>
+
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">🧪</div>
+          <h3 class="features__title" data-i18n-key="feat_3_t">กรองใส อายุบ่อยาว</h3>
+          <p class="features__desc" data-i18n-key="feat_3_d">Ultra Filtration ลดของแข็งแขวนลอย ช่วยยืดอายุสารละลาย</p>
+        </article>
+
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">🧼</div>
+          <h3 class="features__title" data-i18n-key="feat_4_t">สะอาดล้ำลึก</h3>
+          <p class="features__desc" data-i18n-key="feat_4_d">Ultrasonic ช่วยขจัดคราบในซอกมุม ลดงานแก้ผิว</p>
+        </article>
+
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">🛡️</div>
+          <h3 class="features__title" data-i18n-key="feat_5_t">วัสดุทนเคมี</h3>
+          <p class="features__desc" data-i18n-key="feat_5_d">อุปกรณ์เลือกวัสดุเหมาะกับสารเคมี ลดการปนเปื้อนและยืดอายุอุปกรณ์</p>
+        </article>
+
+        <article class="features__item">
+          <div class="features__icon" aria-hidden="true">📈</div>
+          <h3 class="features__title" data-i18n-key="feat_6_t">ปรับขนาดไลน์ได้</h3>
+          <p class="features__desc" data-i18n-key="feat_6_d">รองรับตั้งแต่บ่อแร็ค/บาร์เรลชิ้นเล็กจนถึงระบบผลิตที่ซับซ้อน</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Tools grid -->
-    <section class="card">
-      <h2 class="section" data-i18n-key="sec_tools">รายการอุปกรณ์</h2>
+    <section class="card" id="catalog" aria-labelledby="sec_tools_h">
+      <h2 class="section" id="sec_tools_h" data-i18n-key="sec_tools">รายการอุปกรณ์</h2>
       <div class="tools" id="tools">
         <!-- 1 -->
         <article class="tool" tabindex="0">
@@ -481,48 +487,60 @@
       </div>
     </div>
   </footer>
-
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
     "name":"Plating Tools",
-    "about":["Barrel Tank","Rack Tank","Rectifier","UF","Ultrasonic","Heater","Titanium Heater","Chiller","Centrifugal Dryer"],
+    "about":["Barrel Tank","Rack Tank","Rectifier","Ultra Filtration","Ultrasonic Cleaner","Heater","Titanium Heater","Plating Chiller","Centrifugal Dryer"],
     "inLanguage":"th,en",
     "image":"https://i.imgur.com/v3Bp18o.jpeg",
     "publisher":{"@type":"Organization","name":"Baume Chemical"}
   }
   </script>
 
-  <!-- JS: nav-toggle + sticky bg + back + i18n + card lift -->
+  <!-- JS: nav-toggle + sticky bg + back + i18n + card lift + TOC spy -->
   <script>
-    // --- Mobile nav toggle + auto-close + sticky bg ---
+    // --- Mobile nav toggle + close on click + sticky bg + header height ---
     (function(){
       const header = document.querySelector('.site-header');
       const toggle = document.querySelector('.site-header .nav-toggle');
-      if(!header || !toggle) return;
 
-      toggle.addEventListener('click', function(){
-        const opened = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(opened));
-      });
+      function setHeaderH(){
+        const h = Math.round(header?.getBoundingClientRect().height || 64);
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }
+      function onScroll(){
+        header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
+      }
 
-      // Close menu on link or language click (mobile)
+      // open/close
+      if (toggle){
+        toggle.addEventListener('click', function(){
+          const opened = header.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(opened));
+        });
+      }
+
+      // close menu on link/lang click (mobile)
       document.addEventListener('click', function(e){
         const t = e.target.closest('.menu a, .menu .lang-btn');
-        if (t && window.innerWidth <= 920) {
+        if (!t) return;
+        if (window.innerWidth <= 920) {
           header.classList.remove('open');
-          toggle.setAttribute('aria-expanded','false');
+          toggle && toggle.setAttribute('aria-expanded','false');
         }
       });
 
-      // Sticky background on scroll
-      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
-      onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+      // init
+      setHeaderH(); onScroll();
+      window.addEventListener('resize', setHeaderH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('load', setHeaderH, {once:true});
     })();
 
-    // --- Back button ---
+    // --- Back button (smart) ---
     (function(){
       const btn = document.getElementById('backBtn');
       if(!btn) return;
@@ -533,20 +551,33 @@
           const sameOrigin = ref && new URL(ref).origin === location.origin;
           if(sameOrigin){ history.back(); return; }
         }catch(_){}
-        // Fallback: parent directory or /products/equipment/
+        // Fallback: up one level or equipment index
         const parent = location.pathname.replace(/[^\/]+\/?$/, '');
         location.href = parent || 'https://www.baumechemical.com/products/equipment/index.html';
       });
     })();
 
-    // --- i18n ---
+    // --- i18n dictionary ---
     const I18N = {
       th:{
         page_title:"อุปกรณ์งานชุบ (Plating Tools) | Baume Chemical",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us",
+
         btn_back:"ย้อนกลับ",
         badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
         hero_title:"อุปกรณ์งานชุบ (Plating Tools)",
         hero_tagline:"อุปกรณ์สำคัญเพื่อคุณภาพงานชุบ—ตั้งแต่ถังชุบ ระบบไฟฟ้า การกรอง อัลตร้าโซนิค การควบคุมอุณหภูมิ จนถึงการทำแห้ง (TH/EN)",
+
+        toc_title:"สารบัญ", toc_features:"จุดเด่น", toc_tools:"รายการอุปกรณ์",
+
+        features_h:"จุดเด่น",
+        features_lead:"สรุปข้อดีของชุดอุปกรณ์—พลังงานเสถียร คุมอุณหภูมิแม่น ระบบกรองสะอาด และงาน QC ที่ง่ายขึ้น",
+        feat_1_t:"ไฟเสถียร งานสม่ำเสมอ", feat_1_d:"เรคติไฟเออร์คุณภาพช่วยให้กระแสคงที่ ลดผิวไหม้และฟิล์มไม่สม่ำเสมอ",
+        feat_2_t:"คุมอุณหภูมิเป๊ะ", feat_2_d:"ฮีตเตอร์/ชิลเลอร์ทำงานร่วมกัน ให้บ่ออยู่ในช่วงที่ดีที่สุดตลอด",
+        feat_3_t:"กรองใส อายุบ่อยาว", feat_3_d:"Ultra Filtration ลดของแข็งแขวนลอย ช่วยยืดอายุสารละลาย",
+        feat_4_t:"สะอาดล้ำลึก", feat_4_d:"Ultrasonic ช่วยขจัดคราบในซอกมุม ลดงานแก้ผิว",
+        feat_5_t:"วัสดุทนเคมี", feat_5_d:"อุปกรณ์เลือกวัสดุเหมาะกับสารเคมี ลดการปนเปื้อนและยืดอายุอุปกรณ์",
+        feat_6_t:"ปรับขนาดไลน์ได้", feat_6_d:"รองรับตั้งแต่บ่อแร็ค/บาร์เรลชิ้นเล็กจนถึงระบบผลิตที่ซับซ้อน",
 
         sec_intro:"ภาพรวม",
         intro_p:"กระบวนการชุบโลหะช่วยเพิ่มความทนทาน ป้องกันการกัดกร่อน และปรับปรุงผิวชิ้นงานให้เหมาะกับการใช้งาน อุปกรณ์ที่เหมาะสมช่วยควบคุมคุณภาพและเพิ่มประสิทธิภาพ ทั้งการเตรียมสาร การทดสอบคุณภาพน้ำยา และเครื่องมือช่วยชุบ",
@@ -564,22 +595,30 @@
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
         footer_hours:"🕒 เวลาทำการ 08.00 - 17.00 น.",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved.",
-        cat_pretreat:"เตรียมผิว (Pretreatment)", cat_plating:"ชุบเคลือบ (Plating)",
-        cat_black:"ดำเคมี (Blackening)", cat_passivation:"พาสซิเวชัน (Passivation)",
-        cat_polishing:"ขัดเงา (Polishing)", cat_strippers:"น้ำยาลอก (Strippers)",
-        cat_protective:"ปกป้องผิว (Protective Treatment)", cat_service:"บริการ (Customer Service)",
-        cat_equipment:"อุปกรณ์ (Equipment)"
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{
         page_title:"Plating Tools | Baume Chemical",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us",
+
         btn_back:"Back",
         badge1:"Plating Tools", badge2:"Tanks • Power • Filtration", badge3:"QA/QC",
         hero_title:"Plating Tools",
         hero_tagline:"Essential tools for electroplating — tanks, power, filtration, ultrasonic, thermal control and drying (EN/TH).",
 
+        toc_title:"Contents", toc_features:"Key features", toc_tools:"Tools catalog",
+
+        features_h:"Highlights",
+        features_lead:"Stable power, precise temperature control, clean filtration and easier QA/QC for better results.",
+        feat_1_t:"Stable power = consistency", feat_1_d:"Quality rectifiers deliver steady current, reducing burning and uneven films.",
+        feat_2_t:"Accurate temperature",        feat_2_d:"Heaters & chillers keep the bath in its sweet spot.",
+        feat_3_t:"Clear bath, longer life",     feat_3_d:"Ultra Filtration lowers suspended solids and extends bath life.",
+        feat_4_t:"Deep cleaning",               feat_4_d:"Ultrasonic removes soils in crevices, reducing rework.",
+        feat_5_t:"Chem-resistant materials",    feat_5_d:"Proper materials reduce contamination and extend equipment life.",
+        feat_6_t:"Scales with your line",       feat_6_d:"From small rack/barrel tanks to complex production.",
+
         sec_intro:"Overview",
-        intro_p:"Metal plating enhances durability, prevents corrosion and improves surface properties. The right tools boost quality and efficiency across chemical prep, bath QA/QC and production steps.",
+        intro_p:"Metal plating enhances durability, prevents corrosion, and improves surface properties. The right tools boost quality and efficiency across chemical prep, bath QA/QC, and production steps.",
 
         sec_tools:"Tools Catalog",
         t1_t:"Barrel Plating Tank",    t1_d:"For small parts with uniform coverage.",
@@ -602,11 +641,11 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // text nodes
+      // swap text
       document.querySelectorAll('[data-i18n-key]').forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const val = I18N[L][key];
-        if(typeof val!=='undefined') node.textContent = val;
+        if(typeof val !== 'undefined') node.textContent = val;
       });
 
       // title & meta description
@@ -621,7 +660,7 @@
         );
       }
 
-      // pressed state for ALL language buttons (desktop + mobile)
+      // pressed states (desktop + mobile)
       document.querySelectorAll('.lang-btn').forEach(btn=>{
         btn.setAttribute('aria-pressed', String(btn.dataset.lang===L));
       });
@@ -629,7 +668,7 @@
       try{ localStorage.setItem('lang', L); }catch(e){}
     }
 
-    // Reveal/lift each card on scroll
+    // Reveal each equipment card on scroll (lift-in)
     function initLift(){
       const els = document.querySelectorAll('.tool');
       const io = new IntersectionObserver((entries)=>{
@@ -640,15 +679,41 @@
       els.forEach(el=> io.observe(el));
     }
 
+    // TOC scroll spy (features/catalog) + header offset
+    function initTOCSpy(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+      const setActive = (id)=>{
+        tocLinks.forEach(a=>{ a.classList.remove('is-active'); a.setAttribute('aria-current','false'); });
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+      map.forEach(({el})=> obs.observe(el));
+    }
+
+    // Init
     (function init(){
       const saved = (typeof localStorage!=='undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-
-      // Bind all language buttons
       document.querySelectorAll('.lang-btn').forEach(btn=>{
         btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
       });
-
       // canonical (client-side fallback)
       try{
         const link = document.createElement('link');
@@ -656,8 +721,8 @@
         link.setAttribute('href', location.href.split('#')[0]);
         document.head.appendChild(link);
       }catch(e){}
-
       initLift();
+      initTOCSpy();
     })();
   </script>
 </body>
