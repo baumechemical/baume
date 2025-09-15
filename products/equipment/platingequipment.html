@@ -44,17 +44,22 @@
     html,body{margin:0}
     body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Thai',system-ui,sans-serif;line-height:1.7}
 
-    /* === Site Header (menu bar) === */
-    .site-header{
-      position:sticky; top:0; left:0; right:0; z-index:1400;
-      background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
-      border-bottom:1px solid rgba(255,255,255,.14);
-      transition:background .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .site-header.scrolled{
-      background:#0f172acc; border-color:rgba(255,255,255,.18);
-      box-shadow:0 6px 22px rgba(2,8,20,.16);
-    }
+    /* === FIX: Header โปร่งใสเริ่มต้น + กระจกใสตอนเลื่อน === */
+.site-header{
+  /* ลบไล่โทนดำเดิมทิ้ง แล้วทำให้ใส */
+  background: transparent !important;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease, backdrop-filter .2s ease;
+}
+.site-header.scrolled{
+  /* โทนเข้มแบบกระจกใส ตามสไตล์ที่เคยใช้ */
+  background: rgba(15,23,42,.70) !important;
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 8px 26px rgba(2,8,20,.18);
+}
+    
     .site-header .header-inner{
       max-width:1200px; margin:0 auto;
       display:flex; align-items:center; justify-content:space-between; gap:12px;
@@ -130,6 +135,62 @@
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
+
+    /* === FIX: Header โปร่งใสเริ่มต้น + กระจกใสตอนเลื่อน === */
+.site-header{
+  /* ลบไล่โทนดำเดิมทิ้ง แล้วทำให้ใส */
+  background: transparent !important;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease, backdrop-filter .2s ease;
+}
+.site-header.scrolled{
+  /* โทนเข้มแบบกระจกใส ตามสไตล์ที่เคยใช้ */
+  background: rgba(15,23,42,.70) !important;
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 8px 26px rgba(2,8,20,.18);
+}
+
+/* === FIX: สีปุ่มสลับภาษา (inline บนบาร์) ให้ตรงแบบเดิม === */
+.lang-inline{
+  display: flex;                /* โชว์บนเดสก์ท็อป */
+  gap: 6px; padding: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #ffffffcc;        /* ชิปพื้นขาวโปร่ง */
+  box-shadow: 0 10px 26px rgba(2,8,20,.12);
+}
+.site-header.scrolled .lang-inline{
+  background: #ffffffdd;        /* ตอนเลื่อนให้ขาวขึ้นนิด */
+}
+.lang-inline .lang-btn{
+  appearance:none; border:0; background:transparent; cursor:pointer;
+  padding:6px 10px; border-radius:999px; font-weight:800;
+  display:flex; align-items:center; gap:6px;
+  color:#0f172a;                /* ตัวอักษรเข้มบนพื้นขาว */
+}
+.lang-inline .lang-btn[aria-pressed="true"]{
+  background: var(--brand-2);   /* ปุ่มที่เลือก = สีแบรนด์ */
+  color:#fff;
+}
+
+/* === FIX: แถวภาษาในเมนู (มือถือ) ให้ใกล้เคียงเดิม === */
+.menu .lang-li .lang-group{
+  background: #ffffff1c;
+  border: 1px solid rgba(255,255,255,.35);
+}
+.menu .lang-li .lang-btn{
+  color:#fff;
+}
+.menu .lang-li .lang-btn[aria-pressed="true"]{
+  background:#fff; color:#0f172a;
+}
+
+/* (เสริมเล็กน้อย) สี hover ของลิงก์เมนูให้กลมกลืนกับกระจก */
+.menu a:hover{ background: rgba(255,255,255,.12) }
+.menu a[aria-current="page"]{ background: rgba(255,255,255,.18) }
+
 
     /* === Hero === */
     .hero{
