@@ -282,7 +282,7 @@
             <tr><td>NI-508 A</td><td>60 mL</td><td data-i18n-key="makeup_note_stir">เติมขณะกวน</td></tr>
             <tr><td>NI-508 B</td><td>90 mL</td><td data-i18n-key="makeup_note_stir">เติมขณะกวน</td></tr>
             <tr><td data-i18n-key="makeup_di">น้ำกลั่น (DI)</td><td>~850 mL</td><td data-i18n-key="makeup_note_topup">ปรับให้ครบปริมาตร</td></tr>
-            <tr><td data-i18n-key="makeup_red">NI-508 C (Reducer)</td><td data-i18n-key="makeup_red_amt">ตามค่าตั้งต้นผู้ผลิต</td><td data-i18n-key="makeup_red_keep" data-i18n-html="true">คง <strong>86–109 mL/L</strong> (ดูส่วนปรับเติม)</td></tr>
+            <tr><td data-i18n-key="makeup_red">NI-508 C (Reducer)</td><td data-i18n-key="makeup_red_amt">ปรับเติมตามส่วนที่ขาด</td><td data-i18n-key="makeup_red_keep" data-i18n-html="true">คง <strong>86–109 mL/L</strong> (ดูส่วนปรับเติม)</td></tr>
           </tbody>
         </table>
       </div>
@@ -346,74 +346,178 @@
       </div>
     </section>
 
-    <!-- Process -->
-    <section id="process" class="reveal section-block" aria-labelledby="process-h">
-      <h2 id="process-h" class="section" data-i18n-key="process_h">ขั้นตอนการชุบ / การเดินบ่อ</h2>
-      <div class="content">
-        <ul>
-          <li data-i18n-key="process_s1" data-i18n-html="true"><strong>เตรียมผิว:</strong> ขจัดไขมัน/ล้าง → Activate ตามชนิดโลหะ (อะลูมิเนียมให้ทำซิงเคตก่อน)</li>
-          <li data-i18n-key="process_s2" data-i18n-html="true"><strong>เริ่มชุบ:</strong> จุ่มที่อุณหภูมิเป้าหมาย กวนแนวตั้งหรือเป่าลมกรองเบา ๆ</li>
-          <li data-i18n-key="process_s3" data-i18n-html="true"><strong>ควบคุมเวลา:</strong> จุ่มตามความหนาที่ต้องการ (คำนวณจากอัตราชุบ)</li>
-          <li data-i18n-key="process_s4" data-i18n-html="true"><strong>กรอง:</strong> เดินกรอง <em>ต่อเนื่อง</em> เพื่อให้ผิวเรียบ</li>
-          <li data-i18n-key="process_s5" data-i18n-html="true"><strong>พักบ่อ:</strong> หลังงานให้ลดอุณหภูมิลง ช่วยยืดอายุสารละลาย</li>
-        </ul>
-      </div>
-    </section>
+<!-- Process (NEW) -->
+<section id="process" class="reveal section-block" aria-labelledby="process-h">
+  <h2 id="process-h" class="section" data-i18n-key="process_h">ขั้นตอนการชุบ / การเดินบ่อ</h2>
+  <div class="content">
+    <h3 data-i18n-key="process_prep_h">การเตรียมผิว</h3>
+    <p data-i18n-key="process_prep_p1">
+      ขั้นตอนการเตรียมผิวเป็นสิ่งสำคัญที่สุดในการชุบโลหะ เพื่อให้ชิ้นงานสะอาดและพร้อมสำหรับการเคลือบ
+    </p>
+    <ul>
+      <li data-i18n-key="process_prep_s1">
+        ขจัดไขมันและล้าง: เริ่มต้นด้วยการขจัดคราบไขมัน ฝุ่น และสิ่งสกปรกต่างๆ ออกจากชิ้นงาน จากนั้นล้างด้วยน้ำสะอาดอย่างทั่วถึง
+      </li>
+      <li data-i18n-key="process_prep_s2" data-i18n-html="true">
+        Activate ตามชนิดโลหะ: เป็นการปรับสภาพผิวให้พร้อมรับการชุบ แต่ละโลหะมีวิธีการที่แตกต่างกันไป เช่น อะลูมิเนียม จะต้องผ่านกระบวนการ <em>ซิงเคต (Zincate Process)</em> ก่อน เนื่องจากอะลูมิเนียมมีชั้นออกไซด์ที่หนาและเสถียร ซึ่งจะขัดขวางการยึดเกาะของชั้นเคลือบ การทำซิงเคตจะช่วยกำจัดชั้นออกไซด์และเคลือบด้วยสังกะสีบางๆ แทน ทำให้ชุบได้ง่ายขึ้น
+      </li>
+    </ul>
 
-    <!-- Replenishment -->
-    <section id="replenish" class="reveal section-block" aria-labelledby="repl-h">
-      <h2 id="repl-h" class="section" data-i18n-key="repl_h">การปรับเติม (Replenishment)</h2>
-      <div class="content">
-        <ul>
-          <li data-i18n-key="repl_s1" data-i18n-html="true"><strong>รักษา Ni metal ≥ 5.3 g/L</strong>; แนะนำเติม <strong>A : C = 1 : 1</strong></li>
-          <li data-i18n-key="repl_s2" data-i18n-html="true">ตัวอย่าง: เติม <strong>A 100 mL + C 100 mL</strong> ต่อ <strong>10 dm²</strong> ต่อ <strong>15 µm/ชม.</strong></li>
-          <li data-i18n-key="repl_s3" data-i18n-html="true">เติมครั้งเดียวไม่เกิน <strong>5%</strong> ของ Ni เริ่มต้น</li>
-          <li data-i18n-key="repl_s4" data-i18n-html="true"><strong>Total C</strong> ไม่เกิน <strong>1.5×</strong> ของ A</li>
-          <li data-i18n-key="repl_s5" data-i18n-html="true"><strong>ความเข้มข้นตัวรีดิวซ์ (NI-508 C):</strong> คง <strong>86–109 mL/L</strong>; ลดลง <strong>1 mL/L</strong> → เติม <strong>NI-508 C ≈ 0.62 mL/L</strong></li>
-        </ul>
-      </div>
-    </section>
+    <h3 data-i18n-key="process_start_h">เริ่มชุบ</h3>
+    <ul>
+      <li data-i18n-key="process_start_s1">
+        จุ่มที่อุณหภูมิเป้าหมาย: นำชิ้นงานลงในบ่อชุบเมื่อสารละลายมีอุณหภูมิที่เหมาะสมสำหรับกระบวนการนั้นๆ การควบคุมอุณหภูมิมีความสำคัญต่อคุณภาพของชั้นเคลือบ
+      </li>
+      <li data-i18n-key="process_start_s2">
+        กวนแนวตั้งหรือเป่าลมกรองเบา ๆ: การกวนสารละลายช่วยให้การเคลือบสม่ำเสมอ สามารถทำได้โดยการกวนแนวตั้ง (โยกชิ้นงานขึ้นลง) หรือเป่าลมกรองเบา ๆ เพื่อให้สารละลายไหลเวียนไปทั่วผิวชิ้นงาน ทำให้ไอออนในสารละลายเข้าถึงทุกส่วนของชิ้นงานได้อย่างทั่วถึง
+      </li>
+    </ul>
 
-    <!-- pH & Filtration control -->
-    <section id="phfilter" class="reveal section-block" aria-labelledby="ph-h">
-      <h2 id="ph-h" class="section" data-i18n-key="ph_h">การควบคุม pH & การกรอง</h2>
-      <div class="content">
-        <ul>
-          <li data-i18n-key="ph_s1" data-i18n-html="true"><strong>pH เป้าหมาย:</strong> 4.6–4.8 (เหมาะ 4.7–4.8)</li>
-          <li data-i18n-key="ph_s2" data-i18n-html="true"><strong>เพิ่ม pH:</strong> NH<sub>4</sub>OH 50% ทีละน้อย</li>
-          <li data-i18n-key="ph_s3" data-i18n-html="true"><strong>ลด pH:</strong> H<sub>2</sub>SO<sub>4</sub> 10% ช้า ๆ</li>
-          <li data-i18n-key="ph_s4" data-i18n-html="true"><strong>กรองระหว่างงาน:</strong> 15 µm ต่อเนื่อง</li>
-          <li data-i18n-key="ph_s5" data-i18n-html="true"><strong>กรองก่อนวันถัดไป:</strong> ปล่อยบ่อเย็น → กรอง 3 µm</li>
-          <li data-i18n-key="ph_s6" data-i18n-html="true"><strong>ล้างระบบกรองรายสัปดาห์:</strong> HNO<sub>3</sub> 50% → ล้างน้ำ → DI + NH<sub>3</sub> เล็กน้อย</li>
-        </ul>
-      </div>
-    </section>
+    <h3 data-i18n-key="process_time_h">การควบคุมเวลา</h3>
+    <ul>
+      <li data-i18n-key="process_time_s1">
+        จุ่มตามความหนาที่ต้องการ: เวลาในการชุบจะขึ้นอยู่กับความหนาของชั้นเคลือบที่ต้องการ ซึ่งสามารถคำนวณได้จากอัตราชุบ (Plating Rate) ของสารละลายแต่ละชนิด
+      </li>
+    </ul>
 
-    <!-- Equipment -->
-    <section id="equipment" class="reveal section-block" aria-labelledby="equip-h">
-      <h2 id="equip-h" class="section" data-i18n-key="equip_h">อุปกรณ์ที่แนะนำ</h2>
-      <div class="content">
-        <ul>
-          <li data-i18n-key="equip_s1" data-i18n-html="true">ถัง <strong>PE/PP/บุพลาสติก</strong> ทนเคมีและอุณหภูมิ</li>
-          <li data-i18n-key="equip_s2">ฮีตเตอร์ทนเคมี/อุณหภูมิสูง + ระบบควบคุมอุณหภูมิเสถียร</li>
-          <li data-i18n-key="equip_s3" data-i18n-html="true">ปั๊ม/ระบบกรองแบบ <strong>plastic wetted parts</strong></li>
-        </ul>
-      </div>
-    </section>
+    <h3 data-i18n-key="process_maint_h">การบำรุงรักษา</h3>
+    <ul>
+      <li data-i18n-key="process_maint_s1">
+        กรองต่อเนื่อง: ควรเปิดเครื่องกรองอย่างต่อเนื่องในระหว่างการทำงาน เพื่อขจัดอนุภาคและสิ่งสกปรกที่อาจปนเปื้อนในสารละลาย ช่วยให้ได้ผิวเคลือบที่เรียบเนียนและไม่มีตำหนิ
+      </li>
+      <li data-i18n-key="process_maint_s2">
+        พักบ่อ: เมื่อเลิกใช้งาน ควรลดอุณหภูมิของสารละลายลงมาอยู่ในระดับที่ต่ำกว่าปกติ เพื่อช่วยยืดอายุการใช้งานของสารเคมีและรักษาเสถียรภาพของบ่อชุบให้นานขึ้น
+      </li>
+    </ul>
+  </div>
+</section>
 
-    <!-- Safety -->
-    <section id="safety" class="reveal section-block" aria-labelledby="safe-h">
-      <h2 id="safe-h" class="section" data-i18n-key="safety_h">ความปลอดภัย & การจัดการน้ำเสีย</h2>
-      <div class="content">
-        <ul>
-          <li data-i18n-key="safety_s1">ทำงานที่อุณหภูมิสูง ระวังลวก</li>
-          <li data-i18n-key="safety_s2">สารละลายมีกรดและเกลือ Ni เลี่ยงสัมผัสผิว/ตา</li>
-          <li data-i18n-key="safety_s3" data-i18n-html="true">กระเด็นเข้าตา: ล้างน้ำไหล <strong>15 นาที</strong> และพบแพทย์</li>
-          <li data-i18n-key="safety_s4" data-i18n-html="true"><strong>น้ำเสีย:</strong> ปรับ pH 6–8 และตกตะกอนโลหะตามข้อกำหนดก่อนเข้าระบบบำบัด</li>
-          <li data-i18n-key="safety_s5" data-i18n-html="true"><em>* ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ตลอดกระบวนการ</em></li>
-        </ul>
-      </div>
-    </section>
+
+<!-- Replenishment (NEW) -->
+<section id="replenish" class="reveal section-block" aria-labelledby="repl-h">
+  <h2 id="repl-h" class="section" data-i18n-key="repl_h">การปรับเติม (Replenishment)</h2>
+  <div class="content">
+    <h3 data-i18n-key="repl_ni_h">การควบคุมปริมาณนิกเกิล (Ni metal)</h3>
+    <ul>
+      <li data-i18n-key="repl_ni_keep" data-i18n-html="true">
+        รักษาความเข้มข้น: ควรควบคุมปริมาณนิกเกิลในสารละลายให้อยู่ที่ <strong>≥ 5.3 g/L</strong> เพื่อให้การชุบมีประสิทธิภาพ
+      </li>
+      <li data-i18n-key="repl_ratio" data-i18n-html="true">
+        อัตราส่วนการเติม: แนะนำให้เติมสารละลาย <strong>A : C = 1 : 1</strong> เพื่อรักษาสมดุลของส่วนประกอบ
+      </li>
+      <li data-i18n-key="repl_example" data-i18n-html="true">
+        ตัวอย่างการเติม: งานพื้นที่ <strong>10 dm²</strong> ที่ต้องการความหนา <strong>15 µm/ชม.</strong> ให้เติม <strong>A 100 mL + C 100 mL</strong>
+      </li>
+    </ul>
+
+    <h3 data-i18n-key="repl_caution_h">การเติมสารเคมีและข้อควรระวัง</h3>
+    <ul>
+      <li data-i18n-key="repl_once" data-i18n-html="true">
+        การเติมครั้งเดียว: ควรเติมแต่ละครั้งไม่เกิน <strong>5%</strong> ของปริมาณนิกเกิลเริ่มต้นในบ่อ เพื่อเลี่ยงการเปลี่ยนแปลงพารามิเตอร์รวดเร็ว
+      </li>
+      <li data-i18n-key="repl_totalC" data-i18n-html="true">
+        สัดส่วนรวม: <strong>Total C ≤ 1.5× A</strong> (ปริมาณสะสมของ C ต้องไม่เกิน 1.5 เท่าของ A)
+      </li>
+    </ul>
+
+    <h3 data-i18n-key="repl_reducer_h">การควบคุมความเข้มข้นของตัวรีดิวซ์ (NI-508 C)</h3>
+    <ul>
+      <li data-i18n-key="repl_reducer_range" data-i18n-html="true">
+        ระดับที่เหมาะสม: คงไว้ในช่วง <strong>86–109 mL/L</strong>
+      </li>
+      <li data-i18n-key="repl_reducer_adjust" data-i18n-html="true">
+        การปรับปริมาณ: หากลดลง <strong>1 mL/L</strong> ให้เติม <strong>NI-508 C ≈ 0.62 mL/L</strong> เพื่อคืนสู่ช่วงเป้าหมาย
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- pH & Filtration control (NEW) -->
+<section id="phfilter" class="reveal section-block" aria-labelledby="ph-h">
+  <h2 id="ph-h" class="section" data-i18n-key="ph_h">การควบคุม pH & การกรอง</h2>
+  <div class="content">
+    <h3 data-i18n-key="ph_ctl_h">การควบคุมค่า pH (pH Control)</h3>
+    <p data-i18n-key="ph_target" data-i18n-html="true">
+      <strong>pH เป้าหมาย (Target pH):</strong> ค่า pH ของน้ำยาชุบควรอยู่ที่ <strong>4.6–4.8</strong> โดยช่วงที่เหมาะสมที่สุดคือ <strong>4.7–4.8</strong> การควบคุมค่า pH อย่างแม่นยำจะช่วยให้กระบวนการชุบมีประสิทธิภาพและได้คุณภาพเคลือบที่ดีที่สุด
+    </p>
+    <p data-i18n-key="ph_increase" data-i18n-html="true">
+      <strong>การเพิ่ม pH (Increasing pH):</strong> หากค่า pH ต่ำเกินไป ให้เติมแอมโมเนียมไฮดรอกไซด์ (<em>Ammonium Hydroxide</em>) หรือ <strong>NH<sub>4</sub>OH 50%</strong> ลงไปทีละน้อย ๆ เพื่อค่อย ๆ ปรับค่า pH ให้สูงขึ้นอย่างปลอดภัย
+    </p>
+    <p data-i18n-key="ph_decrease" data-i18n-html="true">
+      <strong>การลด pH (Decreasing pH):</strong> หากค่า pH สูงเกินไป ให้เติมกรดซัลฟูริก (<em>Sulfuric Acid</em>) หรือ <strong>H<sub>2</sub>SO<sub>4</sub> 10%</strong> ลงไปอย่างช้า ๆ เพื่อลดค่า pH ให้กลับมาอยู่ในช่วงที่เหมาะสม
+    </p>
+
+    <h3 data-i18n-key="ph_filter_h">การบำรุงรักษาระบบกรอง (Filtration System Maintenance)</h3>
+    <p data-i18n-key="ph_filter_op" data-i18n-html="true">
+      <strong>กรองระหว่างการทำงาน (Filtration During Operation):</strong> ควรใช้เครื่องกรองที่มีความละเอียด <strong>15 µm</strong> และเดินเครื่องกรองอย่างต่อเนื่องตลอดเวลาที่ทำการชุบ เพื่อขจัดสิ่งสกปรกและอนุภาคที่อาจทำให้ผิวชิ้นงานไม่เรียบเนียน
+    </p>
+    <p data-i18n-key="ph_filter_next" data-i18n-html="true">
+      <strong>กรองก่อนวันถัดไป (Filtration Before Next Day):</strong> เมื่อใช้งานเสร็จแล้ว ควรปล่อยให้น้ำยาในบ่อชุบเย็นลง จากนั้นกรองด้วยไส้กรองที่ละเอียดขึ้นคือ <strong>3 µm</strong> เพื่อกำจัดสิ่งปนเปื้อนที่ละเอียดมากยิ่งขึ้น ซึ่งจะช่วยยืดอายุการใช้งานของน้ำยา
+    </p>
+    <p data-i18n-key="ph_filter_clean" data-i18n-html="true">
+      <strong>การล้างระบบกรอง (Weekly System Cleaning):</strong> ควรล้างระบบกรองทุกสัปดาห์โดยเริ่มจากการแช่ในกรดไนตริก (<em>Nitric Acid</em>) หรือ <strong>HNO<sub>3</sub> 50%</strong> เพื่อกำจัดคราบนิกเกิลและสิ่งอุดตัน จากนั้นล้างด้วยน้ำสะอาด ตามด้วยน้ำ DI (<em>Demineralized Water</em>) และเติม <strong>NH<sub>3</sub></strong> เล็กน้อยเพื่อปรับสภาพให้เป็นกลาง
+    </p>
+  </div>
+</section>
+
+<!-- Equipment (NEW) -->
+<section id="equipment" class="reveal section-block" aria-labelledby="equip-h">
+  <h2 id="equip-h" class="section" data-i18n-key="equip_h">อุปกรณ์ที่แนะนำ</h2>
+  <div class="content">
+    <h3 data-i18n-key="equip_tank_h">ถังชุบงาน</h3>
+    <p data-i18n-key="equip_tank_p" data-i18n-html="true">
+      ถังที่ใช้ในกระบวนการชุบต้องผลิตจากวัสดุที่ทนทานต่อสารเคมีและอุณหภูมิสูง เช่น
+      <strong>PE (Polyethylene)</strong>, <strong>PP (Polypropylene)</strong> หรือวัสดุอื่นที่ถูก
+      <strong>บุด้วยพลาสติกชนิดพิเศษ</strong> การเลือกใช้วัสดุเหล่านี้ช่วยป้องกันการกัดกร่อนจากสารละลายเคมีที่เป็นกรดหรือด่างสูง
+      ทำให้ถังมีอายุการใช้งานยาวนานและไม่เป็นอันตรายต่อกระบวนการชุบ
+    </p>
+
+    <h3 data-i18n-key="equip_heater_h">ฮีตเตอร์และระบบควบคุมอุณหภูมิ</h3>
+    <p data-i18n-key="equip_heater_p" data-i18n-html="true">
+      ฮีตเตอร์ (<em>Heater</em>) เป็นอุปกรณ์สำหรับให้ความร้อนแก่น้ำยาในบ่อชุบ ฮีตเตอร์ที่ใช้ในงานชุบควรทำจากวัสดุที่ทนทานต่อทั้งสารเคมีและความร้อนสูง
+      เช่น <strong>โลหะผสมพิเศษ</strong> หรือ <strong>แก้วควอตซ์</strong> นอกจากนี้ <strong>ระบบควบคุมอุณหภูมิที่เสถียร</strong> ยังมีความสำคัญอย่างยิ่ง
+      เนื่องจากอุณหภูมิที่เหมาะสมเป็นปัจจัยหลักในการควบคุมคุณภาพและประสิทธิภาพของการเคลือบ
+    </p>
+
+    <h3 data-i18n-key="equip_pump_h">ปั๊มและระบบกรอง</h3>
+    <p data-i18n-key="equip_pump_p" data-i18n-html="true">
+      ปั๊ม (<em>Pump</em>) และระบบกรอง (<em>Filtration System</em>) ทำหน้าที่หมุนเวียนและกรองสารละลายในบ่อชุบ เพื่อขจัดสิ่งสกปรกและอนุภาคต่าง ๆ
+      ที่อาจทำให้ผิวเคลือบไม่เรียบเนียน อุปกรณ์เหล่านี้จำเป็นต้องมี <strong>plastic wetted parts</strong> ซึ่งหมายถึงชิ้นส่วนที่สัมผัสของเหลวทั้งหมดทำจากพลาสติกทนเคมี
+      เช่น <strong>PP</strong> หรือ <strong>PVDF</strong> เพื่อป้องกันการกัดกร่อนและการปนเปื้อนในสารละลาย
+    </p>
+  </div>
+</section>
+
+
+<!-- Safety (NEW) -->
+<section id="safety" class="reveal section-block" aria-labelledby="safe-h">
+  <h2 id="safe-h" class="section" data-i18n-key="safety_h">ความปลอดภัย & การจัดการน้ำเสีย</h2>
+  <div class="content">
+    <h3 data-i18n-key="safety_heat_h">อันตรายจากความร้อน</h3>
+    <p data-i18n-key="safety_heat_p">
+      ระวังการลวก: สารละลายในบ่อชุบทำงานที่อุณหภูมิสูง ดังนั้นต้องระมัดระวังเป็นอย่างยิ่งเพื่อหลีกเลี่ยงการถูกลวกจากสารละลายที่อาจกระเด็นหรือสัมผัสโดยตรงกับผิวหนัง
+    </p>
+
+    <h3 data-i18n-key="safety_chem_h">อันตรายจากสารเคมี</h3>
+    <p data-i18n-key="safety_chem_p1">
+      หลีกเลี่ยงการสัมผัส: สารละลายในบ่อชุบมีส่วนผสมของกรดและเกลือของนิกเกิล (Ni) ซึ่งเป็นสารเคมีที่อันตราย ควรหลีกเลี่ยงการสัมผัสกับผิวหนังและดวงตาโดยเด็ดขาด
+    </p>
+    <p data-i18n-key="safety_chem_p2" data-i18n-html="true">
+      หากเกิดอุบัติเหตุสารเคมีกระเด็นเข้าตา ให้รีบล้างด้วยน้ำสะอาดที่ไหลผ่านอย่างต่อเนื่องอย่างน้อย <strong>15 นาที</strong> และไปพบแพทย์ทันที
+    </p>
+
+    <h3 data-i18n-key="safety_waste_h">การจัดการน้ำเสีย</h3>
+    <p data-i18n-key="safety_waste_p">
+      บำบัดก่อนทิ้ง: น้ำเสียจากกระบวนการชุบมีสารโลหะหนัก (นิกเกิล) และมีความเป็นกรดสูง ก่อนปล่อยทิ้งลงสู่ระบบบำบัดน้ำเสียรวม ควรปรับค่า pH ให้อยู่ในช่วง 6–8 และตกตะกอนโลหะออกตามข้อกำหนดของกฎหมาย เพื่อป้องกันผลกระทบต่อสิ่งแวดล้อม
+    </p>
+
+    <h3 data-i18n-key="safety_ppe_h">การป้องกันส่วนบุคคล (PPE)</h3>
+    <p data-i18n-key="safety_ppe_p">
+      สวมอุปกรณ์ป้องกัน: เพื่อความปลอดภัยสูงสุด ควรสวมอุปกรณ์ป้องกันส่วนบุคคล (PPE) ตลอดกระบวนการ ได้แก่ ถุงมือ แว่นตานิรภัย และหน้ากากป้องกัน เพื่อลดความเสี่ยงจากการสัมผัสสารเคมีและการได้รับอันตรายจากความร้อน
+    </p>
+  </div>
+</section>
+
   </article>
 </main>
 
@@ -524,7 +628,7 @@
         makeup_di:"น้ำกลั่น (DI)",
         makeup_note_topup:"ปรับให้ครบปริมาตร",
         makeup_red:"NI-508 C (Reducer)",
-        makeup_red_amt:"ตามค่าตั้งต้นผู้ผลิต",
+        makeup_red_amt:"ปรับเติมตามส่วนที่ขาด",
         makeup_red_keep:"คง <strong>86–109 mL/L</strong> (ดูส่วนปรับเติม)",
         makeup_steps_h:"ขั้นตอนเมคอัพ",
         makeup_s1:"เติมน้ำกลั่นลงถังตามปริมาตร",
@@ -554,39 +658,76 @@
         params_rate_range:"~0.5–0.8 µm/นาที",
         params_rate_note:"≈ 13–20 µm/ชั่วโมง",
 
-        process_h:"ขั้นตอนการชุบ / การเดินบ่อ",
-        process_s1:"<strong>เตรียมผิว:</strong> ขจัดไขมัน/ล้าง → Activate ตามชนิดโลหะ (อะลูมิเนียมให้ทำซิงเคตก่อน)",
-        process_s2:"<strong>เริ่มชุบ:</strong> จุ่มที่อุณหภูมิเป้าหมาย กวนแนวตั้งหรือเป่าลมกรองเบา ๆ",
-        process_s3:"<strong>ควบคุมเวลา:</strong> จุ่มตามความหนาที่ต้องการ (คำนวณจากอัตราชุบ)",
-        process_s4:"<strong>กรอง:</strong> เดินกรอง <em>ต่อเนื่อง</em> เพื่อให้ผิวเรียบ",
-        process_s5:"<strong>พักบ่อ:</strong> หลังงานให้ลดอุณหภูมิลง ช่วยยืดอายุสารละลาย",
+      process_h: "ขั้นตอนการชุบ / การเดินบ่อ",
+      process_prep_h: "การเตรียมผิว",
+      process_prep_p1: "ขั้นตอนการเตรียมผิวเป็นสิ่งสำคัญที่สุดในการชุบโลหะ เพื่อให้ชิ้นงานสะอาดและพร้อมสำหรับการเคลือบ",
+      process_prep_s1: "ขจัดไขมันและล้าง: เริ่มต้นด้วยการขจัดคราบไขมัน ฝุ่น และสิ่งสกปรกต่างๆ ออกจากชิ้นงาน จากนั้นล้างด้วยน้ำสะอาดอย่างทั่วถึง",
+      process_prep_s2: "Activate ตามชนิดโลหะ: เป็นการปรับสภาพผิวให้พร้อมรับการชุบ แต่ละโลหะมีวิธีการที่แตกต่างกันไป เช่น อะลูมิเนียม จะต้องผ่านกระบวนการ ซิงเคต (Zincate Process) ก่อน เนื่องจากอะลูมิเนียมมีชั้นออกไซด์ที่หนาและเสถียร ซึ่งจะขัดขวางการยึดเกาะของชั้นเคลือบ การทำซิงเคตจะช่วยกำจัดชั้นออกไซด์และเคลือบด้วยสังกะสีบางๆ แทน ทำให้ชุบได้ง่ายขึ้น",
+      process_start_h: "เริ่มชุบ",
+      process_start_s1: "จุ่มที่อุณหภูมิเป้าหมาย: นำชิ้นงานลงในบ่อชุบเมื่อสารละลายมีอุณหภูมิที่เหมาะสมสำหรับกระบวนการนั้นๆ การควบคุมอุณหภูมิมีความสำคัญต่อคุณภาพของชั้นเคลือบ",
+      process_start_s2: "กวนแนวตั้งหรือเป่าลมกรองเบา ๆ: การกวนสารละลายช่วยให้การเคลือบสม่ำเสมอ สามารถทำได้โดยการกวนแนวตั้ง (โยกชิ้นงานขึ้นลง) หรือเป่าลมกรองเบา ๆ เพื่อให้สารละลายไหลเวียนไปทั่วผิวชิ้นงาน ทำให้ไอออนในสารละลายเข้าถึงทุกส่วนของชิ้นงานได้อย่างทั่วถึง",
+      process_time_h: "การควบคุมเวลา",
+      process_time_s1: "จุ่มตามความหนาที่ต้องการ: เวลาในการชุบจะขึ้นอยู่กับความหนาของชั้นเคลือบที่ต้องการ ซึ่งสามารถคำนวณได้จากอัตราชุบ (Plating Rate) ของสารละลายแต่ละชนิด",
+      process_maint_h: "การบำรุงรักษา",
+      process_maint_s1: "กรองต่อเนื่อง: ควรเปิดเครื่องกรองอย่างต่อเนื่องในระหว่างการทำงาน เพื่อขจัดอนุภาคและสิ่งสกปรกที่อาจปนเปื้อนในสารละลาย ช่วยให้ได้ผิวเคลือบที่เรียบเนียนและไม่มีตำหนิ",
+      process_maint_s2: "พักบ่อ: เมื่อเลิกใช้งาน ควรลดอุณหภูมิของสารละลายลงมาอยู่ในระดับที่ต่ำกว่าปกติ เพื่อช่วยยืดอายุการใช้งานของสารเคมีและรักษาเสถียรภาพของบ่อชุบให้นานขึ้น",
+ 
 
-        repl_h:"การปรับเติม (Replenishment)",
-        repl_s1:"<strong>รักษา Ni metal ≥ 5.3 g/L</strong>; แนะนำเติม <strong>A : C = 1 : 1</strong>",
-        repl_s2:"ตัวอย่าง: เติม <strong>A 100 mL + C 100 mL</strong> ต่อ <strong>10 dm²</strong> ต่อ <strong>15 µm/ชม.</strong>",
-        repl_s3:"เติมครั้งเดียวไม่เกิน <strong>5%</strong> ของ Ni เริ่มต้น",
-        repl_s4:"<strong>Total C</strong> ไม่เกิน <strong>1.5×</strong> ของ A",
-        repl_s5:"<strong>ความเข้มข้นตัวรีดิวซ์ (NI-508 C):</strong> คง <strong>86–109 mL/L</strong>; ลดลง <strong>1 mL/L</strong> → เติม <strong>NI-508 C ≈ 0.62 mL/L</strong>",
+      repl_h: "การปรับเติม (Replenishment)",
 
-        ph_h:"การควบคุม pH & การกรอง",
-        ph_s1:"<strong>pH เป้าหมาย:</strong> 4.6–4.8 (เหมาะ 4.7–4.8)",
-        ph_s2:"<strong>เพิ่ม pH:</strong> NH<sub>4</sub>OH 50% ทีละน้อย",
-        ph_s3:"<strong>ลด pH:</strong> H<sub>2</sub>SO<sub>4</sub> 10% ช้า ๆ",
-        ph_s4:"<strong>กรองระหว่างงาน:</strong> 15 µm ต่อเนื่อง",
-        ph_s5:"<strong>กรองก่อนวันถัดไป:</strong> ปล่อยบ่อเย็น → กรอง 3 µm",
-        ph_s6:"<strong>ล้างระบบกรองรายสัปดาห์:</strong> HNO<sub>3</sub> 50% → ล้างน้ำ → DI + NH<sub>3</sub> เล็กน้อย",
+      repl_ni_h: "การควบคุมปริมาณนิกเกิล (Ni metal)",
+      repl_ni_keep: "รักษาความเข้มข้น: ควรควบคุมปริมาณนิกเกิลในสารละลายให้อยู่ที่ <strong>≥ 5.3 g/L</strong> เพื่อให้การชุบมีประสิทธิภาพ",
+      repl_ratio: "อัตราส่วนการเติม: แนะนำให้เติมสารละลาย <strong>A : C = 1 : 1</strong> เพื่อรักษาสมดุลของส่วนประกอบ",
+      repl_example: "ตัวอย่างการเติม: งานพื้นที่ <strong>10 dm²</strong> ที่ต้องการความหนา <strong>15 µm/ชม.</strong> ให้เติม <strong>A 100 mL + C 100 mL</strong>",
 
-        equip_h:"อุปกรณ์ที่แนะนำ",
-        equip_s1:"ถัง <strong>PE/PP/บุพลาสติก</strong> ทนเคมีและอุณหภูมิ",
-        equip_s2:"ฮีตเตอร์ทนเคมี/อุณหภูมิสูง + ระบบควบคุมอุณหภูมิเสถียร",
-        equip_s3:"ปั๊ม/ระบบกรองแบบ <strong>plastic wetted parts</strong>",
+      repl_caution_h: "การเติมสารเคมีและข้อควรระวัง",
+      repl_once: "การเติมครั้งเดียว: ควรเติมแต่ละครั้งไม่เกิน <strong>5%</strong> ของปริมาณนิกเกิลเริ่มต้นในบ่อ เพื่อเลี่ยงการเปลี่ยนแปลงพารามิเตอร์รวดเร็ว",
+      repl_totalC: "สัดส่วนรวม: <strong>Total C ≤ 1.5× A</strong> (ปริมาณสะสมของ C ต้องไม่เกิน 1.5 เท่าของ A)",
 
-        safety_h:"ความปลอดภัย & การจัดการน้ำเสีย",
-        safety_s1:"ทำงานที่อุณหภูมิสูง ระวังลวก",
-        safety_s2:"สารละลายมีกรดและเกลือ Ni เลี่ยงสัมผัสผิว/ตา",
-        safety_s3:"กระเด็นเข้าตา: ล้างน้ำไหล <strong>15 นาที</strong> และพบแพทย์",
-        safety_s4:"<strong>น้ำเสีย:</strong> ปรับ pH 6–8 และตกตะกอนโลหะตามข้อกำหนดก่อนเข้าระบบบำบัด",
-        safety_s5:"<em>* ควรสวม PPE เช่น ถุงมือ แว่นตานิรภัย และหน้ากาก ตลอดกระบวนการ</em>"
+      repl_reducer_h: "การควบคุมความเข้มข้นของตัวรีดิวซ์ (NI-508 C)",
+      repl_reducer_range: "ระดับที่เหมาะสม: คงไว้ในช่วง <strong>86–109 mL/L</strong>",
+      repl_reducer_adjust: "การปรับปริมาณ: หากลดลง <strong>1 mL/L</strong> ให้เติม <strong>NI-508 C ≈ 0.62 mL/L</strong> เพื่อคืนสู่ช่วงเป้าหมาย",
+ 
+
+      ph_h: "การควบคุม pH & การกรอง",
+      ph_ctl_h: "การควบคุมค่า pH (pH Control)",
+      ph_target: "<strong>pH เป้าหมาย (Target pH):</strong> ค่า pH ของน้ำยาชุบควรอยู่ที่ <strong>4.6–4.8</strong> โดยช่วงที่เหมาะสมที่สุดคือ <strong>4.7–4.8</strong> การควบคุมค่า pH อย่างแม่นยำจะช่วยให้กระบวนการชุบมีประสิทธิภาพและได้คุณภาพเคลือบที่ดีที่สุด",
+      ph_increase: "<strong>การเพิ่ม pH (Increasing pH):</strong> หากค่า pH ต่ำเกินไป ให้เติมแอมโมเนียมไฮดรอกไซด์ (<em>Ammonium Hydroxide</em>) หรือ <strong>NH<sub>4</sub>OH 50%</strong> ลงไปทีละน้อย ๆ เพื่อค่อย ๆ ปรับค่า pH ให้สูงขึ้นอย่างปลอดภัย",
+      ph_decrease: "<strong>การลด pH (Decreasing pH):</strong> หากค่า pH สูงเกินไป ให้เติมกรดซัลฟูริก (<em>Sulfuric Acid</em>) หรือ <strong>H<sub>2</sub>SO<sub>4</sub> 10%</strong> ลงไปอย่างช้า ๆ เพื่อลดค่า pH ให้กลับมาอยู่ในช่วงที่เหมาะสม",
+
+      ph_filter_h: "การบำรุงรักษาระบบกรอง (Filtration System Maintenance)",
+      ph_filter_op: "<strong>กรองระหว่างการทำงาน (Filtration During Operation):</strong> ควรใช้เครื่องกรองที่มีความละเอียด <strong>15 µm</strong> และเดินเครื่องกรองอย่างต่อเนื่องตลอดเวลาที่ทำการชุบ เพื่อขจัดสิ่งสกปรกและอนุภาคที่อาจทำให้ผิวชิ้นงานไม่เรียบเนียน",
+      ph_filter_next: "<strong>กรองก่อนวันถัดไป (Filtration Before Next Day):</strong> เมื่อใช้งานเสร็จแล้ว ควรปล่อยให้น้ำยาในบ่อชุบเย็นลง จากนั้นกรองด้วยไส้กรองที่ละเอียดขึ้นคือ <strong>3 µm</strong> เพื่อกำจัดสิ่งปนเปื้อนที่ละเอียดมากยิ่งขึ้น ซึ่งจะช่วยยืดอายุการใช้งานของน้ำยา",
+      ph_filter_clean: "<strong>การล้างระบบกรอง (Weekly System Cleaning):</strong> ควรล้างระบบกรองทุกสัปดาห์โดยเริ่มจากการแช่ในกรดไนตริก (<em>Nitric Acid</em>) หรือ <strong>HNO<sub>3</sub> 50%</strong> เพื่อกำจัดคราบนิกเกิลและสิ่งอุดตัน จากนั้นล้างด้วยน้ำสะอาด ตามด้วยน้ำ DI (<em>Demineralized Water</em>) และเติม <strong>NH<sub>3</sub></strong> เล็กน้อยเพื่อปรับสภาพให้เป็นกลาง",
+ 
+
+     equip_h: "อุปกรณ์ที่แนะนำ",
+      equip_tank_h: "ถังชุบงาน",
+      equip_tank_p:
+        "ถังที่ใช้ในกระบวนการชุบต้องผลิตจากวัสดุที่ทนทานต่อสารเคมีและอุณหภูมิสูง เช่น <strong>PE (Polyethylene)</strong>, <strong>PP (Polypropylene)</strong> หรือวัสดุอื่นที่ถูก <strong>บุด้วยพลาสติกชนิดพิเศษ</strong> การเลือกใช้วัสดุเหล่านี้ช่วยป้องกันการกัดกร่อนจากสารละลายเคมีที่เป็นกรดหรือด่างสูง ทำให้ถังมีอายุการใช้งานยาวนานและไม่เป็นอันตรายต่อกระบวนการชุบ",
+      equip_heater_h: "ฮีตเตอร์และระบบควบคุมอุณหภูมิ",
+      equip_heater_p:
+        "ฮีตเตอร์ (<em>Heater</em>) เป็นอุปกรณ์สำหรับให้ความร้อนแก่น้ำยาในบ่อชุบ ฮีตเตอร์ที่ใช้ในงานชุบควรทำจากวัสดุที่ทนทานต่อทั้งสารเคมีและความร้อนสูง เช่น <strong>โลหะผสมพิเศษ</strong> หรือ <strong>แก้วควอตซ์</strong> นอกจากนี้ <strong>ระบบควบคุมอุณหภูมิที่เสถียร</strong> ยังมีความสำคัญอย่างยิ่ง เนื่องจากอุณหภูมิที่เหมาะสมเป็นปัจจัยหลักในการควบคุมคุณภาพและประสิทธิภาพของการเคลือบ",
+      equip_pump_h: "ปั๊มและระบบกรอง",
+      equip_pump_p:
+        "ปั๊ม (<em>Pump</em>) และระบบกรอง (<em>Filtration System</em>) ทำหน้าที่หมุนเวียนและกรองสารละลายในบ่อชุบ เพื่อขจัดสิ่งสกปรกและอนุภาคต่าง ๆ ที่อาจทำให้ผิวเคลือบไม่เรียบเนียน อุปกรณ์เหล่านี้จำเป็นต้องมี <strong>plastic wetted parts</strong> ซึ่งหมายถึงชิ้นส่วนที่สัมผัสของเหลวทั้งหมดทำจากพลาสติกทนเคมี เช่น <strong>PP</strong> หรือ <strong>PVDF</strong> เพื่อป้องกันการกัดกร่อนและการปนเปื้อนในสารละลาย",
+
+      safety_h: "ความปลอดภัย & การจัดการน้ำเสีย",
+      safety_heat_h: "อันตรายจากความร้อน",
+      safety_heat_p:
+        "ระวังการลวก: สารละลายในบ่อชุบทำงานที่อุณหภูมิสูง ดังนั้นต้องระมัดระวังเป็นอย่างยิ่งเพื่อหลีกเลี่ยงการถูกลวกจากสารละลายที่อาจกระเด็นหรือสัมผัสโดยตรงกับผิวหนัง",
+      safety_chem_h: "อันตรายจากสารเคมี",
+      safety_chem_p1:
+        "หลีกเลี่ยงการสัมผัส: สารละลายในบ่อชุบมีส่วนผสมของกรดและเกลือของนิกเกิล (Ni) ซึ่งเป็นสารเคมีที่อันตราย ควรหลีกเลี่ยงการสัมผัสกับผิวหนังและดวงตาโดยเด็ดขาด",
+      safety_chem_p2:
+        "หากเกิดอุบัติเหตุสารเคมีกระเด็นเข้าตา ให้รีบล้างด้วยน้ำสะอาดที่ไหลผ่านอย่างต่อเนื่องอย่างน้อย <strong>15 นาที</strong> และไปพบแพทย์ทันที",
+      safety_waste_h: "การจัดการน้ำเสีย",
+      safety_waste_p:
+        "บำบัดก่อนทิ้ง: น้ำเสียจากกระบวนการชุบมีสารโลหะหนัก (นิกเกิล) และมีความเป็นกรดสูง ก่อนปล่อยทิ้งลงสู่ระบบบำบัดน้ำเสียรวม ควรปรับค่า pH ให้อยู่ในช่วง 6–8 และตกตะกอนโลหะออกตามข้อกำหนดของกฎหมาย เพื่อป้องกันผลกระทบต่อสิ่งแวดล้อม",
+      safety_ppe_h: "การป้องกันส่วนบุคคล (PPE)",
+      safety_ppe_p:
+        "สวมอุปกรณ์ป้องกัน: เพื่อความปลอดภัยสูงสุด ควรสวมอุปกรณ์ป้องกันส่วนบุคคล (PPE) ตลอดกระบวนการ ได้แก่ ถุงมือ แว่นตานิรภัย และหน้ากากป้องกัน เพื่อลดความเสี่ยงจากการสัมผัสสารเคมีและการได้รับอันตรายจากความร้อน"
+ 
       },
       en: {
         intro_h:"Product overview",
@@ -624,7 +765,7 @@
         makeup_di:"DI water",
         makeup_note_topup:"Bring to final volume",
         makeup_red:"NI-508 C (Reducer)",
-        makeup_red_amt:"Per supplier setpoint",
+        makeup_red_amt:"Adjust and fill in the missing",
         makeup_red_keep:"Maintain <strong>86–109 mL/L</strong> (see Replenishment)",
         makeup_steps_h:"Make-up steps",
         makeup_s1:"Charge DI water to tank.",
@@ -654,39 +795,75 @@
         params_rate_range:"~0.5–0.8 µm/min",
         params_rate_note:"≈ 13–20 µm/h",
 
-        process_h:"Plating steps / operation",
-        process_s1:"<strong>Surface prep:</strong> degrease/rinse → activate by substrate (aluminum: zincate first).",
-        process_s2:"<strong>Start plating:</strong> immerse at target temperature; vertical agitation or light filtered air.",
-        process_s3:"<strong>Time control:</strong> plate for required thickness (from deposition rate).",
-        process_s4:"<strong>Filtration:</strong> run <em>continuous</em> filtration for smoothness.",
-        process_s5:"<strong>Bath rest:</strong> cool down after production to extend bath life.",
+      process_h: "Plating steps / bath operation",
+      process_prep_h: "Surface preparation",
+      process_prep_p1: "Surface prep is the most critical step to ensure the part is clean and ready to receive the coating.",
+      process_prep_s1: "Degrease & rinse: Remove oils, dust, and soils from the workpiece, then thoroughly rinse with clean water.",
+      process_prep_s2: "Activate by substrate: Prepare the metal surface according to its type. For aluminum, use the Zincate Process first because the stable oxide film hinders adhesion; zincate removes the oxide and replaces it with a thin zinc layer to improve subsequent plating.",
+      process_start_h: "Start plating",
+      process_start_s1: "Immerse at the target temperature: Enter the bath only when the solution is at the specified temperature; temperature control is essential for deposit quality.",
+      process_start_s2: "Vertical agitation or light filtered air: Agitation promotes uniform deposition—either gentle vertical work movement or light filtered air to circulate solution around the part for full ion access.",
+      process_time_h: "Time control",
+      process_time_s1: "Plate for the required thickness: The dwell time depends on target thickness and can be estimated from the bath’s plating rate.",
+      process_maint_h: "Maintenance",
+      process_maint_s1: "Continuous filtration: Keep filtration running during production to remove particulates and contaminants for a smooth, defect-free finish.",
+      process_maint_s2: "Bath rest: After production, reduce solution temperature to extend bath life and maintain stability.",
+ 
 
-        repl_h:"Replenishment",
-        repl_s1:"<strong>Maintain Ni metal ≥ 5.3 g/L</strong>; recommend <strong>A : C = 1 : 1</strong>.",
-        repl_s2:"Example: add <strong>A 100 mL + C 100 mL</strong> per <strong>10 dm²</strong> per <strong>15 µm/h</strong>.",
-        repl_s3:"Single addition ≤ <strong>5%</strong> of initial Ni.",
-        repl_s4:"<strong>Total C</strong> ≤ <strong>1.5×</strong> of A.",
-        repl_s5:"<strong>Reducer (NI-508 C):</strong> keep <strong>86–109 mL/L</strong>; drop of <strong>1 mL/L</strong> → add <strong>≈ 0.62 mL/L</strong> of NI-508 C.",
+      repl_h: "Replenishment",
 
-        ph_h:"pH & filtration control",
-        ph_s1:"<strong>Target pH:</strong> 4.6–4.8 (ideal 4.7–4.8).",
-        ph_s2:"<strong>Raise pH:</strong> NH<sub>4</sub>OH 50% in small increments.",
-        ph_s3:"<strong>Lower pH:</strong> H<sub>2</sub>SO<sub>4</sub> 10% slowly.",
-        ph_s4:"<strong>During production:</strong> continuous 15 µm filtration.",
-        ph_s5:"<strong>Before next day:</strong> cool bath → filter at 3 µm.",
-        ph_s6:"<strong>Weekly filter cleaning:</strong> HNO<sub>3</sub> 50% → rinse → DI + small NH<sub>3</sub>.",
+      repl_ni_h: "Ni metal control",
+      repl_ni_keep: "Maintain Ni metal: keep solution nickel at <strong>≥ 5.3 g/L</strong> to ensure effective plating.",
+      repl_ratio: "Addition ratio: add components <strong>A : C = 1 : 1</strong> to keep the bath balanced.",
+      repl_example: "Example addition: for <strong>10 dm²</strong> at <strong>15 µm/h</strong>, add <strong>A 100 mL + C 100 mL</strong>.",
 
-        equip_h:"Recommended equipment",
-        equip_s1:"<strong>PE/PP/plastic-lined</strong> tanks resistant to chemicals and heat.",
-        equip_s2:"Chemical-resistant heaters with stable temperature control.",
-        equip_s3:"Pumps/filters with <strong>plastic wetted parts</strong>.",
+      repl_caution_h: "Chemical additions & cautions",
+      repl_once: "Single addition: limit each charge to <strong>≤ 5%</strong> of the initial Ni content to avoid abrupt bath shifts.",
+      repl_totalC: "Total ratio: <strong>Total C ≤ 1.5× A</strong> (cumulative C must not exceed 1.5× cumulative A).",
 
-        safety_h:"Safety & wastewater handling",
-        safety_s1:"High operating temperature—beware of burns.",
-        safety_s2:"Contains acid and Ni salts—avoid skin/eye contact.",
-        safety_s3:"Eye splash: rinse with running water for <strong>15 minutes</strong> and seek medical attention.",
-        safety_s4:"<strong>Wastewater:</strong> adjust pH 6–8 and precipitate metals per regulation before treatment.",
-        safety_s5:"<em>* Wear PPE: gloves, safety glasses, and mask throughout the process.</em>"
+      repl_reducer_h: "Reducer (NI-508 C) control",
+      repl_reducer_range: "Target range: maintain at <strong>86–109 mL/L</strong>.",
+      repl_reducer_adjust: "Adjustment: if it drops by <strong>1 mL/L</strong>, add <strong>≈ 0.62 mL/L</strong> of NI-508 C to return to range.",
+ 
+
+      ph_h: "pH & filtration control",
+      ph_ctl_h: "pH control",
+      ph_target: "<strong>Target pH:</strong> Keep the plating bath at <strong>4.6–4.8</strong>, ideally <strong>4.7–4.8</strong>. Tight pH control maintains process efficiency and the best deposit quality.",
+      ph_increase: "<strong>Increasing pH:</strong> If pH is too low, add <strong>ammonium hydroxide (NH<sub>4</sub>OH) 50%</strong> in small increments to safely raise pH.",
+      ph_decrease: "<strong>Decreasing pH:</strong> If pH is too high, add <strong>sulfuric acid (H<sub>2</sub>SO<sub>4</sub>) 10%</strong> slowly to bring pH back into range.",
+
+      ph_filter_h: "Filtration system maintenance",
+      ph_filter_op: "<strong>During operation:</strong> Run continuous filtration at <strong>15 µm</strong> to remove particulates that could cause roughness or defects.",
+      ph_filter_next: "<strong>Before the next day:</strong> Let the bath cool, then filter at <strong>3 µm</strong> to remove finer contaminants and extend bath life.",
+      ph_filter_clean: "<strong>Weekly system cleaning:</strong> Soak in <strong>nitric acid (HNO<sub>3</sub>) 50%</strong> to dissolve nickel residues, rinse with water, then DI water, and finish with a small amount of <strong>NH<sub>3</sub></strong> to neutralize/condition.",
+
+      equip_h: "Recommended equipment",
+      equip_tank_h: "Plating tanks",
+      equip_tank_p:
+        "Tanks used in plating must withstand aggressive chemicals and elevated temperatures. Preferred materials are <strong>PE (Polyethylene)</strong>, <strong>PP (Polypropylene)</strong>, or vessels <strong>plastic-lined</strong> with specialty polymers. These materials resist acidic/alkaline solutions, extend tank service life, and prevent contamination of the plating process.",
+      equip_heater_h: "Heaters & temperature control",
+      equip_heater_p:
+        "The <em>heater</em> raises and maintains bath temperature. For plating service, choose heaters made from chemical- and heat-resistant materials such as <strong>special alloys</strong> or <strong>quartz</strong>. A <strong>stable temperature controller</strong> is critical, since correct temperature is a primary driver of coating quality and process efficiency.",
+      equip_pump_h: "Pumps & filtration",
+      equip_pump_p:
+        "The pump and <em>filtration system</em> recirculate and clean the bath to remove particulates that cause roughness and defects. Specify equipment with <strong>plastic wetted parts</strong>—all liquid-contact components in <strong>PP</strong> or <strong>PVDF</strong>—to resist corrosion and avoid leaching contaminants into the solution.",
+
+      safety_h: "Safety & wastewater management",
+      safety_heat_h: "Heat hazards",
+      safety_heat_p:
+        "Beware of scalding: plating baths operate at elevated temperatures. Take great care to avoid splashes and direct contact with skin.",
+      safety_chem_h: "Chemical hazards",
+      safety_chem_p1:
+        "Avoid contact: plating solutions contain acids and nickel salts (Ni), which are hazardous. Prevent any skin or eye exposure.",
+      safety_chem_p2:
+        "If chemicals splash into the eyes, flush with clean running water continuously for at least <strong>15 minutes</strong> and seek medical attention immediately.",
+      safety_waste_h: "Wastewater management",
+      safety_waste_p:
+        "Treat before discharge: plating effluent contains heavy metals (nickel) and is often acidic. Before sending to the central treatment system, adjust pH to 6–8 and precipitate metals per regulations to prevent environmental impact.",
+      safety_ppe_h: "Personal protective equipment (PPE)",
+      safety_ppe_p:
+        "Always wear PPE throughout the process—gloves, safety glasses, and an appropriate mask/respirator—to reduce exposure to chemicals and heat hazards."
+ 
       }
     };
 

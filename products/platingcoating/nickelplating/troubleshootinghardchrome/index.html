@@ -212,16 +212,42 @@
 
     <article>
 
-      <!-- Intro -->
-      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
-        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวม & ความแตกต่างหลัก</h2>
-        <div class="content">
-          <p data-i18n-key="intro_p1">
-            ทั้งโครเมียมตกแต่งและฮาร์ดโครมเป็นการชุบด้วยไฟฟ้าที่ใช้โครมิกแอซิดเป็นหลัก แต่ <strong>เป้าหมาย</strong> และ <strong>ความหนาชั้นเคลือบ</strong> ต่างกันชัดเจน:
-            โครเมียมตกแต่งเน้นความสวยงาม/เงาสูง ชั้นบางมาก (โดยทั่วไป&nbsp;0.005–0.05&nbsp;µm) ส่วนฮาร์ดโครมเน้นสมบัติเชิงวิศวกรรม ความแข็งสูง และความหนาเริ่มตั้งแต่&nbsp;≈20&nbsp;µm จนถึงหลายร้อย&nbsp;µm
-          </p>
-        </div>
-      </section>
+<!-- Intro (NEW) -->
+<section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+  <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวม & ความแตกต่างหลัก</h2>
+  <div class="content">
+    <p data-i18n-key="intro_p1">
+      ทั้งโครเมียมตกแต่ง (Decorative Chrome) และฮาร์ดโครม (Hard Chrome) คือการชุบด้วยไฟฟ้าที่ใช้กรดโครมิกเป็นสารละลายหลัก แต่ทั้งสองกระบวนการมีความแตกต่างกันอย่างชัดเจนในด้านเป้าหมายและความหนาของชั้นเคลือบ
+    </p>
+
+    <h3 data-i18n-key="intro_dec_h">โครเมียมตกแต่ง (Decorative Chrome)</h3>
+    <ul>
+      <li data-i18n-key="intro_dec_goal" data-i18n-html="true">
+        เป้าหมาย: เน้นความสวยงามเป็นหลักเพื่อให้ได้ผิวที่เงางามและทนทานต่อการหมอง เช่น อะไหล่รถยนต์หรือเครื่องใช้ในบ้าน
+      </li>
+      <li data-i18n-key="intro_dec_thickness" data-i18n-html="true">
+        ความหนา: ชั้นเคลือบจะบางมาก โดยทั่วไปอยู่ระหว่าง 0.005–0.05 µm
+      </li>
+      <li data-i18n-key="intro_dec_props">
+        คุณสมบัติ: ให้ความเงางามสูงและป้องกันการกัดกร่อนได้ดีในระดับหนึ่ง แต่ไม่ทนทานต่อการเสียดสีหรือการสึกหรอมากนัก
+      </li>
+    </ul>
+
+    <h3 data-i18n-key="intro_hard_h">ฮาร์ดโครม (Hard Chrome)</h3>
+    <ul>
+      <li data-i18n-key="intro_hard_goal" data-i18n-html="true">
+        เป้าหมาย: เน้นสมบัติทางวิศวกรรมเป็นหลัก โดยเฉพาะความแข็งและความทนทานต่อการสึกหรอ เช่น ชิ้นส่วนเครื่องจักรหรือกระบอกไฮดรอลิก
+      </li>
+      <li data-i18n-key="intro_hard_thickness" data-i18n-html="true">
+        ความหนา: ชั้นเคลือบหนามาก เริ่มต้นตั้งแต่ประมาณ 20 µm ไปจนถึงหลายร้อยไมโครเมตร ขึ้นอยู่กับการใช้งาน
+      </li>
+      <li data-i18n-key="intro_hard_props">
+        คุณสมบัติ: ความแข็งสูงมากและทนทานต่อการเสียดสี/การกัดกร่อน เหมาะกับชิ้นส่วนที่รับแรงเสียดทานสูง
+      </li>
+    </ul>
+  </div>
+</section>
+
 
       <!-- TOC (sticky above Features) -->
       <nav id="toc" class="reveal" aria-label="สารบัญ">
@@ -440,8 +466,8 @@
         <h2 id="safety-h" class="section" data-i18n-key="safety_h">ความปลอดภัย</h2>
         <div class="content">
           <ul>
-            <li data-i18n-key="safety_1"><strong>ควรมีระบบดูดควัน</strong> ตลอดการเดินบ่อ</li>
-            <li data-i18n-key="safety_2"><strong>สวม PPE</strong> (ถุงมือ/แว่น/หน้ากาก) และปฏิบัติตามมาตรการความปลอดภัยสารเคมีอย่างเคร่งครัด</li>
+            <li data-i18n-key="safety_1">ควรมีระบบดูดควัน ตลอดการเดินบ่อ</li>
+            <li data-i18n-key="safety_2">สวม PPE (ถุงมือ/แว่น/หน้ากาก) และปฏิบัติตามมาตรการความปลอดภัยสารเคมีอย่างเคร่งครัด</li>
           </ul>
         </div>
       </section>
@@ -516,8 +542,25 @@
         toc_dosage:"ตัวอย่างการเติม", toc_equipment:"อุปกรณ์แนะนำ",
         toc_maint:"การควบคุมบ่อ", toc_safety:"ความปลอดภัย",
 
-        intro_h:"ภาพรวม & ความแตกต่างหลัก",
-        intro_p1:"ทั้งโครเมียมตกแต่งและฮาร์ดโครมเป็นการชุบด้วยไฟฟ้าที่ใช้โครมิกแอซิดเป็นหลัก แต่ เป้าหมาย และ ความหนาชั้นเคลือบ ต่างกันชัดเจน: โครเมียมตกแต่งเน้นความสวยงาม/เงาสูง ชั้นบางมาก (โดยทั่วไป 0.005–0.05 µm) ส่วนฮาร์ดโครมเน้นสมบัติเชิงวิศวกรรม ความแข็งสูง และความหนาเริ่มตั้งแต่ ≈20 µm จนถึงหลายร้อย µm",
+      intro_h: "ภาพรวม & ความแตกต่างหลัก",
+      intro_p1:
+        "ทั้งโครเมียมตกแต่ง (Decorative Chrome) และฮาร์ดโครม (Hard Chrome) คือการชุบด้วยไฟฟ้าที่ใช้กรดโครมิกเป็นสารละลายหลัก แต่ทั้งสองกระบวนการมีความแตกต่างกันอย่างชัดเจนในด้านเป้าหมายและความหนาของชั้นเคลือบ",
+
+      intro_dec_h: "โครเมียมตกแต่ง (Decorative Chrome)",
+      intro_dec_goal:
+        "เป้าหมาย: เน้นความสวยงามเป็นหลักเพื่อให้ได้ผิวที่เงางามและทนทานต่อการหมอง เช่น อะไหล่รถยนต์หรือเครื่องใช้ในบ้าน",
+      intro_dec_thickness:
+        "ความหนา: ชั้นเคลือบจะบางมาก โดยทั่วไปอยู่ระหว่าง 0.005–0.05 µm",
+      intro_dec_props:
+        "คุณสมบัติ: ให้ความเงางามสูงและป้องกันการกัดกร่อนได้ดีในระดับหนึ่ง แต่ไม่ทนทานต่อการเสียดสีหรือการสึกหรอมากนัก",
+
+      intro_hard_h: "ฮาร์ดโครม (Hard Chrome)",
+      intro_hard_goal:
+        "เป้าหมาย: เน้นสมบัติทางวิศวกรรมเป็นหลัก โดยเฉพาะความแข็งและความทนทานต่อการสึกหรอ เช่น ชิ้นส่วนเครื่องจักรหรือกระบอกไฮดรอลิก",
+      intro_hard_thickness:
+        "ความหนา: ชั้นเคลือบหนามาก เริ่มต้นตั้งแต่ประมาณ 20 µm ไปจนถึงหลายร้อยไมโครเมตร ขึ้นอยู่กับการใช้งาน",
+      intro_hard_props:
+        "คุณสมบัติ: ความแข็งสูงมากและทนทานต่อการเสียดสี/การกัดกร่อน เหมาะกับชิ้นส่วนที่รับแรงเสียดทานสูง",
 
         features_h:"จุดเด่น (Chrome/Hard Chrome)",
         features_lead:"สรุป 6 ไฮไลต์สำคัญ ครอบคลุมงานตกแต่งถึงงานวิศวกรรม",
@@ -593,8 +636,25 @@
         toc_dosage:"Dosage example", toc_equipment:"Recommended equipment",
         toc_maint:"Bath control", toc_safety:"Safety",
 
-        intro_h:"Overview & key differences",
-        intro_p1:"Decorative and hard chrome both use chromic acid electroplating, but differ in target and thickness: decorative focuses on aesthetics with ultra-thin deposits (typically 0.005–0.05 µm), while hard chrome targets engineering properties with thickness starting ≈20 µm up to several hundred µm.",
+              intro_h: "Overview & key differences",
+      intro_p1:
+        "Both Decorative Chrome and Hard Chrome are electrolytic processes using chromic acid as the primary bath, but they differ clearly in objectives and coating thickness.",
+
+      intro_dec_h: "Decorative Chrome",
+      intro_dec_goal:
+        "Objective: Aesthetic finish—high gloss and tarnish resistance for items like automotive trim or home appliances.",
+      intro_dec_thickness:
+        "Thickness: Very thin deposit, typically 0.005–0.05 µm.",
+      intro_dec_props:
+        "Properties: Excellent brightness and fair corrosion protection, but limited wear/abrasion resistance.",
+
+      intro_hard_h: "Hard Chrome",
+      intro_hard_goal:
+        "Objective: Engineering performance—high hardness and wear resistance for machine parts and hydraulic rods.",
+      intro_hard_thickness:
+        "Thickness: Much thicker deposit, starting around 20 µm and up to several hundred micrometres depending on service requirements.",
+      intro_hard_props:
+        "Properties: Very high hardness with excellent wear and corrosion resistance—suited to high-friction components.",
 
         features_h:"Highlights (Chrome/Hard Chrome)",
         features_lead:"Six practical highlights—from aesthetics to engineering performance.",
