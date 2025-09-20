@@ -414,16 +414,88 @@
         </div>
       </section>
 
-      <!-- Troubleshooting -->
-      <section id="anode" class="reveal section-block" aria-labelledby="anode-h">
-        <h2 id="anode-h" class="section" data-i18n-key="anode_h">การแก้ปัญหาเบื้องต้น</h2>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="tb_yellow"><strong>ติดเหลือง:</strong> เพิ่มเวลา/ความเข้มข้น หรือปรับ pH ให้เหมาะสม</li>
-            <li data-i18n-key="tb_dull"><strong>ผิวด้าน/รุ้ง:</strong> เพิ่มเวลาในการจุ่ม หรือลดความเข้มข้นเล็กน้อย + ตรวจขั้นล้าง/น้ำร้อน</li>
-          </ul>
-        </div>
-      </section>
+<!-- Troubleshooting -->
+<section id="anode" class="reveal section-block" aria-labelledby="anode-h">
+  <h2 id="anode-h" class="section" data-i18n-key="anode_h">การแก้ปัญหาเบื้องต้น</h2>
+
+  <div class="content">
+    <ul class="troubles-list" role="list">
+      <li class="trouble-item">
+        <details>
+          <summary>
+            <span data-i18n-key="tb_i1_h">ปัญหา: สีซีดจางหรือไม่ดำสนิท</span>
+          </summary>
+          <div class="trouble-body">
+            <p class="desc" data-i18n-key="tb_i1_desc">มักเกิดจากฟิล์มโครเมตบางเกินไป</p>
+
+            <h4 class="sub" data-i18n-key="tb_i1_cause_h">สาเหตุ</h4>
+            <ul class="causes">
+              <li data-i18n-key="tb_i1_cause_1">ความเข้มข้นน้ำยาต่ำ ทำให้สารออกฤทธิ์ไม่พอ</li>
+              <li data-i18n-key="tb_i1_cause_2">เวลาแช่สั้นเกินไป ปฏิกิริยาไม่สมบูรณ์</li>
+              <li data-i18n-key="tb_i1_cause_3">อุณหภูมิน้ำยาต่ำ ทำให้ปฏิกิริยาช้า</li>
+            </ul>
+
+            <h4 class="sub" data-i18n-key="tb_i1_fix_h">แนวทางแก้ไข</h4>
+            <ul class="fixes">
+              <li data-i18n-key="tb_i1_fix_1">เพิ่มความเข้มข้นด้วย Black Chromate 3 ตามคู่มือ</li>
+              <li data-i18n-key="tb_i1_fix_2">เพิ่มเวลาแช่และสังเกตการเปลี่ยนสี</li>
+              <li data-i18n-key="tb_i1_fix_3">ปรับอุณหภูมิให้อยู่ช่วงที่เหมาะสม เช่น อุณหภูมิห้อง</li>
+            </ul>
+          </div>
+        </details>
+      </li>
+
+      <li class="trouble-item">
+        <details>
+          <summary>
+            <span data-i18n-key="tb_i2_h">ปัญหา: ผิวเป็นรุ้งหรือมีคราบเหลือง</span>
+          </summary>
+          <div class="trouble-body">
+            <p class="desc" data-i18n-key="tb_i2_desc">มักบ่งชี้การปนเปื้อนหรือสัดส่วนสารเคมีไม่สมดุล</p>
+
+            <h4 class="sub" data-i18n-key="tb_i2_cause_h">สาเหตุ</h4>
+            <ul class="causes">
+              <li data-i18n-key="tb_i2_cause_1">น้ำยาปนเปื้อนจากขั้นตอนก่อนหน้า</li>
+              <li data-i18n-key="tb_i2_cause_2">สัดส่วนสารในบ่อไม่ถูกต้อง</li>
+              <li data-i18n-key="tb_i2_cause_3">การล้างไม่สะอาด มีด่างหรือคลอไรด์ตกค้าง</li>
+            </ul>
+
+            <h4 class="sub" data-i18n-key="tb_i2_fix_h">แนวทางแก้ไข</h4>
+            <ul class="fixes">
+              <li data-i18n-key="tb_i2_fix_1">ตรวจและกำจัดการปนเปื้อน ถ่ายบ่อและผสมใหม่เมื่อจำเป็น</li>
+              <li data-i18n-key="tb_i2_fix_2">วิเคราะห์ความเข้มข้นแล้วปรับให้ตรงสเปก</li>
+              <li data-i18n-key="tb_i2_fix_3">เพิ่มขั้นล้างและใช้น้ำไหลเวียนลด carry-over</li>
+            </ul>
+          </div>
+        </details>
+      </li>
+
+      <li class="trouble-item">
+        <details>
+          <summary>
+            <span data-i18n-key="tb_i3_h">ปัญหา: เกิดรอยไหม้หรือรอยด่างดำ</span>
+          </summary>
+          <div class="trouble-body">
+            <p class="desc" data-i18n-key="tb_i3_desc">บ่งชี้ว่าปฏิกิริยาเร็วหรือรุนแรงเกินไป</p>
+
+            <h4 class="sub" data-i18n-key="tb_i3_cause_h">สาเหตุ</h4>
+            <ul class="causes">
+              <li data-i18n-key="tb_i3_cause_1">อุณหภูมิน้ำยาสูงเกินไป</li>
+              <li data-i18n-key="tb_i3_cause_2">เวลาแช่นานเกินไป ฟิล์มหนาเกินและอาจแตก</li>
+            </ul>
+
+            <h4 class="sub" data-i18n-key="tb_i3_fix_h">แนวทางแก้ไข</h4>
+            <ul class="fixes">
+              <li data-i18n-key="tb_i3_fix_1">ควบคุมอุณหภูมิให้อยู่ตามกำหนด</li>
+              <li data-i18n-key="tb_i3_fix_2">ลดเวลาแช่ ปรับทีละน้อยจนได้ผลลัพธ์ที่ต้องการ</li>
+              <li data-i18n-key="tb_i3_fix_3">ทดสอบกับชิ้นงานซับซ้อนด้วยช่วงเวลาสั้นก่อนผลิตจริง</li>
+            </ul>
+          </div>
+        </details>
+      </li>
+    </ul>
+  </div>
+</section>
 
     </article>
   </main>
@@ -551,9 +623,39 @@
         control_rinse:"ล้างระหว่างขั้นตอนให้ดี ลดการปนเปื้อน",
         control_hotdi:"ระยะจุ่มน้ำร้อนช่วยให้ฟิล์มเสถียรและลดโทนรุ้ง",
 
-        anode_h:"การแก้ปัญหาเบื้องต้น",
-        tb_yellow:"ติดเหลือง: เพิ่มเวลา/ความเข้มข้น หรือปรับ pH ให้เหมาะสม",
-        tb_dull:"ผิวด้าน/รุ้ง: เพิ่มเวลาในการจุ่ม หรือลดความเข้มข้นเล็กน้อย + ตรวจขั้นล้าง/น้ำร้อน",
+      anode_h: "การแก้ปัญหาเบื้องต้น",
+
+      tb_i1_h: "ปัญหา: สีซีดจางหรือไม่ดำสนิท",
+      tb_i1_desc: "มักเกิดจากฟิล์มโครเมตบางเกินไป",
+      tb_i1_cause_h: "สาเหตุ",
+      tb_i1_cause_1: "ความเข้มข้นน้ำยาต่ำ ทำให้สารออกฤทธิ์ไม่พอ",
+      tb_i1_cause_2: "เวลาแช่สั้นเกินไป ปฏิกิริยาไม่สมบูรณ์",
+      tb_i1_cause_3: "อุณหภูมิน้ำยาต่ำ ทำให้ปฏิกิริยาช้า",
+      tb_i1_fix_h: "แนวทางแก้ไข",
+      tb_i1_fix_1: "เพิ่มความเข้มข้นด้วย Black Chromate 3 ตามคู่มือ",
+      tb_i1_fix_2: "เพิ่มเวลาแช่และสังเกตการเปลี่ยนสี",
+      tb_i1_fix_3: "ปรับอุณหภูมิให้อยู่ช่วงที่เหมาะสม เช่น อุณหภูมิห้อง",
+
+      tb_i2_h: "ปัญหา: ผิวเป็นรุ้งหรือมีคราบเหลือง",
+      tb_i2_desc: "มักบ่งชี้การปนเปื้อนหรือสัดส่วนสารเคมีไม่สมดุล",
+      tb_i2_cause_h: "สาเหตุ",
+      tb_i2_cause_1: "น้ำยาปนเปื้อนจากขั้นตอนก่อนหน้า",
+      tb_i2_cause_2: "สัดส่วนสารในบ่อไม่ถูกต้อง",
+      tb_i2_cause_3: "การล้างไม่สะอาด มีด่างหรือคลอไรด์ตกค้าง",
+      tb_i2_fix_h: "แนวทางแก้ไข",
+      tb_i2_fix_1: "ตรวจและกำจัดการปนเปื้อน ถ่ายบ่อและผสมใหม่เมื่อจำเป็น",
+      tb_i2_fix_2: "วิเคราะห์ความเข้มข้นแล้วปรับให้ตรงสเปก",
+      tb_i2_fix_3: "เพิ่มขั้นล้างและใช้น้ำไหลเวียนลด carry-over",
+
+      tb_i3_h: "ปัญหา: เกิดรอยไหม้หรือรอยด่างดำ",
+      tb_i3_desc: "บ่งชี้ว่าปฏิกิริยาเร็วหรือรุนแรงเกินไป",
+      tb_i3_cause_h: "สาเหตุ",
+      tb_i3_cause_1: "อุณหภูมิน้ำยาสูงเกินไป",
+      tb_i3_cause_2: "เวลาแช่นานเกินไป ฟิล์มหนาเกินและอาจแตก",
+      tb_i3_fix_h: "แนวทางแก้ไข",
+      tb_i3_fix_1: "ควบคุมอุณหภูมิให้อยู่ตามกำหนด",
+      tb_i3_fix_2: "ลดเวลาแช่ ปรับทีละน้อยจนได้ผลลัพธ์ที่ต้องการ",
+      tb_i3_fix_3: "ทดสอบกับชิ้นงานซับซ้อนด้วยช่วงเวลาสั้นก่อนผลิตจริง",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
@@ -629,9 +731,39 @@
         control_rinse:"Ensure good inter-stage rinsing to limit drag-in.",
         control_hotdi:"Hot-water dip stabilizes the film and reduces rainbow hue.",
 
-        anode_h:"Troubleshooting",
-        tb_yellow:"Yellowish tone: increase time/concentration or adjust pH.",
-        tb_dull:"Dull/rainbow: increase time or slightly lower concentration; verify rinsing/hot dip.",
+      anode_h: "Troubleshooting",
+
+      tb_i1_h: "Issue: Faded or not fully black",
+      tb_i1_desc: "Commonly caused by an under-developed chromate film.",
+      tb_i1_cause_h: "Causes",
+      tb_i1_cause_1: "Bath concentration too low; insufficient active species.",
+      tb_i1_cause_2: "Immersion time too short; reaction incomplete.",
+      tb_i1_cause_3: "Bath temperature too low; slow reaction rate.",
+      tb_i1_fix_h: "Fixes",
+      tb_i1_fix_1: "Increase concentration with Black Chromate 3 per manual.",
+      tb_i1_fix_2: "Extend immersion time and observe color build.",
+      tb_i1_fix_3: "Set temperature to an appropriate range, e.g., room temperature.",
+
+      tb_i2_h: "Issue: Rainbow tint or yellow stain",
+      tb_i2_desc: "Indicates contamination or chemical imbalance.",
+      tb_i2_cause_h: "Causes",
+      tb_i2_cause_1: "Carry-over contamination from previous stages.",
+      tb_i2_cause_2: "Incorrect bath composition ratios.",
+      tb_i2_cause_3: "Insufficient rinsing; alkaline or chloride residues.",
+      tb_i2_fix_h: "Fixes",
+      tb_i2_fix_1: "Eliminate contamination; dump and remake if necessary.",
+      tb_i2_fix_2: "Analyze concentration and adjust to spec.",
+      tb_i2_fix_3: "Increase rinsing steps and use flowing rinses to cut carry-over.",
+
+      tb_i3_h: "Issue: Burn marks or dark blotches",
+      tb_i3_desc: "Reaction is too fast or too aggressive.",
+      tb_i3_cause_h: "Causes",
+      tb_i3_cause_1: "Bath temperature too high.",
+      tb_i3_cause_2: "Over-immersion leading to overly thick, brittle film.",
+      tb_i3_fix_h: "Fixes",
+      tb_i3_fix_1: "Control temperature within the specified window.",
+      tb_i3_fix_2: "Shorten immersion; tune in small steps.",
+      tb_i3_fix_3: "Pilot on complex parts with short times before full production.",
 
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }

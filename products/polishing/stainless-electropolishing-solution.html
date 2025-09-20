@@ -352,36 +352,77 @@
         </div>
       </section>
 
-      <!-- Process steps -->
-      <section id="steps" class="reveal section-block" aria-labelledby="steps-h">
-        <h2 id="steps-h" class="section" data-i18n-key="process_h">ขั้นตอนการทำงาน</h2>
-        <div class="content">
-          <ul>
-            <li>ต้มล้างด้วย Soak Clean B1 60–75 กรัม/ลิตร</li>
-            <li data-i18n-key="proc_2">ล้างน้ำสะอาด</li>
-            <li>ล้างน้ำสะอาด (ระบบไหล)</li>
-            <li>ลงบ่อ EP 8511 ตามพารามิเตอร์ด้านบน</li>
-            <li data-i18n-key="proc_3">ล้างน้ำสะอาด</li>
-            <li>จุ่มกรดดินประสิว 10–25% v/v (ช่วยล้างคราบขาว/หมอง)</li>
-            <li data-i18n-key="proc_7">ล้างน้ำสะอาด</li>
-            <li>ล้างน้ำร้อนสะอาด แล้วเป่าหรืออบให้แห้ง</li>
-          </ul>
-          <p><strong>⚠️</strong> ใช้ HNO₃ ในที่อากาศถ่ายเทดี พร้อมป้องกันไอกรดอย่างเคร่งครัด</p>
-        </div>
-      </section>
+<!-- Process steps -->
+<section id="steps" class="reveal section-block" aria-labelledby="steps-h">
+  <h2 id="steps-h" class="section" data-i18n-key="process_h">ขั้นตอนการทำงาน</h2>
 
-      <!-- Safety & Notes -->
-      <section id="safety" class="reveal section-block" aria-labelledby="safety-h">
-        <h2 id="safety-h" class="section" data-i18n-key="safety_h">ความปลอดภัย & หมายเหตุ</h2>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="safe_ppe">สวม PPE: ถุงมือ แว่นตา และหน้ากากกันไอกรด/ละออง</li>
-            <li data-i18n-key="safe_waste">จัดการน้ำทิ้ง/ตะกอนตามกฎหมายท้องถิ่น อ้างอิง SDS/TDS</li>
-            <li data-i18n-key="note_2">ชิ้นงานสแตนเลสที่เงามาก/มีคราบน้ำมันอาจลดคุณภาพผิว ควรทำความสะอาดให้หมด</li>
-            <li data-i18n-key="note_3">คุมกระแสให้เสถียร ลดรอยไหม้/ขนแมว และจัดวางชิ้นงานให้ไฟเข้าถึงทุกจุด</li>
-          </ul>
-        </div>
-      </section>
+  <div class="content">
+    <!-- 1) Pre-Treatment -->
+    <h3 class="subsection" data-i18n-key="steps_pre_h">1) การเตรียมชิ้นงาน (Pre-Treatment)</h3>
+    <ol class="step-list">
+      <li data-i18n-key="steps_pre_soak">
+        ต้มล้างด้วย Soak Clean B1 ความเข้มข้น 60–75 กรัม/ลิตร เพื่อล้างคราบไขมัน น้ำมัน และสิ่งสกปรก
+      </li>
+      <li data-i18n-key="steps_pre_rinse1">
+        ล้างน้ำสะอาด
+      </li>
+      <li data-i18n-key="steps_pre_rinse_flow">
+        ล้างน้ำสะอาดแบบระบบไหล เพื่อลดสารตกค้างให้เหลือน้อยที่สุด
+      </li>
+    </ol>
+
+    <!-- 2) EP 8511 Plating -->
+    <h3 class="subsection" data-i18n-key="steps_plate_h">2) กระบวนการชุบด้วย EP 8511</h3>
+    <ol class="step-list">
+      <li data-i18n-key="steps_plate_dip">
+        ลงบ่อ EP 8511 ตามพารามิเตอร์ที่กำหนด เพื่อให้ได้ผิวเคลือบสม่ำเสมอและคุณภาพสูง
+      </li>
+      <li data-i18n-key="steps_plate_rinse">
+        ล้างน้ำสะอาดทันทีหลังชุบ เพื่อลดคราบน้ำยาเกาะผิว
+      </li>
+    </ol>
+
+    <!-- 3) Post-Treatment -->
+    <h3 class="subsection" data-i18n-key="steps_post_h">3) การตกแต่งขั้นสุดท้าย (Post-Treatment)</h3>
+    <ol class="step-list">
+      <li data-i18n-key="steps_post_hno3">
+        จุ่มกรดดินประสิว HNO₃ 10–25% v/v ช่วยล้างคราบขาวหรือคราบหมองจากผิว
+      </li>
+      <li data-i18n-key="steps_post_rinse2">
+        ล้างน้ำสะอาด
+      </li>
+      <li data-i18n-key="steps_post_hotrinse_dry">
+        ล้างน้ำร้อนสะอาด แล้วเป่าหรืออบให้แห้งสนิทก่อนนำไปใช้งาน
+      </li>
+    </ol>
+
+    <p class="callout warning" data-i18n-key="steps_note_hno3">
+      ใช้ HNO₃ ในพื้นที่อากาศถ่ายเทดี และป้องกันไอกรดอย่างเคร่งครัด
+    </p>
+  </div>
+</section>
+
+<!-- Safety & Notes -->
+<section id="safety" class="reveal section-block" aria-labelledby="safety-h">
+  <h2 id="safety-h" class="section" data-i18n-key="safety_h">ความปลอดภัยและหมายเหตุ</h2>
+
+  <div class="content">
+    <ul class="bullet-list">
+      <li data-i18n-key="safe_ppe">
+        สวมอุปกรณ์ป้องกันส่วนบุคคล ได้แก่ ถุงมือ แว่นตานิรภัย และหน้ากากกันไอกรดหรือฝอยละออง ตลอดเวลาที่ปฏิบัติงาน
+      </li>
+      <li data-i18n-key="safe_waste">
+        จัดการน้ำทิ้งและตะกอนตามกฎหมายท้องถิ่น อ้างอิงเอกสาร SDS และ TDS ของสารเคมีที่ใช้
+      </li>
+      <li data-i18n-key="note_stainless_clean">
+        ชิ้นงานสแตนเลสที่เงามากหรือมีคราบน้ำมันจะลดคุณภาพผิวหลังชุบ ควรทำความสะอาดให้หมดจดก่อนเริ่มงาน
+      </li>
+      <li data-i18n-key="note_current_layout">
+        ควบคุมกระแสให้เสถียร ลดรอยไหม้หรือขนแมว และจัดวางชิ้นงานให้กระแสไฟเข้าถึงทุกจุดอย่างสม่ำเสมอ
+      </li>
+    </ul>
+  </div>
+</section>
 
     </article>
   </main>
@@ -471,16 +512,28 @@
         mix_h:"ตัวอย่างการผสม",
         mix_p1:"ต้องการผสม 100 ลิตร: เติม EP 8511 = 100 ลิตร (ใช้ 100% ไม่ต้องผสมน้ำ) ตรวจการรั่ว/ซีลยางให้พร้อมก่อนเดินงาน",
 
-        process_h:"ขั้นตอนการทำงาน",
-        proc_2:"ล้างน้ำสะอาด",
-        proc_3:"ล้างน้ำสะอาด",
-        proc_7:"ล้างน้ำสะอาด",
+     process_h: "ขั้นตอนการทำงาน",
+      steps_pre_h: "1) การเตรียมชิ้นงาน (Pre-Treatment)",
+      steps_pre_soak: "ต้มล้างด้วย Soak Clean B1 ความเข้มข้น 60–75 กรัม/ลิตร เพื่อล้างคราบไขมัน น้ำมัน และสิ่งสกปรก",
+      steps_pre_rinse1: "ล้างน้ำสะอาด",
+      steps_pre_rinse_flow: "ล้างน้ำสะอาดแบบระบบไหล เพื่อลดสารตกค้างให้เหลือน้อยที่สุด",
 
-        safety_h:"ความปลอดภัย & หมายเหตุ",
-        safe_ppe:"สวม PPE: ถุงมือ แว่นตา และหน้ากากกันไอกรด/ละออง",
-        safe_waste:"จัดการน้ำทิ้ง/ตะกอนตามกฎหมายท้องถิ่น อ้างอิง SDS/TDS",
-        note_2:"ชิ้นงานสแตนเลสที่เงามาก/มีคราบน้ำมันอาจลดคุณภาพผิว ควรทำความสะอาดให้หมด",
-        note_3:"คุมกระแสให้เสถียร ลดรอยไหม้/ขนแมว และจัดวางชิ้นงานให้ไฟเข้าถึงทุกจุด",
+      steps_plate_h: "2) กระบวนการชุบด้วย EP 8511",
+      steps_plate_dip: "ลงบ่อ EP 8511 ตามพารามิเตอร์ที่กำหนด เพื่อให้ได้ผิวเคลือบสม่ำเสมอและคุณภาพสูง",
+      steps_plate_rinse: "ล้างน้ำสะอาดทันทีหลังชุบ เพื่อลดคราบน้ำยาเกาะผิว",
+
+      steps_post_h: "3) การตกแต่งขั้นสุดท้าย (Post-Treatment)",
+      steps_post_hno3: "จุ่มกรดดินประสิว HNO₃ 10–25% v/v ช่วยล้างคราบขาวหรือคราบหมองจากผิว",
+      steps_post_rinse2: "ล้างน้ำสะอาด",
+      steps_post_hotrinse_dry: "ล้างน้ำร้อนสะอาด แล้วเป่าหรืออบให้แห้งสนิทก่อนนำไปใช้งาน",
+
+      steps_note_hno3: "ใช้ HNO₃ ในพื้นที่อากาศถ่ายเทดี และป้องกันไอกรดอย่างเคร่งครัด",
+
+      safety_h: "ความปลอดภัยและหมายเหตุ",
+      safe_ppe: "สวมอุปกรณ์ป้องกันส่วนบุคคล ได้แก่ ถุงมือ แว่นตานิรภัย และหน้ากากกันไอกรดหรือฝอยละออง ตลอดเวลาที่ปฏิบัติงาน",
+      safe_waste: "จัดการน้ำทิ้งและตะกอนตามกฎหมายท้องถิ่น อ้างอิงเอกสาร SDS และ TDS ของสารเคมีที่ใช้",
+      note_stainless_clean: "ชิ้นงานสแตนเลสที่เงามากหรือมีคราบน้ำมันจะลดคุณภาพผิวหลังชุบ ควรทำความสะอาดให้หมดจดก่อนเริ่มงาน",
+      note_current_layout: "ควบคุมกระแสให้เสถียร ลดรอยไหม้หรือขนแมว และจัดวางชิ้นงานให้กระแสไฟเข้าถึงทุกจุดอย่างสม่ำเสมอ",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
@@ -518,16 +571,28 @@
         mix_h:"Mixing Example",
         mix_p1:"To make 100 L: charge EP 8511 at 100% (no water). Check leaks and seals before production.",
 
-        process_h:"Process Steps",
-        proc_2:"Rinse well",
-        proc_3:"Rinse well",
-        proc_7:"Rinse well",
+      process_h: "Process Steps",
+      steps_pre_h: "1) Pre-Treatment",
+      steps_pre_soak: "Boil-clean with Soak Clean B1 at 60–75 g/L to remove oil, grease, and soils.",
+      steps_pre_rinse1: "Rinse with clean water.",
+      steps_pre_rinse_flow: "Rinse in running water to minimize residues.",
 
-        safety_h:"Safety & Notes",
-        safe_ppe:"Wear PPE: gloves, goggles, and acid-mist respirator as needed",
-        safe_waste:"Treat effluent/sludge per local laws; follow SDS/TDS",
-        note_2:"Highly polished/oily surfaces may impair results—clean thoroughly first",
-        note_3:"Stabilize current to reduce burning/striations; arrange parts for even current distribution",
+      steps_plate_h: "2) EP 8511 Plating",
+      steps_plate_dip: "Plate in EP 8511 under specified parameters for uniform, high-quality deposit.",
+      steps_plate_rinse: "Rinse immediately after plating to remove drag-out.",
+
+      steps_post_h: "3) Post-Treatment",
+      steps_post_hno3: "Dip in nitric acid HNO₃ 10–25% v/v to remove whitish film or dull stains.",
+      steps_post_rinse2: "Rinse with clean water.",
+      steps_post_hotrinse_dry: "Hot rinse, then air-blow or oven dry thoroughly before use.",
+
+      steps_note_hno3: "Use HNO₃ only in well-ventilated areas with strict acid-fume protection.",
+
+      safety_h: "Safety and Notes",
+      safe_ppe: "Wear appropriate PPE at all times: chemical gloves, safety goggles, and acid-fume respirator.",
+      safe_waste: "Handle wastewater and sludge per local regulations. Refer to relevant SDS and TDS.",
+      note_stainless_clean: "Highly polished stainless or oily parts can degrade finish quality. Clean thoroughly before processing.",
+      note_current_layout: "Keep current stable to avoid burning or micro-scratches, and fixture parts so current reaches all areas evenly.",
 
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
