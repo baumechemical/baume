@@ -284,129 +284,153 @@
         </div>
       </section>
 
-      <!-- Agents -->
-      <section id="agents" class="reveal section-block" aria-labelledby="agents-h">
-        <h2 id="agents-h" class="section" data-i18n-key="agents_h">สารเชิงซ้อนทดแทนไซยาไนด์</h2>
-        <div class="content">
-          <p data-i18n-key="agents_p1">สูตร Non-Cyanide ใช้สารเชิงซ้อนที่ปลอดภัยกว่าในการละลาย Cu/Zn เช่น:</p>
-          <ul>
-            <li data-i18n-key="agents_li1"><strong>ไพโรฟอสเฟต (Pyrophosphate):</strong> นิยมและเสถียร ให้ผิวเนียน</li>
-            <li data-i18n-key="agents_li2"><strong>ซอร์บิทอล (Sorbitol):</strong> ปรับสมดุลโลหะและช่วยคุมโทน</li>
-            <li data-i18n-key="agents_li3"><strong>ไกลซีน (Glycine):</strong> กรดอะมิโน สร้างคอมเพล็กซ์ Cu/Zn</li>
-            <li data-i18n-key="agents_li4"><strong>ซิเตรต (Citrate):</strong> ช่วยเสถียรภาพและการนำไฟฟ้า</li>
-            <li data-i18n-key="agents_li5"><strong>กลูโคเฮปโทเนต (Glucoheptonate):</strong> คุณภาพผิวดีและคุมสีกว้าง</li>
-          </ul>
-        </div>
-      </section>
+<!-- Non-Cyanide Brass — Agents, Specs, Process, Safety -->
+<section id="agents" class="reveal section-block" aria-labelledby="agents-h">
+  <h2 id="agents-h" class="section" data-i18n-key="agents_h">สารเชิงซ้อนทดแทนไซยาไนด์</h2>
+  <div class="content">
+    <p data-i18n-key="agents_p1">น้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ใช้สารเชิงซ้อนที่ปลอดภัยกว่าในการละลายทองแดงและสังกะสี เพื่อควบคุมการตกเคลือบให้เสถียรและคุมโทนสีได้สม่ำเสมอ</p>
+    <ul>
+      <li data-i18n-key="agents_li1">ไพโรฟอสเฟต: นิยมและเสถียร ช่วยให้ผิวเนียนสม่ำเสมอและลดตำหนิ</li>
+      <li data-i18n-key="agents_li2">ซอร์บิทอล: ทำหน้าที่ช่วยรักษาสมดุลโลหะและคุมโทนสีให้คงที่</li>
+      <li data-i18n-key="agents_li3">ไกลซีน: กรดอะมิโนที่สร้างเชิงซ้อนกับทองแดงและสังกะสี ส่งผลให้การชุบเดินเรียบ</li>
+      <li data-i18n-key="agents_li4">ซิเตรต: ช่วยเพิ่มเสถียรภาพของบ่อและการนำไฟฟ้า</li>
+      <li data-i18n-key="agents_li5">กลูโคเฮปโทเนต: ให้คุณภาพผิวดีและช่วงการคุมสีที่กว้าง</li>
+    </ul>
+  </div>
+</section>
 
-      <!-- Specs & Operating -->
-      <section id="specs" class="reveal section-block" aria-labelledby="specs-h">
-        <h2 id="specs-h" class="section" data-i18n-key="specs_h">สเปก & สภาวะการทำงาน</h2>
+<section id="specs" class="reveal section-block" aria-labelledby="specs-h">
+  <h2 id="specs-h" class="section" data-i18n-key="specs_h">สเปกและสภาวะการทำงาน</h2>
+  <p class="lead" data-i18n-key="specs_lead">ตัวอย่างพารามิเตอร์ที่แนะนำสำหรับน้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์</p>
 
-        <p class="lead" data-i18n-key="specs_lead">ตัวอย่างสเปกสำหรับน้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ (สำเร็จรูป)</p>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n-key="specs_th_param">พารามิเตอร์</th>
+          <th data-i18n-key="specs_th_rec">ค่าที่เหมาะสม</th>
+          <th data-i18n-key="specs_th_range">ช่วง</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-i18n-key="specs_temp">อุณหภูมิ</td>
+          <td data-i18n-key="specs_temp_rec">ประมาณ 55 °C</td>
+          <td data-i18n-key="specs_temp_rng">50–60 °C</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_ph">pH</td>
+          <td data-i18n-key="specs_ph_rec">ประมาณ 12</td>
+          <td data-i18n-key="specs_ph_rng">10–13</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_be">ความหนาแน่นด้วยองศาเบาเม่</td>
+          <td data-i18n-key="specs_be_rec">แร็คประมาณ 17 / บาร์เรลประมาณ 15</td>
+          <td data-i18n-key="specs_be_rng">14–20</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_voltage">แรงดันไฟฟ้า</td>
+          <td data-i18n-key="specs_voltage_rec">แร็คประมาณ 5 V / บาร์เรลประมาณ 7 V</td>
+          <td data-i18n-key="specs_voltage_rng">3–8 V</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_cd">ความหนาแน่นกระแส</td>
+          <td data-i18n-key="specs_cd_rec">ประมาณ 0.5 A/dm²</td>
+          <td data-i18n-key="specs_cd_rng">0.1–1.0 A/dm²</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_anode">ขั้วแอโนด</td>
+          <td data-i18n-key="specs_anode_rec">สแตนเลส 316 อัตราส่วนแอโนดต่อแคโทดประมาณ 4:1</td>
+          <td data-i18n-key="specs_anode_rng">—</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="specs_filter">การกรอง</td>
+          <td data-i18n-key="specs_filter_rec">กรองต่อเนื่องประมาณ 10 µm</td>
+          <td data-i18n-key="specs_filter_rng">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <div class="table">
-          <table>
-            <thead>
-              <tr>
-                <th data-i18n-key="specs_th_param">พารามิเตอร์</th>
-                <th data-i18n-key="specs_th_rec">ค่าที่เหมาะสม</th>
-                <th data-i18n-key="specs_th_range">ช่วง</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td data-i18n-key="specs_temp">อุณหภูมิ</td><td data-i18n-key="specs_temp_rec">~55 °C</td><td data-i18n-key="specs_temp_rng">50–60 °C</td></tr>
-              <tr><td data-i18n-key="specs_ph">pH</td><td data-i18n-key="specs_ph_rec">~12</td><td data-i18n-key="specs_ph_rng">10–13</td></tr>
-              <tr><td data-i18n-key="specs_be">ความหนาแน่น (°Bé)</td><td data-i18n-key="specs_be_rec">แร็ค ~17 / บาร์เรล ~15</td><td data-i18n-key="specs_be_rng">14–20</td></tr>
-              <tr><td data-i18n-key="specs_voltage">แรงดันไฟฟ้า</td><td data-i18n-key="specs_voltage_rec">แร็ค ~5 V / บาร์เรล ~7 V</td><td data-i18n-key="specs_voltage_rng">3–8 V</td></tr>
-              <tr><td data-i18n-key="specs_cd">ความหนาแน่นกระแส</td><td data-i18n-key="specs_cd_rec">~0.5 A/dm²</td><td data-i18n-key="specs_cd_rng">0.1–1.0 A/dm²</td></tr>
-              <tr><td data-i18n-key="specs_anode">ขั้วแอโนด</td><td data-i18n-key="specs_anode_rec">สแตนเลส 316; A:C ≈ 4:1</td><td data-i18n-key="specs_anode_rng">—</td></tr>
-              <tr><td data-i18n-key="specs_filter">การกรอง</td><td data-i18n-key="specs_filter_rec">ต่อเนื่อง ~10 µm</td><td data-i18n-key="specs_filter_rng">—</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+<section id="process" class="reveal section-block" aria-labelledby="process-h">
+  <h2 id="process-h" class="section" data-i18n-key="process_h">การผสม ลำดับงาน และบำรุงรักษา</h2>
 
-      <!-- Process / Maintenance (รวมไว้ในหัวข้อเดียวตาม TOC = 5 หัวข้อ) -->
-      <section id="process" class="reveal section-block" aria-labelledby="process-h">
-        <h2 id="process-h" class="section" data-i18n-key="process_h">การผสม / ลำดับงาน / บำรุงรักษา</h2>
+  <p class="lead" data-i18n-key="process_make_lead">การเตรียมบ่อครั้งแรก</p>
+  <div class="content">
+    <ul>
+      <li data-i18n-key="process_make_1">ทำความสะอาดบ่อ เติมสารละลายชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ชนิดสำเร็จรูปตามปริมาตร</li>
+      <li data-i18n-key="process_make_2">ตั้งอุณหภูมิทำงานประมาณ 55 °C และเริ่มระบบกรองต่อเนื่องที่ความละเอียด 10 ไมโครเมตร</li>
+      <li data-i18n-key="process_make_3">ปรับค่า pH ให้ได้ประมาณ 12 โดยใช้โพแทสเซียมไฮดรอกไซด์อย่างระมัดระวัง</li>
+      <li data-i18n-key="process_make_4">ตรวจสอบแรงดันและกระแสให้เหมาะกับโหมดแร็คหรือบาร์เรลก่อนเริ่มผลิต</li>
+    </ul>
+  </div>
 
-        <p class="lead" data-i18n-key="process_make_lead">การเตรียมบ่อ (ตั้งต้น)</p>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="process_make_1">ทำความสะอาดบ่อ เติมสารละลายชุบทองเหลืองเลียนแบบ (สำเร็จรูป) ตามปริมาตร</li>
-            <li data-i18n-key="process_make_2">ตั้งอุณหภูมิเป้าหมาย (~55 °C) และเริ่มกรองต่อเนื่อง 10 µm</li>
-            <li data-i18n-key="process_make_3">ปรับ pH → ~12 (ถ้าต่ำ ให้ปรับด้วย KOH อย่างระมัดระวัง)</li>
-            <li data-i18n-key="process_make_4">ตรวจแรงดัน/กระแสให้เหมาะกับโหมด (แร็ค/บาร์เรล) ก่อนเริ่มผลิต</li>
-          </ul>
-        </div>
+  <p class="lead" data-i18n-key="process_flow_lead">ลำดับกระบวนการแนะนำ</p>
+  <div class="content">
+    <ul>
+      <li data-i18n-key="process_flow_1">ต้มล้างไขมัน แล้วล้างน้ำ</li>
+      <li data-i18n-key="process_flow_2">ทำความสะอาดด้วยการแยกไฟฟ้า แล้วล้างน้ำ</li>
+      <li data-i18n-key="process_flow_3">จุ่มกรดอ่อนสำหรับเหล็กและทองเหลือง แล้วล้างน้ำ</li>
+      <li data-i18n-key="process_flow_4">ชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ตามพารามิเตอร์ที่แนะนำ</li>
+      <li data-i18n-key="process_flow_5">ล้างน้ำ จุ่มน้ำยากันหมองทองแดงและทองเหลืองถ้ามี แล้วเป่าลมหรืออบแห้ง</li>
+    </ul>
+  </div>
 
-        <p class="lead" data-i18n-key="process_flow_lead">ลำดับกระบวนการแนะนำ</p>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="process_flow_1">ต้มล้างไขมัน → ล้าง</li>
-            <li data-i18n-key="process_flow_2">แยกไฟฟ้า → ล้าง</li>
-            <li data-i18n-key="process_flow_3">จุ่มกรดอ่อน (เหล็ก/ทองเหลือง) → ล้าง</li>
-            <li data-i18n-key="process_flow_4">ชุบทองเหลืองเลียนแบบ (Non-Cyanide) ที่ค่าที่แนะนำ</li>
-            <li data-i18n-key="process_flow_5">ล้าง → จุ่มกันหมองทองแดง–ทองเหลือง (ถ้ามี) → เป่า/อบแห้ง</li>
-          </ul>
-        </div>
+  <p class="lead" data-i18n-key="process_maint_lead">การบำรุงรักษาและการควบคุม</p>
+  <div class="content">
+    <ul>
+      <li data-i18n-key="process_maint_1">ควบคุม pH ให้อยู่ในช่วง 10–13 โดยมีค่าเป้าหมาย 12 และปรับด้วยโพแทสเซียมไฮดรอกไซด์เมื่อค่าลดลง</li>
+      <li data-i18n-key="process_maint_2">ควบคุมองศาเบาเม่ แร็คประมาณ 17 และบาร์เรลประมาณ 15 อยู่ในช่วง 14–20</li>
+      <li data-i18n-key="process_maint_3">รักษาอุณหภูมิ 50–60 °C และเปิดระบบกรองต่อเนื่อง</li>
+      <li data-i18n-key="process_maint_4">หากโทนสีหรือความเงาเปลี่ยน ให้ใช้ตัวปรับสีหรือปรับความเงาตามคู่มือผลิตภัณฑ์</li>
+      <li data-i18n-key="process_maint_5">เมื่อมีการปนเปื้อนอินทรีย์ ให้บำบัดด้วยผงคาร์บอน ทำดัมมี่ชุบ แล้วกรองให้น้ำยาใสก่อนเดินงานต่อ</li>
+    </ul>
+  </div>
 
-        <p class="lead" data-i18n-key="process_maint_lead">บำรุงรักษา & การควบคุม</p>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="process_maint_1">คุม pH 10–13 (เป้า ~12) — ปรับด้วย KOH เมื่อ pH ตก</li>
-            <li data-i18n-key="process_maint_2">คุม °Bé: แร็ค ~17 / บาร์เรล ~15 (ช่วง 14–20)</li>
-            <li data-i18n-key="process_maint_3">คุมอุณหภูมิ 50–60 °C; รักษาการกรองต่อเนื่อง</li>
-            <li data-i18n-key="process_maint_4">โทน/ความเงาเปลี่ยน → ใช้ “ตัวปรับสี/เงา” ตามคู่มือผลิตภัณฑ์</li>
-            <li data-i18n-key="process_maint_5">ปนเปื้อนอินทรีย์ → บำบัดผงคาร์บอน + ดัมมี่ แล้วกรองใส</li>
-          </ul>
-        </div>
+  <h2 class="section" data-i18n-key="process_trouble_lead">แนวทางแก้ปัญหาเบื้องต้น</h2>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n-key="trouble_th_issue">ปัญหา</th>
+          <th data-i18n-key="trouble_th_fix">วิธีแก้ไข</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-i18n-key="trouble_1_i">สีทองจางหรือช่วงโทนแคบ</td>
+          <td data-i18n-key="trouble_1_f">เติมเกลือสำหรับปรับความเข้ม และเพิ่มตัวปรับสีตามคู่มือ</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="trouble_2_i">ประสิทธิภาพกระแสต่ำ</td>
+          <td data-i18n-key="trouble_2_f">ปรับ pH ด้วยโพแทสเซียมไฮดรอกไซด์ เติมเกลือปรับความเข้ม และบำบัดคาร์บอนหากมีสิ่งปนเปื้อน</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="trouble_3_i">โทนออกแดงจัดหรือมีพื้นที่ไม่ติด</td>
+          <td data-i18n-key="trouble_3_f">เพิ่มตัวปรับสี รักษาความเข้มของเกลือปรับให้คงที่ ทำดัมมี่ชุบและทดสอบด้วยฮัลเซลล์</td>
+        </tr>
+        <tr>
+          <td data-i18n-key="trouble_4_i">โทนออกเขียว</td>
+          <td data-i18n-key="trouble_4_f">เพิ่มตัวปรับสี และควบคุมเกลือปรับให้อยู่ในช่วงที่แนะนำ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-        <p class="lead" data-i18n-key="process_trouble_lead">แนวทางแก้ปัญหาเบื้องต้น</p>
-        <div class="table">
-          <table>
-            <thead>
-              <tr>
-                <th data-i18n-key="trouble_th_issue">ปัญหา</th>
-                <th data-i18n-key="trouble_th_fix">วิธีแก้ไข</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-i18n-key="trouble_1_i">สีทองจาง/โทนแคบ</td>
-                <td data-i18n-key="trouble_1_f">เติมสารทำให้เข้ม/Make-up salt; เพิ่มตัวปรับสี</td>
-              </tr>
-              <tr>
-                <td data-i18n-key="trouble_2_i">ประสิทธิภาพกระแสต่ำ</td>
-                <td data-i18n-key="trouble_2_f">ปรับ pH ด้วย KOH; เติม Make-up salt; คาร์บอนทรีตเมนต์ถ้าปนเปื้อน</td>
-              </tr>
-              <tr>
-                <td data-i18n-key="trouble_3_i">ออกโทนแดงจัด/ข้ามจุด</td>
-                <td data-i18n-key="trouble_3_f">เพิ่มตัวปรับสี; รักษา Make-up salt; ดัมมี่ + ทดสอบ Hull Cell</td>
-              </tr>
-              <tr>
-                <td data-i18n-key="trouble_4_i">ออกโทนเขียว</td>
-                <td data-i18n-key="trouble_4_f">เพิ่มตัวปรับสี; คุม Make-up salt อยู่ช่วง</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Safety -->
-      <section id="safety" class="reveal section-block" aria-labelledby="safety-h">
-        <h2 id="safety-h" class="section" data-i18n-key="safety_h">ความปลอดภัย & สิ่งแวดล้อม</h2>
-        <div class="content">
-          <ul>
-            <li data-i18n-key="safety_1">สารละลายเป็นด่างจัด (pH สูง) — สวมถุงมือ/แว่น/หน้ากากที่เหมาะสม</li>
-            <li data-i18n-key="safety_2">ระบายอากาศ/ดูดไอให้เพียงพอ โดยเฉพาะช่วงทำงาน 50–60 °C</li>
-            <li data-i18n-key="safety_3">ของเสียมีโลหะ — บำบัด/ทิ้งตามกฎหมาย คุม pH ให้เหมาะสม</li>
-            <li data-i18n-key="safety_4">บำบัดคาร์บอน/สารเคมีอื่นให้ทำอย่างควบคุม และกรองให้ใสก่อนผลิตต่อ</li>
-            <li data-i18n-key="safety_5"><em>หากกระเด็นเข้าตา</em> ล้างน้ำต่อเนื่อง ≥15 นาที และพบแพทย์ทันที</li>
-          </ul>
-        </div>
-      </section>
+<section id="safety" class="reveal section-block" aria-labelledby="safety-h">
+  <h2 id="safety-h" class="section" data-i18n-key="safety_h">ความปลอดภัยและสิ่งแวดล้อม</h2>
+  <div class="content">
+    <ul>
+      <li data-i18n-key="safety_1">น้ำยาชุบมีค่า pH สูง ควรสวมถุงมือ แว่นตานิรภัย และหน้ากากที่เหมาะสมตลอดเวลา</li>
+      <li data-i18n-key="safety_2">จัดให้มีการระบายอากาศหรือดูดไอที่เพียงพอ โดยเฉพาะเมื่อทำงานที่อุณหภูมิสูง</li>
+      <li data-i18n-key="safety_3">ของเสียมีโลหะหนัก ต้องบำบัดและกำจัดตามกฎหมาย ควบคุม pH ให้เหมาะสมในทุกขั้นตอน</li>
+      <li data-i18n-key="safety_4">การบำบัดด้วยผงคาร์บอนและสารเคมีอื่นให้ทำอย่างควบคุม และกรองให้น้ำยาใสก่อนนำกลับมาใช้</li>
+      <li data-i18n-key="safety_5">หากสารกระเด็นเข้าตา ให้ล้างด้วยน้ำสะอาดอย่างต่อเนื่องอย่างน้อย 15 นาที แล้วรีบไปพบแพทย์</li>
+    </ul>
+  </div>
+</section>
 
     </article>
   </main>
@@ -498,80 +522,80 @@
         feat_6_t:"ผิวสวยพร้อมตกแต่ง",
         feat_6_d:"ผิวละเอียด เงา/กึ่งเงา รองรับกระบวนการกันหมองหลังชุบ",
 
-        agents_h:"สารเชิงซ้อนทดแทนไซยาไนด์",
-        agents_p1:"สูตร Non-Cyanide ใช้สารเชิงซ้อนที่ปลอดภัยกว่าในการละลาย Cu/Zn เช่น:",
-        agents_li1:"ไพโรฟอสเฟต (Pyrophosphate): นิยมและเสถียร ให้ผิวเนียน",
-        agents_li2:"ซอร์บิทอล (Sorbitol): ปรับสมดุลโลหะและช่วยคุมโทน",
-        agents_li3:"ไกลซีน (Glycine): กรดอะมิโน สร้างคอมเพล็กซ์ Cu/Zn",
-        agents_li4:"ซิเตรต (Citrate): ช่วยเสถียรภาพและการนำไฟฟ้า",
-        agents_li5:"กลูโคเฮปโทเนต (Glucoheptonate): คุณภาพผิวดีและคุมสีกว้าง",
+      agents_h: "สารเชิงซ้อนทดแทนไซยาไนด์",
+      agents_p1: "น้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ใช้สารเชิงซ้อนที่ปลอดภัยกว่าในการละลายทองแดงและสังกะสี เพื่อควบคุมการตกเคลือบให้เสถียรและคุมโทนสีได้สม่ำเสมอ",
+      agents_li1: "ไพโรฟอสเฟต: นิยมและเสถียร ช่วยให้ผิวเนียนสม่ำเสมอและลดตำหนิ",
+      agents_li2: "ซอร์บิทอล: ทำหน้าที่ช่วยรักษาสมดุลโลหะและคุมโทนสีให้คงที่",
+      agents_li3: "ไกลซีน: กรดอะมิโนที่สร้างเชิงซ้อนกับทองแดงและสังกะสี ส่งผลให้การชุบเดินเรียบ",
+      agents_li4: "ซิเตรต: ช่วยเพิ่มเสถียรภาพของบ่อและการนำไฟฟ้า",
+      agents_li5: "กลูโคเฮปโทเนต: ให้คุณภาพผิวดีและช่วงการคุมสีที่กว้าง",
 
-        specs_h:"สเปก & สภาวะการทำงาน",
-        specs_lead:"ตัวอย่างสเปกสำหรับน้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ (สำเร็จรูป)",
-        specs_th_param:"พารามิเตอร์",
-        specs_th_rec:"ค่าที่เหมาะสม",
-        specs_th_range:"ช่วง",
-        specs_temp:"อุณหภูมิ",
-        specs_temp_rec:"~55 °C",
-        specs_temp_rng:"50–60 °C",
-        specs_ph:"pH",
-        specs_ph_rec:"~12",
-        specs_ph_rng:"10–13",
-        specs_be:"ความหนาแน่น (°Bé)",
-        specs_be_rec:"แร็ค ~17 / บาร์เรล ~15",
-        specs_be_rng:"14–20",
-        specs_voltage:"แรงดันไฟฟ้า",
-        specs_voltage_rec:"แร็ค ~5 V / บาร์เรล ~7 V",
-        specs_voltage_rng:"3–8 V",
-        specs_cd:"ความหนาแน่นกระแส",
-        specs_cd_rec:"~0.5 A/dm²",
-        specs_cd_rng:"0.1–1.0 A/dm²",
-        specs_anode:"ขั้วแอโนด",
-        specs_anode_rec:"สแตนเลส 316; A:C ≈ 4:1",
-        specs_anode_rng:"—",
-        specs_filter:"การกรอง",
-        specs_filter_rec:"ต่อเนื่อง ~10 µm",
-        specs_filter_rng:"—",
+      specs_h: "สเปกและสภาวะการทำงาน",
+      specs_lead: "ตัวอย่างพารามิเตอร์ที่แนะนำสำหรับน้ำยาชุบทองเหลืองแบบไม่ใช้ไซยาไนด์",
+      specs_th_param: "พารามิเตอร์",
+      specs_th_rec: "ค่าที่เหมาะสม",
+      specs_th_range: "ช่วง",
+      specs_temp: "อุณหภูมิ",
+      specs_temp_rec: "ประมาณ 55 °C",
+      specs_temp_rng: "50–60 °C",
+      specs_ph: "pH",
+      specs_ph_rec: "ประมาณ 12",
+      specs_ph_rng: "10–13",
+      specs_be: "ความหนาแน่นด้วยองศาเบาเม่",
+      specs_be_rec: "แร็คประมาณ 17 / บาร์เรลประมาณ 15",
+      specs_be_rng: "14–20",
+      specs_voltage: "แรงดันไฟฟ้า",
+      specs_voltage_rec: "แร็คประมาณ 5 V / บาร์เรลประมาณ 7 V",
+      specs_voltage_rng: "3–8 V",
+      specs_cd: "ความหนาแน่นกระแส",
+      specs_cd_rec: "ประมาณ 0.5 A/dm²",
+      specs_cd_rng: "0.1–1.0 A/dm²",
+      specs_anode: "ขั้วแอโนด",
+      specs_anode_rec: "สแตนเลส 316 อัตราส่วนแอโนดต่อแคโทดประมาณ 4:1",
+      specs_anode_rng: "—",
+      specs_filter: "การกรอง",
+      specs_filter_rec: "กรองต่อเนื่องประมาณ 10 µm",
+      specs_filter_rng: "—",
 
-        process_h:"การผสม / ลำดับงาน / บำรุงรักษา",
-        process_make_lead:"การเตรียมบ่อ (ตั้งต้น)",
-        process_make_1:"ทำความสะอาดบ่อ เติมสารละลายชุบทองเหลืองเลียนแบบ (สำเร็จรูป) ตามปริมาตร",
-        process_make_2:"ตั้งอุณหภูมิเป้าหมาย (~55 °C) และเริ่มกรองต่อเนื่อง 10 µm",
-        process_make_3:"ปรับ pH → ~12 (ถ้าต่ำ ให้ปรับด้วย KOH อย่างระมัดระวัง)",
-        process_make_4:"ตรวจแรงดัน/กระแสให้เหมาะกับโหมด (แร็ค/บาร์เรล) ก่อนเริ่มผลิต",
+      process_h: "การผสม ลำดับงาน และบำรุงรักษา",
+      process_make_lead: "การเตรียมบ่อครั้งแรก",
+      process_make_1: "ทำความสะอาดบ่อ เติมสารละลายชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ชนิดสำเร็จรูปตามปริมาตร",
+      process_make_2: "ตั้งอุณหภูมิทำงานประมาณ 55 °C และเริ่มระบบกรองต่อเนื่องที่ความละเอียด 10 ไมโครเมตร",
+      process_make_3: "ปรับค่า pH ให้ได้ประมาณ 12 โดยใช้โพแทสเซียมไฮดรอกไซด์อย่างระมัดระวัง",
+      process_make_4: "ตรวจสอบแรงดันและกระแสให้เหมาะกับโหมดแร็คหรือบาร์เรลก่อนเริ่มผลิต",
 
-        process_flow_lead:"ลำดับกระบวนการแนะนำ",
-        process_flow_1:"ต้มล้างไขมัน → ล้าง",
-        process_flow_2:"แยกไฟฟ้า → ล้าง",
-        process_flow_3:"จุ่มกรดอ่อน (เหล็ก/ทองเหลือง) → ล้าง",
-        process_flow_4:"ชุบทองเหลืองเลียนแบบ (Non-Cyanide) ที่ค่าที่แนะนำ",
-        process_flow_5:"ล้าง → จุ่มกันหมองทองแดง–ทองเหลือง (ถ้ามี) → เป่า/อบแห้ง",
+      process_flow_lead: "ลำดับกระบวนการแนะนำ",
+      process_flow_1: "ต้มล้างไขมัน แล้วล้างน้ำ",
+      process_flow_2: "ทำความสะอาดด้วยการแยกไฟฟ้า แล้วล้างน้ำ",
+      process_flow_3: "จุ่มกรดอ่อนสำหรับเหล็กและทองเหลือง แล้วล้างน้ำ",
+      process_flow_4: "ชุบทองเหลืองแบบไม่ใช้ไซยาไนด์ตามพารามิเตอร์ที่แนะนำ",
+      process_flow_5: "ล้างน้ำ จุ่มน้ำยากันหมองทองแดงและทองเหลืองถ้ามี แล้วเป่าลมหรืออบแห้ง",
 
-        process_maint_lead:"บำรุงรักษา & การควบคุม",
-        process_maint_1:"คุม pH 10–13 (เป้า ~12) — ปรับด้วย KOH เมื่อ pH ตก",
-        process_maint_2:"คุม °Bé: แร็ค ~17 / บาร์เรล ~15 (ช่วง 14–20)",
-        process_maint_3:"คุมอุณหภูมิ 50–60 °C; รักษาการกรองต่อเนื่อง",
-        process_maint_4:"โทน/ความเงาเปลี่ยน → ใช้ “ตัวปรับสี/เงา” ตามคู่มือผลิตภัณฑ์",
-        process_maint_5:"ปนเปื้อนอินทรีย์ → บำบัดผงคาร์บอน + ดัมมี่ แล้วกรองใส",
+      process_maint_lead: "การบำรุงรักษาและการควบคุม",
+      process_maint_1: "ควบคุม pH ให้อยู่ในช่วง 10–13 โดยมีค่าเป้าหมาย 12 และปรับด้วยโพแทสเซียมไฮดรอกไซด์เมื่อค่าลดลง",
+      process_maint_2: "ควบคุมองศาเบาเม่ แร็คประมาณ 17 และบาร์เรลประมาณ 15 อยู่ในช่วง 14–20",
+      process_maint_3: "รักษาอุณหภูมิ 50–60 °C และเปิดระบบกรองต่อเนื่อง",
+      process_maint_4: "หากโทนสีหรือความเงาเปลี่ยน ให้ใช้ตัวปรับสีหรือปรับความเงาตามคู่มือผลิตภัณฑ์",
+      process_maint_5: "เมื่อมีการปนเปื้อนอินทรีย์ ให้บำบัดด้วยผงคาร์บอน ทำดัมมี่ชุบ แล้วกรองให้น้ำยาใสก่อนเดินงานต่อ",
 
-        process_trouble_lead:"แนวทางแก้ปัญหาเบื้องต้น",
-        trouble_th_issue:"ปัญหา",
-        trouble_th_fix:"วิธีแก้ไข",
-        trouble_1_i:"สีทองจาง/โทนแคบ",
-        trouble_1_f:"เติมสารทำให้เข้ม/Make-up salt; เพิ่มตัวปรับสี",
-        trouble_2_i:"ประสิทธิภาพกระแสต่ำ",
-        trouble_2_f:"ปรับ pH ด้วย KOH; เติม Make-up salt; คาร์บอนทรีตเมนต์ถ้าปนเปื้อน",
-        trouble_3_i:"ออกโทนแดงจัด/ข้ามจุด",
-        trouble_3_f:"เพิ่มตัวปรับสี; รักษา Make-up salt; ดัมมี่ + ทดสอบ Hull Cell",
-        trouble_4_i:"ออกโทนเขียว",
-        trouble_4_f:"เพิ่มตัวปรับสี; คุม Make-up salt อยู่ช่วง",
+      process_trouble_lead: "แนวทางแก้ปัญหาเบื้องต้น",
+      trouble_th_issue: "ปัญหา",
+      trouble_th_fix: "วิธีแก้ไข",
+      trouble_1_i: "สีทองจางหรือช่วงโทนแคบ",
+      trouble_1_f: "เติมเกลือสำหรับปรับความเข้ม และเพิ่มตัวปรับสีตามคู่มือ",
+      trouble_2_i: "ประสิทธิภาพกระแสต่ำ",
+      trouble_2_f: "ปรับ pH ด้วยโพแทสเซียมไฮดรอกไซด์ เติมเกลือปรับความเข้ม และบำบัดคาร์บอนหากมีสิ่งปนเปื้อน",
+      trouble_3_i: "โทนออกแดงจัดหรือมีพื้นที่ไม่ติด",
+      trouble_3_f: "เพิ่มตัวปรับสี รักษาความเข้มของเกลือปรับให้คงที่ ทำดัมมี่ชุบและทดสอบด้วยฮัลเซลล์",
+      trouble_4_i: "โทนออกเขียว",
+      trouble_4_f: "เพิ่มตัวปรับสี และควบคุมเกลือปรับให้อยู่ในช่วงที่แนะนำ",
 
-        safety_h:"ความปลอดภัย & สิ่งแวดล้อม",
-        safety_1:"สารละลายเป็นด่างจัด (pH สูง) — สวมถุงมือ/แว่น/หน้ากากที่เหมาะสม",
-        safety_2:"ระบายอากาศ/ดูดไอให้เพียงพอ โดยเฉพาะช่วงทำงาน 50–60 °C",
-        safety_3:"ของเสียมีโลหะ — บำบัด/ทิ้งตามกฎหมาย คุม pH ให้เหมาะสม",
-        safety_4:"บำบัดคาร์บอน/สารเคมีอื่นให้ทำอย่างควบคุม และกรองให้ใสก่อนผลิตต่อ",
-        safety_5:"หากกระเด็นเข้าตา ให้ล้างน้ำต่อเนื่อง ≥15 นาที และพบแพทย์ทันที",
+      safety_h: "ความปลอดภัยและสิ่งแวดล้อม",
+      safety_1: "น้ำยาชุบมีค่า pH สูง ควรสวมถุงมือ แว่นตานิรภัย และหน้ากากที่เหมาะสมตลอดเวลา",
+      safety_2: "จัดให้มีการระบายอากาศหรือดูดไอที่เพียงพอ โดยเฉพาะเมื่อทำงานที่อุณหภูมิสูง",
+      safety_3: "ของเสียมีโลหะหนัก ต้องบำบัดและกำจัดตามกฎหมาย ควบคุม pH ให้เหมาะสมในทุกขั้นตอน",
+      safety_4: "การบำบัดด้วยผงคาร์บอนและสารเคมีอื่นให้ทำอย่างควบคุม และกรองให้น้ำยาใสก่อนนำกลับมาใช้",
+      safety_5: "หากสารกระเด็นเข้าตา ให้ล้างด้วยน้ำสะอาดอย่างต่อเนื่องอย่างน้อย 15 นาที แล้วรีบไปพบแพทย์",
 
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
@@ -626,80 +650,80 @@
         feat_6_t:"Finish-ready surface",
         feat_6_d:"Fine, glossy/semi-gloss deposit ready for anti-tarnish post-treatments.",
 
-        agents_h:"Cyanide-free complexers",
-        agents_p1:"Typical complexers used to dissolve Cu/Zn include:",
-        agents_li1:"Pyrophosphate: popular, stable, yields smooth deposits.",
-        agents_li2:"Sorbitol: balances metals and helps tone control.",
-        agents_li3:"Glycine: amino-acid complexer for Cu/Zn.",
-        agents_li4:"Citrate: improves stability and conductivity.",
-        agents_li5:"Glucoheptonate: good surface quality and broad tone control.",
+      agents_h: "Complexing Agents to Replace Cyanide",
+      agents_p1: "Non-cyanide brass baths rely on safer complexing agents to dissolve copper and zinc, stabilize deposition, and maintain a consistent color tone.",
+      agents_li1: "Pyrophosphate: Widely used and stable; promotes smooth, even deposits and reduces defects.",
+      agents_li2: "Sorbitol: Helps balance metal content and stabilizes color tone in the bath.",
+      agents_li3: "Glycine: An amino acid that complexes copper and zinc, supporting steady plating.",
+      agents_li4: "Citrate: Improves bath stability and electrical conductivity.",
+      agents_li5: "Glucoheptonate: Produces high-quality surfaces and allows broader color control.",
 
-        specs_h:"Specs & operating window",
-        specs_lead:"Example specs for a ready-to-use non-cyanide brass solution",
-        specs_th_param:"Parameter",
-        specs_th_rec:"Recommended",
-        specs_th_range:"Range",
-        specs_temp:"Temperature",
-        specs_temp_rec:"~55 °C",
-        specs_temp_rng:"50–60 °C",
-        specs_ph:"pH",
-        specs_ph_rec:"~12",
-        specs_ph_rng:"10–13",
-        specs_be:"Density (°Bé)",
-        specs_be_rec:"Rack ~17 / Barrel ~15",
-        specs_be_rng:"14–20",
-        specs_voltage:"Voltage",
-        specs_voltage_rec:"Rack ~5 V / Barrel ~7 V",
-        specs_voltage_rng:"3–8 V",
-        specs_cd:"Current density",
-        specs_cd_rec:"~0.5 A/dm²",
-        specs_cd_rng:"0.1–1.0 A/dm²",
-        specs_anode:"Anode",
-        specs_anode_rec:"Stainless 316; A:C ≈ 4:1",
-        specs_anode_rng:"—",
-        specs_filter:"Filtration",
-        specs_filter_rec:"Continuous ~10 µm",
-        specs_filter_rng:"—",
+      specs_h: "Specifications and Operating Conditions",
+      specs_lead: "Example operating parameters for a non-cyanide brass plating bath.",
+      specs_th_param: "Parameter",
+      specs_th_rec: "Recommended",
+      specs_th_range: "Range",
+      specs_temp: "Temperature",
+      specs_temp_rec: "About 55 °C",
+      specs_temp_rng: "50–60 °C",
+      specs_ph: "pH",
+      specs_ph_rec: "About 12",
+      specs_ph_rng: "10–13",
+      specs_be: "Baumé density",
+      specs_be_rec: "Rack about 17 / Barrel about 15",
+      specs_be_rng: "14–20",
+      specs_voltage: "Voltage",
+      specs_voltage_rec: "Rack about 5 V / Barrel about 7 V",
+      specs_voltage_rng: "3–8 V",
+      specs_cd: "Current density",
+      specs_cd_rec: "About 0.5 A/dm²",
+      specs_cd_rng: "0.1–1.0 A/dm²",
+      specs_anode: "Anode",
+      specs_anode_rec: "Stainless steel 316, anode to cathode ratio about 4:1",
+      specs_anode_rng: "—",
+      specs_filter: "Filtration",
+      specs_filter_rec: "Continuous filtration about 10 µm",
+      specs_filter_rng: "—",
 
-        process_h:"Make-up / workflow / maintenance",
-        process_make_lead:"Bath make-up (initial)",
-        process_make_1:"Clean tank; charge the ready-to-use non-cyanide brass solution to volume.",
-        process_make_2:"Heat to ~55 °C and start continuous ~10 µm filtration.",
-        process_make_3:"Adjust pH → ~12 (increase cautiously with KOH if low).",
-        process_make_4:"Verify voltage/CD targets for rack/barrel before production.",
+      process_h: "Make-up, Process Sequence, and Maintenance",
+      process_make_lead: "Initial bath make-up",
+      process_make_1: "Clean the tank and charge with the specified volume of non-cyanide brass solution.",
+      process_make_2: "Set the operating temperature to about 55 °C and start continuous filtration at 10 micrometers.",
+      process_make_3: "Adjust pH to around 12 using potassium hydroxide carefully.",
+      process_make_4: "Verify voltage and current for rack or barrel mode before production.",
 
-        process_flow_lead:"Recommended workflow",
-        process_flow_1:"Hot soak clean → Rinse",
-        process_flow_2:"Electroclean → Rinse",
-        process_flow_3:"Mild acid dip (steel/brass) → Rinse",
-        process_flow_4:"Non-cyanide brass plate at recommended settings",
-        process_flow_5:"Rinse → Anti-tarnish (if used) → Blow/bake dry",
+      process_flow_lead: "Recommended process sequence",
+      process_flow_1: "Boiling degrease, then rinse.",
+      process_flow_2: "Electro-clean, then rinse.",
+      process_flow_3: "Mild acid dip for steel and brass, then rinse.",
+      process_flow_4: "Non-cyanide brass plate at the recommended parameters.",
+      process_flow_5: "Rinse, anti-tarnish for copper/brass if applicable, then blow off or dry.",
 
-        process_maint_lead:"Maintenance & control",
-        process_maint_1:"Maintain pH 10–13 (target ~12) — adjust with KOH when it drops.",
-        process_maint_2:"Maintain °Bé: rack ~17 / barrel ~15 (range 14–20).",
-        process_maint_3:"Hold 50–60 °C with continuous filtration.",
-        process_maint_4:"Tone/gloss drift → use approved tone/bright agents per product guide.",
-        process_maint_5:"Organic contamination → carbon treat + dummy then filter clear.",
+      process_maint_lead: "Maintenance and control",
+      process_maint_1: "Maintain pH in the range 10–13 with a target of 12; adjust with potassium hydroxide when it falls.",
+      process_maint_2: "Maintain Baumé: rack about 17 and barrel about 15 within 14–20.",
+      process_maint_3: "Hold temperature at 50–60 °C and keep continuous filtration running.",
+      process_maint_4: "If color tone or gloss shifts, use the supplier’s color or gloss adjusters.",
+      process_maint_5: "For organic contamination, carry out carbon treatment, dummy plate, and filter clear before resuming production.",
 
-        process_trouble_lead:"Quick troubleshooting",
-        trouble_th_issue:"Issue",
-        trouble_th_fix:"Fix",
-        trouble_1_i:"Faded/limited gold tone",
-        trouble_1_f:"Add intensifier/make-up salt; increase tone agent.",
-        trouble_2_i:"Low current efficiency",
-        trouble_2_f:"Raise pH with KOH; add make-up salt; carbon treat if contaminated.",
-        trouble_3_i:"Reddish/spotty tone",
-        trouble_3_f:"Increase tone agent; maintain make-up salt; dummy + Hull-Cell test.",
-        trouble_4_i:"Greenish tone",
-        trouble_4_f:"Increase tone agent; keep make-up salt within spec.",
+      process_trouble_lead: "Basic troubleshooting",
+      trouble_th_issue: "Issue",
+      trouble_th_fix: "Corrective action",
+      trouble_1_i: "Pale gold or narrow color range",
+      trouble_1_f: "Add strength-up salts and increase color adjuster per the guide.",
+      trouble_2_i: "Low current efficiency",
+      trouble_2_f: "Adjust pH with potassium hydroxide, add strength-up salts, and perform carbon treatment if contaminated.",
+      trouble_3_i: "Reddish tone or skip areas",
+      trouble_3_f: "Increase color adjuster, keep strength-up salts in range, dummy plate, and verify with a Hull cell test.",
+      trouble_4_i: "Greenish tone",
+      trouble_4_f: "Increase color adjuster and control strength-up salts within the recommended range.",
 
-        safety_h:"Safety & environment",
-        safety_1:"Strongly alkaline—use gloves/goggles/appropriate respirator.",
-        safety_2:"Provide ventilation/fume extraction, especially at 50–60 °C.",
-        safety_3:"Metal-bearing waste—treat/dispose per regulations; control pH.",
-        safety_4:"Do carbon/chemical treatments under control and filter clear before reuse.",
-        safety_5:"If splashed into eyes, flush ≥15 minutes and seek medical attention.",
+      safety_h: "Safety and Environment",
+      safety_1: "High-alkaline solution: always wear chemical-resistant gloves, safety goggles, and an appropriate respirator.",
+      safety_2: "Provide adequate ventilation or fume extraction, especially at elevated temperatures.",
+      safety_3: "Waste contains heavy metals: treat and dispose of according to regulations, controlling pH throughout.",
+      safety_4: "Carry out carbon and other chemical treatments under control and filter clear before reuse.",
+      safety_5: "If splashed into eyes, flush continuously with clean water for at least 15 minutes and seek medical attention.",
 
         footer_products:"Products",
         footer_contact:"Contact Us",
