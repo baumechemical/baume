@@ -472,40 +472,89 @@
     </p>
   </section>
 
-  <!-- Process -->
-  <section id="process" class="reveal section-block" aria-labelledby="process-h">
-    <h2 id="process-h" class="section" data-i18n-key="th9_process_h">ขั้นตอนการลอก</h2>
-    <div class="content">
-      <ul>
-        <li data-i18n-key="th9_proc_1">เตรียมชิ้นงาน: ล้างไขมัน/ล้างน้ำสะอาด</li>
-        <li data-i18n-key="th9_proc_1b">เตรียมคอนแทคไฟ: ขัดจุดสัมผัสให้โลหะสะอาด เพื่อลดความต้านทาน</li>
-        <li data-i18n-key="th9_proc_2">จัดขั้ว: <strong data-i18n-key="th9_proc_2_em">ชิ้นงานเป็นแอโนด (+)</strong> คู่กับแคโทดสแตนเลส</li>
-        <li data-i18n-key="th9_proc_3">จุ่มลงบ่ออย่างช้า ๆ เพื่อลดฟอง/การกระเด็น</li>
-        <li data-i18n-key="th9_proc_4">ตั้ง <strong>6–10 V</strong> และ <strong>5–25 A/dm²</strong> ไล่กระแสจากต่ำไปสูง ระหว่างทำให้แกว่ง/กวนอ่อน</li>
-        <li data-i18n-key="th9_proc_5">ติดตามสัญญาณสิ้นสุด: ผิว Ni หลุดจนเห็นชั้นฐานสม่ำเสมอ ไม่มีคราบดำ/ผิวด้านเฉพาะจุด</li>
-        <li data-i18n-key="th9_proc_6">ปิดไฟ ยกขึ้น ล้างน้ำสะอาดหลายขั้น</li>
-        <li data-i18n-key="th9_proc_7">เตรียมเข้าสู่กระบวนการถัดไป (เช่น strike ตามกระบวนการโรงงาน)</li>
-      </ul>
-      <p class="note" data-i18n-key="th9_proc_note"><strong data-i18n-key="th9_proc_note_label">คำแนะนำ:</strong> ทดลองชิ้นงานนำร่อง 1–2 ชิ้นเพื่อหาโปรไฟล์ V/A และเวลาเหมาะสมก่อนรันล็อตใหญ่</p>
-    </div>
-  </section>
+<!-- Process -->
+<section id="process" class="reveal section-block" aria-labelledby="process-h">
+  <h2 id="process-h" class="section" data-i18n-key="th9_process_h">ขั้นตอนการลอก</h2>
+  <div class="content">
+    <p class="lead" data-i18n-key="th9_proc_intro_full">
+      ขั้นตอนการลอกนิกเกิล (Electrolytic Nickel Stripping Process) กระบวนการนี้ใช้ไฟฟ้าในการลอกนิกเกิลจากชิ้นงานเหล็กได้อย่างรวดเร็วและมีประสิทธิภาพ
+    </p>
 
-  <!-- Regeneration -->
-  <section id="regen" class="reveal section-block" aria-labelledby="regen-h">
-    <h2 id="regen-h" class="section" data-i18n-key="th9_regen_h">การฟื้นฟูน้ำยา</h2>
-    <div class="content">
-      <ul>
-        <li data-i18n-key="th9_regen_1">เมื่อโลหะสะสมมาก น้ำยาจะลอกช้าลง</li>
-        <li data-i18n-key="th9_regen_2">ปรับ pH ประมาณ <strong>~10</strong> ด้วยแอมโมเนียน้ำเพื่อตกตะกอนโลหะ ภายใต้การกวนอ่อน</li>
-        <li data-i18n-key="th9_regen_3">พักตะกอนให้ตก (เช่น 2–8 ชม.) แล้วดูดใสส่วนบน</li>
-        <li data-i18n-key="th9_regen_4">กรองเอาตะกอนออกจนใส (ถุงกรอง/ฟิลเตอร์เพรส)</li>
-        <li data-i18n-key="th9_regen_5">ปรับ pH กลับ <strong>6–7</strong> ด้วยกรดอะซิติก ทดสอบก่อนใช้งาน</li>
-        <li data-i18n-key="th9_regen_6">เติมแต่ง TH-9 ตามสัดส่วนสูญเสีย ปรับปริมาตรกลับ และทดสอบบนชิ้นงานจริง</li>
-        <li data-i18n-key="th9_regen_warn"><strong>คำเตือน:</strong> ตะกั่วที่ละลายในบ่อจะทำให้น้ำยาเสื่อม ควบคุม/หลีกเลี่ยงการปน</li>
-      </ul>
-      <p class="note" data-i18n-key="th9_regen_note"><strong data-i18n-key="th9_regen_note_label">หมายเหตุ:</strong> จัดการตะกอนโลหะและน้ำล้างเป็นของเสียอันตราย บำบัด/กำจัดตามกฎหมายท้องถิ่น</p>
-    </div>
-  </section>
+    <h3 data-i18n-key="th9_proc_prep_h">การเตรียมชิ้นงานและคอนแทคไฟ</h3>
+    <ul>
+      <li data-i18n-key="th9_proc_prep_1">ทำความสะอาด: ชิ้นงานต้องผ่านการล้างไขมันและล้างน้ำจนสะอาด</li>
+      <li data-i18n-key="th9_proc_prep_2">คอนแทคไฟ: ขัดจุดสัมผัสให้สะอาด เพื่อลดความต้านทานไฟฟ้าที่อาจทำให้กระบวนการไม่สมบูรณ์</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_proc_polar_h">จัดขั้วและจุ่มชิ้นงาน</h3>
+    <ul>
+      <li data-i18n-key="th9_proc_polar_1">ขั้วไฟฟ้า: จัดให้ชิ้นงานเหล็กที่เคลือบนิกเกิลเป็น ขั้วแอโนด (+) และใช้ แผ่นสแตนเลสเป็นขั้วแคโทด (-)</li>
+      <li data-i18n-key="th9_proc_polar_2">การจุ่ม: จุ่มชิ้นงานลงในบ่ออย่างช้าๆ เพื่อลดการเกิดฟองอากาศและการกระเด็นของสารละลาย</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_proc_control_h">การควบคุมกระแสไฟฟ้าและเวลา</h3>
+    <ul>
+      <li data-i18n-key="th9_proc_control_1">ตั้งค่ากระแส/แรงดัน: ตั้งค่าแรงดันไฟฟ้าที่ 6–10 V และความหนาแน่นกระแสไฟฟ้าที่ 5–25 A/dm²</li>
+      <li data-i18n-key="th9_proc_control_2">เริ่มกระบวนการ: ค่อยๆ ไล่กระแสจากต่ำไปสูง และ แกว่งหรือกวนชิ้นงานเบาๆ ระหว่างการลอก เพื่อให้การลอกทั่วถึงและสม่ำเสมอ</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_proc_end_h">ติดตามและสิ้นสุดกระบวนการ</h3>
+    <ul>
+      <li data-i18n-key="th9_proc_end_1">สัญญาณ: สังเกตเมื่อชั้นนิกเกิลเริ่มหลุดลอกออกไปจนเห็น ชั้นฐานของโลหะอย่างสม่ำเสมอ ไม่มีคราบดำหรือผิวที่ยังด้านอยู่</li>
+      <li data-i18n-key="th9_proc_end_2">หยุดกระบวนการ: เมื่อลอกหมดแล้ว ให้รีบ ปิดไฟและยกชิ้นงานขึ้นทันที</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_proc_after_h">การล้างและขั้นตอนถัดไป</h3>
+    <ul>
+      <li data-i18n-key="th9_proc_after_1">ล้างน้ำ: ล้างชิ้นงานด้วยน้ำสะอาดหลายขั้นตอน</li>
+      <li data-i18n-key="th9_proc_after_2">ขั้นตอนถัดไป: เตรียมเข้าสู่กระบวนการชุบใหม่ (เช่น การชุบทองแดงรองพื้น) ตามแผนงานของโรงงาน</li>
+    </ul>
+
+    <p class="note" data-i18n-key="th9_proc_tip_full">
+      <strong data-i18n-key="th9_proc_tip_full_label">คำแนะนำ:</strong> ควรทดลองกับชิ้นงานนำร่อง 1–2 ชิ้นก่อน เพื่อหาค่าแรงดัน, กระแส, และเวลาที่เหมาะสมที่สุดก่อนที่จะเริ่มผลิตจำนวนมาก
+    </p>
+  </div>
+</section>
+
+<!-- Regeneration -->
+<section id="regen" class="reveal section-block" aria-labelledby="regen-h">
+  <h2 id="regen-h" class="section" data-i18n-key="th9_regen_h">การฟื้นฟูน้ำยา</h2>
+  <div class="content">
+    <p class="lead" data-i18n-key="th9_regen_intro_full">
+      การฟื้นฟูน้ำยา (Solution Regeneration) เมื่อใช้งานไปนานๆ น้ำยาจะเริ่มมีโลหะสะสมมากเกินไปและมีประสิทธิภาพลดลง จึงจำเป็นต้องมีการฟื้นฟูตามขั้นตอนต่อไปนี้
+    </p>
+
+    <h3 data-i18n-key="th9_regen_step1_h">ปรับ pH เพื่อตกตะกอน</h3>
+    <ul>
+      <li data-i18n-key="th9_regen_step1_1">ค่อยๆ ปรับ pH ไปที่ประมาณ ~10 ด้วยแอมโมเนียน้ำ ในระหว่างที่กวนสารละลายอย่างช้าๆ</li>
+      <li data-i18n-key="th9_regen_step1_2">วิธีนี้จะทำให้โลหะที่สะสมอยู่ในสารละลายเกิดการ ตกตะกอน ลงมา</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_regen_step2_h">พักและดูดส่วนใส</h3>
+    <ul>
+      <li data-i18n-key="th9_regen_step2_1">พักสารละลายไว้ให้ตะกอนตกลงสู่ก้นถัง (เช่น 2–8 ชั่วโมง)</li>
+      <li data-i18n-key="th9_regen_step2_2">จากนั้นค่อยๆ ดูดเอาเฉพาะส่วนที่ใส ด้านบนไปใช้</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_regen_step3_h">กรองและปรับ pH กลับ</h3>
+    <ul>
+      <li data-i18n-key="th9_regen_step3_1">กรอง: กรองส่วนที่เหลือทั้งหมดผ่านถุงกรองหรือฟิลเตอร์เพรสจนใส</li>
+      <li data-i18n-key="th9_regen_step3_2">ปรับ pH กลับ: ปรับ pH ของสารละลายที่กรองแล้วกลับไปที่ 6–7 ด้วยกรดอะซิติก และทดสอบคุณภาพก่อนใช้งาน</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_regen_step4_h">เติมสารและทดสอบ</h3>
+    <ul>
+      <li data-i18n-key="th9_regen_step4_1">เติมแต่ง: เติมสารเคมี TH-9 ตามสัดส่วนที่สูญเสียไป</li>
+      <li data-i18n-key="th9_regen_step4_2">ทดสอบ: ทดสอบน้ำยาบนชิ้นงานจริงอีกครั้งเพื่อให้แน่ใจว่าได้ผลลัพธ์ที่ต้องการ</li>
+    </ul>
+
+    <h3 data-i18n-key="th9_regen_warn_h">ข้อควรระวังและปัญหาที่พบบ่อย (Common Problems &amp; Safety)</h3>
+    <ul>
+      <li data-i18n-key="th9_regen_warn_1">การปนเปื้อนของตะกั่ว: หากมี ตะกั่ว ละลายในบ่อ จะทำให้น้ำยาเสื่อมสภาพอย่างถาวรและไม่สามารถฟื้นฟูได้ ควรควบคุมไม่ให้มีการปนเปื้อนของตะกั่วอย่างเด็ดขาด</li>
+      <li data-i18n-key="th9_regen_warn_2">ตะกอนและน้ำล้าง: ตะกอนโลหะที่ได้และน้ำล้างที่ใช้แล้วถือเป็น ของเสียอันตราย ซึ่งต้องได้รับการบำบัดและกำจัดตามกฎหมายท้องถิ่น</li>
+    </ul>
+  </div>
+</section>
 
   <!-- Equipment -->
   <section id="conditions" class="reveal section-block" aria-labelledby="cond-h">
@@ -522,6 +571,161 @@
       <p class="note" data-i18n-key="th9_cond_note"><strong data-i18n-key="th9_cond_note_label">การจัดเลย์เอาต์:</strong> จัดตำแหน่งบ่อล้างติดกับบ่อ TH-9 ลด drag-in/drag-out และการค้างอากาศ</p>
     </div>
   </section>
+
+  <!-- Troubleshooting -->
+<section id="troubleshooting" class="reveal section-block" aria-labelledby="th9-trbl-h">
+  <h2 id="th9-trbl-h" class="section" data-i18n-key="th9_trbl_h">ปัญหาที่พบบ่อย & แนวทางการแก้ไข</h2>
+  <div class="content">
+    <p class="lead" data-i18n-key="th9_trbl_lead">
+      ต่อไปนี้คือปัญหาที่พบบ่อยในการใช้ยาลอกนิกเกิลแบบใช้ไฟฟ้า (TH-9) พร้อมสาเหตุที่เป็นไปได้ วิธีตรวจเช็คอย่างรวดเร็ว และแนวทางแก้ไขเชิงปฏิบัติ
+    </p>
+
+    <ol>
+      <!-- 1 -->
+      <li>
+        <p data-i18n-key="th9_trbl_1_h">นิกเกิลลอกไม่หมด / ลอกช้า</p>
+        <p data-i18n-key="th9_trbl_1_sym">อาการ: ยังเห็นผิวสีเงินของ Ni เป็นหย่อม ๆ หรือใช้เวลานานผิดปกติ</p>
+        <p data-i18n-key="th9_trbl_1_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_1_cause_1">กระแสต่ำ / ความหนาแน่นกระแสต่ำ (A/dm² ต่ำกว่าช่วงแนะนำ)</li>
+          <li data-i18n-key="th9_trbl_1_cause_2">แรงดันต่ำ / คอนแทคไฟมีความต้านทานสูง จุดสัมผัสสกปรก/เป็นคราบออกไซด์</li>
+          <li data-i18n-key="th9_trbl_1_cause_3">การกวน/แกว่งไม่พอ เกิด boundary layer หนาและมีฟองก๊าซกั้นผิว</li>
+          <li data-i18n-key="th9_trbl_1_cause_4">น้ำยาเสื่อม โลหะสะสมสูง หรือ pH หลุดช่วง</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_1_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_1_fix_1">ไล่กระแสตามขั้น: เริ่ม 5–10 A/dm² แล้วเพิ่มเป็น 15–25 A/dm² ภายใต้การเฝ้าดูผิว</li>
+          <li data-i18n-key="th9_trbl_1_fix_2">ทำความสะอาด/ขัดคอนแทคโลหะให้เงาแน่น ลดความต้านทาน และหนีบให้แน่น</li>
+          <li data-i18n-key="th9_trbl_1_fix_3">เพิ่มการแกว่ง/กวนอ่อนเพื่อไล่ฟองและลดชั้น boundary</li>
+          <li data-i18n-key="th9_trbl_1_fix_4">ตรวจ pH และปรับกลับ 6–7; หากโลหะสะสมสูงให้ฟื้นฟูน้ำยาตามขั้นตอน (ตกตะกอน-กรอง-ตั้ง pH)</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_1_note">ทดสอบจุดเล็กบนชิ้นงานเพื่อเทียบอัตราลอกก่อนปรับพารามิเตอร์ทั้งล็อต</p>
+      </li>
+
+      <!-- 2 -->
+      <li>
+        <p data-i18n-key="th9_trbl_2_h">ผิวไม่สม่ำเสมอ / เป็นคราบดำ / มีลายฟอง</p>
+        <p data-i18n-key="th9_trbl_2_sym">อาการ: บางบริเวณลอกแล้ว บางบริเวณยังเป็น Ni; มีคราบดำด้านหรือรอยวงฟอง</p>
+        <p data-i18n-key="th9_trbl_2_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_2_cause_1">ฟองก๊าซเกาะผิวเพราะจุ่มเร็ว/ไม่แกว่ง หรือรูปทรงกักอากาศ</li>
+          <li data-i18n-key="th9_trbl_2_cause_2">การกระจายกระแสไม่สม่ำเสมอ (edge/high-current area vs. low-current recess)</li>
+          <li data-i18n-key="th9_trbl_2_cause_3">สิ่งสกปรก/น้ำมัน/ออกไซด์บนผิวตั้งแต่แรก</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_2_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_2_fix_1">จุ่มช้า ๆ ให้แนวเอียง ไล่ฟอง พร้อมแกว่งเบา ๆ ตลอดกระบวนการ</li>
+          <li data-i18n-key="th9_trbl_2_fix_2">จัดวางแคโทด/จิ๊กให้หุ้ม field ดีกว่าเดิม ใช้ชิลด์/มาสก์ลด over-current บริเวณมุม</li>
+          <li data-i18n-key="th9_trbl_2_fix_3">เพิ่มขั้นล้างไขมัน/แอคทิเวตผิวก่อนลอก หากจำเป็นใช้อัลตราโซนิกช่วย</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_2_note">ชิ้นงานโพรงลึกควรเพิ่มการไหลเวียนหรือใช้คาโทดทรงตามชิ้นงาน</p>
+      </li>
+
+      <!-- 3 -->
+      <li>
+        <p data-i18n-key="th9_trbl_3_h">ผิวฐานเหล็กถูกกัด/ด้าน หลังลอก</p>
+        <p data-i18n-key="th9_trbl_3_sym">อาการ: เมื่อ Ni หลุดหมดแล้ว ผิวเหล็กหม่น/ด้าน/มีรอยกัด</p>
+        <p data-i18n-key="th9_trbl_3_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_3_cause_1">ใช้เวลานานเกินหลัง Ni หลุด (over-strip)</li>
+          <li data-i18n-key="th9_trbl_3_cause_2">กระแส/แรงดันเกินช่วง ทำให้เกิดปฏิกิริยากับฐาน</li>
+          <li data-i18n-key="th9_trbl_3_cause_3">pH หลุดช่วง ทำให้ bath มีแนวโน้มกัดผิว</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_3_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_3_fix_1">หยุดกระบวนการทันทีเมื่อเห็นฐานโลหะสม่ำเสมอ ไม่มีคราบ Ni เหลือ</li>
+          <li data-i18n-key="th9_trbl_3_fix_2">คุม 6–10 V / 5–25 A/dm² และใช้โพรไฟล์ไล่กระแส</li>
+          <li data-i18n-key="th9_trbl_3_fix_3">ตรวจ-ตั้ง pH กลับ 6–7 ก่อนใช้งานทุกกะ</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_3_note">งานสำคัญให้ทำ coupon test เทียบพื้นผิวก่อน-หลัง เพื่อยืนยันไม่มีการกัด</p>
+      </li>
+
+      <!-- 4 -->
+      <li>
+        <p data-i18n-key="th9_trbl_4_h">คราบผง/คราบดำเกาะผิวหลังลอก</p>
+        <p data-i18n-key="th9_trbl_4_sym">อาการ: มีฟิล์มหรือผงเข้มบนผิวหลังยกขึ้น แม้ Ni หลุดแล้ว</p>
+        <p data-i18n-key="th9_trbl_4_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_4_cause_1">เกิดผลิตภัณฑ์ปฏิกิริยาตกเกาะเพราะการไหลเวียน/ล้างไม่พอ</li>
+          <li data-i18n-key="th9_trbl_4_cause_2">โลหะในบ่อสูง ไม่ได้ฟื้นฟู/กรอง</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_4_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_4_fix_1">เพิ่มการกวน/แกว่ง และล้างหลายขั้นทันทีหลังปิดไฟ</li>
+          <li data-i18n-key="th9_trbl_4_fix_2">ติดปั๊มกรองระหว่างเดินงาน และทำ regeneration เป็นระยะ</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_4_note">ห้ามใช้ตัวทำละลายแปลกปลอมล้าง อาจทิ้งคราบและรบกวนการชุบต่อ</p>
+      </li>
+
+      <!-- 5 -->
+      <li>
+        <p data-i18n-key="th9_trbl_5_h">ฟองแรง/กระเด็น/เดือดบริเวณผิว</p>
+        <p data-i18n-key="th9_trbl_5_sym">อาการ: เกิดฟองรุนแรง เสี่ยงสาดกระเด็น/คราบด่าง</p>
+        <p data-i18n-key="th9_trbl_5_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_5_cause_1">จุ่มเร็วเกิน/แรงดันตั้งสูงทันที</li>
+          <li data-i18n-key="th9_trbl_5_cause_2">ขอบคม/มุมแหลมทำให้ current density สูงเฉพาะจุด</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_5_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_5_fix_1">จุ่มช้า-เอียง พร้อม ramp กระแสจากต่ำไปสูง</li>
+          <li data-i18n-key="th9_trbl_5_fix_2">ใช้ชิลด์/มาสก์ลดกระแสที่มุม และปรับระยะแคโทด-แอโนด</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_5_note">ติดตั้งแผงกันกระเด็น/ดูดไอ ลดความเสี่ยงด้าน EHS</p>
+      </li>
+
+      <!-- 6 -->
+      <li>
+        <p data-i18n-key="th9_trbl_6_h">กระแสไม่เสถียร / จุดสัมผัสร้อน</p>
+        <p data-i18n-key="th9_trbl_6_sym">อาการ: แอมป์แกว่ง, คีมหนีบร้อน, เกิดสปาร์ก</p>
+        <p data-i18n-key="th9_trbl_6_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_6_cause_1">หน้าสัมผัสสกปรก/ออกไซด์, สาย/บัสบาร์ undersize</li>
+          <li data-i18n-key="th9_trbl_6_cause_2">คีบไม่แน่น มีการสั่น/แกว่งมากเกิน</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_6_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_6_fix_1">ขัด-ทำความสะอาดจุดสัมผัส ตรวจขนาดสาย/บัสบาร์ให้พอโหลด</li>
+          <li data-i18n-key="th9_trbl_6_fix_2">ย้ำการหนีบให้แน่นและรองรับชิ้นงานลดแรงสั่น</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_6_note">บันทึกค่า V/A ระหว่างงาน ใช้เป็น baseline ตรวจความผิดปกติ</p>
+      </li>
+
+      <!-- 7 -->
+      <li>
+        <p data-i18n-key="th9_trbl_7_h">pH ลื่นไหล / หลุดช่วง</p>
+        <p data-i18n-key="th9_trbl_7_sym">อาการ: ประสิทธิภาพลอกตก/ผิวเริ่มด้านแม้กระแสถูกต้อง</p>
+        <p data-i18n-key="th9_trbl_7_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_7_cause_1">drag-in/drag-out จากบ่ออื่น หรือมีคาร์บอเนต/แอมโมเนียระเหย</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_7_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_7_fix_1">วัด pH ทุกกะ/ทุกล็อตงาน และปรับด้วยกรดอะซิติกหรือแอมโมเนียน้ำให้กลับ 6–7</li>
+          <li data-i18n-key="th9_trbl_7_fix_2">วางบ่อล้างติดบ่อ TH-9 และบังคับล้างหลายขั้นเพื่อลด drag-in</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_7_note">ใช้เครื่องมือวัดที่คาลิเบรตแล้ว ลดความคลาดเคลื่อน</p>
+      </li>
+
+      <!-- 8 -->
+      <li>
+        <p data-i18n-key="th9_trbl_8_h">น้ำยาเสื่อมเร็ว / โลหะสะสมสูง</p>
+        <p data-i18n-key="th9_trbl_8_sym">อาการ: ลอกช้าลงเรื่อย ๆ ต้องเร่งกระแสสูงขึ้นกว่าปกติ</p>
+        <p data-i18n-key="th9_trbl_8_cause_h">สาเหตุที่เป็นไปได้</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_8_cause_1">ไม่ทำ regeneration ตามรอบ, ไม่มีการกรอง online</li>
+          <li data-i18n-key="th9_trbl_8_cause_2">มีตะกั่ว/โลหะปนเปื้อน ทำให้บ่อด้อยถาวร</li>
+        </ul>
+        <p data-i18n-key="th9_trbl_8_fix_h">แนวทางแก้ไข</p>
+        <ul>
+          <li data-i18n-key="th9_trbl_8_fix_1">ทำฟื้นฟู: ปรับ pH ~10 → พักตกตะกอน → กรอง → ตั้ง pH 6–7 → เติมแต่ง</li>
+          <li data-i18n-key="th9_trbl_8_fix_2">คัดแยกงานที่มีตะกั่ว/บัดกรี ออกจากสาย TH-9 และเข้มงวดเรื่อง contamination</li>
+        </ul>
+        <p class="note" data-i18n-key="th9_trbl_8_note">ตะกอนและน้ำล้างจัดเป็นของเสียอันตราย ต้องบำบัด/กำจัดตามกฎหมาย</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
   <!-- Safety -->
   <section id="safety" class="reveal section-block" aria-labelledby="safety-h">
@@ -650,6 +854,267 @@
         cond_h:"อุปกรณ์ที่จำเป็น",
         safety_h:"ความปลอดภัย (EHS)",
 
+              th9_features_h: "จุดเด่นของ TH-9",
+      th9_features_lead: "เร็ว คุมง่าย ถนอมผิวเหล็ก ใช้งานได้ที่อุณหภูมิห้อง",
+      th9_feat_fast_title: "เร็ว คุมได้ด้วยไฟ",
+      th9_feat_fast_desc: "เหมาะกับทั้งงานแขวนและถังกลิ้ง ปรับกระแสตามพื้นที่ผิวจริงตามความหนานิกเกิล",
+      th9_feat_fast_b1: "เหมาะกับทั้งงานแร็คและถังกลิ้ง ปรับกระแสตามพื้นที่ผิวจริง",
+      th9_feat_fast_b2: "เริ่มต้นด้วยแรงดันต่ำแล้วไล่ขึ้น เพื่อลดการเกิดสปาร์ก/พิตติ้ง",
+
+      th9_feat_protect_title: "ถนอมผิวเหล็ก",
+      th9_feat_protect_desc: "ออกแบบให้จู่โจมชั้นนิกเกิล โดยไม่กัดกร่อนเหล็ก เมื่อคุมพารามิเตอร์ถูกต้อง",
+      th9_feat_protect_b1: "แนะนำอัตราส่วนพื้นที่แคโทด : แอโนด ~ 1–2 : 1 เพื่อความสม่ำเสมอ",
+      th9_feat_protect_b2: "ลดงานขัดแก้ไข/รีเวิร์คหลังลอก ประหยัดเวลาและต้นทุน",
+
+      th9_feat_roomtemp_title: "อุณหภูมิห้อง",
+      th9_feat_roomtemp_desc: "ทำงานได้ดีโดยไม่ต้องให้ความร้อน ลดความเสี่ยงการระเหยและกลิ่นจากการให้ความร้อน",
+      th9_feat_roomtemp_b1: "ลดความเสี่ยงการระเหย/กลิ่นจากการให้ความร้อน",
+      th9_feat_roomtemp_b2: "สม่ำเสมอแม้ในสภาพแวดล้อมโรงงานทั่วไป",
+
+      th9_feat_eff_title: "มีประสิทธิภาพ",
+      th9_feat_eff_desc: "การใช้กระแสไฟฟ้าช่วยให้กระบวนการลอกเกิดขึ้นอย่างรวดเร็วและทั่วถึง",
+      th9_feat_eff_b1: "ลอกเฉพาะชั้น Ni ได้ดี ลดผลกระทบต่อชั้นใต้ผิว",
+      th9_feat_eff_b2: "เหมาะกับผิวซับซ้อน/รูอับ ด้วยการกวนหรือแกว่งชิ้นงาน",
+
+      th9_feat_regen_title: "ฟื้นฟูน้ำยาได้",
+      th9_feat_regen_desc: "ตกตะกอนโลหะด้วยการปรับ pH แล้วกรองออก คืนประสิทธิภาพได้",
+      th9_feat_regen_b1: "รองรับการกรองผ่านไส้กรอง/ฟิลเตอร์เพรส เพิ่มอายุบ่อ",
+      th9_feat_regen_b2: "เติมแต่ง TH-9 ตามสัดส่วน เริ่มใช้งานต่อได้ทันทีหลังปรับ pH กลับ",
+
+      th9_feat_ph_title: "คุม pH ง่าย",
+      th9_feat_ph_desc: "เหมาะกับระบบควบคุมพื้นฐานในสายการผลิต อ่านค่าได้ด้วย pH meter",
+      th9_feat_ph_b1: "เหมาะกับระบบควบคุมพื้นฐานในสายการผลิต",
+      th9_feat_ph_b2: "อ่านค่าได้ด้วย pH meter มาตรฐาน/แถบทดสอบ",
+
+      th9_feat_psu_title: "รองรับเรคติไฟเออร์ทั่วไป",
+      th9_feat_psu_desc: "ใช้กับแหล่งจ่าย DC ทั่วไปได้ แนะนำ ripple ต่ำ (<~5%) เพื่อความเรียบของผิวหลังลอก",
+
+      th9_feat_clean_title: "ทำความสะอาดง่าย",
+      th9_feat_clean_desc: "ล้างออกได้ด้วยน้ำหลายขั้น เคลียร์ผิวพร้อมเข้าสู่การ strike/ชุบใหม่",
+
+      th9_feat_scale_title: "สเกลได้ตั้งแต่ทดลองถึงผลิต",
+      th9_feat_scale_desc: "จากบ่อเล็กในแลบ ไปจนถึงบ่อจริงในไลน์ผลิต เพียงสเกลตามพื้นที่ผิวและปรับกระแส",
+
+      th9_makeup_h: "สูตรผสม & ตัวอย่าง 100 ลิตร",
+      th9_ratio_h: "สัดส่วนแนะนำ",
+      th9_ratio_th_comp: "ส่วนประกอบ",
+      th9_ratio_th_rec: "ค่าแนะนำ",
+      th9_ratio_th_std: "ช่วงใช้งาน",
+      th9_ratio_th_unit: "หน่วย",
+      th9_ratio_row_th9_label: "Steel Striper TH-9",
+      th9_ratio_unit_gpl: "กรัม/ลิตร",
+      th9_ratio_row_ph_label: "pH เป้าหมาย",
+      th9_ratio_row_temp_label: "อุณหภูมิ",
+      th9_ratio_row_temp_val: "อุณหภูมิห้อง",
+      th9_ratio_row_agitation_label: "การกวน",
+      th9_ratio_row_agitation_val: "แกว่ง/กวนอ่อน",
+      th9_ratio_row_agitation_opt: "อากาศ/กล",
+      th9_ratio_row_tank_label: "วัสดุบ่อ",
+      th9_ratio_row_tank_val: "PP/PE/PVC",
+      th9_ratio_row_tank_note: "หลีกเลี่ยงโลหะ",
+
+      th9_mix_example_h: "ตัวอย่างการผสม 100 ลิตร",
+      th9_mix_th_comp: "ส่วนผสม",
+      th9_mix_th_qty: "ปริมาณ",
+      th9_mix_th_note: "หมายเหตุ",
+      th9_mix_row_th9_label: "Steel Striper TH-9",
+      th9_mix_row_th9_note: "ละลายในน้ำ 70–80% ของปริมาตร",
+      th9_mix_row_water_label: "น้ำสะอาด/DI",
+      th9_mix_row_water_qty: "เติมจนครบ 100 ลิตร",
+      th9_mix_row_water_note: "กวนให้เข้ากันด้วยใบพัดพลาสติก",
+      th9_mix_row_ph_label: "ตั้ง pH",
+      th9_mix_row_ph_note: "ปรับด้วยกรดอะซิติก/แอมโมเนียน้ำ",
+      th9_mix_row_prefilter_label: "กรองหยาบ (แนะนำ)",
+      th9_mix_row_prefilter_note: "ผ่านถุงกรอง 5–10 µm เพื่อลดตะกอน",
+      th9_mix_row_rest_label: "พักบ่อ",
+      th9_mix_row_rest_note: "ระบายฟอง/อากาศก่อนเริ่มเดินไฟ",
+      th9_mix_row_check_label: "ตรวจสอบ",
+      th9_mix_row_check_note: "ทดสอบแถบ pH ก่อนเริ่มเดินไฟ",
+      th9_mix_note: "หมายเหตุการผสม: เติม “กรดลงในน้ำ” เสมอเมื่อใช้กรดอะซิติก, ใช้ DI/RO ลดการสะสมเกลือ, หลีกเลี่ยงการกวนด้วยชิ้นส่วนโลหะ",
+      th9_mix_note_label: "หมายเหตุการผสม:",
+
+      th9_specs_h: "สเปก & สภาพการทำงาน",
+      th9_specs_th_param: "พารามิเตอร์",
+      th9_specs_th_value: "ค่า/ช่วง",
+      th9_specs_th_note: "หมายเหตุ",
+      th9_specs_param_conc: "ความเข้มข้น TH-9",
+      th9_specs_param_ph: "pH",
+      th9_specs_param_ph_note: "กรดอะซิติก / แอมโมเนียน้ำ",
+      th9_specs_param_temp: "อุณหภูมิ",
+      th9_specs_param_temp_val: "อุณหภูมิห้อง",
+      th9_specs_param_v: "แรงดันไฟ DC",
+      th9_specs_param_j: "ความหนาแน่นกระแส",
+      th9_specs_param_j_note: "ไล่กระแสขึ้นทีละขั้นเพื่อลดสปาร์ก",
+      th9_specs_param_cath: "ขั้วลบ (แคโทด)",
+      th9_specs_param_cath_val: "สแตนเลส",
+      th9_specs_param_cath_note: "ชิ้นงานเป็นแอโนด (+)",
+      th9_specs_param_ratio: "อัตราส่วนพื้นที่คาโทด:แอโนด",
+      th9_specs_param_ratio_note: "ช่วยให้กระแสกระจายสม่ำเสมอ",
+      th9_specs_param_agit: "การกวน/การไหล",
+      th9_specs_param_agit_val: "แกว่ง/อากาศอ่อน",
+      th9_specs_param_agit_note: "ช่วยลอกตามซอก/รู",
+      th9_specs_param_ripple: "Ripple แหล่งจ่าย",
+      th9_specs_param_ripple_val: "ต่ำ (<~5%)",
+      th9_specs_param_ripple_note: "ให้ผิวหลังลอกเรียบกว่า",
+      th9_specs_tip_power: "เคล็ดลับคุณภาพกระแส: รัดคีบให้แน่น ลดความต้านทานจุดสัมผัส, ทำความสะอาดจุดคีบเป็นระยะ, ตรวจสายบัสบาร์ไม่ให้ร้อนผิดปกติ",
+      th9_specs_tip_power_label: "เคล็ดลับคุณภาพกระแส:",
+
+    th9_process_h: "ขั้นตอนการลอก",
+    th9_proc_intro_full: "ขั้นตอนการลอกนิกเกิล (Electrolytic Nickel Stripping Process) กระบวนการนี้ใช้ไฟฟ้าในการลอกนิกเกิลจากชิ้นงานเหล็กได้อย่างรวดเร็วและมีประสิทธิภาพ",
+    th9_proc_prep_h: "การเตรียมชิ้นงานและคอนแทคไฟ",
+    th9_proc_prep_1: "ทำความสะอาด: ชิ้นงานต้องผ่านการล้างไขมันและล้างน้ำจนสะอาด",
+    th9_proc_prep_2: "คอนแทคไฟ: ขัดจุดสัมผัสให้สะอาด เพื่อลดความต้านทานไฟฟ้าที่อาจทำให้กระบวนการไม่สมบูรณ์",
+
+    th9_proc_polar_h: "จัดขั้วและจุ่มชิ้นงาน",
+    th9_proc_polar_1: "ขั้วไฟฟ้า: จัดให้ชิ้นงานเหล็กที่เคลือบนิกเกิลเป็น ขั้วแอโนด (+) และใช้ แผ่นสแตนเลสเป็นขั้วแคโทด (-)",
+    th9_proc_polar_2: "การจุ่ม: จุ่มชิ้นงานลงในบ่ออย่างช้าๆ เพื่อลดการเกิดฟองอากาศและการกระเด็นของสารละลาย",
+
+    th9_proc_control_h: "การควบคุมกระแสไฟฟ้าและเวลา",
+    th9_proc_control_1: "ตั้งค่ากระแส/แรงดัน: ตั้งค่าแรงดันไฟฟ้าที่ 6–10 V และความหนาแน่นกระแสไฟฟ้าที่ 5–25 A/dm²",
+    th9_proc_control_2: "เริ่มกระบวนการ: ค่อยๆ ไล่กระแสจากต่ำไปสูง และ แกว่งหรือกวนชิ้นงานเบาๆ ระหว่างการลอก เพื่อให้การลอกทั่วถึงและสม่ำเสมอ",
+
+    th9_proc_end_h: "ติดตามและสิ้นสุดกระบวนการ",
+    th9_proc_end_1: "สัญญาณ: สังเกตเมื่อชั้นนิกเกิลเริ่มหลุดลอกออกไปจนเห็น ชั้นฐานของโลหะอย่างสม่ำเสมอ ไม่มีคราบดำหรือผิวที่ยังด้านอยู่",
+    th9_proc_end_2: "หยุดกระบวนการ: เมื่อลอกหมดแล้ว ให้รีบ ปิดไฟและยกชิ้นงานขึ้นทันที",
+
+    th9_proc_after_h: "การล้างและขั้นตอนถัดไป",
+    th9_proc_after_1: "ล้างน้ำ: ล้างชิ้นงานด้วยน้ำสะอาดหลายขั้นตอน",
+    th9_proc_after_2: "ขั้นตอนถัดไป: เตรียมเข้าสู่กระบวนการชุบใหม่ (เช่น การชุบทองแดงรองพื้น) ตามแผนงานของโรงงาน",
+
+    th9_proc_tip_full_label: "คำแนะนำ:",
+    th9_proc_tip_full: "คำแนะนำ: ควรทดลองกับชิ้นงานนำร่อง 1–2 ชิ้นก่อน เพื่อหาค่าแรงดัน, กระแส, และเวลาที่เหมาะสมที่สุดก่อนที่จะเริ่มผลิตจำนวนมาก",
+
+    th9_regen_h: "การฟื้นฟูน้ำยา",
+    th9_regen_intro_full: "การฟื้นฟูน้ำยา (Solution Regeneration) เมื่อใช้งานไปนานๆ น้ำยาจะเริ่มมีโลหะสะสมมากเกินไปและมีประสิทธิภาพลดลง จึงจำเป็นต้องมีการฟื้นฟูตามขั้นตอนต่อไปนี้",
+
+    th9_regen_step1_h: "ปรับ pH เพื่อตกตะกอน",
+    th9_regen_step1_1: "ค่อยๆ ปรับ pH ไปที่ประมาณ ~10 ด้วยแอมโมเนียน้ำ ในระหว่างที่กวนสารละลายอย่างช้าๆ",
+    th9_regen_step1_2: "วิธีนี้จะทำให้โลหะที่สะสมอยู่ในสารละลายเกิดการ ตกตะกอน ลงมา",
+
+    th9_regen_step2_h: "พักและดูดส่วนใส",
+    th9_regen_step2_1: "พักสารละลายไว้ให้ตะกอนตกลงสู่ก้นถัง (เช่น 2–8 ชั่วโมง)",
+    th9_regen_step2_2: "จากนั้นค่อยๆ ดูดเอาเฉพาะส่วนที่ใส ด้านบนไปใช้",
+
+    th9_regen_step3_h: "กรองและปรับ pH กลับ",
+    th9_regen_step3_1: "กรอง: กรองส่วนที่เหลือทั้งหมดผ่านถุงกรองหรือฟิลเตอร์เพรสจนใส",
+    th9_regen_step3_2: "ปรับ pH กลับ: ปรับ pH ของสารละลายที่กรองแล้วกลับไปที่ 6–7 ด้วยกรดอะซิติก และทดสอบคุณภาพก่อนใช้งาน",
+
+    th9_regen_step4_h: "เติมสารและทดสอบ",
+    th9_regen_step4_1: "เติมแต่ง: เติมสารเคมี TH-9 ตามสัดส่วนที่สูญเสียไป",
+    th9_regen_step4_2: "ทดสอบ: ทดสอบน้ำยาบนชิ้นงานจริงอีกครั้งเพื่อให้แน่ใจว่าได้ผลลัพธ์ที่ต้องการ",
+
+    th9_regen_warn_h: "ข้อควรระวังและปัญหาที่พบบ่อย (Common Problems & Safety)",
+    th9_regen_warn_1: "การปนเปื้อนของตะกั่ว: หากมี ตะกั่ว ละลายในบ่อ จะทำให้น้ำยาเสื่อมสภาพอย่างถาวรและไม่สามารถฟื้นฟูได้ ควรควบคุมไม่ให้มีการปนเปื้อนของตะกั่วอย่างเด็ดขาด",
+    th9_regen_warn_2: "ตะกอนและน้ำล้าง: ตะกอนโลหะที่ได้และน้ำล้างที่ใช้แล้วถือเป็น ของเสียอันตราย ซึ่งต้องได้รับการบำบัดและกำจัดตามกฎหมายท้องถิ่น",
+
+      th9_cond_h: "อุปกรณ์ที่จำเป็น",
+      th9_cond_1: "บ่อเคมี: ต้องใช้ถังที่ทนทานต่อสารเคมีและอุณหภูมิ เช่น CSP, PVC, PE, หรือ PP นอกจากนี้ควรมี ฝาครอบ หรือ ระบบดูดไอ เพื่อความปลอดภัยในการทำงาน และป้องกันไอสารเคมีแพร่กระจาย",
+      th9_cond_2: "แหล่งจ่ายไฟ: จำเป็นต้องมี แหล่งจ่ายไฟตรง (DC Power Supply) ที่สามารถปรับค่าแรงดันและกระแสไฟฟ้าได้ และมี ระบบคีบขั้ว/บัสบาร์ ที่แข็งแรงและมั่นคง เพื่อให้กระแสไฟไหลผ่านชิ้นงานได้อย่างสม่ำเสมอ",
+      th9_cond_3: "แคโทดและระบบแขวน: ใช้ แผ่นสแตนเลส เป็นขั้วแคโทด และต้องมี ชุดแขวนชิ้นงาน (แร็ค) หรือ ตะกร้ากลิ้ง ที่เหมาะสมกับลักษณะของชิ้นงาน",
+      th9_cond_4: "ระบบจัดการของเหลว: ควรมี บ่อล้างน้ำหลายขั้นตอน และ ระบบกวนหรือแกว่งชิ้นงาน เพื่อให้การล้างมีประสิทธิภาพ และควรมี ปั๊มกรอง (แนะนำ) เพื่อช่วยกรองสิ่งสกปรกออกจากสารละลาย",
+      th9_cond_5: "อุปกรณ์วัดและปรับค่า: ใช้ ชุดวัด pH และ อุปกรณ์ปรับ pH เพื่อรักษาสมดุลของสารละลาย และใช้ เทอร์โมมิเตอร์ เพื่อควบคุมอุณหภูมิให้อยู่ในเกณฑ์ที่กำหนด",
+      th9_cond_6: "ระบบกรองตะกอน: สำหรับการฟื้นฟูน้ำยา จำเป็นต้องมี ถุงกรอง หรือ ฟิลเตอร์เพรส สำหรับกรองตะกอนโลหะออกจากน้ำยา",
+      th9_cond_note: "การจัดเลย์เอาต์: จัดตำแหน่งบ่อล้างติดกับบ่อ TH-9 ลด drag-in/drag-out และการค้างอากาศ",
+      th9_cond_note_label: "การจัดเลย์เอาต์:",
+
+          th9_trbl_h: "ปัญหาที่พบบ่อย & แนวทางการแก้ไข",
+    th9_trbl_lead: "ต่อไปนี้คือปัญหาที่พบบ่อยในการใช้ยาลอกนิกเกิลแบบใช้ไฟฟ้า (TH-9) พร้อมสาเหตุที่เป็นไปได้ วิธีตรวจเช็คอย่างรวดเร็ว และแนวทางแก้ไขเชิงปฏิบัติ",
+
+    th9_trbl_1_h: "นิกเกิลลอกไม่หมด / ลอกช้า",
+    th9_trbl_1_sym: "อาการ: ยังเห็นผิวสีเงินของ Ni เป็นหย่อม ๆ หรือใช้เวลานานผิดปกติ",
+    th9_trbl_1_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_1_cause_1: "กระแสต่ำ / ความหนาแน่นกระแสต่ำ (A/dm² ต่ำกว่าช่วงแนะนำ)",
+    th9_trbl_1_cause_2: "แรงดันต่ำ / คอนแทคไฟมีความต้านทานสูง จุดสัมผัสสกปรก/เป็นคราบออกไซด์",
+    th9_trbl_1_cause_3: "การกวน/แกว่งไม่พอ เกิด boundary layer หนาและมีฟองก๊าซกั้นผิว",
+    th9_trbl_1_cause_4: "น้ำยาเสื่อม โลหะสะสมสูง หรือ pH หลุดช่วง",
+    th9_trbl_1_fix_h: "แนวทางแก้ไข",
+    th9_trbl_1_fix_1: "ไล่กระแสตามขั้น: เริ่ม 5–10 A/dm² แล้วเพิ่มเป็น 15–25 A/dm² ภายใต้การเฝ้าดูผิว",
+    th9_trbl_1_fix_2: "ทำความสะอาด/ขัดคอนแทคโลหะให้เงาแน่น ลดความต้านทาน และหนีบให้แน่น",
+    th9_trbl_1_fix_3: "เพิ่มการแกว่ง/กวนอ่อนเพื่อไล่ฟองและลดชั้น boundary",
+    th9_trbl_1_fix_4: "ตรวจ pH และปรับกลับ 6–7; หากโลหะสะสมสูงให้ฟื้นฟูน้ำยาตามขั้นตอน (ตกตะกอน-กรอง-ตั้ง pH)",
+    th9_trbl_1_note: "ทดสอบจุดเล็กบนชิ้นงานเพื่อเทียบอัตราลอกก่อนปรับพารามิเตอร์ทั้งล็อต",
+
+    th9_trbl_2_h: "ผิวไม่สม่ำเสมอ / เป็นคราบดำ / มีลายฟอง",
+    th9_trbl_2_sym: "อาการ: บางบริเวณลอกแล้ว บางบริเวณยังเป็น Ni; มีคราบดำด้านหรือรอยวงฟอง",
+    th9_trbl_2_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_2_cause_1: "ฟองก๊าซเกาะผิวเพราะจุ่มเร็ว/ไม่แกว่ง หรือรูปทรงกักอากาศ",
+    th9_trbl_2_cause_2: "การกระจายกระแสไม่สม่ำเสมอ (edge/high-current area vs. low-current recess)",
+    th9_trbl_2_cause_3: "สิ่งสกปรก/น้ำมัน/ออกไซด์บนผิวตั้งแต่แรก",
+    th9_trbl_2_fix_h: "แนวทางแก้ไข",
+    th9_trbl_2_fix_1: "จุ่มช้า ๆ ให้แนวเอียง ไล่ฟอง พร้อมแกว่งเบา ๆ ตลอดกระบวนการ",
+    th9_trbl_2_fix_2: "จัดวางแคโทด/จิ๊กให้หุ้ม field ดีกว่าเดิม ใช้ชิลด์/มาสก์ลด over-current บริเวณมุม",
+    th9_trbl_2_fix_3: "เพิ่มขั้นล้างไขมัน/แอคทิเวตผิวก่อนลอก หากจำเป็นใช้อัลตราโซนิกช่วย",
+    th9_trbl_2_note: "ชิ้นงานโพรงลึกควรเพิ่มการไหลเวียนหรือใช้คาโทดทรงตามชิ้นงาน",
+
+    th9_trbl_3_h: "ผิวฐานเหล็กถูกกัด/ด้าน หลังลอก",
+    th9_trbl_3_sym: "อาการ: เมื่อ Ni หลุดหมดแล้ว ผิวเหล็กหม่น/ด้าน/มีรอยกัด",
+    th9_trbl_3_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_3_cause_1: "ใช้เวลานานเกินหลัง Ni หลุด (over-strip)",
+    th9_trbl_3_cause_2: "กระแส/แรงดันเกินช่วง ทำให้เกิดปฏิกิริยากับฐาน",
+    th9_trbl_3_cause_3: "pH หลุดช่วง ทำให้ bath มีแนวโน้มกัดผิว",
+    th9_trbl_3_fix_h: "แนวทางแก้ไข",
+    th9_trbl_3_fix_1: "หยุดกระบวนการทันทีเมื่อเห็นฐานโลหะสม่ำเสมอ ไม่มีคราบ Ni เหลือ",
+    th9_trbl_3_fix_2: "คุม 6–10 V / 5–25 A/dm² และใช้โพรไฟล์ไล่กระแส",
+    th9_trbl_3_fix_3: "ตรวจ-ตั้ง pH กลับ 6–7 ก่อนใช้งานทุกกะ",
+    th9_trbl_3_note: "งานสำคัญให้ทำ coupon test เทียบพื้นผิวก่อน-หลัง เพื่อยืนยันไม่มีการกัด",
+
+    th9_trbl_4_h: "คราบผง/คราบดำเกาะผิวหลังลอก",
+    th9_trbl_4_sym: "อาการ: มีฟิล์มหรือผงเข้มบนผิวหลังยกขึ้น แม้ Ni หลุดแล้ว",
+    th9_trbl_4_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_4_cause_1: "เกิดผลิตภัณฑ์ปฏิกิริยาตกเกาะเพราะการไหลเวียน/ล้างไม่พอ",
+    th9_trbl_4_cause_2: "โลหะในบ่อสูง ไม่ได้ฟื้นฟู/กรอง",
+    th9_trbl_4_fix_h: "แนวทางแก้ไข",
+    th9_trbl_4_fix_1: "เพิ่มการกวน/แกว่ง และล้างหลายขั้นทันทีหลังปิดไฟ",
+    th9_trbl_4_fix_2: "ติดปั๊มกรองระหว่างเดินงาน และทำ regeneration เป็นระยะ",
+    th9_trbl_4_note: "ห้ามใช้ตัวทำละลายแปลกปลอมล้าง อาจทิ้งคราบและรบกวนการชุบต่อ",
+
+    th9_trbl_5_h: "ฟองแรง/กระเด็น/เดือดบริเวณผิว",
+    th9_trbl_5_sym: "อาการ: เกิดฟองรุนแรง เสี่ยงสาดกระเด็น/คราบด่าง",
+    th9_trbl_5_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_5_cause_1: "จุ่มเร็วเกิน/แรงดันตั้งสูงทันที",
+    th9_trbl_5_cause_2: "ขอบคม/มุมแหลมทำให้ current density สูงเฉพาะจุด",
+    th9_trbl_5_fix_h: "แนวทางแก้ไข",
+    th9_trbl_5_fix_1: "จุ่มช้า-เอียง พร้อม ramp กระแสจากต่ำไปสูง",
+    th9_trbl_5_fix_2: "ใช้ชิลด์/มาสก์ลดกระแสที่มุม และปรับระยะแคโทด-แอโนด",
+    th9_trbl_5_note: "ติดตั้งแผงกันกระเด็น/ดูดไอ ลดความเสี่ยงด้าน EHS",
+
+    th9_trbl_6_h: "กระแสไม่เสถียร / จุดสัมผัสร้อน",
+    th9_trbl_6_sym: "อาการ: แอมป์แกว่ง, คีมหนีบร้อน, เกิดสปาร์ก",
+    th9_trbl_6_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_6_cause_1: "หน้าสัมผัสสกปรก/ออกไซด์, สาย/บัสบาร์ undersize",
+    th9_trbl_6_cause_2: "คีบไม่แน่น มีการสั่น/แกว่งมากเกิน",
+    th9_trbl_6_fix_h: "แนวทางแก้ไข",
+    th9_trbl_6_fix_1: "ขัด-ทำความสะอาดจุดสัมผัส ตรวจขนาดสาย/บัสบาร์ให้พอโหลด",
+    th9_trbl_6_fix_2: "ย้ำการหนีบให้แน่นและรองรับชิ้นงานลดแรงสั่น",
+    th9_trbl_6_note: "บันทึกค่า V/A ระหว่างงาน ใช้เป็น baseline ตรวจความผิดปกติ",
+
+    th9_trbl_7_h: "pH ลื่นไหล / หลุดช่วง",
+    th9_trbl_7_sym: "อาการ: ประสิทธิภาพลอกตก/ผิวเริ่มด้านแม้กระแสถูกต้อง",
+    th9_trbl_7_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_7_cause_1: "drag-in/drag-out จากบ่ออื่น หรือมีคาร์บอเนต/แอมโมเนียระเหย",
+    th9_trbl_7_fix_h: "แนวทางแก้ไข",
+    th9_trbl_7_fix_1: "วัด pH ทุกกะ/ทุกล็อตงาน และปรับด้วยกรดอะซิติกหรือแอมโมเนียน้ำให้กลับ 6–7",
+    th9_trbl_7_fix_2: "วางบ่อล้างติดบ่อ TH-9 และบังคับล้างหลายขั้นเพื่อลด drag-in",
+    th9_trbl_7_note: "ใช้เครื่องมือวัดที่คาลิเบรตแล้ว ลดความคลาดเคลื่อน",
+
+    th9_trbl_8_h: "น้ำยาเสื่อมเร็ว / โลหะสะสมสูง",
+    th9_trbl_8_sym: "อาการ: ลอกช้าลงเรื่อย ๆ ต้องเร่งกระแสสูงขึ้นกว่าปกติ",
+    th9_trbl_8_cause_h: "สาเหตุที่เป็นไปได้",
+    th9_trbl_8_cause_1: "ไม่ทำ regeneration ตามรอบ, ไม่มีการกรอง online",
+    th9_trbl_8_cause_2: "มีตะกั่ว/โลหะปนเปื้อน ทำให้บ่อด้อยถาวร",
+    th9_trbl_8_fix_h: "แนวทางแก้ไข",
+    th9_trbl_8_fix_1: "ทำฟื้นฟู: ปรับ pH ~10 → พักตกตะกอน → กรอง → ตั้ง pH 6–7 → เติมแต่ง",
+    th9_trbl_8_fix_2: "คัดแยกงานที่มีตะกั่ว/บัดกรี ออกจากสาย TH-9 และเข้มงวดเรื่อง contamination",
+    th9_trbl_8_note: "ตะกอนและน้ำล้างจัดเป็นของเสียอันตราย ต้องบำบัด/กำจัดตามกฎหมาย",
+
+      th9_safety_h: "ความปลอดภัย (EHS)",
+      th9_safety_lead: "โปรดใช้งานโดยผู้เชี่ยวชาญ สวม PPE ครบ (ถุงมือกันสารเคมี แว่นตา หน้ากากที่เหมาะสม) ทำงานในพื้นที่ระบายอากาศดี จัดเก็บ/กำจัดของเสียตามกฎหมายท้องถิ่น และฝึกซ้อมแผนฉุกเฉินเป็นประจำ",
+      th9_safety_lead_strong: "โปรดใช้งานโดยผู้เชี่ยวชาญ",
+      th9_safety_1: "ปิด/ล็อกเอาต์แหล่งจ่ายไฟก่อนซ่อมบำรุง (Lockout/Tagout)",
+      th9_safety_2: "เติม “กรดลงในน้ำ” เสมอ และแยกเก็บกรด/ด่างให้ชัดเจน",
+      th9_safety_3: "ติดป้าย/ฉลากบ่อ น้ำยา และทิศทางขั้วไฟให้ชัดเจน ลดความผิดพลาด",
+      th9_safety_4: "เตรียมฝักบัว/ที่ล้างตาฉุกเฉินใกล้พื้นที่ทำงาน",
+
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
 
@@ -710,6 +1175,267 @@
         regen_h:"Regeneration",
         cond_h:"Required equipment",
         safety_h:"Safety (EHS)",
+
+              th9_features_h: "Highlights of TH-9",
+      th9_features_lead: "Fast, controllable, steel-friendly, operates at room temperature",
+      th9_feat_fast_title: "Fast, power-controlled",
+      th9_feat_fast_desc: "Short stripping cycle; tune results via volts/amps to match nickel thickness",
+      th9_feat_fast_b1: "Works for rack and barrel jobs; scale current to true surface area",
+      th9_feat_fast_b2: "Start low voltage and ramp up to minimize arcing/pitting",
+
+      th9_feat_protect_title: "Protects steel substrate",
+      th9_feat_protect_desc: "Targets the nickel layer without attacking steel when parameters are controlled",
+      th9_feat_protect_b1: "Recommended cathode:anode area ~ 1–2 : 1 for uniformity",
+      th9_feat_protect_b2: "Reduces post-strip polishing/rework, saving time and cost",
+
+      th9_feat_roomtemp_title: "Room temperature",
+      th9_feat_roomtemp_desc: "Performs well without heating, reducing energy and bath degradation risk",
+      th9_feat_roomtemp_b1: "Lower risk of evaporation/odor from heating",
+      th9_feat_roomtemp_b2: "Stable even in typical shop-floor conditions",
+
+      th9_feat_eff_title: "Efficient",
+      th9_feat_eff_desc: "Direct current accelerates stripping evenly and quickly",
+      th9_feat_eff_b1: "Selectively removes Ni, minimizing impact to underlying layers",
+      th9_feat_eff_b2: "Great for complex geometries/blind holes with agitation or work oscillation",
+
+      th9_feat_regen_title: "Regenerable bath",
+      th9_feat_regen_desc: "Precipitate dissolved metals by pH adjustment and filter to restore performance",
+      th9_feat_regen_b1: "Supports bag filters/filter press to extend bath life",
+      th9_feat_regen_b2: "Top up TH-9 proportionally; resume use after pH is returned",
+
+      th9_feat_ph_title: "Easy pH control",
+      th9_feat_ph_desc: "Adjust mid-range using acetic acid or aqueous ammonia",
+      th9_feat_ph_b1: "Compatible with basic production-floor control systems",
+      th9_feat_ph_b2: "Readable via standard pH meter/test strips",
+
+      th9_feat_psu_title: "Works with standard rectifiers",
+      th9_feat_psu_desc: "Use common DC supplies; recommend low ripple (<~5%) for smoother post-strip finish",
+
+      th9_feat_clean_title: "Easy to rinse",
+      th9_feat_clean_desc: "Multi-stage water rinse clears the surface, ready for strike/replate",
+
+      th9_feat_scale_title: "Scalable from lab to production",
+      th9_feat_scale_desc: "From small lab tanks to full lines—scale by surface area and adjust current",
+
+      th9_makeup_h: "Makeup Formula & 100 L Example",
+      th9_ratio_h: "Recommended ratios",
+      th9_ratio_th_comp: "Component",
+      th9_ratio_th_rec: "Recommended",
+      th9_ratio_th_std: "Operating range",
+      th9_ratio_th_unit: "Unit",
+      th9_ratio_row_th9_label: "Steel Striper TH-9",
+      th9_ratio_unit_gpl: "g/L",
+      th9_ratio_row_ph_label: "Target pH",
+      th9_ratio_row_temp_label: "Temperature",
+      th9_ratio_row_temp_val: "Room temperature",
+      th9_ratio_row_agitation_label: "Agitation",
+      th9_ratio_row_agitation_val: "Oscillate/light agitation",
+      th9_ratio_row_agitation_opt: "Air/mechanical",
+      th9_ratio_row_tank_label: "Tank material",
+      th9_ratio_row_tank_val: "PP/PE/PVC",
+      th9_ratio_row_tank_note: "Avoid metal contact",
+
+      th9_mix_example_h: "100 L Mixing Example",
+      th9_mix_th_comp: "Ingredient",
+      th9_mix_th_qty: "Quantity",
+      th9_mix_th_note: "Note",
+      th9_mix_row_th9_label: "Steel Striper TH-9",
+      th9_mix_row_th9_note: "Dissolve into 70–80% of final water volume",
+      th9_mix_row_water_label: "Clean/DI water",
+      th9_mix_row_water_qty: "Make up to 100 L total",
+      th9_mix_row_water_note: "Mix with plastic impeller",
+      th9_mix_row_ph_label: "Set pH",
+      th9_mix_row_ph_note: "Adjust with acetic acid/aqueous ammonia",
+      th9_mix_row_prefilter_label: "Pre-filter (recommended)",
+      th9_mix_row_prefilter_note: "Bag filter 5–10 µm to reduce particulates",
+      th9_mix_row_rest_label: "Let sit",
+      th9_mix_row_rest_note: "Allow foam/air to dissipate before powering",
+      th9_mix_row_check_label: "Verify",
+      th9_mix_row_check_note: "Check pH test strip before energizing",
+      th9_mix_note: "Mixing note: Always add acid to water when using acetic acid; prefer DI/RO water to minimize salts; avoid metal agitators.",
+      th9_mix_note_label: "Mixing note:",
+
+      th9_specs_h: "Specifications & Operating Window",
+      th9_specs_th_param: "Parameter",
+      th9_specs_th_value: "Value/Range",
+      th9_specs_th_note: "Note",
+      th9_specs_param_conc: "TH-9 concentration",
+      th9_specs_param_ph: "pH",
+      th9_specs_param_ph_note: "Acetic acid / aqueous ammonia",
+      th9_specs_param_temp: "Temperature",
+      th9_specs_param_temp_val: "Room temperature",
+      th9_specs_param_v: "DC voltage",
+      th9_specs_param_j: "Current density",
+      th9_specs_param_j_note: "Step current up gradually to reduce arcing",
+      th9_specs_param_cath: "Cathode (-)",
+      th9_specs_param_cath_val: "Stainless steel",
+      th9_specs_param_cath_note: "Work is the anode (+)",
+      th9_specs_param_ratio: "Cathode:anode area ratio",
+      th9_specs_param_ratio_note: "Promotes even current distribution",
+      th9_specs_param_agit: "Agitation/flow",
+      th9_specs_param_agit_val: "Oscillation/light air",
+      th9_specs_param_agit_note: "Helps reach recesses/holes",
+      th9_specs_param_ripple: "Supply ripple",
+      th9_specs_param_ripple_val: "Low (<~5%)",
+      th9_specs_param_ripple_note: "Smoother post-strip surface",
+      th9_specs_tip_power: "Power quality tip: Ensure tight clamps to reduce contact resistance; clean contacts periodically; check bus bars for abnormal heating.",
+      th9_specs_tip_power_label: "Power quality tip:",
+
+   th9_process_h: "Stripping Process",
+    th9_proc_intro_full: "Nickel Stripping (Electrolytic Nickel Stripping Process). This process uses electricity to strip nickel from steel parts quickly and efficiently.",
+    th9_proc_prep_h: "Work Preparation & Electrical Contact",
+    th9_proc_prep_1: "Cleaning: The work must be degreased and thoroughly rinsed clean.",
+    th9_proc_prep_2: "Electrical contact: Clean and burnish contact points to reduce electrical resistance that could impair the process.",
+
+    th9_proc_polar_h: "Polarity & Immersion",
+    th9_proc_polar_1: "Polarity: Set the nickel-coated steel work as the anode (+) and use stainless steel as the cathode (−).",
+    th9_proc_polar_2: "Immersion: Lower the work slowly into the bath to minimize entrapped bubbles and splashing.",
+
+    th9_proc_control_h: "Current/Voltage Control & Time",
+    th9_proc_control_1: "Setpoints: Apply 6–10 V with a current density of 5–25 A/dm².",
+    th9_proc_control_2: "Start-up: Ramp current gradually from low to target, and oscillate or lightly agitate the work during stripping for uniform, thorough removal.",
+
+    th9_proc_end_h: "Monitoring & End Point",
+    th9_proc_end_1: "Indications: Nickel is removed when a uniform base metal is visible without localized black film or dull patches.",
+    th9_proc_end_2: "Stop: Once fully stripped, switch off power and lift the work immediately.",
+
+    th9_proc_after_h: "Rinsing & Subsequent Steps",
+    th9_proc_after_1: "Rinsing: Perform multi-stage clean-water rinses.",
+    th9_proc_after_2: "Next steps: Proceed to re-plating (e.g., copper strike undercoat) according to the plant process plan.",
+
+    th9_proc_tip_full_label: "Tip:",
+    th9_proc_tip_full: "Tip: Trial 1–2 pilot parts first to determine optimal voltage, current, and time before running production lots.",
+
+    th9_regen_h: "Bath Regeneration",
+    th9_regen_intro_full: "Solution regeneration: Over time, dissolved metals build up and reduce efficiency; restore the bath by following these steps.",
+
+    th9_regen_step1_h: "Raise pH to Precipitate Metals",
+    th9_regen_step1_1: "Gradually raise pH to ~10 using aqueous ammonia while stirring gently.",
+    th9_regen_step1_2: "This promotes precipitation of dissolved metals from the solution.",
+
+    th9_regen_step2_h: "Settle & Decant Clear Liquor",
+    th9_regen_step2_1: "Allow solids to settle to the tank bottom (e.g., 2–8 hours).",
+    th9_regen_step2_2: "Carefully decant only the clear supernatant from the top.",
+
+    th9_regen_step3_h: "Filter & Return pH",
+    th9_regen_step3_1: "Filtration: Pass the remaining liquid through a bag filter or filter press until clear.",
+    th9_regen_step3_2: "Return pH: Adjust the filtered liquor back to pH 6–7 using acetic acid and verify quality before use.",
+
+    th9_regen_step4_h: "Replenish & Verify",
+    th9_regen_step4_1: "Replenishment: Add TH-9 proportionally to make up losses.",
+    th9_regen_step4_2: "Verification: Test the regenerated bath on actual parts to ensure the desired results.",
+
+    th9_regen_warn_h: "Cautions & Common Issues (Safety)",
+    th9_regen_warn_1: "Lead contamination: If lead dissolves into the bath, it permanently degrades performance and cannot be recovered—prevent lead contamination strictly.",
+    th9_regen_warn_2: "Sludge and rinse waters: Treat as hazardous waste; handle and dispose strictly per local regulations.",
+
+      th9_cond_h: "Required Equipment",
+      th9_cond_1: "Chemical Tank: You must use a tank made from corrosion and temperature-resistant materials like CSP, PVC, PE, or PP. For safety and to prevent chemical fumes from spreading, it should have a lid or a ventilation system.",
+      th9_cond_2: "Power Supply: You need a DC power supply that allows you to adjust the voltage and current. A sturdy rack/busbar system is essential to ensure a consistent electrical current flows to the workpiece.",
+      th9_cond_3: "Cathode and Hanging System: Use stainless steel plates for the cathode. A workpiece hanging system (rack) or a tumbling barrel is required to hold the parts, depending on their shape and size.",
+      th9_cond_4: "Fluid Management System: A multi-stage rinse tank and a stirring or agitation system are necessary for effective cleaning. A filter pump is also recommended to remove impurities from the solution.",
+      th9_cond_5: "Measurement and Adjustment Tools: Use a pH meter and pH adjusting equipment to maintain the solution's chemical balance. A thermometer is needed to keep the temperature within the recommended range.",
+      th9_cond_6: "Filtration System: For regenerating the solution, you'll need a filter bag or a filter press to remove metal precipitates. . This ensures the solution's effectiveness over time.",
+      th9_cond_note: "Layout: Place rinses adjacent to the TH-9 tank to reduce drag-in/drag-out and air exposure.",
+      th9_cond_note_label: "Layout:",
+
+         th9_trbl_h: "Common Issues & Corrective Actions",
+    th9_trbl_lead: "Below are common issues when using the electrolytic nickel stripping bath (TH-9), with plausible causes, quick checks, and practical fixes.",
+
+    th9_trbl_1_h: "Nickel not fully removed / Slow stripping",
+    th9_trbl_1_sym: "Symptom: Silver Ni remains in patches or cycle takes abnormally long",
+    th9_trbl_1_cause_h: "Possible causes",
+    th9_trbl_1_cause_1: "Low current density (A/dm² below recommended range)",
+    th9_trbl_1_cause_2: "Low voltage / high contact resistance due to dirty/oxidized clamps",
+    th9_trbl_1_cause_3: "Insufficient agitation/oscillation causing thick boundary layer and gas shielding",
+    th9_trbl_1_cause_4: "Bath aged with high dissolved metals or pH drift",
+    th9_trbl_1_fix_h: "Corrective actions",
+    th9_trbl_1_fix_1: "Ramp current: start 5–10 A/dm² then raise to 15–25 A/dm² while monitoring the surface",
+    th9_trbl_1_fix_2: "Clean/polish contacts, ensure tight clamping to lower resistance",
+    th9_trbl_1_fix_3: "Increase gentle oscillation/agitation to clear gas and reduce boundary layer",
+    th9_trbl_1_fix_4: "Check/adjust pH to 6–7; regenerate the bath if metals are high (precipitate-filter-reset pH)",
+    th9_trbl_1_note: "Spot-test a small area to benchmark removal rate before changing lot parameters",
+
+    th9_trbl_2_h: "Uneven surface / Black stains / Bubble patterns",
+    th9_trbl_2_sym: "Symptom: Some areas stripped, others still Ni; dark matte stains or bubble rings",
+    th9_trbl_2_cause_h: "Possible causes",
+    th9_trbl_2_cause_1: "Gas entrapment from fast immersion / no oscillation or geometry traps air",
+    th9_trbl_2_cause_2: "Poor current distribution (edges high current, recesses starved)",
+    th9_trbl_2_cause_3: "Soil/oil/oxide contamination from upstream",
+    th9_trbl_2_fix_h: "Corrective actions",
+    th9_trbl_2_fix_1: "Immerse slowly at an angle, keep gentle oscillation to sweep bubbles",
+    th9_trbl_2_fix_2: "Re-arrange cathode/fixture, use shields/masks to tame edge over-current",
+    th9_trbl_2_fix_3: "Improve degrease/activation; add ultrasonic if needed",
+    th9_trbl_2_note: "Deep cavities may need tailored cathodes or higher flow across the surface",
+
+    th9_trbl_3_h: "Base steel etched / dulled after stripping",
+    th9_trbl_3_sym: "Symptom: After Ni removal the steel looks dull/etched",
+    th9_trbl_3_cause_h: "Possible causes",
+    th9_trbl_3_cause_1: "Over-strip: staying in bath after Ni is gone",
+    th9_trbl_3_cause_2: "Excess current/voltage initiating reactions on base metal",
+    th9_trbl_3_cause_3: "pH out of window leading to aggressiveness",
+    th9_trbl_3_fix_h: "Corrective actions",
+    th9_trbl_3_fix_1: "Stop immediately once a uniform base appears with no Ni residues",
+    th9_trbl_3_fix_2: "Hold 6–10 V / 5–25 A/dm², use a current ramp profile",
+    th9_trbl_3_fix_3: "Verify pH 6–7 each shift before production",
+    th9_trbl_3_note: "Run coupon before/after to confirm no base attack for critical parts",
+
+    th9_trbl_4_h: "Black film / powder remains after stripping",
+    th9_trbl_4_sym: "Symptom: Dark film/powder clings to surface even when Ni is removed",
+    th9_trbl_4_cause_h: "Possible causes",
+    th9_trbl_4_cause_1: "Reaction products deposited due to poor flow/rinse",
+    th9_trbl_4_cause_2: "High dissolved metals without filtration/regeneration",
+    th9_trbl_4_fix_h: "Corrective actions",
+    th9_trbl_4_fix_1: "Increase agitation/oscillation and rinse through multiple stages immediately after power off",
+    th9_trbl_4_fix_2: "Enable in-line filtration and schedule periodic regeneration",
+    th9_trbl_4_note: "Avoid foreign solvents—residues can hinder subsequent plating",
+
+    th9_trbl_5_h: "Vigorous foaming / splashing / local boiling",
+    th9_trbl_5_sym: "Symptom: Excess foam and risk of splash/alkaline stains",
+    th9_trbl_5_cause_h: "Possible causes",
+    th9_trbl_5_cause_1: "Too fast immersion / voltage set high immediately",
+    th9_trbl_5_cause_2: "Sharp edges causing localized high current density",
+    th9_trbl_5_fix_h: "Corrective actions",
+    th9_trbl_5_fix_1: "Immerse slowly with a current ramp from low to high",
+    th9_trbl_5_fix_2: "Use shields/masks and adjust anode-cathode spacing",
+    th9_trbl_5_note: "Install splash guards and fume extraction for EHS",
+
+    th9_trbl_6_h: "Unstable current / hot contact points",
+    th9_trbl_6_sym: "Symptom: Current swings, hot clamps, sparking",
+    th9_trbl_6_cause_h: "Possible causes",
+    th9_trbl_6_cause_1: "Dirty/oxidized contacts; undersized leads/busbars",
+    th9_trbl_6_cause_2: "Loose clamping and excess motion",
+    th9_trbl_6_fix_h: "Corrective actions",
+    th9_trbl_6_fix_1: "Clean/polish contacts; verify cable/busbar sizing for load",
+    th9_trbl_6_fix_2: "Tighten clamps and mechanically support parts",
+    th9_trbl_6_note: "Log V/A during runs to build a baseline for anomaly detection",
+
+    th9_trbl_7_h: "pH drift / out of range",
+    th9_trbl_7_sym: "Symptom: Stripping efficiency drops or surface dulls with correct current",
+    th9_trbl_7_cause_h: "Possible causes",
+    th9_trbl_7_cause_1: "Drag-in/drag-out from adjacent tanks; carbonate or ammonia loss",
+    th9_trbl_7_fix_h: "Corrective actions",
+    th9_trbl_7_fix_1: "Check pH each shift/lot and adjust with acetic acid or ammonium hydroxide to 6–7",
+    th9_trbl_7_fix_2: "Place rinse tanks adjacent to TH-9 and enforce multi-stage rinsing",
+    th9_trbl_7_note: "Use calibrated meters to reduce measurement error",
+
+    th9_trbl_8_h: "Rapid bath aging / high dissolved metals",
+    th9_trbl_8_sym: "Symptom: Stripping slows; requires higher current than normal",
+    th9_trbl_8_cause_h: "Possible causes",
+    th9_trbl_8_cause_1: "No scheduled regeneration; no in-line filtration",
+    th9_trbl_8_cause_2: "Lead/solder contamination causing permanent degradation",
+    th9_trbl_8_fix_h: "Corrective actions",
+    th9_trbl_8_fix_1: "Regenerate: raise pH ~10 → settle → filter → reset pH 6–7 → replenish",
+    th9_trbl_8_fix_2: "Segregate lead/soldered parts from TH-9; enforce contamination control",
+    th9_trbl_8_note: "Treat sludge and rinses as hazardous waste per local regulations",
+
+      th9_safety_h: "Safety (EHS)",
+      th9_safety_lead: "Use by trained personnel only. Wear full PPE (chemical gloves, safety goggles, appropriate respirator), ensure good ventilation, store/dispose wastes per local laws, and drill emergency plans regularly.",
+      th9_safety_lead_strong: "Use by trained personnel only",
+      th9_safety_1: "De-energize/lockout before maintenance (Lockout/Tagout)",
+      th9_safety_2: "Always add acid to water; store acids/alkalis separately",
+      th9_safety_3: "Label tanks, solutions, and polarity clearly to reduce errors",
+      th9_safety_4: "Provide emergency shower/eyewash near work area",
 
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
