@@ -295,7 +295,18 @@
       position:relative; overflow:hidden; min-height: clamp(380px, 56vh, 520px);
       display:grid; place-items:center; color:#fff; border-radius:16px; margin:12px 0;
     }
-    .parallax:first-of-type{ padding-top: var(--header-h); } /* กัน header ทับ hero แรก */
+    /* เดิมมี padding-top กัน header ทับ ให้เอาออก แล้วทำให้ชิดหัวเว็บจริงๆ */
+.parallax:first-of-type{
+  margin-top: 0;       /* ตัดช่องว่าง 12px บนสุดของ hero แรก */
+  border-radius: 0;    /* ตัดมุมโค้งบนสุด ไม่ให้ดูเว้า */
+  /* padding-top: var(--header-h);  <-- ลบทิ้ง */
+}
+
+/* ดันเฉพาะ “คอนเทนต์” ของ hero ลงมาให้พ้น header ที่ fixed แทน */
+.parallax:first-of-type .parallax-content{
+  padding-top: calc(24px + var(--header-h));
+}
+
     .parallax .px-layer{
       position:absolute; inset:-6% 0; background-size:cover; background-position:center;
       filter: brightness(.78); transform: translate3d(0,var(--py,0px),0) scale(1.08);
@@ -412,11 +423,6 @@
   <!-- === HERO (Parallax) === -->
   <section class="parallax" aria-label="บทความ & คู่มือ">
     <div class="px-layer" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg')"></div>
-
-    <!-- ปุ่มกลับ -->
-    <a id="back-chip" class="back-chip" href="https://www.baumechemical.com/" role="button" aria-label="Back to Home">
-      <i class="fa-solid fa-arrow-left"></i><span data-i18n-key="back_text">กลับเมนูหลัก</span>
-    </a>
 
     <div class="parallax-content">
       <h1 class="hero-title" data-i18n-key="hero_title">บทความและคู่มือ</h1>
