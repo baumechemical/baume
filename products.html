@@ -4,45 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ===== SEO (with IDs for language switch) ===== -->
-  <title id="metaTitle">ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical</title>
-  <meta id="metaDesc" name="description" content="รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing พร้อมทีมเทคนิคและบริการหน้างาน.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- ==== SEO Core (Products overview; single-URL i18n) ==== -->
+  <title id="metaTitle">ผลิตภัณฑ์เคมีงานชุบโลหะครบวงจร | Pretreatment • Plating • Blackening • Passivation | Baume Chemical</title>
+  <meta id="metaDesc" name="description" content="รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว: Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing, Protective, Equipment และ Service — พร้อมทีมเทคนิคและบริการหน้างาน.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.baumechemical.com/products.html">
+  <meta name="theme-color" content="#2c5e4e">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
-  <meta name="theme-color" content="#2c5e4e">
+  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" id="ogTitle" content="ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical">
-  <meta property="og:description" id="ogDesc" content="โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน">
   <meta property="og:url" content="https://www.baumechemical.com/products.html">
+  <meta property="og:locale" id="ogLocale" content="th_TH">
+  <meta property="og:title" id="ogTitle" content="ผลิตภัณฑ์เคมีงานชุบโลหะครบวงจร | Baume Chemical">
+  <meta property="og:description" id="ogDesc" content="โซลูชันเคมีงานชุบและการเตรียมผิวครบหมวด พร้อมคำปรึกษาและทดสอบหน้างาน.">
   <meta property="og:image" content="https://i.imgur.com/3xwVLZZ.jpeg">
+  <meta property="og:image:secure_url" content="https://i.imgur.com/3xwVLZZ.jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Baume Chemical — Electroplating & Surface Preparation">
-  <meta property="og:locale" id="ogLocale" content="th_TH">
-  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" id="twTitle" content="ผลิตภัณฑ์เคมีงานชุบ โลหะ รมดำ พาสซิเวชัน | Baume Chemical">
-  <meta name="twitter:description" id="twDesc" content="โซลูชันเคมีงานชุบครบวงจร พร้อมคำปรึกษาและทดสอบหน้างาน">
+  <meta name="twitter:title" id="twTitle" content="ผลิตภัณฑ์เคมีงานชุบโลหะครบวงจร | Baume Chemical">
+  <meta name="twitter:description" id="twDesc" content="Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing, Protective, Equipment, Service.">
   <meta name="twitter:image" content="https://i.imgur.com/3xwVLZZ.jpeg">
 
   <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- โหลด 400,600,700,800 ให้ครบ -->
+  <link rel="preconnect" href="https://i.imgur.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="preload" as="image" href="https://i.imgur.com/3xwVLZZ.jpeg">
 
   <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
+  <script id="ld-org" type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Organization",
@@ -53,8 +55,8 @@
   }
   </script>
 
-  <!-- JSON-LD: Products CollectionPage -->
-  <script type="application/ld+json">
+  <!-- JSON-LD: Products CollectionPage (+ ItemList for categories) -->
+  <script id="ld-products" type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
@@ -62,41 +64,45 @@
     "url":"https://www.baumechemical.com/products.html",
     "inLanguage":"th",
     "isPartOf":{"@type":"WebSite","url":"https://www.baumechemical.com/","name":"Baume Chemical"},
-    "description":"รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing"
+    "description":"รวมผลิตภัณฑ์เคมีงานชุบและการเตรียมผิว Pretreatment, Plating, Blackening, Passivation, Strippers, Polishing, Protective, Equipment, Service",
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListOrder":"ItemListOrderAscending",
+      "numberOfItems":9,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/"},
+        {"@type":"ListItem","position":2,"name":"Plating & Coating","url":"https://www.baumechemical.com/products/platingcoating/"},
+        {"@type":"ListItem","position":3,"name":"Blackening","url":"https://www.baumechemical.com/products/blackening/"},
+        {"@type":"ListItem","position":4,"name":"Passivation","url":"https://www.baumechemical.com/products/passivation/"},
+        {"@type":"ListItem","position":5,"name":"Polishing","url":"https://www.baumechemical.com/products/polishing/"},
+        {"@type":"ListItem","position":6,"name":"Strippers","url":"https://www.baumechemical.com/products/strippers/"},
+        {"@type":"ListItem","position":7,"name":"Protective (Anti-Tarnish & Lacquer)","url":"https://www.baumechemical.com/products/protective/"},
+        {"@type":"ListItem","position":8,"name":"Service","url":"https://www.baumechemical.com/products/service/"},
+        {"@type":"ListItem","position":9,"name":"Equipment","url":"https://www.baumechemical.com/products/equipment/"}
+      ]
+    },
+    "hasPart":[
+      {"@type":"WebPage","name":"Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/"},
+      {"@type":"WebPage","name":"Plating & Coating","url":"https://www.baumechemical.com/products/platingcoating/"},
+      {"@type":"WebPage","name":"Blackening","url":"https://www.baumechemical.com/products/blackening/"},
+      {"@type":"WebPage","name":"Passivation","url":"https://www.baumechemical.com/products/passivation/"},
+      {"@type":"WebPage","name":"Polishing","url":"https://www.baumechemical.com/products/polishing/"},
+      {"@type":"WebPage","name":"Strippers","url":"https://www.baumechemical.com/products/strippers/"},
+      {"@type":"WebPage","name":"Protective (Anti-Tarnish & Lacquer)","url":"https://www.baumechemical.com/products/protective/"},
+      {"@type":"WebPage","name":"Service","url":"https://www.baumechemical.com/products/service/"},
+      {"@type":"WebPage","name":"Equipment","url":"https://www.baumechemical.com/products/equipment/"}
+    ]
   }
   </script>
 
   <!-- JSON-LD: Breadcrumb Home → Products -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1,
-        "name": "Home", "item": "https://www.baumechemical.com/" },
-      { "@type": "ListItem", "position": 2,
-        "name": "Products", "item": "https://www.baumechemical.com/products.html" }
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD: ItemList of product categories -->
-  <script type="application/ld+json">
-  {
     "@context":"https://schema.org",
-    "@type":"ItemList",
-    "itemListOrder":"http://schema.org/ItemListOrderAscending",
-    "numberOfItems": 9,
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"name":"Pretreatment","url":"https://www.baumechemical.com/products/pretreatment.html"},
-      {"@type":"ListItem","position":2,"name":"Plating","url":"https://www.baumechemical.com/products/platingcoating.html"},
-      {"@type":"ListItem","position":3,"name":"Blackening","url":"https://www.baumechemical.com/products/blackening.html"},
-      {"@type":"ListItem","position":4,"name":"Passivation","url":"https://www.baumechemical.com/products/passivation.html"},
-      {"@type":"ListItem","position":5,"name":"Polishing","url":"https://www.baumechemical.com/products/polishing.html"},
-      {"@type":"ListItem","position":6,"name":"Strippers","url":"https://www.baumechemical.com/products/strippers.html"},
-      {"@type":"ListItem","position":7,"name":"Protective Treatment","url":"https://www.baumechemical.com/products/protective.html"},
-      {"@type":"ListItem","position":8,"name":"Customer service","url":"https://www.baumechemical.com/products/service.html"},
-      {"@type":"ListItem","position":9,"name":"Equipment","url":"https://www.baumechemical.com/products/equipment.html"}
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products.html"}
     ]
   }
   </script>
