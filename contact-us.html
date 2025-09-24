@@ -312,6 +312,22 @@
     .map-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
     .map-actions .btn[data-i18n-key="map_open"]{ font-weight: 600 !important; }
 
+    /* === Card bottom accent (green strip) === */
+.card, .why{                 /* อยากให้ทั้งการ์ดใหญ่และการ์ด .why มีขอบ */
+  position: relative;
+  overflow: hidden;          /* ให้มุมโค้งครอบแถบไว้ */
+}
+.card::after,
+.why::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:4px;                /* ปรับความหนาได้ */
+  background:linear-gradient(90deg, var(--brand-2), #59a286, #9bd4b9);
+  opacity:.9;
+}
+
+
     /* ===== Footer (template) ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:28px}
     .site-footer a{color:#e2e8f0; text-decoration:none}

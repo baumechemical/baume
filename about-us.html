@@ -253,6 +253,22 @@
     .btn{appearance:none; border:1px solid var(--accent); background:var(--accent); color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; cursor:pointer; text-decoration:none}
     .btn.outline{background:transparent; color:#fff; border-color:#cfe7dc}
 
+    /* === Card bottom accent (green strip) === */
+.card, .why{                 /* อยากให้ทั้งการ์ดใหญ่และการ์ด .why มีขอบ */
+  position: relative;
+  overflow: hidden;          /* ให้มุมโค้งครอบแถบไว้ */
+}
+.card::after,
+.why::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:4px;                /* ปรับความหนาได้ */
+  background:linear-gradient(90deg, var(--brand-2), #59a286, #9bd4b9);
+  opacity:.9;
+}
+
+
     /* ===== FOOTER ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
     .site-footer a{color:#e2e8f0; text-decoration:none}
@@ -400,20 +416,20 @@
       <li><i class="fa-solid fa-graduation-cap"></i><span data-i18n-key="vision_2">พัฒนาความรู้ความสามารถด้านเทคนิคและเทคโนโลยี เพื่อสนองต่อความต้องการของลูกค้าอย่างกว้างขวาง</span></li>
       <li><i class="fa-solid fa-people-carry-box"></i><span data-i18n-key="vision_3">สนับสนุนและคอยช่วยเหลือลูกค้าในการพัฒนางานชุบเพื่อการแข่งขันทางธุรกิจ</span></li>
     </ul>
-  </section>
+  </section><br>
 
-  <!-- ===== Gallery ===== -->
-  <section class="wrap" aria-label="ภาพรวมการทำงานและอุปกรณ์">
-    <h2 class="section" data-i18n-key="gallery_title">แล็บ อุปกรณ์ และไลน์งาน</h2>
-    <p class="lead" data-i18n-key="gallery_lead">ตัวอย่างบางส่วนจากห้องแล็บ อุปกรณ์ทดสอบ และไลน์ชุบที่เกี่ยวข้อง</p>
-    <div class="gallery">
-      <img class="wide" src="https://img2.pic.in.th/pic/V4e2a4e1653dd0da26.jpg" alt="ระบบท่อ/คอมเพรสเซอร์" loading="lazy" decoding="async">
-      <img src="https://img2.pic.in.th/pic/Se4.jpg" alt="พื้นที่ผลิต/เครื่องจักร" loading="lazy" decoding="async">
-      <img src="https://img2.pic.in.th/pic/V1df119dbb32a89d89.jpg" alt="อัลตราโซนิกคลีนเนอร์" loading="lazy" decoding="async">
-      <img src="https://img5.pic.in.th/file/secure-sv1/V2676ed70008b34059.jpg" alt="ระบบยูทิลิตี้โรงงาน" loading="lazy" decoding="async">
-      <img src="https://img5.pic.in.th/file/secure-sv1/V8.jpg" alt="ระบบยูทิลิตี้โรงงาน" loading="lazy" decoding="async">
-    </div>
-  </section>
+<!-- ===== Gallery ===== -->
+<section class="wrap card" aria-label="ภาพรวมการทำงานและอุปกรณ์">
+  <h2 class="section" data-i18n-key="gallery_title">แล็บ อุปกรณ์ และไลน์งาน</h2>
+  <p class="lead" data-i18n-key="gallery_lead">ตัวอย่างบางส่วนจากห้องแล็บ อุปกรณ์ทดสอบ และไลน์ชุบที่เกี่ยวข้อง</p>
+  <div class="gallery">
+    <img class="wide" src="https://img2.pic.in.th/pic/V4e2a4e1653dd0da26.jpg" alt="ระบบท่อ/คอมเพรสเซอร์" loading="lazy" decoding="async">
+    <img src="https://img2.pic.in.th/pic/Se4.jpg" alt="พื้นที่ผลิต/เครื่องจักร" loading="lazy" decoding="async">
+    <img src="https://img2.pic.in.th/pic/V1df119dbb32a89d89.jpg" alt="อัลตราโซนิกคลีนเนอร์" loading="lazy" decoding="async">
+    <img src="https://img5.pic.in.th/file/secure-sv1/V2676ed70008b34059.jpg" alt="ระบบยูทิลิตี้โรงงาน" loading="lazy" decoding="async">
+    <img src="https://img5.pic.in.th/file/secure-sv1/V8.jpg" alt="ระบบยูทิลิตี้โรงงาน" loading="lazy" decoding="async">
+  </div>
+</section>
 
   <!-- ===== Bottom CTA Parallax ===== -->
   <section class="parallax" aria-label="ติดต่อทีมงาน">
