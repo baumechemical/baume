@@ -262,6 +262,15 @@
     .modal-close{position:absolute; top:10px; right:10px; background:#ffffff; border:1px solid #e2e8f0; border-radius:999px; padding:6px 10px; font-weight:800; cursor:pointer}
     @media(max-width:860px){ .modal{grid-template-columns:1fr} .modal .left{aspect-ratio:16/9} }
 
+    /* Make all buttons in Quick View modal green */
+.modal .btn,
+.modal .btn.ghost{
+  border-color: var(--accent);
+  background: var(--accent);
+  color:#fff;
+}
+
+
     /* ===== Skeleton ===== */
     .skeleton{background:#fff; border:1px solid #e6ecf3; border-radius:var(--radius); overflow:hidden}
     .sk-thumb{width:100%; aspect-ratio:3/4; background:linear-gradient(90deg,#edf2f7 25%,#f6f8fb 37%,#edf2f7 63%); background-size:400% 100%; animation:shimmer 1.2s infinite}
@@ -521,14 +530,14 @@ const PRODUCTS = [
     id:"pretreatment", cat:"pretreatment", pop:1,
     name:{ th:"เคมีล้างผิวงาน | Pretreatment & Cleaning", en:"Pretreatment & Cleaning Chemicals" },
     desc:{ th:"ยาล้างไขมันแบบกรด/ด่าง และอัลตร้าโซนิค เตรียมผิวก่อนชุบ ลดคราบน้ำมัน/สนิม",
-           en:"Acid/alkaline degreasers and ultrasonic cleaners. Prepare surfaces before plating; remove oils and rust." },
+           en:"Acid/Alkaline degreasers and Ultrasonic cleaners. Prepare surfaces before plating; remove oils and rust." },
     tags:{ th:["pretreatment","cleaning","degreaser","ล้างไขมัน","ultrasonic","acid","alkaline"],
            en:["pretreatment","cleaning","degreaser","ultrasonic","acid","alkaline"] },
     img:"https://i.imgur.com/QfsLZ0I.jpeg",
     href:"products/pretreatment/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: เคมีล้างผิวงาน",
     tds:"https://www.baumechemical.com/docs/tds/pretreatment-cleaning.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"Acid 1-3 Alkaline 10-13 ", temp:"60-80", current:"3-10 A/dm²"}
   },
   {
     id:"plating", cat:"plating", pop:2,
@@ -541,7 +550,7 @@ const PRODUCTS = [
     href:"products/platingcoating/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: น้ำยาชุบโลหะ",
     tds:"https://www.baumechemical.com/docs/tds/metal-plating.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"-", temp:"-", current:"-"}
   },
   {
     id:"blackening", cat:"blackening", pop:3,
@@ -554,7 +563,7 @@ const PRODUCTS = [
     href:"products/blackening/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: น้ำยารมดำ",
     tds:"https://www.baumechemical.com/docs/tds/blackening.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"2-5", temp:"Room temperature", current:"—"}
   },
   {
     id:"passivation", cat:"passivation", pop:4,
@@ -567,7 +576,7 @@ const PRODUCTS = [
     href:"products/passivation/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: โครเมตบนซิงค์",
     tds:"https://www.baumechemical.com/docs/tds/passivation-zinc.pdf",
-    specs:{ph:"—", temp:"—", current:"—"},
+    specs:{ph:"1.5-2.5", temp:"Room temperature", current:"—"},
     swatches:["#b7d3ff","#ffe07a","#3b3b3b","#a5b38b"]
   },
   {
@@ -581,7 +590,7 @@ const PRODUCTS = [
     href:"products/strippers/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: น้ำยาลอกต่างๆ",
     tds:"https://www.baumechemical.com/docs/tds/selective-strippers.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"12-14", temp:"50-70", current:"2–6 A/dm²"}
   },
   {
     id:"polishing", cat:"polishing", pop:6,
@@ -594,7 +603,7 @@ const PRODUCTS = [
     href:"products/polishing/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: น้ำยากัดเงา",
     tds:"https://www.baumechemical.com/docs/tds/chemical-polishing.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"<1", temp:"Aluminium 65–80 °C", current:"1–3 A/dm²"}
   },
   {
     id:"protective", cat:"protective", pop:7,
@@ -607,7 +616,7 @@ const PRODUCTS = [
     href:"products/protective/index.html",
     mail:"mailto:contact@baumechemical.com?subject=ขอใบเสนอราคา: น้ำยารักษาผิวชุบให้คงทน",
     tds:"https://www.baumechemical.com/docs/tds/protective-treatment.pdf",
-    specs:{ph:"—", temp:"—", current:"—"}
+    specs:{ph:"2.5–6", temp:"70–95", current:"0.5–2.0 A/dm²"}
   },
   {
     id:"service", cat:"service", pop:8,
