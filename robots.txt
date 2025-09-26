@@ -2,11 +2,23 @@
 User-agent: *
 Allow: /
 
-# บล็อกหน้าระบบ/ซ้ำที่ไม่อยากให้ไต่
+# บล็อกโฟลเดอร์ระบบจริงๆ
 Disallow: /admin/
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*?*    # กันพารามิเตอร์ที่ทำให้ซ้ำ (ถ้าเว็บมีหน้าค้นหาสำคัญ ให้เอาบรรทัดนี้ออก)
 
-# ชี้ไปที่ sitemap
+# (ไม่) แนะบล็อกทุกพารามิเตอร์ด้วย /*?*
+# เพราะเว็บนายมีพารามิเตอร์ที่ใช้จริง เช่น ?part=1/2, อาจมี ?lang=
+# ให้ใช้ canonical ภายในหน้าแทน และคง internal link ให้ชี้เวอร์ชัน canonical
+
+# ถ้าจะกันเฉพาะพารามิเตอร์ติดตาม (ไม่กระทบคอนเทนต์) ใส่แบบเจาะจงได้
+Disallow: /*?utm_
+Disallow: /*&utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# ชี้ Sitemap "ตัวเดียว" ไปที่ index ก็พอ
 Sitemap: https://www.baumechemical.com/sitemap.xml
+Sitemap: https://www.baumechemical.com/sitemap-pages.xml
+Sitemap: https://www.baumechemical.com/sitemap-products.xml
+Sitemap: https://www.baumechemical.com/sitemap-blog.xml

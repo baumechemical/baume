@@ -1,74 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- ===== Core pages ===== -->
-  <url>
-    <loc>https://www.baumechemical.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://www.baumechemical.com/about-us.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://www.baumechemical.com/products.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://www.baumechemical.com/contact-us.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-
-  <!-- ===== Product hubs ===== -->
-  <url>
-    <loc>https://www.baumechemical.com/products/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-  <url><loc>https://www.baumechemical.com/products/pretreatment/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/platingcoating/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-06</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/blackening/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/passivation/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/polishing/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/strippers/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/protective/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/products/equipment/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-
-  <!-- ===== Blog index ===== -->
-  <url>
-    <loc>https://www.baumechemical.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-09-05</lastmod>
-  </url>
-
-  <!-- ===== Blog posts (ที่มีบนเว็บ) ===== -->
-  <url><loc>https://www.baumechemical.com/blog/aluminum-electropolishing/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/anti-tarnish-selection/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/plating-peeling-troubleshooting/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/zinc-passivation-color-control/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/blackening-uniform-matte/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/salt-spray-quick-guide/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/brass-bright-dip-laser-b/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/brass-plating-on-steel-copper/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/stannous-sulfate-chloride/index.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-06</lastmod></url>
-
-  <!-- ===== Blog posts (กลุ่มหัวข้อที่ขึ้นในดัชนีบล็อก — เพิ่มไว้ให้ครบชุด) ===== -->
-  <url><loc>https://www.baumechemical.com/blog/ecat-common-problems/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/nickel-plating-common-issues/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/nickel-troubleshooting</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/plating-basics/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/zinc-chromate-3-vs-6/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/zinc-line-setup/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/zinc-plating-troubleshooting-hub/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-05</lastmod></url>
-  <url><loc>https://www.baumechemical.com/blog/sealer-for-trivalent-chromate/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-05</lastmod></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.baumechemical.com/sitemap-pages.xml</loc>
+    <lastmod>2025-09-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.baumechemical.com/sitemap-products.xml</loc>
+    <lastmod>2025-09-26</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.baumechemical.com/sitemap-blog.xml</loc>
+    <lastmod>2025-09-26</lastmod>
+  </sitemap>
+</sitemapindex>

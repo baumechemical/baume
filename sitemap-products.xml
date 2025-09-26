@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ===== Product hubs (หมวดหลัก) ===== -->
+  <url><loc>https://www.baumechemical.com/products/pretreatment/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/platingcoating/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/blackening/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/passivation/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/polishing/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/strippers/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/protective/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/equipment/</loc><changefreq>monthly</changefreq><priority>0.8</priority><lastmod>2025-09-26</lastmod></url>
+
+  <!-- ===== Passivation (หน้าเนื้อหาย่อยที่มีอยู่) ===== -->
+  <url><loc>https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc.html</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/passivation/troubleshootingtrivalentchromeblack.html</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+
+  <!-- ===== Polishing ===== -->
+  <url><loc>https://www.baumechemical.com/products/polishing/aluminum-electropolishing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/polishing/brass-copper-nickel-desmut.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/polishing/stainless-brightening.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/polishing/steel-polish.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/polishing/zinc-lead-deoxidizing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+
+  <!-- ===== Strippers ===== -->
+  <url><loc>https://www.baumechemical.com/products/strippers/stripper-steel.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/strippers/stripper-brass.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+
+  <!-- ===== Protective ===== -->
+  <url><loc>https://www.baumechemical.com/products/protective/anti-tarnish-for-copper.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/protective/anti-tarnish-bu-20.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/protective/tin-anti-tarnish-b100.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/protective/anti-tarnish-bu-186.html</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2025-09-26</lastmod></url>
+
+  <!-- ===== Equipment ===== -->
+  <url><loc>https://www.baumechemical.com/products/equipment/lab-reagent.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/equipment/lab-instruments.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2025-09-26</lastmod></url>
+  <url><loc>https://www.baumechemical.com/products/equipment/line-setup.html</loc><changefreq>monthly</changefreq><priority>0.5</priority><lastmod>2025-09-26</lastmod></url>
+</urlset>
