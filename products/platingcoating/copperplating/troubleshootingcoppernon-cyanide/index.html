@@ -67,7 +67,14 @@
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
     /* ===== Header (glass) ===== */
-    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
+    .site-header{
+  position:fixed;
+  top:0; left:0; right:0;           /* fallback แทน inset */
+  z-index:1400;
+  background:transparent;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease;
+}
     .site-header.is-scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:var(--header-h)}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -103,7 +110,11 @@
 
     .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
     .menu-scrim:not([hidden]){display:block}
-    body.no-scroll{position:fixed;width:100%}
+    body.no-scrollbody.no-scroll{
+  position:fixed;
+  left:0; right:0; width:auto;      /* แทน width:100% ป้องกัน jump */
+  overflow:hidden;                  /* กันสกรอลล์พื้นหลัง */
+}
 
     /* ===== Hero ===== */
     .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),url('https://i.imgur.com/wNkzTxE.jpeg') center/cover no-repeat;padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
@@ -341,6 +352,7 @@
     <p class="features__desc" data-i18n-key="feat_6_d">สามารถใช้งานได้ในบ่อแบบถังกลิ้งที่หมุนที่ 3–5 rpm หรือในบ่อแบบแขวนที่ใช้การกรองต่อเนื่อง</p>
   </article>
 </div>
+</section>
 
 <!-- Purpose -->
 <section id="purpose" class="reveal section-block" aria-labelledby="purpose-h">
@@ -881,73 +893,94 @@
   </script>
 
   <!-- Header glass / mobile menu / highlight current / smart back -->
-  <script>
-    (function(){
-      const header = document.getElementById('siteHeader');
-      const toggle = header?.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-nav');
-      const scrim = document.querySelector('.menu-scrim');
+<script>
+(function(){
+  var header = document.getElementById('siteHeader');
+  var toggle = header ? header.querySelector('.nav-toggle') : null;
+  var nav = document.getElementById('primary-nav');
+  var scrim = document.querySelector('.menu-scrim');
 
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
-      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
-      window.addEventListener('load', setH, {once:true});
-      window.addEventListener('resize', setH, {passive:true});
-      window.addEventListener('scroll', onScroll, {passive:true});
-      setH(); onScroll();
+  function setH(){
+    try{
+      var h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
+    }catch(e){}
+  }
+  function onScroll(){
+    if(!header) return;
+    var y = window.scrollY || 0;
+    if (y > 10) header.classList.add('is-scrolled'); else header.classList.remove('is-scrolled');
+  }
 
-      if(toggle && nav && scrim){
-        let lockY = 0;
-        function openMenu(v){
-          header.classList.toggle('open', v);
-          toggle.setAttribute('aria-expanded', String(v));
-          nav.setAttribute('aria-hidden', String(!v));
-          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
-          if(v){
-            lockY = window.scrollY;
-            document.body.classList.add('no-scroll');
-            document.body.style.top = `-${lockY}px`;
-            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
-            first && first.focus({preventScroll:true});
-          }else{
-            document.body.classList.remove('no-scroll');
-            document.body.style.top = '';
-            window.scrollTo(0, lockY);
-            toggle?.focus({preventScroll:true});
-          }
-        }
-        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
-        scrim.addEventListener('click', ()=> openMenu(false));
-        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
-        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
-        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
-      }
+  window.addEventListener('load', setH, {once:true});
+  window.addEventListener('resize', setH);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  setH(); onScroll();
 
-      // highlight current
+  function openMenu(v){
+    if(!header || !toggle || !nav || !scrim) return;
+    header.classList.toggle('open', v);
+    toggle.setAttribute('aria-expanded', String(v));
+    nav.setAttribute('aria-hidden', String(!v));
+    if (v){ scrim.removeAttribute('hidden'); }
+    else { scrim.setAttribute('hidden',''); }
+
+    if (v){
+      // body-lock: กันจอเด้ง
+      var lockY = window.scrollY || 0;
+      document.body.dataset.lockY = String(lockY);
+      document.body.classList.add('no-scroll');
+      document.body.style.top = '-' + lockY + 'px';
+      // โฟกัสลิงก์แรก
+      var first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+      if (first && first.focus) first.focus({preventScroll:true});
+    }else{
+      var ly = parseInt(document.body.dataset.lockY || '0', 10);
+      document.body.classList.remove('no-scroll');
+      document.body.style.top = '';
+      window.scrollTo(0, ly);
+      if (toggle && toggle.focus) toggle.focus({preventScroll:true});
+    }
+  }
+
+  if (toggle && nav && scrim){
+    toggle.addEventListener('click', function(){ openMenu(!header.classList.contains('open')); });
+    scrim.addEventListener('click', function(){ openMenu(false); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && header.classList.contains('open')) openMenu(false); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); });
+    // ปิดเมนูเมื่อคลิกลิงก์
+    var links = nav.querySelectorAll('a');
+    for (var i=0;i<links.length;i++){ links[i].addEventListener('click', function(){ openMenu(false); }); }
+  }
+
+  // highlight current (เลี่ยง ?. )
+  try{
+    var here = (location.pathname || '').replace(/\/+$/,'');
+    var isProducts = here.indexOf('/products') === 0;
+    var navLinks = nav ? nav.querySelectorAll('a') : [];
+    for (var j=0;j<navLinks.length;j++){
+      var a = navLinks[j];
+      var path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+      if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+      else if (here === path) a.setAttribute('aria-current','page');
+      else a.removeAttribute('aria-current');
+    }
+  }catch(e){}
+
+  // smart back
+  (function(){
+    var btn = document.querySelector('.back-chip');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){
       try{
-        const here = location.pathname.replace(/\/+$/,'');
-        const isProducts = here.startsWith('/products');
-        nav?.querySelectorAll('a').forEach(a=>{
-          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
-          else if (here === path) a.setAttribute('aria-current','page');
-          else a.removeAttribute('aria-current');
-        });
-      }catch(e){}
-
-      // smart back
-      (function(){
-        const btn = document.querySelector('.back-chip');
-        if(!btn) return;
-        btn.addEventListener('click', function(e){
-          try{
-            const ref = document.referrer;
-            const sameOrigin = ref && new URL(ref).origin === location.origin;
-            if(sameOrigin){ e.preventDefault(); history.back(); }
-          }catch(err){}
-        });
-      })();
-    })();
-  </script>
+        var ref = document.referrer;
+        var sameOrigin = ref && (new URL(ref)).origin === location.origin;
+        if (sameOrigin){ e.preventDefault(); history.back(); }
+      }catch(err){}
+    });
+  })();
+})();
+</script>
 
   <!-- Scroll-spy for TOC + heading anchors -->
   <script>
