@@ -25,22 +25,6 @@
   <meta property="og:image" content="https://i.imgur.com/wNkzTxE.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org/",
-    "@type":"Product",
-    "name":"Copperlume 220 — Non-Cyanide Alkaline Copper",
-    "description":"น้ำยาชุบทองแดงด่างปลอดไซยาไนด์สำหรับชั้นรองพื้น ยึดเกาะเยี่ยม เข้าซอกสูง คุมง่าย พร้อมสูตร Make-up และพารามิเตอร์",
-    "image":"https://i.imgur.com/wNkzTxE.jpeg",
-    "brand":{"@type":"Brand","name":"Baume Chemical"},
-    "category":"Alkaline Copper Plating",
-    "inLanguage":"th",
-    "offers":{"@type":"Offer","url":"https://www.baumechemical.com/products/platingcoating/copperplating/troubleshootingcoppernon-cyanide/index.html","priceCurrency":"THB","price":"0.00","availability":"https://schema.org/InStock"},
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"}
-  }
-  </script>
-
   <!-- Fonts & Preloads -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,7 +94,7 @@
 
     .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
     .menu-scrim:not([hidden]){display:block}
-    body.no-scrollbody.no-scroll{
+    body.no-scroll{
   position:fixed;
   left:0; right:0; width:auto;      /* แทน width:100% ป้องกัน jump */
   overflow:hidden;                  /* กันสกรอลล์พื้นหลัง */
@@ -235,8 +219,31 @@
     .bold-text {
   font-weight: bold;
 }
-
   </style>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Product",
+  "name":"Copperlume 220 — Non-Cyanide Alkaline Copper",
+  "description":"น้ำยาชุบทองแดงด่างปลอดไซยาไนด์สำหรับชั้นรองพื้น ยึดเกาะเยี่ยม เข้าซอกสูง คุมง่าย พร้อมสูตร Make-up และพารามิเตอร์",
+  "image":"https://i.imgur.com/wNkzTxE.jpeg",
+  "brand":{
+    "@type":"Brand",
+    "name":"Baume Chemical",
+    "alternateName":["Baume Chemical","Baume"]
+  },
+  "category":"Alkaline Copper Plating",
+  "inLanguage":"th",
+  "offers":{
+    "@type":"Offer",
+    "url":"https://www.baumechemical.com/products/platingcoating/copperplating/troubleshootingcoppernon-cyanide/index.html",
+    "priceCurrency":"THB",
+    "price":"0.00",
+    "availability":"https://schema.org/InStock"
+  },
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"}
+}
+</script> 
 </head>
 <body>
 
@@ -1041,5 +1048,3 @@
   </script>
 </body>
 </html>
-
-
