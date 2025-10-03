@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n-key="title">การชุบซิงค์ไซยาไนด์ — Brightener Zinc 111B | Baume Chemical Blog</title>
+  <title data-i18n-key="title">การชุบซิงค์ไซยาไนด์ — Brightener Zinc 111B | Baume Chemical</title>
 
   <!-- SEO base -->
   <meta name="description" content="การชุบซิงค์ไซยาไนด์: หลักการทำงาน จุดเด่น ฟีเจอร์ 6 ข้อ สูตร/สัดส่วนบ่อ ข้อกำหนดถัง การเตรียมบ่อ การบำรุงรักษา การเติม 111B แนวทางแก้ปัญหา และความปลอดภัย">
@@ -23,6 +23,8 @@
   <meta property="og:description" content="ฟีเจอร์ 6 ข้อ สูตรบ่อ ข้อกำหนดถัง การเตรียมบ่อ การบำรุงรักษา แนวทางแก้ปัญหา และความปลอดภัย">
   <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/zincplating/troubleshootingcyanidezinc/index.html">
   <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/thumbnail-8.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -226,7 +228,7 @@
         <span class="bar"></span>
       </button>
 
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
         <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
         <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
         <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
@@ -323,8 +325,6 @@
       </div>
     </section>
 
-        </div>
-      </section>
       <section id="composition" class="reveal section-block" aria-labelledby="comp-h">
         <h2 id="comp-h" class="section" data-i18n-key="comp_h">ส่วนผสมน้ำยา & ความเข้มข้น</h2>
         <p class="lead" data-i18n-key="comp_lead">ปรับค่าตามชิ้นงาน ช่วงกระแส และสภาพไลน์จริง</p>
@@ -418,7 +418,7 @@
                   <span data-i18n-key="maint_dose_prefix">111B 1 ลิตร ต่อ</span>
                   <span data-i18n-key="maint_dose_range">6,000–8,000 Ah</span>
                 </td>
-                <td data-i18n-key="maint_replen_note">125 ถึง 167 มิลลิลิตรต่อกิโลแอมแปร์/ชั่วโมง</td>
+                <td data-i18n-key="maint_replen_note">125–167 มล./กิโลแอมแปร์-ชั่วโมง (kAh)</td>
               </tr>
             </tbody>
           </table>
@@ -502,6 +502,7 @@
     const I18N = {
       th: {
         back_home:"← กลับเมนูหลัก",
+        title:"การชุบซิงค์ไซยาไนด์ — Brightener Zinc 111B | Baume Chemical",
         hero_title:"การชุบซิงค์ไซยาไนด์ — Brightener Zinc 111B",
         hero_tagline:"หลักการทำงาน จุดเด่น 6 ข้อ สูตร/สัดส่วนบ่อ ข้อกำหนดถัง การเตรียมบ่อ การเติม 111B แนวทางแก้ปัญหา และความปลอดภัย",
 
@@ -565,7 +566,7 @@
         maint_replen:"การปรับเติมระหว่างผลิต",
         maint_dose_prefix:"111B 1 ลิตร ต่อ",
         maint_dose_range:"6,000–8,000 Ah",
-        maint_replen_note:"125 ถึง 167 มิลลิลิตรต่อกิโลแอมแปร์/ชั่วโมง",
+        maint_replen_note:"125–167 มล./กิโลแอมแปร์-ชั่วโมง (kAh)",
 
         /* Troubleshooting */
         trouble_h:"แนวทางแก้ปัญหาเบื้องต้น",
@@ -595,6 +596,7 @@
       en: {
                 back_home:"← Back to main menu",
         hero_title:"Cyanide Zinc Plating — Brightener Zinc 111B",
+        title:"Cyanide Zinc Plating — Brightener Zinc 111B | Baume Chemical",
         hero_tagline:"Principles, 6 key features, bath recipe/ranges, tank requirements, make-up, 111B additions, troubleshooting, and safety.",
 
         toc_title:"Contents",
@@ -657,7 +659,7 @@
         maint_replen:"During production",
         maint_dose_prefix:"111B 1 L per",
         maint_dose_range:"6,000–8,000 Ah",
-        maint_replen_note:"125–167 ml/kilowatt-hour",
+        maint_replen_note:"125–167 mL/kAh",
 
         /* Troubleshooting */
         trouble_h:"Troubleshooting",
@@ -740,6 +742,14 @@
       window.addEventListener('resize', setH, {passive:true});
       window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
+      function syncNavAria(){
+  if(!nav) return;
+  if (window.innerWidth > 900) nav.setAttribute('aria-hidden','false');
+  else nav.setAttribute('aria-hidden', String(!header.classList.contains('open')));
+}
+window.addEventListener('load', syncNavAria, {once:true});
+window.addEventListener('resize', syncNavAria, {passive:true});
+
 
       if(toggle && nav && scrim){
         let lockY = 0;
