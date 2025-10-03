@@ -16,20 +16,27 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png" />
   <meta name="theme-color" content="#2c5e4e" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Baume Chemical" />
-  <meta property="og:title" content="EN Nickel (Electroless Nickel) NI-508" />
-  <meta property="og:description" content="ภาพรวม จุดเด่น สูตรเมคอัพ พารามิเตอร์เดินงาน ขั้นตอนชุบ การปรับเติม อุปกรณ์ และความปลอดภัย" />
-  <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/nickelplating/troubleshootingennickel/index.html" />
-  <meta property="og:image" content="https://i.imgur.com/gQDiFMo.jpeg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- Open Graph i18n/details -->
-<meta property="og:locale" content="th_TH">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Baume Chemical">
+<meta property="og:title" content="EN Nickel (Electroless Nickel) — NI-508">
+<meta property="og:description" content="ภาพรวม จุดเด่น สูตรเมคอัพ พารามิเตอร์เดินงาน ขั้นตอนชุบ การปรับเติม อุปกรณ์ และความปลอดภัย">
+<meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/nickelplating/troubleshootingennickel/index.html">
+<meta property="og:image" content="https://i.imgur.com/gQDiFMo.jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="EN Nickel (Electroless Nickel) — NI-508 | Baume Chemical">
+<meta property="og:locale" content="th_TH">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- OG product fields (optional แต่ดีต่อ social) -->
+<meta property="product:brand" content="Baume Chemical">
+<meta property="product:availability" content="in stock">
+<meta property="product:condition" content="new">
+<meta property="product:price:amount" content="0.00">
+<meta property="product:price:currency" content="THB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EN Nickel (Electroless Nickel) — NI-508">
 <meta name="twitter:description" content="ภาพรวม จุดเด่น สูตรเมคอัพ พารามิเตอร์เดินงาน ขั้นตอนชุบ การปรับเติม อุปกรณ์ และความปลอดภัย">
 <meta name="twitter:image" content="https://i.imgur.com/gQDiFMo.jpeg">
@@ -85,7 +92,9 @@
     }
     .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
     .menu-scrim:not([hidden]){display:block}
-    body.no-scroll{position:fixed;width:100%}
+    /* ใหม่: ไม่ดันเลย์เอาต์แนวนอน และไม่เกิด reflow แปลก */
+    body.no-scroll{position:fixed;left:0;right:0;width:auto;overflow:hidden}
+
 
     /* ===== Hero ===== */
     .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),url('https://i.imgur.com/gQDiFMo.jpeg') center/cover no-repeat;padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
@@ -114,7 +123,12 @@
     .content p{margin:0 0 10px}
     .content ul{margin:0 0 8px 18px}
     .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:0;z-index:1}
+    .table thead th{
+  background:linear-gradient(180deg,#f6fbf8,#eef6f1);
+  position:sticky;
+  top:var(--header-h);   /* เดิม 0 */
+  z-index:1
+}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
     .table tbody tr:hover{background:#f6fbf8}
@@ -200,7 +214,36 @@
     html{scroll-behavior:smooth}
     .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
   </style>
-  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "NI-508 — Electroless Nickel (EN)",
+  "description": "Electroless Nickel (EN) NI-508: ภาพรวม จุดเด่น สูตรเมคอัพ พารามิเตอร์เดินงาน ขั้นตอนชุบ การปรับเติม pH/การกรอง อุปกรณ์ และความปลอดภัย",
+  "image": ["https://i.imgur.com/gQDiFMo.jpeg"],
+  "url": "https://www.baumechemical.com/products/platingcoating/nickelplating/troubleshootingennickel/index.html",
+  "sku": "NI-508",
+  "brand": { "@type": "Brand", "name": "Baume Chemical" },
+  "alternateName":["Baume Chemical","Baume"],
+  "category": "Plating Chemicals > Electroless Nickel",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.baumechemical.com/products/platingcoating/nickelplating/troubleshootingennickel/index.html",
+    "priceCurrency": "THB",
+    "price": "0.00",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@type": "Organization", "name": "Baume Chemical" }
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "Plating rate", "value": "~13–20 µm/h" },
+    { "@type": "PropertyValue", "name": "Target pH", "value": "4.7–4.8" },
+    { "@type": "PropertyValue", "name": "Operating temperature", "value": "~88 °C (82–91 °C)" },
+    { "@type": "PropertyValue", "name": "Ni metal", "value": "5–6 g/L (keep ≥ 5.3 g/L)" },
+    { "@type": "PropertyValue", "name": "Phosphorus", "value": "> 7%" }
+  ]
+}
+</script>
 </head>
 <body>
 
