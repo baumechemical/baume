@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
   <!-- === SEO (i18n-ready) === -->
   <title id="metaTitle">น้ำยาชุบเหลืองแดง (Brass Plating Solutions) | Baume Chemical</title>
@@ -11,6 +11,8 @@
   <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/brassplating/">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
@@ -34,6 +36,33 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/","logo":"https://www.baumechemical.com/assets/logo.png","sameAs":["https://line.me/ti/p/~baumechemical"]}
   </script>
+
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://www.baumechemical.com/#website",
+  "url":"https://www.baumechemical.com/",
+  "name":"Baume Chemical",
+  "alternateName":["Baume Chemical","Baume"],
+  "inLanguage":["th","en"],
+  "publisher":{"@id":"https://www.baumechemical.com/#organization"}
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://www.baumechemical.com/#organization",
+  "name":"Baume Chemical",
+  "alternateName":["Baume Chemical","Baume"],
+  "url":"https://www.baumechemical.com/",
+  "logo":"https://www.baumechemical.com/assets/logo.png",
+  "sameAs":["https://line.me/ti/p/~baumechemical"]
+}
+</script>
+
   <!-- JSON-LD: CollectionPage -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"CollectionPage","name":"Brass Plating Solutions","inLanguage":"th","url":"https://www.baumechemical.com/products/platingcoating/brassplating/","description":"Dark Yellow Brass, Greenish Yellow Brass, and Cyanide-free Imitation Gold systems for rack and barrel plating."}
@@ -250,13 +279,14 @@
 
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-          <ul class="menu">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
-          </ul>
+<ul class="menu">
+  <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+  <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+  <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+  <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+  <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
+</ul>
+
         </nav>
 
         <!-- Header language switch -->
@@ -459,7 +489,7 @@
     // Mobile nav (scrim + body lock) + highlight current (Products)
     (function(){
       const header = document.getElementById('siteHeader');
-      const toggle = header?.querySelector('.nav-toggle');
+      const toggle = header ? header.querySelector('.nav-toggle') : null;
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
       if(toggle && nav && scrim){
