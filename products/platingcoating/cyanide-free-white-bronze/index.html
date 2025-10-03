@@ -17,7 +17,7 @@
   <meta name="theme-color" content="#2c5e4e">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="product">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:title" content="317M — Cyanide-free White Bronze">
   <meta property="og:description" content="ไวท์บรอนซ์ปลอดไซยาไนด์: หลักการ จุดเด่น make-up พารามิเตอร์ อุปกรณ์ และความปลอดภัย">
@@ -25,20 +25,32 @@
   <meta property="og:image" content="https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "317M — Cyanide-free White Bronze",
-    "description": "กระบวนการชุบไวท์บรอนซ์ปลอดไซยาไนด์ ให้สีเงินสว่าง ฟิล์มแข็ง สม่ำเสมอ ทนสึก ใช้งานได้ทั้ง Rack/Barrel",
-    "image": "https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg",
-    "brand": {"@type":"Brand","name":"Baume Chemical"},
-    "category": "Decorative/Functional Plating",
-    "inLanguage": "th",
-    "offers": {"@type":"Offer","url":"https://www.baumechemical.com/products/platingcoating/cyanide-free-white-bronze/index.html","priceCurrency":"THB","price":"0.00","availability":"https://schema.org/InStock"}
-  }
-  </script>
+  <meta property="og:locale" content="th_TH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="317M — Cyanide-free White Bronze">
+<meta name="twitter:image" content="https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg">
+<meta name="twitter:image:alt" content="317M — Cyanide-free White Bronze">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "317M — Cyanide-free White Bronze",
+  "description": "กระบวนการชุบไวท์บรอนซ์ปลอดไซยาไนด์ ให้สีเงินสว่าง ฟิล์มแข็ง สม่ำเสมอ ทนสึก ใช้งานได้ทั้ง Rack/Barrel",
+  "image": "https://img2.pic.in.th/pic/image0-22a7d2870f1bc4f83.jpeg",
+  "brand": {
+    "@type": "Brand",
+    "name": "Baume Chemical",
+    "alternateName":["Baume Chemical","Baume"]
+  },
+  "category": "Decorative/Functional Plating",
+  "inLanguage": "th-TH"
+  /* ถ้าขายจริงค่อยใส่ offers/aggregateRating พร้อมข้อมูลจริง */
+}
+</script>
 
   <!-- Fonts & preloads -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -99,7 +111,7 @@
 
     .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
     .menu-scrim:not([hidden]){display:block}
-    body.no-scroll{position:fixed;width:100%}
+    body.no-scroll{position:fixed;left:0;right:0;width:auto;overflow:hidden}
 
     /* ===== Hero ===== */
     .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),var(--hero-url) center/cover no-repeat;padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
@@ -129,7 +141,7 @@
     .content ul{margin:0 0 8px 18px}
 
     .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:0;z-index:1}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:var(--header-h);z-index:1}
     .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
     .table tbody tr:nth-child(2n){background:#fbfdfc}
     .table tbody tr:hover{background:#f6fbf8}
