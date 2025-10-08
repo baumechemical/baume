@@ -67,108 +67,118 @@
     html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* ===== GLASS HEADER (ใสบนสุด → เข้มเมื่อเลื่อน) ===== */
-    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
-    .nav-bar{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:var(--header-h)}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    /* ===== Header: ใส → เข้มเมื่อเลื่อน (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800;color:#fff}
+    .brand-name{font-weight:800; color:#fff}
 
-    /* Primary nav + Lang switch */
-    .primary-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .primary-nav a{text-decoration:none;color:#fff;padding:10px 12px;border-radius:10px;font-weight:700}
-    .primary-nav a:hover{background:rgba(255,255,255,.12)}
-    .primary-nav a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .lang-switch{display:flex;gap:6px;margin-left:auto;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter:blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .site-header.is-scrolled .lang-switch{background:#ffffffdd}
     .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .lang-btn img{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Burger */
-    .nav-toggle{display:none;width:38px;height:38px;border-radius:9px;background:transparent;cursor:pointer;border:0}
-    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+    /* Burger (mobile) */
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
     @media (max-width:900px){
-      .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
-      .primary-nav{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);border-radius:14px;display:grid;gap:6px;padding:12px;z-index:1400;transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
-      .primary-nav a{color:#fff;padding:12px 10px}
-      .site-header.open .primary-nav{transform:none;opacity:1;pointer-events:auto}
-      .lang-switch{width:100%;margin:6px 0 0;background:#ffffff1c;border-color:rgba(255,255,255,.35);box-shadow:none}
-      .lang-btn{color:#fff}.lang-btn[aria-pressed="true"]{background:#ffffff;color:#0f172a}
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
-    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
-    .menu-scrim:not([hidden]){display:block}
-    body.no-scroll{position:fixed;width:100%}
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)),url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat;padding:28px 16px;padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px;margin:0 auto;color:#e6f2ef}
-    .back-chip{position:absolute;top:calc(var(--header-h) + 10px);left:16px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;font-weight:800;text-decoration:none;background:#fff;border:1px solid rgba(2,8,20,.08);color:#0f172a;box-shadow:var(--shadow-1)}
-    .back-chip:hover{transform:translateY(-1px)}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3xwVLZZ.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
 
-    /* ===== Layout: 2 columns (sticky TOC) ===== */
-    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
+    /* Back button chip */
+.back-chip{
+  position:absolute; 
+  top:calc(var(--header-h) + 10px); 
+  left:16px; z-index:1;
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 12px; border-radius:999px;
+  font-weight:800; text-decoration:none;
+  background:#fff; color:#0f172a;
+  border:1px solid rgba(2,8,20,.08); 
+  box-shadow:var(--shadow-1);
+}
+.back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout & TOC ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
     @media (min-width:1100px){
-      main.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:20px;align-items:start}
-      #toc{grid-column:1;position:sticky;top:calc(var(--header-h) + 10px)}
-      .part-switch{grid-column:2;position:sticky;top:calc(var(--header-h) + 10px);z-index:1}
-      section.section-block{grid-column:2}
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      section.section-block{ grid-column:2 }
     }
-
-    /* ===== TOC card ===== */
-    #toc{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1)}
-    #toc h2.section{font-size:1rem;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
     #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
-    .toc-chip::after{content:"›";opacity:.5}
-    .toc-chip[aria-current="true"],.toc-chip.is-active{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
     /* ===== Sections ===== */
-    section.section-block{background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:18px 16px;box-shadow:var(--shadow-1);position:relative;overflow:hidden;margin-bottom:16px}
-    section.section-block::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9);opacity:.85}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24;display:flex;align-items:center;gap:10px;position:relative}
-    .section-block>h2.section::before{content:var(--icon,"📘");font-size:20px;line-height:1}
-    #intro>h2.section{--icon:"🌊"} #check>h2.section{--icon:"✅"} #material>h2.section{--icon:"🧱"} #mask>h2.section{--icon:"🎭"} #clean>h2.section{--icon:"🧼"} #record>h2.section{--icon:"🧾"} #links>h2.section{--icon:"🔗"}
-    .section-block>h2.section::after{content:"#";position:absolute;right:10px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .2s ease;font-weight:800;color:var(--muted);font-size:.92rem}
-    .section-block:hover>h2.section::after{opacity:.85}
-    .lead{margin:0 0 16px;color:#5f6d7c}
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+/* ไอคอนสำหรับหมวด Salt Spray */
+#intro>h2.section{ --icon:"🌫️" }
+#standards>h2.section{ --icon:"📏" }
+#checklist>h2.section{ --icon:"🧾" }
+#materials>h2.section{ --icon:"🧲" }
+#evaluation>h2.section{ --icon:"🔍" }
+#pitfalls>h2.section{ --icon:"⚠️" }
+#planning>h2.section{ --icon:"🗂️" }
+#summary>h2.section{ --icon:"✅" }
+#links>h2.section{ --icon:"🔗" }
+    .lead{margin:0 0 16px; color:var(--muted)}
 
-    /* Tables */
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1);position:sticky;top:0;z-index:1}
-    .table thead th::after{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,#d9efe4,transparent)}
-    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
-    .table tbody tr:nth-child(2n){background:#fbfdfc}
-    .table tbody tr:hover{background:#f6fbf8}
+    /* Lists & utilities */
+    ul.nice{margin:8px 0 0; padding-left:22px}
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+    html{scroll-behavior:smooth}
 
-    /* Part switcher */
-    [hidden]{display:none!important}
-    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
-    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
-    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
-
-    /* Footer */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
-    .site-footer a{color:#e2e8f0;text-decoration:none}
-    .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:#2c5e4e;background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
     .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
+/* Add to your CSS (หรือแทนที่บล็อกเดิม) */
 .float-line{
   position:fixed;
   right:16px;
@@ -215,18 +225,77 @@
   .float-line a{ width:50px; height:50px }
   .backtop button{ width:42px; height:42px }
 }
-    /* Reveal */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
+/* ===== Pretty tables (responsive + sticky header) ===== */
+.table{
+  margin-top:12px;
+  background:#fff;
+  border:1px solid #e3ece5;
+  border-radius:12px;
+  box-shadow:var(--shadow-1);
+  overflow:auto;                 /* เลื่อนแนวนอนได้บนจอเล็ก */
+  -webkit-overflow-scrolling:touch;
+  /* ขอบจาง ๆ ตอนเลื่อน */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+}
 
-    /* Utils */
-    html{scroll-behavior:smooth}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+.table table{
+  width:100%;
+  min-width:720px;               /* กันบีบคอลัมน์จนอ่านยาก */
+  border-collapse:separate;
+  border-spacing:0;
+  font-variant-numeric: tabular-nums;
+}
+
+.table thead th{
+  position: sticky; top: 0;
+  z-index: 1;
+  text-align:left;
+  font-weight:800;
+  color:#1f2a24;
+  padding:12px 14px;
+  background:linear-gradient(180deg,#f7fbf9,#f0f7f3);
+  border-bottom:1px solid #dce8e1;
+  white-space:nowrap;
+}
+
+.table tbody td{
+  padding:10px 14px;
+  color:#1f2a24;
+  border-bottom:1px solid #eef4f0;
+  vertical-align:top;
+}
+
+.table tbody tr:last-child td{ border-bottom:none; }
+.table tbody tr:nth-child(odd){ background:#fbfdfc; } /* zebra */
+.table tbody tr:hover{ background:#f1f7f3; }          /* hover row */
+
+.table th+th, .table td+td{ border-left:1px solid #eef2ee; } /* เส้นคอลัมน์จาง ๆ */
+
+/* มุมมนจริง ๆ ที่มุม 4 ด้าน */
+.table table thead tr:first-child th:first-child{ border-top-left-radius:12px; }
+.table table thead tr:first-child th:last-child{ border-top-right-radius:12px; }
+.table table tbody tr:last-child td:first-child{ border-bottom-left-radius:12px; }
+.table table tbody tr:last-child td:last-child{ border-bottom-right-radius:12px; }
+
+/* สกรอลบาร์สวยขึ้นนิดหน่อย (เฉพาะ WebKit) */
+.table::-webkit-scrollbar{ height:10px; }
+.table::-webkit-scrollbar-thumb{ background:#d1e2da; border-radius:999px; border:2px solid #fff; }
+.table::-webkit-scrollbar-track{ background:#f3f7f5; border-radius:999px; }
+
+/* จอเล็ก: ปล่อยให้เลื่อนแนวนอนแทนบีบคอลัมน์ */
+@media (max-width:600px){
+  .table table{ min-width:560px; }
+}
+
+/* ตัวเลือกเสริม: โหมดคอมแพ็ค (ใส่ class table--compact ที่ wrapper ถ้าต้องการ) */
+.table.table--compact thead th{ padding:10px 12px; }
+.table.table--compact tbody td{ padding:8px 12px; }
+
   </style>
 </head>
 <body>
-
-  <!-- ===== Header ===== -->
+  <!-- Header -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -234,11 +303,10 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
         <span class="bar"></span>
       </button>
 
-      <!-- Global menu + language switch -->
       <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
         <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
         <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
@@ -259,323 +327,238 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- ===== Hero ===== -->
+  <!-- Hero -->
   <header class="hero">
-    <a class="back-chip" href="https://www.baumechemical.com/" data-back data-i18n-key="back_home">← กลับเมนูหลัก</a>
-    <div class="wrap" style="display:block;padding:28px 16px;max-width:1200px;margin:auto">
-      <h1 data-i18n-key="hero_title">คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test</h1>
-      <p data-i18n-key="hero_tagline">ตั้งแต่วัสดุ/ผิว มาสก์และฟิกซ์เจอร์ การล้าง/ทำให้เป็นกลาง การบันทึกก่อนทดสอบ ไปจนถึงข้อผิดพลาดที่ทำให้ผลเพี้ยน</p>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <a class="back-chip" href="https://www.baumechemical.com/blog" data-back data-i18n-key="back_home">← กลับสู่หน้า Blog</a>
+      <h1 data-i18n-key="hero_title">Salt Spray คืออะไร เช็คลิสต์ก่อนทดสอบ วัสดุ/ผิวที่ควรรู้ก่อนเข้า Salt Spray</h1>
+      <p data-i18n-key="hero_tagline">สรุป NSS/AASS/CASS แบบเข้าใจง่าย พร้อมเช็กลิสต์ก่อนเทสต์ ตัวแปรควบคุม วิธีอ่านผล ข้อจำกัด และสิ่งที่วัสดุ/ผิวควรรู้ก่อนเข้าเครื่อง</p>
     </div>
   </header>
 
+  <!-- Main + TOC -->
   <main class="wrap">
-    <!-- Part Switcher -->
-    <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
-      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: พื้นฐานและเช็คลิสต์ก่อนทดสอบ</span></button>
-      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: การจัดวาง/ล้าง/บันทึก และตารางปัญหา</span></button>
-    </div>
-
-    <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
       <p>
-        <a class="toc-chip" href="#intro" data-part="1" data-i18n-key="toc_intro">Salt Spray คืออะไร & โหมดทดสอบ</a>
-        <a class="toc-chip" href="#check" data-part="1" data-i18n-key="toc_check">เช็คลิสต์ก่อนทดสอบ (10 ข้อ)</a>
-        <a class="toc-chip" href="#material" data-part="1" data-i18n-key="toc_material">วัสดุ/ผิวที่ควรรู้</a>
-        <a class="toc-chip" href="#mask" data-part="1" data-i18n-key="toc_mask">การทำมาสก์ & ฟิกซ์เจอร์</a>
-
-        <a class="toc-chip" href="#clean" data-part="2" data-i18n-key="toc_clean">การทำความสะอาด & ทำให้เป็นกลาง</a>
-        <a class="toc-chip" href="#record" data-part="2" data-i18n-key="toc_record">การจัดวางในตู้ & การบันทึก</a>
-        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ข้อผิดพลาดพบบ่อย/วิธีเลี่ยง</a>
-        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">บทนำ</a>
+        <a class="toc-chip" href="#standards" data-i18n-key="toc_standards">มาตรฐาน & ประเภทการทดสอบ</a>
+        <a class="toc-chip" href="#checklist" data-i18n-key="toc_checklist">เช็กลิสต์ก่อนทดสอบ</a>
+        <a class="toc-chip" href="#materials" data-i18n-key="toc_materials">วัสดุ/ผิว: ต้องรู้ก่อนเข้า Salt Spray</a>
+        <a class="toc-chip" href="#evaluation" data-i18n-key="toc_evaluation">การอ่านผล & เกณฑ์</a>
+        <a class="toc-chip" href="#pitfalls" data-i18n-key="toc_pitfalls">ข้อจำกัด/กับดักของ Salt Spray</a>
+        <a class="toc-chip" href="#planning" data-i18n-key="toc_planning">การวางแผนการทดสอบ & รายงาน</a>
+        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">สรุป</a>
       </p>
     </nav>
 
-    <!-- Sections (Part 1) -->
-    <section id="intro" data-part="1" class="reveal section-block" aria-labelledby="intro-h">
-      <h2 id="intro-h" class="section" data-i18n-key="intro_h">Salt Spray คืออะไร & โหมดทดสอบที่พบบ่อย</h2>
-      <p class="lead" data-i18n-key="intro_p1">การเร่งสภาวะกัดกร่อนด้วยละอองเกลือสำหรับประเมินความทนของระบบผิวเคลือบ/ชุบ โหมดที่พบ: NSS (Neutral), AASS (Acetic), และ CASS (Copper-accelerated Acetic)</p>
+    <!-- ===== Sections ===== -->
+    <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+      <h2 id="intro-h" class="section" data-i18n-key="intro_h">Salt Spray คืออะไร?</h2>
+      <p class="lead" data-i18n-key="intro_p1">Salt Spray Test คืออะไรและหลักการทำงาน 🌫️ Salt Spray Test หรือ Salt Fog Test เป็นวิธีการทดสอบแบบเร่ง (Accelerated Corrosion Test) ที่ถูกออกแบบมาเพื่อ ประเมินความต้านทานการกัดกร่อน ของวัสดุและผิวเคลือบต่าง ๆ โดยการจำลองสภาวะแวดล้อมที่เป็น "หมอกเกลือ" ภายในห้องทดสอบที่ควบคุมสภาวะอย่างเข้มงวดหลักการคือ ชิ้นงานทดสอบจะถูกนำไปวางไว้ในห้องทดสอบ (Salt Spray Chamber) และมีการพ่นละอองสารละลายโซเดียมคลอไรด์ 5% (หรือตามมาตรฐาน) ให้เป็นหมอกละเอียดคลุ้งอย่างต่อเนื่อง ณ อุณหภูมิและความชื้นที่กำหนด สภาวะที่ถูกเร่งนี้จะกระตุ้นและเร่งปฏิกิริยาการเกิดสนิมและการกัดกร่อนบนผิวของชิ้นงานทดสอบ</p>
+      <p data-i18n-key="intro_p2">เกณฑ์การวัดและผลลัพธ์ของการกัดกร่อน การวัดผลลัพธ์จากการทดสอบ Salt Spray จะถูกบันทึกเป็น ระยะเวลาที่ใช้จนกระทั่งเกิดความเสียหาย ตามเกณฑ์มาตรฐานที่กำหนด โดยมีสิ่งที่ต้องสังเกตหลัก ๆ คือ สนิมแดง (Red Rust) ซึ่งบ่งชี้ถึงการกัดกร่อนของโลหะพื้นผิว เช่น เหล็ก และ สนิมขาว (White Rust) ซึ่งเป็นสัญญาณแรกของการเสื่อมสภาพของผิวเคลือบสังกะสี (Zinc Plating) นอกจากนี้ยังรวมถึงเวลาที่เกิดความเสียหายทางกายภาพอื่น ๆ เช่น การพอง (Blistering) หรือการลอก (Peeling) ของชั้นเคลือบ</p>
+      <p data-i18n-key="intro_p3">จุดแข็งในการควบคุมคุณภาพเชิงกระบวนการ (PQC) จุดแข็งหลักของ Salt Spray Test คือความสามารถในการเป็นเครื่องมือควบคุมคุณภาพที่มีประสิทธิภาพสูง เนื่องจากเป็นการทดสอบในสภาวะควบคุมอย่างเข้มงวด จึงทำให้ผลการทดสอบมีความ ทำซ้ำได้สูง (High Repeatability) และมีความสม่ำเสมอ เป็นเครื่องมือที่ยอดเยี่ยมในการ ควบคุมคุณภาพเชิงกระบวนการ (PQC) เพื่อเปรียบเทียบคุณภาพของ Lot การผลิตที่แตกต่างกัน หรือประเมินประสิทธิภาพของระบบเคลือบผิวใหม่ในขั้นตอนการวิจัยและพัฒนา</p>
+      <p data-i18n-key="intro_p4">แม้ว่าจะเป็นการทดสอบที่มีประโยชน์ แต่ Salt Spray Test ก็มีข้อจำกัดที่สำคัญคือ ไม่สามารถทำนายอายุการใช้งานจริง (Service Life) ได้โดยตรง เนื่องจากเป็นการเร่งปฏิกิริยาในสภาวะจำลอง ซึ่งอาจไม่ตรงกับกลไกการกัดกร่อนที่เกิดขึ้นจริงในสภาพแวดล้อมธรรมชาติ สภาวะจริงอาจมีปัจจัยอื่น ๆ เช่น วงจรการเปียก/แห้ง, รังสี UV, หรือมลภาวะที่แตกต่างกันเข้ามาเกี่ยวข้อง ดังนั้น การทดสอบนี้จึงมีวัตถุประสงค์หลักเพื่อ การเปรียบเทียบ (Comparative Test) ความทนทานระหว่างระบบเคลือบผิวต่าง ๆ เท่านั้น</p>
+    </section>
+
+    <section id="standards" class="reveal section-block" aria-labelledby="std-h">
+      <h2 id="std-h" class="section" data-i18n-key="std_h">มาตรฐาน & ประเภทการทดสอบ</h2>
+      <p class="lead" data-i18n-key="std_p1">การทดสอบแบ่งหลัก ๆ เป็น NSS (Neutral), AASS (Acetic), และ CASS (Copper-Accelerated) โดยสเปคและเกณฑ์ให้ยึดตามมาตรฐาน/สัญญากับลูกค้า</p>
       <div class="table">
-        <table>
+        <table id="tbl_types">
           <thead>
             <tr>
-              <th data-i18n-key="t_mode">โหมด</th>
-              <th data-i18n-key="t_when">ใช้เมื่อ</th>
-              <th data-i18n-key="t_notes">หมายเหตุ</th>
+              <th data-i18n-key="std_tbl_h1">ประเภท</th>
+              <th data-i18n-key="std_tbl_h2">สารละลาย</th>
+              <th data-i18n-key="std_tbl_h3">พิกัด pH</th>
+              <th data-i18n-key="std_tbl_h4">อุณหภูมิห้องทดสอบ</th>
+              <th data-i18n-key="std_tbl_h5">ตัวอย่างการใช้งาน</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>NSS</td>
-              <td data-i18n-key="intro_nss_when">งานชุบสังกะสี/นิกเกิล/โครเมต/ท็อปโค้ททั่วไป</td>
-              <td data-i18n-key="intro_nss_note">พีเอชสารละลายแบบเป็นกลาง; อ้างอิงในหลายสเปกการค้า</td>
+              <td data-i18n-key="std_tbl_c1">NSS (Neutral)</td>
+              <td data-i18n-key="std_tbl_c2">NaCl ประมาณ 5% m/m ในน้ำ DI</td>
+              <td data-i18n-key="std_tbl_c3">กึ่งกลาง (ใกล้ 6.5–7.2)</td>
+              <td data-i18n-key="std_tbl_c4">โดยทั่วไป ~35°C</td>
+              <td data-i18n-key="std_tbl_c5">เหล็กชุบสังกะสี, เคลือบอินทรีย์, ผิวเคมี</td>
             </tr>
             <tr>
-              <td>AASS</td>
-              <td data-i18n-key="intro_aass_when">งานแอโนไดซ์/เคลือบที่จำลองกรดอ่อน</td>
-              <td data-i18n-key="intro_aass_note">เร่งการเกิดคราบ/พิตบนอลูมิเนียมได้เร็ว</td>
+              <td data-i18n-key="std_tbl_c6">AASS (Acetic)</td>
+              <td data-i18n-key="std_tbl_c7">NaCl + กรดอะซิติก</td>
+              <td data-i18n-key="std_tbl_c8">เป็นกรด (ใกล้ ~3.1–3.3)</td>
+              <td data-i18n-key="std_tbl_c9">~35°C</td>
+              <td data-i18n-key="std_tbl_c10">งานตกแต่ง/ผิวที่ต้องการความเข้มท้าทายขึ้น</td>
             </tr>
             <tr>
-              <td>CASS</td>
-              <td data-i18n-key="intro_cass_when">งานชุบทองเหลือง/นิกเกิล-โครมประดับ</td>
-              <td data-i18n-key="intro_cass_note">เข้มข้นที่สุด ใช้ทองแดงเร่งปฏิกิริยา</td>
+              <td data-i18n-key="std_tbl_c11">CASS (Cu-Accelerated)</td>
+              <td data-i18n-key="std_tbl_c12">NaCl + กรดอะซิติก + CuCl₂</td>
+              <td data-i18n-key="std_tbl_c13">เป็นกรด (ใกล้ ~3.1–3.3)</td>
+              <td data-i18n-key="std_tbl_c14">โดยทั่วไป ~50°C</td>
+              <td data-i18n-key="std_tbl_c15">Ni/Cr, อุปกรณ์ตกแต่งออโต้, โครเมียมเงา</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n-key="std_p2">**หมายเหตุ**: ค่าด้านบนเป็นแนวโน้มโดยรวม ใช้เพื่อทำความเข้าใจภาพรวม ค่าจริงให้ยึดตามมาตรฐานที่อ้างอิง (เช่น ASTM/ISO/สเปคผู้ผลิต) และเอกสารสัญญา</p>
+    </section>
+
+    <section id="checklist" class="reveal section-block" aria-labelledby="chk-h">
+      <h2 id="chk-h" class="section" data-i18n-key="chk_h">เช็กลิสต์ก่อนทดสอบ</h2>
+      <p class="lead" data-i18n-key="chk_p1">เตรียมให้ครบ ลดความเสี่ยงผลลวง และช่วยให้อ่านผลได้แม่นยำ</p>
+      <div class="table">
+        <table id="tbl_checklist">
+          <thead>
+            <tr>
+              <th data-i18n-key="chk_tbl_h1">หัวข้อ</th>
+              <th data-i18n-key="chk_tbl_h2">รายละเอียดที่ควรยืนยัน</th>
+              <th data-i18n-key="chk_tbl_h3">หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="chk_tbl_c1">ชนิดการทดสอบ</td>
+              <td data-i18n-key="chk_tbl_c2">NSS / AASS / CASS ตามมาตรฐานที่อ้างอิง</td>
+              <td data-i18n-key="chk_tbl_c3">ตกลงเกณฑ์ pass/fail ให้ชัด</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c4">พารามิเตอร์เครื่อง</td>
+              <td data-i18n-key="chk_tbl_c5">ความเข้มข้นเกลือ, pH, อุณหภูมิ, อัตราสะสมหมอก, แรงดัน/หัวฉีด</td>
+              <td data-i18n-key="chk_tbl_c6">สอบเทียบและบันทึกก่อนรัน</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c7">ตัวอย่าง/การจัดวาง</td>
+              <td data-i18n-key="chk_tbl_c8">ขนาด, ตำแหน่ง, มุมเอียง, ระยะห่าง, จุดเก็บน้ำหยด</td>
+              <td data-i18n-key="chk_tbl_c9">หลีกเลี่ยงบังลม/น้ำกระเด็น</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c10">การเตรียมผิว</td>
+              <td data-i18n-key="chk_tbl_c11">ล้าง/อบแห้ง/ซีล/พักตัวอย่างตามข้อกำหนด</td>
+              <td data-i18n-key="chk_tbl_c12">ป้องกันการปนเปื้อนจากการจับชิ้นงาน</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c13">การติดตามตัวอย่าง</td>
+              <td data-i18n-key="chk_tbl_c14">Lot, วันที่ผลิต/ชุบ, ระบบ traceability</td>
+              <td data-i18n-key="chk_tbl_c15">ลดความผิดพลาดในการตีความ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c16">การตรวจระหว่างทดสอบ</td>
+              <td data-i18n-key="chk_tbl_c17">ชั่วโมงที่ต้องเปิดเช็ค/ภาพถ่าย/บันทึก</td>
+              <td data-i18n-key="chk_tbl_c18">กำหนดช่วงหยุดเครื่องที่ปลอดภัย</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section id="check" data-part="1" class="reveal section-block" aria-labelledby="check-h">
-      <h2 id="check-h" class="section" data-i18n-key="check_h">เช็คลิสต์ก่อนทดสอบ (10 ข้อ)</h2>
+    <section id="materials" class="reveal section-block" aria-labelledby="mat-h">
+      <h2 id="mat-h" class="section" data-i18n-key="mat_h">วัสดุ/ผิว: ต้องรู้ก่อนเข้า Salt Spray</h2>
+      <p class="lead" data-i18n-key="mat_p1">วัสดุต่างชนิดตอบสนองต่างกัน ควรเลือกประเภทการทดสอบและเกณฑ์ให้เหมาะกับระบบผิว</p>
       <div class="table">
-        <table>
+        <table id="tbl_materials">
           <thead>
             <tr>
-              <th data-i18n-key="c_th_item">หัวข้อ</th>
-              <th data-i18n-key="c_th_what">ตรวจอะไร</th>
-              <th data-i18n-key="c_th_how">อย่างไร/เกณฑ์</th>
+              <th data-i18n-key="mat_tbl_h1">ระบบผิว/วัสดุ</th>
+              <th data-i18n-key="mat_tbl_h2">ข้อสังเกตก่อนทดสอบ</th>
+              <th data-i18n-key="mat_tbl_h3">แนวทางทั่วไป</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-i18n-key="c_item_label">รหัสชิ้นงาน</td>
-              <td data-i18n-key="c_what_label">สติ๊กเกอร์/ปากกาไม่รบกวนการกัดกร่อน</td>
-              <td data-i18n-key="c_how_label">ติดด้านหลัง/ขอบ; หลีกเลี่ยงพื้นที่ประเมิน</td>
+              <td data-i18n-key="mat_tbl_c1">เหล็กชุบสังกะสี (Zn, Zn‑Ni) + พาสซีเวชัน</td>
+              <td data-i18n-key="mat_tbl_c2">เช็คความหนา/ชนิดพาสซีฟ/ซีล; แยกเกณฑ์ white rust vs red rust</td>
+              <td data-i18n-key="mat_tbl_c3">มุมเอียง 15–30°; หลีกเลี่ยงน้ำขัง; ยึดตามสเปคลูกค้า</td>
             </tr>
             <tr>
-              <td data-i18n-key="c_item_edge">ขอบคม</td>
-              <td data-i18n-key="c_what_edge">ขอบคมทำให้เกิด burn/เริ่มผุเร็ว</td>
-              <td data-i18n-key="c_how_edge">ลบคมเบาๆ ก่อนชุบ/เคลือบ และบันทึก</td>
+              <td data-i18n-key="mat_tbl_c4">Ni/Cr ตกแต่ง, CASS</td>
+              <td data-i18n-key="mat_tbl_c5">CASS เข้มกว่ามาก; พิจารณาความหนา/ความพรุน</td>
+              <td data-i18n-key="mat_tbl_c6">ปิดขอบ/รูคม; บันทึกตำแหน่งเริ่มเกิดพิต</td>
             </tr>
             <tr>
-              <td data-i18n-key="c_item_surface">สภาพผิว</td>
-              <td data-i18n-key="c_what_surface">มัน/ออกไซด์/ซิลิโคน/แวกซ์</td>
-              <td data-i18n-key="c_how_surface">ดีเกรส+ล้าง DI; หลีกเลี่ยงผ้าขนปล่อยขุย</td>
+              <td data-i18n-key="mat_tbl_c7">อะลูมิเนียม/อะโนไดซ์</td>
+              <td data-i18n-key="mat_tbl_c8">ระบุชนิด/ความหนาอะโนไดซ์/ซีล; เกณฑ์การเปลี่ยนสี</td>
+              <td data-i18n-key="mat_tbl_c9">หลีกเลี่ยงรอยขูด; ตรวจภายใต้แสงคงที่</td>
             </tr>
             <tr>
-              <td data-i18n-key="c_item_mask">มาสก์</td>
-              <td data-i18n-key="c_what_mask">วัสดุทนเกลือ/กรดตามโหมด</td>
-              <td data-i18n-key="c_how_mask">ซิลิโคน/เทปทนสาร; ขอบเรียบ ไม่มีฟอง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_fixture">ฟิกซ์เจอร์</td>
-              <td data-i18n-key="c_what_fixture">องศา 15–30° การไหลลื่น ไม่มีแอ่ง</td>
-              <td data-i18n-key="c_how_fixture">แขวน/วางบนอินเสิร์ตพลาสติก/แก้ว</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_size">ขนาด/จำนวน</td>
-              <td data-i18n-key="c_what_size">พื้นที่ประเมินเพียงพอ/ตัวอย่างซ้ำ</td>
-              <td data-i18n-key="c_how_size">≥3 ชิ้นต่อเงื่อนไขเพื่อสถิติ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_clean">การทำให้เป็นกลาง</td>
-              <td data-i18n-key="c_what_clean">ค่า pH ผิวหลังล้างกลับใกล้เป็นกลาง</td>
-              <td data-i18n-key="c_how_clean">ล้าง DI ไหลทวน+เป่าแห้งลมสะอาด</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_history">ประวัติ</td>
-              <td data-i18n-key="c_what_history">เวลา/อุณหภูมิหลังผลิตก่อนทดสอบ</td>
-              <td data-i18n-key="c_how_history">บันทึก shelf time/สภาพเก็บ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_photo">ภาพก่อนเข้า</td>
-              <td data-i18n-key="c_what_photo">ถ่ายด้านสำคัญ/ตำแหน่งวัด</td>
-              <td data-i18n-key="c_how_photo">แสงคงที่/ฉากขาว/เทียบสเกล</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="c_item_spec">สเปกอ้างอิง</td>
-              <td data-i18n-key="c_what_spec">รุ่นมาตรฐาน/เกณฑ์ผ่าน-ไม่ผ่าน</td>
-              <td data-i18n-key="c_how_spec">แนบเลขมาตรฐานในใบงาน</td>
+              <td data-i18n-key="mat_tbl_c10">ผิวอินทรีย์ (พ่นสี/ผง)</td>
+              <td data-i18n-key="mat_tbl_c11">การเตรียมผิว/ไพรมเมอร์/การอบ; cross‑hatch แยกต่างหาก</td>
+              <td data-i18n-key="mat_tbl_c12">พิจารณา cyclic corrosion test ถ้าจำลองใช้งานจริง</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section id="material" data-part="1" class="reveal section-block" aria-labelledby="material-h">
-      <h2 id="material-h" class="section" data-i18n-key="material_h">วัสดุ/ผิวที่ควรรู้ก่อนเข้า Salt Spray</h2>
+    <section id="evaluation" class="reveal section-block" aria-labelledby="eval-h">
+      <h2 id="eval-h" class="section" data-i18n-key="eval_h">การอ่านผล & เกณฑ์ประเมิน</h2>
+      <p class="lead" data-i18n-key="eval_p1">กำหนดเกณฑ์ล่วงหน้า: จุดเริ่ม white rust/red rust, พื้นที่เป็น %, ความลึก/ขนาด, ระยะเวลา</p>
       <div class="table">
-        <table>
+        <table id="tbl_eval">
           <thead>
             <tr>
-              <th data-i18n-key="m_th_sub">วัสดุ</th>
-              <th data-i18n-key="m_th_risk">จุดเสี่ยง</th>
-              <th data-i18n-key="m_th_tip">ทิปส์</th>
+              <th data-i18n-key="eval_tbl_h1">ตัวชี้วัด</th>
+              <th data-i18n-key="eval_tbl_h2">คำอธิบาย</th>
+              <th data-i18n-key="eval_tbl_h3">การบันทึก</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Zn plating</td>
-              <td data-i18n-key="m_zinc_risk">โครเมตบอบบางต่อ pH สูง/ลมร้อนเกิน</td>
-              <td data-i18n-key="m_zinc_tip">พักให้ curing ก่อนเข้า; หลีกเลี่ยงสัมผัสมาก</td>
+              <td data-i18n-key="eval_tbl_c1">White rust / Red rust</td>
+              <td data-i18n-key="eval_tbl_c2">สนิมสังกะสี/สนิมเหล็ก แยกกันชัดเจน</td>
+              <td data-i18n-key="eval_tbl_c3">บันทึกชั่วโมงที่เริ่มปรากฏ + ภาพถ่าย</td>
             </tr>
             <tr>
-              <td>Ni/Cr decorative</td>
-              <td data-i18n-key="m_nicr_risk">ขอบคม/รูเข็มเล็กทำให้เริ่มผุก่อน</td>
-              <td data-i18n-key="m_nicr_tip">บันทึกความหนา/ขัดเก็บคม</td>
+              <td data-i18n-key="eval_tbl_c4">% พื้นที่เสียหาย</td>
+              <td data-i18n-key="eval_tbl_c5">คำนวณเป็นเปอร์เซ็นต์ของพื้นที่มองเห็น</td>
+              <td data-i18n-key="eval_tbl_c6">ใช้กริด/ซอฟต์แวร์ช่วยประเมิน</td>
             </tr>
             <tr>
-              <td>Al anodize</td>
-              <td data-i18n-key="m_ano_risk">คราบสบู่/ซิลิโคนทำให้คราบขาว</td>
-              <td data-i18n-key="m_ano_tip">ใช้ DI+สารเปียก; ห้ามเช็ดด้วยน้ำมัน</td>
+              <td data-i18n-key="eval_tbl_c7">ตำแหน่งเริ่มเสียหาย</td>
+              <td data-i18n-key="eval_tbl_c8">ขอบ/รู/มุม/บริเวณเก็บน้ำ/รอยเชื่อม</td>
+              <td data-i18n-key="eval_tbl_c9">แผนที่ตำแหน่งบนภาพ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="eval_tbl_c10">การเปลี่ยนสี/พอง/พิตติ้ง</td>
+              <td data-i18n-key="eval_tbl_c11">บรรยายชนิด/ความรุนแรง</td>
+              <td data-i18n-key="eval_tbl_c12">เทียบตัวอย่างอ้างอิง/แสงมาตรฐาน</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section id="mask" data-part="1" class="reveal section-block" aria-labelledby="mask-h">
-      <h2 id="mask-h" class="section" data-i18n-key="mask_h">การทำมาสก์ & ฟิกซ์เจอร์</h2>
-      <p class="lead" data-i18n-key="mask_p1">ใช้วัสดุที่ทนสารละอองและอุณหภูมิในตู้ ไม่เกิดปฏิกิริยากับผิวชิ้นงาน และไม่ก่อให้เกิดการไหลย้อนของหยดน้ำ</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="mk_th_item">รายการ</th>
-              <th data-i18n-key="mk_th_ok">ข้อควรทำ</th>
-              <th data-i18n-key="mk_th_no">ข้อห้าม</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mask</td>
-              <td data-i18n-key="mk_mask_ok">เทป/ซิลิโคนเกรดห้องทดสอบ ขอบเรียบ</td>
-              <td data-i18n-key="mk_mask_no">กาวกรด/ด่างแรง ทิ้งคราบเหนียว</td>
-            </tr>
-            <tr>
-              <td>Fixture</td>
-              <td data-i18n-key="mk_fix_ok">องศา 15–30° ระยะห่างพอให้น้ำไหล</td>
-              <td data-i18n-key="mk_fix_no">ทับซ้อน/รับหยดจากชิ้นอื่น</td>
-            </tr>
-            <tr>
-              <td>Label</td>
-              <td data-i18n-key="mk_lab_ok">ติดนอกพื้นที่ประเมิน/ใช้แท็กแขวน</td>
-              <td data-i18n-key="mk_lab_no">สติ๊กเกอร์บนพื้นที่ตรวจ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section id="clean" data-part="2" class="reveal section-block" aria-labelledby="clean-h">
-      <h2 id="clean-h" class="section" data-i18n-key="clean_h">การทำความสะอาด & ทำให้เป็นกลาง ก่อนเข้าทดสอบ</h2>
-      <p class="lead" data-i18n-key="clean_p1">วัตถุประสงค์คือกำจัดสารตกค้างที่ทำให้ผลเพี้ยน โดยไม่ทำลายฟิล์มชุบ/เคลือบ</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="cl_th_step">ขั้นตอน</th>
-              <th data-i18n-key="cl_th_how">อย่างไร</th>
-              <th data-i18n-key="cl_th_note">บันทึก</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="cl_s1">ดีเกรสเบา</td>
-              <td data-i18n-key="cl_s1_how">น้ำยากลาง/อัลตร้าโซนิกอ่อน 2–5 นาที</td>
-              <td data-i18n-key="cl_s1_note">ห้ามด่างแรงกับโครเมต/อโนไดซ์</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="cl_s2">ล้าง DI หลายขั้น</td>
-              <td data-i18n-key="cl_s2_how">ไหลทวน 2–3 ถัง จนหยดต่อเนื่อง</td>
-              <td data-i18n-key="cl_s2_note">เปลี่ยนน้ำตามค่าความนำไฟฟ้า</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="cl_s3">ทำให้เป็นกลาง</td>
-              <td data-i18n-key="cl_s3_how">บัฟเฟอร์อ่อน/DI → เป่าแห้งลมสะอาด</td>
-              <td data-i18n-key="cl_s3_note">pH ผิวใกล้ 6–7 ก่อนเข้า</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="cl_s4">พักตัวอย่าง</td>
-              <td data-i18n-key="cl_s4_how">พัก 1–24 ชม. ตามสเปก/ให้ฟิล์มเซ็ตตัว</td>
-              <td data-i18n-key="cl_s4_note">บันทึกเวลา/อุณหภูมิ/ความชื้น</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section id="pitfalls" class="reveal section-block" aria-labelledby="pit-h">
+      <h2 id="pit-h" class="section" data-i18n-key="pit_h">ข้อจำกัด/กับดักของ Salt Spray</h2>
+      <ul class="nice">
+        <li data-i18n-key="pit_l1"><strong>ไม่ใช่ตัวทำนายอายุการใช้งานจริง</strong> แต่ดีมากสำหรับควบคุมคุณภาพเชิงเปรียบเทียบ</li>
+        <li data-i18n-key="pit_l2"><strong>การวางชิ้นงานผิด</strong> ทำให้เกิดน้ำขัง/หยดซ้ำจุดเดิม → ผลเพี้ยน</li>
+        <li data-i18n-key="pit_l3"><strong>เกณฑ์ไม่ชัด</strong> ระหว่าง white rust กับ red rust ทำให้สรุปผิด</li>
+        <li data-i18n-key="pit_l4"><strong>องค์ประกอบสารละลาย/พารามิเตอร์หลุด</strong> ทำให้เทียบรอบทดสอบไม่ได้</li>
+      </ul>
     </section>
 
-    <section id="record" data-part="2" class="reveal section-block" aria-labelledby="record-h">
-      <h2 id="record-h" class="section" data-i18n-key="record_h">การจัดวางในตู้ & การบันทึกก่อนเริ่ม</h2>
-      <p class="lead" data-i18n-key="record_p1">จัดวางให้น้ำค้างไม่ไหลตกใส่กัน ระบุมุมและตำแหน่งทุกชิ้น บันทึกข้อมูลชุดทดสอบเพื่อย้อนรอย</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="r_th_item">รายการ</th>
-              <th data-i18n-key="r_th_setting">ค่าที่ตั้ง</th>
-              <th data-i18n-key="r_th_doc">เอกสาร</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="r_item_angle">มุมวาง</td>
-              <td data-i18n-key="r_set_angle">15–30° จากแนวตั้ง</td>
-              <td data-i18n-key="r_doc_angle">รูปถ่าย+สเกล</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="r_item_spacing">ระยะห่าง</td>
-              <td data-i18n-key="r_set_spacing">เว้นให้ละอองสม่ำเสมอ</td>
-              <td data-i18n-key="r_doc_spacing">ไดอะแกรมตำแหน่ง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="r_item_id">หมายเลขตัวอย่าง</td>
-              <td data-i18n-key="r_set_id">ID/ล็อต/กระบวนการ</td>
-              <td data-i18n-key="r_doc_id">แบบฟอร์มบันทึก</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="r_item_mode">โหมด/เวลา</td>
-              <td data-i18n-key="r_set_mode">NSS/AASS/CASS × ชั่วโมงที่กำหนด</td>
-              <td data-i18n-key="r_doc_mode">ใบสั่งทดสอบ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section id="planning" class="reveal section-block" aria-labelledby="plan-h">
+      <h2 id="plan-h" class="section" data-i18n-key="plan_h">การวางแผนทดสอบ & รายงานที่อ่านง่าย</h2>
+      <ul class="nice">
+        <li data-i18n-key="plan_l1">กำหนดชนิดการทดสอบ/มาตรฐานอ้างอิง/ชั่วโมงเป้าหมาย/เกณฑ์ pass‑fail</li>
+        <li data-i18n-key="plan_l2">บันทึกพารามิเตอร์: ความเข้มข้นเกลือ, pH, อุณหภูมิ, อัตราสะสมหมอก, มุมชิ้นงาน</li>
+        <li data-i18n-key="plan_l3">แนบรูปถ่ายช่วงเวลาหลัก ๆ และแผนที่ตำแหน่งเกิดความเสียหาย</li>
+        <li data-i18n-key="plan_l4">สรุปผลเป็นตาราง: เวลาเริ่ม white/red rust, % พื้นที่, ข้อสังเกต</li>
+      </ul>
     </section>
 
-    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
-      <h2 id="defects-h" class="section" data-i18n-key="defects_h">ข้อผิดพลาดพบบ่อย & วิธีเลี่ยง (ก่อนเริ่มทดสอบ)</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="d_th_sym">อาการ/ความเสี่ยง</th>
-              <th data-i18n-key="d_th_cause">สาเหตุ</th>
-              <th data-i18n-key="d_th_fix">วิธีเลี่ยง</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="d_s_sticker">คราบกาว/รอยสติ๊กเกอร์</td>
-              <td data-i18n-key="d_c_sticker">วัสดุกาวไม่ทน/ทิ้งสารตกค้าง</td>
-              <td data-i18n-key="d_f_sticker">ใช้แท็กแขวน/ติดนอกพื้นที่ประเมิน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d_s_drop">รอยหยด/ไหลย้อน</td>
-              <td data-i18n-key="d_c_drop">มุมวางผิด/ระยะห่างแคบ</td>
-              <td data-i18n-key="d_f_drop">ปรับ 15–30° และเว้นช่องลม/ละออง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d_s_white">คราบขาวผิดปกติเร็ว</td>
-              <td data-i18n-key="d_c_white">ซิลิโคน/สบู่ค้างหลังล้าง</td>
-              <td data-i18n-key="d_f_white">ดีเกรสอ่อน+DI หลายขั้น; เป่าแห้งสะอาด</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d_s_edge">เริ่มผุที่ขอบคม</td>
-              <td data-i18n-key="d_c_edge">ขอบคม/ความหนาฟิล์มต่ำ</td>
-              <td data-i18n-key="d_f_edge">ลบคมก่อนผลิตและบันทึกไว้</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
+      <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุป</h2>
+      <p data-i18n-key="sum_p1">Salt Spray เป็นเครื่องมือควบคุมคุณภาพที่ทรงพลัง หากตั้งพารามิเตอร์ถูกต้อง เลือกชนิดการทดสอบให้เหมาะกับระบบผิว และกำหนดเกณฑ์การประเมินไว้ล่วงหน้า</p>
+      <p data-i18n-key="sum_p2">เข้าใจข้อจำกัดของวิธีนี้ และใช้ควบคู่กับการทดสอบแบบ cyclic/สนามจริง จะช่วยให้ตัดสินใจด้านวัสดุและกระบวนการได้แม่นยำกว่า</p>
     </section>
 
-    <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">คู่มือ Salt Spray และการอ่านผล</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/anti-tarnish-selection/" data-i18n-key="link_at">หน้า Anti-tarnish (อ้างอิงโครง/สไตล์)</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">อุปกรณ์กรอง/มีดลม/อบแห้ง</a></p>
+    <section id="links" class="reveal section-block" aria-labelledby="links-h">
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์/คู่มือที่เกี่ยวข้อง</h2>
+      <ul class="nice">
+        <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener" data-i18n-key="links_l1">สารซีล/พาสซีฟ/ทรีตผิวป้องกัน</a></li>
+        <li><a href="https://www.baumechemical.com/blog/" target="_blank" rel="noopener" data-i18n-key="links_l2">บทความ/คู่มืออื่น ๆ</a></li>
+      </ul>
     </section>
   </main>
 
@@ -619,394 +602,319 @@
       <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
-
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
   <!-- JS: Reveal on scroll -->
   <script>
-    const revealEls=document.querySelectorAll('.reveal');
-    const revObs=new IntersectionObserver((entries,obs)=>{
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    },{threshold:.18});
+    }, {threshold:.18});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n (with header height recalculation) -->
+  <!-- JS: i18n dictionary + switch -->
   <script>
-    const I18N={
-      th:{
-        nav_home:"Home",nav_about:"About Us",nav_products:"Products",nav_contact:"Contact Us",nav_blog:"Blog",
-        back_home:"← กลับเมนูหลัก",
-        hero_title:"คู่มือเตรียมชิ้นงานทดสอบ Salt Spray Test",
-        hero_tagline:"ตั้งแต่วัสดุ/ผิว มาสก์และฟิกซ์เจอร์ การล้าง/ทำให้เป็นกลาง การบันทึกก่อนทดสอบ ไปจนถึงข้อผิดพลาดที่ทำให้ผลเพี้ยน",
+    const I18N = {
+      th: {
+        /* Nav */
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับสู่หน้า Blog",
 
-        part1:"พาร์ต 1: พื้นฐานและเช็คลิสต์ก่อนทดสอบ",
-        part2:"พาร์ต 2: การจัดวาง/ล้าง/บันทึก และตารางปัญหา",
+        /* Hero */
+        hero_title:"Salt Spray คืออะไร เช็คลิสต์ก่อนทดสอบ วัสดุ/ผิวที่ควรรู้ก่อนเข้า Salt Spray",
+        hero_tagline:"สรุป NSS/AASS/CASS แบบเข้าใจง่าย พร้อมเช็กลิสต์ก่อนเทสต์ ตัวแปรควบคุม วิธีอ่านผล ข้อจำกัด และสิ่งที่วัสดุ/ผิวควรรู้ก่อนเข้าเครื่อง",
 
+        /* TOC */
         toc_title:"สารบัญ",
-        toc_intro:"Salt Spray คืออะไร & โหมดทดสอบ",
-        toc_check:"เช็คลิสต์ก่อนทดสอบ (10 ข้อ)",
-        toc_material:"วัสดุ/ผิวที่ควรรู้",
-        toc_mask:"การทำมาสก์ & ฟิกซ์เจอร์",
-        toc_clean:"การทำความสะอาด & ทำให้เป็นกลาง",
-        toc_record:"การจัดวางในตู้ & การบันทึก",
-        toc_defects:"ข้อผิดพลาดพบบ่อย/วิธีเลี่ยง",
+        toc_intro:"บทนำ",
+        toc_standards:"มาตรฐาน & ประเภทการทดสอบ",
+        toc_checklist:"เช็กลิสต์ก่อนทดสอบ",
+        toc_materials:"วัสดุ/ผิว: ต้องรู้ก่อนเข้า Salt Spray",
+        toc_evaluation:"การอ่านผล & เกณฑ์",
+        toc_pitfalls:"ข้อจำกัด/กับดักของ Salt Spray",
+        toc_planning:"การวางแผนการทดสอบ & รายงาน",
+        toc_summary:"สรุป",
         toc_links:"ลิงก์ที่เกี่ยวข้อง",
 
-        intro_h:"Salt Spray คืออะไร & โหมดทดสอบที่พบบ่อย",
-        intro_p1:"การเร่งสภาวะกัดกร่อนด้วยละอองเกลือสำหรับประเมินความทนของระบบผิวเคลือบ/ชุบ โหมดที่พบ: NSS (Neutral), AASS (Acetic), และ CASS (Copper-accelerated Acetic)",
-        t_mode:"โหมด", t_when:"ใช้เมื่อ", t_notes:"หมายเหตุ",
-        intro_nss_when:"งานชุบสังกะสี/นิกเกิล/โครเมต/ท็อปโค้ททั่วไป",
-        intro_nss_note:"พีเอชสารละลายแบบเป็นกลาง; อ้างอิงในหลายสเปกการค้า",
-        intro_aass_when:"งานแอโนไดซ์/เคลือบที่จำลองกรดอ่อน",
-        intro_aass_note:"เร่งการเกิดคราบ/พิตบนอลูมิเนียมได้เร็ว",
-        intro_cass_when:"งานชุบทองเหลือง/นิกเกิล-โครมประดับ",
-        intro_cass_note:"เข้มข้นที่สุด ใช้ทองแดงเร่งปฏิกิริยา",
+        /* Intro */
+        intro_h:"Salt Spray คืออะไร?",
+/* ===== Add into I18N.th ===== */
+intro_p1: "Salt Spray Test คืออะไรและหลักการทำงาน 🌫️ Salt Fog/Salt Spray เป็นวิธีทดสอบแบบเร่ง (Accelerated Corrosion Test) ที่ออกแบบเพื่อประเมินความต้านทานการกัดกร่อนของวัสดุและผิวเคลือบ โดยจำลองสภาพ “หมอกเกลือ” ภายในห้องทดสอบที่ควบคุมเข้มงวด หลักการคือวางชิ้นงานในห้อง (Salt Spray Chamber) แล้วพ่นละอองสารละลายโซเดียมคลอไรด์ 5% (หรือค่าตามมาตรฐาน) ให้เป็นหมอกต่อเนื่องที่อุณหภูมิ/ความชื้นกำหนด สภาวะเร่งนี้กระตุ้นให้เกิดสนิมและการกัดกร่อนบนผิวชิ้นงาน",
+intro_p2: "เกณฑ์การวัดและผลลัพธ์ของการกัดกร่อน การบันทึกผล Salt Spray มักเป็น “ระยะเวลาจนถึงความเสียหาย” ตามเกณฑ์มาตรฐาน โดยสังเกตหลัก ๆ คือ สนิมแดง (Red Rust) ซึ่งบ่งชี้การกัดกร่อนของโลหะฐาน (เช่น เหล็ก) และ สนิมขาว (White Rust) ซึ่งเป็นสัญญาณแรกของการเสื่อมของผิวชุบสังกะสี (Zinc Plating) รวมถึงเวลาที่เกิดความเสียหายอื่น เช่น การพอง (Blistering) หรือการลอก (Peeling) ของชั้นเคลือบ",
+intro_p3: "จุดแข็งในการควบคุมคุณภาพเชิงกระบวนการ (PQC) จุดเด่นของ Salt Spray คือความทำซ้ำได้สูงภายใต้สภาวะควบคุม จึงเหมาะมากกับการควบคุมคุณภาพเชิงกระบวนการ (PQC) ใช้เทียบคุณภาพระหว่าง Lot การผลิตที่ต่างกัน หรือประเมินสมรรถนะระบบเคลือบใหม่ในช่วงวิจัยและพัฒนา",
+intro_p4: "ข้อจำกัด แม้มีประโยชน์มาก แต่ Salt Spray ไม่สามารถทำนายอายุการใช้งานจริง (Service Life) ได้โดยตรง เพราะเป็นการเร่งปฏิกิริยาในสภาพจำลองซึ่งอาจไม่ตรงกับกลไกภาคสนาม สภาพจริงอาจมีวงจรเปียก/แห้ง รังสี UV หรือมลภาวะอื่นร่วมด้วย ดังนั้นควรใช้เป็นการทดสอบเชิงเปรียบเทียบ (Comparative Test) ระหว่างระบบผิว และพิจารณาร่วมกับการทดสอบแบบ cyclic/ภาคสนาม",
 
-        check_h:"เช็คลิสต์ก่อนทดสอบ (10 ข้อ)",
-        c_th_item:"หัวข้อ", c_th_what:"ตรวจอะไร", c_th_how:"อย่างไร/เกณฑ์",
-        c_item_label:"รหัสชิ้นงาน", c_what_label:"สติ๊กเกอร์/ปากกาไม่รบกวนการกัดกร่อน", c_how_label:"ติดด้านหลัง/ขอบ; หลีกเลี่ยงพื้นที่ประเมิน",
-        c_item_edge:"ขอบคม", c_what_edge:"ขอบคมทำให้เกิด burn/เริ่มผุเร็ว", c_how_edge:"ลบคมเบาๆ ก่อนชุบ/เคลือบ และบันทึก",
-        c_item_surface:"สภาพผิว", c_what_surface:"มัน/ออกไซด์/ซิลิโคน/แวกซ์", c_how_surface:"ดีเกรส+ล้าง DI; หลีกเลี่ยงผ้าขนปล่อยขุย",
-        c_item_mask:"มาสก์", c_what_mask:"วัสดุทนเกลือ/กรดตามโหมด", c_how_mask:"ซิลิโคน/เทปทนสาร; ขอบเรียบ ไม่มีฟอง",
-        c_item_fixture:"ฟิกซ์เจอร์", c_what_fixture:"องศา 15–30° การไหลลื่น ไม่มีแอ่ง", c_how_fixture:"แขวน/วางบนอินเสิร์ตพลาสติก/แก้ว",
-        c_item_size:"ขนาด/จำนวน", c_what_size:"พื้นที่ประเมินเพียงพอ/ตัวอย่างซ้ำ", c_how_size:"≥3 ชิ้นต่อเงื่อนไขเพื่อสถิติ",
-        c_item_clean:"การทำให้เป็นกลาง", c_what_clean:"ค่า pH ผิวหลังล้างกลับใกล้เป็นกลาง", c_how_clean:"ล้าง DI ไหลทวน+เป่าแห้งลมสะอาด",
-        c_item_history:"ประวัติ", c_what_history:"เวลา/อุณหภูมิหลังผลิตก่อนทดสอบ", c_how_history:"บันทึก shelf time/สภาพเก็บ",
-        c_item_photo:"ภาพก่อนเข้า", c_what_photo:"ถ่ายด้านสำคัญ/ตำแหน่งวัด", c_how_photo:"แสงคงที่/ฉากขาว/เทียบสเกล",
-        c_item_spec:"สเปกอ้างอิง", c_what_spec:"รุ่นมาตรฐาน/เกณฑ์ผ่าน-ไม่ผ่าน", c_how_spec:"แนบเลขมาตรฐานในใบงาน",
 
-        material_h:"วัสดุ/ผิวที่ควรรู้ก่อนเข้า Salt Spray",
-        m_th_sub:"วัสดุ", m_th_risk:"จุดเสี่ยง", m_th_tip:"ทิปส์",
-        m_zinc_risk:"โครเมตบอบบางต่อ pH สูง/ลมร้อนเกิน", m_zinc_tip:"พักให้ curing ก่อนเข้า; หลีกเลี่ยงสัมผัสมาก",
-        m_nicr_risk:"ขอบคม/รูเข็มเล็กทำให้เริ่มผุก่อน", m_nicr_tip:"บันทึกความหนา/ขัดเก็บคม",
-        m_ano_risk:"คราบสบู่/ซิลิโคนทำให้คราบขาว", m_ano_tip:"ใช้ DI+สารเปียก; ห้ามเช็ดด้วยน้ำมัน",
+        /* Standards */
+        std_h:"มาตรฐาน & ประเภทการทดสอบ",
+        std_p1:"การทดสอบแบ่งหลัก ๆ เป็น NSS (Neutral), AASS (Acetic), และ CASS (Copper-Accelerated) โดยสเปคและเกณฑ์ให้ยึดตามมาตรฐาน/สัญญากับลูกค้า",
+        std_tbl_h1:"ประเภท", std_tbl_h2:"สารละลาย", std_tbl_h3:"พิกัด pH", std_tbl_h4:"อุณหภูมิห้องทดสอบ", std_tbl_h5:"ตัวอย่างการใช้งาน",
+        std_tbl_c1:"NSS (Neutral)", std_tbl_c2:"NaCl ประมาณ 5% m/m ในน้ำ DI", std_tbl_c3:"กึ่งกลาง (ใกล้ 6.5–7.2)", std_tbl_c4:"โดยทั่วไป ~35°C", std_tbl_c5:"เหล็กชุบสังกะสี, เคลือบอินทรีย์, ผิวเคมี",
+        std_tbl_c6:"AASS (Acetic)", std_tbl_c7:"NaCl + กรดอะซิติก", std_tbl_c8:"เป็นกรด (ใกล้ ~3.1–3.3)", std_tbl_c9:"~35°C", std_tbl_c10:"งานตกแต่ง/ผิวที่ต้องการความเข้มท้าทายขึ้น",
+        std_tbl_c11:"CASS (Cu-Accelerated)", std_tbl_c12:"NaCl + กรดอะซิติก + CuCl₂", std_tbl_c13:"เป็นกรด (ใกล้ ~3.1–3.3)", std_tbl_c14:"โดยทั่วไป ~50°C", std_tbl_c15:"Ni/Cr, อุปกรณ์ตกแต่งออโต้, โครเมียมเงา",
+        std_p2:"หมายเหตุ: ค่าด้านบนเป็นแนวโน้มเพื่อทำความเข้าใจภาพรวม ค่าจริงให้ยึดตามมาตรฐานที่อ้างอิงและสัญญา",
 
-        mask_h:"การทำมาสก์ & ฟิกซ์เจอร์",
-        mask_p1:"ใช้วัสดุที่ทนสารละอองและอุณหภูมิในตู้ ไม่เกิดปฏิกิริยากับผิวชิ้นงาน และไม่ก่อให้เกิดการไหลย้อนของหยดน้ำ",
-        mk_th_item:"รายการ", mk_th_ok:"ข้อควรทำ", mk_th_no:"ข้อห้าม",
-        mk_mask_ok:"เทป/ซิลิโคนเกรดห้องทดสอบ ขอบเรียบ", mk_mask_no:"กาวกรด/ด่างแรง ทิ้งคราบเหนียว",
-        mk_fix_ok:"องศา 15–30° ระยะห่างพอให้น้ำไหล", mk_fix_no:"ทับซ้อน/รับหยดจากชิ้นอื่น",
-        mk_lab_ok:"ติดนอกพื้นที่ประเมิน/ใช้แท็กแขวน", mk_lab_no:"สติ๊กเกอร์บนพื้นที่ตรวจ",
+        /* Checklist */
+        chk_h:"เช็กลิสต์ก่อนทดสอบ",
+        chk_p1:"เตรียมให้ครบ ลดความเสี่ยงผลลวง และช่วยให้อ่านผลได้แม่นยำ",
+        chk_tbl_h1:"หัวข้อ", chk_tbl_h2:"รายละเอียดที่ควรยืนยัน", chk_tbl_h3:"หมายเหตุ",
+        chk_tbl_c1:"ชนิดการทดสอบ", chk_tbl_c2:"NSS / AASS / CASS ตามมาตรฐานที่อ้างอิง", chk_tbl_c3:"ตกลงเกณฑ์ pass/fail ให้ชัด",
+        chk_tbl_c4:"พารามิเตอร์เครื่อง", chk_tbl_c5:"ความเข้มข้นเกลือ, pH, อุณหภูมิ, อัตราสะสมหมอก, แรงดัน/หัวฉีด", chk_tbl_c6:"สอบเทียบและบันทึกก่อนรัน",
+        chk_tbl_c7:"ตัวอย่าง/การจัดวาง", chk_tbl_c8:"ขนาด, ตำแหน่ง, มุมเอียง, ระยะห่าง, จุดเก็บน้ำหยด", chk_tbl_c9:"หลีกเลี่ยงบังลม/น้ำกระเด็น",
+        chk_tbl_c10:"การเตรียมผิว", chk_tbl_c11:"ล้าง/อบแห้ง/ซีล/พักตัวอย่างตามข้อกำหนด", chk_tbl_c12:"ป้องกันการปนเปื้อนจากการจับชิ้นงาน",
+        chk_tbl_c13:"การติดตามตัวอย่าง", chk_tbl_c14:"Lot, วันที่ผลิต/ชุบ, ระบบ traceability", chk_tbl_c15:"ลดความผิดพลาดในการตีความ",
+        chk_tbl_c16:"การตรวจระหว่างทดสอบ", chk_tbl_c17:"ชั่วโมงที่ต้องเปิดเช็ค/ภาพถ่าย/บันทึก", chk_tbl_c18:"กำหนดช่วงหยุดเครื่องที่ปลอดภัย",
 
-        clean_h:"การทำความสะอาด & ทำให้เป็นกลาง ก่อนเข้าทดสอบ",
-        clean_p1:"วัตถุประสงค์คือกำจัดสารตกค้างที่ทำให้ผลเพี้ยน โดยไม่ทำลายฟิล์มชุบ/เคลือบ",
-        cl_th_step:"ขั้นตอน", cl_th_how:"อย่างไร", cl_th_note:"บันทึก",
-        cl_s1:"ดีเกรสเบา", cl_s1_how:"น้ำยากลาง/อัลตร้าโซนิกอ่อน 2–5 นาที", cl_s1_note:"ห้ามด่างแรงกับโครเมต/อโนไดซ์",
-        cl_s2:"ล้าง DI หลายขั้น", cl_s2_how:"ไหลทวน 2–3 ถัง จนหยดต่อเนื่อง", cl_s2_note:"เปลี่ยนน้ำตามค่าความนำไฟฟ้า",
-        cl_s3:"ทำให้เป็นกลาง", cl_s3_how:"บัฟเฟอร์อ่อน/DI → เป่าแห้งลมสะอาด", cl_s3_note:"pH ผิวใกล้ 6–7 ก่อนเข้า",
-        cl_s4:"พักตัวอย่าง", cl_s4_how:"พัก 1–24 ชม. ตามสเปก/ให้ฟิล์มเซ็ตตัว", cl_s4_note:"บันทึกเวลา/อุณหภูมิ/ความชื้น",
+        /* Materials */
+        mat_h:"วัสดุ/ผิว: ต้องรู้ก่อนเข้า Salt Spray",
+        mat_p1:"วัสดุต่างชนิดตอบสนองต่างกัน ควรเลือกประเภทการทดสอบและเกณฑ์ให้เหมาะกับระบบผิว",
+        mat_tbl_h1:"ระบบผิว/วัสดุ", mat_tbl_h2:"ข้อสังเกตก่อนทดสอบ", mat_tbl_h3:"แนวทางทั่วไป",
+        mat_tbl_c1:"เหล็กชุบสังกะสี (Zn, Zn‑Ni) + พาสซีเวชัน", mat_tbl_c2:"เช็คความหนา/ชนิดพาสซีฟ/ซีล; แยกเกณฑ์ white rust vs red rust", mat_tbl_c3:"มุมเอียง 15–30°; หลีกเลี่ยงน้ำขัง; ยึดตามสเปคลูกค้า",
+        mat_tbl_c4:"Ni/Cr ตกแต่ง, CASS", mat_tbl_c5:"CASS เข้มกว่ามาก; พิจารณาความหนา/ความพรุน", mat_tbl_c6:"ปิดขอบ/รูคม; บันทึกตำแหน่งเริ่มเกิดพิต",
+        mat_tbl_c7:"อะลูมิเนียม/อะโนไดซ์", mat_tbl_c8:"ระบุชนิด/ความหนาอะโนไดซ์/ซีล; เกณฑ์การเปลี่ยนสี", mat_tbl_c9:"หลีกเลี่ยงรอยขูด; ตรวจภายใต้แสงคงที่",
+        mat_tbl_c10:"ผิวอินทรีย์ (พ่นสี/ผง)", mat_tbl_c11:"การเตรียมผิว/ไพรมเมอร์/การอบ; cross‑hatch แยกต่างหาก", mat_tbl_c12:"พิจารณา cyclic corrosion test ถ้าจำลองใช้งานจริง",
 
-        record_h:"การจัดวางในตู้ & การบันทึกก่อนเริ่ม",
-        record_p1:"จัดวางให้น้ำค้างไม่ไหลตกใส่กัน ระบุมุมและตำแหน่งทุกชิ้น บันทึกข้อมูลชุดทดสอบเพื่อย้อนรอย",
-        r_th_item:"รายการ", r_th_setting:"ค่าที่ตั้ง", r_th_doc:"เอกสาร",
-        r_item_angle:"มุมวาง", r_set_angle:"15–30° จากแนวตั้ง", r_doc_angle:"รูปถ่าย+สเกล",
-        r_item_spacing:"ระยะห่าง", r_set_spacing:"เว้นให้ละอองสม่ำเสมอ", r_doc_spacing:"ไดอะแกรมตำแหน่ง",
-        r_item_id:"หมายเลขตัวอย่าง", r_set_id:"ID/ล็อต/กระบวนการ", r_doc_id:"แบบฟอร์มบันทึก",
-        r_item_mode:"โหมด/เวลา", r_set_mode:"NSS/AASS/CASS × ชั่วโมงที่กำหนด", r_doc_mode:"ใบสั่งทดสอบ",
+        /* Evaluation */
+        eval_h:"การอ่านผล & เกณฑ์ประเมิน",
+        eval_p1:"กำหนดเกณฑ์ล่วงหน้า: จุดเริ่ม white rust/red rust, พื้นที่เป็น %, ความลึก/ขนาด, ระยะเวลา",
+        eval_tbl_h1:"ตัวชี้วัด", eval_tbl_h2:"คำอธิบาย", eval_tbl_h3:"การบันทึก",
+        eval_tbl_c1:"White rust / Red rust", eval_tbl_c2:"สนิมสังกะสี/สนิมเหล็ก แยกกันชัดเจน", eval_tbl_c3:"บันทึกชั่วโมงที่เริ่มปรากฏ + ภาพถ่าย",
+        eval_tbl_c4:"% พื้นที่เสียหาย", eval_tbl_c5:"คำนวณเป็นเปอร์เซ็นต์ของพื้นที่มองเห็น", eval_tbl_c6:"ใช้กริด/ซอฟต์แวร์ช่วยประเมิน",
+        eval_tbl_c7:"ตำแหน่งเริ่มเสียหาย", eval_tbl_c8:"ขอบ/รู/มุม/บริเวณเก็บน้ำ/รอยเชื่อม", eval_tbl_c9:"แผนที่ตำแหน่งบนภาพ",
+        eval_tbl_c10:"การเปลี่ยนสี/พอง/พิตติ้ง", eval_tbl_c11:"บรรยายชนิด/ความรุนแรง", eval_tbl_c12:"เทียบตัวอย่างอ้างอิง/แสงมาตรฐาน",
 
-        defects_h:"ข้อผิดพลาดพบบ่อย & วิธีเลี่ยง (ก่อนเริ่มทดสอบ)",
-        d_th_sym:"อาการ/ความเสี่ยง", d_th_cause:"สาเหตุ", d_th_fix:"วิธีเลี่ยง",
-        d_s_sticker:"คราบกาว/รอยสติ๊กเกอร์", d_c_sticker:"วัสดุกาวไม่ทน/ทิ้งสารตกค้าง", d_f_sticker:"ใช้แท็กแขวน/ติดนอกพื้นที่ประเมิน",
-        d_s_drop:"รอยหยด/ไหลย้อน", d_c_drop:"มุมวางผิด/ระยะห่างแคบ", d_f_drop:"ปรับ 15–30° และเว้นช่องลม/ละออง",
-        d_s_white:"คราบขาวผิดปกติเร็ว", d_c_white:"ซิลิโคน/สบู่ค้างหลังล้าง", d_f_white:"ดีเกรสอ่อน+DI หลายขั้น; เป่าแห้งสะอาด",
-        d_s_edge:"เริ่มผุที่ขอบคม", d_c_edge:"ขอบคม/ความหนาฟิล์มต่ำ", d_f_edge:"ลบคมก่อนผลิตและบันทึกไว้",
+        /* Pitfalls */
+        pit_h:"ข้อจำกัด/กับดักของ Salt Spray",
+        pit_l1:"ไม่ใช่ตัวทำนายอายุการใช้งานจริง แต่ดีมากสำหรับควบคุมคุณภาพเชิงเปรียบเทียบ",
+        pit_l2:"การวางชิ้นงานผิด ทำให้เกิดน้ำขัง/หยดซ้ำจุดเดิม → ผลเพี้ยน",
+        pit_l3:"เกณฑ์ไม่ชัด ระหว่าง white rust กับ red rust ทำให้สรุปผิด",
+        pit_l4:"องค์ประกอบสารละลาย/พารามิเตอร์หลุด ทำให้เทียบรอบทดสอบไม่ได้",
 
-        links_h:"ลิงก์ที่เกี่ยวข้อง",
-        link_salt:"คู่มือ Salt Spray และการอ่านผล",
-        link_at:"หน้า Anti-tarnish (อ้างอิงโครง/สไตล์)",
-        link_pretreat:"หมวด Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"อุปกรณ์กรอง/มีดลม/อบแห้ง",
+        /* Planning */
+        plan_h:"การวางแผนทดสอบ & รายงานที่อ่านง่าย",
+        plan_l1:"กำหนดชนิดการทดสอบ/มาตรฐานอ้างอิง/ชั่วโมงเป้าหมาย/เกณฑ์ pass‑fail",
+        plan_l2:"บันทึกพารามิเตอร์: ความเข้มข้นเกลือ, pH, อุณหภูมิ, อัตราสะสมหมอก, มุมชิ้นงาน",
+        plan_l3:"แนบรูปถ่ายช่วงเวลาหลัก ๆ และแผนที่ตำแหน่งเกิดความเสียหาย",
+        plan_l4:"สรุปผลเป็นตาราง: เวลาเริ่ม white/red rust, % พื้นที่, ข้อสังเกต",
 
+        /* Summary */
+        sum_h:"สรุป",
+        sum_p1:"Salt Spray เป็นเครื่องมือควบคุมคุณภาพที่ทรงพลัง หากตั้งพารามิเตอร์ถูกต้อง เลือกชนิดการทดสอบให้เหมาะกับระบบผิว และกำหนดเกณฑ์การประเมินไว้ล่วงหน้า",
+        sum_p2:"เข้าใจข้อจำกัดของวิธีนี้ และใช้ควบคู่กับการทดสอบแบบ cyclic/สนามจริง จะช่วยให้ตัดสินใจด้านวัสดุและกระบวนการได้แม่นยำกว่า",
+
+        /* Links + Footer */
+        links_h:"ลิงก์/คู่มือที่เกี่ยวข้อง", links_l1:"สารซีล/พาสซีฟ/ทรีตผิวป้องกัน", links_l2:"บทความ/คู่มืออื่น ๆ",
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
 
-      en:{
-        nav_home:"Home",nav_about:"About Us",nav_products:"Products",nav_contact:"Contact Us",nav_blog:"Blog",
-        back_home:"← Back to Home",
-        hero_title:"Salt Spray Test Specimen Preparation Guide",
-        hero_tagline:"From substrate/finish, masking & fixturing, neutral cleaning, pre-test records to common pitfalls that skew results.",
+      en: {
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Blog",
 
-        part1:"Part 1: Fundamentals & Pre-test Checklist",
-        part2:"Part 2: Placement/Cleaning/Records & Pitfalls",
+        hero_title:"What is Salt Spray? Pre‑Test Checklist & Materials/Finishes to Know",
+        hero_tagline:"NSS/AASS/CASS explained with a practical checklist, control parameters, result reading, limitations, and what materials/finishes should know before testing.",
 
         toc_title:"Contents",
-        toc_intro:"What is Salt Spray & modes",
-        toc_check:"Pre-test checklist (10)",
-        toc_material:"Substrate/finish notes",
-        toc_mask:"Masking & fixturing",
-        toc_clean:"Neutral cleaning & drying",
-        toc_record:"Chamber placement & records",
-        toc_defects:"Common pitfalls & avoidance",
-        toc_links:"Related links",
+        toc_intro:"Introduction",
+        toc_standards:"Standards & Test Types",
+        toc_checklist:"Pre‑Test Checklist",
+        toc_materials:"Materials/Finishes: What to Know",
+        toc_evaluation:"Reading Results & Criteria",
+        toc_pitfalls:"Limitations & Pitfalls",
+        toc_planning:"Test Planning & Reporting",
+        toc_summary:"Summary",
+        toc_links:"Related Links",
 
-        intro_h:"What is Salt Spray & common modes",
-        intro_p1:"Accelerated corrosion by salt fog to compare coating/plating durability. Typical modes: NSS (Neutral), AASS (Acetic), CASS (Copper-accelerated).",
-        t_mode:"Mode", t_when:"Use when", t_notes:"Notes",
-        intro_nss_when:"Zn/Ni coatings, chromate, general topcoats",
-        intro_nss_note:"Neutral pH salt solution; widely referenced",
-        intro_aass_when:"Anodize/coatings simulating mild acid",
-        intro_aass_note:"Speeds staining/pitting on Al",
-        intro_cass_when:"Brass; Ni/Cr decorative systems",
-        intro_cass_note:"Most aggressive; Cu catalyst",
+        intro_h:"What is Salt Spray?",
+/* ===== Add into I18N.en ===== */
+intro_p1: "What is a Salt Spray Test and how it works 🌫️ The Salt Spray (Salt Fog) test is an accelerated corrosion test designed to evaluate the corrosion resistance of materials and coatings by simulating a “salt-mist” environment inside a tightly controlled chamber. Specimens are placed in a salt spray chamber and continuously exposed to a fine mist of 5% sodium chloride solution (or as specified) at controlled temperature and humidity. These accelerated conditions drive rust formation and corrosion on the specimen surface.",
+intro_p2: "Measurement criteria and outcomes Results are typically recorded as the time to reach specified failure criteria. Key observations include Red Rust (corrosion of the base metal, e.g., steel) and White Rust (the first sign of degradation on zinc coatings). Also record the time to other physical defects such as blistering or peeling of the coating.",
+intro_p3: "Strength for Process Quality Control (PQC) The main advantage of the Salt Spray test is high repeatability under controlled conditions, making it excellent for comparative process quality control—comparing different production lots or evaluating new finishing systems during R&D.",
+intro_p4: "Limitations Although very useful, Salt Spray does not directly predict real-world service life because it accelerates corrosion under a simplified, artificial environment that may not match field mechanisms. Real exposure may include wet/dry cycles, UV, or other pollutants. Use Salt Spray primarily as a comparative test between systems, complemented by cyclic or field tests.",
 
-        check_h:"Pre-test checklist (10)",
-        c_th_item:"Item", c_th_what:"Check", c_th_how:"How/criteria",
-        c_item_label:"Specimen ID", c_what_label:"Non-interfering label/marker", c_how_label:"Back/edge only; avoid evaluation area",
-        c_item_edge:"Edges", c_what_edge:"Sharp edges → early failures", c_how_edge:"Light deburr before finishing; record it",
-        c_item_surface:"Surface state", c_what_surface:"Oil/oxide/silicone/wax", c_how_surface:"Mild degrease + DI; lint-free",
-        c_item_mask:"Masking", c_what_mask:"Salt/acid resistant per mode", c_how_mask:"Lab-grade tape/silicone; crisp edges",
-        c_item_fixture:"Fixture", c_what_fixture:"15–30°; no pooling", c_how_fixture:"Hang or non-reactive supports",
-        c_item_size:"Size/qty", c_what_size:"Adequate area; replicates", c_how_size:"≥3 pcs/condition",
-        c_item_clean:"Neutral surface", c_what_clean:"Surface pH near neutral", c_how_clean:"Counterflow DI + clean air dry",
-        c_item_history:"History", c_what_history:"Post-process time/Temp", c_how_history:"Record shelf & storage",
-        c_item_photo:"Pre photos", c_what_photo:"Key faces/measure spots", c_how_photo:"Constant light/scale",
-        c_item_spec:"Spec ref", c_what_spec:"Standard & criteria", c_how_spec:"Attach number in router",
+        std_h:"Standards & Test Types",
+        std_p1:"Common modes are NSS (Neutral), AASS (Acetic), and CASS (Copper‑Accelerated). Always follow the referenced standard and customer agreement.",
+        std_tbl_h1:"Type", std_tbl_h2:"Solution", std_tbl_h3:"pH Window", std_tbl_h4:"Chamber Temp", std_tbl_h5:"Typical Uses",
+        std_tbl_c1:"NSS (Neutral)", std_tbl_c2:"~5% m/m NaCl in DI water", std_tbl_c3:"Near neutral (~6.5–7.2)", std_tbl_c4:"~35°C", std_tbl_c5:"Zinc‑coated steels, organics, conversion coats",
+        std_tbl_c6:"AASS (Acetic)", std_tbl_c7:"NaCl + acetic acid", std_tbl_c8:"Acidic (~3.1–3.3)", std_tbl_c9:"~35°C", std_tbl_c10:"Decorative finishes or more aggressive challenge",
+        std_tbl_c11:"CASS (Cu‑Accelerated)", std_tbl_c12:"NaCl + acetic acid + CuCl₂", std_tbl_c13:"Acidic (~3.1–3.3)", std_tbl_c14:"~50°C", std_tbl_c15:"Ni/Cr decorative, automotive trim, bright chrome",
+        std_p2:"Note: Values are indicative only. Use your cited standard and contract for exact requirements.",
 
-        material_h:"Substrate/finish notes before test",
-        m_th_sub:"Substrate", m_th_risk:"Risk", m_th_tip:"Tip",
-        m_zinc_risk:"Chromate sensitive to high pH/hot air", m_zinc_tip:"Allow cure; minimize handling",
-        m_nicr_risk:"Sharp edges/pinholes start first", m_nicr_tip:"Log thickness; fair edges",
-        m_ano_risk:"Soap/silicone residue → white stain", m_ano_tip:"DI + wetting aid; no oily wipes",
+        chk_h:"Pre‑Test Checklist",
+        chk_p1:"Prepare thoroughly to reduce false results and improve evaluation accuracy.",
+        chk_tbl_h1:"Item", chk_tbl_h2:"What to confirm", chk_tbl_h3:"Notes",
+        chk_tbl_c1:"Test type", chk_tbl_c2:"NSS / AASS / CASS per referenced standard", chk_tbl_c3:"Agree pass/fail criteria upfront",
+        chk_tbl_c4:"Chamber parameters", chk_tbl_c5:"Salt %, pH, temp, fog deposition rate, pressure/nozzles", chk_tbl_c6:"Calibrate & log before run",
+        chk_tbl_c7:"Specimen & loading", chk_tbl_c8:"Size, position, tilt angle, spacing, drip points", chk_tbl_c9:"Avoid shielding/splashing",
+        chk_tbl_c10:"Surface prep", chk_tbl_c11:"Rinse/dry/seal/condition per spec", chk_tbl_c12:"Avoid handling contamination",
+        chk_tbl_c13:"Traceability", chk_tbl_c14:"Lot/date/coating/trace system", chk_tbl_c15:"Avoid interpretation errors",
+        chk_tbl_c16:"In‑test inspections", chk_tbl_c17:"Inspection hours/photos/notes", chk_tbl_c18:"Define safe chamber pauses",
 
-        mask_h:"Masking & fixturing",
-        mask_p1:"Use materials stable in fog temperature/chemistry, non-reactive to finish, and prevent backflow droplets.",
-        mk_th_item:"Item", mk_th_ok:"Do", mk_th_no:"Don't",
-        mk_mask_ok:"Lab-grade tape/silicone; crisp line", mk_mask_no:"Strong acid/alkaline adhesives",
-        mk_fix_ok:"15–30°; spacing for even fog", mk_fix_no:"Overlapping; drip-over",
-        mk_lab_ok:"Tag outside rating area", mk_lab_no:"Sticker on evaluation area",
+        mat_h:"Materials/Finishes: What to Know",
+        mat_p1:"Different substrates respond differently. Choose test type and criteria suited to the finish system.",
+        mat_tbl_h1:"System/Substrate", mat_tbl_h2:"Pre‑test Considerations", mat_tbl_h3:"General Guidance",
+        mat_tbl_c1:"Zinc/Zn‑Ni on steel + passivation", mat_tbl_c2:"Verify thickness/passivation/seal; separate white vs red rust criteria", mat_tbl_c3:"Tilt 15–30°; avoid water pooling; follow customer spec",
+        mat_tbl_c4:"Decorative Ni/Cr, CASS", mat_tbl_c5:"CASS is severe; consider thickness/porosity", mat_tbl_c6:"Mask sharp edges; map first pitting location",
+        mat_tbl_c7:"Aluminum/anodize", mat_tbl_c8:"Type/thickness/seal; color change criteria", mat_tbl_c9:"Avoid scratches; evaluate under stable light",
+        mat_tbl_c10:"Organic (paint/powder)", mat_tbl_c11:"Pretreatment/primer/bake; cross‑hatch separate", mat_tbl_c12:"Consider cyclic tests for service simulation",
 
-        clean_h:"Neutral cleaning & drying before test",
-        clean_p1:"Remove residues that bias results without harming the coating/plating.",
-        cl_th_step:"Step", cl_th_how:"How", cl_th_note:"Notes",
-        cl_s1:"Mild degrease", cl_s1_how:"Neutral cleaner/soft ultrasonic 2–5 min", cl_s1_note:"Avoid strong alkali on chromate/anodize",
-        cl_s2:"DI multi-rinse", cl_s2_how:"2–3 counterflow tanks until beading is continuous", cl_s2_note:"Change water by conductivity",
-        cl_s3:"Neutralize", cl_s3_how:"Mild buffer/DI → clean air dry", cl_s3_note:"Surface pH near 6–7",
-        cl_s4:"Conditioning", cl_s4_how:"Hold 1–24 h per spec to set film", cl_s4_note:"Log time/Temp/RH",
+        eval_h:"Reading Results & Criteria",
+        eval_p1:"Define criteria upfront: white/red rust onset, % area, depth/size, duration.",
+        eval_tbl_h1:"Metric", eval_tbl_h2:"Description", eval_tbl_h3:"Recording",
+        eval_tbl_c1:"White vs Red rust", eval_tbl_c2:"Zinc vs iron corrosion—distinguish clearly", eval_tbl_c3:"Log onset hours + photos",
+        eval_tbl_c4:"% affected area", eval_tbl_c5:"Percent of visible area", eval_tbl_c6:"Use grids/software aids",
+        eval_tbl_c7:"Onset location", eval_tbl_c8:"Edges/holes/corners/pooling/welds", eval_tbl_c9:"Map on photos",
+        eval_tbl_c10:"Discolor/blister/pitting", eval_tbl_c11:"Describe type/severity", eval_tbl_c12:"Compare to reference under standard light",
 
-        record_h:"Chamber placement & pre-run records",
-        record_p1:"Avoid drip-on-drip. Fix angle & location per specimen. Log test set so it's auditable.",
-        r_th_item:"Item", r_th_setting:"Setting", r_th_doc:"Document",
-        r_item_angle:"Angle", r_set_angle:"15–30° from vertical", r_doc_angle:"Photo + scale",
-        r_item_spacing:"Spacing", r_set_spacing:"Even fog, no shadow", r_doc_spacing:"Placement diagram",
-        r_item_id:"Sample ID", r_set_id:"ID/lot/process", r_doc_id:"Record sheet",
-        r_item_mode:"Mode/time", r_set_mode:"NSS/AASS/CASS × hours", r_doc_mode:"Test order",
+        pit_h:"Limitations & Pitfalls",
+        pit_l1:"Not a real‑life service predictor; excellent for comparative process control",
+        pit_l2:"Wrong loading causes pooling/re‑drip → skewed results",
+        pit_l3:"Ambiguous white vs red rust criteria leads to mistakes",
+        pit_l4:"Solution composition/parameter drift breaks round‑to‑round comparability",
 
-        defects_h:"Common pitfalls & avoidance (pre-run)",
-        d_th_sym:"Symptom/Risk", d_th_cause:"Cause", d_th_fix:"Avoid",
-        d_s_sticker:"Adhesive residue/ghost", d_c_sticker:"Non-lab grade label", d_f_sticker:"Hang tags/edge labels only",
-        d_s_drop:"Drip marks/backflow", d_c_drop:"Wrong angle/spacing", d_f_drop:"Set 15–30°; add spacing",
-        d_s_white:"Early white stain", d_c_white:"Soap/silicone residue", d_f_white:"Neutral clean + DI dry",
-        d_s_edge:"Edge-first failure", d_c_edge:"Sharp edge/thin film", d_f_edge:"Deburr & record",
+        plan_h:"Test Planning & Reporting",
+        plan_l1:"Define test type/standard/target hours/pass‑fail",
+        plan_l2:"Log salt %, pH, temp, fog rate, specimen angle",
+        plan_l3:"Attach milestone photos and damage maps",
+        plan_l4:"Tabulate onset hours, % area, remarks",
 
-        links_h:"Related links",
-        link_salt:"Salt Spray quick guide",
-        link_at:"Anti-tarnish page (style reference)",
-        link_pretreat:"Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"Filtration / hot-air knife equipment",
+        sum_h:"Summary",
+        sum_p1:"Salt Spray is powerful for QA when parameters are controlled, the mode fits the finish system, and criteria are pre‑defined.",
+        sum_p2:"Know its limits and combine with cyclic/field tests for better decisions on materials and processes.",
 
+        links_h:"Related Links", links_l1:"Sealers/passivation/protective treatments", links_l2:"More guides/articles",
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
-    const els={
-      langBtns:()=>document.querySelectorAll('.lang-switch .lang-btn'),
-      translatables:()=>document.querySelectorAll('[data-i18n-key]'),
-      tocLinks:()=>document.querySelectorAll('#toc a[href^="#"]'),
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
     function applyLang(lang){
-      const sel=(lang==='en')?'en':'th';
-      document.documentElement.lang=sel;
-      els.langBtns().forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.lang===sel)));
-      els.translatables().forEach(node=>{
-        const key=node.getAttribute('data-i18n-key');
-        if(key&&I18N[sel]&&I18N[sel][key]) node.textContent=I18N[sel][key];
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
-      try{localStorage.setItem('lang',sel);}catch(e){}
-      // recalc header height after language switch
+      try{ localStorage.setItem('lang', sel); }catch(e){}
       try{
-        const h=document.getElementById('siteHeader').getBoundingClientRect().height|0;
-        document.documentElement.style.setProperty('--header-h',h+'px');
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
       }catch(e){}
     }
 
     (function initLang(){
-      const saved=(typeof localStorage!=='undefined'&&localStorage.getItem('lang'))||'th';
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
-      els.langBtns().forEach(btn=>btn.addEventListener('click',()=>applyLang(btn.dataset.lang)));
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
   </script>
 
-  <!-- JS: Part switcher + deep-link persist -->
-  <script>
-  (function(){
-    const buttons=document.querySelectorAll('.part-switch .part-btn');
-    const tocLinks=document.querySelectorAll('#toc a[data-part]');
-    const sections=document.querySelectorAll('section[data-part]');
-
-    function setPart(p){
-      const part=(p==='2')?'2':'1';
-      document.documentElement.setAttribute('data-part',part);
-      sections.forEach(sec=>sec.hidden=(sec.dataset.part!==part));
-      tocLinks.forEach(a=>a.hidden=(a.dataset.part!==part));
-      buttons.forEach(b=>{
-        const on=(b.dataset.part===part);
-        b.setAttribute('aria-pressed',String(on));
-        b.setAttribute('aria-selected',String(on));
-      });
-      try{localStorage.setItem('salt_prep_part',part);}catch(e){}
-      const url=new URL(location);url.searchParams.set('part',part);history.replaceState(null,'',url);
-    }
-
-    const urlPart=new URLSearchParams(location.search).get('part');
-    const saved=(typeof localStorage!=='undefined'&&localStorage.getItem('salt_prep_part'))||'1';
-    setPart(urlPart==='2'?'2':(urlPart==='1'?'1':saved));
-
-    buttons.forEach(b=>b.addEventListener('click',()=>{
-      setPart(b.dataset.part);
-      document.getElementById('toc')?.scrollIntoView({behavior:'smooth',block:'start'});
-    }));
-
-    // TOC click switches to the correct part before anchor scroll
-    document.querySelectorAll('#toc a[data-part]').forEach(a=>{
-      a.addEventListener('click',()=>{
-        const p=a.getAttribute('data-part');
-        setPart(p);
-      });
-    });
-  })();
-  </script>
-
-  <!-- JS: Header glass, mobile menu (scrim+lock), smart back, highlight current -->
+  <!-- JS: Header glass, mobile menu, highlight current, TOC scroll spy -->
   <script>
     (function(){
-      const header=document.getElementById('siteHeader');
-      const toggle=header?.querySelector('.nav-toggle');
-      const nav=document.getElementById('primary-nav');
-      const scrim=document.querySelector('.menu-scrim');
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
 
-      // Set header height var & darken on scroll
-      const setH=()=>{const h=header?Math.round(header.getBoundingClientRect().height):64;document.documentElement.style.setProperty('--header-h',h+'px');};
-      const onScroll=()=>header&&header.classList.toggle('is-scrolled',(window.scrollY||0)>10);
-      window.addEventListener('load',setH,{once:true});
-      window.addEventListener('resize',setH,{passive:true});
-      window.addEventListener('scroll',onScroll,{passive:true});
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
 
-      // Mobile menu open/close with body lock
-      if(toggle&&nav&&scrim){
-        let lockY=0;
+      if(toggle && nav && scrim){
+        let lockY = 0;
         function openMenu(v){
-          header.classList.toggle('open',v);
-          toggle.setAttribute('aria-expanded',String(v));
-          nav.setAttribute('aria-hidden',String(!v));
-          v?scrim.removeAttribute('hidden'):scrim.setAttribute('hidden','');
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
           if(v){
-            lockY=window.scrollY;
+            lockY = window.scrollY;
             document.body.classList.add('no-scroll');
-            document.body.style.top=`-${lockY}px`;
-            const first=nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
-            first&&first.focus({preventScroll:true});
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
           }else{
             document.body.classList.remove('no-scroll');
-            document.body.style.top='';
-            window.scrollTo(0,lockY);
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
             toggle.focus({preventScroll:true});
           }
         }
-        toggle.addEventListener('click',()=>openMenu(!header.classList.contains('open')));
-        scrim.addEventListener('click',()=>openMenu(false));
-        document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'&&header.classList.contains('open')) openMenu(false); });
-        window.addEventListener('resize',()=>{ if(window.innerWidth>900&&header.classList.contains('open')) openMenu(false); },{passive:true});
-        nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>openMenu(false)));
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Products when under /products/*
+      // Highlight current page; force Blog when under /blog/*
       try{
-        const here=location.pathname.replace(/\/+$/,'');
-        const isProducts=here.startsWith('/products');
+        const here = location.pathname.replace(/\/+$/,'');
+        const isBlog = here.startsWith('/blog');
         nav?.querySelectorAll('a').forEach(a=>{
-          const path=new URL(a.getAttribute('href'),location.origin).pathname.replace(/\/+$/,'');
-          if(isProducts&&/\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
-          else if(here===path) a.setAttribute('aria-current','page');
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isBlog && /\/blog\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
           else a.removeAttribute('aria-current');
         });
       }catch(e){}
 
-      // Smart back
+      // TOC scroll spy
       (function(){
-        const btn=document.querySelector('[data-back]');
-        if(!btn) return;
-        btn.addEventListener('click',function(e){
-          try{
-            const ref=document.referrer;
-            const sameOrigin=ref&&new URL(ref).origin===location.origin;
-            if(sameOrigin){ e.preventDefault(); history.back(); }
-          }catch(err){}
+        const links = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+        if (!links.length) return;
+        const map = new Map();
+        links.forEach(a=>{
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) map.set(id, {link:a, el});
         });
+
+        const setActive = (id)=>{
+          links.forEach(a=> a.classList.remove('is-active'));
+          links.forEach(a=> a.setAttribute('aria-current','false'));
+          const item = map.get(id);
+          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+        };
+
+        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+        const obs = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            if (e.isIntersecting){
+              const id = e.target.id;
+              setActive(id);
+              history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+            }
+          });
+        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+        map.forEach(({el})=> obs.observe(el));
       })();
     })();
-  </script>
 
-  <!-- JS: Scroll-spy for TOC + heading anchors -->
-  <script>
-    // Clickable H2 anchors
-    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
-      h.addEventListener('click',()=>{
-        const sec=h.closest('.section-block');
-        if(sec&&sec.id){ history.pushState(null,'','#'+sec.id); }
-      });
-    });
-
+    // Back-to-top
     (function(){
-      const tocLinks=Array.from(document.querySelectorAll('#toc a[href^="#"]'));
-      if(!tocLinks.length) return;
-      const map=new Map();
-      tocLinks.forEach(a=>{
-        const id=a.getAttribute('href').slice(1);
-        const el=document.getElementById(id);
-        if(el) map.set(id,{link:a,el});
-      });
-
-      const setActive=(id)=>{
-        tocLinks.forEach(a=>{a.classList.remove('is-active');a.setAttribute('aria-current','false');});
-        const item=map.get(id);
-        if(item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
-      };
-
-      const headerH=()=>parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
-      const obs=new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            const id=e.target.id;
-            setActive(id);
-            history.replaceState(null,'',`${location.pathname}${location.search}#${id}`);
-          }
-        });
-      },{rootMargin:`-${headerH()+24}px 0% -60% 0%`,threshold:.1});
-
-      map.forEach(({el})=>obs.observe(el));
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
     })();
-      // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
-
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
   </script>
 </body>
 </html>
