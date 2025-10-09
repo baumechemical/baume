@@ -87,33 +87,32 @@ Designed to match Anti‑tarnish page styling cues.
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
       --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
 
-    /* ===== Glass Header (transparent at top → darker on scroll) ===== */
+    /* ===== Header: ใส → เข้มเมื่อเลื่อน (glass) ===== */
     .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.82); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
     .brand-name{font-weight:800; color:#fff}
 
     .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:800 }
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    /* Language switch (synced) */
     .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .site-header.is-scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     /* Burger (mobile) */
@@ -132,370 +131,85 @@ Designed to match Anti‑tarnish page styling cues.
       .lang-btn{ color:#fff }
       .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
-
     .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
     .menu-scrim:not([hidden]){ display:block }
     body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img2.pic.in.th/pic/image2-1.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
     .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
-    .back-chip:hover{ transform:translateY(-1px) }
 
-    /* ===== Layout: sticky TOC (desktop) ===== */
+    /* Back button chip */
+.back-chip{
+  position:absolute; 
+  top:calc(var(--header-h) + 10px); 
+  left:16px; z-index:1;
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 12px; border-radius:999px;
+  font-weight:800; text-decoration:none;
+  background:#fff; color:#0f172a;
+  border:1px solid rgba(2,8,20,.08); 
+  box-shadow:var(--shadow-1);
+}
+.back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout & TOC ===== */
     .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
     @media (min-width:1100px){
       main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
       #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
-      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
       section.section-block{ grid-column:2 }
     }
-
-    /* ===== TOC card ===== */
     #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
     #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
     #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:999px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
     .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* ===== Section cards ===== */
+    /* ===== Sections ===== */
     section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
     section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    .lead{margin:0 0 16px; color:#5f6d7c}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+/* Icons per section */
+#intro>h2.section{ --icon:"🔎" }
+#shortanswer>h2.section{ --icon:"⚖️" }
+#adhesion>h2.section{ --icon:"🧲" }
+#barrier>h2.section{ --icon:"🧪" }
+#mechanical>h2.section{ --icon:"🛡️" }
+#process>h2.section{ --icon:"🧰" }
+#failures>h2.section{ --icon:"⚠️" }
+#checklist>h2.section{ --icon:"🧾" }
+#examples>h2.section{ --icon:"🏭" }
+#summary>h2.section{ --icon:"✅" }
+#links>h2.section{ --icon:"🔗" }
+    .lead{margin:0 0 16px; color:var(--muted)}
 
-    /* Tables */
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
-    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
-    .table tbody tr:nth-child(2n){background:#fbfdfc}
-    .table tbody tr:hover{ background:#f6fbf8 }
-
-    /* Part switcher */
-    [hidden]{display:none !important}
-    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
-    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
-    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
-
-    /* Footer styles are in Part B */
-
-    /* Reveal on scroll */
+    /* Lists & utilities */
+    ul.nice{margin:8px 0 0; padding-left:22px}
     .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
     .reveal.show{opacity:1; transform:none}
-
-    html{scroll-behavior:smooth}
     .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-  </style>
-</head>
-<body>
+    html{scroll-behavior:smooth}
 
-  <!-- ===== Header ===== -->
-  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
-    <div class="nav-bar">
-      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
-        <span class="brand-logo" aria-hidden="true"></span>
-        <span class="brand-name">Baume Chemical</span>
-      </a>
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
-        <span class="bar"></span>
-      </button>
-
-      <!-- Menu 5 รายการ: Home · About Us · Products · Contacts Us · Blog -->
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
-
-        <!-- synced language switcher (desktop inline / mobile inside) -->
-        <div class="lang-switch" role="group" aria-label="Language switcher">
-          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
-            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
-          </button>
-          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
-            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <div class="menu-scrim" hidden></div>
-
-  <!-- ===== Hero ===== -->
-  <header class="hero">
-    <a class="back-chip" href="https://www.baumechemical.com/" data-back data-i18n-key="back_home">← กลับเมนูหลัก</a>
-    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
-      <h1 data-i18n-key="hero_title">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย</h1>
-      <p data-i18n-key="hero_tagline">เกณฑ์ตัดสินใจ + ค่าเริ่มต้น + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางเปรียบเทียบ/ปัญหา</p>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <!-- Part Switcher -->
-    <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
-      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: ภาพรวม & ค่าเริ่มต้น/หน้าต่าง</span></button>
-      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ตารางเทียบ & ปัญหา</span></button>
-    </div>
-
-    <!-- TOC (sticky on desktop) -->
-    <nav id="toc" class="reveal" aria-label="สารบัญ">
-      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#rec" data-part="1" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a>
-        <a class="toc-chip" href="#prep" data-part="1" data-i18n-key="toc_prep">การเตรียมผิวก่อนชุบ</a>
-        <a class="toc-chip" href="#window" data-part="1" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a>
-        <a class="toc-chip" href="#fixture" data-part="2" data-i18n-key="toc_fixture">การจัดวาง</a>
-        <a class="toc-chip" href="#care" data-part="2" data-i18n-key="toc_care">การดูแลบ่อและคุณภาพ</a>
-        <a class="toc-chip" href="#compare" data-part="2" data-i18n-key="toc_compare">เทียบ “รองทองแดง vs ไม่รอง”</a>
-        <a class="toc-chip" href="#defects" data-part="2" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a>
-        <a class="toc-chip" href="#links" data-part="2" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้องกับบทความนี้</a>
-      </p>
-    </nav>
-
-    <!-- Section: ค่าเริ่มต้นที่แนะนำ -->
-    <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
-      <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
-      <p data-i18n-key="rec_p1">ยึดสเปกน้ำยาที่ใช้อยู่เป็นหลัก ตารางนี้เป็น “ค่าตั้งต้น” สำหรับทดลองบนชิ้นงานจริง ปรับครั้งละตัวแปร</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="rec_th_stack">โฟลว์</th>
-              <th data-i18n-key="rec_th_params">พารามิเตอร์ตั้งต้น (ช่วง)</th>
-              <th data-i18n-key="rec_th_note">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="flow_direct">Direct Nickel on Steel (ผ่าน Wood’s Strike)</td>
-              <td>
-                <ul>
-                  <li data-i18n-key="woods">Wood’s Ni strike: pH ~1.5–2.5, 20–40°C, 2–6 A/dm², 0.5–2 นาที</li>
-                  <li data-i18n-key="watts">Watts Ni: 45–60°C, pH 3.8–4.5, 2–8 A/dm²</li>
-                </ul>
-              </td>
-              <td data-i18n-key="note_direct">เหมาะกับงานทั่วไปที่ต้องการยึดเกาะดีและขั้นตอนน้อย</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="flow_cu">Nickel with Copper Undercoat (Cu strike → Ni)</td>
-              <td>
-                <ul>
-                  <li data-i18n-key="custrike">Cu strike (เช่น cyanide/pyrophosphate): 20–35°C, 0.5–2 A/dm²</li>
-                  <li data-i18n-key="ni_after_cu">ตามด้วย Watts Ni: 45–60°C, pH 3.8–4.5, 2–8 A/dm²</li>
-                </ul>
-              </td>
-              <td data-i18n-key="note_cu">ช่วยการแทรกซึม/ปรับผิวและเป็น barrier ต่อเหล็ก</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="lead" data-i18n-key="safety_note">ความปลอดภัย: อย. & สิ่งแวดล้อม—โดยเฉพาะระบบไซยาไนด์ ต้องมีมาตรการ/ใบอนุญาตและ PPE ครบถ้วน</p>
-    </section>
-
-    <!-- Section: การเตรียมผิวก่อนชุบ -->
-    <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
-      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนชุบ</h2>
-      <ul>
-        <li data-i18n-key="prep_1">ล้างไขมันด่าง/อัลตร้าโซนิก → ล้างน้ำหลายขั้น (ลด drag-in)</li>
-        <li data-i18n-key="prep_2">Pickle/Activate ตามชนิดเหล็ก (เช่น HCl/H2SO4 คุมเวลาให้พอดี)</li>
-        <li data-i18n-key="prep_3">สำหรับ Direct Ni: ทำ Wood’s strike ให้ทั่วก่อนเข้า Watts Ni</li>
-        <li data-i18n-key="prep_4">สำหรับรองทองแดง: ทำ Cu strike บางๆ ให้สม่ำเสมอ แล้วจึงเข้าบ่อนิกเกิล</li>
-        <li data-i18n-key="prep_5">คุมเวลา drain ทุกขั้น ลดคราบ/รัน และปนเปื้อน</li>
-      </ul>
-    </section>
-
-    <!-- Section: หน้าต่างกระบวนการ -->
-    <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
-      <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="win_th_flow">โฟลว์</th>
-              <th data-i18n-key="win_th_var">ตัวแปรหลัก</th>
-              <th data-i18n-key="win_th_low">ต่ำ</th>
-              <th data-i18n-key="win_th_mid">เหมาะ</th>
-              <th data-i18n-key="win_th_high">สูง</th>
-              <th data-i18n-key="win_th_obs">สังเกตการณ์</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowspan="3" data-i18n-key="flowA">Direct Ni (Wood’s → Watts)</td>
-              <td data-i18n-key="A_v">ความหนาแน่นกระแส (A/dm²)</td>
-              <td>ต่ำ</td><td>2–6</td><td>สูง</td>
-              <td data-i18n-key="A_v_n">ต่ำ → บาง/รูพรุน; สูง → พิตติ้ง/ไหม้/HCD หนาเกิน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="A_t">อุณหภูมิ (°C)</td>
-              <td>ต่ำ</td><td>45–60</td><td>สูง</td>
-              <td data-i18n-key="A_t_n">สูงเกิน → เงาเพี้ยน/พิตติ้งเพิ่ม</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="A_pH">pH</td>
-              <td>ต่ำ</td><td>3.8–4.5</td><td>สูง</td>
-              <td data-i18n-key="A_pH_n">นอกช่วง → เงา/การยึดเกาะ/ความคงตัวของสารเติมแต่งเพี้ยน</td>
-            </tr>
-            <tr>
-              <td rowspan="3" data-i18n-key="flowB">Cu Strike → Ni</td>
-              <td data-i18n-key="B_v">ความหนาแน่นกระแส Cu strike</td>
-              <td>ต่ำ</td><td>0.5–2</td><td>สูง</td>
-              <td data-i18n-key="B_v_n">ต่ำ → ไม่ต่อเนื่อง; สูง → รัน/หยาบ/ยึดเกาะด้อย</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="B_t">อุณหภูมิ Cu strike (°C)</td>
-              <td>ต่ำ</td><td>20–35</td><td>สูง</td>
-              <td data-i18n-key="B_t_n">สูงมาก → ฟอง/คราบ; ต่ำมาก → ไม่ขึ้น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="B_thk">ความหนา Cu strike (µm)</td>
-              <td>0</td><td>0.2–1</td><td>>2</td>
-              <td data-i18n-key="B_thk_n">หนาไป → เสี่ยง delam ระหว่าง Cu/Ni หาก activation ไม่พอ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-<!-- ===== PART A ends here — now paste PART B directly below this line ===== -->
-
-<!-- =====================================================
-PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
-====================================================== -->
-
-    <!-- Section: การจัดวาง -->
-    <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
-      <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
-      <p data-i18n-key="fixture_p1">จัดฟิกซ์เจอร์ให้ระยะขั้ว (anode–cathode) สม่ำเสมอ ใส่แผ่นบังลด HCD ที่ขอบ/สัน</p>
-      <p data-i18n-key="fixture_p2">แอโนดนิกเกิลใส่ถุง (PP) กรองต่อเนื่อง 5–10 µm ลดฝุ่น/อนุภาค</p>
-      <p data-i18n-key="fixture_p3">ชิ้นงานเอียงให้ระบายน้ำ/ก๊าซดี ลดคราบ/รัน โดยเฉพาะหลุมลึก</p>
-      <p data-i18n-key="fixture_p4">ไล่กระแสแบบขั้น (soft-start) ที่ Wood’s และ Cu strike เพื่อลดการไหม้</p>
-    </section>
-
-    <!-- Section: การดูแลบ่อและคุณภาพ -->
-    <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
-      <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อและคุณภาพ</h2>
-      <ul>
-        <li data-i18n-key="care_1">Watts Ni: pH 3.8–4.5 (บัฟเฟอร์บอริก), 45–60°C, ตรวจโลหะปน (Fe/Cu) และทำ dummy/คาร์บอนทรีตเมนต์ตามรอบ</li>
-        <li data-i18n-key="care_2">Wood’s strike: คุมกรด/คลอไรด์ตามสเปก เปลี่ยนบางส่วนเมื่อประสิทธิภาพตก</li>
-        <li data-i18n-key="care_3">Cu strike: คุมคาร์บอเนต/ฟรีไซยาไนด์ (ถ้าเป็นระบบไซยาไนด์) และความสะอาดอ่างอย่างเข้มงวด</li>
-        <li data-i18n-key="care_4">QC: cross-hatch/tape, thermal shock, ความหนา (น้ำหนัก/eddy current), SST ตามสเปกลูกค้า</li>
-      </ul>
-    </section>
-
-    <!-- Section: เทียบรองทองแดง vs ไม่รอง -->
-    <section id="compare" data-part="2" class="reveal section-block" aria-labelledby="compare-h">
-      <h2 id="compare-h" class="section" data-i18n-key="compare_h">เทียบ “รองทองแดง vs ไม่รอง”</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="cmp_opt">ตัวเลือก</th>
-              <th data-i18n-key="cmp_pros">ข้อดี</th>
-              <th data-i18n-key="cmp_cons">ข้อเสีย/ความเสี่ยง</th>
-              <th data-i18n-key="cmp_when">ใช้เมื่อ</th>
-              <th data-i18n-key="cmp_stack">โครงสร้างชั้น</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="opt_direct">ไม่รองทองแดง (Direct Ni)</td>
-              <td data-i18n-key="opt_direct_pros">ขั้นตอนน้อย เร็ว ค่าใช้จ่ายต่ำ ลดความเสี่ยง delam ระหว่างชั้น</td>
-              <td data-i18n-key="opt_direct_cons">Throw power ในหลุมลึกด้อยกว่ากรณีมี Cu, การปรับผิว/อุดรูพรุนทำได้น้อย</td>
-              <td data-i18n-key="opt_direct_when">งานทั่วไป/รูปทรงเปิด ต้องการยึดเกาะดี ไม่เน้น leveling หนามาก</td>
-              <td data-i18n-key="opt_direct_stack">Preclean → Activate → Wood’s Ni → Watts Ni</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="opt_cu">รองทองแดง (Cu strike → Ni)</td>
-              <td data-i18n-key="opt_cu_pros">ช่วยยึดเกาะ/การแทรกซึม, leveling ผิว, barrier ลดการแพร่เหล็ก</td>
-              <td data-i18n-key="opt_cu_cons">ขั้นตอนเพิ่ม เวลา/ต้นทุนสูง เสี่ยง delam หาก activation Cu→Ni ไม่ดี (โดยเฉพาะหนาเกิน)</td>
-              <td data-i18n-key="opt_cu_when">งานซับซ้อน/หลุมลึก, ต้องการผิวเรียบก่อนชั้น Ni, ข้อกำหนดคอร์โรชันสูง</td>
-              <td data-i18n-key="opt_cu_stack">Preclean → Activate → Cu strike (บาง) → Activate เบา → Watts Ni</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Section: ตารางปัญหาพบเจอบ่อย -->
-    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
-      <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="def_th_sym">อาการ</th>
-              <th data-i18n-key="def_th_cause">สาเหตุหลัก</th>
-              <th data-i18n-key="def_th_fix">แนวทางแก้</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="d1_s">ยึดเกาะไม่ดี (Direct Ni)</td>
-              <td data-i18n-key="d1_c">เตรียมผิว/Wood’s ไม่ทั่วถึง หรือเวลาน้อยไป</td>
-              <td data-i18n-key="d1_f">เพิ่มเวลา/กระแส Wood’s, ขัดคืน/activate ใหม่, ตรวจความสะอาด</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d2_s">Delam ที่รอยต่อ Cu/Ni</td>
-              <td data-i18n-key="d2_c">Cu strike หนาไป/activate ก่อน Ni ไม่พอ</td>
-              <td data-i18n-key="d2_f">ทำ Cu strike บาง (0.2–1 µm), activate เบาก่อนเข้า Ni</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d3_s">พิตติ้ง/รันบน HCD</td>
-              <td data-i18n-key="d3_c">กระแสสูงเกิน, ระยะขั้วไม่สม่ำเสมอ, แผ่นบังไม่พอ</td>
-              <td data-i18n-key="d3_f">ลด A/dm² หรือทำ ramp, เพิ่ม shield/ปรับระยะขั้ว, กรองต่อเนื่อง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d4_s">เป็นคราบ/หม่น</td>
-              <td data-i18n-key="d4_c">สารอินทรีย์เสื่อม, โลหะปน, pH/อุณหภูมิหลุดช่วง</td>
-              <td data-i18n-key="d4_f">คาร์บอนทรีตเมนต์, dummy plate, จูน pH/อุณหภูมิ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="d5_s">Throw power ต่ำในรู/ซอก</td>
-              <td data-i18n-key="d5_c">กระแสเฉลี่ยสูงเกิน/ฟิกซ์เจอร์ไม่เหมาะ/ไม่มี Cu ช่วย</td>
-              <td data-i18n-key="d5_f">ลด A/dm² เพิ่มเวลา, ปรับระยะขั้ว/แผ่นบัง, พิจารณา Cu strike บาง</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Section: ลิงก์ที่เกี่ยวข้อง -->
-    <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
-      <p><a class="more" href="https://www.baumechemical.com/blog/nickel-plating-troubleshooting/" data-i18n-key="link_ni_ts">ปัญหาการชุบนิกเกิล & วิธีแก้</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/nickel-troubleshooting/" data-i18n-key="link_ni_cases">Nickel Troubleshooting (รวมเคส)</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment สำหรับเตรียมผิว</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/plating-basics/" data-i18n-key="link_basic">ความรู้การชุบโลหะเบื้องต้น</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="link_plating">หมวด Plating / เคมีชุบ</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/strippers/" data-i18n-key="link_strip">Strippers / น้ำยาลอกชั้นชุบ</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_sst">เตรียมชิ้นงาน Salt Spray Test</a></p>
-    </section>
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <style>
-      .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-      .site-footer a{color:#e2e8f0; text-decoration:none}
-      .site-footer a:hover{color:#fff; text-decoration:underline}
-      .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-      .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
-      @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-      .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-      .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-      .ft-name{font-weight:800; color:#fff}
-      .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-      .footer-list{list-style:none; margin:8px 0 0; padding:0}
-      .footer-list li{margin:6px 0}
-      .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
- 
- /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
+/* Add to your CSS (หรือแทนที่บล็อกเดิม) */
 .float-line{
   position:fixed;
   right:16px;
@@ -542,7 +256,342 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
   .float-line a{ width:50px; height:50px }
   .backtop button{ width:42px; height:42px }
 }
- </style>
+/* ===== Pretty tables (responsive + sticky header) ===== */
+.table{
+  margin-top:12px;
+  background:#fff;
+  border:1px solid #e3ece5;
+  border-radius:12px;
+  box-shadow:var(--shadow-1);
+  overflow:auto;                 /* เลื่อนแนวนอนได้บนจอเล็ก */
+  -webkit-overflow-scrolling:touch;
+  /* ขอบจาง ๆ ตอนเลื่อน */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+}
+
+.table table{
+  width:100%;
+  min-width:720px;               /* กันบีบคอลัมน์จนอ่านยาก */
+  border-collapse:separate;
+  border-spacing:0;
+  font-variant-numeric: tabular-nums;
+}
+
+.table thead th{
+  position: sticky; top: 0;
+  z-index: 1;
+  text-align:left;
+  font-weight:800;
+  color:#1f2a24;
+  padding:12px 14px;
+  background:linear-gradient(180deg,#f7fbf9,#f0f7f3);
+  border-bottom:1px solid #dce8e1;
+  white-space:nowrap;
+}
+
+.table tbody td{
+  padding:10px 14px;
+  color:#1f2a24;
+  border-bottom:1px solid #eef4f0;
+  vertical-align:top;
+}
+
+.table tbody tr:last-child td{ border-bottom:none; }
+.table tbody tr:nth-child(odd){ background:#fbfdfc; } /* zebra */
+.table tbody tr:hover{ background:#f1f7f3; }          /* hover row */
+
+.table th+th, .table td+td{ border-left:1px solid #eef2ee; } /* เส้นคอลัมน์จาง ๆ */
+
+/* มุมมนจริง ๆ ที่มุม 4 ด้าน */
+.table table thead tr:first-child th:first-child{ border-top-left-radius:12px; }
+.table table thead tr:first-child th:last-child{ border-top-right-radius:12px; }
+.table table tbody tr:last-child td:first-child{ border-bottom-left-radius:12px; }
+.table table tbody tr:last-child td:last-child{ border-bottom-right-radius:12px; }
+
+/* สกรอลบาร์สวยขึ้นนิดหน่อย (เฉพาะ WebKit) */
+.table::-webkit-scrollbar{ height:10px; }
+.table::-webkit-scrollbar-thumb{ background:#d1e2da; border-radius:999px; border:2px solid #fff; }
+.table::-webkit-scrollbar-track{ background:#f3f7f5; border-radius:999px; }
+
+/* จอเล็ก: ปล่อยให้เลื่อนแนวนอนแทนบีบคอลัมน์ */
+@media (max-width:600px){
+  .table table{ min-width:560px; }
+}
+
+/* ตัวเลือกเสริม: โหมดคอมแพ็ค (ใส่ class table--compact ที่ wrapper ถ้าต้องการ) */
+.table.table--compact thead th{ padding:10px 12px; }
+.table.table--compact tbody td{ padding:8px 12px; }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <a class="back-chip" href="https://www.baumechemical.com/blog" data-back data-i18n-key="back_home">← กลับสู่หน้า Blog</a>
+      <h1 data-i18n-key="hero_title">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย</h1>
+      <p data-i18n-key="hero_tagline">ควรรองพื้นทองแดงหรือชุบนิกเกิลลงเหล็กโดยตรง? ดูการยึดเกาะ ความทนทาน การกัดกร่อน ความสวยงาม ค่าใช้จ่าย และสูตรสแต็คที่แนะนำ</p>
+    </div>
+  </header>
+
+  <!-- Main + TOC -->
+  <main class="wrap">
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">บทนำ</a>
+        <a class="toc-chip" href="#adhesion" data-i18n-key="toc_adh">การยึดเกาะ & ศักย์ไฟฟ้าเคมี</a>
+        <a class="toc-chip" href="#barrier" data-i18n-key="toc_barrier">กั้นการแพร่ & กันสนิม</a>
+        <a class="toc-chip" href="#mechanical" data-i18n-key="toc_mech">ความแข็ง & ความเรียบ</a>
+        <a class="toc-chip" href="#process" data-i18n-key="toc_process">ตัวเลือกสแต็คกระบวนการ</a>
+        <a class="toc-chip" href="#failures" data-i18n-key="toc_fail">โหมดการล้มเหลวที่พบบ่อย</a>
+        <a class="toc-chip" href="#checklist" data-i18n-key="toc_checklist">เช็กลิสต์ก่อนตัดสินใจ</a>
+        <a class="toc-chip" href="#examples" data-i18n-key="toc_examples">ตัวอย่างอุตสาหกรรม</a>
+        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">สรุป</a>
+        <a class="toc-chip" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
+      </p>
+    </nav>
+
+    <!-- Sections -->
+    <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+      <h2 id="intro-h" class="section" data-i18n-key="intro_h">บทนำ</h2>
+      <p data-i18n-key="intro_p1">คำถามยอดฮิตของการชุบตกแต่งและการปกป้องผิวเหล็ก: ต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?</p>
+      <p data-i18n-key="intro_p2">การใช้ทองแดงรองพื้นก่อนชุบนิกเกิลบนเหล็ก ไม่ได้จำเป็นเสมอไป แต่จะถูกเลือกใช้เมื่อต้องการคุณสมบัติเฉพาะด้าน เช่น ความเงางามระดับสูง หรือการเติมเต็มร่องรอยบนพื้นผิว การพิจารณาขึ้นอยู่กับการประเมิน ความเสี่ยง (สนิม) และความสวยงาม/ความทนทาน</p>
+      <p data-i18n-key="intro_p3">1.เหตุผลที่ทองแดงมีประโยชน์: เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย แต่การใช้ ทองแดงชุบเริ่มต้น (Copper Strike) บางๆ ก่อนจะช่วยเป็น ตัวกลาง ที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์</p>
+      <p data-i18n-key="intro_p4">2.เมื่อต้องใช้ทองแดง: หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ ทองแดงกรด (Acid Copper) เป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติ ปรับผิวให้เรียบเสมอกัน (Leveling) ได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด</p>
+      <p data-i18n-key="intro_p5">3.หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิด รูพรุนหรือมีรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้ นิกเกิลสองชั้น (Duplex Nickel) หรือ นิกเกิลไร้กระแสไฟฟ้า (EN) เพื่อเพิ่มความหนาแน่น/ลดรูพรุนแทน</p>
+      <p data-i18n-key="intro_p6">4.การตัดทองแดง: การเลือกใช้ทองแดงด่างและทองแดงกรดรองพื้น แล้วชุบนิกเกิลโดยตรง จะช่วย ลดขั้นตอน การชุบ (ลดเวลาในบ่อ) และ ลดต้นทุน ในการจัดการน้ำยา (โดยเฉพาะหากเป็นทองแดงไซยาไนด์ ซึ่งมีความอันตรายและมีข้อกำหนดในการจัดการสูง) ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป</p>
+      <p data-i18n-key="intro_p7">หากคุณผลิตชิ้นส่วน โครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบ ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิต ชิ้นส่วนเครื่องจักร หรือ ชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้</p>
+    </section>
+
+    <section id="shortanswer" class="reveal section-block" aria-labelledby="short-h">
+      <h2 id="short-h" class="section" data-i18n-key="short_h">คำตอบสั้น ๆ</h2>
+      <div class="table">
+        <table id="tbl_short">
+          <thead>
+            <tr>
+              <th data-i18n-key="short_tbl_h1">สถานการณ์</th>
+              <th data-i18n-key="short_tbl_h2">ควรใช้ทองแดง?</th>
+              <th data-i18n-key="short_tbl_h3">เหตุผลย่อ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="short_tbl_c1">งานตกแต่งต้องเงาเรียบมาก (ชิ้นส่วนมองเห็น)</td>
+              <td data-i18n-key="short_tbl_c2">แนะนำ (acid copper ช่วยเก็บผิว)</td>
+              <td data-i18n-key="short_tbl_c3">ทองแดงอ่อน/ไหลตัวดี → leveling; ตามด้วย Ni ให้ความทน</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="short_tbl_c4">งานฟังก์ชัน/สวมสไลด์ ต้องความแข็งสูง</td>
+              <td data-i18n-key="short_tbl_c5">ไม่จำเป็นเสมอ</td>
+              <td data-i18n-key="short_tbl_c6">ใช้ sulfamate/EN/Watts Ni ลงตรง (หลัง strike) จะดีกว่า</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="short_tbl_c7">ชิ้นงานรูปทรงซับซ้อน ต้องครอบคลุมดี</td>
+              <td data-i18n-key="short_tbl_c8">พิจารณา</td>
+              <td data-i18n-key="short_tbl_c9">acid copper กระจายตัวดี เติมมุมอับ ก่อนขึ้น Ni</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="short_tbl_c10">งบจำกัด ต้องการไซเคิลสั้น</td>
+              <td data-i18n-key="short_tbl_c11">อาจตัดออก</td>
+              <td data-i18n-key="short_tbl_c12">ใช้ Wood’s Ni strike + semi-bright/bright Ni แทน</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="adhesion" class="reveal section-block" aria-labelledby="adh-h">
+      <h2 id="adh-h" class="section" data-i18n-key="adh_h">การยึดเกาะ & ศักย์ไฟฟ้าเคมี</h2>
+      <p data-i18n-key="adh_p1">ทองแดง strike (cyanide/pyrophosphate) หรือ acid copper ที่บางมาก สามารถทำหน้าที่เป็นสะพานโลหะระหว่างเหล็กกับชั้นบน ช่วยลดปฏิกิริยาไฟฟ้าเคมีเฉียบพลันและเพิ่มพื้นที่สัมผัสเชิงจุลภาค ทำให้การยึดเกาะดีขึ้น</p>
+      <p data-i18n-key="adh_p2">ทางเลือก: <strong>Wood’s nickel strike</strong> (NiCl₂ + HCl) ให้การ active ผิวเหล็กและสร้างชั้นนิกเกิลบางที่ยึดเกาะสูง ก่อนขึ้น semi-bright/bright Ni โดยไม่ต้องผ่านทองแดง</p>
+    </section>
+
+    <section id="barrier" class="reveal section-block" aria-labelledby="bar-h">
+      <h2 id="bar-h" class="section" data-i18n-key="bar_h">กั้นการแพร่ & กันสนิม</h2>
+      <p data-i18n-key="bar_p1">ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อมีรูพรุนอาจกลายเป็นแคโทดเทียบกับเหล็ก ทำให้เหล็กเป็นแอโนดและเกิดสนิมเร็วขึ้น ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพา <strong>ชั้นนิกเกิล</strong> (semi-bright/bright/duplex) เป็นเกราะกั้นการแพร่และความชื้น</p>
+      <p data-i18n-key="bar_p2">ในงานที่ต้องการปกป้องสูง แนะนำ duplex Ni หรือ EN (Electroless Ni) เป็น underlayer เพื่อเพิ่มความหนาแน่น/ลดรูพรุน ก่อนชั้นตกแต่ง</p>
+    </section>
+
+    <section id="mechanical" class="reveal section-block" aria-labelledby="mech-h">
+      <h2 id="mech-h" class="section" data-i18n-key="mech_h">ความแข็ง & ความเรียบ</h2>
+      <div class="table">
+        <table id="tbl_mech">
+          <thead>
+            <tr>
+              <th data-i18n-key="mech_tbl_h1">ชั้น</th>
+              <th data-i18n-key="mech_tbl_h2">ความแข็งโดยประมาณ (HV)</th>
+              <th data-i18n-key="mech_tbl_h3">คุณสมบัติเด่น</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="mech_tbl_c1">ทองแดง (acid)</td>
+              <td data-i18n-key="mech_tbl_c2">~80–120</td>
+              <td data-i18n-key="mech_tbl_c3">ไหลตัวดี เติมรอย/หลุมเล็ก ๆ ทำให้ผิวเรียบ</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="mech_tbl_c4">นิกเกิลกึ่งเงา (semi-bright)</td>
+              <td data-i18n-key="mech_tbl_c5">~200–300</td>
+              <td data-i18n-key="mech_tbl_c6">โครงสร้างแน่น เป็นเกราะกั้นที่ดี</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="mech_tbl_c7">นิกเกิลเงา (bright)</td>
+              <td data-i18n-key="mech_tbl_c8">~300–500</td>
+              <td data-i18n-key="mech_tbl_c9">เงาสูง ความสวยงาม ดีสำหรับตกแต่ง</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="mech_tbl_c10">Ni ซัลฟาเมต/EN (ฟังก์ชัน)</td>
+              <td data-i18n-key="mech_tbl_c11">~250–600</td>
+              <td data-i18n-key="mech_tbl_c12">ความเค้นต่ำ/หนาได้มาก เหมาะงานอุตสาหกรรม</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="process" class="reveal section-block" aria-labelledby="proc-h">
+      <h2 id="proc-h" class="section" data-i18n-key="proc_h">ตัวเลือกสแต็คกระบวนการ</h2>
+      <div class="table">
+        <table id="tbl_proc">
+          <thead>
+            <tr>
+              <th data-i18n-key="proc_tbl_h1">สแต็ค</th>
+              <th data-i18n-key="proc_tbl_h2">คำอธิบายโดยย่อ</th>
+              <th data-i18n-key="proc_tbl_h3">การใช้งานที่เหมาะ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="proc_tbl_c1">เหล็ก → ทองแดง strike → acid copper (10–20 µm) → semi-bright Ni (12–20 µm) → bright Ni (8–12 µm) → Cr</td>
+              <td data-i18n-key="proc_tbl_c2">leveling สูง สวยงามดี แต่เพิ่มเวลาบ่อ/ต้นทุน</td>
+              <td data-i18n-key="proc_tbl_c3">งานตกแต่งระดับพรีเมียม</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="proc_tbl_c4">เหล็ก → Wood’s Ni strike → semi-bright Ni → bright Ni → Cr</td>
+              <td data-i18n-key="proc_tbl_c5">ตัดชั้นทองแดง ลดความเสี่ยงกัลวานิกที่รูพรุน</td>
+              <td data-i18n-key="proc_tbl_c6">ตกแต่งทั่วไป/ต้นทุนคุมง่าย</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="proc_tbl_c7">เหล็ก → EN (mid-P) 5–10 µm → Ni ฟังก์ชัน/ตกแต่ง</td>
+              <td data-i18n-key="proc_tbl_c8">เกราะกั้นแน่น กระจายสม่ำเสมอ</td>
+              <td data-i18n-key="proc_tbl_c9">สภาพกัดกร่อนจัด/ชิ้นส่วนซับซ้อน</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="proc_tbl_c10">เหล็ก → sulfamate Ni หนา (20–50+ µm)</td>
+              <td data-i18n-key="proc_tbl_c11">ความเค้นต่ำ หนาเร็ว เหมาะซ่อมบิ้วด์/ฟิตติ้ง</td>
+              <td data-i18n-key="proc_tbl_c12">งานฟังก์ชัน/สวมสไลด์</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="failures" class="reveal section-block" aria-labelledby="fail-h">
+      <h2 id="fail-h" class="section" data-i18n-key="fail_h">โหมดการล้มเหลวที่พบบ่อย</h2>
+      <ul class="nice">
+        <li data-i18n-key="fail_l1"><strong>ลอก/พอง</strong> จากการเตรียมผิว/activation ไม่สมบูรณ์ หรือ strike ไม่เพียงพอ</li>
+        <li data-i18n-key="fail_l2"><strong>สนิมแดงผ่านรูพรุน</strong> โดยเฉพาะเมื่อมีทองแดงใต้ชั้น Ni ที่พรุน → เซลล์กัลวานิก</li>
+        <li data-i18n-key="fail_l3"><strong>สี/ความเงาไม่สม่ำเสมอ</strong> เมื่อพื้นฐานหยาบและไม่มี acid copper ช่วย leveling</li>
+      </ul>
+    </section>
+
+    <section id="checklist" class="reveal section-block" aria-labelledby="chk-h">
+      <h2 id="chk-h" class="section" data-i18n-key="chk_h">เช็กลิสต์ก่อนตัดสินใจ</h2>
+      <div class="table">
+        <table id="tbl_check">
+          <thead>
+            <tr>
+              <th data-i18n-key="chk_tbl_h1">ประเด็น</th>
+              <th data-i18n-key="chk_tbl_h2">ถามตัวเอง/ลูกค้า</th>
+              <th data-i18n-key="chk_tbl_h3">ผลต่อการเลือกทองแดง</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n-key="chk_tbl_c1">ความงาม/เงา/ความเรียบ</td>
+              <td data-i18n-key="chk_tbl_c2">เห็นชิ้นงานระยะใกล้หรือไม่? ผิวตั้งต้นหยาบไหม?</td>
+              <td data-i18n-key="chk_tbl_c3">ต้องการทองแดงเพื่อ leveling</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c4">ความทนสึก/แข็ง</td>
+              <td data-i18n-key="chk_tbl_c5">สัมผัส/สไลด์บ่อย? โหลดสูง?</td>
+              <td data-i18n-key="chk_tbl_c6">ตัดทองแดง ใช้ Ni ฟังก์ชันแทน</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c7">สภาพแวดล้อมกัดกร่อน</td>
+              <td data-i18n-key="chk_tbl_c8">กลางแจ้ง/ทะเล/เกลือถนน?</td>
+              <td data-i18n-key="chk_tbl_c9">หลีกเลี่ยงทองแดงใต้ Ni ที่พรุน เพิ่มชั้นกั้น</td>
+            </tr>
+            <tr>
+              <td data-i18n-key="chk_tbl_c10">งบประมาณ/เวลาผลิต</td>
+              <td data-i18n-key="chk_tbl_c11">เพดานต้นทุน/ takt time เท่าไร?</td>
+              <td data-i18n-key="chk_tbl_c12">อาจใช้ Wood’s strike + duplex Ni</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="examples" class="reveal section-block" aria-labelledby="ex-h">
+      <h2 id="ex-h" class="section" data-i18n-key="ex_h">ตัวอย่างอุตสาหกรรม</h2>
+      <ul class="nice">
+        <li data-i18n-key="ex_l1"><strong>ชิ้นส่วนตกแต่งรถยนต์</strong>: duplex Ni + micro-porous Cr; ทองแดงใช้เมื่อผิวฐานต้องเก็บผิวหนัก</li>
+        <li data-i18n-key="ex_l2"><strong>ฮาร์ดแวร์บ้าน</strong> (ลูกบิด/บานพับ): Wood’s strike + Ni เงา; บางรุ่นเพิ่ม acid copper เพื่อความเรียบ</li>
+        <li data-i18n-key="ex_l3"><strong>ชิ้นส่วนเครื่องกล</strong>: sulfamate Ni หนา/EN เป็น underlayer ฟังก์ชัน</li>
+      </ul>
+    </section>
+
+    <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
+      <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุป</h2>
+      <p data-i18n-key="sum_p1">ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบ/ความงาม แต่ไม่จำเป็นเสมอไปสำหรับงานฟังก์ชันหรือสภาพกัดกร่อนจัด หากควบคุมการเตรียมผิวและใช้ strike/ชั้น Ni ที่เหมาะสม</p>
+      <p data-i18n-key="sum_p2">พิจารณาตามเป้าหมายงาน งบ และความเสี่ยงด้านกัลวานิก เลือกสแต็คที่สมดุลระหว่างคุณภาพและต้นทุน</p>
+    </section>
+
+    <section id="links" class="reveal section-block" aria-labelledby="links-h">
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+      <ul class="nice">
+        <li><a href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" target="_blank" rel="noopener" data-i18n-key="links_l1">บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น</a></li>
+        <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener" data-i18n-key="links_l2">ผลิตภัณฑ์สำหรับงาน Plating</a></li>
+        <li><a href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
@@ -581,11 +630,10 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
       <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
     </div>
   </footer>
-
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- ===== JS: Reveal on scroll ===== -->
+  <!-- JS: Reveal on scroll -->
   <script>
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
@@ -594,62 +642,209 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- ===== JS: i18n (sync switch + recalc header height) ===== -->
+  <!-- JS: i18n dictionary + switch -->
   <script>
     const I18N = {
       th: {
-        nav_home:"Home", nav_about:"About Us", nav_products:"Products", nav_contacts:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับเมนูหลัก",
-        hero_title:"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย",
-        hero_tagline:"เกณฑ์ตัดสินใจ + ค่าเริ่มต้น + หน้าต่างกระบวนการ + ฟิกซ์เจอร์ + การดูแลบ่อ + ตารางเปรียบเทียบ/ปัญหา",
-        part1:"พาร์ต 1: ภาพรวม & ค่าเริ่มต้น/หน้าต่าง",
-        part2:"พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ตารางเทียบ & ปัญหา",
-        toc_title:"สารบัญ", toc_rec:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนชุบ", toc_window:"หน้าต่างกระบวนการ", toc_fixture:"การจัดวาง", toc_care:"การดูแลบ่อและคุณภาพ", toc_compare:"เทียบ “รองทองแดง vs ไม่รอง”", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
-        rec_h:"ค่าเริ่มต้นที่แนะนำ", rec_p1:"ยึดสเปกน้ำยาที่ใช้อยู่เป็นหลัก ปรับครั้งละตัวบนชิ้นงานจริง", rec_th_stack:"โฟลว์", rec_th_params:"พารามิเตอร์ตั้งต้น (ช่วง)", rec_th_note:"หมายเหตุ",
-        flow_direct:"Direct Nickel on Steel (ผ่าน Wood’s Strike)", woods:"Wood’s Ni strike: pH ~1.5–2.5, 20–40°C, 2–6 A/dm², 0.5–2 นาที", watts:"Watts Ni: 45–60°C, pH 3.8–4.5, 2–8 A/dm²", note_direct:"เหมาะกับงานทั่วไปที่ต้องการยึดเกาะดีและขั้นตอนน้อย",
-        flow_cu:"Nickel with Copper Undercoat (Cu strike → Ni)", custrike:"Cu strike (เช่น cyanide/pyrophosphate): 20–35°C, 0.5–2 A/dm²", ni_after_cu:"Watts Ni ต่อจาก Cu: 45–60°C, pH 3.8–4.5, 2–8 A/dm²", note_cu:"ช่วยแทรกซึม/ปรับผิว และเป็น barrier ต่อเหล็ก", safety_note:"ความปลอดภัย: ระบบไซยาไนด์ต้องมีมาตรการ/ใบอนุญาตและ PPE ครบถ้วน",
-        prep_h:"การเตรียมผิวก่อนชุบ", prep_1:"ล้างไขมัน → ล้างหลายขั้น", prep_2:"Pickle/Activate ให้เหมาะกับเหล็ก", prep_3:"Direct Ni: ทำ Wood’s ให้ทั่วก่อน Watts", prep_4:"รองทองแดง: ทำ Cu strike บางและสม่ำเสมอ", prep_5:"คุมเวลา drain ลดคราบ/ปนเปื้อน",
-        window_h:"หน้าต่างกระบวนการ", win_th_flow:"โฟลว์", win_th_var:"ตัวแปร", win_th_low:"ต่ำ", win_th_mid:"เหมาะ", win_th_high:"สูง", win_th_obs:"สังเกตการณ์", flowA:"Direct Ni (Wood’s → Watts)", A_v:"ความหนาแน่นกระแส (A/dm²)", A_v_n:"ต่ำ → บาง/รูพรุน; สูง → พิตติ้ง/ไหม้/HCD หนาเกิน", A_t:"อุณหภูมิ (°C)", A_t_n:"สูงเกิน → เงาเพี้ยน/พิตติ้งเพิ่ม", A_pH:"pH", A_pH_n:"นอกช่วง → เงา/ยึดเกาะเพี้ยน",
-        flowB:"Cu Strike → Ni", B_v:"ความหนาแน่นกระแส Cu strike", B_v_n:"ต่ำ → ไม่ต่อเนื่อง; สูง → รัน/หยาบ", B_t:"อุณหภูมิ Cu strike (°C)", B_t_n:"สูง → ฟอง/คราบ; ต่ำ → ไม่ขึ้น", B_thk:"ความหนา Cu strike (µm)", B_thk_n:"หนามากเสี่ยง delam ที่ Cu/Ni",
-        fixture_h:"การจัดวาง", fixture_p1:"คุมระยะขั้วให้สม่ำเสมอ ใช้แผ่นบังลด HCD", fixture_p2:"ใส่ถุงแอโนดและกรองต่อเนื่อง", fixture_p3:"เอียงงานให้ระบายน้ำ/ก๊าซดี", fixture_p4:"soft-start ที่ Wood’s/Cu strike",
-        care_h:"การดูแลบ่อและคุณภาพ", care_1:"Watts: pH/Temp/โลหะปน; ทำ dummy/คาร์บอนตามรอบ", care_2:"Wood’s: คุมกรด/คลอไรด์; เปลี่ยนบางส่วนเมื่อเสื่อม", care_3:"Cu strike: คุมคาร์บอเนต/ฟรีไซยาไนด์, ความสะอาด", care_4:"QC: cross-hatch, thermal shock, ความหนา, SST",
-        compare_h:"เทียบ “รองทองแดง vs ไม่รอง”", cmp_opt:"ตัวเลือก", cmp_pros:"ข้อดี", cmp_cons:"ข้อเสีย/ความเสี่ยง", cmp_when:"ใช้เมื่อ", cmp_stack:"โครงสร้างชั้น",
-        opt_direct:"ไม่รองทองแดง (Direct Ni)", opt_direct_pros:"ขั้นตอนน้อย เร็ว ต้นทุนต่ำ ลดจุดอ่อนระหว่างชั้น", opt_direct_cons:"Throw power ในหลุมลึกด้อยกว่า, leveling น้อย", opt_direct_when:"รูปทรงเปิด/ทั่วไป ไม่เน้น leveling หนามาก", opt_direct_stack:"Preclean → Activate → Wood’s Ni → Watts Ni",
-        opt_cu:"รองทองแดง (Cu strike → Ni)", opt_cu_proส:"ช่วยแทรกซึม/leveling เป็น barrier ต่อเหล็ก", opt_cu_cons:"ขั้นตอนเพิ่ม ต้นทุนสูง เสี่ยง delam ถ้า activate ไม่ดี", opt_cu_when:"ชิ้นซับซ้อน/หลุมลึก ต้องการ leveling และคอร์โรชันสูง", opt_cu_stack:"Preclean → Activate → Cu strike (บาง) → Activate → Watts Ni",
-        def_h:"ตารางปัญหาพบเจอบ่อย", def_th_sym:"อาการ", def_th_cause:"สาเหตุหลัก", def_th_fix:"แนวทางแก้",
-        d1_s:"ยึดเกาะไม่ดี (Direct Ni)", d1_c:"เตรียมผิว/Wood’s ไม่ทั่วถึง", d1_f:"เพิ่มเวลา/กระแส Wood’s; re-activate",
-        d2_s:"Delam ที่ Cu/Ni", d2_c:"Cu หนาเกิน/activate ไม่พอ", d2_f:"ลดความหนา Cu; activate ก่อน Ni",
-        d3_s:"พิตติ้ง/รันบน HCD", d3_c:"กระแสสูง/ระยะขั้วไม่สม่ำเสมอ", d3_f:"ลด A/dm²; เพิ่ม shield; กรอง",
-        d4_s:"คราบ/หม่น", d4_c:"อินทรีย์เสื่อม/โลหะปน/pH–T หลุดช่วง", d4_f:"คาร์บอน/dummy; จูน pH–T",
-        d5_s:"Throw power ต่ำ", d5_c:"กระแสเฉลี่ยสูง/ฟิกซ์เจอร์ไม่เหมาะ", d5_f:"ลด A/dm² เพิ่มเวลา; ปรับฟิกซ์เจอร์; พิจารณา Cu strike",
-        links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้", link_ni_ts:"ปัญหาการชุบนิกเกิล & วิธีแก้", link_ni_cases:"Nickel Troubleshooting (รวมเคส)", link_pretreat:"หมวด Pretreatment สำหรับเตรียมผิว", link_basic:"ความรู้การชุบโลหะเบื้องต้น", link_plating:"หมวด Plating / เคมีชุบ", link_strip:"Strippers / น้ำยาลอกชั้นชุบ", link_sst:"เตรียมชิ้นงาน Salt Spray Test",
+        /* Nav */
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับสู่หน้า Blog",
+
+         hero_title:"ชุบนิกเกิลบนเหล็กต้องลงทองแดงรองพื้นไหม? เปรียบเทียบข้อดี–ข้อเสีย",
+        hero_tagline:"ควรใช้ทองแดงรองพื้นก่อน หรือชุบนิกเกิลลงบนเหล็กโดยตรงดี? มาดูเรื่องการยึดเกาะ, ความทนทาน, การเกิดสนิม, ความสวยงาม, ค่าใช้จ่าย, และชั้นชุบที่แนะนำ",
+
+        /* TOC */
+        toc_title:"สารบัญ",
+        toc_intro:"เกริ่นนำ",
+        toc_short:"คำตอบสั้น ๆ",
+        toc_adh:"การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี",
+        toc_barrier:"การกันซึมและการป้องกันสนิม",
+        toc_mech:"ความแข็งและความเรียบของผิว",
+        toc_process:"ตัวเลือกการจัดชั้นชุบ",
+        toc_fail:"ปัญหาที่พบบ่อย",
+        toc_checklist:"สิ่งที่ต้องพิจารณาก่อนตัดสินใจ",
+        toc_examples:"ตัวอย่างการใช้งานในโรงงาน",
+        toc_summary:"สรุปเนื้อหา",
+        toc_links:"ข้อมูลเพิ่มเติม (ลิงก์ที่เกี่ยวข้อง)",
+
+       /* Intro */
+        intro_h:"จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?",
+        intro_p1:"คำถามสำคัญในการชุบเพื่อความสวยงามและป้องกันสนิมบนเหล็ก: จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?",
+        intro_p2:"การใช้ทองแดงรองพื้นก่อนชุบนิกเกิลบนเหล็ก ไม่ได้จำเป็นเสมอไป แต่จะถูกเลือกใช้เมื่อต้องการคุณสมบัติเฉพาะด้าน เช่น ความเงางามระดับสูง หรือการเติมเต็มร่องรอยบนพื้นผิว การพิจารณาขึ้นอยู่กับการประเมิน ความเสี่ยง (สนิม) และความสวยงาม/ความทนทาน",
+        intro_p3:"1.เหตุผลที่ทองแดงมีประโยชน์: เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย แต่การใช้ ทองแดงชุบเริ่มต้น (Copper Strike) บางๆ ก่อนจะช่วยเป็น ตัวกลาง ที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์",
+        intro_p4:"2.เมื่อต้องใช้ทองแดง: หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ ทองแดงกรด (Acid Copper) เป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติ ปรับผิวให้เรียบเสมอกัน (Leveling) ได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด",
+        intro_p5:"3.หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิด รูพรุนหรือมีรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้ นิกเกิลสองชั้น (Duplex Nickel) หรือ นิกเกิลไร้กระแสไฟฟ้า (EN) เพื่อเพิ่มความหนาแน่น/ลดรูพรุนแทน",
+        intro_p6:"4.การตัดทองแดง: การเลือกใช้ทองแดงด่างและทองแดงกรดรองพื้น แล้วชุบนิกเกิลโดยตรง จะช่วย ลดขั้นตอน การชุบ (ลดเวลาในบ่อ) และ ลดต้นทุน ในการจัดการน้ำยา (โดยเฉพาะหากเป็นทองแดงไซยาไนด์ ซึ่งมีความอันตรายและมีข้อกำหนดในการจัดการสูง) ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป",
+        intro_p7:"หากคุณผลิตชิ้นส่วน โครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบ ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิต ชิ้นส่วนเครื่องจักร หรือ ชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้",
+
+
+        /* Short answer */
+        short_h:"คำตอบ",
+        short_tbl_h1:"สถานการณ์ที่ต้องการ", short_tbl_h2:"ควรใช้ทองแดงไหม?", short_tbl_h3:"เหตุผล",
+        short_tbl_c1:"งานตกแต่งที่ต้องการความเงามากๆ", short_tbl_c2:"แนะนำ", short_tbl_c3:"ทองแดงอ่อน/ไหลตัวดี → ทำให้ผิวเรียบเสมอกัน; แล้วตามด้วยนิกเกิลเพื่อให้ทนทาน",
+        short_tbl_c4:"งานใช้งานหนัก/ส่วนที่ต้องเสียดสี ต้องความแข็งสูง", short_tbl_c5:"ไม่จำเป็นเสมอไป", short_tbl_c6:"ใช้นิกเกิลชุบลงไปตรงๆ จะดีกว่า",
+        short_tbl_c7:"ชิ้นงานที่มีรูปร่างซับซ้อน ต้องให้สารเคมีเข้าถึงทุกซอกมุม", short_tbl_c8:"ลองพิจารณาดู", short_tbl_c9:"ทองแดงกรด กระจายตัวได้ดี ชุบเติมมุมอับที่เข้าถึงยาก ก่อนชุบนิกเกิล",
+        short_tbl_c10:"งบจำกัด อยากให้ขั้นตอนสั้นลง", short_tbl_c11:"อาจตัดออกได้", short_tbl_c12:"ใช้ นิกเกิลชุบเริ่มต้นแบบวูดส์ แล้วตามด้วยนิกเกิลกึ่งเงา/เงาแทน",
+
+        /* Adhesion */
+        adh_h:"การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี",
+        adh_p1:"การชุบทองแดงแบบบาง เช่น สูตรไซยาไนด์/ไพโรฟอสเฟต หรือ ทองแดงกรด ที่บางมากๆ ทำหน้าที่เป็น สะพานโลหะ ระหว่างเหล็กกับชั้นบน ช่วยลดปฏิกิริยาไฟฟ้าเคมีที่รุนแรงและเพิ่มพื้นที่สัมผัสในระดับเล็กๆ ทำให้ชิ้นงานติดแน่นขึ้น",
+        adh_p2:"ทางเลือก: ใช้ นิกเกิลชุบเริ่มต้น (สารละลาย นิกเกิลคลอไรด์ผสมกรดเกลือ) จะช่วย กระตุ้นผิวเหล็ก และสร้างชั้นนิกเกิลบางที่ยึดเกาะดีมาก ก่อนจะชุบ นิกเกิลกึ่งเงา หรือ นิกเกิลเงา ต่อ โดยไม่ต้องผ่านทองแดง",
+
+        /* Barrier */
+        bar_h:"การกันซึมและการป้องกันสนิม",
+        bar_p1:"ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อมีรูพรุนอาจกลายเป็น แคโทด เทียบกับเหล็ก ทำให้เหล็กเป็น แอโนด และเกิดสนิมเร็วขึ้น ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพา ชั้นนิกเกิลเป็นเกราะกั้นการซึมของความชื้น",
+        bar_p2:"ในงานที่ต้องการปกป้องสูง แนะนำ นิกเกิลสองชั้น หรือ นิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นเพื่อเพิ่มความหนาแน่น/ลดรูพรุน ก่อนชั้นตกแต่ง",
+
+        /* Mechanical */
+        mech_h:"ความแข็งและความเรียบ",
+        mech_tbl_h1:"ชั้นชุบ", mech_tbl_h2:"ความแข็งโดยประมาณ", mech_tbl_h3:"คุณสมบัติเด่น",
+        mech_tbl_c1:"ทองแดง (กรด)", mech_tbl_c2:"80–120", mech_tbl_c3:"นุ่มและไหลตัวได้ดี เติมรอย/หลุมเล็ก ๆ ทำให้ผิวเรียบขึ้น",
+        mech_tbl_c4:"นิกเกิลกึ่งเงา", mech_tbl_c5:"200–300", mech_tbl_c6:"โครงสร้างแน่น ใช้เป็น เกราะป้องกัน ที่ดี",
+        mech_tbl_c7:"นิกเกิลเงา", mech_tbl_c8:"300–500", mech_tbl_c9:"เงาสูง เน้นความสวยงาม ดีสำหรับงานตกแต่ง",
+        mech_tbl_c10:"นิกเกิล ซัลฟาเมต/นิกเกิลไร้กระแสไฟฟ้า (งานอุตสาหกรรม)", mech_tbl_c11:"ประมาณ 250–600", mech_tbl_c12:"ความเค้นต่ำ ชุบได้หนามาก เหมาะกับงานอุตสาหกรรม/งานฟังก์ชัน",
+
+        proc_h:"ตัวเลือกการจัดเรียงชั้นชุบ",
+        proc_tbl_h1:"ชุดชั้นชุบ", proc_tbl_h2:"คำอธิบายโดยย่อ", proc_tbl_h3:"การใช้งานที่เหมาะ",
+        proc_tbl_c1:"เหล็ก → ทองแดงชุบเริ่มต้น → ทองแดงกรด → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม",
+        proc_tbl_c2:"ทำให้ผิวเรียบเสมอกันสูง สวยงามดี แต่เพิ่มเวลาในบ่อชุบและต้นทุน",
+        proc_tbl_c3:"งานตกแต่งระดับพรีเมียม",
+        proc_tbl_c4:"เหล็ก → นิกเกิลชุบเริ่มต้นแบบวูดส์ → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม",
+        proc_tbl_c5:"ตัดชั้นทองแดงออก ลดความเสี่ยงการกัดกร่อนแบบกัลวานิก ที่เกิดจากรูพรุน",
+        proc_tbl_c6:"งานตกแต่งทั่วไป/งานที่ต้องควบคุมต้นทุน",
+        proc_tbl_c7:"เหล็ก → นิกเกิลไร้กระแสไฟฟ้า ชนิดฟอสฟอรัสปานกลาง → นิกเกิลสำหรับงานฟังก์ชัน/ตกแต่ง",
+        proc_tbl_c8:"เป็นเกราะป้องกันที่แน่นหนามาก การกระจายตัวของชั้นชุบสม่ำเสมอ",
+        proc_tbl_c9:"สภาพแวดล้อมกัดกร่อนรุนแรง/ชิ้นส่วนรูปทรงซับซ้อน",
+        proc_tbl_c10:"เหล็ก → นิกเกิลซัลฟาเมต",
+        proc_tbl_c11:"ความเค้นต่ำ ชุบได้หนาเร็ว เหมาะสำหรับงานซ่อมบิ้วด์/ปรับขนาด",
+        proc_tbl_c12:"งานใช้งานหนัก/ชิ้นส่วนที่ต้องมีการสวมใส่หรือสไลด์",
+
+       fail_h:"รูปแบบความเสียหายที่พบบ่อย",
+        fail_l1:"การลอก/การพอง จากการเตรียมผิวหรือการกระตุ้นผิวที่ไม่สมบูรณ์ หรือการชุบเริ่มต้นไม่เพียงพอ",
+        fail_l2:"สนิมแดงทะลุผ่านรูพรุน โดยเฉพาะเมื่อมีทองแดงอยู่ใต้ชั้นนิกเกิลที่มีรูพรุน → เกิด เซลล์กัลวานิก",
+        fail_l3:"สี/ความเงาไม่สม่ำเสมอ เมื่อพื้นผิวเดิมหยาบและไม่มี ทองแดงกรด ช่วยปรับผิวให้เรียบเสมอกัน",
+
+        chk_h:"สิ่งที่ต้องตรวจสอบก่อนตัดสินใจ",
+        chk_tbl_h1:"ประเด็นหลัก", chk_tbl_h2:"ข้อสังเกตุ", chk_tbl_h3:"ผลต่อการเลือกใช้ทองแดง",
+        chk_tbl_c1:"ความสวยงาม/ความเงา/ความเรียบ", chk_tbl_c2:"เห็นชิ้นงานในระยะใกล้ไหม? ผิวตั้งต้นหยาบมากหรือไม่?",
+        chk_tbl_c3:"ต้อง ใช้ทองแดงเพื่อช่วยปรับผิวให้เรียบเสมอกัน",
+        chk_tbl_c4:"ความทนทานต่อการสึกหรอ/ความแข็ง", chk_tbl_c5:"มีการสัมผัส/สไลด์บ่อยไหม? รับน้ำหนักสูงหรือไม่?",
+        chk_tbl_c6:"ตัดทองแดงออก ใช้ นิกเกิลสำหรับงานฟังก์ชัน แทน",
+        chk_tbl_c7:"สภาพแวดล้อมที่ทำให้เกิดสนิม/กัดกร่อน", chk_tbl_c8:"ใช้งานกลางแจ้ง/ติดทะเล/มีเกลือจากถนนไหม?",
+        chk_tbl_c9:"หลีกเลี่ยง ทองแดงใต้ชั้นนิกเกิลที่มีรูพรุน และ เพิ่มชั้นกั้น ที่แน่นหนา",
+        chk_tbl_c10:"งบประมาณ/เวลาผลิต (เวลาต่อชิ้นงาน)", chk_tbl_c11:"จำกัดต้นทุน/ต้องผลิตเร็วแค่ไหน?",
+        chk_tbl_c12:"อาจใช้ นิกเกิลชุบเริ่มต้นแบบวูดส์ + นิกเกิลสองชั้น แทน",
+
+        ex_h:"ตัวอย่างการใช้งานในโรงงาน",
+        ex_l1:"ชิ้นส่วนตกแต่งรถยนต์: นิกเกิลสองชั้น + โครเมียมที่มีรูพรุนเล็กน้อย; จะใช้ทองแดงเมื่อผิวเหล็กตั้งต้นต้องเก็บผิวมาก",
+        ex_l2:"ฮาร์ดแวร์บ้าน (ลูกบิด/บานพับ): นิกเกิลชุบเริ่มต้นแบบวูดส์ + นิกเกิลเงา; บางรุ่นเพิ่ม ทองแดงกรด เพื่อให้ผิวเรียบเนียนขึ้น",
+        ex_l3:"ชิ้นส่วนเครื่องกล: นิกเกิลซัลฟาเมต หนา หรือ นิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นสำหรับงานฟังก์ชัน",
+
+        sum_h:"สรุป",
+        sum_p1:"ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบ/ความสวยงาม แต่ไม่จำเป็นเสมอไปสำหรับงานใช้งานหนัก หรือสภาพกัดกร่อนรุนแรง ถ้ามีการควบคุมการเตรียมผิวและใช้การชุบเริ่มต้น/ชั้นนิกเกิลที่เหมาะสม",
+        sum_p2:"พิจารณาตามเป้าหมายของงาน, งบประมาณ, และความเสี่ยงจากการกัดกร่อนแบบ กัลวานิก เลือกชุดชั้นชุบที่สมดุลระหว่างคุณภาพและต้นทุน",
+
+        /* Links + Footer */
+        links_h:"ลิงก์ที่เกี่ยวข้อง", links_l1:"บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น", links_l2:"ผลิตภัณฑ์สำหรับงาน Plating",
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
+
       en: {
-        nav_home:"Home", nav_about:"About Us", nav_products:"Products", nav_contacts:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Home",
-        hero_title:"Nickel on Steel — Do you need a Copper Undercoat? Pros & Cons",
-        hero_tagline:"Decision guide, baselines, process windows, fixturing, bath care, and comparison/defect tables.",
-        part1:"Part 1: Overview & Baselines/Windows", part2:"Part 2: Fixturing/Quality/Comparison & Defects",
-        toc_title:"Contents", toc_rec:"Recommended baselines", toc_prep:"Surface preparation", toc_window:"Process windows", toc_fixture:"Fixturing", toc_care:"Bath care & Quality", toc_compare:"Copper undercoat vs none", toc_defects:"Common defects", toc_links:"Related links",
-        rec_h:"Recommended baselines", rec_p1:"Follow your chemistry spec; tune one variable at a time on real parts.", rec_th_stack:"Flow", rec_th_params:"Starter parameters (range)", rec_th_note:"Notes", flow_direct:"Direct Nickel on Steel (with Wood’s Strike)", woods:"Wood’s Ni strike: pH ~1.5–2.5, 20–40°C, 2–6 A/dm², 0.5–2 min", watts:"Watts Ni: 45–60°C, pH 3.8–4.5, 2–8 A/dm²", note_direct:"Fewer steps, solid adhesion for general parts",
-        flow_cu:"Nickel with Copper Undercoat (Cu strike → Ni)", custrike:"Cu strike (e.g., cyanide/pyrophosphate): 20–35°C, 0.5–2 A/dm²", ni_after_cu:"Then Watts Ni: 45–60°C, pH 3.8–4.5, 2–8 A/dm²", note_cu:"Improves penetration/leveling and acts as a barrier to iron", safety_note:"Safety: cyanide systems require strict permits, engineering controls, and PPE.",
-        prep_h:"Surface preparation", prep_1:"Alkaline/ultrasonic degrease → multi-stage rinses", prep_2:"Pickle/Activate tailored to steel grade", prep_3:"For direct Ni: do a thorough Wood’s strike before Watts", prep_4:"For Cu-undercoat: apply a thin, uniform Cu strike, then activate lightly before Ni", prep_5:"Control drain times to reduce stains/contamination",
-        window_h:"Process windows", win_th_flow:"Flow", win_th_var:"Variable", win_th_low:"Low", win_th_mid:"Target", win_th_high:"High", win_th_obs:"Observations", flowA:"Direct Ni (Wood’s → Watts)", A_v:"Current density (A/dm²)", A_v_n:"Low → thin/porous; High → pitting/burn/HCD overthick", A_t:"Temperature (°C)", A_t_n:"Too high → gloss drift/pitting", A_pH:"pH", A_pH_n:"Off-window → adhesion/gloss issues",
-        flowB:"Cu Strike → Ni", B_v:"Cu strike current density", B_v_n:"Low → discontinuous; High → run/rough", B_t:"Cu strike temperature (°C)", B_t_n:"High → foam/stains; Low → poor build", B_thk:"Cu strike thickness (µm)", B_thk_n:"Too thick → delam risk at Cu/Ni if activation is weak",
-        fixture_h:"Fixturing", fixture_p1:"Uniform anode–cathode spacing; shields for HCD edges/corners", fixture_p2:"Bagged Ni anodes + continuous filtration", fixture_p3:"Tilt parts for gas/water release", fixture_p4:"Soft-start/ramped current at Wood’s and Cu strike",
-        care_h:"Bath care & Quality", care_1:"Watts: pH/Temp/metal impurities; periodic dummy & carbon treatment", care_2:"Wood’s: maintain acid/chloride; partial change-outs on performance drop", care_3:"Cu strike: control carbonate/free CN (if cyanide) and housekeeping", care_4:"QC: cross-hatch/tape, thermal shock, thickness, SST per spec",
-        compare_h:"Copper undercoat vs none", cmp_opt:"Option", cmp_pros:"Pros", cmp_cons:"Cons/Risks", cmp_when:"Use when", cmp_stack:"Typical stack", opt_direct:"No copper undercoat (Direct Ni)", opt_direct_pros:"Fewer steps, faster, lower cost, fewer interlayer risks", opt_direct_cons:"Lower throw power in deep recesses; less leveling", opt_direct_when:"Open geometries/general parts", opt_direct_stack:"Preclean → Activate → Wood’s Ni → Watts Ni", opt_cu:"Copper undercoat (Cu strike → Ni)", opt_cu_pros:"Better penetration/leveling; iron barrier", opt_cu_cons:"More steps/cost; delam risk if activation is poor", opt_cu_when:"Complex parts/deep recesses; high leveling/corrosion demands", opt_cu_stack:"Preclean → Activate → Cu strike (thin) → Light activate → Watts Ni",
-        def_h:"Common defects", def_th_sym:"Symptom", def_th_cause:"Likely causes", def_th_fix:"Fix", d1_s:"Poor adhesion (Direct Ni)", d1_c:"Incomplete prep/Wood’s", d1_f:"Increase Wood’s time/current; re-activate", d2_s:"Delam at Cu/Ni", d2_c:"Cu too thick/weak activation", d2_f:"Thin Cu strike; re-activate before Ni", d3_s:"Pitting/runs on HCD", d3_c:"High current/uneven spacing", d3_f:"Lower A/dm²; add shields; filter", d4_s:"Haze/stains", d4_c:"Aged organics/metal contamination/off pH–T", d4_f:"Carbon/dummy; tune pH–T", d5_s:"Low throw power", d5_c:"High average current/poor fixturing", d5_f:"Lower A/dm², extend time; refine fixturing; consider Cu strike",
-        links_h:"Related links", link_ni_ts:"Nickel plating troubleshooting", link_ni_cases:"Nickel troubleshooting (case digest)", link_pretreat:"Pretreatment", link_basic:"Plating basics", link_plating:"Plating / chemistry", link_strip:"Strippers", link_sst:"Salt spray quick guide",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Blog",
+
+        hero_title:"Nickel on Steel: Do You Need a Copper Undercoat? Pros & Cons",
+        hero_tagline:"Should you copper-undercoat or plate nickel directly on steel? Compare adhesion, durability, corrosion, appearance, cost, and recommended process stacks.",
+
+        toc_title:"Contents",
+        toc_intro:"Introduction",
+        toc_short:"Quick Answer",
+        toc_adh:"Adhesion & Galvanic",
+        toc_barrier:"Diffusion Barrier & Corrosion",
+        toc_mech:"Hardness & Leveling",
+        toc_process:"Process Stack Options",
+        toc_fail:"Common Failure Modes",
+        toc_checklist:"Decision Checklist",
+        toc_examples:"Industry Examples",
+        toc_summary:"Summary",
+        toc_links:"Related Links",
+
+        intro_h:"Is a copper undercoat required before nickel plating?",
+        intro_p1:"A critical question in plating for aesthetics and rust prevention on steel: Is a copper layer necessary before nickel plating?",
+        intro_p2:"Using a copper undercoat before nickel plating on steel is not always mandatory but is chosen when specific properties are needed, such as high luster or filling surface imperfections. The decision depends on evaluating the risk (rust) and the aesthetic/durability goal.",
+        intro_p3:"1.Benefit of Copper: Steel and nickel have slightly different electrical potentials, but using a thin **Copper Strike** first acts as an **intermediate** that links the two metals, improving adhesion, especially on steel surfaces that are not perfectly clean.",
+        intro_p4:"2.When Copper is necessary: If the initial steel surface is rough or has minor scratches, using **Acid Copper** is essential because copper is soft and possesses excellent **Leveling** properties. Copper flows in to fill these imperfections before bright nickel plating for maximum luster.",
+        intro_p5:"3.If the nickel plating is thick enough, the copper underlayer can enhance overall protection. However, if the top nickel layer develops **porosity** or cracks, water and moisture can seep down to the copper. When copper contacts steel, **galvanic corrosion** occurs, accelerating red rust formation much faster than if nickel contacted steel directly. Therefore, jobs requiring high durability in harsh environments often avoid copper and use **Duplex Nickel** or **Electroless Nickel (EN)** to increase density/reduce porosity instead.",
+        intro_p6:"4.Cutting Copper: Choosing to use alkaline copper and acid copper undercoats, and then plating nickel directly, helps to **reduce steps** in the plating process (less time in the bath) and **reduce costs** in chemical management (especially if using cyanide copper, which is hazardous and requires high maintenance), making the production line shorter and more stable for general work.",
+        intro_p7:"If you are producing **shiny chrome parts on cars** that require a smooth finish, copper is a good option. But if you are manufacturing **machine parts** or **outdoor components** that need a reliable anti-rust barrier.",
+
+
+        short_h:"Quick Answer",
+        short_tbl_h1:"Scenario", short_tbl_h2:"Use copper?", short_tbl_h3:"Why",
+        short_tbl_c1:"High-gloss decorative surfaces (visible parts)", short_tbl_c2:"Recommended (acid copper for leveling)", short_tbl_c3:"Copper is soft/flowing → fills minor defects; Ni then provides durability",
+        short_tbl_c4:"Functional/wear parts needing high hardness", short_tbl_c5:"Not always", short_tbl_c6:"Plate sulfamate/EN/Watts Ni directly (post-strike)",
+        short_tbl_c7:"Complex geometries needing coverage", short_tbl_c8:"Consider", short_tbl_c9:"Acid copper throws well into recesses before Ni",
+        short_tbl_c10:"Tight budget/short takt time", short_tbl_c11:"Possibly skip", short_tbl_c12:"Use Wood’s Ni strike + semi-bright/bright Ni",
+
+        adh_h:"Adhesion & Galvanic",
+        adh_p1:"A thin copper strike (cyanide/pyrophosphate) or light acid copper can bridge steel and the top stack, easing initial galvanic effects and increasing micro-contact area for better adhesion.",
+        adh_p2:"Alternative: Wood’s nickel strike (NiCl₂ + HCl) activates steel and deposits a thin, highly adherent Ni layer before semi-bright/bright Ni—no copper layer needed.",
+
+        bar_h:"Diffusion Barrier & Corrosion",
+        bar_p1:"Copper’s corrosion resistance is modest; if pores exist, copper can act cathodically versus steel, accelerating red rust. Modern decorative systems rely on nickel (semi-bright/bright/duplex) as the main barrier to moisture and diffusion.",
+        bar_p2:"For harsh environments, use duplex Ni or an EN (electroless nickel) underlayer to densify and reduce porosity before the decorative top.",
+
+        mech_h:"Hardness & Leveling",
+        mech_tbl_h1:"Layer", mech_tbl_h2:"Approx. Hardness (HV)", mech_tbl_h3:"Key Traits",
+        mech_tbl_c1:"Acid copper", mech_tbl_c2:"~80–120", mech_tbl_c3:"Flows and levels; fills minor pits",
+        mech_tbl_c4:"Semi-bright Ni", mech_tbl_c5:"~200–300", mech_tbl_c6:"Dense barrier, good corrosion base",
+        mech_tbl_c7:"Bright Ni", mech_tbl_c8:"~300–500", mech_tbl_c9:"High gloss for aesthetics",
+        mech_tbl_c10:"Sulfamate/EN Ni (functional)", mech_tbl_c11:"~250–600", mech_tbl_c12:"Low stress/ build-up capable for industrial parts",
+
+        proc_h:"Process Stack Options",
+        proc_tbl_h1:"Stack", proc_tbl_h2:"Notes", proc_tbl_h3:"Best for",
+        proc_tbl_c1:"Steel → Cu strike → acid Cu (10–20 µm) → semi-bright Ni (12–20 µm) → bright Ni (8–12 µm) → Cr",
+        proc_tbl_c2:"Excellent leveling and appearance; higher time/cost",
+        proc_tbl_c3:"Premium decorative",
+        proc_tbl_c4:"Steel → Wood’s Ni strike → semi-bright Ni → bright Ni → Cr",
+        proc_tbl_c5:"Skips copper; reduces galvanic risk at pores",
+        proc_tbl_c6:"General decorative / cost-balanced",
+        proc_tbl_c7:"Steel → EN (mid-P) 5–10 µm → functional/decorative Ni",
+        proc_tbl_c8:"Dense underlayer, uniform coverage",
+        proc_tbl_c9:"Harsh corrosion / complex parts",
+        proc_tbl_c10:"Steel → sulfamate Ni thick build (20–50+ µm)",
+        proc_tbl_c11:"Low stress, fast build for repair/fit",
+        proc_tbl_c12:"Functional/wear",
+
+        fail_h:"Common Failure Modes",
+        fail_l1:"Blistering/delamination from poor prep/activation or insufficient strike",
+        fail_l2:"Red rust via pores, especially when copper exists under porous Ni → galvanic cells",
+        fail_l3:"Uneven gloss when base roughness is not leveled by acid copper",
+
+        chk_h:"Decision Checklist",
+        chk_tbl_h1:"Topic", chk_tbl_h2:"Ask yourself/customer", chk_tbl_h3:"Impact on copper choice",
+        chk_tbl_c1:"Aesthetics/gloss/level", chk_tbl_c2:"Is the part closely visible? Is the base rough?", chk_tbl_c3:"Copper needed for leveling",
+        chk_tbl_c4:"Wear/hardness", chk_tbl_c5:"Frequent handling/slide? High load?", chk_tbl_c6:"Skip copper; use functional Ni",
+        chk_tbl_c7:"Corrosive environment", chk_tbl_c8:"Outdoor/marine/road salt?", chk_tbl_c9:"Avoid copper under porous Ni; add barrier",
+        chk_tbl_c10:"Budget/takt time", chk_tbl_c11:"Cost ceiling and cycle time?", chk_tbl_c12:"Wood’s strike + duplex Ni",
+
+        ex_h:"Industry Examples",
+        ex_l1:"Automotive trim: duplex Ni + micro-porous Cr; add copper when heavy leveling is needed",
+        ex_l2:"Home hardware (knobs/hinges): Wood’s strike + bright Ni; acid copper optional for smoothness",
+        ex_l3:"Mechanical parts: thick sulfamate Ni / EN underlayer for function",
+
+        sum_h:"Summary",
+        sum_p1:"Copper undercoats are very useful for leveling and aesthetics, but not always needed for functional parts or harsh environments if prep is sound and strike/ Ni layers are chosen well.",
+        sum_p2:"Decide by target performance, budget, and galvanic risk. Choose a balanced stack for quality and cost.",
+
+        links_h:"Related Links", links_l1:"Article: Brass plating on steel & undercoats", links_l2:"Plating products",
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
 
     const els = {
       langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
-      translatables: () => document.querySelectorAll('[data-i18n-key]'),
-      tocLinks: () => document.querySelectorAll('#toc a[href^="#"]')
+      translatables: () => document.querySelectorAll('[data-i18n-key]')
     };
 
     function applyLang(lang){
@@ -661,7 +856,6 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
         if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
-      // recalc header height in case text wraps differently
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
         document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -675,46 +869,7 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
     })();
   </script>
 
-  <!-- ===== JS: Part switcher + deep-link persist ===== -->
-  <script>
-  (function(){
-    const buttons = document.querySelectorAll('.part-switch .part-btn');
-    const tocLinks = document.querySelectorAll('#toc a[data-part]');
-    const sections = document.querySelectorAll('section[data-part]');
-
-    function setPart(p){
-      const part = (p === '2') ? '2' : '1';
-      document.documentElement.setAttribute('data-part', part);
-      sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
-      tocLinks.forEach(a => a.hidden = (a.dataset.part !== part));
-      buttons.forEach(b => {
-        const on = (b.dataset.part === part);
-        b.setAttribute('aria-pressed', String(on));
-        b.setAttribute('aria-selected', String(on));
-      });
-      try{ localStorage.setItem('ni_part', part); }catch(e){}
-      const url = new URL(location);
-      url.searchParams.set('part', part);
-      history.replaceState(null,'',url);
-    }
-
-    const urlPart = new URLSearchParams(location.search).get('part');
-    const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ni_part')) || '1';
-    setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
-
-    buttons.forEach(b => b.addEventListener('click', ()=>{
-      setPart(b.dataset.part);
-      document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
-    }));
-
-    // Switch part on TOC click before anchor scroll
-    document.querySelectorAll('#toc a[data-part]').forEach(a=>{
-      a.addEventListener('click', ()=>{ setPart(a.getAttribute('data-part')); });
-    });
-  })();
-  </script>
-
-  <!-- ===== JS: Header glass + Mobile menu + Nav highlight + Scroll‑spy ===== -->
+  <!-- JS: Header glass, mobile menu, highlight current, TOC scroll spy -->
   <script>
     (function(){
       const header = document.getElementById('siteHeader');
@@ -722,7 +877,6 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
 
-      // Header height + darken on scroll
       const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
@@ -730,7 +884,6 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
       window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
 
-      // Mobile menu with body lock + scrim
       if(toggle && nav && scrim){
         let lockY = 0;
         function openMenu(v){
@@ -758,55 +911,63 @@ PART B — Append directly after PART A (do not add another DOCTYPE/HEAD/BODY)
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Smart Back
-      document.querySelector('[data-back]')?.addEventListener('click', (e)=>{
-        if(history.length>1){ e.preventDefault(); history.back(); }
-      });
-
-      // Highlight current nav (includes Products subtree & Blog)
+      // Highlight current page; force Blog when under /blog/*
       try{
         const here = location.pathname.replace(/\/+$/,'');
-        const isProducts = here.startsWith('/products');
+        const isBlog = here.startsWith('/blog');
         nav?.querySelectorAll('a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          if (here === path || (isProducts && path.startsWith('/products')) || (here.startsWith('/blog') && path.startsWith('/blog'))){
-            a.setAttribute('aria-current','page');
-          }
+          if (isBlog && /\/blog\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
         });
       }catch(e){}
 
-      // Scroll‑spy for TOC
-      const chips = Array.from(document.querySelectorAll('#toc .toc-chip'));
-      const map = new Map(chips.map(c=>[c.getAttribute('href'), c]));
-      const secs = Array.from(document.querySelectorAll('section.section-block[id]'));
-      const spy = new IntersectionObserver((entries)=>{
-        entries.forEach(ent=>{
-          const id = '#' + ent.target.id;
-          const chip = map.get(id);
-          if(!chip) return;
-          if(ent.isIntersecting){
-            chips.forEach(c=>c.classList.toggle('is-active', c===chip));
-          }
+      // TOC scroll spy
+      (function(){
+        const links = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+        if (!links.length) return;
+        const map = new Map();
+        links.forEach(a=>{
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) map.set(id, {link:a, el});
         });
-      }, {rootMargin:'-30% 0px -60% 0px', threshold:[0, 1]});
-      secs.forEach(s=>spy.observe(s));
+
+        const setActive = (id)=>{
+          links.forEach(a=> a.classList.remove('is-active'));
+          links.forEach(a=> a.setAttribute('aria-current','false'));
+          const item = map.get(id);
+          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+        };
+
+        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+        const obs = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            if (e.isIntersecting){
+              const id = e.target.id;
+              setActive(id);
+              history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+            }
+          });
+        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+        map.forEach(({el})=> obs.observe(el));
+      })();
     })();
-      // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
 
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
   </script>
 </body>
 </html>
