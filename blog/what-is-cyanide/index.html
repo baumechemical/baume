@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">Cyanide — คืออะไร ใช้งาน ความเสี่ยง และความปลอดภัย | Baume Chemical Blog</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="ไซยาไนด์ (Cyanide): ทำความเข้าใจ CN⁻, NaCN, KCN การใช้งานในงานชุบโลหะ การสกัดโลหะมีค่า เคมีอุตสาหกรรม ประโยชน์ ข้อควรระวัง พิษภัย การควบคุมตามกฎหมาย และแนวทางความปลอดภัย/PPE/บำบัดน้ำเสีย">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/cyanide-overview/index.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Cyanide — คืออะไร ใช้งาน ความเสี่ยง และความปลอดภัย">
+  <meta property="og:description" content="สรุปภาพรวมไซยาไนด์ตั้งแต่ CN⁻/NaCN/KCN การใช้งานในชุบโลหะ เหมืองแร่ และเคมีอุตสาหกรรม ไปจนถึงพิษภัย การควบคุม และความปลอดภัย">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/cyanide-overview/index.html">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/cy922df58d97197276.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/cy922df58d97197276.png"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/cy922df58d97197276.png') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      article{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections + table ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+
+    /* Floating LINE button */
+    .float-line{
+      position:fixed;
+      right:16px;
+      bottom:calc(18px + env(safe-area-inset-bottom));
+      z-index:900;
+    }
+    .float-line a{
+      display:grid; place-items:center;
+      width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
+      animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover,
+    .float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
+
+    /* Back-to-top */
+    .backtop{
+      position:fixed;
+      right:16px;
+      bottom:calc(90px + env(safe-area-inset-bottom));
+      z-index:900;
+      display:none;
+    }
+    .backtop.show{ display:block }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px;
+      border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 10px 26px rgba(0,0,0,.18);
+      cursor:pointer;
+    }
+    .backtop button:hover,
+    .backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+
+    /* Small screens */
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
+
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">ไซยาไนด์ (Cyanide) คืออะไร? การใช้งาน ความเสี่ยง และความปลอดภัย</h1>
+      <p data-i18n-key="hero_tagline">สรุปการใช้งานไซยาไนด์ในชุบโลหะ/เหมืองแร่ ประโยชน์ ข้อควรระวัง พิษภัย และแนวทางควบคุมอย่างปลอดภัย</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวม & นิยาม</a>
+        <a class="toc-chip" href="#plating" data-i18n-key="toc_plating">บทบาทในงานชุบโลหะ</a>
+        <a class="toc-chip" href="#benefits" data-i18n-key="toc_benefits">ประโยชน์ในอุตสาหกรรม</a>
+        <a class="toc-chip" href="#hazards" data-i18n-key="toc_hazards">โทษและอันตราย</a>
+        <a class="toc-chip" href="#safety" data-i18n-key="toc_safety">การควบคุม & ความปลอดภัย</a>
+      </p>
+    </nav>
+
+    <article>
+
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ไซยาไนด์ (Cyanide) คืออะไร?</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">
+            ไซยาไนด์เป็นสารประกอบที่มีพิษสูง ประกอบด้วยคาร์บอน (C) และไนโตรเจน (N) หนึ่งอะตอมในรูปไอออนไซยาไนด์ (CN⁻)
+            มักพบในรูปเกลือ เช่น โซเดียมไซยาไนด์ (NaCN) และโพแทสเซียมไซยาไนด์ (KCN) ลักษณะทั่วไปเป็นของแข็งผลึก/ผงสีขาว
+            บางครั้งมีกลิ่นอัลมอนด์อ่อน ๆ
+          </p>
+          <p data-i18n-key="intro_p2">
+            <strong>ความเป็นพิษ:</strong> CN⁻ ยับยั้งการหายใจระดับเซลล์ ทำให้เซลล์ใช้ O₂ สร้างพลังงาน (ATP) ไม่ได้
+            อวัยวะที่ใช้ออกซิเจนสูง เช่น สมองและหัวใจ ได้รับผลกระทบรวดเร็ว หากได้รับมากอาจเสียชีวิตภายในไม่กี่นาที
+          </p>
+        </div>
+      </section>
+
+      <!-- Plating role -->
+      <section id="plating" class="reveal section-block" aria-labelledby="plating-h">
+        <h2 id="plating-h" class="section" data-i18n-key="plating_h">⚙️ ความเกี่ยวข้องกับงานชุบโลหะ</h2>
+        <div class="content">
+          <p data-i18n-key="plating_p1">
+            ในอุตสาหกรรมชุบโลหะด้วยไฟฟ้า ไซยาไนด์ทำหน้าที่ <em>สารเชิงซ้อน (complexing agent)</em> จับกับไอออนโลหะ
+            เช่น ทอง, เงิน, ทองแดง, สังกะสี ให้ละลายน้ำได้ดีและเสถียร ช่วยให้ควบคุมกระบวนการชุบได้ง่าย
+            ได้ผิวเคลือบที่สม่ำเสมอ เรียบ และเงางาม โดยเฉพาะงานชุบทอง/เงิน
+          </p>
+
+          <h3 class="section-sub" data-i18n-key="plating_examples_h">ตัวอย่างสารที่ใช้</h3>
+          <ul>
+            <li data-i18n-key="plating_e1">โซเดียมไซยาไนด์ (NaCN)</li>
+            <li data-i18n-key="plating_e2">โพแทสเซียมไซยาไนด์ (KCN)</li>
+            <li data-i18n-key="plating_e3">เกลือทอง (Gold cyanide) สำหรับชุบเครื่องประดับ</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section id="benefits" class="reveal section-block" aria-labelledby="benefits-h">
+        <h2 id="benefits-h" class="section" data-i18n-key="benefits_h">✅ ประโยชน์ของไซยาไนด์ในภาคอุตสาหกรรม</h2>
+        <div class="content">
+          <h3 class="section-sub" data-i18n-key="benefits_plating_h">1) ประโยชน์ในงานชุบโลหะ</h3>
+          <ul>
+            <li data-i18n-key="benefits_p_surface">คุณภาพผิวชุบ: ได้ผิวเงางาม เรียบเนียน สม่ำเสมอ เหมาะเครื่องประดับ/อิเล็กทรอนิกส์/ยานยนต์</li>
+            <li data-i18n-key="benefits_p_stability">ความเสถียรของสารละลาย: รักษาไอออนโลหะให้เสถียร ทำให้กระบวนการชุบมีประสิทธิภาพ</li>
+          </ul>
+
+          <h3 class="section-sub" data-i18n-key="benefits_other_h">2) ประโยชน์ในอุตสาหกรรมอื่น</h3>
+          <ul>
+            <li data-i18n-key="benefits_o_mining">เหมืองแร่: ใช้สกัด/ถลุงทองและเงินจากสินแร่ (cyanide leaching)</li>
+            <li data-i18n-key="benefits_o_chem">สารตั้งต้นเคมี: ใช้สังเคราะห์สารเคมีอินทรีย์และสารตั้งต้นอุตสาหกรรม</li>
+            <li data-i18n-key="benefits_o_materials">การผลิตวัสดุ: กระบวนการผลิตพลาสติก ยางสังเคราะห์ หนังเทียม และการฟอกเยื่อกระดาษบางชนิด</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Hazards -->
+      <section id="hazards" class="reveal section-block" aria-labelledby="hazards-h">
+        <h2 id="hazards-h" class="section" data-i18n-key="hazards_h">❌ โทษและอันตรายของไซยาไนด์</h2>
+        <div class="content">
+          <p data-i18n-key="hazards_p_intro">
+            อันตรายแบ่งเป็นด้านสุขภาพและสิ่งแวดล้อม ไซยาไนด์จัดเป็นวัตถุอันตรายที่ต้องควบคุมอย่างเข้มงวดตามกฎหมาย
+          </p>
+
+          <h3 class="section-sub" data-i18n-key="hazards_health_h">1) อันตรายต่อสุขภาพ</h3>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n-key="hazards_phase">ภาวะ</th>
+                  <th data-i18n-key="hazards_symptoms">ลักษณะอาการ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n-key="hazards_acute">พิษเฉียบพลัน (รับมากทันที)</td>
+                  <td data-i18n-key="hazards_acute_sx">ปวดศีรษะรุนแรง คลื่นไส้ อาเจียน ใจสั่น หน้าแดง หายใจติดขัด ชัก หมดสติ หยุดหายใจ/หัวใจ</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="hazards_chronic">พิษเรื้อรัง (รับน้อยต่อเนื่อง)</td>
+                  <td data-i18n-key="hazards_chronic_sx">ปวดศีรษะ ง่วงซึม คลื่นไส้ ผื่นแดง อาจกระทบระบบประสาท ต่อมไทรอยด์ และระบบหายใจเมื่อสะสม</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p data-i18n-key="hazards_note" style="margin-top:10px">
+            <strong>อันตรายเฉพาะในงานชุบ:</strong> เกลือไซยาไนด์ (เช่น NaCN/KCN) เมื่อสัมผัสกรดจะเกิดกรดไฮโดรไซยานิก (HCN)
+            ซึ่งเป็นก๊าซพิษร้ายแรง ดูดซึมทางการหายใจได้ง่าย ต้องป้องกันการสัมผัสกรดอย่างเคร่งครัด
+          </p>
+
+          <h3 class="section-sub" data-i18n-key="hazards_env_h">2) อันตรายต่อสิ่งแวดล้อม</h3>
+          <ul>
+            <li data-i18n-key="hazards_env1">ปนเปื้อนน้ำ/ดิน: ไซยาไนด์ละลายน้ำได้ดี เสี่ยงปนเปื้อนแหล่งน้ำ/ท่อระบายน้ำหากบำบัดไม่เหมาะสม</li>
+            <li data-i18n-key="hazards_env2">พิษต่อสิ่งมีชีวิตน้ำ: อันตรายต่อปลาและสัตว์น้ำ กระทบสมดุลระบบนิเวศ</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Safety -->
+      <section id="safety" class="reveal section-block" aria-labelledby="safety-h">
+        <h2 id="safety-h" class="section" data-i18n-key="safety_h">💡 การควบคุมและการใช้งานอย่างปลอดภัย</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="safety_law">
+              <strong>กฎหมายควบคุม:</strong> สารประกอบไซยาไนด์ (เช่น KCN) จัดเป็นวัตถุอันตรายชนิดที่ต้องขออนุญาตนำเข้า ผลิต และครอบครอง
+              พร้อมระบุวัตถุประสงค์การใช้อย่างชัดเจน
+            </li>
+            <li data-i18n-key="safety_ppe">
+              <strong>PPE & ขั้นตอน:</strong> สวมถุงมือ แว่นตานิรภัย หน้ากาก/เครื่องช่วยหายใจ จัดเก็บในที่แห้ง ปลอดภัย
+              แยกจากกรดและสารที่อาจทำปฏิกิริยา
+            </li>
+            <li data-i18n-key="safety_wwt">
+              <strong>การกำจัด/บำบัด:</strong> น้ำทิ้งที่มีไซยาไนด์ต้องผ่านกระบวนการบำบัดที่ถูกต้องตามหลักวิชาการก่อนปล่อยสู่สิ่งแวดล้อม
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+    <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
+
+    <!-- Reveal on scroll -->
+    <script>
+      const revealEls = document.querySelectorAll('.reveal');
+      const revObs = new IntersectionObserver((entries,obs)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+      }, {threshold:.18});
+      revealEls.forEach(el=>revObs.observe(el));
+    </script>
+
+    <!-- I18N + Lang switch -->
+    <script>
+      const I18N = {
+        th: {
+          title:"ไซยาไนด์ (Cyanide) — คืออะไร ใช้อย่างไร เสี่ยงอะไร และปลอดภัยอย่างไร | Baume Chemical Blog",
+          nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+          back_home:"← กลับเมนูหลัก",
+          hero_title:"ไซยาไนด์ (Cyanide) คืออะไร? การใช้งาน ความเสี่ยง และความปลอดภัย",
+          hero_tagline:"สรุปการใช้งานไซยาไนด์ในชุบโลหะ/เหมืองแร่ ประโยชน์ ข้อควรระวัง พิษภัย และแนวทางควบคุมอย่างปลอดภัย",
+
+          toc_title:"สารบัญ",
+          toc_intro:"ภาพรวม & นิยาม",
+          toc_plating:"บทบาทในงานชุบโลหะ",
+          toc_benefits:"ประโยชน์ในอุตสาหกรรม",
+          toc_hazards:"โทษและอันตราย",
+          toc_safety:"การควบคุม & ความปลอดภัย",
+
+          intro_h:"ไซยาไนด์ (Cyanide) คืออะไร?",
+          intro_p1:"ไซยาไนด์เป็นสารประกอบที่มีพิษสูง ประกอบด้วยคาร์บอน (C) และไนโตรเจน (N) หนึ่งอะตอมในรูปไอออนไซยาไนด์ (CN⁻) มักพบในรูปเกลือ เช่น โซเดียมไซยาไนด์ (NaCN) และโพแทสเซียมไซยาไนด์ (KCN) ลักษณะทั่วไปเป็นของแข็งผลึก/ผงสีขาว บางครั้งมีกลิ่นอัลมอนด์อ่อน ๆ",
+          intro_p2:"ความเป็นพิษ: CN⁻ ยับยั้งการหายใจระดับเซลล์ ทำให้เซลล์ใช้ O₂ สร้างพลังงาน (ATP) ไม่ได้ อวัยวะที่ใช้ออกซิเจนสูง เช่น สมองและหัวใจ ได้รับผลกระทบรวดเร็ว หากได้รับมากอาจเสียชีวิตภายในไม่กี่นาที",
+
+          plating_h:"⚙️ ความเกี่ยวข้องกับงานชุบโลหะ",
+          plating_p1:"ในอุตสาหกรรมชุบโลหะด้วยไฟฟ้า ไซยาไนด์ทำหน้าที่สารเชิงซ้อน (complexing agent) จับกับไอออนโลหะ เช่น ทอง เงิน ทองแดง สังกะสี ให้ละลายน้ำได้ดีและเสถียร ช่วยควบคุมกระบวนการชุบ ให้ผิวสม่ำเสมอ เรียบ และเงางาม โดยเฉพาะงานชุบทอง/เงิน",
+          plating_examples_h:"ตัวอย่างสารที่ใช้",
+          plating_e1:"โซเดียมไซยาไนด์ (NaCN)",
+          plating_e2:"โพแทสเซียมไซยาไนด์ (KCN)",
+          plating_e3:"เกลือทอง (Gold cyanide) สำหรับชุบเครื่องประดับ",
+
+          benefits_h:"✅ ประโยชน์ของไซยาไนด์ในภาคอุตสาหกรรม",
+          benefits_plating_h:"1) ประโยชน์ในงานชุบโลหะ",
+          benefits_p_surface:"คุณภาพผิวชุบ: ได้ผิวเงางาม เรียบเนียน สม่ำเสมอ เหมาะเครื่องประดับ/อิเล็กทรอนิกส์/ยานยนต์",
+          benefits_p_stability:"ความเสถียรของสารละลาย: รักษาไอออนโลหะให้เสถียร ทำให้กระบวนการชุบมีประสิทธิภาพ",
+          benefits_other_h:"2) ประโยชน์ในอุตสาหกรรมอื่น",
+          benefits_o_mining:"เหมืองแร่: ใช้สกัด/ถลุงทองและเงินจากสินแร่ (cyanide leaching)",
+          benefits_o_chem:"สารตั้งต้นเคมี: ใช้สังเคราะห์สารเคมีอินทรีย์และสารตั้งต้นอุตสาหกรรม",
+          benefits_o_materials:"การผลิตวัสดุ: การผลิตพลาสติก ยางสังเคราะห์ หนังเทียม และการฟอกเยื่อกระดาษบางชนิด",
+
+          hazards_h:"❌ โทษและอันตรายของไซยาไนด์",
+          hazards_p_intro:"อันตรายแบ่งเป็นด้านสุขภาพและสิ่งแวดล้อม ไซยาไนด์จัดเป็นวัตถุอันตรายที่ต้องควบคุมอย่างเข้มงวดตามกฎหมาย",
+          hazards_health_h:"1) อันตรายต่อสุขภาพ",
+          hazards_phase:"ภาวะ",
+          hazards_symptoms:"ลักษณะอาการ",
+          hazards_acute:"พิษเฉียบพลัน (รับมากทันที)",
+          hazards_acute_sx:"ปวดศีรษะรุนแรง คลื่นไส้ อาเจียน ใจสั่น หน้าแดง หายใจติดขัด ชัก หมดสติ หยุดหายใจ/หัวใจ",
+          hazards_chronic:"พิษเรื้อรัง (รับน้อยต่อเนื่อง)",
+          hazards_chronic_sx:"ปวดศีรษะ ง่วงซึม คลื่นไส้ ผื่นแดง อาจกระทบระบบประสาท ต่อมไทรอยด์ และระบบหายใจเมื่อสะสม",
+          hazards_note:"อันตรายเฉพาะในงานชุบ: เกลือไซยาไนด์ (เช่น NaCN/KCN) เมื่อสัมผัสกรดจะเกิด HCN ซึ่งเป็นก๊าซพิษร้ายแรง ต้องป้องกันการสัมผัสกรดอย่างเคร่งครัด",
+          hazards_env_h:"2) อันตรายต่อสิ่งแวดล้อม",
+          hazards_env1:"ปนเปื้อนน้ำ/ดิน: ละลายน้ำได้ดี เสี่ยงปนเปื้อนแหล่งน้ำหากบำบัดไม่เหมาะสม",
+          hazards_env2:"พิษต่อสิ่งมีชีวิตน้ำ: อันตรายต่อปลาและสัตว์น้ำ กระทบสมดุลระบบนิเวศ",
+
+          safety_h:"💡 การควบคุมและการใช้งานอย่างปลอดภัย",
+          safety_law:"กฎหมายควบคุม: สารไซยาไนด์ (เช่น KCN) ต้องขออนุญาตนำเข้า ผลิต และครอบครอง พร้อมระบุวัตถุประสงค์ชัดเจน",
+          safety_ppe:"PPE & ขั้นตอน: สวมถุงมือ แว่นตานิรภัย หน้ากาก/เครื่องช่วยหายใจ จัดเก็บในที่แห้ง ปลอดภัย แยกจากกรด",
+          safety_wwt:"การกำจัด/บำบัด: น้ำทิ้งที่มีไซยาไนด์ต้องบำบัดถูกวิธีก่อนปล่อยสู่สิ่งแวดล้อม",
+
+          footer_products:"หมวดผลิตภัณฑ์",
+          footer_contact:"ติดต่อเรา",
+          footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        },
+
+        en: {
+          title:"Cyanide — What it is, uses, hazards & safety | Baume Chemical Blog",
+          nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+          back_home:"← Back to Blog",
+          hero_title:"What is Cyanide? Uses, Risks & Safe Handling",
+          hero_tagline:"CN⁻, NaCN, KCN at a glance—uses in electroplating/mining, benefits, hazards, and safety controls.",
+
+          toc_title:"Contents",
+          toc_intro:"Overview & definition",
+          toc_plating:"Role in electroplating",
+          toc_benefits:"Industrial benefits",
+          toc_hazards:"Hazards",
+          toc_safety:"Controls & safety",
+
+          intro_h:"What is Cyanide?",
+          intro_p1:"Cyanide is a highly toxic chemical group containing one carbon and one nitrogen atom as the cyanide ion (CN⁻). Common industrial forms are salts such as sodium cyanide (NaCN) and potassium cyanide (KCN). Typically white crystalline/ powder solids with an occasional faint bitter-almond odor.",
+          intro_p2:"Toxicity: CN⁻ inhibits cellular respiration, preventing cells from using O₂ to generate ATP. High-oxygen organs like the brain and heart are rapidly affected; large doses can be fatal within minutes.",
+
+          plating_h:"⚙️ Relevance to Electroplating",
+          plating_p1:"In electroplating, cyanide acts as a complexing agent, forming stable, water-soluble complexes with metal ions (Au, Ag, Cu, Zn). This improves bath control and produces uniform, smooth, bright deposits—especially for gold and silver plating.",
+          plating_examples_h:"Common cyanide chemicals",
+          plating_e1:"Sodium cyanide (NaCN)",
+          plating_e2:"Potassium cyanide (KCN)",
+          plating_e3:"Gold cyanide salts for jewelry plating",
+
+          benefits_h:"✅ Industrial Benefits of Cyanide",
+          benefits_plating_h:"1) Benefits in electroplating",
+          benefits_p_surface:"Deposit quality: bright, smooth, uniform finishes valued in jewelry, electronics, and automotive.",
+          benefits_p_stability:"Electrolyte stability: keeps metal ions stable for efficient deposition.",
+          benefits_other_h:"2) Benefits in other industries",
+          benefits_o_mining:"Mining: cyanide leaching to extract/refine gold and silver from ores.",
+          benefits_o_chem:"Chemical precursor: used to synthesize organic and industrial intermediates.",
+          benefits_o_materials:"Materials manufacturing: plastics, synthetic rubber, artificial leather, and certain pulp-bleaching processes.",
+
+          hazards_h:"❌ Hazards and Risks",
+          hazards_p_intro:"Risks span human health and the environment; cyanide is tightly regulated as a hazardous substance.",
+          hazards_health_h:"1) Health hazards",
+          hazards_phase:"Condition",
+          hazards_symptoms:"Symptoms",
+          hazards_acute:"Acute poisoning (large dose)",
+          hazards_acute_sx:"Severe headache, nausea, vomiting, palpitations, flushing, dyspnea, seizures, loss of consciousness, respiratory/cardiac arrest.",
+          hazards_chronic:"Chronic exposure (low, repeated)",
+          hazards_chronic_sx:"Headache, drowsiness, nausea, rash; with accumulation may affect nervous system, thyroid, and respiration.",
+          hazards_note:"Plating-specific: cyanide salts (NaCN/KCN) react with acids to form HCN gas—extremely toxic. Prevent any acid contact.",
+          hazards_env_h:"2) Environmental hazards",
+          hazards_env1:"Water/soil contamination: high solubility increases spread if wastewater is untreated.",
+          hazards_env2:"Aquatic toxicity: highly toxic to fish and aquatic life; disrupts ecosystems.",
+
+          safety_h:"💡 Control Measures & Safe Use",
+          safety_law:"Regulatory: cyanide compounds (e.g., KCN) generally require licenses for import, manufacture, and possession with clear stated purpose.",
+          safety_ppe:"PPE & procedures: wear chemical-resistant gloves, safety goggles, and respirator; store dry and secure, segregated from acids.",
+          safety_wwt:"Disposal/treatment: cyanide-bearing effluent must be properly treated before discharge.",
+
+          footer_products:"Products",
+          footer_contact:"Contact Us",
+          footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        }
+      };
+
+      const els = {
+        langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+        translatables: () => document.querySelectorAll('[data-i18n-key]'),
+      };
+
+      function applyLang(lang){
+        const sel = (lang === 'en') ? 'en' : 'th';
+        document.documentElement.lang = sel;
+
+        // update button state
+        els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+        // swap texts
+        els.translatables().forEach(node => {
+          const key = node.getAttribute('data-i18n-key');
+          if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
+            node.textContent = I18N[sel][key];
+          }
+        });
+
+        // update <title>
+        const titleEl = document.querySelector('title[data-i18n-key="title"]');
+        if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+        // persist + recalc header height
+        try{ localStorage.setItem('lang', sel); }catch(e){}
+        try{
+          const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+          document.documentElement.style.setProperty('--header-h', h + 'px');
+        }catch(e){}
+      }
+
+      (function initLang(){
+        const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+        applyLang(saved);
+        els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+      })();
+    </script>
+
+    <!-- Header glass / mobile menu / highlight current / smart back -->
+    <script>
+      (function(){
+        const header = document.getElementById('siteHeader');
+        const toggle = header?.querySelector('.nav-toggle');
+        const nav = document.getElementById('primary-nav');
+        const scrim = document.querySelector('.menu-scrim');
+
+        const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+        const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+        window.addEventListener('load', setH, {once:true});
+        window.addEventListener('resize', setH, {passive:true});
+        window.addEventListener('scroll', onScroll, {passive:true});
+        setH(); onScroll();
+
+        if(toggle && nav && scrim){
+          let lockY = 0;
+          function openMenu(v){
+            header.classList.toggle('open', v);
+            toggle.setAttribute('aria-expanded', String(v));
+            nav.setAttribute('aria-hidden', String(!v));
+            v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+            if(v){
+              lockY = window.scrollY;
+              document.body.classList.add('no-scroll');
+              document.body.style.top = `-${lockY}px`;
+              const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+              first && first.focus({preventScroll:true});
+            }else{
+              document.body.classList.remove('no-scroll');
+              document.body.style.top = '';
+              window.scrollTo(0, lockY);
+              toggle?.focus({preventScroll:true});
+            }
+          }
+          toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+          scrim.addEventListener('click', ()=> openMenu(false));
+          document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+          window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+          nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+        }
+
+        // highlight current nav
+        try{
+          const here = location.pathname.replace(/\/+$/,'');
+          const isProducts = here.startsWith('/products');
+          nav?.querySelectorAll('a').forEach(a=>{
+            const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+            if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+            else if (here === path) a.setAttribute('aria-current','page');
+            else a.removeAttribute('aria-current');
+          });
+        }catch(e){}
+
+        // smart back
+        (function(){
+          const btn = document.querySelector('.back-chip');
+          if(!btn) return;
+          btn.addEventListener('click', function(e){
+            try{
+              const ref = document.referrer;
+              const sameOrigin = ref && new URL(ref).origin === location.origin;
+              if(sameOrigin){ e.preventDefault(); history.back(); }
+            }catch(err){}
+          });
+        })();
+      })();
+    </script>
+
+    <!-- Scroll-spy for TOC + heading anchors + Back-to-top -->
+    <script>
+      // clickable H2 anchors
+      document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+        h.addEventListener('click', ()=>{
+          const sec = h.closest('.section-block');
+          if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+        });
+      });
+
+      (function(){
+        const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+        if (!tocLinks.length) return;
+        const map = new Map();
+        tocLinks.forEach(a=>{
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (el) map.set(id, {link:a, el});
+        });
+
+        const setActive = (id)=>{
+          tocLinks.forEach(a=> a.classList.remove('is-active'));
+          tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+          const item = map.get(id);
+          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+        };
+
+        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+        const obs = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{
+            if (e.isIntersecting){
+              const id = e.target.id;
+              setActive(id);
+              history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+            }
+          });
+        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+        map.forEach(({el})=> obs.observe(el));
+      })();
+
+      // Back-to-top (threshold 200px)
+      (function(){
+        const backTop = document.getElementById('backTop');
+        if(!backTop) return;
+        function toggleBackTop(){
+          const y = window.scrollY || document.documentElement.scrollTop || 0;
+          backTop.classList.toggle('show', y > 200);
+        }
+        toggleBackTop();
+        window.addEventListener('scroll', toggleBackTop, {passive:true});
+        backTop.addEventListener('click', ()=> window.scrollTo({ top: 0, behavior: 'smooth' }));
+      })();
+    </script>
+  </body>
+</html>
