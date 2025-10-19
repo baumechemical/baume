@@ -57,35 +57,39 @@
   }
   </script>
 
-  <!-- JSON-LD: CollectionPage + ItemList -->
-  <script id="ld-collection" type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "inLanguage": "th",
-    "name": "Pretreatment — Degreasing & Ultrasonic",
-    "url": "https://www.baumechemical.com/products/pretreatment/index.html",
-    "description": "หมวด Pretreatment ครอบคลุมกรดล้างไขมัน ด่างล้างไขมัน และอัลตร้าโซนิค พร้อมอัตราส่วนใช้งานจริง.",
-    "isPartOf": {"@type": "WebSite","name": "Baume Chemical","url": "https://www.baumechemical.com/"},
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListOrder": "ItemListOrderAscending",
-      "numberOfItems": 3,
-      "itemListElement": [
-        {"@type": "ListItem","position": 1,"name": "Acid Cleaner Pretreatment","url": "https://www.baumechemical.com/products/pretreatment/acidclean.html"},
-        {"@type": "ListItem","position": 2,"name": "Alkaline Cleaner Pretreatment","url": "https://www.baumechemical.com/products/pretreatment/soakclean.html"},
-        {"@type": "ListItem","position": 3,"name": "Electro Degreaser Pretreatment","url": "https://www.baumechemical.com/products/pretreatment/electrodegreaser.html"}
-        {"@type": "ListItem","position": 4,"name": "Ultrasonic Cleaner Pretreatment","url": "https://www.baumechemical.com/products/pretreatment/ultrasonic.html"}
-      ]
+<!-- JSON-LD: CollectionPage + ItemList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.baumechemical.com/"
     },
-    "hasPart":[
-      {"@type":"WebPage","name":"Acid Cleaner Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/acidclean.html"},
-      {"@type":"WebPage","name":"Alkaline Cleaner Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/soakclean.html"},
-      {"@type":"WebPage","name":"Electro Degreaser Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/electrodegreaser.html"}
-      {"@type":"WebPage","name":"Ultrasonic Cleaner Pretreatment","url":"https://www.baumechemical.com/products/pretreatment/ultrasonic.html"}
-    ]
-  }
-  </script>
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pretreatment",
+      "item": "https://www.baumechemical.com/products/pretreatment/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Electro Degreaser Pretreatment",
+      "item": "https://www.baumechemical.com/products/pretreatment/electrodegrea​ser.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Ultrasonic Cleaner Pretreatment",
+      "item": "https://www.baumechemical.com/products/pretreatment/ultrasonic.html"
+    }
+  ]
+}
+</script>
 
   <!-- JSON-LD: Breadcrumb -->
   <script type="application/ld+json">
