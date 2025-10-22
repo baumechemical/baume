@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">Teknomatte 8000 — คู่มือชุบดีบุกด้าน (Matte Tin)</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="Teknomatte 8000 ระบบชุบดีบุกด้าน (Matte Tin) สำหรับงานอิเล็กทรอนิกส์: สูตรผสม 100 ลิตร สภาวะการทำงาน ขั้นตอน Make-up/ชุบ การควบคุมบ่อ และความปลอดภัย พร้อม i18n ไทย/อังกฤษ">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/products/platingcoating/matte-tinplating/index.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Teknomatte 8000 — Matte Tin Plating Guide">
+  <meta property="og:description" content="คู่มือใช้งาน Teknomatte 8000 สำหรับการชุบดีบุกด้าน: สูตรผสม 100 ลิตร พารามิเตอร์ การควบคุมบ่อ และข้อควรระวัง">
+  <meta property="og:url" content="https://www.baumechemical.com/products/platingcoating/matte-tinplating/index.html">
+  <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/thumbnail-397e817e97b35e056.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Hero -->
+  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/thumbnail-397e817e97b35e056.jpg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h)}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700}
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height:clamp(420px,60vh,620px); background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail-397e817e97b35e056.jpg') center/cover no-repeat; padding:28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      article{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:14px 16px; box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid; gap:8px; margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px; border-radius:10px; background:#ecf4ef; border:1px solid #d8e7dd; color:#1f2a24; text-decoration:none; font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections + table ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%; border-collapse:separate; border-spacing:0; border:1px solid #e3ece5; border-radius:12px; overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table th,.table td{padding:12px 10px; border-bottom:1px solid #e9f0ea; vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+
+    /* Floating LINE button */
+    .float-line{
+      position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900;
+    }
+    .float-line a{
+      display:grid; place-items:center; width:54px; height:54px; border-radius:999px; background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 10px 26px rgba(0,0,0,.25); animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover,.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
+
+    /* Back-to-top */
+    .backtop{ position:fixed; right:16px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none }
+    .backtop.show{ display:block }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px; border:1px solid #c5d2cf; background:#fff; box-shadow:0 10px 26px rgba(0,0,0,.18); cursor:pointer;
+    }
+    .backtop button:hover,.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
+
+    /* Reveal */
+    .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">Teknomatte 8000 — Matte Tin Plating Guide</h1>
+      <p data-i18n-key="hero_tagline">คู่มือชุบดีบุกด้าน (Matte Tin): สูตรผสม 100 ลิตร พารามิเตอร์ ขั้นตอน Make-up/ชุบ การควบคุมบ่อ และความปลอดภัย</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวม</a>
+        <a class="toc-chip" href="#recipe" data-i18n-key="toc_recipe">สูตรผสม 100 ลิตร</a>
+        <a class="toc-chip" href="#params" data-i18n-key="toc_params">สภาวะการทำงาน</a>
+        <a class="toc-chip" href="#makeup" data-i18n-key="toc_makeup">ขั้นตอน Make-up</a>
+        <a class="toc-chip" href="#workflow" data-i18n-key="toc_workflow">ขั้นตอนการชุบ</a>
+        <a class="toc-chip" href="#maintenance" data-i18n-key="toc_maint">การควบคุมบ่อ</a>
+        <a class="toc-chip" href="#safety" data-i18n-key="toc_safety">ความปลอดภัย</a>
+        <a class="toc-chip" href="#notes" data-i18n-key="toc_notes">หมายเหตุ</a>
+      </p>
+    </nav>
+
+    <article>
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวมผลิตภัณฑ์</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">
+            Teknomatte 8000 เป็นน้ำยาระบบใหม่สำหรับการชุบดีบุกด้าน (Matte Tin) ให้ผิวซาตินสม่ำเสมอ เงางามพอเหมาะ
+            พร้อมสมบัติทางไฟฟ้าที่ดีเยี่ยม เหมาะกับงานอิเล็กทรอนิกส์ที่ต้องการความน่าเชื่อถือและการบัดกรีสูง
+          </p>
+        </div>
+      </section>
+
+      <!-- Recipe -->
+      <section id="recipe" class="reveal section-block" aria-labelledby="recipe-h">
+        <h2 id="recipe-h" class="section" data-i18n-key="recipe_h">สภาวะและสูตรผสมมาตรฐาน (สำหรับ 100 ลิตร)</h2>
+        <p class="lead" data-i18n-key="recipe_lead">สูตรผสมสารเคมีหลัก</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="recipe_th_comp">ส่วนประกอบ</th>
+                <th data-i18n-key="recipe_th_std">ค่ามาตรฐาน</th>
+                <th data-i18n-key="recipe_th_per100">ปริมาณสำหรับ 100 ลิตร</th>
+                <th data-i18n-key="recipe_th_unit">หน่วย</th>
+                <th data-i18n-key="recipe_th_note">หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="recipe_snso4">สแตนนัส ซัลเฟต (SnSO₄)</td>
+                <td>35 – 40</td>
+                <td>3.5 – 4.0</td>
+                <td data-i18n-key="unit_kg">กิโลกรัม</td>
+                <td data-i18n-key="recipe_snso4_note">แหล่งของ Sn²⁺ สำหรับการเคลือบ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="recipe_h2so4">กรดกำมะถัน (H₂SO₄)</td>
+                <td>90 – 110</td>
+                <td>9.0 – 11.0</td>
+                <td data-i18n-key="unit_l">ลิตร</td>
+                <td data-i18n-key="recipe_h2so4_note">ควบคุมความเป็นกรดของสารละลาย</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="recipe_add">Teknomatte 8000 (Additive)</td>
+                <td>30 – 40</td>
+                <td>3.0 – 4.0</td>
+                <td data-i18n-key="unit_l">ลิตร</td>
+                <td data-i18n-key="recipe_add_note">ปรับเกรน/ให้ความด้านสม่ำเสมอ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Params -->
+      <section id="params" class="reveal section-block" aria-labelledby="params-h">
+        <h2 id="params-h" class="section" data-i18n-key="params_h">สภาวะการทำงานที่สำคัญ</h2>
+        <p class="lead" data-i18n-key="params_lead">ตั้งค่าตั้งต้นเพื่อคงคุณภาพผิวและการบัดกรี</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="params_th_param">พารามิเตอร์</th>
+                <th data-i18n-key="params_th_rec">ค่าแนะนำ</th>
+                <th data-i18n-key="params_th_unit">หน่วย</th>
+                <th data-i18n-key="params_th_note">หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="params_temp">อุณหภูมิ</td>
+                <td>15 – 25</td>
+                <td>°C</td>
+                <td data-i18n-key="params_temp_note">คุมอุณหภูมิอย่างเข้มงวดเพื่อคงคุณภาพผิว</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="params_cd">ความหนาแน่นกระแสไฟ</td>
+                <td>0.1 – 3.5</td>
+                <td>A/dm²</td>
+                <td data-i18n-key="params_cd_note">ปรับตามความหนาที่ต้องการ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="params_anode">ตัวล่อ (แอโนด)</td>
+                <td data-i18n-key="params_anode_val">ดีบุก 99.99%</td>
+                <td>—</td>
+                <td data-i18n-key="params_anode_note">ควรห่อถุงผ้าทนกรด</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Make-up steps -->
+      <section id="makeup" class="reveal section-block" aria-labelledby="makeup-h">
+        <h2 id="makeup-h" class="section" data-i18n-key="makeup_h">ขั้นตอนการผสมน้ำยา (Make-up) — 100 ลิตร</h2>
+        <div class="content">
+          <ol>
+            <li data-i18n-key="mk_1">เติมน้ำกลั่นลงถังผสม 50 ลิตร (50% ของปริมาตรรวม)</li>
+            <li data-i18n-key="mk_2">ค่อย ๆ เติมกรดกำมะถัน 9.0–11.0 ลิตร ลงในน้ำพร้อมกวนอย่างต่อเนื่อง</li>
+            <li data-i18n-key="mk_3">รอให้ความร้อนจากการคายความร้อนลดลงจนปลอดภัยก่อนดำเนินการต่อ</li>
+            <li data-i18n-key="mk_4">เติมสแตนนัส ซัลเฟต 3.5–4.0 กก. แล้วกวนจนละลายหมด</li>
+            <li data-i18n-key="mk_5">เติมน้ำกลั่นเพิ่มให้ได้ ~90 ลิตร และคุมอุณหภูมิ ~25 °C</li>
+            <li data-i18n-key="mk_6">ผสม Teknomatte 8000 กับน้ำ (1:1) ให้ครบ 3.0–4.0 ลิตร แล้วเติมลงบ่อ (ห้ามเติมขณะน้ำยาร้อน &gt; 30 °C)</li>
+            <li data-i18n-key="mk_7">เติมน้ำกลั่นจนครบ 100 ลิตร กวนอีกครั้ง และตรวจสอบความพร้อมใช้งาน</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Operating workflow -->
+      <section id="workflow" class="reveal section-block" aria-labelledby="workflow-h">
+        <h2 id="workflow-h" class="section" data-i18n-key="workflow_h">ขั้นตอนการชุบดีบุก (Operating Workflow)</h2>
+        <div class="content">
+          <ol>
+            <li data-i18n-key="wf_1">เตรียมชิ้นงาน: ทำความสะอาดและ/หรือชุบรองพื้น (เช่น ทองแดง/นิกเกิล)</li>
+            <li data-i18n-key="wf_2">กระตุ้นผิว: จุ่ม H₂SO₄ 5–10% เพื่อล้างออกไซด์</li>
+            <li data-i18n-key="wf_3">ล้างน้ำสะอาดให้ทั่วก่อนเข้าสู่บ่อชุบ</li>
+            <li data-i18n-key="wf_4">ชุบในบ่อ Teknomatte 8000 (15–25 °C, 0.1–3.5 A/dm²) ตามความหนาที่ต้องการ</li>
+            <li data-i18n-key="wf_5">ล้างน้ำหลังชุบ 2–3 ครั้งเพื่อล้างสารตกค้าง</li>
+            <li data-i18n-key="wf_6">กันหมอง: จุ่ม Teknoseal B100 เพื่อป้องกันการออกซิเดชันและคราบหมอง</li>
+            <li data-i18n-key="wf_7">อบให้แห้งสนิท พร้อมสำหรับการประกอบ</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Maintenance -->
+      <section id="maintenance" class="reveal section-block" aria-labelledby="maint-h">
+        <h2 id="maint-h" class="section" data-i18n-key="maint_h">การควบคุมและบำรุงรักษาบ่อชุบ</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="maint_1">วิเคราะห์ความเข้มข้นของ SnSO₄ และ H₂SO₄ เป็นระยะ และปรับให้อยู่ในช่วงมาตรฐาน</li>
+            <li data-i18n-key="maint_2">เติม Teknomatte 8000 ตามแอมแปร์–ชั่วโมง (Ah) ที่ใช้ เพื่อคงความด้าน/โครงสร้างเกรนผิว</li>
+            <li data-i18n-key="maint_3">ควบคุมอุณหภูมิ 15–25 °C อย่างเข้มงวด เพื่อป้องกันการเสื่อมของสารเติมแต่ง</li>
+            <li data-i18n-key="maint_4">กรองน้ำยาอย่างสม่ำเสมอ ตรวจสิ่งปนเปื้อนอินทรีย์/โลหะ และทำคาร์บอนทรีตเมื่อจำเป็น</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Safety -->
+      <section id="safety" class="reveal section-block" aria-labelledby="safe-h">
+        <h2 id="safe-h" class="section" data-i18n-key="safety_h">ข้อควรระวังด้านความปลอดภัย (Safety)</h2>
+        <div class="content">
+          <ul>
+            <li data-i18n-key="s_1">ผสมกรดลงในน้ำเท่านั้น (ห้ามผสมน้ำลงในกรด) และทำในที่ระบายอากาศดี</li>
+            <li data-i18n-key="s_2">สวม PPE: แว่นครอบตา หน้ากากกันไอกรด ถุงมือทนสารเคมี และผ้ากันสารเคมี</li>
+            <li data-i18n-key="s_3">ระวังความร้อนจากการผสมกรด ปล่อยให้เย็นก่อนเติมสารอื่น</li>
+            <li data-i18n-key="s_4">จัดเก็บสารเคมีในภาชนะปิดสนิท หลีกเลี่ยงแสงแดดโดยตรงและความร้อนสูง</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section id="notes" class="reveal section-block" aria-labelledby="notes-h">
+        <h2 id="notes-h" class="section" data-i18n-key="notes_h">หมายเหตุ</h2>
+        <div class="content">
+          <p data-i18n-key="notes_p">
+            ค่าข้างต้นเป็นแนวทางมาตรฐาน อาจต้องปรับตามรูปทรงชิ้นงาน วัสดุพื้นผิว และเงื่อนไขการผลิตจริงของแต่ละไลน์ชุบ
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
+
+  <!-- Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
+
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title:"Teknomatte 8000 — คู่มือชุบดีบุกด้าน | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← กลับเมนูหลัก",
+        hero_title:"Teknomatte 8000 — Matte Tin Plating Guide",
+        hero_tagline:"คู่มือชุบดีบุกด้าน (Matte Tin): สูตรผสม 100 ลิตร พารามิเตอร์ ขั้นตอน Make-up/ชุบ การควบคุมบ่อ และความปลอดภัย",
+
+        toc_title:"สารบัญ",
+        toc_intro:"ภาพรวม",
+        toc_recipe:"สูตรผสม 100 ลิตร",
+        toc_params:"สภาวะการทำงาน",
+        toc_makeup:"ขั้นตอน Make-up",
+        toc_workflow:"ขั้นตอนการชุบ",
+        toc_maint:"การควบคุมบ่อ",
+        toc_safety:"ความปลอดภัย",
+        toc_notes:"หมายเหตุ",
+
+        intro_h:"ภาพรวมผลิตภัณฑ์",
+        intro_p1:"Teknomatte 8000 เป็นน้ำยาระบบใหม่สำหรับการชุบดีบุกด้าน (Matte Tin) ให้ผิวซาตินสม่ำเสมอ เงางามพอเหมาะ พร้อมสมบัติทางไฟฟ้าที่ดีเยี่ยม เหมาะกับงานอิเล็กทรอนิกส์ที่ต้องการความน่าเชื่อถือและการบัดกรีสูง",
+
+        recipe_h:"สภาวะและสูตรผสมมาตรฐาน (สำหรับ 100 ลิตร)",
+        recipe_lead:"สูตรผสมสารเคมีหลัก",
+        recipe_th_comp:"ส่วนประกอบ",
+        recipe_th_std:"ค่ามาตรฐาน",
+        recipe_th_per100:"ปริมาณสำหรับ 100 ลิตร",
+        recipe_th_unit:"หน่วย",
+        recipe_th_note:"หมายเหตุ",
+        recipe_snso4:"สแตนนัส ซัลเฟต (SnSO₄)",
+        recipe_snso4_note:"แหล่งของ Sn²⁺ สำหรับการเคลือบ",
+        recipe_h2so4:"กรดกำมะถัน (H₂SO₄)",
+        recipe_h2so4_note:"ควบคุมความเป็นกรดของสารละลาย",
+        recipe_add:"Teknomatte 8000 (Additive)",
+        recipe_add_note:"ปรับเกรน/ให้ความด้านสม่ำเสมอ",
+        unit_kg:"กิโลกรัม",
+        unit_l:"ลิตร",
+
+        params_h:"สภาวะการทำงานที่สำคัญ",
+        params_lead:"ตั้งค่าตั้งต้นเพื่อคงคุณภาพผิวและการบัดกรี",
+        params_th_param:"พารามิเตอร์",
+        params_th_rec:"ค่าแนะนำ",
+        params_th_unit:"หน่วย",
+        params_th_note:"หมายเหตุ",
+        params_temp:"อุณหภูมิ",
+        params_temp_note:"คุมอุณหภูมิอย่างเข้มงวดเพื่อคงคุณภาพผิว",
+        params_cd:"ความหนาแน่นกระแสไฟ",
+        params_cd_note:"ปรับตามความหนาที่ต้องการ",
+        params_anode:"ตัวล่อ (แอโนด)",
+        params_anode_val:"ดีบุก 99.99%",
+        params_anode_note:"ควรห่อถุงผ้าทนกรด",
+
+        makeup_h:"ขั้นตอนการผสมน้ำยา (Make-up) — 100 ลิตร",
+        mk_1:"เติมน้ำกลั่นลงถังผสม 50 ลิตร (50% ของปริมาตรรวม)",
+        mk_2:"ค่อย ๆ เติมกรดกำมะถัน 9.0–11.0 ลิตร ลงในน้ำพร้อมกวนอย่างต่อเนื่อง",
+        mk_3:"รอให้ความร้อนจากการคายความร้อนลดลงจนปลอดภัยก่อนดำเนินการต่อ",
+        mk_4:"เติมสแตนนัส ซัลเฟต 3.5–4.0 กก. แล้วกวนจนละลายหมด",
+        mk_5:"เติมน้ำกลั่นเพิ่มให้ได้ ~90 ลิตร และคุมอุณหภูมิ ~25 °C",
+        mk_6:"ผสม Teknomatte 8000 กับน้ำ (1:1) ให้ครบ 3.0–4.0 ลิตร แล้วเติมลงบ่อ (ห้ามเติมขณะน้ำยาร้อน > 30 °C)",
+        mk_7:"เติมน้ำกลั่นจนครบ 100 ลิตร กวนอีกครั้ง และตรวจสอบความพร้อมใช้งาน",
+
+        workflow_h:"ขั้นตอนการชุบดีบุก (Operating Workflow)",
+        wf_1:"เตรียมชิ้นงาน: ทำความสะอาดและ/หรือชุบรองพื้น (เช่น ทองแดง/นิกเกิล)",
+        wf_2:"กระตุ้นผิว: จุ่ม H₂SO₄ 5–10% เพื่อล้างออกไซด์",
+        wf_3:"ล้างน้ำสะอาดให้ทั่วก่อนเข้าสู่บ่อชุบ",
+        wf_4:"ชุบในบ่อ Teknomatte 8000 (15–25 °C, 0.1–3.5 A/dm²) ตามความหนาที่ต้องการ",
+        wf_5:"ล้างน้ำหลังชุบ 2–3 ครั้งเพื่อล้างสารตกค้าง",
+        wf_6:"กันหมอง: จุ่ม Teknoseal B100 เพื่อป้องกันการออกซิเดชันและคราบหมอง",
+        wf_7:"อบให้แห้งสนิท พร้อมสำหรับการประกอบ",
+
+        maint_h:"การควบคุมและบำรุงรักษาบ่อชุบ",
+        maint_1:"วิเคราะห์ความเข้มข้นของ SnSO₄ และ H₂SO₄ เป็นระยะ และปรับให้อยู่ในช่วงมาตรฐาน",
+        maint_2:"เติม Teknomatte 8000 ตามแอมแปร์–ชั่วโมง (Ah) ที่ใช้ เพื่อคงความด้าน/โครงสร้างเกรนผิว",
+        maint_3:"ควบคุมอุณหภูมิ 15–25 °C อย่างเข้มงวด เพื่อป้องกันการเสื่อมของสารเติมแต่ง",
+        maint_4:"กรองน้ำยาอย่างสม่ำเสมอ ตรวจสิ่งปนเปื้อนอินทรีย์/โลหะ และทำคาร์บอนทรีตเมื่อจำเป็น",
+
+        safety_h:"ข้อควรระวังด้านความปลอดภัย (Safety)",
+        s_1:"ผสมกรดลงในน้ำเท่านั้น (ห้ามผสมน้ำลงในกรด) และทำในที่ระบายอากาศดี",
+        s_2:"สวม PPE: แว่นครอบตา หน้ากากกันไอกรด ถุงมือทนสารเคมี และผ้ากันสารเคมี",
+        s_3:"ระวังความร้อนจากการผสมกรด ปล่อยให้เย็นก่อนเติมสารอื่น",
+        s_4:"จัดเก็บสารเคมีในภาชนะปิดสนิท หลีกเลี่ยงแสงแดดโดยตรงและความร้อนสูง",
+
+        notes_h:"หมายเหตุ",
+        notes_p:"ค่าข้างต้นเป็นแนวทางมาตรฐาน อาจต้องปรับตามรูปทรงชิ้นงาน วัสดุพื้นผิว และเงื่อนไขการผลิตจริงของแต่ละไลน์ชุบ",
+
+        footer_products:"หมวดผลิตภัณฑ์",
+        footer_contact:"ติดต่อเรา",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      },
+
+      en: {
+        title:"Teknomatte 8000 — Matte Tin Plating Guide | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+        back_home:"← Back to Blog",
+        hero_title:"Teknomatte 8000 — Matte Tin Plating Guide",
+        hero_tagline:"Matte tin guide: 100 L make-up recipe, operating window, workflow, bath control, and safety.",
+
+        toc_title:"Contents",
+        toc_intro:"Overview",
+        toc_recipe:"100 L Recipe",
+        toc_params:"Operating window",
+        toc_makeup:"Make-up steps",
+        toc_workflow:"Plating workflow",
+        toc_maint:"Bath control",
+        toc_safety:"Safety",
+        toc_notes:"Notes",
+
+        intro_h:"Product overview",
+        intro_p1:"Teknomatte 8000 is a next-gen matte tin electrolyte delivering uniform satin finish with excellent electrical properties—ideal for high-reliability electronics and solderability.",
+
+        recipe_h:"Standard conditions & recipe (per 100 L)",
+        recipe_lead:"Primary chemistry",
+        recipe_th_comp:"Component",
+        recipe_th_std:"Standard range",
+        recipe_th_per100:"Per 100 L",
+        recipe_th_unit:"Unit",
+        recipe_th_note:"Remarks",
+        recipe_snso4:"Stannous sulfate (SnSO₄)",
+        recipe_snso4_note:"Source of Sn²⁺ for deposition",
+        recipe_h2so4:"Sulfuric acid (H₂SO₄)",
+        recipe_h2so4_note:"Controls bath acidity",
+        recipe_add:"Teknomatte 8000 (Additive)",
+        recipe_add_note:"Grain refinement / consistent matte",
+        unit_kg:"kg",
+        unit_l:"L",
+
+        params_h:"Key operating conditions",
+        params_lead:"Baseline settings for consistent finish & solderability",
+        params_th_param:"Parameter",
+        params_th_rec:"Recommended",
+        params_th_unit:"Unit",
+        params_th_note:"Note",
+        params_temp:"Temperature",
+        params_temp_note:"Tight control preserves finish quality",
+        params_cd:"Current density",
+        params_cd_note:"Adjust for target thickness",
+        params_anode:"Anode",
+        params_anode_val:"Tin 99.99%",
+        params_anode_note:"Use acid-resistant bags",
+
+        makeup_h:"Make-up procedure — 100 L",
+        mk_1:"Charge 50 L DI water to the tank (≈50% of final volume).",
+        mk_2:"Slowly add 9.0–11.0 L H₂SO₄ into water with continuous agitation.",
+        mk_3:"Allow exotherm heat to dissipate to a safe level before proceeding.",
+        mk_4:"Add 3.5–4.0 kg SnSO₄ and mix until fully dissolved.",
+        mk_5:"Top up DI to ~90 L and stabilize temperature at ~25 °C.",
+        mk_6:"Pre-mix Teknomatte 8000 with water (1:1) to 3.0–4.0 L and add (do NOT add when bath > 30 °C).",
+        mk_7:"Top up to 100 L, mix, and verify readiness.",
+
+        workflow_h:"Operating workflow",
+        wf_1:"Prepare parts: clean and/or underplate (e.g., Cu/Ni).",
+        wf_2:"Activate: dip in 5–10% H₂SO₄ to remove oxides.",
+        wf_3:"Rinse thoroughly before plating.",
+        wf_4:"Plate in Teknomatte 8000 (15–25 °C, 0.1–3.5 A/dm²) to target thickness.",
+        wf_5:"Post-plate rinse 2–3 stages to remove residues.",
+        wf_6:"Anti-tarnish: dip in Teknoseal B100 to prevent oxidation/haze.",
+        wf_7:"Dry completely; ready for assembly.",
+
+        maint_h:"Bath control & maintenance",
+        maint_1:"Analyze SnSO₄ and H₂SO₄ routinely; correct to spec.",
+        maint_2:"Replenish Teknomatte 8000 per ampere-hours to maintain matte/grain structure.",
+        maint_3:"Strictly control 15–25 °C to protect additives.",
+        maint_4:"Filter continuously; monitor organic/metallic contamination; carbon treat as needed.",
+
+        safety_h:"Safety",
+        s_1:"Always add acid to water (never water to acid) with proper ventilation.",
+        s_2:"Wear PPE: chemical splash goggles, acid-vapor respirator, chemical-resistant gloves/apron.",
+        s_3:"Beware exotherm during acid addition; cool before adding other reagents.",
+        s_4:"Store chemicals sealed, away from heat and direct sunlight.",
+
+        notes_h:"Notes",
+        notes_p:"Values are baseline guidance and may require adjustment for part geometry, substrate, and production conditions.",
+
+        footer_products:"Products",
+        footer_contact:"Contact Us",
+        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+    function applyLang(lang){
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+
+      // update button state
+      els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+      // swap texts
+      els.translatables().forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
+          node.textContent = I18N[sel][key];
+        }
+      });
+
+      // update <title>
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+      // persist + recalc header height
+      try{ localStorage.setItem('lang', sel); }catch(e){}
+      try{
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      }catch(e){}
+    }
+
+    (function initLang(){
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
+      applyLang(saved);
+      els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle?.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // highlight current nav
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        nav?.querySelectorAll('a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // smart back
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors + back-to-top -->
+  <script>
+    // clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
+
+    // back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
