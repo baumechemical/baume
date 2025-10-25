@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">Nickel Stripping บนเหล็กและทองเหลือง — ปัญหาคลาสสิก & ทางออก | Baume Chemical Blog</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="รวมปัญหาสุดคลาสสิกในการลอกนิกเกิล (Nickel Stripping) บนเหล็กและทองเหลือง: การกัดกร่อนเหล็ก, ไฮโดรเจนเอ็มบริทเทิลเมนต์, พาสซิเวชัน, คราบดำ, เดซิงซิฟิเคชัน, การพึ่งพาไซยาไนด์ และการลอกไม่สม่ำเสมอ พร้อมหลักการเลือกกระบวนการและการควบคุมตัวแปรสำคัญ">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/nickel-stripping-steel-brass/index.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="Nickel Stripping บนเหล็กและทองเหลือง — ปัญหาคลาสสิก & ทางออก">
+  <meta property="og:description" content="สรุปปัญหาหนักในการลอกนิกเกิลบนเหล็กและทองเหลือง พร้อมแนวคิดเลือกกระบวนการไฟฟ้า/เคมี และการควบคุมความเสี่ยง">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/nickel-stripping-steel-brass/index.html">
+  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      article{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections + table ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+
+    /* Floating LINE button */
+    .float-line{
+      position:fixed;
+      right:16px;
+      bottom:calc(18px + env(safe-area-inset-bottom));
+      z-index:900;
+    }
+    .float-line a{
+      display:grid; place-items:center;
+      width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
+      animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover,
+    .float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
+
+    /* Back-to-top */
+    .backtop{
+      position:fixed;
+      right:16px;
+      bottom:calc(90px + env(safe-area-inset-bottom));
+      z-index:900;
+      display:none;
+    }
+    .backtop.show{ display:block }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px;
+      border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 10px 26px rgba(0,0,0,.18);
+      cursor:pointer;
+    }
+    .backtop button:hover,
+    .backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+
+    /* Small screens */
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
+
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+<header class="hero">
+  <a class="back-chip" href="https://www.baumechemical.com/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+  <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+    <h1 data-i18n-key="hero_title">รวมปัญหาสุดคลาสสิกในการลอกนิกเกิล (Nickel Stripping) บนเหล็กและทองเหลือง</h1>
+    <p data-i18n-key="hero_tagline">เจาะลึกปัญหาในการลอกนิกเกิลออกจากเหล็กและทองเหลือง อะไรคือฝันร้ายของไลน์ชุบ และจะจัดการอย่างไร</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav id="toc" class="reveal" aria-label="สารบัญ">
+    <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+    <p>
+      <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ปัญหาหลัก</a>
+      <a class="toc-chip" href="#steel" data-i18n-key="toc_steel">1: ปัญหาบนเหล็ก (Steel)</a>
+      <a class="toc-chip" href="#brass" data-i18n-key="toc_brass">2: ปัญหาบนทองเหลือง (Brass)</a>
+      <a class="toc-chip" href="#common" data-i18n-key="toc_common">ปัญหาร่วม & ข้อควรพิจารณา</a>
+      <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">บทสรุป</a>
+    </p>
+  </nav>
+
+  <article>
+
+    <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+      <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวมและปัญหาหลัก</h2>
+      <div class="content">
+        <p data-i18n-key="intro_p1">ในโลกของการชุบโลหะและการตกแต่งผิว "นิกเกิล" (Nickel) ถือเป็นหนึ่งในโลหะที่ได้รับความนิยมสูงสุด ไม่ว่าจะด้วยคุณสมบัติด้านความเงางาม, ความทนทานต่อการกัดกร่อน, หรือการใช้เป็นชั้นรองพื้นก่อนการชุบโครเมียม แต่ในกระบวนการผลิต ไม่มีอะไรที่สมบูรณ์แบบ 100% ชิ้นงานที่ชุบมามีปัญหา, ชิ้นงานเก่าที่ต้องการการฟื้นฟู, หรือแม่พิมพ์ที่ต้องล้างผิว ทั้งหมดนี้ล้วนนำไปสู่กระบวนการที่ท้าทายและซับซ้อน นั่นคือ "การลอกนิกเกิล" (Nickel Stripping)</p>
+        <p data-i18n-key="intro_p2">การลอกนิกเกิลไม่เหมือนกับการลอกสีหรือคราบสกปรกทั่วไป นิกเกิลเป็นโลหะที่ค่อนข้างทนต่อสารเคมีได้ดี การจะละลายมันออกโดยไม่ทำลายพื้นผิวโลหะแม่ที่อยู่ข้างใต้ โดยเฉพาะอย่างยิ่ง เหล็กและทองเหลือง จึงเต็มไปด้วยปัญหาและความยาก</p>
+        <p data-i18n-key="intro_p3">บทความนี้จะเจาะลึกถึงปัญหาสุดคลาสสิกที่คนทำงานชุบโลหะต้องเผชิญ เมื่อต้องทำการลอกนิกเกิลออกจากชิ้นงานสองประเภทนี้</p>
+        
+        <h3 data-i18n-key="intro_h_sub">ปัญหา: "เลือกปฏิบัติ" ทางเคมีไฟฟ้า</h3>
+        <p data-i18n-key="intro_p4">ปัญหาใหญ่ที่สุดของการลอกนิกเกิลอยู่ที่ "ต่างกันของศักย์ไฟฟ้าเคมี" หรือพูดง่ายๆ คือ:</p>
+        <ul>
+          <li data-i18n-key="intro_li1"><strong>สำหรับเหล็ก:</strong> เหล็กมีความเป็นโลหะสามัญมากกว่านิกเกิล หมายความว่ากรดหรือสารเคมีส่วนใหญ่ <strong>อยากจะละลายเหล็กมากกว่านิกเกิล</strong></li>
+          <li data-i18n-key="intro_li2"><strong>สำหรับทองเหลือง:</strong> ทองเหลืองมีศักย์ไฟฟ้าใกล้เคียงกับนิกเกิล แต่ก็ยังมีความเสี่ยงที่จะถูกกัดผิว โดยเฉพาะส่วนผสมอย่างซิงค์หรือสังกะสี</li>
+        </ul>
+        <p data-i18n-key="intro_p5">ดังนั้น น้ำยาลอกนิกเกิลที่ดีจึงต้องเลือกที่จะลอกนิกเกิลเท่านั้น โดยต้องดูแลโลหะพื้นผิวไปพร้อมๆกัน ซึ่งในทางปฏิบัติ มันไม่ง่ายเลย</p>
+      </div>
+    </section>
+
+    <section id="steel" class="reveal section-block" aria-labelledby="steel-h">
+      <h2 id="steel-h" class="section" data-i18n-key="steel_h">1: ปัญหาการลอกนิกเกิลบน "เหล็ก" (Steel)</h2>
+      <div class="content">
+        <p class="lead" data-i18n-key="steel_lead">เหล็กเป็นโลหะพื้นฐานที่พบได้บ่อยที่สุด และปัญหาที่พบก็หนักหน่วงที่สุดเช่นกัน</p>
+
+        <h3 data-i18n-key="steel_1_h">1. ปัญหาคลาสสิก: ชิ้นงานเหล็กถูกกัดกร่อน</h3>
+        <p data-i18n-key="steel_1_p1">นี่คือฝันร้ายอันดับหนึ่ง หากใช้น้ำยาลอกผิดประเภท เช่น การใช้กรดเกลือ หรือกรดกำมะถันเจือจางที่ไม่มีตัวยับยั้งที่ดีพอ ผลลัพธ์คือ <strong>นิกเกิลยังไม่ทันหมด แต่เหล็กก็แหว่งหรือบางไปแล้ว</strong></p>
+        <ul>
+          <li data-i18n-key="steel_1_cause"><strong>สาเหตุ:</strong> เหล็กมีปฏิกิริยาไวต่อกรดมากกว่านิกเกิลมาก</li>
+          <li data-i18n-key="steel_1_effect"><strong>ผลกระทบ:</strong> ชิ้นงานเสียรูปทรง, ขนาดเพี้ยน, ผิวขรุขระจนไม่สามารถนำไปชุบใหม่ได้, หรือเกิดการกัดกร่อนใต้ผิวบริเวณขอบรอยแตกของนิกเกิล</li>
+          <li data-i18n-key="steel_1_fix_h"><strong>ทางแก้ (ที่นิยม):</strong>
+            <ul>
+              <li data-i18n-key="steel_1_fix_li1"><strong>การลอกแบบไฟฟ้า (Electrolytic Stripping):</strong> ใช้ผง TH-9 โดยให้ชิ้นงานเป็นขั้วบวก (Anode) กรดเข้มข้นจะทำให้นิกเกิลละลาย แต่จะสร้างชั้นฟิล์มป้องกัน (Passivation layer) บนผิวเหล็กไม่ให้ถูกกัด</li>
+              <li data-i18n-key="steel_1_fix_li2"><strong>การลอกแบบเคมี (Chemical Stripping):</strong> ใช้ผงลอกนิกเกิลบนเหล็กที่มีส่วนผสมของสารที่ลอกนิกเกิลและสารยับยั้งสำหรับเหล็ก</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 data-i18n-key="steel_2_h">2. ปัญหาการเปราะจากไฮโดรเจน</h3>
+        <p data-i18n-key="steel_2_p1">สำหรับเหล็กกล้าความแข็งแรงสูงหรือเหล็กชุบแข็ง การลอกนิกเกิล โดยเฉพาะอย่างยิ่งในกระบวนการที่ใช้กรดหรือการลอกแบบไฟฟ้า (ซึ่งเกิดก๊าซไฮโดรเจน) เป็นเรื่องที่อันตรายมาก</p>
+        <ul>
+          <li data-i18n-key="steel_2_cause"><strong>สาเหตุ:</strong> อะตอมของไฮโดรเจนที่เกิดขึ้นในปฏิกิริยา จะแทรกซึมเข้าไปในโครงสร้างผลึกของเหล็ก</li>
+          <li data-i18n-key="steel_2_effect"><strong>ผลกระทบ:</strong> ชิ้นงาน (เช่น สปริง, สลักเกลียวแรงดึงสูง) จะสูญเสียความเหนียวและ "เปราะ" อย่างมาก อาจแตกหักได้เมื่อรับแรงเพียงเล็กน้อย</li>
+          <li data-i18n-key="steel_2_fix"><strong>ทางแก้:</strong> ต้องนำชิ้นงานไป "อบไล่ไฮโดรเจน" ทันทีหลังจากการลอก หรือเลือกใช้น้ำยาลอกประเภทที่ไม่ก่อให้เกิดไฮโดรเจน</li>
+        </ul>
+
+        <h3 data-i18n-key="steel_3_h">3. ปัญหาโครเมียมปนเปื้อน</h3>
+        <p data-i18n-key="steel_3_p1">บางครั้ง การลอกก็ "หยุด" ไปเฉยๆ แม้ว่านิกเกิลจะยังอยู่</p>
+        <ul>
+          <li data-i18n-key="steel_3_cause"><strong>สาเหตุ:</strong> ผิวนิกเกิลเองก็สามารถสร้างฟิล์มออกไซด์บางๆ ขึ้นมาได้ โดยเฉพาะนิกเกิลที่มีโครเมียมปนเปื้อน หรือเมื่อใช้น้ำยาที่มีฤทธิ์ออกซิไดซ์สูง (เช่น กรดไนตริกเข้มข้น ซึ่งบางสูตรใช้ลอกนิกเกิลจากเหล็กได้ แต่คุมยากมาก)</li>
+          <li data-i18n-key="steel_3_effect"><strong>ผลกระทบ:</strong> ลอกนิกเกิลไม่หมด ต้องเสียเวลาลอกซ้ำ หรือต้องใช้วิธีกระตุ้นผิว ซึ่งเสี่ยงต่อการกัดกร่อนเหล็ก</li>
+        </ul>
+
+        <h3 data-i18n-key="steel_4_h">4. ปัญหาคราบดำ (Smut) และการลอกไม่สมบูรณ์</h3>
+        <ul>
+          <li data-i18n-key="steel_4_cause"><strong>สาเหตุ:</strong> การลอกแบบเคมีมักทิ้งคราบคาร์บอน (จากสารเติมแต่งในน้ำยาชุบนิกเกิลเดิม) หรือคราบโลหะอื่นๆ ไว้บนผิวเหล็ก หรือเกิดจากน้ำยาลอกที่ "เก่า" จนความเข้มข้นของนิกเกิลที่ละลายอยู่สูงเกินไป</li>
+          <li data-i18n-key="steel_4_effect"><strong>ผลกระทบ:</strong> ผิวเหล็กสกปรก ต้องขัดล้างเพิ่ม และหากลอกไม่หมดเป็นจุดๆ (เนื่องจากการไหลเวียนของน้ำยาไม่ดี) ก็ต้องเริ่มกระบวนการใหม่</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="brass" class="reveal section-block" aria-labelledby="brass-h">
+      <h2 id="brass-h" class="section" data-i18n-key="brass_h">2: ปัญหาการลอกนิกเกิลบน "ทองเหลือง" (Brass)</h2>
+      <div class="content">
+        <p class="lead" data-i18n-key="brass_lead">ทองเหลืองเป็นโลหะผสมระหว่างทองแดงและซิงค์หรือสังกะสี ปัญหาจึงเปลี่ยนไปจากเหล็กโดยสิ้นเชิง</p>
+        
+        <h3 data-i18n-key="brass_1_h">1. ปัญหาคลาสสิก: การสูญเสียซิงค์หรือสังกะสี</h3>
+        <p data-i18n-key="brass_1_p1">นี่คือปัญหาใหญ่ที่สุดของทองเหลือง น้ำยาลอกที่เป็นกรดหลายชนิด แม้จะออกแบบมาให้ปลอดภัยกับทองแดง แต่กลับ <strong>เลือกละลายสังกะสีออกจากเนื้อทองเหลือง</strong> </p>
+        <ul>
+          <li data-i18n-key="brass_1_cause"><strong>สาเหตุ:</strong> สังกะสีมีความเป็นโลหะสามัญมากกว่าทองแดง</li>
+          <li data-i18n-key="brass_1_effect"><strong>ผลกระทบ:</strong> ชิ้นงานจะ "พรุน" หมือนฟองน้ำ ผิวจะเปลี่ยนเป็นสีแดงอมชมพูของทองแดงที่เหลืออยู่ สูญเสียความแข็งแรงอย่างถาวร และไม่สามารถนำไปชุบให้เงางามได้อีกต่อไป</li>
+        </ul>
+
+        <h3 data-i18n-key="brass_2_h">2. ปัญหาผิวงานด้าน หรือถูกกัด</h3>
+        <p data-i18n-key="brass_2_p1">สำหรับงานที่เน้นความสวยงาม เช่น ก๊อกน้ำ, อุปกรณ์ในห้องน้ำ ผิวทองเหลืองหลังลอกนิกเกิลออกต้องเรียบและเงา หรืออย่างน้อยก็ต้องไม่เสียหาย</p>
+        <ul>
+          <li data-i18n-key="brass_2_cause"><strong>สาเหตุ:</strong> น้ำยาลอก แม้จะไม่ทำให้เกิดรอยคราบ แต่ก็มักจะ "กัด" (Etch) ผิวทองเหลืองเล็กน้อย ทำให้ผิวที่เคยเรียบเงากลายเป็นผิวด้าน หรือผิวซาติน</li>
+          <li data-i18n-key="brass_2_effect"><strong>ผลกระทบ:</strong> ต้องเสียแรงและเวลาในการขัดเงา ชิ้นงานใหม่ทั้งหมดก่อนนำไปชุบ ซึ่งอาจทำให้รายละเอียดเล็กๆ หรือสันมุมของชิ้นงานหายไป</li>
+        </ul>
+
+        <h3 data-i18n-key="brass_3_h">3. ปัญหาการพึ่งพา "ไซยาไนด์" (Cyanide Issues)</h3>
+        <p data-i18n-key="brass_3_p1">ในอดีต (และบางที่ในปัจจุบัน) น้ำยาลอกนิกเกิลบนทองเหลืองและทองแดงที่มีประสิทธิภาพสูง มักมี "ไซยาไนด์" (Cyanide) เป็นส่วนประกอบหลัก</p>
+        <ul>
+          <li data-i18n-key="brass_3_cause"><strong>สาเหตุ:</strong> ไซยาไนด์สามารถจับตัวเป็นสารประกอบเชิงซ้อน กับทั้งนิกเกิล, ทองแดง, และสังกะสี ทำให้มันละลายออกมาได้ดีโดยไม่ค่อยกัดผิว</li>
+          <li data-i18n-key="brass_3_effect"><strong>ผลกระทบ:</strong> ไซยาไนด์เป็นสารพิษร้ายแรงมาก การจัดการ, การใช้งาน, และการบำบัดของเสียจึงเป็นอันตราย, มีค่าใช้จ่ายสูง, และมีกฎหมายควบคุมเข้มงวด ปัจจุบันอุตสาหกรรมส่วนใหญ่พยายามหลีกเลี่ยงการใช้ไซยาไนด์อย่างที่สุด</li>
+        </ul>
+        
+        <h3 data-i18n-key="brass_4_h">4. ปัญหาการลอกแบบไม่สม่ำเสมอ (Uneven Stripping)</h3>
+        <ul>
+          <li data-i18n-key="brass_4_cause"><strong>สาเหตุ:</strong> มักเกิดกับการลอกแบบไฟฟ้า บนชิ้นงานที่มีรูปทรงซับซ้อน บริเวณซอกหลืบ กระแสไฟจะไปไม่ถึง ทำให้นิกเกิลในซอกละลายช้ากว่าบริเวณภายนอก</li>
+          <li data-i18n-key="brass_4_effect"><strong>ผลกระทบ:</strong> ต้องใช้เวลานานขึ้น หรือต้องขยับชิ้นงานบ่อยๆ และเสี่ยงที่บริเวณภายนอกจะถูกกัดกร่อนก่อนที่นิกเกิลในซอกจะหมด</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="common" class="reveal section-block" aria-labelledby="common-h">
+      <h2 id="common-h" class="section" data-i18n-key="common_h">ปัญหาร่วมและข้อควรพิจารณาอื่นๆ</h2>
+      <div class="content">
+        <p data-i18n-key="common_p1">ไม่ว่าจะลอกบนเหล็กหรือทองเหลือง ยังมีปัญหาร่วมอื่นๆ ที่ต้องจัดการ:</p>
+        <ul>
+          <li data-i18n-key="common_li1"><strong>อายุการใช้งานของน้ำยา (Bath Life):</strong> เมื่อนิกเกิลละลายลงไปในน้ำยาจน "อิ่มตัว" ประสิทธิภาพการลอกจะลดลงฮวบฮาบ ต้องมีการควบคุมความเข้มข้นของนิกเกิลในน้ำยา และต้องเปลี่ยนถ่ายบ่อย ทำให้สิ้นเปลือง</li>
+          <li data-i18n-key="common_li2"><strong>การจัดการของเสีย (Waste Management):</strong> น้ำยาลอกที่หมดอายุใช้งานเต็มไปด้วยนิกเกิล (ซึ่งเป็นโลหะหนัก) และสารเคมีอันตราย (กรด, ไซยาไนด์, หรือสารประกอบอื่นๆ) ถือเป็นกากอุตสาหกรรมอันตรายที่ต้องบำบัดอย่างถูกต้อง</li>
+          <li data-i18n-key="common_li3"><strong>ความปลอดภัย (Safety):</strong> น้ำยาลอกส่วนใหญ่มีความเป็นกรด/ด่างสูง, กัดกร่อนรุนแรง, หรือปล่อยไอระเหยที่เป็นพิษ (เช่น ไอของกรดไนตริก) ผู้ปฏิบัติงานต้องมีอุปกรณ์ป้องกันส่วนบุคคล (PPE) ที่เหมาะสม</li>
+          <li data-i18n-key="common_li4"><strong>การลอก Electroless Nickel:</strong> การลอกนิกเกิลแบบไม่ใช้ไฟฟ้า (Electroless Nickel - EN) ซึ่งเป็นโลหะผสมนิกเกิล-ฟอสฟอรัส (Ni-P) หรือนิกเกิล-โบรอน (Ni-B) มักจะ "ยากกว่า" การลอกนิกเกิลชุบไฟฟ้า (Electrolytic Nickel) ทั่วไป และต้องการน้ำยาสูตรเฉพาะทาง</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="summary" class="reveal section-block" aria-labelledby="summary-h">
+      <h2 id="summary-h" class="section" data-i18n-key="summary_h">บทสรุป</h2>
+      <div class="content">
+        <p data-i18n-key="summary_p1">การลอกนิกเกิลออกจากเหล็กและทองเหลือง เป็นกระบวนการที่ต้องใช้ทั้งศาสตร์และศิลป์ มันคือการต่อสู้ทางเคมีไฟฟ้าที่ละเอียดอ่อน</p>
+        <p data-i18n-key="summary_p2">การเลือกกระบวนการที่ถูกต้อง (ไฟฟ้า หรือ เคมี), การเลือกสูตรน้ำยาที่เหมาะสมกับโลหะพื้นผิว (เหล็ก หรือ ทองเหลือง), และการควบคุมตัวแปรต่างๆ (อุณหภูมิ, ความเข้มข้น, กระแสไฟ) อย่างเข้มงวด คือหัวใจสำคัญที่จะทำให้ "นิกเกิล" หลุดออกไป โดยที่ "ชิ้นงาน" อันมีค่ายังคงอยู่รอดปลอดภัย พร้อมสำหรับการชุบครั้งใหม่ครับ</p>
+      </div>
+    </section>
+
+  </article>
+        <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
+      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+      <p><a class="more" href="https://www.baumechemical.com/products/strippers/index.html" data-i18n-key="link_plating">น้ำยาลอกผิว/ลอกชุบ</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/products/strippers/stripper-steel.html" data-i18n-key="link_pretreat">ยาลอกนิกเกิลบนเหล็ก</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/products/strippers/stripper-brass.html" data-i18n-key="link_salt">ยาลอกนิกเกิลบนทองเหลือง</a></p>
+      <p><a class="more" href="https://www.baumechemical.com/products/strippers/stripper-steel-electroplating.html" data-i18n-key="link_equip">ยาลอกนิกเกิลบนเหล็กแบบใช้ไฟฟ้า</a></p>
+    </section>
+</main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
+
+  <!-- Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    }, {threshold:.18});
+    revealEls.forEach(el=>revObs.observe(el));
+  </script>
+
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title:"Nickel Stripping — ปัญหาคลาสสิกบนเหล็ก/ทองเหลือง | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+
+  back_home: "← กลับเมนูหลัก",
+  hero_title: "รวมปัญหาสุดคลาสสิกในการลอกนิกเกิล (Nickel Stripping) บนเหล็กและทองเหลือง",
+  hero_tagline: "เจาะลึกปัญหาในการลอกนิกเกิลออกจากเหล็กและทองเหลือง อะไรคือฝันร้ายของไลน์ชุบ และจะจัดการอย่างไร",
+  toc_title: "สารบัญ",
+  toc_intro: "ปัญหาหลัก",
+  toc_steel: "1: ปัญหาบนเหล็ก (Steel)",
+  toc_brass: "2: ปัญหาบนทองเหลือง (Brass)",
+  toc_common: "ปัญหาร่วม & ข้อควรพิจารณา",
+  toc_summary: "บทสรุป",
+  intro_h: "ภาพรวมและปัญหาหลัก",
+  intro_p1: "ในโลกของการชุบโลหะและการตกแต่งผิว \"นิกเกิล\" ถือเป็นหนึ่งในโลหะที่ได้รับความนิยมสูงสุด ไม่ว่าจะด้วยคุณสมบัติด้านความเงางาม, ความทนทานต่อการกัดกร่อน, หรือการใช้เป็นชั้นรองพื้นก่อนการชุบโครเมียม แต่ในกระบวนการผลิต ไม่มีอะไรที่สมบูรณ์แบบ 100% ชิ้นงานที่ชุบมามีปัญหา, ชิ้นงานเก่าที่ต้องการการฟื้นฟู, หรือแม่พิมพ์ที่ต้องล้างผิว ทั้งหมดนี้ล้วนนำไปสู่กระบวนการที่ท้าทายและซับซ้อน นั่นคือ \"การลอกนิกเกิล\"",
+  intro_p2: "การลอกนิกเกิลไม่เหมือนกับการลอกสีหรือคราบสกปรกทั่วไป นิกเกิลเป็นโลหะที่ค่อนข้างทนต่อสารเคมีได้ดี การจะละลายมันออกโดยไม่ทำลายพื้นผิวโลหะที่อยู่ข้างใต้ โดยเฉพาะอย่างยิ่งเหล็กและทองเหลือง จึงเต็มไปด้วยปัญหาและความยาก",
+  intro_p3: "บทความนี้จะเจาะลึกถึงปัญหาสุดคลาสสิกที่คนทำงานชุบโลหะต้องเผชิญ เมื่อต้องทำการลอกนิกเกิลออกจากชิ้นงานสองประเภทนี้",
+  intro_h_sub: "ปัญหาหลัก: \"เลือกปฏิบัติ\" ทางเคมีไฟฟ้า",
+  intro_p4: "ปัญหาใหญ่ที่สุดของการลอกนิกเกิลอยู่ที่ \"ความต่างกันของศักย์ไฟฟ้าเคมี\" หรือพูดง่ายๆ คือ:",
+  intro_li1: "<strong>สำหรับเหล็ก:</strong> เหล็กมีความเป็นโลหะสามัญมากกว่านิกเกิล หมายความว่ากรดหรือสารเคมีส่วนใหญ่ <strong>จะละลายเหล็กมากกว่านิกเกิล</strong>",
+  intro_li2: "<strong>สำหรับทองเหลือง:</strong> ทองเหลืองมีศักย์ไฟฟ้าใกล้เคียงกับนิกเกิล แต่ก็ยังมีความเสี่ยงที่จะถูกโจมตี โดยเฉพาะส่วนผสมอย่างซิงค์หรือสังกะสี",
+  intro_p5: "ดังนั้น น้ำยาลอกนิกเกิลที่ดีจึงต้องเลือกที่จะลอกนิกเกิลเท่านั้น โดยต้องดูแลโลหะพื้นผิวไปพร้อมๆกัน ซึ่งในทางปฏิบัติ มันไม่ง่ายเลย",
+  steel_h: "1: ปัญหาการลอกนิกเกิลบน \"เหล็ก\" (Steel)",
+  steel_lead: "เหล็กเป็นโลหะพื้นฐานที่พบได้บ่อยที่สุด และปัญหาที่พบก็หนักหน่วงที่สุดเช่นกัน",
+  steel_1_h: "1. ปัญหาคลาสสิก: ชิ้นงานเหล็กถูกกัดกร่อน (Base Metal Attack)",
+  steel_1_p1: "นี่คือฝันร้ายอันดับหนึ่ง หากใช้น้ำยาลอกผิดประเภท เช่น การใช้กรดเกลือ หรือกรดกำมะถันเจือจาง ที่ไม่มีตัวยับยั้งที่ดีพอ ผลลัพธ์คือ <strong>นิกเกิลยังไม่ทันหมด แต่เหล็กก็แหว่งหรือบางไปแล้ว</strong>",
+  steel_1_cause: "<strong>สาเหตุ:</strong> เหล็กมีปฏิกิริยาไวต่อกรดมากกว่านิกเกิลมาก",
+  steel_1_effect: "<strong>ผลกระทบ:</strong> ชิ้นงานเสียรูปทรง, ขนาดเพี้ยน, ผิวขรุขระจนไม่สามารถนำไปชุบใหม่ได้, หรือเกิดการกัดกร่อนใต้ผิวบริเวณขอบรอยแตกของนิกเกิล",
+  steel_1_fix_h: "<strong>ทางแก้ (ที่นิยม):</strong>",
+  steel_1_fix_li1: "<strong>การลอกแบบไฟฟ้า (Electrolytic Stripping):</strong> ใช้ผง TH-9 โดยให้ชิ้นงานเป็นขั้วบวก (Anode) น้ำยาเข้มข้นจะทำให้นิกเกิลละลาย แต่จะสร้างชั้นฟิล์มป้องกัน (Passivation layer) บนผิวเหล็กไม่ให้ถูกกัด",
+  steel_1_fix_li2: "<strong>การลอกแบบเคมี (Chemical Stripping):</strong> ใช้น้ำยาลอกนิกเกิลบนเหล็ก ที่มีส่วนผสมของสารที่ลอกนิกเกิล และสารยับยั้งสำหรับเหล็ก",
+  steel_2_h: "2. ปัญหาการเปราะจากไฮโดรเจน (Hydrogen Embrittlement)",
+  steel_2_p1: "สำหรับเหล็กกล้าความแข็งแรงสูง หรือเหล็กชุบแข็ง การลอกนิกเกิล โดยเฉพาะอย่างยิ่งในกระบวนการที่ใช้กรดหรือการลอกแบบไฟฟ้า (ซึ่งเกิดก๊าซไฮโดรเจน) เป็นเรื่องที่อันตรายมาก",
+  steel_2_cause: "<strong>สาเหตุ:</strong> อะตอมของไฮโดรเจน (H) ที่เกิดขึ้นในปฏิกิริยา จะแทรกซึมเข้าไปในโครงสร้างผลึกของเหล็ก",
+  steel_2_effect: "<strong>ผลกระทบ:</strong> ชิ้นงาน (เช่น สปริง, สลักเกลียวแรงดึงสูง) จะสูญเสียความเหนียวและ \"เปราะ\" อย่างมาก อาจแตกหักได้เมื่อรับแรงเพียงเล็กน้อย",
+  steel_2_fix: "<strong>ทางแก้:</strong> ต้องนำชิ้นงานไป \"อบไล่ไฮโดรเจน\" ทันทีหลังจากการลอก หรือเลือกใช้น้ำยาลอกประเภทที่ไม่ก่อให้เกิดไฮโดรเจน",
+  steel_3_h: "3. ปัญหาโครเมียมปนเปื้อน",
+  steel_3_p1: "บางครั้ง การลอกก็ \"หยุด\" ไปเฉยๆ แม้ว่านิกเกิลจะยังอยู่",
+  steel_3_cause: "<strong>สาเหตุ:</strong> ผิวนิกเกิลเองก็สามารถสร้างฟิล์มออกไซด์บางๆ ขึ้นมาได้ โดยเฉพาะนิกเกิลที่มีโครเมียมปนเปื้อน หรือเมื่อใช้น้ำยาที่มีฤทธิ์ออกซิไดซ์สูง (เช่น กรดไนตริกเข้มข้น ซึ่งบางสูตรใช้ลอกนิกเกิลจากเหล็กได้ แต่คุมยากมาก)",
+  steel_3_effect: "<strong>ผลกระทบ:</strong> ลอกนิกเกิลไม่หมด ต้องเสียเวลาลอกซ้ำ หรือต้องใช้วิธีกระตุ้นผิว (Activate) ซึ่งเสี่ยงต่อการกัดกร่อนเหล็ก",
+  steel_4_h: "4. ปัญหาคราบดำ (Smut) และการลอกไม่สมบูรณ์",
+  steel_4_cause: "<strong>สาเหตุ:</strong> การลอกแบบเคมีมักทิ้งคราบคาร์บอน (จากสารเติมแต่งในน้ำยาชุบนิกเกิลเดิม) หรือคราบโลหะอื่นๆ ไว้บนผิวเหล็ก หรือเกิดจากน้ำยาลอกที่ \"เก่า\" จนความเข้มข้นของนิกเกิลที่ละลายอยู่สูงเกินไป",
+  steel_4_effect: "<strong>ผลกระทบ:</strong> ผิวเหล็กสกปรก ต้องขัดล้างเพิ่ม และหากลอกไม่หมดเป็นจุดๆ (เนื่องจากการไหลเวียนของน้ำยาไม่ดี) ก็ต้องเริ่มกระบวนการใหม่",
+  brass_h: "ภาคที่ 2: ปัญหาการลอกนิกเกิลบน \"ทองเหลือง\" (Brass)",
+  brass_lead: "ทองเหลืองเป็นโลหะผสมระหว่างทองแดง (Cu) และซิงค์หรือสังกะสี (Zn) ความยากจึงเปลี่ยนไปจากเหล็กโดยสิ้นเชิง",
+  brass_1_h: "1. ปัญหาคลาสสิก: การสูญเสียผิวซิงค์สังกะสี",
+  brass_1_p1: "นี่คือปัญหาใหญ่ที่สุดของทองเหลือง น้ำยาลอกที่เป็นกรดหลายชนิด แม้จะออกแบบมาให้ปลอดภัยกับทองแดง แต่กลับ <strong>เลือกละลายซิงค์หรือสังกะสีออกจากเนื้อทองเหลือง</strong>",
+  brass_1_cause: "<strong>สาเหตุ:</strong> สังกะสี (Zn) มีความเป็นโลหะสามัญมากกว่าทองแดง (Cu)",
+  brass_1_effect: "<strong>ผลกระทบ:</strong> ชิ้นงานจะ \"พรุน\" (Porous) เหมือนฟองน้ำ ผิวจะเปลี่ยนเป็นสีแดงอมชมพูของทองแดงที่เหลืออยู่ สูญเสียความแข็งแรงอย่างถาวร และไม่สามารถนำไปชุบให้เงางามได้อีกต่อไป",
+  brass_2_h: "2. ปัญหาผิวงานด้าน หรือถูกกัด (Etching / Dullness)",
+  brass_2_p1: "สำหรับงานที่เน้นความสวยงาม เช่น ก๊อกน้ำ, อุปกรณ์ในห้องน้ำ ผิวทองเหลืองหลังลอกนิกเกิลออกต้องเรียบและเงา หรืออย่างน้อยก็ต้องไม่เสียหาย",
+  brass_2_cause: "<strong>สาเหตุ:</strong> น้ำยาลอก แม้จะไม่ทำให้เกิดรอยคราบ แต่ก็มักจะ \"กัด\" (Etch) ผิวทองเหลืองเล็กน้อย ทำให้ผิวที่เคยเรียบเงากลายเป็นผิวด้าน หรือผิวซาติน",
+  brass_2_effect: "<strong>ผลกระทบ:</strong> ต้องเสียแรงและเวลาในการขัดเงา (Polishing) ชิ้นงานใหม่ทั้งหมดก่อนนำไปชุบ ซึ่งอาจทำให้รายละเอียดเล็กๆ หรือสันมุมของชิ้นงานหายไป",
+  brass_3_h: "3. ปัญหาการพึ่งพา \"ไซยาไนด์\" (Cyanide Issues)",
+  brass_3_p1: "ในอดีต (และบางที่ในปัจจุบัน) น้ำยาลอกนิกเกิลบนทองเหลืองและทองแดงที่มีประสิทธิภาพสูง มักมี \"ไซยาไนด์\" (Cyanide) เป็นส่วนประกอบหลัก",
+  brass_3_cause: "<strong>สาเหตุ:</strong> ไซยาไนด์สามารถจับตัวเป็นสารประกอบเชิงซ้อน (Complex) กับทั้งนิกเกิล, ทองแดง, และสังกะสี ทำให้มันละลายออกมาได้ดีโดยไม่ค่อยกัดผิว",
+  brass_3_effect: "<strong>ผลกระทบ:</strong> ไซยาไนด์เป็นสารพิษร้ายแรงมาก การจัดการ, การใช้งาน, และการบำบัดของเสียจึงเป็นอันตราย, มีค่าใช้จ่ายสูง, และมีกฎหมายควบคุมเข้มงวด ปัจจุบันอุตสาหกรรมส่วนใหญ่พยายามหลีกเลี่ยงการใช้ไซยาไนด์อย่างที่สุด",
+  brass_4_h: "4. ปัญหาการลอกแบบไม่สม่ำเสมอ (Uneven Stripping)",
+  brass_4_cause: "<strong>สาเหตุ:</strong> มักเกิดกับการลอกแบบไฟฟ้า (Electrolytic) บนชิ้นงานที่มีรูปทรงซับซ้อน บริเวณซอกหลืบ (Low Current Density Area) กระแสไฟจะไปไม่ถึง ทำให้นิกเกิลในซอกละลายช้ากว่าบริเวณภายนอก",
+  brass_4_effect: "<strong>ผลกระทบ:</strong> ต้องใช้เวลานานขึ้น หรือต้องขยับชิ้นงานบ่อยๆ และเสี่ยงที่บริเวณภายนอก (High Current Density Area) จะถูกกัดกร่อนก่อนที่นิกเกิลในซอกจะหมด",
+  common_h: "ปัญหาร่วมและข้อควรพิจารณาอื่นๆ",
+  common_p1: "ไม่ว่าจะลอกบนเหล็กหรือทองเหลือง ยังมีปัญหาร่วมอื่นๆ ที่ต้องจัดการ:",
+  common_li1: "<strong>อายุการใช้งานของน้ำยา (Bath Life):</strong> เมื่อนิกเกิลละลายลงไปในน้ำยาจน \"อิ่มตัว\" ประสิทธิภาพการลอกจะลดลงฮวบฮาบ ต้องมีการควบคุมความเข้มข้นของนิกเกิลในน้ำยาและต้องเปลี่ยนถ่ายบ่อย ทำให้สิ้นเปลือง",
+  common_li2: "<strong>การจัดการของเสีย (Waste Management):</strong> น้ำยาลอกที่หมดอายุใช้งานเต็มไปด้วยนิกเกิล (ซึ่งเป็นโลหะหนัก) และสารเคมีอันตราย (กรด, ไซยาไนด์, หรือสารประกอบอื่นๆ) ถือเป็นกากอุตสาหกรรมอันตรายที่ต้องบำบัดอย่างถูกต้อง",
+  common_li3: "<strong>ความปลอดภัย (Safety):</strong> น้ำยาลอกส่วนใหญ่มีความเป็นกรด/ด่างสูง, กัดกร่อนรุนแรง, หรือปล่อยไอระเหยที่เป็นพิษ (เช่น ไอของกรดไนตริก) ผู้ปฏิบัติงานต้องมีอุปกรณ์ป้องกันส่วนบุคคล (PPE) ที่เหมาะสม",
+  common_li4: "<strong>การลอก Electroless Nickel:</strong> การลอกนิกเกิลแบบไม่ใช้ไฟฟ้า (Electroless Nickel - EN) ซึ่งเป็นโลหะผสมนิกเกิล-ฟอสฟอรัส (Ni-P) หรือนิกเกิล-โบรอน (Ni-B) มักจะ \"ยากกว่า\" การลอกนิกเกิลชุบไฟฟ้า (Electrolytic Nickel) ทั่วไป และต้องการน้ำยาสูตรเฉพาะทาง",
+  summary_h: "บทสรุป",
+  summary_p1: "การลอกนิกเกิลออกจากเหล็กและทองเหลือง เป็นกระบวนการที่ต้องใช้ทั้งศาสตร์และศิลป์ มันคือการต่อสู้ทางเคมีไฟฟ้าที่ละเอียดอ่อน",
+  summary_p2: "การเลือกกระบวนการที่ถูกต้อง (ไฟฟ้า หรือ เคมี), การเลือกสูตรน้ำยาที่เหมาะสมกับโลหะพื้นผิว (เหล็ก หรือ ทองเหลือง), และการควบคุมตัวแปรต่างๆ (อุณหภูมิ, ความเข้มข้น, กระแสไฟ) อย่างเข้มงวด คือหัวใจสำคัญที่จะทำให้ \"นิกเกิล\" หลุดออกไป โดยที่ \"ชิ้นงาน\" อันมีค่ายังคงอยู่รอดปลอดภัย พร้อมสำหรับการชุบครั้งใหม่ครับ",
+
+          links_h:"ลิงก์ที่เกี่ยวข้อง",
+          link_plating:"น้ำยาลอกผิว/ลอกชุบ",
+          link_pretreat:"น้ำยาลอกนิกเกิลสำหรับเหล็ก",
+          link_salt:"น้ำยาลอกนิกเกิลสำหรับทองแดง/ทองเหลือง",
+          link_equip:"น้ำยาลอกนิกเกิลชุบไฟฟ้าสำหรับเหล็ก",
+
+  footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+},
+
+      en: {
+        title:"Nickel Stripping on Steel & Brass — Classic Problems & Fixes | Baume Chemical Blog",
+        nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
+back_home: "← Back to Home",
+  hero_title: "A Compilation of Classic Problems in Nickel Stripping on Steel and Brass",
+  hero_tagline: "A deep dive into the challenges of stripping nickel from steel and brass, the nightmares of the plating line, and how to manage them.",
+  toc_title: "Table of Contents",
+  toc_intro: "The Main Challenge",
+  toc_steel: "Part 1: Problems on Steel",
+  toc_brass: "Part 2: Problems on Brass",
+  toc_common: "Common Issues & Considerations",
+  toc_summary: "Conclusion",
+  intro_h: "Overview and The Main Challenge",
+  intro_p1: "In the world of metal plating and surface finishing, \"Nickel\" is one of the most popular metals, whether for its glossy appearance, corrosion resistance, or its use as an undercoat before chrome plating. But in production, nothing is 100% perfect. Rejected parts, old items needing restoration, or molds requiring cleaning all lead to a challenging and complex process: \"Nickel Stripping\".",
+  intro_p2: "Nickel stripping is not like removing paint or dirt. Nickel is a relatively \"passive\" metal and resistant to chemicals. Dissolving it without destroying the base metal underneath, especially Steel and Brass, is fraught with problems and challenges.",
+  intro_p3: "This article will delve into the classic problems that metal finishers face when stripping nickel from these two types of workpieces.",
+  intro_h_sub: "The Main Challenge: \"Selective\" Electrochemistry",
+  intro_p4: "The biggest problem with nickel stripping lies in \"Electrochemical Potential.\" Simply put:",
+  intro_li1: "<strong>For Steel:</strong> Steel (Fe) is more \"Active\" (a base metal) than nickel (Ni). This means most acids or chemicals <strong>want to dissolve the steel more than the nickel.</strong>",
+  intro_li2: "<strong>For Brass:</strong> Brass (Cu-Zn) has an electrochemical potential close to nickel, but it still risks being attacked, especially its zinc (Zn) component.",
+  intro_p5: "Therefore, a good nickel stripper must be \"smart\" enough to selectively attack only the nickel, while simultaneously \"inhibiting\" or \"passivating\" the base metal. In practice, this is not easy.",
+  steel_h: "Part 1: Problems Stripping Nickel on \"Steel\"",
+  steel_lead: "Steel is the most common base metal, and the problems encountered are also the most severe.",
+  steel_1_h: "1. Classic Problem: Base Metal Attack (Steel Corrosion)",
+  steel_1_p1: "This is nightmare number one. Using the wrong type of stripper, such as hydrochloric acid (HCl) or dilute sulfuric acid (Dilute $\\small H_2SO_4$) without a good inhibitor, results in: <strong>the steel is pitted or thinned before the nickel is even gone.</strong>",
+  steel_1_cause: "<strong>Cause:</strong> Steel is much more reactive to acid than nickel.",
+  steel_1_effect: "<strong>Effect:</strong> The workpiece loses its shape, dimensions are altered, the surface becomes rough and unsuitable for replating, or undercutting occurs at the edges of cracks in the nickel.",
+  steel_1_fix_h: "<strong>Common Solutions:</strong>",
+  steel_1_fix_li1: "<strong>Electrolytic Stripping:</strong> Using concentrated TH-9 with the workpiece as the Anode. The concentrated dissolves the nickel but creates a protective \"Passivation layer\" on the steel, preventing it from being attacked.",
+  steel_1_fix_li2: "<strong>Chemical Stripping:</strong> Using a proprietary solution containing agents that RS-109: Nickel Stripper for Steel and inhibitors specifically for steel.",
+  steel_2_h: "2. Problem: Hydrogen Embrittlement",
+  steel_2_p1: "For high-strength steel or hardened steel, nickel stripping is very dangerous, especially in processes that use acid or electrolytic stripping (which generate hydrogen gas).",
+  steel_2_cause: "<strong>Cause:</strong> Hydrogen atoms (H) generated during the reaction infiltrate the crystal structure of the steel.",
+  steel_2_effect: "<strong>Effect:</strong> The workpiece (e.g., springs, high-tensile bolts) loses its ductility and becomes extremely \"brittle,\" potentially fracturing under minimal stress.",
+  steel_2_fix: "<strong>Solution:</strong> The part must be sent for \"Hydrogen De-embrittlement Baking\" immediately after stripping, or a stripping solution that does not generate hydrogen must be chosen.",
+  steel_3_h: "3. Problem: \"Passivity\"",
+  steel_3_p1: "Sometimes, the stripping process just \"stops,\" even though nickel is still present.",
+  steel_3_cause: "<strong>Cause:</strong> The nickel surface itself can form a thin passive oxide film, especially on nickel contaminated with chromium or when using highly oxidative strippers (like concentrated nitric acid, which some formulas use for steel, but it's very hard to control).",
+  steel_3_effect: "<strong>Effect:</strong> Incomplete stripping, wasting time on re-stripping or requiring surface \"activation,\" which risks attacking the steel.",
+  steel_4_h: "4. Problem: Smut and Incomplete Stripping",
+  steel_4_cause: "<strong>Cause:</strong> Chemical stripping often leaves carbon smut (from additives in the original nickel plating bath) or other metallic residues on the steel surface. It can also be caused by an \"old\" stripping bath where the concentration of dissolved nickel is too high.",
+  steel_4_effect: "<strong>Effect:</strong> The steel surface is dirty, requiring extra cleaning. If stripping is spotty (due to poor solution agitation), the process must be restarted.",
+  brass_h: "Part 2: Problems Stripping Nickel on \"Brass\"",
+  brass_lead: "Brass is an alloy of copper (Cu) and zinc (Zn). The challenges are completely different from those with steel.",
+  brass_1_h: "1. Classic Problem: Dezincification",
+  brass_1_p1: "This is the biggest problem for brass. Many acidic strippers, even those designed to be safe on copper, will <strong>selectively dissolve the zinc out of the brass matrix.</strong>",
+  brass_1_cause: "<strong>Cause:</strong> Zinc (Zn) is a more active metal than copper (Cu).",
+  brass_1_effect: "<strong>Effect:</strong> The workpiece becomes \"porous\" like a sponge, the surface turns a pinkish-red (the color of the remaining copper), it permanently loses strength, and it can no longer be plated to a bright finish.",
+  brass_2_h: "2. Problem: Etching / Dullness",
+  brass_2_p1: "For decorative applications (like faucets, bathroom fixtures), the brass surface must be smooth and bright after stripping, or at least undamaged.",
+  brass_2_cause: "<strong>Cause:</strong> The stripping solution, even if it doesn't cause dezincification, will often slightly \"etch\" the brass surface, turning a once-glossy finish into a matte or satin one.",
+  brass_2_effect: "<strong>Effect:</strong> Wastes time and labor on re-polishing the entire piece before replating, which can cause loss of fine details or sharp corners.",
+  brass_3_h: "3. Problem: \"Cyanide\" Issues",
+  brass_3_p1: "In the past (and in some places, still today), the most effective nickel strippers for brass and copper relied on \"Cyanide\" as a main component.",
+  brass_3_cause: "<strong>Cause:</strong> Cyanide can form a stable complex with nickel, copper, and zinc, allowing them to dissolve efficiently with minimal attack on the surface.",
+  brass_3_effect: "<strong>Effect:</strong> Cyanide is extremely toxic Handling, usage, and waste treatment are dangerous, expensive, and heavily regulated. Most of the industry now tries to avoid cyanide at all costs.",
+  brass_4_h: "4. Problem: Uneven Stripping",
+  brass_4_cause: "<strong>Cause:</strong> Often occurs with electrolytic stripping on complex shapes. In recessed areas (Low Current Density Area), the current cannot reach, causing the nickel to dissolve much slower than on the exterior.",
+  brass_4_effect: "<strong>Effect:</strong> Requires longer stripping times or frequent repositioning of the part, which risks the exterior areas (High Current Density Area) being attacked before the nickel in the recesses is gone.",
+  common_h: "Common Issues and Other Considerations",
+  common_p1: "Whether stripping on steel or brass, there are other common problems to manage:",
+  common_li1: "<strong>Bath Life:</strong> As dissolved nickel \"saturates\" the solution, the stripping efficiency plummets. The concentration of nickel in the bath must be controlled, and the bath must be frequently replaced, which is costly.",
+  common_li2: "<strong>Waste Management:</strong> A spent stripping bath is full of nickel (a heavy metal) and hazardous chemicals (acids, cyanide, or other compounds). It is considered hazardous industrial waste and must be treated properly.",
+  common_li3: "<strong>Safety:</strong> Most stripping solutions are highly acidic/alkaline, corrosive, or release toxic fumes (like nitric acid vapors). Operators must use appropriate Personal Protective Equipment (PPE).",
+  common_li4: "<strong>Stripping Electroless Nickel:</strong> Stripping Electroless Nickel (EN), which is a nickel-phosphorus (Ni-P) or nickel-boron (Ni-B) alloy, is often \"harder\" than stripping standard electrolytic nickel and requires specialized formulas.",
+  summary_h: "Conclusion",
+  summary_p1: "Stripping nickel from steel and brass is a process that requires both science and art. It is a delicate electrochemical battle.",
+  summary_p2: "Selecting the right process (electrolytic or chemical), choosing the appropriate formula for the base metal (steel or brass), and strictly controlling variables (temperature, concentration, current) are the keys to ensuring the \"nickel\" comes off, while the valuable \"workpiece\" remains safe and sound, ready for its new plating.",
+
+          links_h:"Related Links",
+          link_plating:"Plating & Stripping Chemicals",
+          link_pretreat:"Nickel Stripper for Steel",
+          link_salt:"Nickel Stripper for Copper/Brass",
+          
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+
+  function applyLang(lang){
+    const sel = (lang === 'en') ? 'en' : 'th';
+    document.documentElement.lang = sel;
+
+    document.querySelectorAll('.lang-switch .lang-btn')
+      .forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+    document.querySelectorAll('[data-i18n-key]').forEach(node => {
+      const key = node.getAttribute('data-i18n-key');
+      const val = I18N[sel]?.[key];
+      if (typeof val !== 'string') return;
+
+      // ใช้ innerHTML เฉพาะโนดที่ติด data-i18n-html เท่านั้น
+      if (node.hasAttribute('data-i18n-html')) {
+        node.innerHTML = val;
+      } else {
+        node.textContent = val;
+      }
+    });
+
+    const titleEl = document.querySelector('title[data-i18n-key="title"]');
+    if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+    try{ localStorage.setItem('lang', sel); }catch(e){}
+    try{
+      const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
+      document.documentElement.style.setProperty('--header-h', h + 'px');
+    }catch(e){}
+  }
+</script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
+    (function(){
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH, {passive:true});
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
+
+      if(toggle && nav && scrim){
+        let lockY = 0;
+        function openMenu(v){
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
+          if(v){
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
+          }else{
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle?.focus({preventScroll:true});
+          }
+        }
+        toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', ()=> openMenu(false));
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', ()=>{ if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, {passive:true});
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
+      }
+
+      // highlight current nav
+      try{
+        const here = location.pathname.replace(/\/+$/,'');
+        const isProducts = here.startsWith('/products');
+        nav?.querySelectorAll('a').forEach(a=>{
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          else if (here === path) a.setAttribute('aria-current','page');
+          else a.removeAttribute('aria-current');
+        });
+      }catch(e){}
+
+      // smart back
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors + Back-to-top -->
+  <script>
+    // clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, {link:a, el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=> a.classList.remove('is-active'));
+        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        const item = map.get(id);
+        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
+
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
