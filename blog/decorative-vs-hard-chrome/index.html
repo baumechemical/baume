@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-key="title">ชุบโครเมี่ยม vs ฮาร์ดโครม — ต่างกันยังไง ใช้งานแบบไหน | Baume Chemical Blog</title>
+
+  <!-- SEO base -->
+  <meta name="description" content="คนมักสับสนระหว่างชุบโครเมี่ยมตกแต่งกับฮาร์ดโครม ทั้งที่จริงต่างกันมาก: วัตถุประสงค์ คุณสมบัติ ความหนา และการใช้งาน สรุปเข้าใจง่ายพร้อมตัวอย่างงานรถยนต์ สุขภัณฑ์ แม่พิมพ์ ลูกกลิ้ง และแกนไฮดรอลิก">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://www.baumechemical.com/blog/decorative-vs-hard-chrome/index.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
+  <meta name="theme-color" content="#2c5e4e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Baume Chemical">
+  <meta property="og:title" content="ชุบโครเมี่ยม vs ฮาร์ดโครม — เปรียบเทียบความต่างแบบเข้าใจง่าย">
+  <meta property="og:description" content="ชุบเพื่อความสวยงามหรือเพื่อความแข็งแกร่ง ต่างกันที่โครงสร้างชั้นเคลือบ ความหนา ความแข็ง และงานที่เหมาะสม อ่านสรุปพร้อมตัวอย่างจริง">
+  <meta property="og:url" content="https://www.baumechemical.com/blog/decorative-vs-hard-chrome/index.html">
+  <meta property="og:image" content="https://i.imgur.com/yGMC3gr.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts & Perf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://i.imgur.com/yGMC3gr.jpeg"/>
+
+  <style>
+    :root{
+      --brand:#2c5e4e; --brand-2:#387b5b; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --logo-url:url('https://img2.pic.in.th/pic/Baume.jpg');
+      --header-h:64px; --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+
+    /* ===== Header (glass) ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800; color:#fff}
+
+    .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a:hover{ background:rgba(255,255,255,.12) }
+    .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
+
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+
+    .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
+    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
+    .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
+    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+    @media (max-width:900px){
+      .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav a{ color:#fff; padding:12px 10px; }
+      .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
+      .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
+      .lang-btn{ color:#fff }
+      .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
+    }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block }
+    body.no-scroll{ position:fixed; width:100% }
+
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/yGMC3gr.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
+    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
+    .back-chip:hover{ transform:translateY(-1px) }
+
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    @media (min-width:1100px){
+      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
+      article{ grid-column:2 }
+    }
+
+    /* ===== TOC card ===== */
+    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
+    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
+    #toc p{display:grid;gap:8px;margin:10px 0 0}
+    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
+    .toc-chip::after{ content:"›"; opacity:.5 }
+    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+
+    /* ===== Sections + table ===== */
+    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
+    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
+    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
+    .lead{margin:0 0 16px; color:#5f6d7c}
+    .content p{margin:0 0 10px}
+    .content ul{margin:0 0 8px 18px}
+
+    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
+    .table thead th{background:linear-gradient(180deg,#f6fbf8,#eef6f1); position:sticky; top:0; z-index:1}
+    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
+    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    .table tbody tr:hover{ background:#f6fbf8 }
+
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
+    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff}
+    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .footer-list{list-style:none; margin:8px 0 0; padding:0}
+    .footer-list li{margin:6px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+
+    /* Floating LINE button */
+    .float-line{
+      position:fixed;
+      right:16px;
+      bottom:calc(18px + env(safe-area-inset-bottom));
+      z-index:900;
+    }
+    .float-line a{
+      display:grid; place-items:center;
+      width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
+      animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover,
+    .float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
+
+    /* Back-to-top */
+    .backtop{
+      position:fixed;
+      right:16px;
+      bottom:calc(90px + env(safe-area-inset-bottom));
+      z-index:900;
+      display:none;
+    }
+    .backtop.show{ display:block }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px;
+      border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 10px 26px rgba(0,0,0,.18);
+      cursor:pointer;
+    }
+    .backtop button:hover,
+    .backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+
+    /* Small screens */
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
+
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+
+    /* Utils */
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+    <div class="nav-bar">
+      <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Baume Chemical</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
+        <span class="bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
+        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
+        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
+        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products">Products</a>
+        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
+        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog" aria-current="page">Blog</a>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
+            <img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" alt="EN"><span>EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="menu-scrim" hidden></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <a class="back-chip" href="https://www.baumechemical.com/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
+    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+      <h1 data-i18n-key="hero_title">ชุบโครเมี่ยม vs ฮาร์ดโครม ต่างกันยังไง ใช้งานแบบไหน</h1>
+      <p data-i18n-key="hero_tagline">ทั้งคู่เป็น “การชุบด้วยโครเมี่ยม” เหมือนกัน แต่จุดประสงค์ คุณสมบัติ โครงสร้างชั้นเคลือบ ความหนา และงานที่เหมาะสม แตกต่างกันโดยสิ้นเชิง บทความนี้สรุปแบบละเอียดไม่ย่อ</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <p>
+        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวมและเข้าใจผิดที่พบบ่อย</a>
+        <a class="toc-chip" href="#decorative" data-i18n-key="toc_decorative">1: ชุบโครเมี่ยมตกแต่ง (Decorative Chrome)</a>
+        <a class="toc-chip" href="#hard" data-i18n-key="toc_hard">2: ฮาร์ดโครม (Hard Chrome)</a>
+        <a class="toc-chip" href="#compare" data-i18n-key="toc_compare">ตารางเปรียบเทียบแบบลงรายละเอียด</a>
+        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">บทสรุป</a>
+      </p>
+    </nav>
+
+    <article>
+
+      <!-- Intro -->
+      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">ภาพรวมและเข้าใจผิดที่พบบ่อย</h2>
+        <div class="content">
+          <p data-i18n-key="intro_p1">คนส่วนใหญ่มักสับสนระหว่างคำสองคำนี้ แม้ว่าทั้งคู่จะเป็น “การชุบด้วยโครเมี่ยม” เหมือนกัน แต่จริงๆ แล้วเป็นกระบวนการที่แตกต่างกันโดยสิ้นเชิง ทั้งในแง่ของวัตถุประสงค์ คุณสมบัติ และการใช้งาน</p>
+          <p data-i18n-key="intro_p2">สรุปสั้นก่อนลงลึกแบบยาว ชุบโครเมี่ยมตกแต่ง คือการชุบเพื่อความสวยงาม เงางามเหมือนกระจก และป้องกันความหมอง ส่วนฮาร์ดโครม คือการชุบเพื่อความแข็งแกร่ง ทนสึกหรอ ลดแรงเสียดทาน และซ่อมแซมชิ้นงานที่สึก</p>
+        </div>
+      </section>
+
+      <!-- Decorative Chrome -->
+      <section id="decorative" class="reveal section-block" aria-labelledby="decorative-h">
+        <h2 id="decorative-h" class="section" data-i18n-key="decorative_h">1: ชุบโครเมี่ยมตกแต่ง (Decorative Chrome / Nickel-Chrome Plating)</h2>
+        <div class="content">
+          <p class="lead" data-i18n-key="decorative_lead">คำว่า “ชุบโครเมี่ยม” ที่คุ้นปากในชีวิตประจำวัน เช่น ล้อแม็ก ก๊อกน้ำ กันชน ส่วนใหญ่หมายถึงประเภทนี้</p>
+
+          <h3 data-i18n-key="decorative_obj_h">วัตถุประสงค์หลัก</h3>
+          <p data-i18n-key="decorative_obj_p">เพื่อความสวยงามและป้องกันความหมองของผิว โดยคงความเงางามได้ยาวนาน</p>
+
+          <h3 data-i18n-key="decorative_proc_h">กระบวนการและหัวใจสำคัญ</h3>
+          <p data-i18n-key="decorative_proc_p1">ความเข้าใจผิดที่พบบ่อยคือคิดว่ามี “ชั้นโครเมี่ยม” เพียงชั้นเดียว แต่จริงๆ แล้วระบบนี้เป็นการชุบหลายชั้นแบบคลาสสิก คือทองแดง-นิกเกิล-โครเมี่ยม โดยมี “นิกเกิล” เป็นหัวใจของความเงา และ “โครเมี่ยม” เป็นชั้นปิดทับบางๆ เพื่อป้องกันความหมอง</p>
+          <ul>
+            <li data-i18n-key="decorative_li_cu"><strong>ชั้นทองแดง (ถ้ามี):</strong> ใช้บนเหล็กหรือซิงค์อัลลอยเพื่อเพิ่มการยึดเกาะและช่วยกลบพื้นผิว</li>
+            <li data-i18n-key="decorative_li_ni"><strong>ชั้นนิกเกิล:</strong> แหล่งกำเนิดความเงาเงาวับเหมือนกระจก มักถูกขัดเงามาอย่างดี</li>
+            <li data-i18n-key="decorative_li_cr"><strong>ชั้นโครเมี่ยม:</strong> ชั้นปิดท้ายที่บางมาก ประมาณ 0.05–0.5 ไมครอน ทำหน้าที่เป็นเกราะใส แข็ง และเฉื่อย ไม่หมอง ให้โทนสีขาวอมฟ้า ทำความสะอาดง่าย</li>
+          </ul>
+
+          <h3 data-i18n-key="decorative_whycr_h">ทำไมต้องโครเมี่ยมทับนิกเกิล</h3>
+          <p data-i18n-key="decorative_whycr_p">เพราะนิกเกิลแม้เงาสูง แต่สัมผัสอากาศแล้วหมองเป็นสีเหลืองคล้ำได้ง่าย โครเมี่ยมมีความเฉื่อยและไม่หมอง จึงเป็นชั้นปกป้องความเงาของนิกเกิลไว้</p>
+
+          <h3 data-i18n-key="decorative_feat_h">คุณสมบัติเด่น</h3>
+          <ul>
+            <li data-i18n-key="decorative_feat1">เงางามสูง สะท้อนแสงเหมือนกระจก</li>
+            <li data-i18n-key="decorative_feat2">ป้องกันความหมอง รักษาความสวยงามยาวนาน</li>
+            <li data-i18n-key="decorative_feat3">ทนการกัดกร่อนในระดับระบบ “นิกเกิล-โครม”</li>
+            <li data-i18n-key="decorative_feat4">ชั้นโครเมี่ยมแข็ง แต่เนื่องจากบางมาก จึงไม่ได้ออกแบบมาเพื่อรับการเสียดสีหนัก</li>
+          </ul>
+
+          <h3 data-i18n-key="decorative_use_h">ตัวอย่างการใช้งาน</h3>
+          <p data-i18n-key="decorative_use_p">อะไหล่รถยนต์และมอเตอร์ไซค์ เช่น กันชน ล้อแม็ก มือจับประตู ท่อไอเสีย อุปกรณ์สุขภัณฑ์ เช่น ก๊อกน้ำ ฝักบัว และงานเฟอร์นิเจอร์ เช่น ขาโต๊ะ ขาเก้าอี้ และเครื่องใช้ในบ้าน</p>
+        </div>
+      </section>
+
+      <!-- Hard Chrome -->
+      <section id="hard" class="reveal section-block" aria-labelledby="hard-h">
+        <h2 id="hard-h" class="section" data-i18n-key="hard_h">2: ฮาร์ดโครม (Hard Chrome / Industrial Chrome / Functional Chrome)</h2>
+        <div class="content">
+          <p class="lead" data-i18n-key="hard_lead">“ฮาร์ด” คือ “แข็ง” กระบวนการนี้เน้นคุณสมบัติทางวิศวกรรมเป็นหลัก ไม่ใช่ความเงางาม</p>
+
+          <h3 data-i18n-key="hard_obj_h">วัตถุประสงค์หลัก</h3>
+          <p data-i18n-key="hard_obj_p">เพิ่มความแข็ง ทนสึกหรอ ลดแรงเสียดทาน และใช้ซ่อมแซมชิ้นงานที่สึกเพื่อคืนมิติ</p>
+
+          <h3 data-i18n-key="hard_proc_h">กระบวนการและหัวใจสำคัญ</h3>
+          <p data-i18n-key="hard_proc_p1">ชุบโครเมี่ยมลงบนโลหะโดยตรง เช่น เหล็กหรือสแตนเลส โดยไม่จำเป็นต้องมีชั้นนิกเกิลรองพื้น ความหนาของชั้นโครเมี่ยมมากกว่าการชุบตกแต่งหลายเท่า ตั้งแต่ประมาณ 20 ไมครอน ไปจนถึง 500 ไมครอนหรือมากกว่านั้นตามงาน</p>
+
+          <h3 data-i18n-key="hard_feat_h">คุณสมบัติเด่น</h3>
+          <ul>
+            <li data-i18n-key="hard_feat1"><strong>ความแข็งสูงมาก:</strong> โดยทั่วไป ~65–72 HRC หรือ ~850–1200 HV ทนสึกและทนเสียดสีเยี่ยม</li>
+            <li data-i18n-key="hard_feat2"><strong>สัมประสิทธิ์แรงเสียดทานต่ำ:</strong> ผิวลื่น ช่วยให้ชิ้นส่วนที่เคลื่อนที่ทำงานได้ดีขึ้น</li>
+            <li data-i18n-key="hard_feat3"><strong>ทนการกัดกร่อน:</strong> โครเมี่ยมโดยตัวมันเองทนกัดกร่อนได้ดี</li>
+            <li data-i18n-key="hard_feat4"><strong>ซ่อมแซมชิ้นงาน:</strong> ใช้พอกเนื้อคืนมิติ แล้วนำไปเจียระไนให้ขนาดแม่นยำ ประหยัดต้นทุน</li>
+          </ul>
+
+          <h3 data-i18n-key="hard_surface_h">ลักษณะภายนอก</h3>
+          <p data-i18n-key="hard_surface_p">ผิวฮาร์ดโครมมักออกเทา-เงิน เป็นผิวด้านหรือกึ่งเงา แม้ขัดเงาเพิ่มก็ไม่ฉ่ำเท่าแบบตกแต่งที่มีนิกเกิลรองพื้น</p>
+
+          <h3 data-i18n-key="hard_use_h">ตัวอย่างการใช้งาน</h3>
+          <p data-i18n-key="hard_use_p">แกนไฮดรอลิกและนิวเมติก ลูกกลิ้งในงานพิมพ์ งานรีดเหล็ก งานผลิตกระดาษ แม่พิมพ์พลาสติก แหวนลูกสูบ รวมถึงเพลา สกรู และชิ้นส่วนเครื่องจักรที่ต้องทนการเสียดสีต่อเนื่อง</p>
+        </div>
+      </section>
+
+      <!-- Comparison Table -->
+      <section id="compare" class="reveal section-block table" aria-labelledby="compare-h">
+        <h2 id="compare-h" class="section" data-i18n-key="compare_h">ตารางเปรียบเทียบแบบลงรายละเอียด</h2>
+        <div class="content">
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n-key="compare_col_prop">คุณสมบัติ</th>
+                  <th data-i18n-key="compare_col_decor">ชุบโครเมี่ยมตกแต่ง (Decorative Chrome)</th>
+                  <th data-i18n-key="compare_col_hard">ฮาร์ดโครม (Hard Chrome)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n-key="compare_row_alias">ชื่อเรียกอื่น</td>
+                  <td data-i18n-key="compare_decor_alias">ชุบโครเมี่ยมเงา, ชุบนิกเกิล-โครม</td>
+                  <td data-i18n-key="compare_hard_alias">ชุบโครเมี่ยมแข็ง, โครเมี่ยมอุตสาหกรรม</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_goal">วัตถุประสงค์หลัก</td>
+                  <td data-i18n-key="compare_decor_goal">ความสวยงาม ความเงางาม ป้องกันความหมอง</td>
+                  <td data-i18n-key="compare_hard_goal">ความแข็ง ทนสึก ลดแรงเสียดทาน ซ่อมแซมคืนมิติ</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_underlayer">ชั้นรองพื้น (Underlayer)</td>
+                  <td data-i18n-key="compare_decor_underlayer">จำเป็น (ส่วนใหญ่ใช้นิกเกิล เพื่อความเงา)</td>
+                  <td data-i18n-key="compare_hard_underlayer">ไม่จำเป็น (มักชุบลงบนเหล็กหรือโลหะโดยตรง)</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_thickness">ความหนาชั้นโครเมี่ยม</td>
+                  <td data-i18n-key="compare_decor_thickness">บางมาก ~0.05–0.5 µm</td>
+                  <td data-i18n-key="compare_hard_thickness">หนามาก ~20–500+ µm</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_hardness">ความแข็ง (โดยทั่วไป)</td>
+                  <td data-i18n-key="compare_decor_hardness">ชั้นโครเมี่ยมแข็งแต่บาง จึงไม่รองรับงานสึกหนัก</td>
+                  <td data-i18n-key="compare_hard_hardness">สูงมาก ~65–72 HRC (~850–1200 HV)</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_appearance">ลักษณะผิว</td>
+                  <td data-i18n-key="compare_decor_appearance">เงาวับเหมือนกระจก สีขาว-ฟ้า</td>
+                  <td data-i18n-key="compare_hard_appearance">เทา-เงิน ด้านหรือกึ่งเงา</td>
+                </tr>
+                <tr>
+                  <td data-i18n-key="compare_row_usage">การใช้งานหลัก</td>
+                  <td data-i18n-key="compare_decor_usage">กันชน ล้อแม็ก ก๊อกน้ำ เฟอร์นิเจอร์</td>
+                  <td data-i18n-key="compare_hard_usage">แกนไฮดรอลิก ลูกกลิ้ง แม่พิมพ์ เพลา สกรู</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="reveal section-block" aria-labelledby="summary-h">
+        <h2 id="summary-h" class="section" data-i18n-key="summary_h">บทสรุป</h2>
+        <div class="content">
+          <p data-i18n-key="summary_p1">ชุบโครเมี่ยมตกแต่งกับฮาร์ดโครมเป็นคนละแนวคิด จุดเน้นต่างกันอย่างชัดเจน หากต้องการความสวยงามและป้องกันความหมอง ควรใช้ระบบหลายชั้นแบบนิกเกิล-โครม หากต้องการความแข็ง ทนสึก ลดแรงเสียดทาน หรือซ่อมแซมชิ้นงาน ควรใช้ฮาร์ดโครมที่หนาและแข็งมากกว่า เลือกให้ตรงกับงานตั้งแต่แรกจะประหยัดทั้งเวลาและต้นทุน และได้คุณภาพที่เหมาะสมที่สุด</p>
+        </div>
+      </section>
+
+      <!-- Related Links -->
+      <section id="links" class="reveal section-block" aria-labelledby="links-h">
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+        <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/" data-i18n-key="link_plating">หมวด Plating & Coating</a></p>
+        <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/nickelplating/index.html" data-i18n-key="link_polishing">Nickel Plating</a></p>
+        <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/nickelplating/troubleshootinghardchrome/index.html" data-i18n-key="link_pretreat">การชุบโครเมียม & การชุบฮาร์ดโครม</a></p>
+        <p><a class="more" href="https://www.baumechemical.com/blog/nickel-plating-troubleshooting/index.html" data-i18n-key="link_pretreat1">คู่มือฉบับสมบูรณ์สำหรับการแก้ไขปัญหาการชุบนิกเกิล</a></p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <section class="footer-brand">
+          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <ul class="footer-list">
+            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="footer_hours">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="หมวดหมู่ผลิตภัณฑ์">
+          <h3 class="footer-title" data-i18n-key="footer_products">หมวดผลิตภัณฑ์</h3>
+          <ul class="footer-list">
+            <li><a href="https://www.baumechemical.com/products/pretreatment/">Pretreatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/platingcoating/">Plating</a></li>
+            <li><a href="https://www.baumechemical.com/products/blackening/">Blackening</a></li>
+            <li><a href="https://www.baumechemical.com/products/passivation/">Passivation</a></li>
+            <li><a href="https://www.baumechemical.com/products/polishing/">Polishing</a></li>
+            <li><a href="https://www.baumechemical.com/products/strippers/">Strippers</a></li>
+            <li><a href="https://www.baumechemical.com/products/protective/">Protective Treatment</a></li>
+            <li><a href="https://www.baumechemical.com/products/equipment/">Equipment</a></li>
+          </ul>
+        </nav>
+
+        <section aria-label="ติดต่อเรา">
+          <h3 class="footer-title" data-i18n-key="footer_contact">ติดต่อเรา</h3>
+          <ul class="footer-list">
+            <li>✉️ : <a href="mailto:contact@baumechemical.com">contact@baumechemical.com</a></li>
+            <li>💬 : <a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener">@baumechemical</a></li>
+            <li>🌐 : <a href="https://www.baumechemical.com/">baumechemical.com</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+    </div>
+  </footer>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
+
+  <!-- Reveal on scroll -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('show');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: .18 });
+    revealEls.forEach(el => revObs.observe(el));
+  </script>
+
+  <!-- I18N + Lang switch -->
+  <script>
+    const I18N = {
+      th: {
+        title: "ชุบโครเมี่ยม vs ฮาร์ดโครม — ต่างกันยังไง ใช้งานแบบไหน | Baume Chemical Blog",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+
+        back_home: "← กลับเมนูหลัก",
+        hero_title: "ชุบโครเมี่ยม vs ฮาร์ดโครม ต่างกันยังไง ใช้งานแบบไหน",
+        hero_tagline: "ทั้งคู่เป็น “การชุบด้วยโครเมี่ยม” เหมือนกัน แต่จุดประสงค์ คุณสมบัติ โครงสร้างชั้นเคลือบ ความหนา และงานที่เหมาะสม แตกต่างกันโดยสิ้นเชิง บทความนี้สรุปแบบละเอียดไม่ย่อ",
+
+        toc_title: "สารบัญ",
+        toc_intro: "ภาพรวมและเข้าใจผิดที่พบบ่อย",
+        toc_decorative: "1: ชุบโครเมี่ยมตกแต่ง (Decorative Chrome)",
+        toc_hard: "2: ฮาร์ดโครม (Hard Chrome)",
+        toc_compare: "ตารางเปรียบเทียบแบบลงรายละเอียด",
+        toc_summary: "บทสรุป",
+
+        intro_h: "ภาพรวมและเข้าใจผิดที่พบบ่อย",
+        intro_p1: "คนส่วนใหญ่มักสับสนระหว่างคำสองคำนี้ แม้ว่าทั้งคู่จะเป็น “การชุบด้วยโครเมี่ยม” เหมือนกัน แต่จริงๆ แล้วเป็นกระบวนการที่แตกต่างกันโดยสิ้นเชิง ทั้งในแง่ของวัตถุประสงค์ คุณสมบัติ และการใช้งาน",
+        intro_p2: "สรุปสั้นก่อนลงลึกแบบยาว ชุบโครเมี่ยมตกแต่ง คือการชุบเพื่อความสวยงาม เงางามเหมือนกระจก และป้องกันความหมอง ส่วนฮาร์ดโครม คือการชุบเพื่อความแข็งแกร่ง ทนสึกหรอ ลดแรงเสียดทาน และซ่อมแซมชิ้นงานที่สึก",
+
+        decorative_h: "1: ชุบโครเมี่ยมตกแต่ง (Decorative Chrome / Nickel-Chrome Plating)",
+        decorative_lead: "คำว่า “ชุบโครเมี่ยม” ที่คุ้นปากในชีวิตประจำวัน เช่น ล้อแม็ก ก๊อกน้ำ กันชน ส่วนใหญ่หมายถึงประเภทนี้",
+        decorative_obj_h: "วัตถุประสงค์หลัก",
+        decorative_obj_p: "เพื่อความสวยงามและป้องกันความหมองของผิว โดยคงความเงางามได้ยาวนาน",
+        decorative_proc_h: "กระบวนการและหัวใจสำคัญ",
+        decorative_proc_p1: "ความเข้าใจผิดที่พบบ่อยคือคิดว่ามี “ชั้นโครเมี่ยม” เพียงชั้นเดียว แต่จริงๆ แล้วระบบนี้เป็นการชุบหลายชั้นแบบคลาสสิก คือทองแดง-นิกเกิล-โครเมี่ยม โดยมี “นิกเกิล” เป็นหัวใจของความเงา และ “โครเมี่ยม” เป็นชั้นปิดทับบางๆ เพื่อป้องกันความหมอง",
+        decorative_li_cu: "ชั้นทองแดง (ถ้ามี): ใช้บนเหล็กหรือซิงค์อัลลอยเพื่อเพิ่มการยึดเกาะและช่วยกลบพื้นผิว",
+        decorative_li_ni: "ชั้นนิกเกิล: แหล่งกำเนิดความเงาเงาวับเหมือนกระจก มักถูกขัดเงามาอย่างดี",
+        decorative_li_cr: "ชั้นโครเมี่ยม: ชั้นปิดท้ายที่บางมาก ประมาณ 0.05–0.5 ไมครอน ทำหน้าที่เป็นเกราะใส แข็ง และเฉื่อย ไม่หมอง ให้โทนสีขาวอมฟ้า ทำความสะอาดง่าย",
+        decorative_whycr_h: "ทำไมต้องโครเมี่ยมทับนิกเกิล",
+        decorative_whycr_p: "เพราะนิกเกิลแม้เงาสูง แต่สัมผัสอากาศแล้วหมองเป็นสีเหลืองคล้ำได้ง่าย โครเมี่ยมมีความเฉื่อยและไม่หมอง จึงเป็นชั้นปกป้องความเงาของนิกเกิลไว้",
+        decorative_feat_h: "คุณสมบัติเด่น",
+        decorative_feat1: "เงางามสูง สะท้อนแสงเหมือนกระจก",
+        decorative_feat2: "ป้องกันความหมอง รักษาความสวยงามยาวนาน",
+        decorative_feat3: "ทนการกัดกร่อนในระดับระบบ “นิกเกิล-โครม”",
+        decorative_feat4: "ชั้นโครเมี่ยมแข็ง แต่เนื่องจากบางมาก จึงไม่ได้ออกแบบมาเพื่อรับการเสียดสีหนัก",
+        decorative_use_h: "ตัวอย่างการใช้งาน",
+        decorative_use_p: "อะไหล่รถยนต์และมอเตอร์ไซค์ เช่น กันชน ล้อแม็ก มือจับประตู ท่อไอเสีย อุปกรณ์สุขภัณฑ์ เช่น ก๊อกน้ำ ฝักบัว และงานเฟอร์นิเจอร์ เช่น ขาโต๊ะ ขาเก้าอี้ และเครื่องใช้ในบ้าน",
+
+        hard_h: "2: ฮาร์ดโครม (Hard Chrome / Industrial Chrome / Functional Chrome)",
+        hard_lead: "“ฮาร์ด” คือ “แข็ง” กระบวนการนี้เน้นคุณสมบัติทางวิศวกรรมเป็นหลัก ไม่ใช่ความเงางาม",
+        hard_obj_h: "วัตถุประสงค์หลัก",
+        hard_obj_p: "เพิ่มความแข็ง ทนสึกหรอ ลดแรงเสียดทาน และใช้ซ่อมแซมชิ้นงานที่สึกเพื่อคืนมิติ",
+        hard_proc_h: "กระบวนการและหัวใจสำคัญ",
+        hard_proc_p1: "ชุบโครเมี่ยมลงบนโลหะโดยตรง เช่น เหล็กหรือสแตนเลส โดยไม่จำเป็นต้องมีชั้นนิกเกิลรองพื้น ความหนาของชั้นโครเมี่ยมมากกว่าการชุบตกแต่งหลายเท่า ตั้งแต่ประมาณ 20 ไมครอน ไปจนถึง 500 ไมครอนหรือมากกว่านั้นตามงาน",
+        hard_feat_h: "คุณสมบัติเด่น",
+        hard_feat1: "ความแข็งสูงมาก โดยทั่วไป ~65–72 HRC หรือ ~850–1200 HV ทนสึกและทนเสียดสีเยี่ยม",
+        hard_feat2: "สัมประสิทธิ์แรงเสียดทานต่ำ ผิวลื่น ช่วยให้ชิ้นส่วนที่เคลื่อนที่ทำงานได้ดีขึ้น",
+        hard_feat3: "ทนการกัดกร่อน โครเมี่ยมโดยตัวมันเองทนกัดกร่อนได้ดี",
+        hard_feat4: "ซ่อมแซมชิ้นงาน ใช้พอกเนื้อคืนมิติ แล้วนำไปเจียระไนให้ขนาดแม่นยำ ประหยัดต้นทุน",
+        hard_surface_h: "ลักษณะภายนอก",
+        hard_surface_p: "ผิวฮาร์ดโครมมักออกเทา-เงิน เป็นผิวด้านหรือกึ่งเงา แม้ขัดเงาเพิ่มก็ไม่ฉ่ำเท่าแบบตกแต่งที่มีนิกเกิลรองพื้น",
+        hard_use_h: "ตัวอย่างการใช้งาน",
+        hard_use_p: "แกนไฮดรอลิกและนิวเมติก ลูกกลิ้งในงานพิมพ์ งานรีดเหล็ก งานผลิตกระดาษ แม่พิมพ์พลาสติก แหวนลูกสูบ รวมถึงเพลา สกรู และชิ้นส่วนเครื่องจักรที่ต้องทนการเสียดสีต่อเนื่อง",
+
+        compare_h: "ตารางเปรียบเทียบแบบลงรายละเอียด",
+        compare_col_prop: "คุณสมบัติ",
+        compare_col_decor: "ชุบโครเมี่ยมตกแต่ง (Decorative Chrome)",
+        compare_col_hard: "ฮาร์ดโครม (Hard Chrome)",
+        compare_row_alias: "ชื่อเรียกอื่น",
+        compare_decor_alias: "ชุบโครเมี่ยมเงา, ชุบนิกเกิล-โครม",
+        compare_hard_alias: "ชุบโครเมี่ยมแข็ง, โครเมี่ยมอุตสาหกรรม",
+        compare_row_goal: "วัตถุประสงค์หลัก",
+        compare_decor_goal: "ความสวยงาม ความเงางาม ป้องกันความหมอง",
+        compare_hard_goal: "ความแข็ง ทนสึก ลดแรงเสียดทาน ซ่อมแซมคืนมิติ",
+        compare_row_underlayer: "ชั้นรองพื้น (Underlayer)",
+        compare_decor_underlayer: "จำเป็น (ส่วนใหญ่ใช้นิกเกิล เพื่อความเงา)",
+        compare_hard_underlayer: "ไม่จำเป็น (มักชุบลงบนเหล็กหรือโลหะโดยตรง)",
+        compare_row_thickness: "ความหนาชั้นโครเมี่ยม",
+        compare_decor_thickness: "บางมาก ~0.05–0.5 µm",
+        compare_hard_thickness: "หนามาก ~20–500+ µm",
+        compare_row_hardness: "ความแข็ง (โดยทั่วไป)",
+        compare_decor_hardness: "ชั้นโครเมี่ยมแข็งแต่บาง จึงไม่รองรับงานสึกหนัก",
+        compare_hard_hardness: "สูงมาก ~65–72 HRC (~850–1200 HV)",
+        compare_row_appearance: "ลักษณะผิว",
+        compare_decor_appearance: "เงาวับเหมือนกระจก สีขาว-ฟ้า",
+        compare_hard_appearance: "เทา-เงิน ด้านหรือกึ่งเงา",
+        compare_row_usage: "การใช้งานหลัก",
+        compare_decor_usage: "กันชน ล้อแม็ก ก๊อกน้ำ เฟอร์นิเจอร์",
+        compare_hard_usage: "แกนไฮดรอลิก ลูกกลิ้ง แม่พิมพ์ เพลา สกรู",
+
+        summary_h: "บทสรุป",
+        summary_p1: "ชุบโครเมี่ยมตกแต่งกับฮาร์ดโครมเป็นคนละแนวคิด จุดเน้นต่างกันอย่างชัดเจน หากต้องการความสวยงามและป้องกันความหมอง ควรใช้ระบบหลายชั้นแบบนิกเกิล-โครม หากต้องการความแข็ง ทนสึก ลดแรงเสียดทาน หรือซ่อมแซมชิ้นงาน ควรใช้ฮาร์ดโครมที่หนาและแข็งมากกว่า เลือกให้ตรงกับงานตั้งแต่แรกจะประหยัดทั้งเวลาและต้นทุน และได้คุณภาพที่เหมาะสมที่สุด",
+
+        links_h: "ลิงก์ที่เกี่ยวข้อง",
+        link_plating: "หมวด Plating & Coating",
+        link_polishing: "Nickel Plating",
+        link_pretreat: "การชุบโครเมียม & การชุบฮาร์ดโครม",
+        link_pretreat1: "คู่มือฉบับสมบูรณ์สำหรับการแก้ไขปัญหาการชุบนิกเกิล",
+
+        footer_products: "หมวดผลิตภัณฑ์",
+        footer_contact: "ติดต่อเรา",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved.",
+        footer_hours: "🕒 เวลาทำการ 08.00 - 17.00 น."
+      },
+
+      en: {
+        title: "Decorative Chrome vs Hard Chrome — What’s Different and When to Use Each | Baume Chemical Blog",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+
+        back_home: "← Back to Home",
+        hero_title: "Decorative Chrome vs Hard Chrome: Key Differences & Best Uses",
+        hero_tagline: "Both use chromium, but the goals, properties, layer structures, thickness, and ideal applications are fundamentally different. This article explains in full detail.",
+
+        toc_title: "Table of Contents",
+        toc_intro: "Overview & Common Misconceptions",
+        toc_decorative: "1: Decorative Chrome (Nickel–Chrome)",
+        toc_hard: "2: Hard Chrome (Industrial/Functional)",
+        toc_compare: "Detailed Comparison Table",
+        toc_summary: "Conclusion",
+
+        intro_h: "Overview & Common Misconceptions",
+        intro_p1: "People often confuse these two terms. While both involve chromium, they are entirely different processes in objectives, properties, and applications.",
+        intro_p2: "Short summary before the deep dive: Decorative chrome is for looks—mirror-like gloss and tarnish resistance. Hard chrome is for strength—wear resistance, low friction, and dimensional repair.",
+
+        decorative_h: "1: Decorative Chrome (Decorative Chrome / Nickel–Chrome Plating)",
+        decorative_lead: "What most people casually call “chrome plating” on wheels, faucets, or bumpers is typically this category.",
+        decorative_obj_h: "Primary Objective",
+        decorative_obj_p: "Aesthetics and tarnish protection while maintaining long-lasting gloss.",
+        decorative_proc_h: "Process & Key Concept",
+        decorative_proc_p1: "It is not a single chromium layer. It’s a classic multi-layer system: Copper–Nickel–Chromium. Nickel is the source of mirror gloss; a very thin chromium topcoat prevents tarnish.",
+        decorative_li_cu: "Copper layer (if used): improves adhesion and levels surfaces on steel or zinc die-cast.",
+        decorative_li_ni: "Nickel layer: the actual mirror-like gloss, often mechanically polished.",
+        decorative_li_cr: "Chromium layer: very thin (~0.05–0.5 µm), a hard, inert, bluish-white “clear armor” that resists tarnish and cleans easily.",
+        decorative_whycr_h: "Why top with Chromium over Nickel?",
+        decorative_whycr_p: "Nickel, though very glossy, tarnishes yellowish in air. Chromium is inert and doesn’t tarnish, so it preserves the nickel gloss.",
+        decorative_feat_h: "Key Properties",
+        decorative_feat1: "High gloss, mirror-like reflection",
+        decorative_feat2: "Tarnish protection for lasting appearance",
+        decorative_feat3: "Corrosion resistance from the Nickel–Chrome system",
+        decorative_feat4: "Chromium is hard but thin, not intended for heavy wear",
+        decorative_use_h: "Typical Applications",
+        decorative_use_p: "Automotive/motorcycle trims like bumpers, wheels, door handles, exhausts; sanitary fittings like faucets and showers; furniture legs and home appliances.",
+
+        hard_h: "2: Hard Chrome (Hard/Industrial/Functional Chrome)",
+        hard_lead: "“Hard” means “hardness.” This process is engineered for performance, not for mirror gloss.",
+        hard_obj_h: "Primary Objective",
+        hard_obj_p: "Increase hardness, wear resistance, reduce friction, and restore worn parts to dimension.",
+        hard_proc_h: "Process & Key Concept",
+        hard_proc_p1: "Chromium is plated directly on metals such as steel or stainless without a nickel underlayer. The chromium thickness is far greater than decorative chrome—typically ~20 to 500+ µm depending on use.",
+        hard_feat_h: "Key Properties",
+        hard_feat1: "Very high hardness: ~65–72 HRC (~850–1200 HV) for excellent wear resistance",
+        hard_feat2: "Low friction surface improves moving-part performance",
+        hard_feat3: "Good inherent corrosion resistance of chromium",
+        hard_feat4: "Salvage/repair: build up oversize and grind back to precise dimensions, saving cost",
+        hard_surface_h: "Appearance",
+        hard_surface_p: "Usually gray-silver, matte to semi-gloss. Even polished, it’s not as deep a gloss as nickel–chrome decorative systems.",
+        hard_use_h: "Typical Applications",
+        hard_use_p: "Hydraulic/pneumatic rods, printing/steel/paper rollers, plastic molds, piston rings, shafts, screws, and any wear-critical machine components.",
+
+        compare_h: "Detailed Comparison Table",
+        compare_col_prop: "Property",
+        compare_col_decor: "Decorative Chrome (Nickel–Chrome)",
+        compare_col_hard: "Hard Chrome",
+        compare_row_alias: "Also known as",
+        compare_decor_alias: "Bright chrome, Nickel–Chrome",
+        compare_hard_alias: "Industrial chrome, Functional chrome",
+        compare_row_goal: "Primary goal",
+        compare_decor_goal: "Aesthetics, mirror gloss, tarnish protection",
+        compare_hard_goal: "Hardness, wear, low friction, dimensional repair",
+        compare_row_underlayer: "Underlayer",
+        compare_decor_underlayer: "Required (mostly Nickel for gloss/leveling)",
+        compare_hard_underlayer: "Not required (often plated directly on steel)",
+        compare_row_thickness: "Chromium thickness",
+        compare_decor_thickness: "Very thin ~0.05–0.5 µm",
+        compare_hard_thickness: "Very thick ~20–500+ µm",
+        compare_row_hardness: "Hardness (typical)",
+        compare_decor_hardness: "Chromium is hard but too thin for heavy wear",
+        compare_hard_hardness: "Very high ~65–72 HRC (~850–1200 HV)",
+        compare_row_appearance: "Appearance",
+        compare_decor_appearance: "Mirror-like, bluish-white",
+        compare_hard_appearance: "Gray-silver, matte to semi-gloss",
+        compare_row_usage: "Typical uses",
+        compare_decor_usage: "Automotive trims, faucets, furniture",
+        compare_hard_usage: "Hydraulic rods, rollers, molds, shafts/screws",
+
+        summary_h: "Conclusion",
+        summary_p1: "Decorative chrome and hard chrome serve different purposes. Use Nickel–Chrome for aesthetics and tarnish protection. Use hard chrome for hardness, wear resistance, low friction, or dimensional repair. Choosing correctly from the start saves time, cost, and ensures the right quality.",
+
+        links_h: "Related Links",
+        link_plating: "Plating & Coating",
+        link_polishing: "Nickel Plating",
+        link_pretreat: "Decorative & Hard Chrome Plating",
+        link_pretreat1: "Complete Guide to Troubleshooting Nickel Plating",
+
+        footer_products: "Products",
+        footer_contact: "Contact Us",
+        footer_copy: "© 2025 Baume Chemical. All rights reserved.",
+        footer_hours: "🕒 Hours 08:00–17:00"
+      }
+    };
+
+    const els = {
+      langBtns: () => document.querySelectorAll('.lang-switch .lang-btn'),
+      translatables: () => document.querySelectorAll('[data-i18n-key]'),
+    };
+
+    function applyLang(lang) {
+      const sel = (lang === 'en') ? 'en' : 'th';
+      document.documentElement.lang = sel;
+
+      document.querySelectorAll('.lang-switch .lang-btn')
+        .forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
+      document.querySelectorAll('[data-i18n-key]').forEach(node => {
+        const key = node.getAttribute('data-i18n-key');
+        const val = I18N[sel]?.[key];
+        if (typeof val !== 'string') return;
+        // ใช้ textContent เป็นค่าเริ่มต้นเพื่อความปลอดภัย
+        if (node.hasAttribute('data-i18n-html')) {
+          node.innerHTML = val;
+        } else {
+          node.textContent = val;
+        }
+      });
+
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
+      try { localStorage.setItem('lang', sel); } catch (e) {}
+      try {
+        const h = document.getElementById('siteHeader').getBoundingClientRect().height | 0;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      } catch (e) {}
+    }
+  </script>
+
+  <script>
+    (function initLang() {
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang'))
+        || document.documentElement.lang
+        || 'th';
+      applyLang(saved);
+
+      document.querySelectorAll('.lang-switch .lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+      });
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
+  <script>
+    (function () {
+      const header = document.getElementById('siteHeader');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      const scrim = document.querySelector('.menu-scrim');
+
+      const setH = () => {
+        const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
+        document.documentElement.style.setProperty('--header-h', h + 'px');
+      };
+      const onScroll = () => header && header.classList.toggle('is-scrolled', (window.scrollY || 0) > 10);
+      window.addEventListener('load', setH, { once: true });
+      window.addEventListener('resize', setH, { passive: true });
+      window.addEventListener('scroll', onScroll, { passive: true });
+      setH(); onScroll();
+
+      if (toggle && nav && scrim) {
+        let lockY = 0;
+        function openMenu(v) {
+          header.classList.toggle('open', v);
+          toggle.setAttribute('aria-expanded', String(v));
+          nav.setAttribute('aria-hidden', String(!v));
+          v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden', '');
+          if (v) {
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({ preventScroll: true });
+          } else {
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle?.focus({ preventScroll: true });
+          }
+        }
+        toggle.addEventListener('click', () => openMenu(!header.classList.contains('open')));
+        scrim.addEventListener('click', () => openMenu(false));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && header.classList.contains('open')) openMenu(false); });
+        window.addEventListener('resize', () => { if (window.innerWidth > 900 && header.classList.contains('open')) openMenu(false); }, { passive: true });
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => openMenu(false)));
+      }
+
+      // highlight current nav
+      try {
+        const here = location.pathname.replace(/\/+$/, '');
+        const isProducts = here.startsWith('/products');
+        nav?.querySelectorAll('a').forEach(a => {
+          const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/, '');
+          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current', 'page');
+          else if (here === path) a.setAttribute('aria-current', 'page');
+          else a.removeAttribute('aria-current');
+        });
+      } catch (e) { }
+
+      // smart back
+      (function () {
+        const btn = document.querySelector('.back-chip');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+          try {
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if (sameOrigin) { e.preventDefault(); history.back(); }
+          } catch (err) { }
+        });
+      })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors + Back-to-top -->
+  <script>
+    // clickable H2 anchors
+    document.querySelectorAll('.section-block>h2.section').forEach(h => {
+      h.addEventListener('click', () => {
+        const sec = h.closest('.section-block');
+        if (sec && sec.id) { history.pushState(null, '', '#' + sec.id); }
+      });
+    });
+
+    (function () {
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) map.set(id, { link: a, el });
+      });
+
+      const setActive = (id) => {
+        tocLinks.forEach(a => a.classList.remove('is-active'));
+        tocLinks.forEach(a => a.setAttribute('aria-current', 'false'));
+        const item = map.get(id);
+        if (item) { item.link.classList.add('is-active'); item.link.setAttribute('aria-current', 'true'); }
+      };
+
+      const headerH = () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 56;
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null, '', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, { rootMargin: `-${headerH() + 24}px 0% -60% 0%`, threshold: .1 });
+
+      map.forEach(({ el }) => obs.observe(el));
+    })();
+
+    // Back-to-top
+    (function () {
+      const backTop = document.getElementById('backTop');
+      if (!backTop) return;
+
+      function toggleBackTop() {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, { passive: true });
+
+      backTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
