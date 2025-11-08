@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- ==== SEO Core (Category: Blackening; single-URL i18n) ==== -->
   <title id="metaTitle">น้ำยารมดำโลหะแบบจุ่มเย็น สำหรับทองเหลือง ทองแดง เหล็ก ซิงค์ อลูมิเนียม | Baume Chemical</title>
@@ -110,12 +110,19 @@
     body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
 
     /* ===== Header: fixed glass ===== */
-    .site-header{
-      position:fixed; inset:0 0 auto 0; z-index:1400;
-      background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
-      transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
-      -webkit-backdrop-filter:none; backdrop-filter:none;
-    }
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1400;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  transition: background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
     .site-header.scrolled{
       background:rgba(15,23,42,.70);
       -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
@@ -276,11 +283,11 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
+        <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+        <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+        <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+        <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+        <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
           </ul>
         </nav>
 
