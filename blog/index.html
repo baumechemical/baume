@@ -358,6 +358,14 @@
       position:absolute; inset:-6% 0; background-size:cover; background-position:center;
       filter: brightness(.78); transform: translate3d(0,var(--py,0px),0) scale(1.08);
     }
+    /* โครงสร้างภาพสไลด์ */
+    .parallax .slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 900ms ease;
+    }
+    .parallax .slide.active { opacity: 1; }
+
     .parallax::after{
       content:""; position:absolute; inset:0;
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6));
@@ -469,7 +477,11 @@
 
   <!-- === HERO (Parallax) === -->
   <section class="parallax" aria-label="บทความ & คู่มือ">
-    <div class="px-layer" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/7befec25ddf201d07.jpg')"></div>
+    <div class="slides px-layer">
+      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/E3.jpg')"></div>
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/C8.jpg')"></div>
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/10.jpeg')"></div>
+    </div>
 
     <div class="parallax-content">
       <h1 class="hero-title" data-i18n-key="hero_title">บทความและคู่มือ</h1>
