@@ -191,7 +191,7 @@
     /* ===== Hero (use contact banner) ===== */
     .hero{
       position:relative; overflow:hidden; color:#fff; text-align:center;
-      min-height: clamp(480px, 62vh, 720px);
+      min-height: clamp(520px, 68vh, 760px); /* <--- ปรับตัวเลขตรงนี้ให้เตี้ยลง */
       display:grid; place-items:center;
       padding-top: var(--header-h);
     }
@@ -436,9 +436,11 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero" aria-label="ติดต่อ Baume Chemical">
-    <div class="slides" id="slides">
+      <div class="slides" id="slides">
       <div class="slide active" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/V8.jpg')"></div>
-    </div>
+      <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/thumbnail-6.jpg')"></div>
+      <div class="slide" style="background-image:url('https://i.imgur.com/3xwVLZZ.jpeg')"></div>
+      </div>
 
     <div class="hero-inner">
       <h1 data-i18n-key="hero_title">ติดต่อเรา</h1>
