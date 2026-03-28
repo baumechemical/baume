@@ -167,13 +167,52 @@
     .lang-fab .lang-btn{padding:6px 10px}
 
     /* ===== Hero ===== */
-    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);padding-top:var(--header-h);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail-5.jpg') center/cover no-repeat}
-    .hero-inner{position:relative;z-index:1;padding:26px 16px;max-width:var(--container);width:100%}
-    .hero h1{margin:0 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:960px;margin:0 auto;color:#e6f2ef}
-    .hero .actions{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
-    .btn{appearance:none;border:1px solid var(--brand);background:var(--accent);color:#1b2637;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none}
-    .btn.ghost{background:transparent;border-color:#fff;color:#fff}
+/* ===== Hero ===== */
+    .hero{ 
+      position:relative; overflow:hidden; display:grid; place-items:center; 
+      text-align:center; color:#fff; 
+      min-height: clamp(420px, 60vh, 620px); 
+      padding-top:var(--header-h); 
+    }
+    
+    /* สไตล์สำหรับ Slider */
+    .hero .slides { position:absolute; inset:0; z-index:0; }
+    .hero .slide {
+      position:absolute; inset:-4%; /* เผื่อขอบภาพตอนซูม */
+      background-size:cover; background-position:center;
+      filter:brightness(.82); transform:scale(1.04);
+      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+    }
+    .hero .slide.active { opacity:1; transform:scale(1.08); }
+    
+    /* ฟิลเตอร์เงาดำ (กันไม่ให้บังเมาส์เวลาคลิกปุ่ม) */
+    .hero::after{ 
+      content:""; position:absolute; inset:0; 
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); 
+      z-index:1; pointer-events:none; 
+    }
+    
+    /* เนื้อหาข้อความ */
+    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:960px; margin:0 auto; color:#e6f2ef}
+    .hero .actions{display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap}
+    
+    /* สไตล์ปุ่ม */
+    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    
+    /* ปุ่มหน้าปกสีส้ม */
+    .hero .btn:not(.ghost){ border-color:#ff9800; background:#ff9800; color:#fff; }
+    .hero .btn:not(.ghost):hover{ opacity:.92 }
+    
+    /* ปุ่มย้อนกลับ (หน้าแรก) */
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
+      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
+      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+    }
+    .home-back:hover{ background:rgba(255,255,255,.12) }
 
     /* ===== Layout ===== */
     .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
@@ -305,12 +344,18 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero ===== -->
-  <section class="hero" aria-label="Polishing hero">
+<section class="hero" aria-label="Polishing hero">
+    
+    <div class="slides" id="heroSlides">
+      <div class="slide active" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/thumbnail-5.jpg')"></div> <div class="slide" style="background-image:url('https://i.imgur.com/RJXWvbW.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/Br2.jpg')"></div> <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/image0-5.jpeg')"></div> <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/image0-7.jpeg')"></div> </div>
+
     <div class="hero-inner">
+      <div style="margin-bottom:12px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
+      </div>
       <h1 data-i18n-key="hero_title">น้ำยากัดเงา/ขัดเงาโลหะ (Polishing)</h1>
       <p data-i18n-key="hero_tagline">ปรับผิวโลหะให้เงางามเรียบเนียน ลดคราบ/ลดคม และเพิ่มความทนการกัดกร่อน รองรับงานสเตนเลส ทองเหลือง อะลูมิเนียม เหล็ก สังกะสี และตะกั่ว — พร้อมคำแนะนำจากทีมเทคนิค</p>
       <div class="actions">
-        <a class="btn ghost" href="https://www.baumechemical.com/index.html" data-i18n-key="back_home">← กลับหน้าแรก</a>
         <a class="btn" href="https://www.baumechemical.com/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
       </div>
     </div>
@@ -335,7 +380,7 @@
 
       <!-- Brass -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image1-3.jpeg" alt="Brass Polishing"></picture>
+        <picture><img src="https://www.baumechemical.com/picture/Br2.jpg" alt="Brass Polishing"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Nitric-free</span><span class="badge">Low Fume</span></div>
           <h3 data-i18n-key="br_title">ทองเหลือง (Brass Polishing)</h3>
@@ -368,7 +413,7 @@
 
       <!-- Zinc & Lead -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/image1-4.jpeg" alt="Polishing for Zinc and Lead"></picture>
+        <picture><img src="https://www.baumechemical.com/picture/Pr4.jpg" alt="Polishing for Zinc and Lead"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Zinc/Lead</span><span class="badge">Restore Shine</span></div>
           <h3 data-i18n-key="zn_title">สังกะสีและตะกั่ว (Etched to a shine)</h3>
@@ -496,6 +541,19 @@
         entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
       }, {threshold:.18});
       els.forEach(el=>io.observe(el));
+    })();
+
+    // ==== Hero Slider ====
+    (function(){
+      const slides = document.querySelectorAll('#heroSlides .slide');
+      let sidx = 0;
+      if(slides.length > 1){
+        setInterval(()=>{ 
+          slides[sidx].classList.remove('active'); 
+          sidx = (sidx + 1) % slides.length; 
+          slides[sidx].classList.add('active'); 
+        }, 5200); // สลับรูปการกัดเงาทุกๆ 5.2 วินาที
+      }
     })();
 
     // i18n + meta sync
