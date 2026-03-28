@@ -164,10 +164,43 @@
     .lang-fab .lang-btn{padding:6px 10px}
 
     /* ===== Hero ===== */
-    .hero{position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff;min-height:clamp(420px,60vh,620px);padding-top:var(--header-h);background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg') center/cover no-repeat}
-    .hero-inner{position:relative;z-index:1;padding:26px 16px;max-width:var(--container);width:100%}
-    .hero h1{margin:0 0 10px;font-weight:800;font-size:clamp(26px,4.2vw,44px);text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:960px;margin:0 auto;color:#e6f2ef}
+/* ===== Hero ===== */
+    .hero{ 
+      position:relative; overflow:hidden; display:grid; place-items:center; 
+      text-align:center; color:#fff; 
+      min-height: clamp(420px, 60vh, 620px); 
+      padding-top:var(--header-h); 
+    }
+    
+    /* สไตล์ Slider */
+    .hero .slides { position:absolute; inset:0; z-index:0; }
+    .hero .slide {
+      position:absolute; inset:-4%;
+      background-size:cover; background-position:center;
+      filter:brightness(.82); transform:scale(1.04);
+      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+    }
+    .hero .slide.active { opacity:1; transform:scale(1.08); }
+    
+    /* ฟิลเตอร์เงาดำ (กันไม่ให้บังเมาส์คลิก) */
+    .hero::after{ 
+      content:""; position:absolute; inset:0; 
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)); 
+      z-index:1; pointer-events:none; 
+    }
+    
+    /* เนื้อหาข้อความ */
+    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
+    .hero p{max-width:960px; margin:0 auto; color:#e6f2ef}
+    
+    /* ปุ่มย้อนกลับ (ใช้สไตล์เดียวกันกับหน้าอื่น) */
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
+      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
+      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+    }
+    .home-back:hover{ background:rgba(255,255,255,.12) }
 
     /* ===== Layout ===== */
     .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
@@ -323,10 +356,15 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero ===== -->
-  <section class="hero" aria-label="Protective hero">
-    <a class="back-chip" href="https://www.baumechemical.com/products.html" data-back>← กลับหน้าหลัก</a>
-  <div class="hero-inner">
+<section class="hero" aria-label="Protective hero">
+
+    <div class="slides" id="heroSlides">
+      <div class="slide active" style="background-image:url('https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg')"></div> <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/image9.jpeg')"></div> <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/image4bb21a99d474156ba.jpeg')"></div> <div class="slide" style="background-image:url('https://img2.pic.in.th/pic/image70df94b7a595d49ee.jpeg')"></div> </div>
+
     <div class="hero-inner">
+      <div style="margin-bottom:12px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
+      </div>
       <h1 data-i18n-key="hero_title">สารเคลือบป้องกันผิว (Anti-Tarnish &amp; Lacquer)</h1>
       <p data-i18n-key="hero_tagline">ปกป้องผิวโลหะจากออกซิเดชันและสีหมอง โดยคงความเงางาม มีทั้งจุ่มเย็น/จุ่มร้อน/อิเล็กโทร, ป้องกันหมองบนดีบุก และแลคเกอร์น้ำ</p>
     </div>
@@ -373,7 +411,7 @@
 
       <!-- Tin Anti-Tarnish -->
       <article class="card lift reveal">
-        <picture><img src="https://img5.pic.in.th/file/secure-sv1/thumbnail-4.jpg" alt="Tin Anti-Tarnish"></picture>
+        <picture><img src="https://www.baumechemical.com/picture/Pr4.jpg" alt="Tin Anti-Tarnish"></picture>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Tin</span></div>
           <h3 data-i18n-key="tin_t">Tin Anti-Tarnish</h3>
@@ -523,6 +561,19 @@
         entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
       }, {threshold:.18});
       els.forEach(el=>io.observe(el));
+    })();
+
+    // ==== Hero Slider ====
+    (function(){
+      const slides = document.querySelectorAll('#heroSlides .slide');
+      let sidx = 0;
+      if(slides.length > 1){
+        setInterval(()=>{ 
+          slides[sidx].classList.remove('active'); 
+          sidx = (sidx + 1) % slides.length; 
+          slides[sidx].classList.add('active'); 
+        }, 5200); // สลับรูปสารเคลือบทุกๆ 5.2 วินาที
+      }
     })();
 
     // i18n + meta sync
