@@ -175,13 +175,42 @@
     .lang-fab .lang-btn{ padding:6px 10px }
 
     /* ===== Hero ===== */
-    .hero{ position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); padding-top:var(--header-h) }
-    .hero::before{ content:""; position:absolute; inset:0; background:url('https://i.imgur.com/QfsLZ0I.jpeg') center/cover no-repeat; filter:brightness(.82) }
-    .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)) }
-    .hero-inner{ position:relative; z-index:1; padding:26px 16px; max-width:var(--container); width:100% }
+/* ===== Hero ===== */
+    .hero{ 
+      position:relative; overflow:hidden; display:grid; place-items:center; 
+      text-align:center; color:#fff; 
+      min-height: clamp(420px, 60vh, 620px); /* ควบคุมความสูงให้กลับมาเท่าเดิม */
+      padding-top:var(--header-h); 
+    }
+    
+    /* สไตล์สำหรับ Slider */
+    .hero .slides { position:absolute; inset:0; z-index:0; }
+    .hero .slide {
+      position:absolute; inset:-4%;
+      background-size:cover; background-position:center;
+      filter:brightness(.82); transform:scale(1.04);
+      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+    }
+    .hero .slide.active { opacity:1; transform:scale(1.08); }
+    
+    /* ฟิลเตอร์เงาดำ (สั่ง pointer-events: none เพื่อไม่ให้มันบล็อกเมาส์) */
+    .hero::after{ 
+      content:""; position:absolute; inset:0; 
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); 
+      z-index:1; pointer-events:none; 
+    }
+    
+    /* เนื้อหาข้างใน (ตั้ง z-index ให้สูงสุด จะได้กดปุ่มได้) */
+    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
     .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .home-back{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) }
+    
+    /* ปุ่มย้อนกลับ */
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
+      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
+      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+    }
     .home-back:hover{ background:rgba(255,255,255,.12) }
 
     /* ===== Layout ===== */
@@ -321,7 +350,14 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" aria-label="Pretreatment overview">
+<section class="hero" aria-label="Pretreatment overview">
+    
+    <div class="slides" id="heroSlides">
+      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/Soakclean.jpg')"></div>
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/smut.jpg')"></div>
+      <div class="slide" style="background-image:url('https://i.imgur.com/2hf2uIE.jpeg')"></div>
+    </div>
+
     <div class="hero-inner">
       <div style="margin-bottom:12px">
         <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
@@ -331,7 +367,6 @@
     </div>
 
   </section>
-
   <main class="wrap" role="main">
     <section>
       <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์ในกลุ่มนี้</h2>
@@ -561,6 +596,19 @@
         entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
       }, {threshold:.18});
       els.forEach(el=>io.observe(el));
+    })();
+
+    // ==== Hero Slider ====
+    (function(){
+      const slides = document.querySelectorAll('#heroSlides .slide');
+      let sidx = 0;
+      if(slides.length > 1){
+        setInterval(()=>{ 
+          slides[sidx].classList.remove('active'); 
+          sidx = (sidx + 1) % slides.length; 
+          slides[sidx].classList.add('active'); 
+        }, 5200); // สลับรูปทุก 5.2 วินาที
+      }
     })();
 
     // i18n (sync header switch + FAB + update meta)
