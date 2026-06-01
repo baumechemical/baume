@@ -325,7 +325,7 @@
             <p class="features__desc" data-i18n-key="feat_6_d">รองรับงานลบคม/คุมมิติ (ได้ถึง ~1 มม.*)</p>
           </article>
         </div>
-        <p class="lead" style="margin-top:8px">*ค่าจริงขึ้นกับเกรดสแตนเลส รูปทรง ชุดไฟ และสภาวะการทำงาน</p>
+        <p class="lead" style="margin-top:8px" data-i18n-key="note_6">*ค่าจริงขึ้นกับเกรดสแตนเลส รูปทรง ชุดไฟ และสภาวะการทำงาน</p>
       </section>
 
       <!-- Usage & Parameters -->
@@ -356,7 +356,7 @@
                 <td>°C</td>
               </tr>
               <tr>
-                <td>แรงดันไฟฟ้า (D.C.)</td>
+                <td data-i18n-key="cond_volt">แรงดันไฟฟ้า (D.C.)</td>
                 <td>4–9</td>
                 <td>4–9</td>
                 <td>V</td>
@@ -374,7 +374,7 @@
                 <td>นาที</td>
               </tr>
               <tr>
-                <td>ตัวล่อ (แคโทด)</td>
+                <td data-i18n-key="u_cathode">ตัวล่อ (แคโทด)</td>
                 <td colspan="2">แผ่นตะกั่ว</td>
                 <td>—</td>
               </tr>
@@ -393,7 +393,7 @@
         <div class="content">
           <p data-i18n-key="mix_p1">ต้องการผสม 100 ลิตร: เติม EP 8511 = 100 ลิตร (ใช้ 100% ไม่ต้องผสมน้ำ) ตรวจการรั่ว/ซีลยางให้พร้อมก่อนเดินงาน</p>
           <ul>
-            <li>รองรับระบบบ่อดัก (drag-out) เพื่อนำคืนของเหลวกลับบ่อหลัก</li>
+            <li data-i18n-key="mix_li1">รองรับระบบบ่อดัก (drag-out) เพื่อนำคืนของเหลวกลับบ่อหลัก</li>
             <li>กำจัดตะกอนโลหะที่ก้นถังสม่ำเสมอเพื่อคงความใสและประสิทธิภาพ</li>
           </ul>
         </div>
@@ -550,18 +550,23 @@
         feat_4_t:"ปราศจากฮาโลเจน/โครเมต", feat_4_d:"ลดภาระ EHS และการจัดการของเสีย",
         feat_5_t:"บำรุงรักษาง่าย",          feat_5_d:"ตะกอนโลหะตกก้นถัง ถ่ายออกง่าย อายุบ่อยาว",
         feat_6_t:"กัดผิวได้ลึก",            feat_6_d:"รองรับงานลบคม/คุมมิติ (ได้ถึง ~1 มม.*)",
-
+          note_6:"*ค่าจริงขึ้นกับเกรดสแตนเลส รูปทรง ชุดไฟ และสภาวะการทำงาน",
+  
         usage_h:"อัตราส่วน & พารามิเตอร์",
         usage_lead:"ค่าตั้งต้น (ปรับตามสภาพหน้างานและชิ้นงาน)",
         cond_th_param:"พารามิเตอร์", cond_th_range:"ช่วงการใช้", cond_th_best:"ค่าที่เหมาะสม", cond_th_unit:"หน่วย",
         u_chem:"สารละลาย (EP 8511)",
         cond_temp:"อุณหภูมิ",
+        cond_volt:"แรงดันไฟฟ้า (D.C.)",
         cond_cd:"ความหนาแน่นกระแส",
         u_time:"เวลา",
+        u_cathode:"ตัวล่อ (แคโทด)",
         note_1:"หมายเหตุ: สำหรับบ่อใหม่เริ่มที่ 45–60 วินาที แล้วเพิ่มเวลาตามอายุบ่อ/ผลงาน",
 
         mix_h:"ตัวอย่างการผสม",
         mix_p1:"ต้องการผสม 100 ลิตร: เติม EP 8511 = 100 ลิตร (ใช้ 100% ไม่ต้องผสมน้ำ) ตรวจการรั่ว/ซีลยางให้พร้อมก่อนเดินงาน",
+        mix_li1:"รองรับระบบบ่อดัก (drag-out) เพื่อนำคืนของเหลวกลับบ่อหลัก",
+        mix_li2:"กำจัดตะกอนโลหะที่ก้นถังสม่ำเสมอเพื่อคงความใสและประสิทธิภาพ",
 
      process_h: "ขั้นตอนการทำงาน",
       steps_pre_h: "1) การเตรียมชิ้นงาน (Pre-Treatment)",
@@ -609,18 +614,23 @@
         feat_4_t:"Halogen/chromate-free",     feat_4_d:"Lower EHS burden and waste handling",
         feat_5_t:"Easy maintenance",          feat_5_d:"Metal precipitates settle; easy decanting; long bath life",
         feat_6_t:"Deep material removal",     feat_6_d:"Supports deburring/dimension control (up to ~1 mm*)",
+          note_6:"*Actual depends on stainless grade, geometry, power setup, and conditions",
 
         usage_h:"Ratios & Parameters",
         usage_lead:"Baseline values (tune per part and line conditions)",
         cond_th_param:"Parameter", cond_th_range:"Range", cond_th_best:"Best practice", cond_th_unit:"Unit",
         u_chem:"Electrolyte (EP 8511)",
         cond_temp:"Temperature",
+        cond_volt:"Voltage (D.C.)",
         cond_cd:"Current density",
         u_time:"Time",
+        
         note_1:"Note: For fresh baths, start at 45–60 s and increase with bath age/finish target.",
 
         mix_h:"Mixing Example",
         mix_p1:"To make 100 L: charge EP 8511 at 100% (no water). Check leaks and seals before production.",
+        mix_li1:"Support drag-out recovery systems to return fluid to main bath",
+        mix_li2:"Regularly remove metal sludge from the bottom of the tank to maintain clarity and efficiency",
 
       process_h: "Process Steps",
       steps_pre_h: "1) Pre-Treatment",
