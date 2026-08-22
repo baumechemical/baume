@@ -1,15 +1,9 @@
-<!-- =====================================================
-Baume Sep 2025 Blog Template — Split in TWO paste-ready parts
-PART A — paste this first, THEN immediately append PART B below.
-Result = ONE valid, complete HTML file ready to publish.
-Designed to match Anti‑tarnish page styling cues.
-====================================================== -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย | Baume Chemical Blog</title>
+  <title data-i18n-key="title">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย | Baume Chemical Blog</title>
 
   <!-- === SEO Base === -->
   <meta name="description" content="ชุบนิกเกิลบนเหล็กจำเป็นต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย เกณฑ์ตัดสินใจ ค่าเริ่มต้น กระบวนการ ฟิกซ์เจอร์ การดูแลบ่อ และตารางปัญหาพบเจอบ่อย พร้อมลิงก์ที่เกี่ยวข้อง" />
@@ -18,6 +12,8 @@ Designed to match Anti‑tarnish page styling cues.
   <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/" />
   <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/" />
   <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/" />
+  
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
@@ -27,7 +23,6 @@ Designed to match Anti‑tarnish page styling cues.
 
   <!-- OG / Twitter -->
   <meta property="og:locale" content="th_TH" />
-  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Baume Chemical" />
   <meta property="og:title" content="นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? — เปรียบเทียบข้อดี–ข้อเสีย" />
@@ -37,7 +32,7 @@ Designed to match Anti‑tarnish page styling cues.
   <meta property="og:image:alt" content="Nickel on Steel vs Copper Undercoat — Baume Chemical" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- JSON-LD: Organization / WebSite / BlogPosting / Breadcrumbs -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,29 +48,9 @@ Designed to match Anti‑tarnish page styling cues.
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"Baume Chemical",
-    "alternateName":["Baume Chemical Blog","Baume"],
     "url":"https://www.baumechemical.com/",
     "inLanguage":"th"
   }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย",
-    "url":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/",
-    "inLanguage":"th",
-    "description":"เกณฑ์ตัดสินใจ ค่าเริ่มต้น กระบวนการ ฟิกซ์เจอร์ ดูแลบ่อ และตารางแก้ปัญหา สำหรับงานชุบนิกเกิลบนเหล็ก",
-    "publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
-    "image":"https://img2.pic.in.th/pic/image2-1.jpeg"
-  }
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
-    {"@type":"ListItem","position":3,"name":"Nickel on Steel — Copper Undercoat?","item":"https://www.baumechemical.com/blog/nickel-on-steel-copper-undercoat/"}
-  ]}
   </script>
 
   <!-- Fonts & Perf -->
@@ -90,242 +65,189 @@ Designed to match Anti‑tarnish page styling cues.
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:64px; 
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.7}
+    p { margin-top: 0; margin-bottom: 1.2em; color: #334155; }
+    strong { color: var(--brand); }
 
-    /* ===== Header: ใส → เข้มเมื่อเลื่อน (glass) ===== */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    /* ===== GLASS HEADER ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.85); backdrop-filter:saturate(140%) blur(12px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
     .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700; transition: background .2s;}
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid rgba(226,232,240,.4); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition: background .3s;}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd; border-color: rgba(226,232,240, 1);}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 12px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a; transition: all .2s;}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; box-shadow: 0 4px 10px rgba(56, 123, 91, 0.3); }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Burger (mobile) */
     .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
     @media (max-width:900px){
       .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
-      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172ae6; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
       .primary-nav a{ color:#fff; padding:12px 10px; }
       .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
       .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
       .lang-btn{ color:#fff }
       .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.4); z-index:1300; display:none; backdrop-filter: blur(3px); }
     .menu-scrim:not([hidden]){ display:block }
     body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(380px, 50vh, 550px); background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(44,94,78,.85)), url('https://img2.pic.in.th/pic/image2-1.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 20px)}
+    .hero h1{margin:6px 0 12px; font-weight:800; font-size:clamp(28px,4.5vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.5); letter-spacing: -0.5px; max-width: 900px; margin-left: auto; margin-right: auto;}
+    .hero p{max-width:800px; margin:0 auto; color:#e2e8f0; font-size: 1.1rem; line-height: 1.6;}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 16px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:999px; font-weight:700; text-decoration:none; background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.3); color:#fff; transition: all .2s;}
+    .back-chip:hover{ background:#fff; color:var(--brand); transform:translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-    /* Back button chip */
-.back-chip{
-  position:absolute; 
-  top:calc(var(--header-h) + 10px); 
-  left:16px; z-index:1;
-  display:inline-flex; align-items:center; gap:6px;
-  padding:8px 12px; border-radius:999px;
-  font-weight:800; text-decoration:none;
-  background:#fff; color:#0f172a;
-  border:1px solid rgba(2,8,20,.08); 
-  box-shadow:var(--shadow-1);
-}
-.back-chip:hover{ transform:translateY(-1px) }
-
-    /* ===== Layout & TOC ===== */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    /* ===== Layout & Tables ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:40px 16px}
     @media (min-width:1100px){
-      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
-      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
-      section.section-block{ grid-column:2 }
+      main.wrap{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap:32px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 24px) }
+      .main-content{ grid-column:2; }
     }
-    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
-    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
-    #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
-    .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* ===== Sections ===== */
-    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
-    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
-    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
-/* Icons per section */
-#intro>h2.section{ --icon:"🔎" }
-#shortanswer>h2.section{ --icon:"⚖️" }
-#adhesion>h2.section{ --icon:"🧲" }
-#barrier>h2.section{ --icon:"🧪" }
-#mechanical>h2.section{ --icon:"🛡️" }
-#process>h2.section{ --icon:"🧰" }
-#failures>h2.section{ --icon:"⚠️" }
-#checklist>h2.section{ --icon:"🧾" }
-#examples>h2.section{ --icon:"🏭" }
-#summary>h2.section{ --icon:"✅" }
-#links>h2.section{ --icon:"🔗" }
-    .lead{margin:0 0 16px; color:var(--muted)}
+    /* Section Cards */
+    section.section-block{
+      background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position:relative; margin-bottom:24px; transition: box-shadow .3s;
+    }
+    section.section-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    section.section-block::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+      background:linear-gradient(90deg,var(--brand),#59a286,#9bd4b9);
+    }
+    
+    /* Icons in headings */
+    h2.section{margin:0 0 16px; font-size:clamp(22px,2.6vw,28px); font-weight:800; color:#0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;}
+    h2.section::before{ content:var(--icon, "📘"); font-size:22px; margin-right: 8px; vertical-align: middle;}
+    #intro>h2.section{ --icon:"📖" }
+    #shortanswer>h2.section{ --icon:"⚖️" }
+    #adhesion>h2.section{ --icon:"🧲" }
+    #barrier>h2.section{ --icon:"🧪" }
+    #mechanical>h2.section{ --icon:"🛡️" }
+    #process>h2.section{ --icon:"🧰" }
+    #failures>h2.section{ --icon:"⚠️" }
+    #checklist>h2.section{ --icon:"🧾" }
+    #examples>h2.section{ --icon:"🏭" }
+    #summary>h2.section{ --icon:"✅" }
+    #links>h2.section{ --icon:"🔗" }
 
-    /* Lists & utilities */
-    ul.nice{margin:8px 0 0; padding-left:22px}
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
-    .reveal.show{opacity:1; transform:none}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    html{scroll-behavior:smooth}
+    /* ===== TOC styling ===== */
+    #toc{ background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:var(--shadow-1); padding:20px; }
+    #toc h2.section{ font-size:1.1rem; border-bottom: none; margin-bottom: 16px; padding-bottom: 0; color: var(--brand); }
+    #toc .toc-list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+    #toc .toc-list li{ position:relative; border-radius:10px; transition:all .2s; }
+    #toc .toc-link{ display:block; padding:10px 32px 10px 14px; text-decoration:none; color:#475569; font-weight:600; border-radius:8px; font-size: 0.95rem; }
+    #toc .toc-list li:hover { background: #f1f5f9; }
+    #toc .toc-list li:hover .toc-link{ color: var(--brand); }
+    
+    #toc .toc-list li::after{ content:"›"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-weight:800; transition: color .2s; }
+    #toc .toc-list li[aria-current="true"]{ background:var(--brand-2); box-shadow:0 4px 12px rgba(56, 123, 91, 0.2); }
+    #toc .toc-list li[aria-current="true"] .toc-link{ color:#fff; }
+    #toc .toc-list li[aria-current="true"]::after{ color:#fff; }
 
-    /* ===== Footer ===== */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    /* Part switcher */
+    [hidden]{display:none !important}
+    .part-switch {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 5px;
+      border-radius: 14px;
+      margin: 0 0 24px 0;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .part-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #64748b;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .part-btn:hover { color: #334155; }
+    .part-btn[aria-pressed="true"] {
+      background: #fff;
+      color: var(--brand);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    ul.nice { margin: 8px 0 16px; padding-left: 24px; color: #334155; }
+    ul.nice li { margin-bottom: 8px; }
+
+    /* Tables */
+    .table{ border-radius: 12px; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 20px;}
+    .table table{width:100%; min-width: 600px; border-collapse:collapse; background: #fff;}
+    .table thead th{background:var(--brand); color: #fff; font-weight: 600; letter-spacing: 0.5px;}
+    .table th,.table td{padding:14px 16px; border-bottom:1px solid #e2e8f0; vertical-align:top; text-align: left;}
+    .table tbody tr:last-child td { border-bottom: none; }
+    .table tbody tr:hover{background:#f8fafc}
+
+    /* Footer */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color .2s;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:48px 20px 24px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:48px; height:48px; border-radius:12px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.2rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#94a3b8}
 
-/* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:900;}
+    .float-line a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#00c300; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform .2s;}
+    .float-line a:hover{transform:translateY(-2px) scale(1.05);}
+    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 15px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    .backtop{position:fixed; right:20px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; opacity: 0; transition: opacity .3s;}
+    .backtop.show{display:block; opacity: 1;}
+    .backtop button{width:46px; height:46px; border-radius:50%; border:none; background:#fff; color: var(--brand); font-size: 1.2rem; box-shadow:0 4px 16px rgba(0,0,0,.15); cursor:pointer; transition: all .2s;}
+    .backtop button:hover{background:var(--brand); color:#fff; transform:translateY(-2px);}
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-/* ===== Pretty tables (responsive + sticky header) ===== */
-.table{
-  margin-top:12px;
-  background:#fff;
-  border:1px solid #e3ece5;
-  border-radius:12px;
-  box-shadow:var(--shadow-1);
-  overflow:auto;                 /* เลื่อนแนวนอนได้บนจอเล็ก */
-  -webkit-overflow-scrolling:touch;
-  /* ขอบจาง ๆ ตอนเลื่อน */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
-}
-
-.table table{
-  width:100%;
-  min-width:720px;               /* กันบีบคอลัมน์จนอ่านยาก */
-  border-collapse:separate;
-  border-spacing:0;
-  font-variant-numeric: tabular-nums;
-}
-
-.table thead th{
-  position: sticky; top: 0;
-  z-index: 1;
-  text-align:left;
-  font-weight:800;
-  color:#1f2a24;
-  padding:12px 14px;
-  background:linear-gradient(180deg,#f7fbf9,#f0f7f3);
-  border-bottom:1px solid #dce8e1;
-  white-space:nowrap;
-}
-
-.table tbody td{
-  padding:10px 14px;
-  color:#1f2a24;
-  border-bottom:1px solid #eef4f0;
-  vertical-align:top;
-}
-
-.table tbody tr:last-child td{ border-bottom:none; }
-.table tbody tr:nth-child(odd){ background:#fbfdfc; } /* zebra */
-.table tbody tr:hover{ background:#f1f7f3; }          /* hover row */
-
-.table th+th, .table td+td{ border-left:1px solid #eef2ee; } /* เส้นคอลัมน์จาง ๆ */
-
-/* มุมมนจริง ๆ ที่มุม 4 ด้าน */
-.table table thead tr:first-child th:first-child{ border-top-left-radius:12px; }
-.table table thead tr:first-child th:last-child{ border-top-right-radius:12px; }
-.table table tbody tr:last-child td:first-child{ border-bottom-left-radius:12px; }
-.table table tbody tr:last-child td:last-child{ border-bottom-right-radius:12px; }
-
-/* สกรอลบาร์สวยขึ้นนิดหน่อย (เฉพาะ WebKit) */
-.table::-webkit-scrollbar{ height:10px; }
-.table::-webkit-scrollbar-thumb{ background:#d1e2da; border-radius:999px; border:2px solid #fff; }
-.table::-webkit-scrollbar-track{ background:#f3f7f5; border-radius:999px; }
-
-/* จอเล็ก: ปล่อยให้เลื่อนแนวนอนแทนบีบคอลัมน์ */
-@media (max-width:600px){
-  .table table{ min-width:560px; }
-}
-
-/* ตัวเลือกเสริม: โหมดคอมแพ็ค (ใส่ class table--compact ที่ wrapper ถ้าต้องการ) */
-.table.table--compact thead th{ padding:10px 12px; }
-.table.table--compact tbody td{ padding:8px 12px; }
-</style>
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out}
+    .reveal.show{opacity:1; transform:none}
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 24px)}
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -333,7 +255,7 @@ Designed to match Anti‑tarnish page styling cues.
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
         <span class="bar"></span>
       </button>
 
@@ -357,250 +279,264 @@ Designed to match Anti‑tarnish page styling cues.
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
-    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
-      <a class="back-chip" href="https://www.baumechemical.com/blog" data-back data-i18n-key="back_home">← กลับสู่หน้า Blog</a>
-      <h1 data-i18n-key="hero_title">นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย</h1>
-      <p data-i18n-key="hero_tagline">ควรรองพื้นทองแดงหรือชุบนิกเกิลลงเหล็กโดยตรง? ดูการยึดเกาะ ความทนทาน การกัดกร่อน ความสวยงาม ค่าใช้จ่าย และสูตรสแต็คที่แนะนำ</p>
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับหน้าบทความ</a>
+    <div class="wrap" style="display:block; padding:0; margin:auto">
+      <h1 data-i18n-key="hero_title">ชุบนิกเกิลบนเหล็กต้องลงทองแดงรองพื้นไหม? เปรียบเทียบข้อดี–ข้อเสีย</h1>
+      <p data-i18n-key="hero_tagline">ควรใช้ทองแดงรองพื้นก่อน หรือชุบนิกเกิลลงบนเหล็กโดยตรงดี? มาดูเรื่องการยึดเกาะ การทนทาน การเกิดสนิม ความสวยงาม และชั้นชุบที่แนะนำ</p>
     </div>
   </header>
 
-  <!-- Main + TOC -->
   <main class="wrap">
+    
+    <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">บทนำ</a>
-        <a class="toc-chip" href="#adhesion" data-i18n-key="toc_adh">การยึดเกาะ & ศักย์ไฟฟ้าเคมี</a>
-        <a class="toc-chip" href="#barrier" data-i18n-key="toc_barrier">กั้นการแพร่ & กันสนิม</a>
-        <a class="toc-chip" href="#mechanical" data-i18n-key="toc_mech">ความแข็ง & ความเรียบ</a>
-        <a class="toc-chip" href="#process" data-i18n-key="toc_process">ตัวเลือกสแต็คกระบวนการ</a>
-        <a class="toc-chip" href="#failures" data-i18n-key="toc_fail">โหมดการล้มเหลวที่พบบ่อย</a>
-        <a class="toc-chip" href="#checklist" data-i18n-key="toc_checklist">เช็กลิสต์ก่อนตัดสินใจ</a>
-        <a class="toc-chip" href="#examples" data-i18n-key="toc_examples">ตัวอย่างอุตสาหกรรม</a>
-        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">สรุป</a>
-        <a class="toc-chip" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
-      </p>
+      <ul class="toc-list" role="list">
+        <li data-part="1"><a class="toc-link" href="#intro" data-i18n-key="toc_intro">เกริ่นนำ</a></li>
+        <li data-part="1"><a class="toc-link" href="#shortanswer" data-i18n-key="toc_short">คำตอบสั้นๆ (ตารางสรุป)</a></li>
+        <li data-part="1"><a class="toc-link" href="#adhesion" data-i18n-key="toc_adh">การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี</a></li>
+        <li data-part="1"><a class="toc-link" href="#barrier" data-i18n-key="toc_barrier">การกันซึมและการป้องกันสนิม</a></li>
+        <li data-part="2"><a class="toc-link" href="#mechanical" data-i18n-key="toc_mech">ความแข็งและความเรียบของผิว</a></li>
+        <li data-part="2"><a class="toc-link" href="#process" data-i18n-key="toc_process">ตัวเลือกการจัดชั้นชุบ</a></li>
+        <li data-part="2"><a class="toc-link" href="#failures" data-i18n-key="toc_fail">ปัญหาที่พบบ่อย</a></li>
+        <li data-part="2"><a class="toc-link" href="#checklist" data-i18n-key="toc_checklist">สิ่งที่ต้องพิจารณาก่อนตัดสินใจ</a></li>
+        <li data-part="2"><a class="toc-link" href="#examples" data-i18n-key="toc_examples">ตัวอย่างการใช้งานในโรงงาน</a></li>
+        <li data-part="2"><a class="toc-link" href="#summary" data-i18n-key="toc_summary">สรุปเนื้อหา</a></li>
+      </ul>
     </nav>
 
-    <!-- Sections -->
-    <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
-      <h2 id="intro-h" class="section" data-i18n-key="intro_h">บทนำ</h2>
-      <p data-i18n-key="intro_p1">คำถามยอดฮิตของการชุบตกแต่งและการปกป้องผิวเหล็ก: ต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?</p>
-      <p data-i18n-key="intro_p2">การใช้ทองแดงรองพื้นก่อนชุบนิกเกิลบนเหล็ก ไม่ได้จำเป็นเสมอไป แต่จะถูกเลือกใช้เมื่อต้องการคุณสมบัติเฉพาะด้าน เช่น ความเงางามระดับสูง หรือการเติมเต็มร่องรอยบนพื้นผิว การพิจารณาขึ้นอยู่กับการประเมิน ความเสี่ยง (สนิม) และความสวยงาม/ความทนทาน</p>
-      <p data-i18n-key="intro_p3">1.เหตุผลที่ทองแดงมีประโยชน์: เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย แต่การใช้ ทองแดงชุบเริ่มต้น (Copper Strike) บางๆ ก่อนจะช่วยเป็น ตัวกลาง ที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์</p>
-      <p data-i18n-key="intro_p4">2.เมื่อต้องใช้ทองแดง: หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ ทองแดงกรด (Acid Copper) เป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติ ปรับผิวให้เรียบเสมอกัน (Leveling) ได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด</p>
-      <p data-i18n-key="intro_p5">3.หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิด รูพรุนหรือมีรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้ นิกเกิลสองชั้น (Duplex Nickel) หรือ นิกเกิลไร้กระแสไฟฟ้า (EN) เพื่อเพิ่มความหนาแน่น/ลดรูพรุนแทน</p>
-      <p data-i18n-key="intro_p6">4.การตัดทองแดง: การเลือกใช้ทองแดงด่างและทองแดงกรดรองพื้น แล้วชุบนิกเกิลโดยตรง จะช่วย ลดขั้นตอน การชุบ (ลดเวลาในบ่อ) และ ลดต้นทุน ในการจัดการน้ำยา (โดยเฉพาะหากเป็นทองแดงไซยาไนด์ ซึ่งมีความอันตรายและมีข้อกำหนดในการจัดการสูง) ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป</p>
-      <p data-i18n-key="intro_p7">หากคุณผลิตชิ้นส่วน โครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบ ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิต ชิ้นส่วนเครื่องจักร หรือ ชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้</p>
-    </section>
-
-    <section id="shortanswer" class="reveal section-block" aria-labelledby="short-h">
-      <h2 id="short-h" class="section" data-i18n-key="short_h">คำตอบสั้น ๆ</h2>
-      <div class="table">
-        <table id="tbl_short">
-          <thead>
-            <tr>
-              <th data-i18n-key="short_tbl_h1">สถานการณ์</th>
-              <th data-i18n-key="short_tbl_h2">ควรใช้ทองแดง?</th>
-              <th data-i18n-key="short_tbl_h3">เหตุผลย่อ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="short_tbl_c1">งานตกแต่งต้องเงาเรียบมาก (ชิ้นส่วนมองเห็น)</td>
-              <td data-i18n-key="short_tbl_c2">แนะนำ (acid copper ช่วยเก็บผิว)</td>
-              <td data-i18n-key="short_tbl_c3">ทองแดงอ่อน/ไหลตัวดี → leveling; ตามด้วย Ni ให้ความทน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="short_tbl_c4">งานฟังก์ชัน/สวมสไลด์ ต้องความแข็งสูง</td>
-              <td data-i18n-key="short_tbl_c5">ไม่จำเป็นเสมอ</td>
-              <td data-i18n-key="short_tbl_c6">ใช้ sulfamate/EN/Watts Ni ลงตรง (หลัง strike) จะดีกว่า</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="short_tbl_c7">ชิ้นงานรูปทรงซับซ้อน ต้องครอบคลุมดี</td>
-              <td data-i18n-key="short_tbl_c8">พิจารณา</td>
-              <td data-i18n-key="short_tbl_c9">acid copper กระจายตัวดี เติมมุมอับ ก่อนขึ้น Ni</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="short_tbl_c10">งบจำกัด ต้องการไซเคิลสั้น</td>
-              <td data-i18n-key="short_tbl_c11">อาจตัดออก</td>
-              <td data-i18n-key="short_tbl_c12">ใช้ Wood’s Ni strike + semi-bright/bright Ni แทน</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="main-content">
+      <!-- Part Switcher -->
+      <div class="part-switch" role="tablist" aria-label="เลือกหัวข้อหลัก">
+        <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">ส่วนที่ 1: การยึดเกาะและป้องกันสนิม</span></button>
+        <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">ส่วนที่ 2: ความแข็ง การจัดชั้น และแก้ปัญหา</span></button>
       </div>
-    </section>
 
-    <section id="adhesion" class="reveal section-block" aria-labelledby="adh-h">
-      <h2 id="adh-h" class="section" data-i18n-key="adh_h">การยึดเกาะ & ศักย์ไฟฟ้าเคมี</h2>
-      <p data-i18n-key="adh_p1">ทองแดง strike (cyanide/pyrophosphate) หรือ acid copper ที่บางมาก สามารถทำหน้าที่เป็นสะพานโลหะระหว่างเหล็กกับชั้นบน ช่วยลดปฏิกิริยาไฟฟ้าเคมีเฉียบพลันและเพิ่มพื้นที่สัมผัสเชิงจุลภาค ทำให้การยึดเกาะดีขึ้น</p>
-      <p data-i18n-key="adh_p2">ทางเลือก: <strong>Wood’s nickel strike</strong> (NiCl₂ + HCl) ให้การ active ผิวเหล็กและสร้างชั้นนิกเกิลบางที่ยึดเกาะสูง ก่อนขึ้น semi-bright/bright Ni โดยไม่ต้องผ่านทองแดง</p>
-    </section>
+      <!-- Sections Part 1 -->
+      <section id="intro" data-part="1" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?</h2>
+        <p data-i18n-key="intro_p1">คำถามสำคัญในการชุบเพื่อความสวยงามและป้องกันสนิมบนเหล็ก: จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?</p>
+        <p data-i18n-key="intro_p2">การใช้ทองแดงรองพื้นก่อนชุบนิกเกิลบนเหล็ก ไม่ได้จำเป็นเสมอไป แต่จะถูกเลือกใช้เมื่อต้องการคุณสมบัติเฉพาะด้าน เช่น ความเงางามระดับสูง หรือการเติมเต็มร่องรอยบนพื้นผิว การพิจารณาขึ้นอยู่กับการประเมินความเสี่ยงต่อการเกิดสนิม และเป้าหมายด้านความสวยงามและความทนทาน</p>
+        <ul class="nice">
+          <li data-i18n-key="intro_p3"><strong>1. เหตุผลที่ทองแดงมีประโยชน์:</strong> เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย การชุบทองแดงเริ่มต้นบางๆ ก่อนจะช่วยเป็นตัวกลางที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์</li>
+          <li data-i18n-key="intro_p4"><strong>2. เมื่อต้องใช้ทองแดง:</strong> หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ทองแดงกรดเป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติปรับผิวให้เรียบเสมอกันได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด</li>
+          <li data-i18n-key="intro_p5"><strong>3. ความเสี่ยงด้านการกัดกร่อน:</strong> หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ แต่หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิดรูพรุนหรือรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้นิกเกิลสองชั้น หรือนิกเกิลไร้กระแสไฟฟ้า เพื่อเพิ่มความหนาแน่นและลดรูพรุนแทน</li>
+          <li data-i18n-key="intro_p6"><strong>4. การชุบนิกเกิลลงเหล็กโดยตรง:</strong> การเลือกใช้นิกเกิลชุบลงบนเหล็กโดยตรง จะช่วยลดขั้นตอนการชุบ (ลดเวลาในบ่อ) และลดต้นทุนในการจัดการน้ำยาเคมี ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป</li>
+        </ul>
+        <p data-i18n-key="intro_p7"><strong>สรุป:</strong> หากคุณผลิตชิ้นส่วนที่ต้องการโครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบเนียนที่สุด ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิตชิ้นส่วนเครื่องจักร หรือชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้ ควรพิจารณาชุบนิกเกิลลงบนเหล็กโดยตรง</p>
+      </section>
 
-    <section id="barrier" class="reveal section-block" aria-labelledby="bar-h">
-      <h2 id="bar-h" class="section" data-i18n-key="bar_h">กั้นการแพร่ & กันสนิม</h2>
-      <p data-i18n-key="bar_p1">ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อมีรูพรุนอาจกลายเป็นแคโทดเทียบกับเหล็ก ทำให้เหล็กเป็นแอโนดและเกิดสนิมเร็วขึ้น ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพา <strong>ชั้นนิกเกิล</strong> (semi-bright/bright/duplex) เป็นเกราะกั้นการแพร่และความชื้น</p>
-      <p data-i18n-key="bar_p2">ในงานที่ต้องการปกป้องสูง แนะนำ duplex Ni หรือ EN (Electroless Ni) เป็น underlayer เพื่อเพิ่มความหนาแน่น/ลดรูพรุน ก่อนชั้นตกแต่ง</p>
-    </section>
+      <section id="shortanswer" data-part="1" class="reveal section-block" aria-labelledby="short-h">
+        <h2 id="short-h" class="section" data-i18n-key="short_h">คำตอบสั้นๆ</h2>
+        <div class="table">
+          <table id="tbl_short">
+            <thead>
+              <tr>
+                <th data-i18n-key="short_tbl_h1">สถานการณ์ที่ต้องการ</th>
+                <th data-i18n-key="short_tbl_h2">ควรใช้ทองแดงไหม?</th>
+                <th data-i18n-key="short_tbl_h3">เหตุผล</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="short_tbl_c1">งานตกแต่งที่ต้องการความเงามากๆ</td>
+                <td data-i18n-key="short_tbl_c2">แนะนำ</td>
+                <td data-i18n-key="short_tbl_c3">ทองแดงอ่อนและไหลตัวดี ทำให้ผิวเรียบเสมอกัน แล้วตามด้วยนิกเกิลเพื่อให้ทนทาน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="short_tbl_c4">งานใช้งานหนักหรือส่วนที่ต้องเสียดสี ต้องความแข็งสูง</td>
+                <td data-i18n-key="short_tbl_c5">ไม่จำเป็นเสมอไป</td>
+                <td data-i18n-key="short_tbl_c6">ใช้นิกเกิลชุบลงไปตรงๆ จะดีกว่า</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="short_tbl_c7">ชิ้นงานที่มีรูปร่างซับซ้อน ต้องให้สารเคมีเข้าถึงทุกซอกมุม</td>
+                <td data-i18n-key="short_tbl_c8">ลองพิจารณาดู</td>
+                <td data-i18n-key="short_tbl_c9">ทองแดงกรดกระจายตัวได้ดี ชุบเติมมุมอับที่เข้าถึงยาก ก่อนชุบนิกเกิล</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="short_tbl_c10">งบจำกัด อยากให้ขั้นตอนสั้นลง</td>
+                <td data-i18n-key="short_tbl_c11">อาจตัดออกได้</td>
+                <td data-i18n-key="short_tbl_c12">ชุบนิกเกิล (เช่น นิกเกิลกึ่งเงา) ลงบนเหล็กโดยตรง เพื่อลดขั้นตอน</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="mechanical" class="reveal section-block" aria-labelledby="mech-h">
-      <h2 id="mech-h" class="section" data-i18n-key="mech_h">ความแข็ง & ความเรียบ</h2>
-      <div class="table">
-        <table id="tbl_mech">
-          <thead>
-            <tr>
-              <th data-i18n-key="mech_tbl_h1">ชั้น</th>
-              <th data-i18n-key="mech_tbl_h2">ความแข็งโดยประมาณ (HV)</th>
-              <th data-i18n-key="mech_tbl_h3">คุณสมบัติเด่น</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="mech_tbl_c1">ทองแดง (acid)</td>
-              <td data-i18n-key="mech_tbl_c2">~80–120</td>
-              <td data-i18n-key="mech_tbl_c3">ไหลตัวดี เติมรอย/หลุมเล็ก ๆ ทำให้ผิวเรียบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="mech_tbl_c4">นิกเกิลกึ่งเงา (semi-bright)</td>
-              <td data-i18n-key="mech_tbl_c5">~200–300</td>
-              <td data-i18n-key="mech_tbl_c6">โครงสร้างแน่น เป็นเกราะกั้นที่ดี</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="mech_tbl_c7">นิกเกิลเงา (bright)</td>
-              <td data-i18n-key="mech_tbl_c8">~300–500</td>
-              <td data-i18n-key="mech_tbl_c9">เงาสูง ความสวยงาม ดีสำหรับตกแต่ง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="mech_tbl_c10">Ni ซัลฟาเมต/EN (ฟังก์ชัน)</td>
-              <td data-i18n-key="mech_tbl_c11">~250–600</td>
-              <td data-i18n-key="mech_tbl_c12">ความเค้นต่ำ/หนาได้มาก เหมาะงานอุตสาหกรรม</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section id="adhesion" data-part="1" class="reveal section-block" aria-labelledby="adh-h">
+        <h2 id="adh-h" class="section" data-i18n-key="adh_h">การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี</h2>
+        <p data-i18n-key="adh_p1">การชุบทองแดงเริ่มต้นแบบบาง หรือการชุบทองแดงกรดที่บางมากๆ ทำหน้าที่เป็นสะพานโลหะระหว่างเหล็กกับชั้นบนสุด ช่วยลดปฏิกิริยาไฟฟ้าเคมีที่รุนแรงเฉียบพลัน และเพิ่มพื้นที่สัมผัสในระดับจุลภาค ทำให้ชิ้นงานติดแน่นขึ้น</p>
+        <p data-i18n-key="adh_p2"><strong>ทางเลือก:</strong> การชุบนิกเกิลลงบนเหล็กโดยตรงสามารถให้การยึดเกาะที่แข็งแรงและทนทานได้ หากมีการเตรียมผิวและกระตุ้นผิวที่ดีพอ โดยสามารถลงชั้นนิกเกิลกึ่งเงาเป็นฐานได้เลยโดยไม่ต้องผ่านชั้นทองแดง</p>
+      </section>
 
-    <section id="process" class="reveal section-block" aria-labelledby="proc-h">
-      <h2 id="proc-h" class="section" data-i18n-key="proc_h">ตัวเลือกสแต็คกระบวนการ</h2>
-      <div class="table">
-        <table id="tbl_proc">
-          <thead>
-            <tr>
-              <th data-i18n-key="proc_tbl_h1">สแต็ค</th>
-              <th data-i18n-key="proc_tbl_h2">คำอธิบายโดยย่อ</th>
-              <th data-i18n-key="proc_tbl_h3">การใช้งานที่เหมาะ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="proc_tbl_c1">เหล็ก → ทองแดง strike → acid copper (10–20 µm) → semi-bright Ni (12–20 µm) → bright Ni (8–12 µm) → Cr</td>
-              <td data-i18n-key="proc_tbl_c2">leveling สูง สวยงามดี แต่เพิ่มเวลาบ่อ/ต้นทุน</td>
-              <td data-i18n-key="proc_tbl_c3">งานตกแต่งระดับพรีเมียม</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_c4">เหล็ก → Wood’s Ni strike → semi-bright Ni → bright Ni → Cr</td>
-              <td data-i18n-key="proc_tbl_c5">ตัดชั้นทองแดง ลดความเสี่ยงกัลวานิกที่รูพรุน</td>
-              <td data-i18n-key="proc_tbl_c6">ตกแต่งทั่วไป/ต้นทุนคุมง่าย</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_c7">เหล็ก → EN (mid-P) 5–10 µm → Ni ฟังก์ชัน/ตกแต่ง</td>
-              <td data-i18n-key="proc_tbl_c8">เกราะกั้นแน่น กระจายสม่ำเสมอ</td>
-              <td data-i18n-key="proc_tbl_c9">สภาพกัดกร่อนจัด/ชิ้นส่วนซับซ้อน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_c10">เหล็ก → sulfamate Ni หนา (20–50+ µm)</td>
-              <td data-i18n-key="proc_tbl_c11">ความเค้นต่ำ หนาเร็ว เหมาะซ่อมบิ้วด์/ฟิตติ้ง</td>
-              <td data-i18n-key="proc_tbl_c12">งานฟังก์ชัน/สวมสไลด์</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section id="barrier" data-part="1" class="reveal section-block" aria-labelledby="bar-h">
+        <h2 id="bar-h" class="section" data-i18n-key="bar_h">การกันซึมและการป้องกันสนิม</h2>
+        <p data-i18n-key="bar_p1">ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อชั้นเคลือบมีรูพรุน ทองแดงอาจกลายเป็นขั้วลบเทียบกับเหล็ก ทำให้เหล็กเป็นขั้วบวกและเกิดสนิมแดงเร็วขึ้นอย่างรวดเร็ว ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพาชั้นนิกเกิลเป็นเกราะกั้นการซึมของความชื้นเป็นหลัก</p>
+        <p data-i18n-key="bar_p2">ในงานที่ต้องการการปกป้องสูง แนะนำให้ใช้นิกเกิลสองชั้น หรือนิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นเพื่อเพิ่มความหนาแน่นและลดรูพรุน ก่อนการชุบชั้นตกแต่ง</p>
+      </section>
 
-    <section id="failures" class="reveal section-block" aria-labelledby="fail-h">
-      <h2 id="fail-h" class="section" data-i18n-key="fail_h">โหมดการล้มเหลวที่พบบ่อย</h2>
-      <ul class="nice">
-        <li data-i18n-key="fail_l1"><strong>ลอก/พอง</strong> จากการเตรียมผิว/activation ไม่สมบูรณ์ หรือ strike ไม่เพียงพอ</li>
-        <li data-i18n-key="fail_l2"><strong>สนิมแดงผ่านรูพรุน</strong> โดยเฉพาะเมื่อมีทองแดงใต้ชั้น Ni ที่พรุน → เซลล์กัลวานิก</li>
-        <li data-i18n-key="fail_l3"><strong>สี/ความเงาไม่สม่ำเสมอ</strong> เมื่อพื้นฐานหยาบและไม่มี acid copper ช่วย leveling</li>
-      </ul>
-    </section>
+      <!-- Sections Part 2 -->
+      <section id="mechanical" data-part="2" class="reveal section-block" aria-labelledby="mech-h" hidden>
+        <h2 id="mech-h" class="section" data-i18n-key="mech_h">ความแข็งและความเรียบของผิว</h2>
+        <div class="table">
+          <table id="tbl_mech">
+            <thead>
+              <tr>
+                <th data-i18n-key="mech_tbl_h1">ชั้นชุบ</th>
+                <th data-i18n-key="mech_tbl_h2">ความแข็งโดยประมาณ</th>
+                <th data-i18n-key="mech_tbl_h3">คุณสมบัติเด่น</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="mech_tbl_c1">ทองแดงกรด</td>
+                <td data-i18n-key="mech_tbl_c2">80–120</td>
+                <td data-i18n-key="mech_tbl_c3">นุ่มและไหลตัวได้ดี เติมรอยหรือหลุมเล็กๆ ทำให้ผิวเรียบขึ้น</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="mech_tbl_c4">นิกเกิลกึ่งเงา</td>
+                <td data-i18n-key="mech_tbl_c5">200–300</td>
+                <td data-i18n-key="mech_tbl_c6">โครงสร้างแน่น ใช้เป็นเกราะป้องกันสนิมที่ดี</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="mech_tbl_c7">นิกเกิลเงา</td>
+                <td data-i18n-key="mech_tbl_c8">300–500</td>
+                <td data-i18n-key="mech_tbl_c9">เงาสูง เน้นความสวยงาม ดีสำหรับงานตกแต่ง</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="mech_tbl_c10">นิกเกิลซัลฟาเมต หรือ นิกเกิลไร้กระแสไฟฟ้า</td>
+                <td data-i18n-key="mech_tbl_c11">ประมาณ 250–600</td>
+                <td data-i18n-key="mech_tbl_c12">ความเค้นต่ำ ชุบได้หนามาก เหมาะกับงานอุตสาหกรรมและงานฟังก์ชัน</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="checklist" class="reveal section-block" aria-labelledby="chk-h">
-      <h2 id="chk-h" class="section" data-i18n-key="chk_h">เช็กลิสต์ก่อนตัดสินใจ</h2>
-      <div class="table">
-        <table id="tbl_check">
-          <thead>
-            <tr>
-              <th data-i18n-key="chk_tbl_h1">ประเด็น</th>
-              <th data-i18n-key="chk_tbl_h2">ถามตัวเอง/ลูกค้า</th>
-              <th data-i18n-key="chk_tbl_h3">ผลต่อการเลือกทองแดง</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="chk_tbl_c1">ความงาม/เงา/ความเรียบ</td>
-              <td data-i18n-key="chk_tbl_c2">เห็นชิ้นงานระยะใกล้หรือไม่? ผิวตั้งต้นหยาบไหม?</td>
-              <td data-i18n-key="chk_tbl_c3">ต้องการทองแดงเพื่อ leveling</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="chk_tbl_c4">ความทนสึก/แข็ง</td>
-              <td data-i18n-key="chk_tbl_c5">สัมผัส/สไลด์บ่อย? โหลดสูง?</td>
-              <td data-i18n-key="chk_tbl_c6">ตัดทองแดง ใช้ Ni ฟังก์ชันแทน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="chk_tbl_c7">สภาพแวดล้อมกัดกร่อน</td>
-              <td data-i18n-key="chk_tbl_c8">กลางแจ้ง/ทะเล/เกลือถนน?</td>
-              <td data-i18n-key="chk_tbl_c9">หลีกเลี่ยงทองแดงใต้ Ni ที่พรุน เพิ่มชั้นกั้น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="chk_tbl_c10">งบประมาณ/เวลาผลิต</td>
-              <td data-i18n-key="chk_tbl_c11">เพดานต้นทุน/ takt time เท่าไร?</td>
-              <td data-i18n-key="chk_tbl_c12">อาจใช้ Wood’s strike + duplex Ni</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section id="process" data-part="2" class="reveal section-block" aria-labelledby="proc-h" hidden>
+        <h2 id="proc-h" class="section" data-i18n-key="proc_h">ตัวเลือกการจัดชั้นชุบ</h2>
+        <div class="table">
+          <table id="tbl_proc">
+            <thead>
+              <tr>
+                <th data-i18n-key="proc_tbl_h1">ชุดชั้นชุบ</th>
+                <th data-i18n-key="proc_tbl_h2">คำอธิบายโดยย่อ</th>
+                <th data-i18n-key="proc_tbl_h3">การใช้งานที่เหมาะ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="proc_tbl_c1">เหล็ก → ทองแดงชุบเริ่มต้น → ทองแดงกรด → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม</td>
+                <td data-i18n-key="proc_tbl_c2">ทำให้ผิวเรียบเสมอกันสูง สวยงามดี แต่เพิ่มเวลาในบ่อชุบและต้นทุน</td>
+                <td data-i18n-key="proc_tbl_c3">งานตกแต่งระดับพรีเมียม</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_c4">เหล็ก → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม</td>
+                <td data-i18n-key="proc_tbl_c5">ตัดชั้นทองแดงออก ลดความเสี่ยงการกัดกร่อนแบบกัลวานิกที่เกิดจากรูพรุน</td>
+                <td data-i18n-key="proc_tbl_c6">งานตกแต่งทั่วไปหรืองานที่ต้องควบคุมต้นทุน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_c7">เหล็ก → นิกเกิลไร้กระแสไฟฟ้าชนิดฟอสฟอรัสปานกลาง → นิกเกิลสำหรับงานฟังก์ชันหรือตกแต่ง</td>
+                <td data-i18n-key="proc_tbl_c8">เป็นเกราะป้องกันที่แน่นหนามาก การกระจายตัวของชั้นชุบสม่ำเสมอ</td>
+                <td data-i18n-key="proc_tbl_c9">สภาพแวดล้อมกัดกร่อนรุนแรงหรือชิ้นส่วนรูปทรงซับซ้อน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_c10">เหล็ก → นิกเกิลซัลฟาเมต</td>
+                <td data-i18n-key="proc_tbl_c11">ความเค้นต่ำ ชุบได้หนาเร็ว เหมาะสำหรับงานซ่อมสร้างหรือปรับขนาด</td>
+                <td data-i18n-key="proc_tbl_c12">งานใช้งานหนักหรือชิ้นส่วนที่ต้องมีการสวมใส่หรือสไลด์</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="examples" class="reveal section-block" aria-labelledby="ex-h">
-      <h2 id="ex-h" class="section" data-i18n-key="ex_h">ตัวอย่างอุตสาหกรรม</h2>
-      <ul class="nice">
-        <li data-i18n-key="ex_l1"><strong>ชิ้นส่วนตกแต่งรถยนต์</strong>: duplex Ni + micro-porous Cr; ทองแดงใช้เมื่อผิวฐานต้องเก็บผิวหนัก</li>
-        <li data-i18n-key="ex_l2"><strong>ฮาร์ดแวร์บ้าน</strong> (ลูกบิด/บานพับ): Wood’s strike + Ni เงา; บางรุ่นเพิ่ม acid copper เพื่อความเรียบ</li>
-        <li data-i18n-key="ex_l3"><strong>ชิ้นส่วนเครื่องกล</strong>: sulfamate Ni หนา/EN เป็น underlayer ฟังก์ชัน</li>
-      </ul>
-    </section>
+      <section id="failures" data-part="2" class="reveal section-block" aria-labelledby="fail-h" hidden>
+        <h2 id="fail-h" class="section" data-i18n-key="fail_h">รูปแบบความเสียหายที่พบบ่อย</h2>
+        <ul class="nice">
+          <li data-i18n-key="fail_l1"><strong>การลอกหรือการพอง:</strong> เกิดจากการเตรียมผิวหรือการกระตุ้นผิวที่ไม่สมบูรณ์ หรือการชุบเริ่มต้นไม่เพียงพอ</li>
+          <li data-i18n-key="fail_l2"><strong>สนิมแดงทะลุผ่านรูพรุน:</strong> มักเกิดเมื่อมีทองแดงอยู่ใต้ชั้นนิกเกิลที่มีรูพรุน ก่อให้เกิดเซลล์กัลวานิกและเร่งการเกิดสนิม</li>
+          <li data-i18n-key="fail_l3"><strong>สีและความเงาไม่สม่ำเสมอ:</strong> มักเกิดเมื่อพื้นผิวเดิมหยาบและไม่มีชั้นทองแดงกรดช่วยปรับผิวให้เรียบเสมอกัน</li>
+        </ul>
+      </section>
 
-    <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
-      <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุป</h2>
-      <p data-i18n-key="sum_p1">ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบ/ความงาม แต่ไม่จำเป็นเสมอไปสำหรับงานฟังก์ชันหรือสภาพกัดกร่อนจัด หากควบคุมการเตรียมผิวและใช้ strike/ชั้น Ni ที่เหมาะสม</p>
-      <p data-i18n-key="sum_p2">พิจารณาตามเป้าหมายงาน งบ และความเสี่ยงด้านกัลวานิก เลือกสแต็คที่สมดุลระหว่างคุณภาพและต้นทุน</p>
-    </section>
+      <section id="checklist" data-part="2" class="reveal section-block" aria-labelledby="chk-h" hidden>
+        <h2 id="chk-h" class="section" data-i18n-key="chk_h">สิ่งที่ต้องพิจารณาก่อนตัดสินใจ</h2>
+        <div class="table">
+          <table id="tbl_check">
+            <thead>
+              <tr>
+                <th data-i18n-key="chk_tbl_h1">ประเด็นหลัก</th>
+                <th data-i18n-key="chk_tbl_h2">ข้อสังเกตุ</th>
+                <th data-i18n-key="chk_tbl_h3">ผลต่อการเลือกใช้ทองแดง</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="chk_tbl_c1">ความสวยงาม ความเงา ความเรียบ</td>
+                <td data-i18n-key="chk_tbl_c2">เห็นชิ้นงานในระยะใกล้ไหม? ผิวตั้งต้นหยาบมากหรือไม่?</td>
+                <td data-i18n-key="chk_tbl_c3">ต้องใช้ทองแดงเพื่อช่วยปรับผิวให้เรียบเสมอกัน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="chk_tbl_c4">ความทนทานต่อการสึกหรอและความแข็ง</td>
+                <td data-i18n-key="chk_tbl_c5">มีการสัมผัสหรือสไลด์บ่อยไหม? รับน้ำหนักสูงหรือไม่?</td>
+                <td data-i18n-key="chk_tbl_c6">ตัดทองแดงออก ใช้นิกเกิลสำหรับงานฟังก์ชันแทน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="chk_tbl_c7">สภาพแวดล้อมที่ทำให้เกิดสนิมหรือกัดกร่อน</td>
+                <td data-i18n-key="chk_tbl_c8">ใช้งานกลางแจ้ง ติดทะเล หรือมีเกลือจากถนนไหม?</td>
+                <td data-i18n-key="chk_tbl_c9">หลีกเลี่ยงทองแดงใต้ชั้นนิกเกิลที่มีรูพรุน และเพิ่มชั้นกั้นที่แน่นหนา</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="chk_tbl_c10">งบประมาณและเวลาผลิตต่อชิ้นงาน</td>
+                <td data-i18n-key="chk_tbl_c11">จำกัดต้นทุนหรือต้องผลิตเร็วแค่ไหน?</td>
+                <td data-i18n-key="chk_tbl_c12">ตัดชั้นทองแดงออก และชุบนิกเกิลลงบนเหล็กโดยตรง</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="links" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
-      <ul class="nice">
-        <li><a href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" target="_blank" rel="noopener" data-i18n-key="links_l1">บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น</a></li>
-        <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener" data-i18n-key="links_l2">ผลิตภัณฑ์สำหรับงาน Plating</a></li>
-        <li><a href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></li>
-      </ul>
-    </section>
+      <section id="examples" data-part="2" class="reveal section-block" aria-labelledby="examples-h" hidden>
+        <h2 id="examples-h" class="section" data-i18n-key="ex_h">ตัวอย่างการใช้งานในโรงงาน</h2>
+        <ul class="nice">
+          <li data-i18n-key="ex_l1"><strong>ชิ้นส่วนตกแต่งรถยนต์:</strong> ใช้นิกเกิลสองชั้นและโครเมียมที่มีรูพรุนเล็กน้อย จะใช้ชั้นทองแดงก็ต่อเมื่อผิวเหล็กตั้งต้นต้องเก็บผิวมากเป็นพิเศษ</li>
+          <li data-i18n-key="ex_l2"><strong>ฮาร์ดแวร์บ้าน (เช่น ลูกบิด บานพับ):</strong> ชุบนิกเกิลกึ่งเงาหรือนิกเกิลเงาลงบนเหล็กโดยตรง ช่วยลดต้นทุน; บางรุ่นอาจเพิ่มชั้นทองแดงกรดเพื่อให้ผิวเรียบเนียนขึ้น</li>
+          <li data-i18n-key="ex_l3"><strong>ชิ้นส่วนเครื่องกล:</strong> ใช้นิกเกิลซัลฟาเมตชุบหนา หรือนิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นหลักสำหรับงานฟังก์ชันที่เน้นความแข็งแกร่ง</li>
+        </ul>
+      </section>
+
+      <section id="summary" data-part="2" class="reveal section-block" aria-labelledby="sum-h" hidden>
+        <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุปเนื้อหา</h2>
+        <p data-i18n-key="sum_p1">ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบเนียนและความสวยงามระดับพรีเมียม แต่ไม่จำเป็นเสมอไปสำหรับงานที่เน้นฟังก์ชันการใช้งานหนัก หรือต้องเผชิญกับสภาพแวดล้อมที่กัดกร่อนรุนแรง หากมีการควบคุมการเตรียมผิวที่ดีและใช้การชุบนิกเกิลที่เหมาะสมโดยตรง</p>
+        <p data-i18n-key="sum_p2">การตัดสินใจควรพิจารณาจากเป้าหมายของงาน งบประมาณ และประเมินความเสี่ยงจากการกัดกร่อนแบบกัลวานิก เพื่อเลือกชุดชั้นชุบที่สมดุลระหว่างคุณภาพสูงสุดและต้นทุนการผลิตที่คุ้มค่า</p>
+      </section>
+
+      <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h" hidden>
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ข้อมูลเพิ่มเติม (ลิงก์ที่เกี่ยวข้อง)</h2>
+        <ul class="nice">
+          <li><a href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" target="_blank" rel="noopener" data-i18n-key="links_l1">บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น</a></li>
+          <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener" data-i18n-key="links_l2">ผลิตภัณฑ์สำหรับงาน Plating</a></li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
           <ul class="footer-list">
-            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
-            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
-            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
-            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+            <li data-i18n-key="addr_1">📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li data-i18n-key="addr_2">📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="addr_3">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li data-i18n-key="addr_4">📱 092 546 9887</li>
           </ul>
         </section>
 
@@ -627,36 +563,42 @@ Designed to match Anti‑tarnish page styling cues.
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2026 Baume Chemical Co., Ltd. All rights reserved.</div>
+      </div>
     </div>
   </footer>
+
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- JS: Reveal on scroll -->
+  <!-- ===== JS ===== -->
   <script>
+    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
+    }, {threshold:.1});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n dictionary + switch -->
   <script>
+    // Translations Data
     const I18N = {
       th: {
-        /* Nav */
+        title:"นิกเกิลบนเหล็กต้องรองพื้นทองแดงไหม? เปรียบเทียบข้อดี–ข้อเสีย | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับสู่หน้า Blog",
-
-         hero_title:"ชุบนิกเกิลบนเหล็กต้องลงทองแดงรองพื้นไหม? เปรียบเทียบข้อดี–ข้อเสีย",
+        back_home:"← กลับหน้าบทความ",
+        hero_title:"ชุบนิกเกิลบนเหล็กต้องลงทองแดงรองพื้นไหม? เปรียบเทียบข้อดี–ข้อเสีย",
         hero_tagline:"ควรใช้ทองแดงรองพื้นก่อน หรือชุบนิกเกิลลงบนเหล็กโดยตรงดี? มาดูเรื่องการยึดเกาะ, ความทนทาน, การเกิดสนิม, ความสวยงาม, ค่าใช้จ่าย, และชั้นชุบที่แนะนำ",
 
-        /* TOC */
+        part1:"ส่วนที่ 1: การยึดเกาะและป้องกันสนิม",
+        part2:"ส่วนที่ 2: ความแข็ง การจัดชั้น และแก้ปัญหา",
+
         toc_title:"สารบัญ",
         toc_intro:"เกริ่นนำ",
-        toc_short:"คำตอบสั้น ๆ",
+        toc_short:"คำตอบสั้นๆ (ตารางสรุป)",
         toc_adh:"การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี",
         toc_barrier:"การกันซึมและการป้องกันสนิม",
         toc_mech:"ความแข็งและความเรียบของผิว",
@@ -667,100 +609,99 @@ Designed to match Anti‑tarnish page styling cues.
         toc_summary:"สรุปเนื้อหา",
         toc_links:"ข้อมูลเพิ่มเติม (ลิงก์ที่เกี่ยวข้อง)",
 
-       /* Intro */
         intro_h:"จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?",
         intro_p1:"คำถามสำคัญในการชุบเพื่อความสวยงามและป้องกันสนิมบนเหล็ก: จำเป็นต้องมีชั้นทองแดงก่อนชุบนิกเกิลหรือไม่?",
         intro_p2:"การใช้ทองแดงรองพื้นก่อนชุบนิกเกิลบนเหล็ก ไม่ได้จำเป็นเสมอไป แต่จะถูกเลือกใช้เมื่อต้องการคุณสมบัติเฉพาะด้าน เช่น ความเงางามระดับสูง หรือการเติมเต็มร่องรอยบนพื้นผิว การพิจารณาขึ้นอยู่กับการประเมิน ความเสี่ยง (สนิม) และความสวยงาม/ความทนทาน",
-        intro_p3:"1.เหตุผลที่ทองแดงมีประโยชน์: เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย แต่การใช้ ทองแดงชุบเริ่มต้น (Copper Strike) บางๆ ก่อนจะช่วยเป็น ตัวกลาง ที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์",
-        intro_p4:"2.เมื่อต้องใช้ทองแดง: หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ ทองแดงกรด (Acid Copper) เป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติ ปรับผิวให้เรียบเสมอกัน (Leveling) ได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด",
-        intro_p5:"3.หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิด รูพรุนหรือมีรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้ นิกเกิลสองชั้น (Duplex Nickel) หรือ นิกเกิลไร้กระแสไฟฟ้า (EN) เพื่อเพิ่มความหนาแน่น/ลดรูพรุนแทน",
-        intro_p6:"4.การตัดทองแดง: การเลือกใช้ทองแดงด่างและทองแดงกรดรองพื้น แล้วชุบนิกเกิลโดยตรง จะช่วย ลดขั้นตอน การชุบ (ลดเวลาในบ่อ) และ ลดต้นทุน ในการจัดการน้ำยา (โดยเฉพาะหากเป็นทองแดงไซยาไนด์ ซึ่งมีความอันตรายและมีข้อกำหนดในการจัดการสูง) ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป",
-        intro_p7:"หากคุณผลิตชิ้นส่วน โครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบ ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิต ชิ้นส่วนเครื่องจักร หรือ ชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้",
+        intro_p3:"<strong>1. เหตุผลที่ทองแดงมีประโยชน์:</strong> เหล็กและนิกเกิลมีศักย์ไฟฟ้าต่างกันเล็กน้อย การชุบทองแดงเริ่มต้นบางๆ ก่อนจะช่วยเป็นตัวกลางที่เชื่อมโลหะทั้งสองเข้าด้วยกัน ทำให้การยึดเกาะดีขึ้น โดยเฉพาะอย่างยิ่งบนผิวเหล็กที่ไม่สะอาดสมบูรณ์",
+        intro_p4:"<strong>2. เมื่อต้องใช้ทองแดง:</strong> หากพื้นผิวเหล็กตั้งต้นมีความหยาบหรือมีรอยขีดข่วนเล็กน้อย การใช้ทองแดงกรดเป็นสิ่งจำเป็น เพราะทองแดงมีความอ่อนและมีคุณสมบัติปรับผิวให้เรียบเสมอกันได้ดีเยี่ยม ทองแดงจะไหลตัวเข้าไปเติมเต็มร่องรอยเหล่านี้ ก่อนชุบนิกเกิลเงาเพื่อให้ได้ผิวที่มันวาวสูงสุด",
+        intro_p5:"<strong>3. ความเสี่ยงด้านการกัดกร่อน:</strong> หากชุบนิกเกิลหนาแน่นพอ ทองแดงที่อยู่ใต้ชั้นนิกเกิลจะช่วยเสริมการป้องกันโดยรวมได้ แต่หากชั้นนิกเกิลที่เคลือบอยู่ด้านบนเกิดรูพรุนหรือรอยร้าว น้ำและความชื้นจะซึมลงไปถึงชั้นทองแดง เมื่อทองแดงสัมผัสกับเหล็กจะเกิดการกัดกร่อนแบบกัลวานิก ซึ่งเร่งให้เหล็กเป็นสนิมแดงเร็วขึ้นกว่าการที่นิกเกิลสัมผัสเหล็กโดยตรงเสียอีก ดังนั้นงานที่เน้นความทนทานสูงในสภาพแวดล้อมรุนแรง มักจะหลีกเลี่ยงทองแดง และใช้นิกเกิลสองชั้น หรือนิกเกิลไร้กระแสไฟฟ้า เพื่อเพิ่มความหนาแน่นและลดรูพรุนแทน",
+        intro_p6:"<strong>4. การชุบนิกเกิลลงเหล็กโดยตรง:</strong> การเลือกใช้นิกเกิลชุบลงบนเหล็กโดยตรง จะช่วยลดขั้นตอนการชุบ (ลดเวลาในบ่อ) และลดต้นทุนในการจัดการน้ำยาเคมี ทำให้สายงานผลิตสั้นและมีเสถียรภาพมากขึ้นสำหรับงานทั่วไป",
+        intro_p7:"<strong>สรุป:</strong> หากคุณผลิตชิ้นส่วนที่ต้องการโครเมียมเงาแวววาวบนรถยนต์ ที่ต้องเก็บผิวให้เรียบเนียนที่สุด ทองแดงเป็นตัวเลือกที่ดี แต่ถ้าคุณผลิตชิ้นส่วนเครื่องจักร หรือชิ้นส่วนใช้งานกลางแจ้ง ที่ต้องการเกราะป้องกันสนิมที่ไว้วางใจได้ ควรพิจารณาชุบนิกเกิลลงบนเหล็กโดยตรง",
 
-
-        /* Short answer */
-        short_h:"คำตอบ",
+        short_h:"คำตอบสั้นๆ",
         short_tbl_h1:"สถานการณ์ที่ต้องการ", short_tbl_h2:"ควรใช้ทองแดงไหม?", short_tbl_h3:"เหตุผล",
-        short_tbl_c1:"งานตกแต่งที่ต้องการความเงามากๆ", short_tbl_c2:"แนะนำ", short_tbl_c3:"ทองแดงอ่อน/ไหลตัวดี → ทำให้ผิวเรียบเสมอกัน; แล้วตามด้วยนิกเกิลเพื่อให้ทนทาน",
-        short_tbl_c4:"งานใช้งานหนัก/ส่วนที่ต้องเสียดสี ต้องความแข็งสูง", short_tbl_c5:"ไม่จำเป็นเสมอไป", short_tbl_c6:"ใช้นิกเกิลชุบลงไปตรงๆ จะดีกว่า",
-        short_tbl_c7:"ชิ้นงานที่มีรูปร่างซับซ้อน ต้องให้สารเคมีเข้าถึงทุกซอกมุม", short_tbl_c8:"ลองพิจารณาดู", short_tbl_c9:"ทองแดงกรด กระจายตัวได้ดี ชุบเติมมุมอับที่เข้าถึงยาก ก่อนชุบนิกเกิล",
-        short_tbl_c10:"งบจำกัด อยากให้ขั้นตอนสั้นลง", short_tbl_c11:"อาจตัดออกได้", short_tbl_c12:"ใช้ นิกเกิลชุบเริ่มต้นแบบวูดส์ แล้วตามด้วยนิกเกิลกึ่งเงา/เงาแทน",
+        short_tbl_c1:"งานตกแต่งที่ต้องการความเงามากๆ", short_tbl_c2:"แนะนำ", short_tbl_c3:"ทองแดงอ่อนและไหลตัวดี ทำให้ผิวเรียบเสมอกัน แล้วตามด้วยนิกเกิลเพื่อให้ทนทาน",
+        short_tbl_c4:"งานใช้งานหนักหรือส่วนที่ต้องเสียดสี ต้องความแข็งสูง", short_tbl_c5:"ไม่จำเป็นเสมอไป", short_tbl_c6:"ใช้นิกเกิลชุบลงไปตรงๆ จะดีกว่า",
+        short_tbl_c7:"ชิ้นงานที่มีรูปร่างซับซ้อน ต้องให้สารเคมีเข้าถึงทุกซอกมุม", short_tbl_c8:"ลองพิจารณาดู", short_tbl_c9:"ทองแดงกรดกระจายตัวได้ดี ชุบเติมมุมอับที่เข้าถึงยาก ก่อนชุบนิกเกิล",
+        short_tbl_c10:"งบจำกัด อยากให้ขั้นตอนสั้นลง", short_tbl_c11:"อาจตัดออกได้", short_tbl_c12:"ชุบนิกเกิล (เช่น นิกเกิลกึ่งเงา) ลงบนเหล็กโดยตรง เพื่อลดขั้นตอน",
 
-        /* Adhesion */
         adh_h:"การยึดเกาะและการเข้ากันทางไฟฟ้าเคมี",
-        adh_p1:"การชุบทองแดงแบบบาง เช่น สูตรไซยาไนด์/ไพโรฟอสเฟต หรือ ทองแดงกรด ที่บางมากๆ ทำหน้าที่เป็น สะพานโลหะ ระหว่างเหล็กกับชั้นบน ช่วยลดปฏิกิริยาไฟฟ้าเคมีที่รุนแรงและเพิ่มพื้นที่สัมผัสในระดับเล็กๆ ทำให้ชิ้นงานติดแน่นขึ้น",
-        adh_p2:"ทางเลือก: ใช้ นิกเกิลชุบเริ่มต้น (สารละลาย นิกเกิลคลอไรด์ผสมกรดเกลือ) จะช่วย กระตุ้นผิวเหล็ก และสร้างชั้นนิกเกิลบางที่ยึดเกาะดีมาก ก่อนจะชุบ นิกเกิลกึ่งเงา หรือ นิกเกิลเงา ต่อ โดยไม่ต้องผ่านทองแดง",
+        adh_p1:"การชุบทองแดงเริ่มต้นแบบบาง หรือการชุบทองแดงกรดที่บางมากๆ ทำหน้าที่เป็นสะพานโลหะระหว่างเหล็กกับชั้นบนสุด ช่วยลดปฏิกิริยาไฟฟ้าเคมีที่รุนแรงเฉียบพลัน และเพิ่มพื้นที่สัมผัสในระดับจุลภาค ทำให้ชิ้นงานติดแน่นขึ้น",
+        adh_p2:"<strong>ทางเลือก:</strong> การชุบนิกเกิลลงบนเหล็กโดยตรงสามารถให้การยึดเกาะที่แข็งแรงและทนทานได้ หากมีการเตรียมผิวและกระตุ้นผิวที่ดีพอ โดยสามารถลงชั้นนิกเกิลกึ่งเงาเป็นฐานได้เลยโดยไม่ต้องผ่านชั้นทองแดง",
 
-        /* Barrier */
         bar_h:"การกันซึมและการป้องกันสนิม",
-        bar_p1:"ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อมีรูพรุนอาจกลายเป็น แคโทด เทียบกับเหล็ก ทำให้เหล็กเป็น แอโนด และเกิดสนิมเร็วขึ้น ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพา ชั้นนิกเกิลเป็นเกราะกั้นการซึมของความชื้น",
-        bar_p2:"ในงานที่ต้องการปกป้องสูง แนะนำ นิกเกิลสองชั้น หรือ นิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นเพื่อเพิ่มความหนาแน่น/ลดรูพรุน ก่อนชั้นตกแต่ง",
+        bar_p1:"ทองแดงมีความต้านทานการกัดกร่อนไม่สูงนัก เมื่อชั้นเคลือบมีรูพรุน ทองแดงอาจกลายเป็นขั้วลบเทียบกับเหล็ก ทำให้เหล็กเป็นขั้วบวกและเกิดสนิมแดงเร็วขึ้นอย่างรวดเร็ว ดังนั้นในระบบตกแต่งสมัยใหม่จึงพึ่งพาชั้นนิกเกิลเป็นเกราะกั้นการซึมของความชื้นเป็นหลัก",
+        bar_p2:"ในงานที่ต้องการการปกป้องสูง แนะนำให้ใช้นิกเกิลสองชั้น หรือนิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นเพื่อเพิ่มความหนาแน่นและลดรูพรุน ก่อนการชุบชั้นตกแต่ง",
 
-        /* Mechanical */
-        mech_h:"ความแข็งและความเรียบ",
+        mech_h:"ความแข็งและความเรียบของผิว",
         mech_tbl_h1:"ชั้นชุบ", mech_tbl_h2:"ความแข็งโดยประมาณ", mech_tbl_h3:"คุณสมบัติเด่น",
-        mech_tbl_c1:"ทองแดง (กรด)", mech_tbl_c2:"80–120", mech_tbl_c3:"นุ่มและไหลตัวได้ดี เติมรอย/หลุมเล็ก ๆ ทำให้ผิวเรียบขึ้น",
-        mech_tbl_c4:"นิกเกิลกึ่งเงา", mech_tbl_c5:"200–300", mech_tbl_c6:"โครงสร้างแน่น ใช้เป็น เกราะป้องกัน ที่ดี",
+        mech_tbl_c1:"ทองแดงกรด", mech_tbl_c2:"80–120", mech_tbl_c3:"นุ่มและไหลตัวได้ดี เติมรอยหรือหลุมเล็กๆ ทำให้ผิวเรียบขึ้น",
+        mech_tbl_c4:"นิกเกิลกึ่งเงา", mech_tbl_c5:"200–300", mech_tbl_c6:"โครงสร้างแน่น ใช้เป็นเกราะป้องกันสนิมที่ดี",
         mech_tbl_c7:"นิกเกิลเงา", mech_tbl_c8:"300–500", mech_tbl_c9:"เงาสูง เน้นความสวยงาม ดีสำหรับงานตกแต่ง",
-        mech_tbl_c10:"นิกเกิล ซัลฟาเมต/นิกเกิลไร้กระแสไฟฟ้า (งานอุตสาหกรรม)", mech_tbl_c11:"ประมาณ 250–600", mech_tbl_c12:"ความเค้นต่ำ ชุบได้หนามาก เหมาะกับงานอุตสาหกรรม/งานฟังก์ชัน",
+        mech_tbl_c10:"นิกเกิลซัลฟาเมต หรือ นิกเกิลไร้กระแสไฟฟ้า", mech_tbl_c11:"ประมาณ 250–600", mech_tbl_c12:"ความเค้นต่ำ ชุบได้หนามาก เหมาะกับงานอุตสาหกรรมและงานฟังก์ชัน",
 
-        proc_h:"ตัวเลือกการจัดเรียงชั้นชุบ",
+        proc_h:"ตัวเลือกการจัดชั้นชุบ",
         proc_tbl_h1:"ชุดชั้นชุบ", proc_tbl_h2:"คำอธิบายโดยย่อ", proc_tbl_h3:"การใช้งานที่เหมาะ",
         proc_tbl_c1:"เหล็ก → ทองแดงชุบเริ่มต้น → ทองแดงกรด → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม",
         proc_tbl_c2:"ทำให้ผิวเรียบเสมอกันสูง สวยงามดี แต่เพิ่มเวลาในบ่อชุบและต้นทุน",
         proc_tbl_c3:"งานตกแต่งระดับพรีเมียม",
-        proc_tbl_c4:"เหล็ก → นิกเกิลชุบเริ่มต้นแบบวูดส์ → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม",
-        proc_tbl_c5:"ตัดชั้นทองแดงออก ลดความเสี่ยงการกัดกร่อนแบบกัลวานิก ที่เกิดจากรูพรุน",
-        proc_tbl_c6:"งานตกแต่งทั่วไป/งานที่ต้องควบคุมต้นทุน",
-        proc_tbl_c7:"เหล็ก → นิกเกิลไร้กระแสไฟฟ้า ชนิดฟอสฟอรัสปานกลาง → นิกเกิลสำหรับงานฟังก์ชัน/ตกแต่ง",
+        proc_tbl_c4:"เหล็ก → นิกเกิลกึ่งเงา → นิกเกิลเงา → โครเมียม",
+        proc_tbl_c5:"ตัดชั้นทองแดงออก ลดความเสี่ยงการกัดกร่อนแบบกัลวานิกที่เกิดจากรูพรุน",
+        proc_tbl_c6:"งานตกแต่งทั่วไปหรืองานที่ต้องควบคุมต้นทุน",
+        proc_tbl_c7:"เหล็ก → นิกเกิลไร้กระแสไฟฟ้าชนิดฟอสฟอรัสปานกลาง → นิกเกิลสำหรับงานฟังก์ชันหรือตกแต่ง",
         proc_tbl_c8:"เป็นเกราะป้องกันที่แน่นหนามาก การกระจายตัวของชั้นชุบสม่ำเสมอ",
-        proc_tbl_c9:"สภาพแวดล้อมกัดกร่อนรุนแรง/ชิ้นส่วนรูปทรงซับซ้อน",
+        proc_tbl_c9:"สภาพแวดล้อมกัดกร่อนรุนแรงหรือชิ้นส่วนรูปทรงซับซ้อน",
         proc_tbl_c10:"เหล็ก → นิกเกิลซัลฟาเมต",
-        proc_tbl_c11:"ความเค้นต่ำ ชุบได้หนาเร็ว เหมาะสำหรับงานซ่อมบิ้วด์/ปรับขนาด",
-        proc_tbl_c12:"งานใช้งานหนัก/ชิ้นส่วนที่ต้องมีการสวมใส่หรือสไลด์",
+        proc_tbl_c11:"ความเค้นต่ำ ชุบได้หนาเร็ว เหมาะสำหรับงานซ่อมสร้างหรือปรับขนาด",
+        proc_tbl_c12:"งานใช้งานหนักหรือชิ้นส่วนที่ต้องมีการสวมใส่หรือสไลด์",
 
-       fail_h:"รูปแบบความเสียหายที่พบบ่อย",
-        fail_l1:"การลอก/การพอง จากการเตรียมผิวหรือการกระตุ้นผิวที่ไม่สมบูรณ์ หรือการชุบเริ่มต้นไม่เพียงพอ",
-        fail_l2:"สนิมแดงทะลุผ่านรูพรุน โดยเฉพาะเมื่อมีทองแดงอยู่ใต้ชั้นนิกเกิลที่มีรูพรุน → เกิด เซลล์กัลวานิก",
-        fail_l3:"สี/ความเงาไม่สม่ำเสมอ เมื่อพื้นผิวเดิมหยาบและไม่มี ทองแดงกรด ช่วยปรับผิวให้เรียบเสมอกัน",
+        fail_h:"รูปแบบความเสียหายที่พบบ่อย",
+        fail_l1:"<strong>การลอกหรือการพอง:</strong> เกิดจากการเตรียมผิวหรือการกระตุ้นผิวที่ไม่สมบูรณ์ หรือการชุบเริ่มต้นไม่เพียงพอ",
+        fail_l2:"<strong>สนิมแดงทะลุผ่านรูพรุน:</strong> มักเกิดเมื่อมีทองแดงอยู่ใต้ชั้นนิกเกิลที่มีรูพรุน ก่อให้เกิดเซลล์กัลวานิกและเร่งการเกิดสนิม",
+        fail_l3:"<strong>สีและความเงาไม่สม่ำเสมอ:</strong> มักเกิดเมื่อพื้นผิวเดิมหยาบและไม่มีชั้นทองแดงกรดช่วยปรับผิวให้เรียบเสมอกัน",
 
-        chk_h:"สิ่งที่ต้องตรวจสอบก่อนตัดสินใจ",
+        chk_h:"สิ่งที่ต้องพิจารณาก่อนตัดสินใจ",
         chk_tbl_h1:"ประเด็นหลัก", chk_tbl_h2:"ข้อสังเกตุ", chk_tbl_h3:"ผลต่อการเลือกใช้ทองแดง",
-        chk_tbl_c1:"ความสวยงาม/ความเงา/ความเรียบ", chk_tbl_c2:"เห็นชิ้นงานในระยะใกล้ไหม? ผิวตั้งต้นหยาบมากหรือไม่?",
-        chk_tbl_c3:"ต้อง ใช้ทองแดงเพื่อช่วยปรับผิวให้เรียบเสมอกัน",
-        chk_tbl_c4:"ความทนทานต่อการสึกหรอ/ความแข็ง", chk_tbl_c5:"มีการสัมผัส/สไลด์บ่อยไหม? รับน้ำหนักสูงหรือไม่?",
-        chk_tbl_c6:"ตัดทองแดงออก ใช้ นิกเกิลสำหรับงานฟังก์ชัน แทน",
-        chk_tbl_c7:"สภาพแวดล้อมที่ทำให้เกิดสนิม/กัดกร่อน", chk_tbl_c8:"ใช้งานกลางแจ้ง/ติดทะเล/มีเกลือจากถนนไหม?",
-        chk_tbl_c9:"หลีกเลี่ยง ทองแดงใต้ชั้นนิกเกิลที่มีรูพรุน และ เพิ่มชั้นกั้น ที่แน่นหนา",
-        chk_tbl_c10:"งบประมาณ/เวลาผลิต (เวลาต่อชิ้นงาน)", chk_tbl_c11:"จำกัดต้นทุน/ต้องผลิตเร็วแค่ไหน?",
-        chk_tbl_c12:"อาจใช้ นิกเกิลชุบเริ่มต้นแบบวูดส์ + นิกเกิลสองชั้น แทน",
+        chk_tbl_c1:"ความสวยงาม ความเงา ความเรียบ", chk_tbl_c2:"เห็นชิ้นงานในระยะใกล้ไหม? ผิวตั้งต้นหยาบมากหรือไม่?", chk_tbl_c3:"ต้องใช้ทองแดงเพื่อช่วยปรับผิวให้เรียบเสมอกัน",
+        chk_tbl_c4:"ความทนทานต่อการสึกหรอและความแข็ง", chk_tbl_c5:"มีการสัมผัสหรือสไลด์บ่อยไหม? รับน้ำหนักสูงหรือไม่?", chk_tbl_c6:"ตัดทองแดงออก ใช้นิกเกิลสำหรับงานฟังก์ชันแทน",
+        chk_tbl_c7:"สภาพแวดล้อมที่ทำให้เกิดสนิมหรือกัดกร่อน", chk_tbl_c8:"ใช้งานกลางแจ้ง ติดทะเล หรือมีเกลือจากถนนไหม?", chk_tbl_c9:"หลีกเลี่ยงทองแดงใต้ชั้นนิกเกิลที่มีรูพรุน และเพิ่มชั้นกั้นที่แน่นหนา",
+        chk_tbl_c10:"งบประมาณและเวลาผลิตต่อชิ้นงาน", chk_tbl_c11:"จำกัดต้นทุนหรือต้องผลิตเร็วแค่ไหน?", chk_tbl_c12:"ตัดชั้นทองแดงออก และชุบนิกเกิลลงบนเหล็กโดยตรง",
 
         ex_h:"ตัวอย่างการใช้งานในโรงงาน",
-        ex_l1:"ชิ้นส่วนตกแต่งรถยนต์: นิกเกิลสองชั้น + โครเมียมที่มีรูพรุนเล็กน้อย; จะใช้ทองแดงเมื่อผิวเหล็กตั้งต้นต้องเก็บผิวมาก",
-        ex_l2:"ฮาร์ดแวร์บ้าน (ลูกบิด/บานพับ): นิกเกิลชุบเริ่มต้นแบบวูดส์ + นิกเกิลเงา; บางรุ่นเพิ่ม ทองแดงกรด เพื่อให้ผิวเรียบเนียนขึ้น",
-        ex_l3:"ชิ้นส่วนเครื่องกล: นิกเกิลซัลฟาเมต หนา หรือ นิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นสำหรับงานฟังก์ชัน",
+        ex_l1:"<strong>ชิ้นส่วนตกแต่งรถยนต์:</strong> ใช้นิกเกิลสองชั้นและโครเมียมที่มีรูพรุนเล็กน้อย จะใช้ชั้นทองแดงก็ต่อเมื่อผิวเหล็กตั้งต้นต้องเก็บผิวมากเป็นพิเศษ",
+        ex_l2:"<strong>ฮาร์ดแวร์บ้าน (เช่น ลูกบิด บานพับ):</strong> ชุบนิกเกิลกึ่งเงาหรือนิกเกิลเงาลงบนเหล็กโดยตรง ช่วยลดต้นทุน; บางรุ่นอาจเพิ่มชั้นทองแดงกรดเพื่อให้ผิวเรียบเนียนขึ้น",
+        ex_l3:"<strong>ชิ้นส่วนเครื่องกล:</strong> ใช้นิกเกิลซัลฟาเมตชุบหนา หรือนิกเกิลไร้กระแสไฟฟ้า เป็นชั้นรองพื้นหลักสำหรับงานฟังก์ชันที่เน้นความแข็งแกร่ง",
 
-        sum_h:"สรุป",
-        sum_p1:"ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบ/ความสวยงาม แต่ไม่จำเป็นเสมอไปสำหรับงานใช้งานหนัก หรือสภาพกัดกร่อนรุนแรง ถ้ามีการควบคุมการเตรียมผิวและใช้การชุบเริ่มต้น/ชั้นนิกเกิลที่เหมาะสม",
-        sum_p2:"พิจารณาตามเป้าหมายของงาน, งบประมาณ, และความเสี่ยงจากการกัดกร่อนแบบ กัลวานิก เลือกชุดชั้นชุบที่สมดุลระหว่างคุณภาพและต้นทุน",
+        sum_h:"สรุปเนื้อหา",
+        sum_p1:"ทองแดงรองพื้นมีประโยชน์มากในงานที่ต้องการความเรียบเนียนและความสวยงามระดับพรีเมียม แต่ไม่จำเป็นเสมอไปสำหรับงานที่เน้นฟังก์ชันการใช้งานหนัก หรือต้องเผชิญกับสภาพแวดล้อมที่กัดกร่อนรุนแรง หากมีการควบคุมการเตรียมผิวที่ดีและใช้นิกเกิลลงบนเหล็กโดยตรง",
+        sum_p2:"การตัดสินใจควรพิจารณาจากเป้าหมายของงาน งบประมาณ และประเมินความเสี่ยงจากการกัดกร่อนแบบกัลวานิก เพื่อเลือกชุดชั้นชุบที่สมดุลระหว่างคุณภาพสูงสุดและต้นทุนการผลิตที่คุ้มค่า",
 
-        /* Links + Footer */
-        links_h:"ลิงก์ที่เกี่ยวข้อง", links_l1:"บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น", links_l2:"ผลิตภัณฑ์สำหรับงาน Plating",
-        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        links_h:"ข้อมูลเพิ่มเติม (ลิงก์ที่เกี่ยวข้อง)", 
+        links_l1:"บทความ: การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น", 
+        links_l2:"ผลิตภัณฑ์สำหรับงาน Plating",
+        
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved.",
+        addr_1:"📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
+        addr_2:"📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160",
+        addr_3:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        addr_4:"📱 092 546 9887"
       },
 
       en: {
+        title:"Nickel on Steel: Do You Need a Copper Undercoat? | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Blog",
-
+        back_home:"← Back to Articles",
         hero_title:"Nickel on Steel: Do You Need a Copper Undercoat? Pros & Cons",
-        hero_tagline:"Should you copper-undercoat or plate nickel directly on steel? Compare adhesion, durability, corrosion, appearance, cost, and recommended process stacks.",
+        hero_tagline:"Should you use a copper undercoat or plate nickel directly on steel? Compare adhesion, durability, corrosion, appearance, cost, and recommended process stacks.",
+
+        part1:"Part 1: Adhesion & Corrosion",
+        part2:"Part 2: Hardness, Stacks & Troubleshooting",
 
         toc_title:"Contents",
         toc_intro:"Introduction",
         toc_short:"Quick Answer",
-        toc_adh:"Adhesion & Galvanic",
-        toc_barrier:"Diffusion Barrier & Corrosion",
+        toc_adh:"Adhesion & Galvanic Chemistry",
+        toc_barrier:"Diffusion Barrier & Rust Prevention",
         toc_mech:"Hardness & Leveling",
         toc_process:"Process Stack Options",
         toc_fail:"Common Failure Modes",
@@ -771,74 +712,80 @@ Designed to match Anti‑tarnish page styling cues.
 
         intro_h:"Is a copper undercoat required before nickel plating?",
         intro_p1:"A critical question in plating for aesthetics and rust prevention on steel: Is a copper layer necessary before nickel plating?",
-        intro_p2:"Using a copper undercoat before nickel plating on steel is not always mandatory but is chosen when specific properties are needed, such as high luster or filling surface imperfections. The decision depends on evaluating the risk (rust) and the aesthetic/durability goal.",
-        intro_p3:"1.Benefit of Copper: Steel and nickel have slightly different electrical potentials, but using a thin **Copper Strike** first acts as an **intermediate** that links the two metals, improving adhesion, especially on steel surfaces that are not perfectly clean.",
-        intro_p4:"2.When Copper is necessary: If the initial steel surface is rough or has minor scratches, using **Acid Copper** is essential because copper is soft and possesses excellent **Leveling** properties. Copper flows in to fill these imperfections before bright nickel plating for maximum luster.",
-        intro_p5:"3.If the nickel plating is thick enough, the copper underlayer can enhance overall protection. However, if the top nickel layer develops **porosity** or cracks, water and moisture can seep down to the copper. When copper contacts steel, **galvanic corrosion** occurs, accelerating red rust formation much faster than if nickel contacted steel directly. Therefore, jobs requiring high durability in harsh environments often avoid copper and use **Duplex Nickel** or **Electroless Nickel (EN)** to increase density/reduce porosity instead.",
-        intro_p6:"4.Cutting Copper: Choosing to use alkaline copper and acid copper undercoats, and then plating nickel directly, helps to **reduce steps** in the plating process (less time in the bath) and **reduce costs** in chemical management (especially if using cyanide copper, which is hazardous and requires high maintenance), making the production line shorter and more stable for general work.",
-        intro_p7:"If you are producing **shiny chrome parts on cars** that require a smooth finish, copper is a good option. But if you are manufacturing **machine parts** or **outdoor components** that need a reliable anti-rust barrier.",
-
+        intro_p2:"Using a copper undercoat before nickel plating on steel is not always mandatory. It is chosen when specific properties are needed, such as high luster or filling surface imperfections. The decision depends on evaluating the risk of rust versus the aesthetic and durability goals.",
+        intro_p3:"<strong>1. Benefit of Copper:</strong> Steel and nickel have slightly different electrical potentials. Using a thin copper strike first acts as an intermediate bridge that links the two metals, improving adhesion, especially on steel surfaces that are not perfectly clean.",
+        intro_p4:"<strong>2. When Copper is necessary:</strong> If the initial steel surface is rough or has minor scratches, using acid copper is essential because copper is soft and possesses excellent leveling properties. Copper flows in to fill these imperfections before bright nickel plating for maximum luster.",
+        intro_p5:"<strong>3. Corrosion Risk:</strong> If the nickel plating is thick enough, the copper underlayer can enhance overall protection. However, if the top nickel layer develops porosity or cracks, water and moisture can seep down to the copper. When copper contacts steel, galvanic corrosion occurs, accelerating red rust formation much faster than if nickel contacted steel directly. Therefore, jobs requiring high durability in harsh environments often avoid copper and use duplex nickel or electroless nickel to increase density and reduce porosity instead.",
+        intro_p6:"<strong>4. Plating Direct Nickel on Steel:</strong> Plating nickel directly onto steel helps to reduce steps in the plating process (less time in the bath) and reduce costs in chemical management, making the production line shorter and more stable for general work.",
+        intro_p7:"<strong>Conclusion:</strong> If you are producing shiny chrome parts on cars that require a flawlessly smooth finish, copper is a good option. But if you are manufacturing machine parts or outdoor components that need a highly reliable anti-rust barrier, you should consider plating nickel directly on steel.",
 
         short_h:"Quick Answer",
-        short_tbl_h1:"Scenario", short_tbl_h2:"Use copper?", short_tbl_h3:"Why",
-        short_tbl_c1:"High-gloss decorative surfaces (visible parts)", short_tbl_c2:"Recommended (acid copper for leveling)", short_tbl_c3:"Copper is soft/flowing → fills minor defects; Ni then provides durability",
-        short_tbl_c4:"Functional/wear parts needing high hardness", short_tbl_c5:"Not always", short_tbl_c6:"Plate sulfamate/EN/Watts Ni directly (post-strike)",
-        short_tbl_c7:"Complex geometries needing coverage", short_tbl_c8:"Consider", short_tbl_c9:"Acid copper throws well into recesses before Ni",
-        short_tbl_c10:"Tight budget/short takt time", short_tbl_c11:"Possibly skip", short_tbl_c12:"Use Wood’s Ni strike + semi-bright/bright Ni",
+        short_tbl_h1:"Scenario", short_tbl_h2:"Use copper?", short_tbl_h3:"Reasoning",
+        short_tbl_c1:"High-gloss decorative surfaces (visible parts)", short_tbl_c2:"Recommended", short_tbl_c3:"Copper is soft and flows well, leveling the surface; Nickel then provides durability.",
+        short_tbl_c4:"Functional or wear parts needing high hardness", short_tbl_c5:"Not always", short_tbl_c6:"Plating nickel directly is usually better.",
+        short_tbl_c7:"Complex geometries needing full coverage", short_tbl_c8:"Consider it", short_tbl_c9:"Acid copper throws well into recesses before Nickel.",
+        short_tbl_c10:"Tight budget or short takt time", short_tbl_c11:"Possibly skip", short_tbl_c12:"Plate nickel (e.g., semi-bright Ni) directly onto steel to reduce steps.",
 
-        adh_h:"Adhesion & Galvanic",
-        adh_p1:"A thin copper strike (cyanide/pyrophosphate) or light acid copper can bridge steel and the top stack, easing initial galvanic effects and increasing micro-contact area for better adhesion.",
-        adh_p2:"Alternative: Wood’s nickel strike (NiCl₂ + HCl) activates steel and deposits a thin, highly adherent Ni layer before semi-bright/bright Ni—no copper layer needed.",
+        adh_h:"Adhesion & Galvanic Chemistry",
+        adh_p1:"A thin copper strike or a very light acid copper layer acts as a metallic bridge between steel and the top stack, easing initial galvanic effects and increasing micro-contact area for better adhesion.",
+        adh_p2:"<strong>Alternative:</strong> Direct nickel plating onto steel provides excellent adhesion if the surface preparation and acid activation are thorough. You can deposit semi-bright nickel directly without a copper layer.",
 
-        bar_h:"Diffusion Barrier & Corrosion",
-        bar_p1:"Copper’s corrosion resistance is modest; if pores exist, copper can act cathodically versus steel, accelerating red rust. Modern decorative systems rely on nickel (semi-bright/bright/duplex) as the main barrier to moisture and diffusion.",
-        bar_p2:"For harsh environments, use duplex Ni or an EN (electroless nickel) underlayer to densify and reduce porosity before the decorative top.",
+        bar_h:"Diffusion Barrier & Rust Prevention",
+        bar_p1:"Copper’s corrosion resistance is modest. If pores exist, copper can act as a cathode versus steel, causing the steel to become the anode and accelerating red rust. Therefore, modern decorative systems rely on the nickel layer as the primary barrier against moisture.",
+        bar_p2:"For applications demanding high protection, it is recommended to use duplex nickel or electroless nickel as an underlayer to densify the coating and reduce porosity before the decorative topcoat.",
 
         mech_h:"Hardness & Leveling",
-        mech_tbl_h1:"Layer", mech_tbl_h2:"Approx. Hardness (HV)", mech_tbl_h3:"Key Traits",
-        mech_tbl_c1:"Acid copper", mech_tbl_c2:"~80–120", mech_tbl_c3:"Flows and levels; fills minor pits",
-        mech_tbl_c4:"Semi-bright Ni", mech_tbl_c5:"~200–300", mech_tbl_c6:"Dense barrier, good corrosion base",
-        mech_tbl_c7:"Bright Ni", mech_tbl_c8:"~300–500", mech_tbl_c9:"High gloss for aesthetics",
-        mech_tbl_c10:"Sulfamate/EN Ni (functional)", mech_tbl_c11:"~250–600", mech_tbl_c12:"Low stress/ build-up capable for industrial parts",
+        mech_tbl_h1:"Layer", mech_tbl_h2:"Approx. Hardness", mech_tbl_h3:"Key Traits",
+        mech_tbl_c1:"Acid copper", mech_tbl_c2:"80–120", mech_tbl_c3:"Soft and flows well; fills minor pits and levels the surface.",
+        mech_tbl_c4:"Semi-bright nickel", mech_tbl_c5:"200–300", mech_tbl_c6:"Dense structure, serves as an excellent corrosion barrier.",
+        mech_tbl_c7:"Bright nickel", mech_tbl_c8:"300–500", mech_tbl_c9:"High gloss for aesthetics; ideal for decorative work.",
+        mech_tbl_c10:"Sulfamate / Electroless Nickel", mech_tbl_c11:"~ 250–600", mech_tbl_c12:"Low stress, capable of thick builds. Best for industrial/functional parts.",
 
         proc_h:"Process Stack Options",
-        proc_tbl_h1:"Stack", proc_tbl_h2:"Notes", proc_tbl_h3:"Best for",
-        proc_tbl_c1:"Steel → Cu strike → acid Cu (10–20 µm) → semi-bright Ni (12–20 µm) → bright Ni (8–12 µm) → Cr",
-        proc_tbl_c2:"Excellent leveling and appearance; higher time/cost",
-        proc_tbl_c3:"Premium decorative",
-        proc_tbl_c4:"Steel → Wood’s Ni strike → semi-bright Ni → bright Ni → Cr",
-        proc_tbl_c5:"Skips copper; reduces galvanic risk at pores",
-        proc_tbl_c6:"General decorative / cost-balanced",
-        proc_tbl_c7:"Steel → EN (mid-P) 5–10 µm → functional/decorative Ni",
-        proc_tbl_c8:"Dense underlayer, uniform coverage",
-        proc_tbl_c9:"Harsh corrosion / complex parts",
-        proc_tbl_c10:"Steel → sulfamate Ni thick build (20–50+ µm)",
-        proc_tbl_c11:"Low stress, fast build for repair/fit",
-        proc_tbl_c12:"Functional/wear",
+        proc_tbl_h1:"Process Stack", proc_tbl_h2:"Notes", proc_tbl_h3:"Best Application",
+        proc_tbl_c1:"Steel → Copper strike → Acid copper → Semi-bright Ni → Bright Ni → Chromium",
+        proc_tbl_c2:"Excellent leveling and appearance; higher time and cost.",
+        proc_tbl_c3:"Premium decorative finishes.",
+        proc_tbl_c4:"Steel → Semi-bright Ni → Bright Ni → Chromium",
+        proc_tbl_c5:"Skips copper; reduces galvanic corrosion risk at pores.",
+        proc_tbl_c6:"General decorative / Cost-controlled finishes.",
+        proc_tbl_c7:"Steel → Mid-phosphorus Electroless Ni → Functional/Decorative Ni",
+        proc_tbl_c8:"Very dense barrier, uniform deposit distribution.",
+        proc_tbl_c9:"Harsh corrosive environments / Complex geometries.",
+        proc_tbl_c10:"Steel → Thick Sulfamate Ni",
+        proc_tbl_c11:"Low stress, fast build rate. Ideal for dimensional salvage/repair.",
+        proc_tbl_c12:"Heavy duty functional or sliding wear parts.",
 
         fail_h:"Common Failure Modes",
-        fail_l1:"Blistering/delamination from poor prep/activation or insufficient strike",
-        fail_l2:"Red rust via pores, especially when copper exists under porous Ni → galvanic cells",
-        fail_l3:"Uneven gloss when base roughness is not leveled by acid copper",
+        fail_l1:"<strong>Blistering or Delamination:</strong> Caused by incomplete surface preparation, poor activation, or insufficient strike.",
+        fail_l2:"<strong>Red Rust via Pores:</strong> Especially prevalent when copper exists under porous nickel, creating an active galvanic cell.",
+        fail_l3:"<strong>Uneven Gloss:</strong> Occurs when the base steel is rough and no acid copper is used to level the surface.",
 
         chk_h:"Decision Checklist",
-        chk_tbl_h1:"Topic", chk_tbl_h2:"Ask yourself/customer", chk_tbl_h3:"Impact on copper choice",
-        chk_tbl_c1:"Aesthetics/gloss/level", chk_tbl_c2:"Is the part closely visible? Is the base rough?", chk_tbl_c3:"Copper needed for leveling",
-        chk_tbl_c4:"Wear/hardness", chk_tbl_c5:"Frequent handling/slide? High load?", chk_tbl_c6:"Skip copper; use functional Ni",
-        chk_tbl_c7:"Corrosive environment", chk_tbl_c8:"Outdoor/marine/road salt?", chk_tbl_c9:"Avoid copper under porous Ni; add barrier",
-        chk_tbl_c10:"Budget/takt time", chk_tbl_c11:"Cost ceiling and cycle time?", chk_tbl_c12:"Wood’s strike + duplex Ni",
+        chk_tbl_h1:"Topic", chk_tbl_h2:"Assessment", chk_tbl_h3:"Impact on Copper Choice",
+        chk_tbl_c1:"Aesthetics / Gloss / Leveling", chk_tbl_c2:"Is the part viewed closely? Is the base rough?", chk_tbl_c3:"Must use copper for leveling.",
+        chk_tbl_c4:"Wear Resistance / Hardness", chk_tbl_c5:"Frequent handling or sliding? High load?", chk_tbl_c6:"Skip copper; use functional nickel instead.",
+        chk_tbl_c7:"Corrosive Environment", chk_tbl_c8:"Used outdoors, marine, or exposed to road salt?", chk_tbl_c9:"Avoid copper under porous nickel; add a dense barrier layer.",
+        chk_tbl_c10:"Budget / Production Time", chk_tbl_c11:"What are the cost and speed limits?", chk_tbl_c12:"Skip copper and plate duplex nickel directly on steel.",
 
         ex_h:"Industry Examples",
-        ex_l1:"Automotive trim: duplex Ni + micro-porous Cr; add copper when heavy leveling is needed",
-        ex_l2:"Home hardware (knobs/hinges): Wood’s strike + bright Ni; acid copper optional for smoothness",
-        ex_l3:"Mechanical parts: thick sulfamate Ni / EN underlayer for function",
+        ex_l1:"<strong>Automotive trim:</strong> Duplex nickel + micro-porous chromium; copper is used only when heavy leveling of the steel base is required.",
+        ex_l2:"<strong>Home hardware (knobs, hinges):</strong> Direct plating of semi-bright and bright nickel on steel to reduce costs; acid copper is occasionally added for extra smoothness.",
+        ex_l3:"<strong>Mechanical parts:</strong> Thick sulfamate nickel or electroless nickel is used as the functional underlayer.",
 
         sum_h:"Summary",
-        sum_p1:"Copper undercoats are very useful for leveling and aesthetics, but not always needed for functional parts or harsh environments if prep is sound and strike/ Ni layers are chosen well.",
-        sum_p2:"Decide by target performance, budget, and galvanic risk. Choose a balanced stack for quality and cost.",
+        sum_p1:"Copper undercoats are highly beneficial for achieving premium smoothness and aesthetics. However, they are not always necessary for heavy-duty functional parts or highly corrosive environments, provided that surface preparation is strictly controlled and nickel is plated properly.",
+        sum_p2:"Make your decision based on the target performance, budget, and galvanic corrosion risk to choose a stack that balances peak quality with cost-efficiency.",
 
-        links_h:"Related Links", links_l1:"Article: Brass plating on steel & undercoats", links_l2:"Plating products",
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        links_h:"Related Links", 
+        links_l1:"Article: Brass plating on steel & undercoats", 
+        links_l2:"Plating products category",
+
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved.",
+        addr_1:"📍 31 Soi Phetkasem 48 Yak 24, Bang Waek",
+        addr_2:"📍 Phasi Charoen, Bangkok 10160",
+        addr_3:"🕒 Hours 08:00–17:00",
+        addr_4:"📱 +66 92 546 9887"
       }
     };
 
@@ -850,11 +797,19 @@ Designed to match Anti‑tarnish page styling cues.
     function applyLang(lang){
       const sel = (lang === 'en') ? 'en' : 'th';
       document.documentElement.lang = sel;
+
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+        if (key && I18N[sel] && I18N[sel][key]) {
+          node.innerHTML = I18N[sel][key];
+        }
       });
+
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
       try{ localStorage.setItem('lang', sel); }catch(e){}
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
@@ -869,7 +824,54 @@ Designed to match Anti‑tarnish page styling cues.
     })();
   </script>
 
-  <!-- JS: Header glass, mobile menu, highlight current, TOC scroll spy -->
+  <!-- Part Switcher Logic -->
+  <script>
+    (function(){
+      const buttons = document.querySelectorAll('.part-switch .part-btn');
+      const tocLinks = document.querySelectorAll('#toc a[data-part]');
+      const sections = document.querySelectorAll('section[data-part]');
+
+      function setPart(p){
+        const part = (p === '2') ? '2' : '1';
+        document.documentElement.setAttribute('data-part', part);
+        sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+        tocLinks.forEach(a => {
+            if(a.parentElement.tagName === 'LI') {
+                a.parentElement.hidden = (a.dataset.part !== part);
+            } else {
+                a.hidden = (a.dataset.part !== part);
+            }
+        });
+        buttons.forEach(b => {
+          const on = (b.dataset.part === part);
+          b.setAttribute('aria-pressed', String(on));
+          b.setAttribute('aria-selected', String(on));
+        });
+        try{ localStorage.setItem('ncu_part', part); }catch(e){}
+        const url = new URL(location);
+        url.searchParams.set('part', part);
+        history.replaceState(null,'',url);
+      }
+
+      const urlPart = new URLSearchParams(location.search).get('part');
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ncu_part')) || '1';
+      setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+      buttons.forEach(b => b.addEventListener('click', ()=>{
+        setPart(b.dataset.part);
+        document.querySelector('.part-switch')?.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+
+      document.querySelectorAll('#toc a[data-part]').forEach(a=>{
+        a.addEventListener('click', ()=>{
+          const p = a.getAttribute('data-part');
+          setPart(p);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
   <script>
     (function(){
       const header = document.getElementById('siteHeader');
@@ -911,7 +913,6 @@ Designed to match Anti‑tarnish page styling cues.
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Blog when under /blog/*
       try{
         const here = location.pathname.replace(/\/+$/,'');
         const isBlog = here.startsWith('/blog');
@@ -923,50 +924,84 @@ Designed to match Anti‑tarnish page styling cues.
         });
       }catch(e){}
 
-      // TOC scroll spy
       (function(){
-        const links = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
-        if (!links.length) return;
-        const map = new Map();
-        links.forEach(a=>{
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (el) map.set(id, {link:a, el});
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref, location.href).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
         });
-
-        const setActive = (id)=>{
-          links.forEach(a=> a.classList.remove('is-active'));
-          links.forEach(a=> a.setAttribute('aria-current','false'));
-          const item = map.get(id);
-          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
-        };
-
-        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
-        const obs = new IntersectionObserver((entries)=>{
-          entries.forEach(e=>{
-            if (e.isIntersecting){
-              const id = e.target.id;
-              setActive(id);
-              history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
-            }
-          });
-        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
-
-        map.forEach(({el})=> obs.observe(el));
       })();
+    })();
+  </script>
+
+  <!-- Scroll-spy for TOC + heading anchors -->
+  <script>
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        const li = a.closest('li');
+        if (el) map.set(id, {link:a, li:li, el:el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=>{
+            a.classList.remove('is-active');
+            a.setAttribute('aria-current','false');
+            if(a.closest('li')) a.closest('li').setAttribute('aria-current', 'false');
+        });
+        const item = map.get(id);
+        if (item){ 
+            item.link.classList.add('is-active'); 
+            item.link.setAttribute('aria-current','true'); 
+            if(item.li) item.li.setAttribute('aria-current', 'true');
+        }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            if(e.target.hidden) return;
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
     })();
 
     // Back-to-top
     (function(){
       const backTop = document.getElementById('backTop');
       if(!backTop) return;
+
       function toggleBackTop(){
         const y = window.scrollY || document.documentElement.scrollTop || 0;
         backTop.classList.toggle('show', y > 200);
       }
       toggleBackTop();
       window.addEventListener('scroll', toggleBackTop, {passive:true});
-      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     })();
   </script>
 </body>
