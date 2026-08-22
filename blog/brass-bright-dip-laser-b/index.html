@@ -46,6 +46,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Baume Chemical",
+    "alternateName":["Baume Chemical Blog","Baume"],
+    "url": "https://www.baumechemical.com/",
+    "inLanguage": "th"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Laser B น้ำยากัดหรือจุ่มเงาทองเหลือง",
     "url": "https://www.baumechemical.com/blog/brass-bright-dip-laser-b/index.html",
@@ -75,41 +85,42 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px;
+      --header-h:64px; 
       --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.7}
+    p { margin-top: 0; margin-bottom: 1.2em; color: #334155; }
+    strong { color: var(--brand); }
 
-    /* Header glass */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    /* ===== GLASS HEADER ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.85); backdrop-filter:saturate(140%) blur(12px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
     .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700; transition: background .2s;}
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 10px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid rgba(226,232,240,.4); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition: background .3s;}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd; border-color: rgba(226,232,240, 1);}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 12px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a; transition: all .2s;}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; box-shadow: 0 4px 10px rgba(56, 123, 91, 0.3); }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
     @media (max-width:900px){
       .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
-      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172ae6; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
       .primary-nav a{ color:#fff; padding:12px 10px; }
       .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
       .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
@@ -117,114 +128,141 @@
       .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
 
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.4); z-index:1300; display:none; backdrop-filter: blur(3px); }
     .menu-scrim:not([hidden]){ display:block }
     body.no-scroll{ position:fixed; width:100% }
 
-    /* Hero */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
-    .back-chip:hover{ transform:translateY(-1px) }
+    /* ===== Hero ===== */
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(380px, 50vh, 550px); background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(44,94,78,.85)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 20px)}
+    .hero h1{margin:6px 0 12px; font-weight:800; font-size:clamp(28px,4.5vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.5); letter-spacing: -0.5px;}
+    .hero p{max-width:800px; margin:0 auto; color:#e2e8f0; font-size: 1.1rem; line-height: 1.6;}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 16px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:999px; font-weight:700; text-decoration:none; background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.3); color:#fff; transition: all .2s;}
+    .back-chip:hover{ background:#fff; color:var(--brand); transform:translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-    /* Layout */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    /* ===== Layout & Tables ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:40px 16px}
     @media (min-width:1100px){
-      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
-      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
-      article{ grid-column:2 }
+      main.wrap{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap:32px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 24px) }
+      .main-content{ grid-column:2; }
     }
 
-    /* TOC card */
-    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
-    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
-    #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
-    .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
+    h2.section{margin:0 0 12px; font-size:clamp(22px,2.6vw,28px); font-weight:800; color:#0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;}
+    
+    .table{ border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 20px;}
+    .table table{width:100%;border-collapse:collapse; background: #fff;}
+    .table thead th{background:var(--brand); color: #fff; font-weight: 600; letter-spacing: 0.5px;}
+    .table th,.table td{padding:14px 16px; border-bottom:1px solid #e2e8f0; vertical-align:top; text-align: left;}
+    .table tbody tr:last-child td { border-bottom: none; }
+    .table tbody tr:hover{background:#f8fafc}
 
-    /* Sections */
-    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
-    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
-    .lead{margin:0 0 16px; color:#5f6d7c}
-    .content p{margin:0 0 10px}
+    /* Section Cards */
+    section.section-block{
+      background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position:relative; margin-bottom:24px; transition: box-shadow .3s;
+    }
+    section.section-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    section.section-block::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+      background:linear-gradient(90deg,var(--brand),#59a286,#9bd4b9);
+    }
+    
+    /* Icons in headings */
+    h2.section::before{ content:var(--icon, "📘"); font-size:22px; margin-right: 8px; vertical-align: middle;}
+    #intro>h2.section{ --icon:"🔬" }
+    #solution>h2.section{ --icon:"✨" }
+    #features>h2.section{ --icon:"⭐" }
+    #dosage>h2.section{ --icon:"🧪" }
+    #care>h2.section{ --icon:"🛡️" }
+    #steps>h2.section{ --icon:"📋" }
+    #casting>h2.section{ --icon:"🏭" }
+    #note>h2.section{ --icon:"📌" }
+    #links>h2.section{ --icon:"🔗" }
+
+    /* ===== TOC styling ===== */
+    #toc{ background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:var(--shadow-1); padding:20px; }
+    #toc h2.section{ font-size:1.1rem; border-bottom: none; margin-bottom: 16px; padding-bottom: 0; color: var(--brand); }
+    #toc .toc-list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+    #toc .toc-list li{ position:relative; border-radius:10px; transition:all .2s; }
+    #toc .toc-link{ display:block; padding:10px 32px 10px 14px; text-decoration:none; color:#475569; font-weight:600; border-radius:8px; font-size: 0.95rem; }
+    #toc .toc-list li:hover { background: #f1f5f9; }
+    #toc .toc-list li:hover .toc-link{ color: var(--brand); }
+    
+    #toc .toc-list li::after{ content:"›"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-weight:800; transition: color .2s; }
+    #toc .toc-list li[aria-current="true"]{ background:var(--brand-2); box-shadow:0 4px 12px rgba(56, 123, 91, 0.2); }
+    #toc .toc-list li[aria-current="true"] .toc-link{ color:#fff; }
+    #toc .toc-list li[aria-current="true"]::after{ color:#fff; }
+
+    /* Part switcher */
+    [hidden]{display:none !important}
+    .part-switch {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 5px;
+      border-radius: 14px;
+      margin: 0 0 24px 0;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .part-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #64748b;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .part-btn:hover { color: #334155; }
+    .part-btn[aria-pressed="true"] {
+      background: #fff;
+      color: var(--brand);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
     /* Footer */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color .2s;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:48px 20px 24px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:48px; height:48px; border-radius:12px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.2rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#94a3b8}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:900;}
+    .float-line a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#00c300; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform .2s;}
+    .float-line a:hover{transform:translateY(-2px) scale(1.05);}
+    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 15px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    .backtop{position:fixed; right:20px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; opacity: 0; transition: opacity .3s;}
+    .backtop.show{display:block; opacity: 1;}
+    .backtop button{width:46px; height:46px; border-radius:50%; border:none; background:#fff; color: var(--brand); font-size: 1.2rem; box-shadow:0 4px 16px rgba(0,0,0,.15); cursor:pointer; transition: all .2s;}
+    .backtop button:hover{background:var(--brand); color:#fff; transform:translateY(-2px);}
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
     /* Reveal */
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out}
     .reveal.show{opacity:1; transform:none}
-
-    /* Utils */
     html{scroll-behavior:smooth}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 24px)}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -256,144 +294,158 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
-    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-i18n-key="back_home">← กลับเมนูหลัก</a>
-    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับหน้าบทความ</a>
+    <div class="wrap" style="display:block; padding:0; margin:auto">
       <h1 data-i18n-key="hero_title">Laser B น้ำยากัดหรือจุ่มเงาทองเหลือง</h1>
-      <p data-i18n-key="hero_tagline">อธิบายคุณสมบัติ อัตราการใช้ การดูแล และขั้นตอนการทำงานสำหรับทองเหลืองทั่วไปและทองเหลืองหล่อ</p>
+      <p data-i18n-key="hero_tagline">คู่มือเจาะลึก: สาเหตุคราบแดงบนทองเหลือง คุณสมบัติพิเศษ อัตราส่วน และขั้นตอนการทำงานอย่างมืออาชีพ</p>
     </div>
   </header>
 
   <main class="wrap">
-
+    
     <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#intro" data-i18n-key="toc_intro">ภาพรวม</a>
-        <a class="toc-chip" href="#features" data-i18n-key="toc_features">คุณสมบัติพิเศษของน้ำยา</a>
-        <a class="toc-chip" href="#dosage" data-i18n-key="toc_dosage">อัตราการใช้</a>
-        <a class="toc-chip" href="#care" data-i18n-key="toc_care">การดูแลรักษาน้ำยา</a>
-        <a class="toc-chip" href="#steps" data-i18n-key="toc_steps">ขั้นตอนการทำงาน</a>
-        <a class="toc-chip" href="#casting" data-i18n-key="toc_casting">สำหรับทองเหลืองหล่อ</a>
-        <a class="toc-chip" href="#note" data-i18n-key="toc_note">หมายเหตุ</a>
-      </p>
+      <ul class="toc-list" role="list">
+        <li data-part="1"><a class="toc-link" href="#intro" data-i18n-key="toc_intro">ทำไมทองเหลืองกัดเงาแล้วเกิดคราบแดง?</a></li>
+        <li data-part="1"><a class="toc-link" href="#solution" data-i18n-key="toc_solution">การแก้ไขด้วย Laser B</a></li>
+        <li data-part="1"><a class="toc-link" href="#features" data-i18n-key="toc_features">คุณสมบัติพิเศษของน้ำยา</a></li>
+        <li data-part="1"><a class="toc-link" href="#dosage" data-i18n-key="toc_dosage">อัตราการใช้</a></li>
+        <li data-part="1"><a class="toc-link" href="#care" data-i18n-key="toc_care">การดูแลรักษาน้ำยา</a></li>
+        <li data-part="2"><a class="toc-link" href="#steps" data-i18n-key="toc_steps">ขั้นตอนสำหรับทองเหลืองทั่วไป</a></li>
+        <li data-part="2"><a class="toc-link" href="#casting" data-i18n-key="toc_casting">ขั้นตอนสำหรับทองเหลืองหล่อ</a></li>
+        <li data-part="2"><a class="toc-link" href="#note" data-i18n-key="toc_note">ข้อควรระวังเพิ่มเติม</a></li>
+        <li data-part="2"><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a></li>
+      </ul>
     </nav>
 
-    <article>
-      <!-- Intro -->
-             <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
-        <h2 id="intro-h" class="section" data-i18n-key="intro_h">สาเหตุของการกัดเงาทองเหลืองด้วยกรดทำไมถึงเกิดคราบแดง</h2>
-        <div class="content">
-          <p data-i18n-key="intro_p2">คราบสีแดงหรือสีชมพูที่เหลืออยู่บนผิวทองเหลืองหลังจากทำความสะอาดด้วยกำมะถัน (มักจะเป็นการจุ่มในกรดกำมะถันเพื่อทำความสะอาดหรือกัดเงา) มีสาเหตุหลักมาจากปรากฏการณ์ทางเคมีที่เรียกว่า "การกัดกร่อนแบบสูญเสียสังกะสี" (Dezincification) หรือที่เรียกกันทั่วไปว่า "คราบทองแดง"</p>
-          <p data-i18n-key="intro_p3">🔬 สาเหตุหลัก: การสูญเสียสังกะสี (Dezincification) ทองเหลืองเป็นโลหะผสมระหว่าง ทองแดง (Copper) และ สังกะสี (Zinc) ซึ่งคราบแดงที่เห็นก็คือ ทองแดงบริสุทธิ์ ที่หลงเหลืออยู่บนผิวชิ้นงาน สาเหตุการเกิดคราบแดง</p>
-          <p data-i18n-key="intro_p4">1.ทองเหลืองถูกกัดกร่อน: เมื่อชิ้นงานทองเหลืองสัมผัสกับสารละลายที่เป็นกรดเข้มข้น (เช่น กรดกำมะถัน หรือกรดอื่น ๆ ที่ใช้ล้าง/กัดเงา) ทั้งทองแดงและสังกะสีจะถูกละลายออกจากผิวโลหะ</p>
-          <p data-i18n-key="intro_p5">2.สังกะสีละลายออกไปมากกว่า: ธาตุสังกะสี (Zinc - Zn) มีความว่องไวต่อปฏิกิริยาเคมีมากกว่าทองแดง (Copper - Cu) ในสภาวะที่เป็นกรด ดังนั้นสังกะสีจึงถูกละลายออกไปในสารละลายได้ง่ายและเร็วกว่า</p>
-          <p data-i18n-key="intro_p6">3.ทองแดงกลับมาเกาะ: หลังจากสังกะสีส่วนใหญ่ถูกกำจัดออกไปแล้ว ทองแดง ซึ่งเป็นส่วนประกอบหลักอีกตัวหนึ่งของทองเหลือง และมีความทนทานต่อกรดมากกว่า จะถูกขับกลับมาเกาะรวมตัวกันที่ผิวของชิ้นงานอีกครั้งในรูปของ ทองแดงบริสุทธิ์</p>
-          <p data-i18n-key="intro_p7">4.เหลือเป็นคราบแดง/ชมพู: ชั้นของทองแดงบริสุทธิ์ที่เกาะกลับมานี้จะมีลักษณะเป็นสีแดงหรือสีชมพู ทำให้เห็นเป็นคราบตามที่คุณสังเกตเห็น</p>    
-        </div>
+    <div class="main-content">
+      <!-- Part Switcher -->
+      <div class="part-switch" role="tablist" aria-label="เลือกหัวข้อหลัก">
+        <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">ส่วนที่ 1: ปัญหา & คุณสมบัติ</span></button>
+        <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">ส่วนที่ 2: ขั้นตอนการปฏิบัติงาน</span></button>
+      </div>
+
+      <!-- Sections Part 1 -->
+      <section id="intro" data-part="1" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">สาเหตุที่ทองเหลืองกัดเงาด้วยกรดแล้วเกิดคราบแดง</h2>
+        <p data-i18n-key="intro_p2">ทองเหลืองเวลาใช้กรดกัดจะมีคราบสีแดงหรือสีชมพูที่เหลืออยู่บนผิวทองเหลืองหลังจากทำความสะอาด หรือการจุ่มในกรดกำมะถันเพื่อทำความสะอาดและกัดเงา มีสาเหตุหลักมาจากปรากฏการณ์ทางเคมีที่เรียกว่าการกัดกร่อนแบบสูญเสียสังกะสี หรือที่เรียกกันทั่วไปว่า <strong>คราบทองแดง</strong></p>
+        <p data-i18n-key="intro_p3"><strong>สาเหตุหลัก: การสูญเสียสังกะสี</strong> ทองเหลืองเป็นโลหะผสมระหว่างทองแดงและสังกะสี ซึ่งคราบแดงที่เห็นก็คือทองแดงบริสุทธิ์ที่หลงเหลืออยู่บนผิวชิ้นงาน โดยกระบวนการเกิดคราบแดงมีดังนี้:</p>
+        <ul>
+          <li data-i18n-key="intro_p4"><strong>1. ทองเหลืองถูกกัดกร่อน:</strong> เมื่อชิ้นงานทองเหลืองสัมผัสกับสารละลายที่เป็นกรดเข้มข้น เช่น กรดกำมะถัน หรือกรดอื่นๆ ที่ใช้ล้างและกัดเงา ทั้งทองแดงและสังกะสีจะถูกละลายออกจากผิวโลหะ</li>
+          <li data-i18n-key="intro_p5"><strong>2. สังกะสีละลายออกไปมากกว่า:</strong> ธาตุสังกะสีมีความว่องไวต่อปฏิกิริยาเคมีมากกว่าทองแดงในสภาวะที่เป็นกรด ดังนั้นสังกะสีจึงถูกละลายออกไปในสารละลายได้ง่ายและเร็วกว่า</li>
+          <li data-i18n-key="intro_p6"><strong>3. ทองแดงกลับมาเกาะผิว:</strong> หลังจากสังกะสีส่วนใหญ่ถูกกำจัดออกไปแล้ว ทองแดงซึ่งเป็นส่วนประกอบหลักและทนทานต่อกรดมากกว่า จะถูกขับกลับมาเกาะรวมตัวกันที่ผิวของชิ้นงานอีกครั้งในรูปของทองแดงบริสุทธิ์</li>
+          <li data-i18n-key="intro_p7"><strong>4. เหลือเป็นคราบแดงหรือชมพู:</strong> ชั้นของทองแดงบริสุทธิ์ที่เกาะกลับมานี้จะมีลักษณะเป็นสีแดงหรือสีชมพู ทำให้เห็นเป็นคราบอย่างชัดเจนหลังผ่านการกัดกรด</li>
+        </ul>
       </section>
       
-      <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
-        <h2 id="intro-h" class="section" data-i18n-key="intro_h1">การแก้ไข</h2>
-        <div class="content">
-          <p data-i18n-key="intro_p1"><strong>LASER B</strong> น้ำยากัดหรือจุ่มเงาทองเหลือง เป็นสารเข้มข้นของเหลวที่มีความเป็นกรด ออกแบบมาเพื่อทำงานสามขั้นตอนในการกำจัดฟิล์มออกไซด์ที่เกิดจากการกัดทองเหลือง และการกำจัดคราบแดงที่บางครั้งพบในทองเหลืองหลังจากการจุ่มด้วยกรดซัลฟิวริก ช่วยให้ได้ผิวเงางามสวยและทนทานกว่าวิธีจุ่มด้วยกรดซัลฟิวริกทั่วไป</p>
-        </div>
+      <section id="solution" data-part="1" class="reveal section-block" aria-labelledby="solution-h">
+        <h2 id="solution-h" class="section" data-i18n-key="solution_h">การแก้ไขด้วย Laser B</h2>
+        <p data-i18n-key="solution_p1"><strong>LASER B</strong> น้ำยากัดหรือจุ่มเงาทองเหลือง เป็นสารประกอบของเหลวเข้มข้นที่มีความเป็นกรด ออกแบบมาเป็นพิเศษเพื่อทำงานครอบคลุมสามขั้นตอนหลัก คือ การกำจัดฟิล์มออกไซด์ที่เกิดจากการกัดทองเหลือง การกำจัดคราบทองแดงสีแดงที่มักพบหลังจากการจุ่มกรดกำมะถัน และการปรับสภาพผิว ซึ่งช่วยให้ได้ผิวทองเหลืองที่เงางาม สวย และมีความทนทานสูงกว่าวิธีการจุ่มด้วยกรดกำมะถันแบบดั้งเดิมทั่วไป</p>
       </section>
 
-      <!-- Features -->
-      <section id="features" class="reveal section-block" aria-labelledby="features-h">
+      <section id="features" data-part="1" class="reveal section-block" aria-labelledby="features-h">
         <h2 id="features-h" class="section" data-i18n-key="features_h">คุณสมบัติพิเศษของน้ำยา Laser B</h2>
-        <div class="content">
-          <p data-i18n-key="feature_1">1) ไม่มีควันพิษ เพราะไม่มีกรดไนตริก (HNO₃)</p>
-          <p data-i18n-key="feature_2">2) ความเงาคงทนต่อสภาพปกติ ไม่ต้องใช้กรดโครมิก/โซเดียมไซยาไนด์ช่วย</p>
-          <p data-i18n-key="feature_3">3) หลังจุ่มสามารถนำไปชุบขั้นต่อไปได้ โดยไม่ต้องทำความสะอาดผิวซ้ำ</p>
-          <p data-i18n-key="feature_4">4) ใช้ได้กับทองเหลืองทุกเกรด ทั้งที่ซิงค์สูงหรือมีตะกั่วผสม</p>
-          <p data-i18n-key="feature_5">5) ใช้ได้ทั้งถังจุ่ม (Rack) และถังกลิ้ง (Barrel)</p>
-          <p data-i18n-key="feature_6">6) ไม่ต้องตามด้วยกรดโครมิก/โซเดียมไซยาไนด์เหมือนสูตรกรดไนตริก</p>
-          <p data-i18n-key="feature_7">7) เสื่อมสภาพแล้วไม่เป็นอันตรายต่อสิ่งแวดล้อม (ทิ้งตามข้อกำหนดท้องถิ่น)</p>
-        </div>
+        <ul>
+          <li data-i18n-key="feature_1"><strong>ไม่มีควันพิษ</strong> เพราะไม่มีส่วนผสมของกรดไนตริก ปลอดภัยต่อผู้ปฏิบัติงาน</li>
+          <li data-i18n-key="feature_2">ความเงางามคงทนต่อสภาพอากาศปกติได้ยาวนาน ไม่ต้องพึ่งพากรดโครมิกหรือโซเดียมไซยาไนด์เพื่อช่วยรักษาความเงา</li>
+          <li data-i18n-key="feature_3">หลังจากจุ่มเงาเสร็จสิ้น สามารถนำชิ้นงานไปชุบเคลือบผิวในขั้นตอนต่อไปได้ทันที โดยไม่ต้องทำความสะอาดผิวซ้ำ</li>
+          <li data-i18n-key="feature_4">สามารถใช้งานได้ดีเยี่ยมกับทองเหลืองทุกเกรด รวมถึงทองเหลืองที่มีปริมาณสังกะสีสูง หรือทองเหลืองที่มีตะกั่วผสม</li>
+          <li data-i18n-key="feature_5">รองรับการใช้งานทั้งกับระบบตะแกรงจุ่ม (Rack) และระบบถังกลิ้ง (Barrel)</li>
+          <li data-i18n-key="feature_6">ไม่ต้องตามด้วยการล้างกรดโครมิกหรือโซเดียมไซยาไนด์เหมือนสูตรที่ใช้กรดไนตริก</li>
+          <li data-i18n-key="feature_7">เมื่อน้ำยาเสื่อมสภาพแล้ว จะไม่เป็นสารอันตรายรุนแรงต่อสิ่งแวดล้อม (สามารถบำบัดและทิ้งได้ตามข้อกำหนดของกรมโรงงานอุตสาหกรรม)</li>
+        </ul>
       </section>
 
-      <!-- Dosage -->
-      <section id="dosage" class="reveal section-block" aria-labelledby="dosage-h">
+      <section id="dosage" data-part="1" class="reveal section-block" aria-labelledby="dosage-h">
         <h2 id="dosage-h" class="section" data-i18n-key="dosage_h">อัตราการใช้</h2>
-        <div class="content">
-          <p data-i18n-key="dosage_p1">น้ำยา Laser B — <strong>350 ซีซี/ลิตร</strong></p>
-          <p data-i18n-key="dosage_p2">น้ำกลั่น — <strong>650 ซีซี/ลิตร</strong></p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="dose_th_comp">ส่วนประกอบ</th>
+                <th data-i18n-key="dose_th_amount">ปริมาณที่ใช้ (ต่อ 1 ลิตร)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="dose_laser">น้ำยา Laser B</td>
+                <td><strong>350 ซีซี (cc)</strong></td>
+              </tr>
+              <tr>
+                <td data-i18n-key="dose_water">น้ำกลั่น หรือ น้ำกรองบริสุทธิ์</td>
+                <td><strong>650 ซีซี (cc)</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
-      <!-- Care -->
-      <section id="care" class="reveal section-block" aria-labelledby="care-h">
+      <section id="care" data-part="1" class="reveal section-block" aria-labelledby="care-h">
         <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลรักษาน้ำยา</h2>
-        <div class="content">
-          <p data-i18n-key="care_p1">เก็บในที่เย็นและอากาศถ่ายเท ระหว่างทำงานควรตรวจค่า pH &lt; 2.0 หากสูงกว่าให้ปรับด้วยกรดกำมะถันอย่างระมัดระวัง</p>
-        </div>
+        <p data-i18n-key="care_p1">ควรเก็บรักษาน้ำยาในที่เย็นและมีอากาศถ่ายเทได้สะดวก ในระหว่างการปฏิบัติงานควรหมั่นตรวจสอบค่าความเป็นกรด-ด่าง โดยรักษาค่า <strong>pH ให้ต่ำกว่า 2.0 เสมอ</strong> หากพบว่าค่า pH สูงกว่าเกณฑ์ที่กำหนด ให้ทำการปรับสภาพอ่างโดยการค่อยๆ เติมกรดกำมะถันลงไปอย่างระมัดระวัง</p>
       </section>
 
-      <!-- Steps -->
-      <section id="steps" class="reveal section-block" aria-labelledby="steps-h">
-        <h2 id="steps-h" class="section" data-i18n-key="steps_h">ขั้นตอนการทำงาน</h2>
-        <div class="content">
-          <p data-i18n-key="step_1">1) ต้มล้างไขมันด้วย ยาล้างไขมัน B1 — 60 กรัม/ลิตร (กรณีมีคราบมันมาก)</p>
-          <p data-i18n-key="step_2">2) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="step_3">3) จุ่ม Desmut 1–2 นาที</p>
-          <p data-i18n-key="step_4">4) จุ่ม Laser B 1–3 นาที หรือจนผิวเป็นสีน้ำตาลเข้ม (โกโก้)</p>
-          <p data-i18n-key="step_5">5) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="step_6">6) จุ่มกรดกำมะถัน 3% 5–30 วินาที จนสีน้ำตาลหลุด</p>
-          <p data-i18n-key="step_7">7) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="step_8">8) ทองเหลืองที่ซิงค์/ตะกั่วสูง: จุ่มกรดฟอสฟอริก 30% 1–2 นาที</p>
-          <p data-i18n-key="step_9">9) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="step_10">10) จุ่มน้ำยากันหมองทองเหลือง/ทองแดง 1 ซีซี/ลิตร 30 วินาที</p>
-          <p data-i18n-key="step_11">11) อบแห้ง หรือชุบขั้นต่อไป</p>
-        </div>
+      <!-- Sections Part 2 -->
+      <section id="steps" data-part="2" class="reveal section-block" aria-labelledby="steps-h" hidden>
+        <h2 id="steps-h" class="section" data-i18n-key="steps_h">ขั้นตอนการทำงาน (สำหรับทองเหลืองทั่วไป)</h2>
+        <p data-i18n-key="step_1">1) ต้มล้างไขมันและสิ่งสกปรกด้วย <strong>ยาล้างไขมัน B1</strong> ในอัตราส่วน 60 กรัม/ลิตร (แนะนำสำหรับชิ้นงานที่มีคราบน้ำมันเกาะแน่นมาก)</p>
+        <p data-i18n-key="step_2">2) ล้างน้ำสะอาดให้หมดจด</p>
+        <p data-i18n-key="step_3">3) จุ่มน้ำยาลอกคราบสมัท (Desmut) เป็นเวลา 1–2 นาที</p>
+        <p data-i18n-key="step_4">4) <strong>จุ่มน้ำยา Laser B เป็นเวลา 1–3 นาที</strong> หรือสังเกตจนกว่าผิวชิ้นงานจะเปลี่ยนเป็นสีน้ำตาลเข้มคล้ายสีโกโก้</p>
+        <p data-i18n-key="step_5">5) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="step_6">6) จุ่มล้างในกรดกำมะถันความเข้มข้น 3% เป็นเวลา 5–30 วินาที จนกระทั่งคราบฟิล์มสีน้ำตาลหลุดออกหมดและเห็นเนื้อทองเหลืองสุกใส</p>
+        <p data-i18n-key="step_7">7) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="step_8">8) <em>ขั้นตอนเสริมสำหรับทองเหลืองที่มีปริมาณสังกะสีหรือตะกั่วสูง:</em> ให้จุ่มกรดฟอสฟอริกความเข้มข้น 30% เป็นเวลา 1–2 นาที เพื่อปรับสภาพผิวขั้นสุด</p>
+        <p data-i18n-key="step_9">9) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="step_10">10) เพื่อการปกป้องระยะยาว ให้จุ่มน้ำยากันหมองทองเหลือง/ทองแดง (Anti-tarnish) อัตราส่วน 1 ซีซี/ลิตร เป็นเวลา 30 วินาที</p>
+        <p data-i18n-key="step_11">11) นำไปอบแห้ง หรือส่งเข้าสู่กระบวนการชุบเคลือบผิวในขั้นตอนต่อไป</p>
       </section>
 
-      <!-- Casting -->
-      <section id="casting" class="reveal section-block" aria-labelledby="casting-h">
-        <h2 id="casting-h" class="section" data-i18n-key="casting_h">สำหรับทองเหลืองหล่อ</h2>
-        <div class="content">
-          <p data-i18n-key="cast_1">1) ต้มล้างไขมันด้วย B1 — 60 กรัม/ลิตร</p>
-          <p data-i18n-key="cast_2">2) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="cast_3">3) จุ่ม Desmut 1–2 นาที</p>
-          <p data-i18n-key="cast_4">4) จุ่ม Laser B (350 ซีซี/ลิตร) 1–3 นาที หรือจนผิวเป็นสีน้ำตาลเข้ม</p>
-          <p data-i18n-key="cast_5">5) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="cast_6">6) จุ่มกรดกำมะถัน 10% 15–30 วินาที</p>
-          <p data-i18n-key="cast_7">7) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="cast_8">8) จุ่มกรดโครมิก/โซเดียมไบโครเมต 5–10% (50–100 กรัม/ลิตร)</p>
-          <p data-i18n-key="cast_9">9) ล้างน้ำสะอาด</p>
-          <p data-i18n-key="cast_10">10) จุ่มน้ำกลั่นเพื่อล้างคลอรีนจากน้ำล้าง</p>
-          <p data-i18n-key="cast_11">11) อบแห้ง หรือชุบขั้นต่อไป</p>
-        </div>
+      <section id="casting" data-part="2" class="reveal section-block" aria-labelledby="casting-h" hidden>
+        <h2 id="casting-h" class="section" data-i18n-key="casting_h">ขั้นตอนการทำงาน (สำหรับทองเหลืองหล่อ)</h2>
+        <p data-i18n-key="cast_1">1) ต้มล้างไขมันด้วยยาล้างไขมัน B1 อัตราส่วน 60 กรัม/ลิตร</p>
+        <p data-i18n-key="cast_2">2) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="cast_3">3) จุ่มลอกคราบด้วย Desmut เป็นเวลา 1–2 นาที</p>
+        <p data-i18n-key="cast_4">4) <strong>จุ่มน้ำยา Laser B (อัตราส่วน 350 ซีซี/ลิตร) เป็นเวลา 1–3 นาที</strong> หรือจนกว่าผิวจะเป็นสีน้ำตาลเข้ม</p>
+        <p data-i18n-key="cast_5">5) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="cast_6">6) จุ่มล้างในกรดกำมะถัน <strong>ความเข้มข้น 10%</strong> (เข้มข้นกว่างานทั่วไป) เป็นเวลา 15–30 วินาที</p>
+        <p data-i18n-key="cast_7">7) ล้างน้ำสะอาด</p>
+        <p data-i18n-key="cast_8">8) <em>กระบวนการพาสซิเวท (Passivation):</em> จุ่มกรดโครมิก หรือ โซเดียมไบโครเมต ความเข้มข้น 5–10% (ประมาณ 50–100 กรัม/ลิตร)</p>
+        <p data-i18n-key="cast_9">9) ล้างน้ำสะอาดให้หมดจด</p>
+        <p data-i18n-key="cast_10">10) จุ่มล้างในน้ำกลั่น เพื่อล้างคราบคลอรีนที่อาจหลงเหลือจากน้ำประปา</p>
+        <p data-i18n-key="cast_11">11) นำไปอบแห้ง หรือส่งเข้าสู่กระบวนการชุบเคลือบผิวต่อไป</p>
       </section>
 
-      <!-- Note -->
-      <section id="note" class="reveal section-block" aria-labelledby="note-h">
-        <h2 id="note-h" class="section" data-i18n-key="note_h">หมายเหตุ</h2>
-        <div class="content">
-          <p data-i18n-key="note_p1">น้ำที่ใช้ผสมควรเป็นน้ำกลั่น/น้ำกรอง เพื่อผลลัพธ์คงที่</p>
-        </div>
+      <section id="note" data-part="2" class="reveal section-block" aria-labelledby="note-h" hidden>
+        <h2 id="note-h" class="section" data-i18n-key="note_h">ข้อควรระวังเพิ่มเติม</h2>
+        <p data-i18n-key="note_p1">น้ำที่นำมาใช้สำหรับผสมน้ำยา Laser B <strong>ควรเป็นน้ำกลั่น หรือ น้ำกรองบริสุทธิ์ (DI Water) เท่านั้น</strong> เพื่อหลีกเลี่ยงการทำปฏิกิริยากับแร่ธาตุในน้ำประปา ซึ่งจะช่วยให้ผลลัพธ์การกัดเงาคงที่และยืดอายุการใช้งานของอ่างน้ำยาได้ยาวนานที่สุด</p>
       </section>
 
-              <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
-      <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/brassplating/" data-i18n-key="link_at">ชุบทองเหลืองเพื่อผิวโทนสีทอง</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">คู่มือ Salt Spray และการอ่านผล</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">อุปกรณ์ระบบกรอง/มีดลม/อบแห้ง</a></p>
-    </section>
-    </article>
+      <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h" hidden>
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+        <ul>
+          <li><a href="https://www.baumechemical.com/products/platingcoating/brassplating/" data-i18n-key="link_at">น้ำยาชุบทองเหลืองเพื่อปรับผิวให้เป็นโทนสีทอง</a></li>
+          <li><a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment: น้ำยาล้างไขมันและลอกคราบ</a></li>
+          <li><a href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">น้ำยากันหมองทองเหลือง (Protective Treatment)</a></li>
+          <li><a href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">หมวดอุปกรณ์: ระบบกรอง มีดลมเป่า และตู้อบแห้ง</a></li>
+          <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">บทความ: คู่มือ Salt Spray Test และการประเมินผล</a></li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -425,176 +477,204 @@
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2026 Baume Chemical Co., Ltd. All rights reserved.</div>
+      </div>
     </div>
   </footer>
 
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- Reveal on scroll -->
+  <!-- ===== JS ===== -->
   <script>
+    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
+    }, {threshold:.1});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- I18N + Lang switch -->
   <script>
+    // Translations Data
     const I18N = {
       th: {
         title:"Laser B น้ำยากัดหรือจุ่มเงาทองเหลือง | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับเมนูหลัก",
+        back_home:"← กลับหน้าบทความ",
         hero_title:"Laser B น้ำยากัดหรือจุ่มเงาทองเหลือง",
-        hero_tagline:"อธิบายคุณสมบัติ อัตราการใช้ การดูแล และขั้นตอนการทำงานสำหรับทองเหลืองทั่วไปและทองเหลืองหล่อ",
+        hero_tagline:"คู่มือเจาะลึก: สาเหตุคราบแดงบนทองเหลือง คุณสมบัติพิเศษ อัตราส่วน และขั้นตอนการทำงานอย่างมืออาชีพ",
 
-        toc_title:"สารบัญ", toc_intro:"ภาพรวม", toc_features:"คุณสมบัติพิเศษของน้ำยา",
-        toc_dosage:"อัตราการใช้", toc_care:"การดูแลรักษาน้ำยา",
-        toc_steps:"ขั้นตอนการทำงาน", toc_casting:"สำหรับทองเหลืองหล่อ", toc_note:"หมายเหตุ",
+        part1:"ส่วนที่ 1: ปัญหา & คุณสมบัติ",
+        part2:"ส่วนที่ 2: ขั้นตอนการปฏิบัติงาน",
 
-        intro_h:"สาเหตุของการกัดเงาทองเหลืองด้วยกรดทำไมถึงเกิดคราบแดง",
-        intro_h1:"การแก้ไข",
-        intro_p1:"LASER B น้ำยากัดหรือจุ่มเงาทองเหลือง เป็นสารเข้มข้นของเหลวที่มีความเป็นกรด ออกแบบมาเพื่อทำงานสามขั้นตอนในการกำจัดฟิล์มออกไซด์ที่เกิดจากการกัดทองเหลือง และการกำจัดคราบแดงที่บางครั้งพบในทองเหลืองหลังจากการจุ่มด้วยกรดซัลฟิวริก ช่วยให้ได้ผิวเงางามสวยและทนทานกว่าวิธีจุ่มด้วยกรดซัลฟิวริกทั่วไป",
-        intro_p2:"คราบสีแดงหรือสีชมพูที่เหลืออยู่บนผิวทองเหลืองหลังจากทำความสะอาดด้วยกำมะถัน (มักจะเป็นการจุ่มในกรดกำมะถันเพื่อทำความสะอาดหรือกัดเงา) มีสาเหตุหลักมาจากปรากฏการณ์ทางเคมีที่เรียกว่า การกัดกร่อนแบบสูญเสียสังกะสี (Dezincification) หรือที่เรียกกันทั่วไปว่า คราบทองแดง",
-        intro_p3:"🔬 สาเหตุหลัก: การสูญเสียสังกะสี (Dezincification) ทองเหลืองเป็นโลหะผสมระหว่าง ทองแดง (Copper) และ สังกะสี (Zinc) ซึ่งคราบแดงที่เห็นก็คือ ทองแดงบริสุทธิ์ ที่หลงเหลืออยู่บนผิวชิ้นงาน สาเหตุการเกิดคราบแดง",
-        intro_p4:"1.ทองเหลืองถูกกัดกร่อน: เมื่อชิ้นงานทองเหลืองสัมผัสกับสารละลายที่เป็นกรดเข้มข้น (เช่น กรดกำมะถัน หรือกรดอื่น ๆ ที่ใช้ล้าง/กัดเงา) ทั้งทองแดงและสังกะสีจะถูกละลายออกจากผิวโลหะ",
-        intro_p5:"2.สังกะสีละลายออกไปมากกว่า: ธาตุสังกะสี (Zinc - Zn) มีความว่องไวต่อปฏิกิริยาเคมีมากกว่าทองแดง (Copper - Cu) ในสภาวะที่เป็นกรด ดังนั้นสังกะสีจึงถูกละลายออกไปในสารละลายได้ง่ายและเร็วกว่า",
-        intro_p6:"3.ทองแดงกลับมาเกาะ: หลังจากสังกะสีส่วนใหญ่ถูกกำจัดออกไปแล้ว ทองแดง ซึ่งเป็นส่วนประกอบหลักอีกตัวหนึ่งของทองเหลือง และมีความทนทานต่อกรดมากกว่า จะถูกขับกลับมาเกาะรวมตัวกันที่ผิวของชิ้นงานอีกครั้งในรูปของ ทองแดงบริสุทธิ์",
-        intro_p7:"4.เหลือเป็นคราบแดง/ชมพู: ชั้นของทองแดงบริสุทธิ์ที่เกาะกลับมานี้จะมีลักษณะเป็นสีแดงหรือสีชมพู ทำให้เห็นเป็นคราบตามที่คุณสังเกตเห็น",
+        toc_title:"สารบัญ", 
+        toc_intro:"ทำไมทองเหลืองกัดเงาแล้วเกิดคราบแดง?", 
+        toc_solution:"การแก้ไขด้วย Laser B",
+        toc_features:"คุณสมบัติพิเศษของน้ำยา",
+        toc_dosage:"อัตราการใช้", 
+        toc_care:"การดูแลรักษาน้ำยา",
+        toc_steps:"ขั้นตอนสำหรับทองเหลืองทั่วไป", 
+        toc_casting:"ขั้นตอนสำหรับทองเหลืองหล่อ", 
+        toc_note:"ข้อควรระวังเพิ่มเติม",
+        toc_links:"ลิงก์ที่เกี่ยวข้อง",
+
+        intro_h:"สาเหตุที่ทองเหลืองกัดเงาด้วยกรดแล้วเกิดคราบแดง",
+        solution_h:"การแก้ไขด้วย Laser B",
+        solution_p1:"<strong>LASER B</strong> น้ำยากัดหรือจุ่มเงาทองเหลือง เป็นสารประกอบของเหลวเข้มข้นที่มีความเป็นกรด ออกแบบมาเป็นพิเศษเพื่อทำงานครอบคลุมสามขั้นตอนหลัก คือ การกำจัดฟิล์มออกไซด์ที่เกิดจากการกัดทองเหลือง การกำจัดคราบทองแดงสีแดงที่มักพบหลังจากการจุ่มกรดกำมะถัน และการปรับสภาพผิว ซึ่งช่วยให้ได้ผิวทองเหลืองที่เงางาม สวย และมีความทนทานสูงกว่าวิธีการจุ่มด้วยกรดกำมะถันแบบดั้งเดิมทั่วไป",
+        intro_p2:"ทองเหลืองเวลาใช้กรดกัดจะมีคราบสีแดงหรือสีชมพูที่เหลืออยู่บนผิวทองเหลืองหลังจากทำความสะอาด หรือการจุ่มในกรดกำมะถันเพื่อทำความสะอาดและกัดเงา มีสาเหตุหลักมาจากปรากฏการณ์ทางเคมีที่เรียกว่าการกัดกร่อนแบบสูญเสียสังกะสี หรือที่เรียกกันทั่วไปว่า <strong>คราบทองแดง</strong>",
+        intro_p3:"<strong>สาเหตุหลัก: การสูญเสียสังกะสี</strong> ทองเหลืองเป็นโลหะผสมระหว่างทองแดงและสังกะสี ซึ่งคราบแดงที่เห็นก็คือทองแดงบริสุทธิ์ที่หลงเหลืออยู่บนผิวชิ้นงาน โดยกระบวนการเกิดคราบแดงมีดังนี้:",
+        intro_p4:"<strong>1. ทองเหลืองถูกกัดกร่อน:</strong> เมื่อชิ้นงานทองเหลืองสัมผัสกับสารละลายที่เป็นกรดเข้มข้น เช่น กรดกำมะถัน หรือกรดอื่นๆ ที่ใช้ล้างและกัดเงา ทั้งทองแดงและสังกะสีจะถูกละลายออกจากผิวโลหะ",
+        intro_p5:"<strong>2. สังกะสีละลายออกไปมากกว่า:</strong> ธาตุสังกะสีมีความว่องไวต่อปฏิกิริยาเคมีมากกว่าทองแดงในสภาวะที่เป็นกรด ดังนั้นสังกะสีจึงถูกละลายออกไปในสารละลายได้ง่ายและเร็วกว่า",
+        intro_p6:"<strong>3. ทองแดงกลับมาเกาะผิว:</strong> หลังจากสังกะสีส่วนใหญ่ถูกกำจัดออกไปแล้ว ทองแดงซึ่งเป็นส่วนประกอบหลักและทนทานต่อกรดมากกว่า จะถูกขับกลับมาเกาะรวมตัวกันที่ผิวของชิ้นงานอีกครั้งในรูปของทองแดงบริสุทธิ์",
+        intro_p7:"<strong>4. เหลือเป็นคราบแดงหรือชมพู:</strong> ชั้นของทองแดงบริสุทธิ์ที่เกาะกลับมานี้จะมีลักษณะเป็นสีแดงหรือสีชมพู ทำให้เห็นเป็นคราบอย่างชัดเจนหลังผ่านการกัดกรด",
 
         features_h:"คุณสมบัติพิเศษของน้ำยา Laser B",
-        feature_1:"1) ไม่มีควันพิษ เพราะไม่มีกรดไนตริก (HNO₃)",
-        feature_2:"2) ความเงาคงทนต่อสภาพปกติ ไม่ต้องใช้กรดโครมิก/โซเดียมไซยาไนด์ช่วย",
-        feature_3:"3) หลังจุ่มสามารถนำไปชุบขั้นต่อไปได้ โดยไม่ต้องทำความสะอาดผิวซ้ำ",
-        feature_4:"4) ใช้ได้กับทองเหลืองทุกเกรด ทั้งที่ซิงค์สูงหรือมีตะกั่วผสม",
-        feature_5:"5) ใช้ได้ทั้งถังจุ่ม (Rack) และถังกลิ้ง (Barrel)",
-        feature_6:"6) ไม่ต้องตามด้วยกรดโครมิก/โซเดียมไซยาไนด์เหมือนสูตรกรดไนตริก",
-        feature_7:"7) เสื่อมสภาพแล้วไม่เป็นอันตรายต่อสิ่งแวดล้อม (ทิ้งตามข้อกำหนดท้องถิ่น)",
+        feature_1:"<strong>ไม่มีควันพิษ</strong> เพราะไม่มีส่วนผสมของกรดไนตริก ปลอดภัยต่อผู้ปฏิบัติงาน",
+        feature_2:"ความเงางามคงทนต่อสภาพอากาศปกติได้ยาวนาน ไม่ต้องพึ่งพากรดโครมิกหรือโซเดียมไซยาไนด์เพื่อช่วยรักษาความเงา",
+        feature_3:"หลังจากจุ่มเงาเสร็จสิ้น สามารถนำชิ้นงานไปชุบเคลือบผิวในขั้นตอนต่อไปได้ทันที โดยไม่ต้องทำความสะอาดผิวซ้ำ",
+        feature_4:"สามารถใช้งานได้ดีเยี่ยมกับทองเหลืองทุกเกรด รวมถึงทองเหลืองที่มีปริมาณสังกะสีสูง หรือทองเหลืองที่มีตะกั่วผสม",
+        feature_5:"รองรับการใช้งานทั้งกับระบบตะแกรงจุ่ม (Rack) และระบบถังกลิ้ง (Barrel)",
+        feature_6:"ไม่ต้องตามด้วยการล้างกรดโครมิกหรือโซเดียมไซยาไนด์เหมือนสูตรที่ใช้กรดไนตริก",
+        feature_7:"เมื่อน้ำยาเสื่อมสภาพแล้ว จะไม่เป็นสารอันตรายรุนแรงต่อสิ่งแวดล้อม (สามารถบำบัดและทิ้งได้ตามข้อกำหนดของกรมโรงงานอุตสาหกรรม)",
 
         dosage_h:"อัตราการใช้",
-        dosage_p1:"น้ำยา Laser B — 350 ซีซี/ลิตร",
-        dosage_p2:"น้ำกลั่น — 650 ซีซี/ลิตร",
+        dose_th_comp:"ส่วนประกอบ",
+        dose_th_amount:"ปริมาณที่ใช้ (ต่อ 1 ลิตร)",
+        dose_laser:"น้ำยา Laser B",
+        dose_water:"น้ำกลั่น หรือ น้ำกรองบริสุทธิ์",
 
         care_h:"การดูแลรักษาน้ำยา",
-        care_p1:"เก็บในที่เย็นและอากาศถ่ายเท ระหว่างทำงานควรตรวจค่า pH < 2.0 หากสูงกว่าให้ปรับด้วยกรดกำมะถันอย่างระมัดระวัง",
+        care_p1:"ควรเก็บรักษาน้ำยาในที่เย็นและมีอากาศถ่ายเทได้สะดวก ในระหว่างการปฏิบัติงานควรหมั่นตรวจสอบค่าความเป็นกรด-ด่าง โดยรักษาค่า <strong>pH ให้ต่ำกว่า 2.0 เสมอ</strong> หากพบว่าค่า pH สูงกว่าเกณฑ์ที่กำหนด ให้ทำการปรับสภาพอ่างโดยการค่อยๆ เติมกรดกำมะถันลงไปอย่างระมัดระวัง",
 
-        steps_h:"ขั้นตอนการทำงาน",
-        step_1:"1) ต้มล้างไขมันด้วย ยาล้างไขมัน B1 — 60 กรัม/ลิตร (กรณีมีคราบมันมาก)",
-        step_2:"2) ล้างน้ำสะอาด",
-        step_3:"3) จุ่ม Desmut 1–2 นาที",
-        step_4:"4) จุ่ม Laser B 1–3 นาที หรือจนผิวเป็นสีน้ำตาลเข้ม (โกโก้)",
+        steps_h:"ขั้นตอนการทำงาน (สำหรับทองเหลืองทั่วไป)",
+        step_1:"1) ต้มล้างไขมันและสิ่งสกปรกด้วย <strong>ยาล้างไขมัน B1</strong> ในอัตราส่วน 60 กรัม/ลิตร (แนะนำสำหรับชิ้นงานที่มีคราบน้ำมันเกาะแน่นมาก)",
+        step_2:"2) ล้างน้ำสะอาดให้หมดจด",
+        step_3:"3) จุ่มน้ำยาลอกคราบสมัท (Desmut) เป็นเวลา 1–2 นาที",
+        step_4:"4) <strong>จุ่มน้ำยา Laser B เป็นเวลา 1–3 นาที</strong> หรือสังเกตจนกว่าผิวชิ้นงานจะเปลี่ยนเป็นสีน้ำตาลเข้มคล้ายสีโกโก้",
         step_5:"5) ล้างน้ำสะอาด",
-        step_6:"6) จุ่มกรดกำมะถัน 3% 5–30 วินาที จนสีน้ำตาลหลุด",
+        step_6:"6) จุ่มล้างในกรดกำมะถันความเข้มข้น 3% เป็นเวลา 5–30 วินาที จนกระทั่งคราบฟิล์มสีน้ำตาลหลุดออกหมดและเห็นเนื้อทองเหลืองสุกใส",
         step_7:"7) ล้างน้ำสะอาด",
-        step_8:"8) ทองเหลืองที่ซิงค์/ตะกั่วสูง: จุ่มกรดฟอสฟอริก 30% 1–2 นาที",
+        step_8:"8) <em>ขั้นตอนเสริมสำหรับทองเหลืองที่มีปริมาณสังกะสีหรือตะกั่วสูง:</em> ให้จุ่มกรดฟอสฟอริกความเข้มข้น 30% เป็นเวลา 1–2 นาที เพื่อปรับสภาพผิวขั้นสุด",
         step_9:"9) ล้างน้ำสะอาด",
-        step_10:"10) จุ่มน้ำยากันหมองทองเหลือง/ทองแดง 1 ซีซี/ลิตร 30 วินาที",
-        step_11:"11) อบแห้ง หรือชุบขั้นต่อไป",
+        step_10:"10) เพื่อการปกป้องระยะยาว ให้จุ่มน้ำยากันหมองทองเหลือง/ทองแดง (Anti-tarnish) อัตราส่วน 1 ซีซี/ลิตร เป็นเวลา 30 วินาที",
+        step_11:"11) นำไปอบแห้ง หรือส่งเข้าสู่กระบวนการชุบเคลือบผิวในขั้นตอนต่อไป",
 
-        casting_h:"สำหรับทองเหลืองหล่อ",
-        cast_1:"1) ต้มล้างไขมันด้วย B1 — 60 กรัม/ลิตร",
+        casting_h:"ขั้นตอนการทำงาน (สำหรับทองเหลืองหล่อ)",
+        cast_1:"1) ต้มล้างไขมันด้วยยาล้างไขมัน B1 อัตราส่วน 60 กรัม/ลิตร",
         cast_2:"2) ล้างน้ำสะอาด",
-        cast_3:"3) จุ่ม Desmut 1–2 นาที",
-        cast_4:"4) จุ่ม Laser B (350 ซีซี/ลิตร) 1–3 นาที หรือจนผิวเป็นสีน้ำตาลเข้ม",
+        cast_3:"3) จุ่มลอกคราบด้วย Desmut เป็นเวลา 1–2 นาที",
+        cast_4:"4) <strong>จุ่มน้ำยา Laser B (อัตราส่วน 350 ซีซี/ลิตร) เป็นเวลา 1–3 นาที</strong> หรือจนกว่าผิวจะเป็นสีน้ำตาลเข้ม",
         cast_5:"5) ล้างน้ำสะอาด",
-        cast_6:"6) จุ่มกรดกำมะถัน 10% 15–30 วินาที",
+        cast_6:"6) จุ่มล้างในกรดกำมะถัน <strong>ความเข้มข้น 10%</strong> (เข้มข้นกว่างานทั่วไป) เป็นเวลา 15–30 วินาที",
         cast_7:"7) ล้างน้ำสะอาด",
-        cast_8:"8) จุ่มกรดโครมิก/โซเดียมไบโครเมต 5–10% (50–100 กรัม/ลิตร)",
-        cast_9:"9) ล้างน้ำสะอาด",
-        cast_10:"10) จุ่มน้ำกลั่นเพื่อล้างคลอรีนจากน้ำล้าง",
-        cast_11:"11) อบแห้ง หรือชุบขั้นต่อไป",
+        cast_8:"8) <em>กระบวนการพาสซิเวท (Passivation):</em> จุ่มกรดโครมิก หรือ โซเดียมไบโครเมต ความเข้มข้น 5–10% (ประมาณ 50–100 กรัม/ลิตร)",
+        cast_9:"9) ล้างน้ำสะอาดให้หมดจด",
+        cast_10:"10) จุ่มล้างในน้ำกลั่น เพื่อล้างคราบคลอรีนที่อาจหลงเหลือจากน้ำประปา",
+        cast_11:"11) นำไปอบแห้ง หรือส่งเข้าสู่กระบวนการชุบเคลือบผิวต่อไป",
 
-        note_h:"หมายเหตุ",
-        note_p1:"น้ำที่ใช้ผสมควรเป็นน้ำกลั่น/น้ำกรอง เพื่อผลลัพธ์คงที่",
+        note_h:"ข้อควรระวังเพิ่มเติม",
+        note_p1:"น้ำที่นำมาใช้สำหรับผสมน้ำยา Laser B <strong>ควรเป็นน้ำกลั่น หรือ น้ำกรองบริสุทธิ์ (DI Water) เท่านั้น</strong> เพื่อหลีกเลี่ยงการทำปฏิกิริยากับแร่ธาตุในน้ำประปา ซึ่งจะช่วยให้ผลลัพธ์การกัดเงาคงที่และยืดอายุการใช้งานของอ่างน้ำยาได้ยาวนานที่สุด",
 
         links_h:"ลิงก์ที่เกี่ยวข้อง",
-        link_at:"ชุบทองเหลืองเพื่อผิวโทนสีทอง",
-        link_salt:"คู่มือ Salt Spray และการอ่านผล",
-        link_pretreat:"หมวด Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"อุปกรณ์ระบบกรอง/มีดลม/อบแห้ง",
+        link_at:"น้ำยาชุบทองเหลืองเพื่อปรับผิวให้เป็นโทนสีทอง",
+        link_salt:"บทความ: คู่มือ Salt Spray Test และการประเมินผล",
+        link_pretreat:"หมวด Pretreatment: น้ำยาล้างไขมันและลอกคราบ",
+        link_protect:"น้ำยากันหมองทองเหลือง (Protective Treatment)",
+        link_equip:"หมวดอุปกรณ์: ระบบกรอง มีดลมเป่า และตู้อบแห้ง",
 
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved."
       },
       en: {
         title:"Laser B Brass Bright Dip | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Home",
+        back_home:"← Back to Articles",
         hero_title:"Laser B — Brass Bright Dip",
-        hero_tagline:"Properties, mixing ratios, bath care, and step-by-step workflow for general brass and cast brass.",
+        hero_tagline:"In-depth guide: Causes of red stains on brass, key properties, mixing ratios, and professional workflows.",
 
-        toc_title:"Contents", toc_intro:"Overview", toc_features:"Key properties",
-        toc_dosage:"Dosage", toc_care:"Bath care",
-        toc_steps:"Process steps", toc_casting:"Cast brass", toc_note:"Note",
+        part1:"Part 1: Issues & Properties",
+        part2:"Part 2: Operational Workflows",
 
-        intro_h:"What causes the red residue when brass is treated with Sulfuric Acid?",
-        intro_h1:"Solution",
-        intro_p1:"LASER B is an acidic liquid concentrate formulated to remove oxide films formed during brass etching and to eliminate the reddish stain sometimes seen after sulfuric-acid dips. It yields a brighter, more durable finish than conventional sulfuric bright dips.",
-        intro_p2:"The red or pink stain remaining on the brass surface after cleaning with sulfur (often involving dipping in sulfuric acid for cleaning or polishing) is mainly caused by a chemical phenomenon called **Dezincification** commonly referred to as **copper staining.**",
-        intro_p3:"🔬 Main Cause: Dezincification. Brass is an alloy of **Copper (Cu)** and **Zinc (Zn)**, and the red stain you see is actually **pure copper** left on the surface of the workpiece. Cause of the red stain.",
-        intro_p4:"1. **Brass is corroded:** When a brass workpiece comes into contact with a concentrated acid solution (such as sulfuric acid or other acids used for washing/polishing), both copper and zinc are dissolved from the metal surface.",
-        intro_p5:"2. **Zinc dissolves more readily:** The element Zinc (Zn) is chemically more reactive than Copper (Cu) in an acidic environment. Therefore, the zinc is dissolved into the solution more easily and quickly.",
-        intro_p6:"3. **Copper redeposits:** After most of the zinc has been removed, the copper, which is the other main component of brass and is more resistant to acid, is redeposited and agglomerates on the workpiece surface in the form of **pure copper.**",
-        intro_p7:"4. **Remaining red/pink stain:** This redeposited layer of pure copper has a red or pink color, which appears as the stain you observed.",
+        toc_title:"Contents", 
+        toc_intro:"Why does acid-dipped brass turn red?", 
+        toc_solution:"The Laser B Solution",
+        toc_features:"Key properties",
+        toc_dosage:"Dosage", 
+        toc_care:"Bath care",
+        toc_steps:"General brass steps", 
+        toc_casting:"Cast brass steps", 
+        toc_note:"Important Notes",
+        toc_links:"Related links",
+
+        intro_h:"What causes the red residue when brass is acid-dipped?",
+        solution_h:"The Laser B Solution",
+        solution_p1:"<strong>LASER B</strong> is a highly concentrated acidic liquid specifically formulated to handle three main tasks: removing oxide films from brass etching, eliminating the red copper stains frequently found after a sulfuric acid dip, and conditioning the surface. It yields a brighter, more beautiful, and far more durable finish than conventional sulfuric bright dips.",
+        intro_p2:"The red or pink stain remaining on the brass surface after cleaning or dipping in sulfuric acid is primarily caused by a chemical phenomenon known as Dezincification, commonly referred to as <strong>Copper Staining.</strong>",
+        intro_p3:"<strong>Main Cause: Dezincification.</strong> Brass is an alloy consisting of Copper and Zinc. The red stain you observe is actually pure copper left behind on the surface. The process unfolds as follows:",
+        intro_p4:"<strong>1. Acid Corrosion:</strong> When a brass workpiece comes into contact with a concentrated acid solution (such as sulfuric acid used for washing/polishing), both copper and zinc begin to dissolve from the metal surface.",
+        intro_p5:"<strong>2. Preferential Zinc Dissolution:</strong> Zinc is chemically more reactive than copper in an acidic environment. Consequently, the zinc is stripped away and dissolved into the solution much faster.",
+        intro_p6:"<strong>3. Copper Redeposition:</strong> After the majority of the surface zinc has been stripped, the copper—which is the other main component and highly acid-resistant—is driven back to agglomerate on the workpiece surface in the form of pure copper.",
+        intro_p7:"<strong>4. The Red/Pink Stain:</strong> This redeposited layer of pure copper inherently possesses a red or pink color, making it distinctly visible as a stain after the acid dip.",
 
         features_h:"Key properties of Laser B",
-        feature_1:"1) No toxic fumes — nitric acid (HNO₃) free.",
-        feature_2:"2) Brightness is stable in normal atmosphere; no chromic acid / sodium cyanide helper needed.",
-        feature_3:"3) After dipping, parts can proceed to subsequent plating without re-cleaning.",
-        feature_4:"4) Works with all brass grades, including high-zinc and leaded brass.",
-        feature_5:"5) Compatible with rack and barrel tanks.",
-        feature_6:"6) No chromic acid or sodium cyanide post-dip required as with nitric systems.",
-        feature_7:"7) Environmentally friendlier in spent form (dispose per local regulations).",
+        feature_1:"<strong>No toxic fumes</strong> because it is completely free of nitric acid, ensuring operator safety.",
+        feature_2:"Provides long-lasting brightness that is stable in a normal atmosphere, eliminating the need for chromic acid or sodium cyanide helpers.",
+        feature_3:"After the dipping process is complete, parts can immediately proceed to subsequent electroplating steps without re-cleaning.",
+        feature_4:"Performs exceptionally well with all brass grades, including high-zinc and leaded brass alloys.",
+        feature_5:"Fully compatible with both Rack and Barrel tank systems.",
+        feature_6:"Does not require follow-up dips in chromic acid or sodium cyanide, unlike traditional nitric-acid formulas.",
+        feature_7:"Once exhausted, the solution is not severely hazardous to the environment (can be treated and disposed of per local industrial regulations).",
 
         dosage_h:"Dosage",
-        dosage_p1:"Laser B — 350 ml/L",
-        dosage_p2:"DI/Distilled water — 650 ml/L",
+        dose_th_comp:"Component",
+        dose_th_amount:"Amount (per 1 Liter)",
+        dose_laser:"Laser B Concentrate",
+        dose_water:"DI or Distilled Water",
 
         care_h:"Bath care",
-        care_p1:"Store cool and ventilated. During operation keep pH < 2.0; if higher, carefully adjust with sulfuric acid.",
+        care_p1:"Store the solution in a cool, well-ventilated area. During operation, frequently check the acidity. <strong>Always maintain the pH below 2.0.</strong> If the pH rises above the target, carefully adjust the bath by slowly adding sulfuric acid.",
 
-        steps_h:"Process steps",
-        step_1:"1) Hot soak degrease with B1 cleaner — 60 g/L (for oily parts).",
-        step_2:"2) Rinse well.",
-        step_3:"3) Desmut 1–2 min.",
-        step_4:"4) Laser B 1–3 min, or until uniform dark brown (cocoa) surface.",
-        step_5:"5) Rinse well.",
-        step_6:"6) 3% sulfuric acid, 5–30 s, until brown film is removed.",
-        step_7:"7) Rinse well.",
-        step_8:"8) For high-Zn/lead brass: 30% phosphoric acid, 1–2 min.",
-        step_9:"9) Rinse well.",
-        step_10:"10) Brass/Copper anti-tarnish 1 ml/L, 30 s.",
-        step_11:"11) Dry or continue to plating.",
+        steps_h:"Process steps (General Brass)",
+        step_1:"1) Hot soak degrease with <strong>B1 cleaner</strong> at 60 g/L (highly recommended for heavily oiled parts).",
+        step_2:"2) Rinse thoroughly with clean water.",
+        step_3:"3) Dip in Desmut solution for 1–2 minutes.",
+        step_4:"4) <strong>Immerse in Laser B for 1–3 minutes</strong>, or until the surface turns a uniform dark brown (cocoa-like) color.",
+        step_5:"5) Rinse thoroughly with clean water.",
+        step_6:"6) Dip in a 3% sulfuric acid solution for 5–30 seconds until the brown film completely sheds, revealing bright brass.",
+        step_7:"7) Rinse thoroughly with clean water.",
+        step_8:"8) <em>Optional step for high-zinc/lead brass:</em> Dip in 30% phosphoric acid for 1–2 minutes for ultimate surface conditioning.",
+        step_9:"9) Rinse thoroughly with clean water.",
+        step_10:"10) For long-term protection, dip in Brass/Copper Anti-tarnish at 1 ml/L for 30 seconds.",
+        step_11:"11) Dry the parts or proceed immediately to the next plating process.",
 
-        casting_h:"Cast brass",
-        cast_1:"1) Hot soak degrease with B1 — 60 g/L.",
-        cast_2:"2) Rinse well.",
-        cast_3:"3) Desmut 1–2 min.",
-        cast_4:"4) Laser B (350 ml/L) 1–3 min or until dark brown.",
-        cast_5:"5) Rinse well.",
-        cast_6:"6) 10% sulfuric acid, 15–30 s.",
-        cast_7:"7) Rinse well.",
-        cast_8:"8) Passivate: 5–10% chromic acid or sodium bichromate (50–100 g/L).",
-        cast_9:"9) Rinse well.",
-        cast_10:"10) Final DI rinse to remove chlorine.",
-        cast_11:"11) Dry or proceed to plating.",
+        casting_h:"Process steps (Cast Brass)",
+        cast_1:"1) Hot soak degrease with B1 cleaner at 60 g/L.",
+        cast_2:"2) Rinse thoroughly with clean water.",
+        cast_3:"3) Dip in Desmut for 1–2 minutes.",
+        cast_4:"4) <strong>Immerse in Laser B (350 ml/L) for 1–3 minutes</strong>, or until the surface is dark brown.",
+        cast_5:"5) Rinse thoroughly with clean water.",
+        cast_6:"6) Dip in a <strong>10% sulfuric acid solution</strong> (stronger than for general brass) for 15–30 seconds.",
+        cast_7:"7) Rinse thoroughly with clean water.",
+        cast_8:"8) <em>Passivation:</em> Dip in 5–10% chromic acid or sodium bichromate (approx. 50–100 g/L).",
+        cast_9:"9) Rinse thoroughly with clean water.",
+        cast_10:"10) Final dip in distilled/DI water to wash away any chlorine residues from tap water.",
+        cast_11:"11) Dry the parts or proceed to the next plating process.",
 
-        note_h:"Note",
-        note_p1:"Use distilled/filtered water for make-up to ensure consistent results.",
+        note_h:"Important Notes",
+        note_p1:"The water used to dilute the Laser B concentrate <strong>must be Distilled or Deionized (DI) Water</strong>. Avoiding reactions with tap water minerals will ensure highly consistent brightening results and dramatically extend the bath's operational lifespan.",
 
         links_h:"Related links",
-        link_at:"Brass Plating",
-        link_salt:"Salt Spray quick guide",
-        link_pretreat:"Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"Filtration & hot-air knife equipment",
+        link_at:"Brass Plating solution for golden finishes",
+        link_salt:"Guide: Salt Spray Testing and Evaluation",
+        link_pretreat:"Pretreatment: Degreasers and Desmutters",
+        link_protect:"Brass Anti-tarnish (Protective Treatment)",
+        link_equip:"Equipment: Filtration, Air Knives, and Ovens",
 
         footer_products:"Products", footer_contact:"Contact Us",
-        footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved."
       }
     };
 
@@ -612,20 +692,19 @@
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
         if (key && I18N[sel] && typeof I18N[sel][key] === 'string') {
-          node.textContent = I18N[sel][key];
+          node.innerHTML = I18N[sel][key];
         }
       });
-      // page title (if <title> has data-i18n-key)
+      // page title
       try{
         const title = document.querySelector('title[data-i18n-key="title"]');
         if (title) title.textContent = I18N[sel].title || title.textContent;
       }catch(e){}
-      // recalc header height
+      
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
         document.documentElement.style.setProperty('--header-h', h + 'px');
       }catch(e){}
-      // persist
       try{ localStorage.setItem('lang', sel); }catch(e){}
     }
 
@@ -633,6 +712,53 @@
       const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'th';
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
+    })();
+  </script>
+
+  <!-- Part Switcher Logic -->
+  <script>
+    (function(){
+      const buttons = document.querySelectorAll('.part-switch .part-btn');
+      const tocLinks = document.querySelectorAll('#toc a[data-part]');
+      const sections = document.querySelectorAll('section[data-part]');
+
+      function setPart(p){
+        const part = (p === '2') ? '2' : '1';
+        document.documentElement.setAttribute('data-part', part);
+        sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+        tocLinks.forEach(a => {
+            if(a.parentElement.tagName === 'LI') {
+                a.parentElement.hidden = (a.dataset.part !== part);
+            } else {
+                a.hidden = (a.dataset.part !== part);
+            }
+        });
+        buttons.forEach(b => {
+          const on = (b.dataset.part === part);
+          b.setAttribute('aria-pressed', String(on));
+          b.setAttribute('aria-selected', String(on));
+        });
+        try{ localStorage.setItem('lb_part', part); }catch(e){}
+        const url = new URL(location);
+        url.searchParams.set('part', part);
+        history.replaceState(null,'',url);
+      }
+
+      const urlPart = new URLSearchParams(location.search).get('part');
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lb_part')) || '1';
+      setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+      buttons.forEach(b => b.addEventListener('click', ()=>{
+        setPart(b.dataset.part);
+        document.querySelector('.part-switch')?.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+
+      document.querySelectorAll('#toc a[data-part]').forEach(a=>{
+        a.addEventListener('click', ()=>{
+          const p = a.getAttribute('data-part');
+          setPart(p);
+        });
+      });
     })();
   </script>
 
@@ -680,10 +806,10 @@
 
       try{
         const here = location.pathname.replace(/\/+$/,'');
-        const isProducts = here.startsWith('/products');
+        const isBlog = here.startsWith('/blog');
         nav?.querySelectorAll('a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          if (isProducts && /\/products\/?$/.test(path)) a.setAttribute('aria-current','page');
+          if (isBlog && /\/blog\/?$/.test(path)) a.setAttribute('aria-current','page');
           else if (here === path) a.setAttribute('aria-current','page');
           else a.removeAttribute('aria-current');
         });
@@ -719,20 +845,29 @@
       tocLinks.forEach(a=>{
         const id = a.getAttribute('href').slice(1);
         const el = document.getElementById(id);
-        if (el) map.set(id, {link:a, el});
+        const li = a.closest('li');
+        if (el) map.set(id, {link:a, li:li, el:el});
       });
 
       const setActive = (id)=>{
-        tocLinks.forEach(a=> a.classList.remove('is-active'));
-        tocLinks.forEach(a=> a.setAttribute('aria-current','false'));
+        tocLinks.forEach(a=>{
+            a.classList.remove('is-active');
+            a.setAttribute('aria-current','false');
+            if(a.closest('li')) a.closest('li').setAttribute('aria-current', 'false');
+        });
         const item = map.get(id);
-        if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+        if (item){ 
+            item.link.classList.add('is-active'); 
+            item.link.setAttribute('aria-current','true'); 
+            if(item.li) item.li.setAttribute('aria-current', 'true');
+        }
       };
 
       const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
       const obs = new IntersectionObserver((entries)=>{
         entries.forEach(e=>{
           if (e.isIntersecting){
+            if(e.target.hidden) return;
             const id = e.target.id;
             setActive(id);
             history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
@@ -742,22 +877,23 @@
 
       map.forEach(({el})=> obs.observe(el));
     })();
-      // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
 
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
 
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
   </script>
 </body>
 </html>
