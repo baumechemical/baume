@@ -208,11 +208,11 @@
     .dot[aria-current="true"]{background:#fff}
 
     .hero .btn:not(.ghost){
-  border-color:#ff9800;
-  background:#ff9800;
-  color:#fff;              /* เปลี่ยนเป็นตัวอักษรสีขาวให้คอนทราสต์ดี */
-}
-.hero .btn:not(.ghost):hover{ opacity:.92 }
+      border-color:#ff9800;
+      background:#ff9800;
+      color:#fff;
+    }
+    .hero .btn:not(.ghost):hover{ opacity:.92 }
 
     /* ===== Sub-hero ===== */
     .subhero{background:#fff; border-radius:0 0 var(--radius-lg) var(--radius-lg); box-shadow:0 10px 30px rgba(2,8,20,.06); margin-top:-14px}
@@ -242,7 +242,6 @@
     .card .actions{display:flex; gap:8px; flex-wrap:wrap}
     .card .btn.ghost{background:transparent; border-color:var(--accent); color:var(--accent)}
     .card:hover{box-shadow:var(--shadow-2); transform:translateY(-2px)}
-    .hl{background:linear-gradient(180deg, rgba(255,242,204,.9), rgba(255,242,204,0.7)); padding:0 .15em; border-radius:4px}
 
     /* Quick button on card */
     .quick{position:absolute; top:10px; right:10px; background:#ffffffe6; border:1px solid #e2e8f0; border-radius:999px; padding:6px 10px; font-weight:800; font-size:.86rem; cursor:pointer; box-shadow:var(--shadow-1)}
@@ -263,13 +262,12 @@
     @media(max-width:860px){ .modal{grid-template-columns:1fr} .modal .left{aspect-ratio:16/9} }
 
     /* Make all buttons in Quick View modal green */
-.modal .btn,
-.modal .btn.ghost{
-  border-color: var(--accent);
-  background: var(--accent);
-  color:#fff;
-}
-
+    .modal .btn,
+    .modal .btn.ghost{
+      border-color: var(--accent);
+      background: var(--accent);
+      color:#fff;
+    }
 
     /* ===== Skeleton ===== */
     .skeleton{background:#fff; border:1px solid #e6ecf3; border-radius:var(--radius); overflow:hidden}
@@ -283,19 +281,19 @@
     .empty{display:none; text-align:center; padding:38px; color:var(--muted)}
 
     /* === Card bottom accent (green strip) === */
-.card, .why{                 /* อยากให้ทั้งการ์ดใหญ่และการ์ด .why มีขอบ */
-  position: relative;
-  overflow: hidden;          /* ให้มุมโค้งครอบแถบไว้ */
-}
-.card::after,
-.why::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height:4px;                /* ปรับความหนาได้ */
-  background:linear-gradient(90deg, var(--brand-2), #59a286, #9bd4b9);
-  opacity:.9;
-}
+    .card, .why{
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after,
+    .why::after{
+      content:"";
+      position:absolute;
+      left:0; right:0; bottom:0;
+      height:4px;
+      background:linear-gradient(90deg, var(--brand-2), #59a286, #9bd4b9);
+      opacity:.9;
+    }
 
     /* ===== Footer ===== */
     .site-footer{background:#0f172a; color:#cbd5e1; margin-top:32px}
@@ -312,62 +310,110 @@
     .footer-list li{margin:6px 0; word-break:break-word}
     .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating Buttons */
+    .float-line{
+      position:fixed;
+      right:16px;
+      bottom:calc(18px + env(safe-area-inset-bottom));
+      z-index:900;
+    }
+    .float-line a{
+      display:grid; place-items:center;
+      width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
+      animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover,
+    .float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    /* Back-to-top */
+    .backtop{
+      position:fixed;
+      right:16px;
+      bottom:calc(90px + env(safe-area-inset-bottom));
+      z-index:900;
+      display:none;
+    }
+    .backtop.show{ display:block }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px;
+      border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 10px 26px rgba(0,0,0,.18);
+      cursor:pointer;
+    }
+    .backtop button:hover,
+    .backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
     @media (prefers-reduced-motion: reduce){ .slide,.btn{transition:none} }
     mark{ background:#fff4a3; color:inherit; padding:0 .2em; border-radius:.25em; box-shadow:inset 0 -1px 0 rgba(0,0,0,.05) }
     [hidden]{ display:none !important; }
+
+    /* ===== TDS Dropdown ===== */
+    .tds-dropdown {
+      width: 100%;
+      margin-top: 4px;
+    }
+    .tds-dropdown summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+    }
+    .tds-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+    .tds-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 8px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+    .tds-list a {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+      transition: all 0.2s;
+    }
+    .tds-list a:hover {
+      background: #eef6f2;
+      border-color: var(--brand-2);
+      transform: translateX(4px);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ===== HEADER (fixed + language inside) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header" role="banner" id="siteHeader" aria-label="Site header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Baume Chemical">
@@ -386,7 +432,6 @@
           </ul>
         </nav>
 
-        <!-- Language switcher -->
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
             <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -419,8 +464,6 @@
         <a class="btn ghost" href="contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
       </div>
     </div>
-
-    <!-- (ย้ายปุ่มภาษาไปบนเฮดเดอร์แล้ว) -->
     <div class="dots" aria-label="สไลด์" role="tablist"></div>
   </section>
 
@@ -463,7 +506,7 @@
     <div id="empty" class="empty" data-i18n-key="empty">ไม่พบรายการที่ตรงเงื่อนไขการค้นหา</div>
   </main>
 
-  <!-- ===== QUICK VIEW MODAL (single) ===== -->
+  <!-- ===== QUICK VIEW MODAL ===== -->
   <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal" role="document">
       <div class="left" id="modalImg"></div>
@@ -518,13 +561,13 @@
     </div>
   </footer>
 
-      <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
   <noscript><div style="padding:16px;text-align:center">โปรดเปิดใช้งาน JavaScript เพื่อดูเนื้อหา</div></noscript>
 
 <script>
-/* ========== DATA (สองภาษาในแต่ละการ์ด) ========== */
+/* ========== DATA ========== */
 const PRODUCTS = [
   {
     id:"pretreatment", cat:"pretreatment", pop:1,
@@ -741,17 +784,36 @@ const nameOf = p => (p.name?.[currentLang] || p.name?.th || p.name?.en || '');
 const descOf = p => (p.desc?.[currentLang] || p.desc?.th || p.desc?.en || '');
 const tagsStr = p => [...(p.tags?.th||[]), ...(p.tags?.en||[])].join(' ');
 
-/* ========== RENDER CARD (ไม่มี SDS) ========== */
+/* ========== RENDER TDS BUTTONS ========== */
+function renderTds(tdsData) {
+  if (!tdsData) return '';
+  const arr = Array.isArray(tdsData) ? tdsData : [tdsData];
+  if (arr.length === 0) return '';
+  
+  if (arr.length === 1) {
+    const item = arr[0];
+    const href  = (typeof item === 'string') ? item : item.href;
+    const label = (typeof item === 'object' && item.label) ? item.label : 'TDS';
+    return `<a class="btn ghost" target="_blank" rel="noopener" href="${href}">${label}</a>`;
+  }
+  
+  const list = arr.map(item => {
+    const href  = (typeof item === 'string') ? item : item.href;
+    const label = (typeof item === 'object' && item.label) ? item.label : 'TDS';
+    return `<a target="_blank" rel="noopener" href="${href}">📄 ${label}</a>`;
+  }).join('');
+  
+  return `
+  <details class="tds-dropdown">
+    <summary class="btn ghost">📋 เอกสาร TDS (${arr.length}) ▾</summary>
+    <div class="tds-list">${list}</div>
+  </details>`;
+}
+
+/* ========== RENDER CARD ========== */
 function cardHTML(p, q=""){
   const sw = (p.swatches||[]).map(c=>`<span class="swatch" style="background:${c}"></span>`).join('');
-
-  const tdsBtns = Array.isArray(p.tds)
-    ? p.tds.map(item=>{
-        const href  = (typeof item === 'string') ? item : item.href;
-        const label = (typeof item === 'object' && item.label) ? item.label : 'TDS';
-        return `<a class="btn ghost" target="_blank" rel="noopener" href="${href}" aria-label="${label}">${label}</a>`;
-      }).join('')
-    : (p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}" aria-label="TDS">TDS</a>` : '');
+  const tdsBtns = renderTds(p.tds);
 
   return `
   <article class="card" data-id="${p.id}" data-cat="${p.cat}">
@@ -859,7 +921,7 @@ function applyFilters(){
   loadMore(true);
 }
 
-/* ========== QUICK VIEW (ใช้ modal เดียว) ========== */
+/* ========== QUICK VIEW ========== */
 function openModal(p){
   $('#modalImg').style.backgroundImage = `url('${p.img}')`;
   $('#modalTitle').textContent = nameOf(p);
@@ -871,13 +933,7 @@ function openModal(p){
     <span class="chip">${t('chip_temp_label')}: ${c.temp ?? '—'}</span>
     <span class="chip">${t('chip_current_label')}: ${c.current ?? '—'}</span>`;
 
-  const tdsBtns = Array.isArray(p.tds)
-    ? p.tds.map(item=>{
-        const href  = (typeof item === 'string') ? item : item.href;
-        const label = (typeof item === 'object' && item.label) ? item.label : 'TDS';
-        return `<a class="btn ghost" target="_blank" rel="noopener" href="${href}" aria-label="${label}">${label}</a>`;
-      }).join('')
-    : (p.tds ? `<a class="btn ghost" target="_blank" rel="noopener" href="${p.tds}" aria-label="TDS">TDS</a>` : '');
+  const tdsBtns = renderTds(p.tds);
 
   $('#modalActions').innerHTML = `
     <a class="btn" target="_blank" rel="noopener" href="${p.href}">${t('btn_details')}</a>
@@ -904,7 +960,6 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
   };
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  // mobile menu + scrim + body lock
   const toggle = header?.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
   const scrim = document.querySelector('.menu-scrim');
@@ -936,7 +991,6 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
     header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
   }
 
-  // highlight current page
   try{
     const here = location.pathname.replace(/\/+$/,'') || '/';
     document.querySelectorAll('.menu a').forEach(a=>{
@@ -958,7 +1012,7 @@ document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
   const hero = document.querySelector('.hero'); hero.addEventListener('mouseenter', ()=> clearInterval(tmr)); hero.addEventListener('mouseleave', ()=> tmr = setInterval(tick, 5200));
 })();
 
-/* ========== LANGUAGE SWITCH (อัปเดตเมตาด้วย + รีเรนเดอร์การ์ด) ========== */
+/* ========== LANGUAGE SWITCH ========== */
 function applyLang(lang){
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -987,7 +1041,6 @@ function applyLang(lang){
 
   emptyEl.textContent = I18N[lang].empty;
 
-  // recalc header height (ข้อความปุ่มภาษาเปลี่ยน)
   const header = document.getElementById('siteHeader');
   const h = header ? Math.round(header.getBoundingClientRect().height) : 64;
   document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -1017,14 +1070,14 @@ const io = new IntersectionObserver(entries=>{
 }, {rootMargin:"600px 0px"});
 io.observe(document.getElementById('sentinel'));
 
-  // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
+/* ==== Back-to-top ==== */
 (function(){
   const backTop = document.getElementById('backTop');
   if(!backTop) return;
 
   function toggleBackTop(){
     const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
+    backTop.classList.toggle('show', y > 200);
   }
   toggleBackTop();
   window.addEventListener('scroll', toggleBackTop, {passive:true});
