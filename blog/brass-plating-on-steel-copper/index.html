@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น | Baume Chemical Blog</title>
-  <meta name="description" content="ทำไมต้องมีชั้นรองพื้นเมื่อชุบทองเหลืองบนเหล็ก: ปัญหา Galvanic, ความแข็ง/การสึกหรอ, การแพร่คาร์บอน/สนิม, คุณภาพผิว, และตัวอย่างในอุตสาหกรรม" />
+  <title data-i18n-key="title">การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น | Baume Chemical Blog</title>
+  
+  <!-- === SEO base === -->
+  <meta name="description" content="ทำไมต้องมีชั้นรองพื้นเมื่อชุบทองเหลืองบนเหล็ก: ปัญหาการยึดเกาะกัลวานิก, ความแข็งและการสึกหรอ, การแพร่คาร์บอน, คุณภาพผิว, และตัวอย่างในอุตสาหกรรม" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" />
   <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html">
@@ -14,13 +15,13 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Baume Chemical" />
   <meta property="og:title" content="การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น — Baume Chemical Blog" />
-  <meta property="og:description" content="ชั้นทองแดง/นิกเกิลทำหน้าที่เป็นสะพานเชื่อม ลดปัญหา Galvanic และเพิ่มความทนทานของผิวชุบทองเหลือง" />
+  <meta property="og:description" content="ชั้นทองแดงหรือนิกเกิลทำหน้าที่เป็นสะพานเชื่อม ลดปัญหาการหลุดร่อน และเพิ่มความทนทานของผิวชุบทองเหลืองอย่างมาก" />
   <meta property="og:url" content="https://www.baumechemical.com/blog/brass-plating-on-steel-copper/index.html" />
   <meta property="og:image" content="https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg" />
   <meta property="og:locale" content="th_TH" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicons (ใช้ชุดเดียวกับไซต์หลัก) -->
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png" />
@@ -31,6 +32,7 @@
   <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg"/>
 
@@ -39,171 +41,150 @@
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:64px; 
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.7}
+    p { margin-top: 0; margin-bottom: 1.2em; color: #334155; }
+    strong { color: var(--brand); }
 
-    /* ===== Header: ใส → เข้มเมื่อเลื่อน (glass) ===== */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    /* ===== GLASS HEADER ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.85); backdrop-filter:saturate(140%) blur(12px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
     .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700; transition: background .2s;}
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid rgba(226,232,240,.4); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition: background .3s;}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd; border-color: rgba(226,232,240, 1);}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 12px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a; transition: all .2s;}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; box-shadow: 0 4px 10px rgba(56, 123, 91, 0.3); }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Burger (mobile) */
     .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
     @media (max-width:900px){
       .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
-      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172ae6; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
       .primary-nav a{ color:#fff; padding:12px 10px; }
       .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
       .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
       .lang-btn{ color:#fff }
       .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.4); z-index:1300; display:none; backdrop-filter: blur(3px); }
     .menu-scrim:not([hidden]){ display:block }
     body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(380px, 50vh, 550px); background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(44,94,78,.85)), url('https://img5.pic.in.th/file/secure-sv1/thumbnail04652dffaa005f20.jpg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 20px)}
+    .hero h1{margin:6px 0 12px; font-weight:800; font-size:clamp(28px,4.5vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.5); letter-spacing: -0.5px; max-width: 900px; margin-left: auto; margin-right: auto;}
+    .hero p{max-width:800px; margin:0 auto; color:#e2e8f0; font-size: 1.1rem; line-height: 1.6;}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 16px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:999px; font-weight:700; text-decoration:none; background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.3); color:#fff; transition: all .2s;}
+    .back-chip:hover{ background:#fff; color:var(--brand); transform:translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-    /* Back button chip */
-.back-chip{
-  position:absolute; 
-  top:calc(var(--header-h) + 10px); 
-  left:16px; z-index:1;
-  display:inline-flex; align-items:center; gap:6px;
-  padding:8px 12px; border-radius:999px;
-  font-weight:800; text-decoration:none;
-  background:#fff; color:#0f172a;
-  border:1px solid rgba(2,8,20,.08); 
-  box-shadow:var(--shadow-1);
-}
-.back-chip:hover{ transform:translateY(-1px) }
-
-    /* ===== Layout & TOC ===== */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    /* ===== Layout & Tables ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:40px 16px}
     @media (min-width:1100px){
-      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
-      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
-      section.section-block{ grid-column:2 }
+      main.wrap{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap:32px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 24px) }
+      .main-content{ grid-column:2; }
     }
-    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
-    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
-    #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
-    .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* ===== Sections ===== */
-    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
-    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
-    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+    /* Section Cards */
+    section.section-block{
+      background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position:relative; margin-bottom:24px; transition: box-shadow .3s;
+    }
+    section.section-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    section.section-block::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+      background:linear-gradient(90deg,var(--brand),#59a286,#9bd4b9);
+    }
+    
+    /* Icons in headings */
+    h2.section{margin:0 0 16px; font-size:clamp(22px,2.6vw,28px); font-weight:800; color:#0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;}
+    h2.section::before{ content:var(--icon, "📘"); font-size:22px; margin-right: 8px; vertical-align: middle;}
     #why>h2.section{ --icon:"🧩" }
     #galvanic>h2.section{ --icon:"⚡" }
     #hardness>h2.section{ --icon:"🛡️" }
-    #diffusion>h2.section{ --icon:"🧪" }
+    #diffusion>h2.section{ --icon:"🔬" }
     #finish>h2.section{ --icon:"✨" }
     #examples>h2.section{ --icon:"🏭" }
     #summary>h2.section{ --icon:"✅" }
-    .lead{margin:0 0 16px; color:var(--muted)}
+    #links>h2.section{ --icon:"🔗" }
 
-    /* Lists & utilities */
-    ul.nice{margin:8px 0 0; padding-left:22px}
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
-    .reveal.show{opacity:1; transform:none}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    html{scroll-behavior:smooth}
+    /* ===== TOC styling ===== */
+    #toc{ background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:var(--shadow-1); padding:20px; }
+    #toc h2.section{ font-size:1.1rem; border-bottom: none; margin-bottom: 16px; padding-bottom: 0; color: var(--brand); }
+    #toc .toc-list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+    #toc .toc-list li{ position:relative; border-radius:10px; transition:all .2s; }
+    #toc .toc-link{ display:block; padding:10px 32px 10px 14px; text-decoration:none; color:#475569; font-weight:600; border-radius:8px; font-size: 0.95rem; }
+    #toc .toc-list li:hover { background: #f1f5f9; }
+    #toc .toc-list li:hover .toc-link{ color: var(--brand); }
+    
+    #toc .toc-list li::after{ content:"›"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-weight:800; transition: color .2s; }
+    #toc .toc-list li[aria-current="true"]{ background:var(--brand-2); box-shadow:0 4px 12px rgba(56, 123, 91, 0.2); }
+    #toc .toc-list li[aria-current="true"] .toc-link{ color:#fff; }
+    #toc .toc-list li[aria-current="true"]::after{ color:#fff; }
 
-    /* ===== Footer ===== */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    /* Lists */
+    ul.nice { margin: 8px 0 0; padding-left: 24px; color: #334155; }
+    ul.nice li { margin-bottom: 8px; }
+
+    /* Footer */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color .2s;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:48px 20px 24px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:48px; height:48px; border-radius:12px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.2rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#94a3b8}
 
-/* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:900;}
+    .float-line a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#00c300; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform .2s;}
+    .float-line a:hover{transform:translateY(-2px) scale(1.05);}
+    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 15px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    .backtop{position:fixed; right:20px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; opacity: 0; transition: opacity .3s;}
+    .backtop.show{display:block; opacity: 1;}
+    .backtop button{width:46px; height:46px; border-radius:50%; border:none; background:#fff; color: var(--brand); font-size: 1.2rem; box-shadow:0 4px 16px rgba(0,0,0,.15); cursor:pointer; transition: all .2s;}
+    .backtop button:hover{background:var(--brand); color:#fff; transform:translateY(-2px);}
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-</style>
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out}
+    .reveal.show{opacity:1; transform:none}
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 24px)}
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -211,7 +192,7 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
         <span class="bar"></span>
       </button>
 
@@ -235,94 +216,109 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
-    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
-      <a class="back-chip" href="https://www.baumechemical.com/blog" data-back data-i18n-key="back_home">← กลับสู่หน้า Blog</a>
-      <h1 data-i18n-key="hero_title">การชุบทองเหลืองบนชิ้นงานเหล็กและความสำคัญของโลหะรองพื้น</h1>
-      <p data-i18n-key="hero_tagline">ทำไมต้องมีชั้นทองแดง/นิกเกิลก่อนชุบทองเหลือง: ปัญหาความแข็ง/สึกหรอ, การแพร่คาร์บอน/สนิม, และความเงางามที่สม่ำเสมอ</p>
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับหน้าบทความ</a>
+    <div class="wrap" style="display:block; padding:0; margin:auto">
+      <h1 data-i18n-key="hero_title">การชุบทองเหลืองบนเหล็กและความสำคัญของโลหะรองพื้น</h1>
+      <p data-i18n-key="hero_tagline">ทำไมต้องมีชั้นทองแดงหรือนิกเกิลก่อนชุบทองเหลือง: ปัญหาความแข็ง การสึกหรอ การแพร่คาร์บอน สนิม และความเงางามที่สม่ำเสมอ</p>
     </div>
   </header>
 
-  <!-- Main + TOC -->
   <main class="wrap">
+    
+    <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-        <a class="toc-chip" href="#why" data-i18n-key="toc_why">ชั้นรองพื้นมีไว้ทำไม?</a>
-        <a class="toc-chip" href="#galvanic" data-i18n-key="toc_galv">ปัญหาการยึดเกาะ</a>
-        <a class="toc-chip" href="#hardness" data-i18n-key="toc_hard">ความแข็ง & การสึกหรอ</a>
-        <a class="toc-chip" href="#diffusion" data-i18n-key="toc_diff">การแพร่คาร์บอน & กันสนิม</a>
-        <a class="toc-chip" href="#finish" data-i18n-key="toc_finish">คุณภาพผิว & ความสวยงาม</a>
-        <a class="toc-chip" href="#examples" data-i18n-key="toc_examples">ตัวอย่างการประยุกต์</a>
-        <a class="toc-chip" href="#summary" data-i18n-key="toc_summary">สรุป</a>
-      </p>
+      <ul class="toc-list" role="list">
+        <li><a class="toc-link" href="#why" data-i18n-key="toc_why">ชั้นรองพื้นมีไว้ทำไม?</a></li>
+        <li><a class="toc-link" href="#galvanic" data-i18n-key="toc_galv">ปัญหาการยึดเกาะกัลวานิก</a></li>
+        <li><a class="toc-link" href="#hardness" data-i18n-key="toc_hard">ความแข็งและการสึกหรอ</a></li>
+        <li><a class="toc-link" href="#diffusion" data-i18n-key="toc_diff">การแพร่คาร์บอนและกันสนิม</a></li>
+        <li><a class="toc-link" href="#finish" data-i18n-key="toc_finish">คุณภาพผิวและความสวยงาม</a></li>
+        <li><a class="toc-link" href="#examples" data-i18n-key="toc_examples">ตัวอย่างการประยุกต์ใช้งาน</a></li>
+        <li><a class="toc-link" href="#summary" data-i18n-key="toc_summary">สรุป</a></li>
+        <li><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a></li>
+      </ul>
     </nav>
 
-    <!-- Sections -->
-    <section id="why" class="reveal section-block" aria-labelledby="why-h">
-      <h2 id="why-h" class="section" data-i18n-key="why_h">ชั้นรองพื้นมีไว้ทำไม?</h2>
-      <p class="lead" data-i18n-key="why_p1">การเคลือบผิวด้วยทองเหลือง (Brass Plating) เป็นกระบวนการที่นิยมใช้ในอุตสาหกรรมการตกแต่งและการผลิตชิ้นส่วนที่ต้องการความสวยงามและทนทาน เช่น อะไหล่ยานยนต์ เครื่องประดับ เฟอร์นิเจอร์ และอุปกรณ์ทางสถาปัตยกรรม แต่เมื่อชิ้นงานหลักเป็นเหล็ก การชุบทองเหลืองโดยตรงจะก่อให้เกิดปัญหาทั้งด้านคุณภาพและอายุการใช้งาน</p>
-      <p data-i18n-key="why_p2">โลหะรองพื้นอย่าง <strong>ทองแดง</strong> หรือ <strong>นิกเกิล</strong> จึงทำหน้าที่เป็น “สะพานเชื่อม” ระหว่างเหล็กกับทองเหลือง ช่วยเพิ่มการยึดเกาะ ลดปฏิกิริยาไฟฟ้าเคมี และคุมโทน/ความสม่ำเสมอของผิว</p>
-      <p data-i18n-key="why_p3">ปัญหาการยึดเกาะและปฏิกิริยาไฟฟ้าเคมี: เหล็กและทองเหลืองมีศักย์ไฟฟ้าที่แตกต่างกันอย่างมาก การชุบทองเหลืองบนเหล็กโดยตรงจะทำให้เกิดปฏิกิริยาไฟฟ้าเคมี (Galvanic Corrosion) ที่รุนแรง ชั้นทองเหลืองจะยึดเกาะได้ไม่ดีและลอกหลุดง่ายในที่สุด แต่การมีชั้นรองพื้น เช่น ทองแดง หรือ นิกเกิล จะช่วยลดความแตกต่างทางศักย์ไฟฟ้านี้ ทำให้พันธะระหว่างชั้นเคลือบและโลหะฐานแข็งแรงและคงทนมากขึ้น การป้องกันการกัดกร่อน: เหล็กไวต่อการเกิดสนิมเมื่อสัมผัสกับอากาศและความชื้น ชั้นรองพื้นจะทำหน้าที่เป็นเกราะป้องกันไม่ให้เหล็กเกิดสนิม โดยเฉพาะ นิกเกิล ที่มีคุณสมบัติในการป้องกันการกัดกร่อนได้ดีเยี่ยม นอกจากนี้ยังช่วยป้องกันการแพร่ของคาร์บอนจากเหล็ก ซึ่งอาจทำให้สีของทองเหลืองหมองคล้ำและเกิดจุดด่างดำในภายหลัง การควบคุมความสม่ำเสมอของผิวและสี: ชั้นรองพื้นช่วยปรับปรุงพื้นผิวของชิ้นงานให้มีความเรียบเนียนและสม่ำเสมอก่อนการชุบขั้นสุดท้าย การชุบทองเหลืองลงบนฐานที่เรียบและเงาอย่างนิกเกิลจะช่วยให้ได้สีที่สม่ำเสมอทั่วทั้งชิ้นและมีความเงางามที่เหนือกว่า</p>
-    </section>
+    <div class="main-content">
+      
+      <!-- Sections -->
+      <section id="why" class="reveal section-block" aria-labelledby="why-h">
+        <h2 id="why-h" class="section" data-i18n-key="why_h">ชั้นรองพื้นมีไว้ทำไม?</h2>
+        <p data-i18n-key="why_p1">การเคลือบผิวด้วยทองเหลือง เป็นกระบวนการที่นิยมใช้ในอุตสาหกรรมการตกแต่งและการผลิตชิ้นส่วนที่ต้องการความสวยงามและทนทาน เช่น อะไหล่ยานยนต์ เครื่องประดับ เฟอร์นิเจอร์ และอุปกรณ์ทางสถาปัตยกรรม แต่เมื่อชิ้นงานหลักเป็นเหล็ก หากทำการชุบทองเหลืองลงไปโดยตรง มักจะก่อให้เกิดปัญหาทั้งในด้านคุณภาพผิวและอายุการใช้งานที่สั้นลงอย่างรวดเร็ว</p>
+        <p data-i18n-key="why_p2">ดังนั้น การใช้โลหะรองพื้นอย่าง <strong>ทองแดง</strong> หรือ <strong>นิกเกิล</strong> จึงทำหน้าที่เปรียบเสมือน "สะพานเชื่อม" ที่แข็งแกร่งระหว่างผิวเหล็กกับทองเหลือง ช่วยเพิ่มประสิทธิภาพการยึดเกาะ ลดปฏิกิริยาไฟฟ้าเคมีที่ทำให้เกิดการหลุดร่อน และควบคุมโทนสีให้มีความสม่ำเสมอสวยงาม</p>
+        <p data-i18n-key="why_p3">
+          <strong>คุณประโยชน์หลักของการมีชั้นรองพื้น:</strong><br>
+          • <strong>แก้ปัญหาการยึดเกาะและปฏิกิริยาไฟฟ้าเคมี:</strong> เหล็กและทองเหลืองมีศักย์ไฟฟ้าที่แตกต่างกันอย่างมาก การชุบทองเหลืองบนเหล็กโดยตรงจะทำให้เกิดปฏิกิริยาไฟฟ้าเคมีที่รุนแรง ชั้นทองเหลืองจะยึดเกาะได้ไม่ดีและลอกหลุดง่ายในที่สุด การมีชั้นรองพื้นจะช่วยลดความแตกต่างของศักย์ไฟฟ้านี้ ทำให้พันธะการยึดเกาะแข็งแรงทนทาน<br>
+          • <strong>การป้องกันการกัดกร่อน:</strong> เหล็กมีความไวต่อการเกิดสนิมเมื่อสัมผัสกับความชื้น ชั้นรองพื้นจะทำหน้าที่เป็นเกราะป้องกันไม่ให้เหล็กเกิดสนิม โดยเฉพาะชั้นนิกเกิลที่มีคุณสมบัติในการต้านทานการกัดกร่อนได้ดีเยี่ยม<br>
+          • <strong>ป้องกันการหมองจากคาร์บอน:</strong> ชั้นรองพื้นช่วยป้องกันการแพร่ของคาร์บอนจากเหล็กขึ้นสู่ผิวบน ซึ่งคาร์บอนนี้อาจทำให้สีของทองเหลืองหมองคล้ำและเกิดจุดด่างดำในภายหลัง<br>
+          • <strong>การควบคุมความสม่ำเสมอของผิวและสี:</strong> ช่วยปรับปรุงพื้นผิวของชิ้นงานให้มีความเรียบเนียนสม่ำเสมอก่อนการชุบขั้นสุดท้าย การชุบทองเหลืองลงบนฐานที่เรียบและเงาอย่างนิกเกิล จะช่วยให้ได้สีที่สม่ำเสมอทั่วทั้งชิ้นและมีความเงางามที่เหนือกว่า
+        </p>
+      </section>
 
-    <section id="galvanic" class="reveal section-block" aria-labelledby="galv-h">
-      <h2 id="galv-h" class="section" data-i18n-key="galv_h">ปัญหาการยึดเกาะ</h2>
-      <p data-i18n-key="galv_p1">เหล็กและทองเหลืองมีศักย์ไฟฟ้าแตกต่างกันชัด หากนำเหล็กลงชุบทองเหลืองโดยตรง พื้นผิวเหล็กทำหน้าที่เป็น <em>Anode</em> ส่วนทองเหลืองเป็น <em>Cathode</em> เกิดเซลล์ไฟฟ้าเคมีในสารละลายชุบ ส่งผลให้เหล็กกัดกร่อนเร็ว ชั้นทองเหลืองยึดเกาะไม่ดีและหลุดร่อน</p>
-      <p data-i18n-key="galv_p2">การใส่ชั้น <strong>ทองแดง/นิกเกิล</strong> ตรงกลางช่วยทำให้ศักย์ใกล้กันขึ้นและสร้างพันธะโลหะที่แข็งแรงกับพื้นผิวเหล็ก จึงลดการกัดกร่อนและเพิ่มอายุการใช้งานของงานชุบ</p>
-    </section>
+      <section id="galvanic" class="reveal section-block" aria-labelledby="galv-h">
+        <h2 id="galv-h" class="section" data-i18n-key="galv_h">ปัญหาการยึดเกาะและกัลวานิก</h2>
+        <p data-i18n-key="galv_p1">เหล็กและทองเหลืองมีศักย์ไฟฟ้าแตกต่างกันอย่างชัดเจน หากนำเหล็กลงชุบทองเหลืองโดยตรง พื้นผิวเหล็กจะทำหน้าที่เป็นขั้วแอโนด ส่วนทองเหลืองเป็นขั้วแคโทด เกิดเป็นเซลล์ไฟฟ้าเคมีในสารละลายชุบ ส่งผลให้เหล็กถูกกัดกร่อนอย่างรวดเร็ว ทำให้ชั้นทองเหลืองยึดเกาะได้ไม่ดีและหลุดร่อนออกเป็นแผ่นๆ</p>
+        <p data-i18n-key="galv_p2">การแทรกชั้น <strong>ทองแดง หรือ นิกเกิล</strong> ไว้ตรงกลาง จะช่วยปรับระดับศักย์ไฟฟ้าให้ใกล้เคียงกันมากขึ้น และสร้างพันธะทางโลหะวิทยาที่แข็งแรงกับพื้นผิวเหล็ก จึงช่วยลดการกัดกร่อนใต้ชั้นเคลือบและยืดอายุการใช้งานของชิ้นงานได้อย่างมีประสิทธิภาพ</p>
+      </section>
 
-    <section id="hardness" class="reveal section-block" aria-labelledby="hard-h">
-      <h2 id="hard-h" class="section" data-i18n-key="hard_h">ความแข็ง & การสึกหรอ</h2>
-      <p data-i18n-key="hard_p1">ชั้นรองพื้น <strong>ทองแดง</strong> ให้การยึดเกาะดี แต่ความแข็งราว ~100 HV จึงทนรอยขีดข่วนได้น้อย ขณะที่ <strong>นิกเกิล</strong> แข็ง ~200–500 HV ทนต่อการเสียดสีสูง</p>
-      <p data-i18n-key="hard_p2">ในงานที่ถูกสัมผัสบ่อย (ลูกบิด กุญแจ ชิ้นส่วนเครื่องจักร) การวางชั้น <strong>นิกเกิล 5–15 µm</strong> เป็นเกราะรับแรง ก่อนชุบทองเหลือง จะช่วยให้ผิวทนทานขึ้นมาก</p>
-    </section>
+      <section id="hardness" class="reveal section-block" aria-labelledby="hard-h">
+        <h2 id="hard-h" class="section" data-i18n-key="hard_h">ความแข็งและการสึกหรอ</h2>
+        <p data-i18n-key="hard_p1">ชั้นรองพื้น <strong>ทองแดง</strong> ให้คุณสมบัติการยึดเกาะที่ดีเยี่ยม แต่มีความแข็งเพียงประมาณ 100 HV จึงทนต่อรอยขีดข่วนได้น้อย ในขณะที่ <strong>นิกเกิล</strong> มีความแข็งสูงถึง 200–500 HV ทำให้ทนทานต่อการเสียดสีได้เป็นอย่างดี</p>
+        <p data-i18n-key="hard_p2">สำหรับชิ้นงานที่ต้องถูกสัมผัสหรือเสียดสีบ่อยครั้ง เช่น ลูกบิดประตู กุญแจ หรือชิ้นส่วนเครื่องจักรกล การรองพื้นด้วยชั้น <strong>นิกเกิลความหนา 5–15 ไมครอน</strong> จะทำหน้าที่เป็นโครงสร้างรับแรงที่แข็งแกร่ง ก่อนที่จะเคลือบผิวชั้นนอกสุดด้วยทองเหลือง ช่วยให้ผิวงานทนทานต่อการใช้งานหนักได้ดียิ่งขึ้น</p>
+      </section>
 
-    <section id="diffusion" class="reveal section-block" aria-labelledby="diff-h">
-      <h2 id="diff-h" class="section" data-i18n-key="diff_h">การแพร่คาร์บอน & กันสนิม</h2>
-      <p data-i18n-key="diff_p1">เหล็กมีคาร์บอนผสมอยู่ เมื่อเวลาผ่านไปคาร์บอนอาจแพร่ขึ้นสู่ผิว ก่อให้เกิดความหมองหรือจุดด่างบนทองเหลือง</p>
-      <p data-i18n-key="diff_p2"><strong>นิกเกิล</strong> เป็นชั้นกั้นการแพร่ที่ดี โครงสร้างหนาแน่นช่วยกันออกซิเจน/ความชื้นไม่ให้ถึงเหล็ก ลดความเสี่ยงการเกิดสนิม โดยเฉพาะสภาพชื้นหรือใกล้ทะเล</p>
-    </section>
+      <section id="diffusion" class="reveal section-block" aria-labelledby="diff-h">
+        <h2 id="diff-h" class="section" data-i18n-key="diff_h">การแพร่คาร์บอนและกันสนิม</h2>
+        <p data-i18n-key="diff_p1">เหล็กมีส่วนผสมของคาร์บอนอยู่ภายใน เมื่อระยะเวลาผ่านไปหรือเมื่อชิ้นงานได้รับความร้อน คาร์บอนสามารถแพร่ตัวทะลุขึ้นมาสู่ผิวชั้นบนได้ ซึ่งจะก่อให้เกิดความหมองคล้ำหรือจุดด่างดำบนผิวทองเหลืองที่สวยงาม</p>
+        <p data-i18n-key="diff_p2"><strong>นิกเกิล</strong> ถือเป็นชั้นกั้นการแพร่ (Diffusion Barrier) ที่มีประสิทธิภาพสูงมาก โครงสร้างที่หนาแน่นของนิกเกิลช่วยสกัดกั้นไม่ให้ออกซิเจนและความชื้นซึมผ่านไปถึงเนื้อเหล็กได้ จึงลดความเสี่ยงในการเกิดสนิมแดงได้อย่างสมบูรณ์แบบ โดยเฉพาะอย่างยิ่งสำหรับชิ้นงานที่ต้องใช้งานในสภาพอากาศชื้นหรือบริเวณใกล้ชายทะเล</p>
+      </section>
 
-    <section id="finish" class="reveal section-block" aria-labelledby="finish-h">
-      <h2 id="finish-h" class="section" data-i18n-key="finish_h">คุณภาพผิว & ความสวยงาม</h2>
-      <p data-i18n-key="finish_p1"><strong>นิกเกิลเงา</strong> ช่วยปรับผิวให้เรียบและเงางามเหมือนกระจก เมื่อชุบทองเหลืองทับ จะได้โทนสีสวย สม่ำเสมอ และคงความเงาได้นาน</p>
-      <p data-i18n-key="finish_p2">ตรงกันข้าม หากชุบลงบนผิวเหล็กที่หยาบ/พรุน สีทองเหลืองมักด่าง ไม่สม่ำเสมอ และเสื่อมสภาพเร็ว</p>
-    </section>
+      <section id="finish" class="reveal section-block" aria-labelledby="finish-h">
+        <h2 id="finish-h" class="section" data-i18n-key="finish_h">คุณภาพผิวและความสวยงาม</h2>
+        <p data-i18n-key="finish_p1">การรองพื้นด้วย <strong>นิกเกิลเงา</strong> จะช่วยปรับสภาพผิวที่ขรุขระของเหล็กให้มีความเรียบเนียนและเงางามราวกับกระจก เมื่อชุบทองเหลืองทับลงไป จะสะท้อนให้เห็นโทนสีทองที่สว่างสดใส มีความสม่ำเสมอทั่วทั้งชิ้น และช่วยคงความเงางามได้ยาวนาน</p>
+        <p data-i18n-key="finish_p2">ในทางตรงกันข้าม หากชุบทองเหลืองลงบนผิวเหล็กที่มีความหยาบหรือมีรูพรุนโดยตรง สีของทองเหลืองที่ได้มักจะดูด่าง ไม่สม่ำเสมอ และเสื่อมสภาพ หมองคล้ำได้อย่างรวดเร็ว</p>
+      </section>
 
-    <section id="examples" class="reveal section-block" aria-labelledby="ex-h">
-      <h2 id="ex-h" class="section" data-i18n-key="ex_h">ตัวอย่างการประยุกต์</h2>
-      <ul class="nice">
-        <li data-i18n-key="ex_1"><strong>เครื่องดนตรีทองเหลือง</strong> (เช่น แซกโซโฟน/ทรัมเป็ต): มักใช้หลายชั้น ทองแดง → นิกเกิล → ทองเหลือง เพื่อคุณภาพเสียง ความเงางาม และความทนทาน</li>
-        <li data-i18n-key="ex_2"><strong>ของตกแต่งบ้าน</strong> (ลูกบิด/ราวแขวน/เฟอร์นิเจอร์): ต้องการผิวสวยและทนต่อการสัมผัสบ่อย ชั้นนิกเกิลช่วยลดการสึกกร่อนและสนิม</li>
-        <li data-i18n-key="ex_3"><strong>อะไหล่ยานยนต์</strong> (กรอบไฟ โลโก้ ชิ้นส่วนตกแต่ง): ใช้นิกเกิลก่อนเพื่อความทนทานต่อความร้อน น้ำ ฝุ่น และเกลือบนถนน</li>
-      </ul>
-    </section>
+      <section id="examples" class="reveal section-block" aria-labelledby="ex-h">
+        <h2 id="ex-h" class="section" data-i18n-key="ex_h">ตัวอย่างการประยุกต์ใช้งานในอุตสาหกรรม</h2>
+        <ul class="nice">
+          <li data-i18n-key="ex_1"><strong>เครื่องดนตรีประเภททองเหลือง</strong> (เช่น แซกโซโฟน ทรัมเป็ต): มักใช้ระบบการชุบหลายชั้น โดยเริ่มจาก ทองแดง → นิกเกิล → ทองเหลือง เพื่อให้ได้คุณภาพเสียงสะท้อนที่ดี ความเงางามที่โดดเด่น และทนทานต่อการจับถือ</li>
+          <li data-i18n-key="ex_2"><strong>อุปกรณ์ตกแต่งภายในและฮาร์ดแวร์</strong> (เช่น ลูกบิดประตู ราวแขวน เฟอร์นิเจอร์): เป็นงานที่ต้องการผิวที่สวยงามและทนต่อเหงื่อจากการสัมผัสบ่อย ชั้นนิกเกิลหนาจะช่วยลดการสึกกร่อนและป้องกันสนิมได้อย่างยอดเยี่ยม</li>
+          <li data-i18n-key="ex_3"><strong>ชิ้นส่วนและอะไหล่ยานยนต์</strong> (เช่น กรอบไฟ โลโก้ ชิ้นส่วนตกแต่งวินเทจ): จำเป็นต้องชุบนิกเกิลเป็นฐานก่อน เพื่อความทนทานต่อความร้อน น้ำ ฝุ่นละออง และคราบเกลือบนท้องถนน</li>
+        </ul>
+      </section>
 
-    <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
-      <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุป</h2>
-      <p data-i18n-key="sum_p1">การชุบทองเหลืองบนเหล็กโดยตรงนำไปสู่ปัญหาการยึดเกาะ สนิม และเปลี่ยนสีอย่างรวดเร็ว การใช้ <strong>ทองแดง</strong> เป็นรองพื้นช่วยด้านการยึดเกาะ ส่วน <strong>นิกเกิล</strong> เพิ่มความแข็ง/ทนสึก ป้องกันการแพร่คาร์บอนและสนิม พร้อมยกระดับความเงางาม</p>
-      <p data-i18n-key="sum_p2">งานที่ต้องการคุณภาพสูงในอุตสาหกรรมจึงนิยมลำดับ <strong>ทองแดง → นิกเกิล → ทองเหลือง</strong> เพื่อให้ได้ผิวที่สวย ทน และอายุการใช้งานยาวนาน</p>
-    </section>
+      <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
+        <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุปทิ้งท้าย</h2>
+        <p data-i18n-key="sum_p1">การชุบทองเหลืองลงบนเหล็กโดยตรงมักนำไปสู่ปัญหาการหลุดร่อนของชั้นเคลือบ การเกิดสนิม และการเปลี่ยนสีอย่างรวดเร็ว การเลือกใช้ <strong>ทองแดง</strong> เป็นโลหะรองพื้นจะช่วยแก้ปัญหาด้านการยึดเกาะได้ดี ในขณะที่ <strong>นิกเกิล</strong> จะเข้ามาเติมเต็มในเรื่องของความแข็ง การทนต่อการสึกหรอ การป้องกันการแพร่ของคาร์บอนและสนิม พร้อมทั้งยกระดับความเงางามให้ถึงขีดสุด</p>
+        <p data-i18n-key="sum_p2">ด้วยเหตุนี้ งานที่ต้องการคุณภาพระดับพรีเมียมในอุตสาหกรรม จึงนิยมใช้ระบบการเคลือบตามลำดับ <strong>ทองแดง → นิกเกิล → ทองเหลือง</strong> เพื่อให้มั่นใจได้ว่าชิ้นงานจะมีผิวที่สวยงาม ทนทาน และมีอายุการใช้งานที่ยาวนานคุ้มค่า</p>
+      </section>
 
-        <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
-      <p><a class="more" href="https://www.baumechemical.com/products/platingcoating/brassplating/" data-i18n-key="link_at">ชุบทองเหลืองเพื่อผิวโทนสีทอง</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">คู่มือ Salt Spray และการอ่านผล</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">Protective Treatment</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">อุปกรณ์ระบบกรอง/มีดลม/อบแห้ง</a></p>
-    </section>
-
+      <section id="links" class="reveal section-block" aria-labelledby="links-h">
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+        <ul>
+          <li><a href="https://www.baumechemical.com/products/platingcoating/brassplating/" data-i18n-key="link_at">น้ำยาชุบทองเหลืองเพื่อปรับผิวให้เป็นโทนสีทองสวยงาม</a></li>
+          <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">บทความ: คู่มือ Salt Spray Test และการอ่านผลทดสอบ</a></li>
+          <li><a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment: การเตรียมผิวก่อนงานชุบ</a></li>
+          <li><a href="https://www.baumechemical.com/products/protective/" data-i18n-key="link_protect">น้ำยากันหมองทองเหลือง (Protective Treatment)</a></li>
+          <li><a href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">หมวดอุปกรณ์: ระบบกรอง มีดลมเป่า และตู้อบแห้ง</a></li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
           <ul class="footer-list">
             <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
             <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
@@ -354,90 +350,90 @@
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2026 Baume Chemical Co., Ltd. All rights reserved.</div>
+      </div>
     </div>
   </footer>
 
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- JS: Reveal on scroll -->
+  <!-- ===== JS ===== -->
   <script>
+    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
+    }, {threshold:.1});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n dictionary + switch -->
   <script>
+    // Translations Data
     const I18N = {
       th: {
-        /* Nav */
+        title: "การชุบทองเหลืองบนเหล็ก & โลหะรองพื้น | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-
-        /* Hero */
+        back_home:"← กลับหน้าบทความ",
         hero_title:"การชุบทองเหลืองบนชิ้นงานเหล็กและความสำคัญของโลหะรองพื้น",
-        hero_tagline:"ทำไมต้องมีชั้นทองแดง/นิกเกิลก่อนชุบทองเหลือง: ปัญหาความแข็ง/สึกหรอ, การแพร่คาร์บอน/สนิม, และความเงางามที่สม่ำเสมอ",
+        hero_tagline:"ทำไมต้องมีชั้นทองแดงหรือนิกเกิลก่อนชุบทองเหลือง: ปัญหาความแข็ง การสึกหรอ การแพร่คาร์บอน สนิม และความเงางามที่สม่ำเสมอ",
 
-        /* TOC */
         toc_title:"สารบัญ",
         toc_why:"ชั้นรองพื้นมีไว้ทำไม?",
-        toc_galv:"ปัญหา Galvanic & การยึดเกาะ",
-        toc_hard:"ความแข็ง & การสึกหรอ",
-        toc_diff:"การแพร่คาร์บอน & กันสนิม",
-        toc_finish:"คุณภาพผิว & ความสวยงาม",
-        toc_examples:"ตัวอย่างการประยุกต์",
+        toc_galv:"ปัญหาการยึดเกาะกัลวานิก",
+        toc_hard:"ความแข็งและการสึกหรอ",
+        toc_diff:"การแพร่คาร์บอนและกันสนิม",
+        toc_finish:"คุณภาพผิวและความสวยงาม",
+        toc_examples:"ตัวอย่างการประยุกต์ใช้งาน",
         toc_summary:"สรุป",
+        toc_links:"ลิงก์ที่เกี่ยวข้อง",
 
-        /* Sections */
         why_h:"ชั้นรองพื้นมีไว้ทำไม?",
-        why_p1:"การเคลือบทองเหลือง (Brass Plating) นิยมในงานตกแต่งและชิ้นส่วนอุตสาหกรรม แต่เมื่อชิ้นงานเป็นเหล็ก หากชุบทองเหลืองลงไปโดยตรงมักเกิดปัญหาคุณภาพและอายุการใช้งาน",
-        why_p2:"โลหะรองพื้นอย่าง ทองแดง หรือ นิกเกิล จึงทำหน้าที่เป็น “สะพานเชื่อม” ระหว่างเหล็กกับทองเหลือง ช่วยเพิ่มการยึดเกาะ ลดปฏิกิริยาไฟฟ้าเคมี และคุมโทน/ความสม่ำเสมอของผิว",
-        why_p3:"ปัญหาการยึดเกาะและปฏิกิริยาไฟฟ้าเคมี: เหล็กและทองเหลืองมีศักย์ไฟฟ้าที่แตกต่างกันอย่างมาก การชุบทองเหลืองบนเหล็กโดยตรงจะทำให้เกิดปฏิกิริยาไฟฟ้าเคมี (Galvanic Corrosion) ที่รุนแรง ชั้นทองเหลืองจะยึดเกาะได้ไม่ดีและลอกหลุดง่ายในที่สุด แต่การมีชั้นรองพื้น เช่น ทองแดง หรือ นิกเกิล จะช่วยลดความแตกต่างทางศักย์ไฟฟ้านี้ ทำให้พันธะระหว่างชั้นเคลือบและโลหะฐานแข็งแรงและคงทนมากขึ้น การป้องกันการกัดกร่อน: เหล็กไวต่อการเกิดสนิมเมื่อสัมผัสกับอากาศและความชื้น ชั้นรองพื้นจะทำหน้าที่เป็นเกราะป้องกันไม่ให้เหล็กเกิดสนิม โดยเฉพาะ นิกเกิล ที่มีคุณสมบัติในการป้องกันการกัดกร่อนได้ดีเยี่ยม นอกจากนี้ยังช่วยป้องกันการแพร่ของคาร์บอนจากเหล็ก ซึ่งอาจทำให้สีของทองเหลืองหมองคล้ำและเกิดจุดด่างดำในภายหลัง การควบคุมความสม่ำเสมอของผิวและสี: ชั้นรองพื้นช่วยปรับปรุงพื้นผิวของชิ้นงานให้มีความเรียบเนียนและสม่ำเสมอก่อนการชุบขั้นสุดท้าย การชุบทองเหลืองลงบนฐานที่เรียบและเงาอย่างนิกเกิลจะช่วยให้ได้สีที่สม่ำเสมอทั่วทั้งชิ้นและมีความเงางามที่เหนือกว่า",
+        why_p1:"การเคลือบผิวด้วยทองเหลือง เป็นกระบวนการที่นิยมใช้ในอุตสาหกรรมการตกแต่งและการผลิตชิ้นส่วนที่ต้องการความสวยงามและทนทาน เช่น อะไหล่ยานยนต์ เครื่องประดับ เฟอร์นิเจอร์ และอุปกรณ์ทางสถาปัตยกรรม แต่เมื่อชิ้นงานหลักเป็นเหล็ก หากทำการชุบทองเหลืองลงไปโดยตรง มักจะก่อให้เกิดปัญหาทั้งในด้านคุณภาพผิวและอายุการใช้งานที่สั้นลงอย่างรวดเร็ว",
+        why_p2:"ดังนั้น การใช้โลหะรองพื้นอย่าง <strong>ทองแดง</strong> หรือ <strong>นิกเกิล</strong> จึงทำหน้าที่เปรียบเสมือน \"สะพานเชื่อม\" ที่แข็งแกร่งระหว่างผิวเหล็กกับทองเหลือง ช่วยเพิ่มประสิทธิภาพการยึดเกาะ ลดปฏิกิริยาไฟฟ้าเคมีที่ทำให้เกิดการหลุดร่อน และควบคุมโทนสีให้มีความสม่ำเสมอสวยงาม",
+        why_p3:"<strong>คุณประโยชน์หลักของการมีชั้นรองพื้น:</strong><br>• <strong>แก้ปัญหาการยึดเกาะและปฏิกิริยาไฟฟ้าเคมี:</strong> เหล็กและทองเหลืองมีศักย์ไฟฟ้าที่แตกต่างกันอย่างมาก การชุบทองเหลืองบนเหล็กโดยตรงจะทำให้เกิดปฏิกิริยาไฟฟ้าเคมีที่รุนแรง ชั้นทองเหลืองจะยึดเกาะได้ไม่ดีและลอกหลุดง่ายในที่สุด การมีชั้นรองพื้นจะช่วยลดความแตกต่างของศักย์ไฟฟ้านี้ ทำให้พันธะการยึดเกาะแข็งแรงทนทาน<br>• <strong>การป้องกันการกัดกร่อน:</strong> เหล็กมีความไวต่อการเกิดสนิมเมื่อสัมผัสกับความชื้น ชั้นรองพื้นจะทำหน้าที่เป็นเกราะป้องกันไม่ให้เหล็กเกิดสนิม โดยเฉพาะชั้นนิกเกิลที่มีคุณสมบัติในการต้านทานการกัดกร่อนได้ดีเยี่ยม<br>• <strong>ป้องกันการหมองจากคาร์บอน:</strong> ชั้นรองพื้นช่วยป้องกันการแพร่ของคาร์บอนจากเหล็กขึ้นสู่ผิวบน ซึ่งคาร์บอนนี้อาจทำให้สีของทองเหลืองหมองคล้ำและเกิดจุดด่างดำในภายหลัง<br>• <strong>การควบคุมความสม่ำเสมอของผิวและสี:</strong> ช่วยปรับปรุงพื้นผิวของชิ้นงานให้มีความเรียบเนียนสม่ำเสมอก่อนการชุบขั้นสุดท้าย การชุบทองเหลืองลงบนฐานที่เรียบและเงาอย่างนิกเกิล จะช่วยให้ได้สีที่สม่ำเสมอทั่วทั้งชิ้นและมีความเงางามที่เหนือกว่า",
 
-        galv_h:"ปัญหาการยึดเกาะ",
-        galv_p1:"เหล็กและทองเหลืองมีศักย์ไฟฟ้าแตกต่างกันชัด หากนำเหล็กลงชุบทองเหลืองโดยตรง พื้นผิวเหล็กทำหน้าที่เป็น Anode ส่วนทองเหลืองเป็น Cathode เกิดเซลล์ไฟฟ้าเคมีในสารละลายชุบ ส่งผลให้เหล็กกัดกร่อนเร็ว ชั้นทองเหลืองยึดเกาะไม่ดีและหลุดร่อน",
-        galv_p2:"การใส่ชั้น ทองแดง/นิกเกิล ตรงกลางช่วยทำให้ศักย์ใกล้กันขึ้นและสร้างพันธะโลหะที่แข็งแรงกับพื้นผิวเหล็ก จึงลดการกัดกร่อนและเพิ่มอายุการใช้งานของงานชุบ",
+        galv_h:"ปัญหาการยึดเกาะและกัลวานิก",
+        galv_p1:"เหล็กและทองเหลืองมีศักย์ไฟฟ้าแตกต่างกันอย่างชัดเจน หากนำเหล็กลงชุบทองเหลืองโดยตรง พื้นผิวเหล็กจะทำหน้าที่เป็นขั้วแอโนด ส่วนทองเหลืองเป็นขั้วแคโทด เกิดเป็นเซลล์ไฟฟ้าเคมีในสารละลายชุบ ส่งผลให้เหล็กถูกกัดกร่อนอย่างรวดเร็ว ทำให้ชั้นทองเหลืองยึดเกาะได้ไม่ดีและหลุดร่อนออกเป็นแผ่นๆ",
+        galv_p2:"การแทรกชั้น <strong>ทองแดง หรือ นิกเกิล</strong> ไว้ตรงกลาง จะช่วยปรับระดับศักย์ไฟฟ้าให้ใกล้เคียงกันมากขึ้น และสร้างพันธะทางโลหะวิทยาที่แข็งแรงกับพื้นผิวเหล็ก จึงช่วยลดการกัดกร่อนใต้ชั้นเคลือบและยืดอายุการใช้งานของชิ้นงานได้อย่างมีประสิทธิภาพ",
 
-        hard_h:"ความแข็ง & การสึกหรอ",
-        hard_p1:"ชั้นรองพื้น ทองแดง ให้การยึดเกาะดี แต่ความแข็งราว ~100 HV จึงทนรอยขีดข่วนได้น้อย ขณะที่ นิกเกิล แข็ง ~200–500 HV ทนต่อการเสียดสีสูง",
-        hard_p2:"ในงานที่ถูกสัมผัสบ่อย (ลูกบิด กุญแจ ชิ้นส่วนเครื่องจักร) การวางชั้น นิกเกิล 5–15 µm เป็นเกราะรับแรง ก่อนชุบทองเหลือง จะช่วยให้ผิวทนทานขึ้นมาก",
+        hard_h:"ความแข็งและการสึกหรอ",
+        hard_p1:"ชั้นรองพื้น <strong>ทองแดง</strong> ให้คุณสมบัติการยึดเกาะที่ดีเยี่ยม แต่มีความแข็งเพียงประมาณ 100 HV จึงทนต่อรอยขีดข่วนได้น้อย ในขณะที่ <strong>นิกเกิล</strong> มีความแข็งสูงถึง 200–500 HV ทำให้ทนทานต่อการเสียดสีได้เป็นอย่างดี",
+        hard_p2:"สำหรับชิ้นงานที่ต้องถูกสัมผัสหรือเสียดสีบ่อยครั้ง เช่น ลูกบิดประตู กุญแจ หรือชิ้นส่วนเครื่องจักรกล การรองพื้นด้วยชั้น <strong>นิกเกิลความหนา 5–15 ไมครอน</strong> จะทำหน้าที่เป็นโครงสร้างรับแรงที่แข็งแกร่ง ก่อนที่จะเคลือบผิวชั้นนอกสุดด้วยทองเหลือง ช่วยให้ผิวงานทนทานต่อการใช้งานหนักได้ดียิ่งขึ้น",
 
-        diff_h:"การแพร่คาร์บอน & กันสนิม",
-        diff_p1:"เหล็กมีคาร์บอนผสมอยู่ เมื่อเวลาผ่านไปคาร์บอนอาจแพร่ขึ้นสู่ผิว ก่อให้เกิดความหมองหรือจุดด่างบนทองเหลือง",
-        diff_p2:"นิกเกิล เป็นชั้นกั้นการแพร่ที่ดี โครงสร้างหนาแน่นช่วยกันออกซิเจน/ความชื้นไม่ให้ถึงเหล็ก ลดความเสี่ยงการเกิดสนิม โดยเฉพาะสภาพชื้นหรือใกล้ทะเล",
+        diff_h:"การแพร่คาร์บอนและกันสนิม",
+        diff_p1:"เหล็กมีส่วนผสมของคาร์บอนอยู่ภายใน เมื่อระยะเวลาผ่านไปหรือเมื่อชิ้นงานได้รับความร้อน คาร์บอนสามารถแพร่ตัวทะลุขึ้นมาสู่ผิวชั้นบนได้ ซึ่งจะก่อให้เกิดความหมองคล้ำหรือจุดด่างดำบนผิวทองเหลืองที่สวยงาม",
+        diff_p2:"<strong>นิกเกิล</strong> ถือเป็นชั้นกั้นการแพร่ที่มีประสิทธิภาพสูงมาก โครงสร้างที่หนาแน่นของนิกเกิลช่วยสกัดกั้นไม่ให้ออกซิเจนและความชื้นซึมผ่านไปถึงเนื้อเหล็กได้ จึงลดความเสี่ยงในการเกิดสนิมแดงได้อย่างสมบูรณ์แบบ โดยเฉพาะอย่างยิ่งสำหรับชิ้นงานที่ต้องใช้งานในสภาพอากาศชื้นหรือบริเวณใกล้ชายทะเล",
 
-        finish_h:"คุณภาพผิว & ความสวยงาม",
-        finish_p1:"นิกเกิ้ลเงาช่วยปรับผิวให้เรียบและเงางามเหมือนกระจก เมื่อชุบทองเหลืองทับ จะได้โทนสีสวย สม่ำเสมอ และคงความเงาได้นาน",
-        finish_p2:"ตรงกันข้าม หากชุบลงบนผิวเหล็กที่หยาบ/พรุน สีทองเหลืองมักด่าง ไม่สม่ำเสมอ และเสื่อมสภาพเร็ว",
+        finish_h:"คุณภาพผิวและความสวยงาม",
+        finish_p1:"การรองพื้นด้วย <strong>นิกเกิลเงา</strong> จะช่วยปรับสภาพผิวที่ขรุขระของเหล็กให้มีความเรียบเนียนและเงางามราวกับกระจก เมื่อชุบทองเหลืองทับลงไป จะสะท้อนให้เห็นโทนสีทองที่สว่างสดใส มีความสม่ำเสมอทั่วทั้งชิ้น และช่วยคงความเงางามได้ยาวนาน",
+        finish_p2:"ในทางตรงกันข้าม หากชุบทองเหลืองลงบนผิวเหล็กที่มีความหยาบหรือมีรูพรุนโดยตรง สีของทองเหลืองที่ได้มักจะดูด่าง ไม่สม่ำเสมอ และเสื่อมสภาพ หมองคล้ำได้อย่างรวดเร็ว",
 
-        ex_h:"ตัวอย่างการประยุกต์",
-        ex_1:"เครื่องดนตรีทองเหลือง (เช่น แซกโซโฟน/ทรัมเป็ต): มักใช้หลายชั้น ทองแดง → นิกเกิล → ทองเหลือง เพื่อคุณภาพเสียง ความเงางาม และความทนทาน",
-        ex_2:"ของตกแต่งบ้าน (ลูกบิด/ราวแขวน/เฟอร์นิเจอร์): ต้องการผิวสวยและทนต่อการสัมผัสบ่อย ชั้นนิกเกิลช่วยลดการสึกกร่อนและสนิม",
-        ex_3:"อะไหล่ยานยนต์ (กรอบไฟ โลโก้ ชิ้นส่วนตกแต่ง): ใช้นิกเกิลก่อนเพื่อความทนทานต่อความร้อน น้ำ ฝุ่น และเกลือบนถนน",
+        ex_h:"ตัวอย่างการประยุกต์ใช้งานในอุตสาหกรรม",
+        ex_1:"<strong>เครื่องดนตรีประเภททองเหลือง</strong> (เช่น แซกโซโฟน ทรัมเป็ต): มักใช้ระบบการชุบหลายชั้น โดยเริ่มจาก ทองแดง → นิกเกิล → ทองเหลือง เพื่อให้ได้คุณภาพเสียงสะท้อนที่ดี ความเงางามที่โดดเด่น และทนทานต่อการจับถือ",
+        ex_2:"<strong>อุปกรณ์ตกแต่งภายในและฮาร์ดแวร์</strong> (เช่น ลูกบิดประตู ราวแขวน เฟอร์นิเจอร์): เป็นงานที่ต้องการผิวที่สวยงามและทนต่อเหงื่อจากการสัมผัสบ่อย ชั้นนิกเกิลหนาจะช่วยลดการสึกกร่อนและป้องกันสนิมได้อย่างยอดเยี่ยม",
+        ex_3:"<strong>ชิ้นส่วนและอะไหล่ยานยนต์</strong> (เช่น กรอบไฟ โลโก้ ชิ้นส่วนตกแต่งวินเทจ): จำเป็นต้องชุบนิกเกิลเป็นฐานก่อน เพื่อความทนทานต่อความร้อน น้ำ ฝุ่นละออง และคราบเกลือบนท้องถนน",
 
-        sum_h:"สรุป",
-        sum_p1:"การชุบทองเหลืองบนเหล็กโดยตรงนำไปสู่ปัญหาการยึดเกาะ สนิม และเปลี่ยนสีอย่างรวดเร็ว การใช้ ทองแดง เป็นรองพื้นช่วยด้านการยึดเกาะ ส่วน นิกเกิล เพิ่มความแข็ง/ทนสึก ป้องกันการแพร่คาร์บอนและสนิม พร้อมยกระดับความเงางาม",
-        sum_p2:"งานที่ต้องการคุณภาพสูงในอุตสาหกรรมจึงนิยมลำดับ ทองแดง → นิกเกิล → ทองเหลือง เพื่อให้ได้ผิวที่สวย ทน และอายุการใช้งานยาวนาน",
+        sum_h:"สรุปทิ้งท้าย",
+        sum_p1:"การชุบทองเหลืองลงบนเหล็กโดยตรงมักนำไปสู่ปัญหาการหลุดร่อนของชั้นเคลือบ การเกิดสนิม และการเปลี่ยนสีอย่างรวดเร็ว การเลือกใช้ <strong>ทองแดง</strong> เป็นโลหะรองพื้นจะช่วยแก้ปัญหาด้านการยึดเกาะได้ดี ในขณะที่ <strong>นิกเกิล</strong> จะเข้ามาเติมเต็มในเรื่องของความแข็ง การทนต่อการสึกหรอ การป้องกันการแพร่ของคาร์บอนและสนิม พร้อมทั้งยกระดับความเงางามให้ถึงขีดสุด",
+        sum_p2:"ด้วยเหตุนี้ งานที่ต้องการคุณภาพระดับพรีเมียมในอุตสาหกรรม จึงนิยมใช้ระบบการเคลือบตามลำดับ <strong>ทองแดง → นิกเกิล → ทองเหลือง</strong> เพื่อให้มั่นใจได้ว่าชิ้นงานจะมีผิวที่สวยงาม ทนทาน และมีอายุการใช้งานที่ยาวนานคุ้มค่า",
 
         links_h:"ลิงก์ที่เกี่ยวข้อง",
-        link_at:"ชุบทองเหลืองเพื่อผิวโทนสีทอง",
-        link_salt:"คู่มือ Salt Spray และการอ่านผล",
-        link_pretreat:"หมวด Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"อุปกรณ์ระบบกรอง/มีดลม/อบแห้ง",
+        link_at:"น้ำยาชุบทองเหลืองเพื่อปรับผิวให้เป็นโทนสีทองสวยงาม",
+        link_salt:"บทความ: คู่มือ Salt Spray Test และการอ่านผลทดสอบ",
+        link_pretreat:"หมวด Pretreatment: การเตรียมผิวก่อนงานชุบ",
+        link_protect:"น้ำยากันหมองทองเหลือง (Protective Treatment)",
+        link_equip:"หมวดอุปกรณ์: ระบบกรอง มีดลมเป่า และตู้อบแห้ง",
 
-        /* Footer */
-        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved."
       },
-
       en: {
+        title: "Brass Plating on Steel & Undercoats | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-
+        back_home:"← Back to Articles",
         hero_title:"Brass Plating on Steel & Why Undercoats Matter",
-        hero_tagline:"Why copper/nickel underlayers are essential before brass: galvanic issues, hardness/wear, carbon diffusion/rust, and consistent finish quality.",
+        hero_tagline:"Why copper or nickel underlayers are essential before brass: galvanic issues, hardness, carbon diffusion, and consistent finish quality.",
 
         toc_title:"Contents",
         toc_why:"Why an undercoat?",
@@ -447,45 +443,46 @@
         toc_finish:"Finish Quality & Aesthetics",
         toc_examples:"Industry Examples",
         toc_summary:"Summary",
+        toc_links:"Related Links",
 
         why_h:"Why an undercoat?",
-        why_p1:"Brass plating is popular for decorative and industrial parts. But plating directly on steel often leads to quality and durability issues.",
-        why_p2:"An intermediate layer of copper or nickel acts as a “bridge” between steel and brass, improving adhesion, reducing electrochemical reactions, and stabilizing tone/appearance.",
-        why_p3:"Steel and brass have significantly different electrical potentials. Direct brass plating onto steel results in severe galvanic corrosion, causing the brass layer to have poor adhesion and flake off easily over time. However, an undercoat of copper or nickel helps to minimize this difference in electrical potential, creating a stronger and more durable bond between the coating and the base metal.Corrosion Protection Steel is highly susceptible to rust when exposed to air and moisture. The undercoat acts as a protective barrier to prevent the steel from rusting. Nickel, in particular, has excellent corrosion-resistant properties. Additionally, the undercoat helps prevent the migration of carbon from the steel, which can cause the brass to become tarnished and develop dark spots later on. Surface Uniformity and Color Control An undercoat improves the surface of the part, making it smooth and uniform before the final plating. When brass is plated onto a smooth, glossy base like nickel, it results in a more consistent color and a superior shine across the entire piece. This significantly enhances the final aesthetic quality of the product.",
+        why_p1:"Brass plating is widely used for decorative hardware and industrial parts that require a beautiful and durable finish. However, when the base metal is steel, plating brass directly onto it often leads to severe quality and longevity issues.",
+        why_p2:"An intermediate layer of <strong>copper</strong> or <strong>nickel</strong> acts as a strong 'bridge' between the steel and the brass. It significantly improves adhesion, reduces electrochemical reactions that cause flaking, and stabilizes the final tone and appearance.",
+        why_p3:"<strong>Key benefits of an undercoat:</strong><br>• <strong>Resolves Galvanic and Adhesion Issues:</strong> Steel and brass have significantly different electrical potentials. Direct brass plating onto steel results in severe galvanic corrosion, causing the brass layer to have poor adhesion and flake off easily over time. An undercoat of copper or nickel helps to minimize this difference in electrical potential, creating a stronger and more durable bond.<br>• <strong>Corrosion Protection:</strong> Steel is highly susceptible to rust when exposed to moisture. The undercoat acts as a protective barrier to prevent the steel from rusting. Nickel, in particular, has excellent corrosion-resistant properties.<br>• <strong>Prevents Carbon Diffusion:</strong> The undercoat helps prevent the migration of carbon from the steel, which can cause the brass to become tarnished and develop dark spots later on.<br>• <strong>Surface Uniformity and Color Control:</strong> An undercoat improves the surface of the part, making it smooth and uniform before the final plating. When brass is plated onto a smooth, glossy base like nickel, it results in a more consistent color and a superior shine across the entire piece.",
 
         galv_h:"Galvanic & Adhesion",
-        galv_p1:"Steel and brass have very different potentials. If plated directly, steel behaves as the anode and brass the cathode, forming a galvanic cell in the bath—accelerating steel dissolution and causing poor adhesion.",
-        galv_p2:"Adding a copper/nickel underlayer brings potentials closer and forms strong metallurgical bonding to steel, reducing corrosion and extending service life.",
+        galv_p1:"Steel and brass have very different electrical potentials. If plated directly, the steel substrate behaves as the anode and the brass as the cathode, forming a galvanic cell in the plating bath. This accelerates the dissolution of the steel, resulting in poor adhesion and eventual flaking of the brass layer.",
+        galv_p2:"Inserting a <strong>copper or nickel</strong> layer in between brings the electrical potentials closer together and forms strong metallurgical bonding with the steel surface, significantly reducing under-film corrosion and extending the service life.",
 
-        hard_h:"Hardness & Wear",
-        hard_p1:"Copper undercoats adhere well but are relatively soft (~100 HV). Nickel is harder (~200–500 HV) and much more wear-resistant.",
-        hard_p2:"For frequently handled parts (knobs, keys, machinery parts), a 5–15 µm nickel layer beneath brass acts as a load-bearing shield and greatly boosts durability.",
+        hard_h:"Hardness & Wear Resistance",
+        hard_p1:"A <strong>copper</strong> undercoat provides excellent adhesion but is relatively soft (around 100 HV), making it less resistant to scratches. <strong>Nickel</strong>, on the other hand, is much harder (200–500 HV) and highly resistant to abrasion.",
+        hard_p2:"For parts that are handled frequently (such as doorknobs, keys, or machinery parts), depositing a <strong>5–15 µm nickel layer</strong> beneath the brass acts as a load-bearing shield, greatly boosting the overall durability of the finish.",
 
-        diff_h:"Carbon Diffusion & Corrosion",
-        diff_p1:"Steel contains carbon that can diffuse to the surface over time, causing brass tarnish or dark spots.",
-        diff_p2:"Nickel is an effective diffusion barrier. Its dense structure blocks oxygen/moisture from reaching steel, reducing rust—especially in humid or marine environments.",
+        diff_h:"Carbon Diffusion & Corrosion Protection",
+        diff_p1:"Steel contains carbon that can diffuse to the surface over time or when exposed to heat, causing the beautiful brass finish to tarnish or develop dark spots.",
+        diff_p2:"<strong>Nickel</strong> is a highly effective diffusion barrier. Its dense structure blocks oxygen and moisture from reaching the steel, eliminating the risk of red rust—especially critical in humid or marine environments.",
 
         finish_h:"Finish Quality & Aesthetics",
-        finish_p1:"Bright nickel levels and mirrors the surface. Brass deposited over it shows vivid, uniform color and long-lasting gloss.",
-        finish_p2:"Plating directly on rough/porous steel yields blotchy brass and faster degradation.",
+        finish_p1:"A <strong>bright nickel</strong> undercoat levels the rough surface of the steel, making it smooth and mirror-like. When brass is deposited over it, it reflects a vivid, uniform golden tone and retains its high gloss for a long time.",
+        finish_p2:"Conversely, plating directly onto rough or porous steel yields a blotchy, uneven brass color that degrades quickly.",
 
-        ex_h:"Industry Examples",
-        ex_1:"Brass instruments (saxophones, trumpets): multi-layer stacks Copper → Nickel → Brass for tone, appearance, and durability.",
-        ex_2:"Home hardware (door knobs, rails, furniture): nickel undercoats resist wear and corrosion from frequent touches.",
-        ex_3:"Automotive trim (bezels, emblems): nickel first for resistance to heat, water, dust, and road salt.",
+        ex_h:"Industry Application Examples",
+        ex_1:"<strong>Brass Instruments</strong> (e.g., saxophones, trumpets): Frequently utilize a multi-layer stack of Copper → Nickel → Brass to achieve excellent acoustic resonance, outstanding gloss, and handling durability.",
+        ex_2:"<strong>Home Hardware</strong> (e.g., door knobs, handrails, furniture): Requires a beautiful finish resistant to sweat from frequent touches. A thick nickel layer minimizes wear and prevents rust.",
+        ex_3:"<strong>Automotive Trim</strong> (e.g., light bezels, emblems, vintage trims): Relies on a nickel base coat for resistance against heat, water, dust, and road salts.",
 
         sum_h:"Summary",
-        sum_p1:"Direct brass on steel leads to poor adhesion, rust, and fast discoloration. Copper improves bonding; nickel adds hardness/wear resistance, blocks carbon diffusion, and enhances gloss.",
-        sum_p2:"High-quality applications commonly use Copper → Nickel → Brass to achieve durable, beautiful, long-lasting finishes.",
+        sum_p1:"Plating brass directly onto steel inevitably leads to poor adhesion, rust, and rapid discoloration. Using <strong>copper</strong> as an undercoat solves adhesion issues, while <strong>nickel</strong> adds crucial hardness, wear resistance, blocks carbon diffusion, and significantly enhances the final gloss.",
+        sum_p2:"For this reason, high-quality industrial applications universally adopt the <strong>Copper → Nickel → Brass</strong> sequence to ensure the finished product is beautiful, durable, and provides a long-lasting return on investment.",
 
-        links_h:"Related links",
-        link_at:"Brass Plating",
-        link_salt:"Salt Spray quick guide",
-        link_pretreat:"Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"Filtration & hot-air knife equipment",
+        links_h:"Related Links",
+        link_at:"Brass Plating solution for golden finishes",
+        link_salt:"Guide: Salt Spray Testing and Evaluation",
+        link_pretreat:"Pretreatment: Degreasers and Surface Prep",
+        link_protect:"Brass Anti-tarnish (Protective Treatment)",
+        link_equip:"Equipment: Filtration, Air Knives, and Ovens",
 
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved."
       }
     };
 
@@ -497,13 +494,18 @@
     function applyLang(lang){
       const sel = (lang === 'en') ? 'en' : 'th';
       document.documentElement.lang = sel;
+      // update button state
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+      // swap texts
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+        if (key && I18N[sel] && I18N[sel][key]) {
+            node.innerHTML = I18N[sel][key];
+        }
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
-      // recalc header height (text wrapping may change)
+      
+      // recalc header height
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
         document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -517,7 +519,7 @@
     })();
   </script>
 
-  <!-- JS: Header glass, mobile menu, highlight current, TOC scroll spy -->
+  <!-- JS: Header glass, mobile menu, TOC scroll spy & smart back -->
   <script>
     (function(){
       const header = document.getElementById('siteHeader');
@@ -561,7 +563,7 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Blog when under /blog/*
+      // Highlight current page
       try{
         const here = location.pathname.replace(/\/+$/,'');
         const isBlog = here.startsWith('/blog');
@@ -573,6 +575,27 @@
         });
       }catch(e){}
 
+      // Smart back button
+      (function(){
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
+        });
+      })();
+
+      // Clickable heading anchors
+      document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+        h.addEventListener('click', ()=>{
+          const sec = h.closest('.section-block');
+          if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+        });
+      });
+
       // TOC scroll spy
       (function(){
         const links = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
@@ -581,17 +604,25 @@
         links.forEach(a=>{
           const id = a.getAttribute('href').slice(1);
           const el = document.getElementById(id);
-          if (el) map.set(id, {link:a, el});
+          const li = a.closest('li');
+          if (el) map.set(id, {link:a, li:li, el:el});
         });
 
         const setActive = (id)=>{
-          links.forEach(a=> a.classList.remove('is-active'));
-          links.forEach(a=> a.setAttribute('aria-current','false'));
+          links.forEach(a=>{
+              a.classList.remove('is-active');
+              a.setAttribute('aria-current','false');
+              if(a.closest('li')) a.closest('li').setAttribute('aria-current', 'false');
+          });
           const item = map.get(id);
-          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
+          if (item){ 
+              item.link.classList.add('is-active'); 
+              item.link.setAttribute('aria-current','true'); 
+              if(item.li) item.li.setAttribute('aria-current', 'true');
+          }
         };
 
-        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||64;
         const obs = new IntersectionObserver((entries)=>{
           entries.forEach(e=>{
             if (e.isIntersecting){
@@ -600,28 +631,27 @@
               history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
             }
           });
-        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+        }, {rootMargin: `-${headerH()+40}px 0% -60% 0%`, threshold: 0.1});
 
         map.forEach(({el})=> obs.observe(el));
-        
       })();
+      
     })();
-      // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
 
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 300); 
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
   </script>
 </body>
 </html>
