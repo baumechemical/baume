@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>คู่มือ Electropolishing อลูมิเนียม | Baume Chemical Blog</title>
 
-  <!-- === SEO base (unchanged) === -->
-  <meta name="description" content="คู่มือ Electropolishing อลูมิเนียม: การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง วิธีคุมให้เงาเรียบเสมอ">
+  <!-- === SEO base === -->
+  <meta name="description" content="คู่มือ Electropolishing อลูมิเนียมฉบับสมบูรณ์: การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง วิธีคุมให้เงาเรียบเสมอ">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <link rel="canonical" href="https://www.baumechemical.com/blog/aluminum-electropolishing/index.html">
   <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/aluminum-electropolishing/index.html">
@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <meta name="theme-color" content="#2c5e4e">
 
-  <!-- Open Graph / Twitter (unchanged) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="th_TH">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:type" content="website">
@@ -27,11 +27,11 @@
   <meta property="og:title" content="คู่มือ Electropolishing อลูมิเนียม — Baume Chemical Blog">
   <meta property="og:description" content="การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง วิธีคุมให้เงาเรียบเสมอ">
   <meta property="og:url" content="https://www.baumechemical.com/blog/aluminum-electropolishing/index.html">
-  <meta property="og:image" content="https://i.imgur.com/3mWQsKe.jpeg">
+  <meta property="og:image" content="https://www.baumechemical.com/picture/aluminium-casting.jpg">
   <meta property="og:image:alt" content="Aluminum Electropolishing Guide — Baume Chemical Blog">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Structured Data (JSON-LD) — unchanged -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -104,23 +104,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://flagcdn.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg"/>
+  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/aluminium-casting.jpg"/>
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; /* will be synced via JS */
+      --header-h:64px; 
       --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.7}
+    p { margin-top: 0; margin-bottom: 1.2em; color: #334155; }
 
-    /* ===== GLASS HEADER: transparent start, dark on scroll, sticky on top ===== */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    /* ===== GLASS HEADER ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease}
+    .site-header.scrolled{background:rgba(15,23,42,.85); backdrop-filter:saturate(140%) blur(12px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:10px 16px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
@@ -129,7 +130,7 @@
     .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
-    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:700}
+    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:700; transition: background .2s;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
 
@@ -137,149 +138,135 @@
     .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
-    /* Language switch (desktop next to menu; on mobile lives inside menu) */
-    .lang-switch{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .lang-switch{display:flex;gap:6px;padding:4px;border:1px solid rgba(226,232,240,.4);border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12); transition: background .3s;}
+    .site-header.scrolled .lang-switch{background:#ffffffdd; border-color: rgba(226,232,240, 1);}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 12px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a; transition: all .2s;}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff; box-shadow: 0 4px 10px rgba(56, 123, 91, 0.3);}
     .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     @media (max-width:920px){
-      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172ae6;backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
       .menu li a{display:block;padding:12px 14px;border-radius:10px}
       .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
       .nav-toggle{display:inline-flex}
-      /* Make language switch live inside the dropdown visually */
       .primary-nav{align-items:stretch}
       .primary-nav .lang-switch{margin-top:6px;border-color:rgba(255,255,255,.35);background:#ffffff1c;box-shadow:none}
       .primary-nav .lang-btn{color:#fff}
       .primary-nav .lang-btn[aria-pressed="true"]{background:#ffffff; color:#0f172a}
     }
 
-    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.4);z-index:1300;display:none; backdrop-filter: blur(3px);}
     .menu-scrim:not([hidden]){display:block}
     body.no-scroll{position:fixed;width:100%}
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3mWQsKe.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    .back-chip{position:absolute; top:calc(var(--header-h) + 10px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border-radius:999px; font-weight:800; text-decoration:none; background:#fff; border:1px solid rgba(2,8,20,.08); color:#0f172a; box-shadow:var(--shadow-1)}
-    .back-chip:hover{ transform:translateY(-1px) }
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(380px, 50vh, 550px); background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(44,94,78,.85)), url('https://www.baumechemical.com/picture/aluminium-casting.jpg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 20px)}
+    .hero h1{margin:6px 0 12px; font-weight:800; font-size:clamp(28px,4.5vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.5); letter-spacing: -0.5px;}
+    .hero p{max-width:800px; margin:0 auto; color:#e2e8f0; font-size: 1.1rem; line-height: 1.6;}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 16px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:999px; font-weight:700; text-decoration:none; background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.3); color:#fff; transition: all .2s;}
+    .back-chip:hover{ background:#fff; color:var(--brand); transform:translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
     /* ===== Layout & tables ===== */
-    .wrap{max-width:1200px; margin:auto; padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    .lead{margin:0 0 16px; color:#5f6d7c}
+    .wrap{max-width:1200px; margin:auto; padding:40px 16px}
+    h2.section{margin:0 0 12px; font-size:clamp(22px,2.6vw,28px); font-weight:800; color:#0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;}
+    
+    .table{ border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 20px;}
+    .table table{width:100%;border-collapse:collapse; background: #fff;}
+    .table thead th{background:var(--brand); color: #fff; font-weight: 600; letter-spacing: 0.5px;}
+    .table th,.table td{padding:14px 16px; border-bottom:1px solid #e2e8f0; vertical-align:top; text-align: left;}
+    .table tbody tr:last-child td { border-bottom: none; }
+    .table tbody tr:hover{background:#f8fafc}
 
-    .table table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #e3ece5;border-radius:12px;overflow:hidden}
-    .table thead th{background:#f4faf7}
-    .table th,.table td{padding:12px 10px;border-bottom:1px solid #e9f0ea;vertical-align:top}
-    .table tbody tr:nth-child(2n){background:#fbfdfc}
+    /* Modern Segmented Control Part Switcher */
+    .part-switch {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 5px;
+      border-radius: 14px;
+      margin: 0 0 24px 0;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .part-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #64748b;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .part-btn:hover { color: #334155; }
+    .part-btn[aria-pressed="true"] {
+      background: #fff;
+      color: var(--brand);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-    /* Part switcher */
-    .part-switch{display:flex;gap:8px;align-items:center;margin:16px 0 14px}
-    .part-btn{appearance:none;border:1px solid #d8e7dd;background:#ecf4ef;padding:8px 12px;border-radius:999px;font-weight:800;cursor:pointer}
-    .part-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(2,8,20,.12)}
-
-    /* Footer (unchanged styles) */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color .2s;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:1200px; margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:48px 20px 24px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:48px; height:48px; border-radius:12px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.2rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#94a3b8}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:900;}
+    .float-line a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#00c300; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform .2s;}
+    .float-line a:hover{transform:translateY(-2px) scale(1.05);}
+    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 15px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    .backtop{position:fixed; right:20px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; opacity: 0; transition: opacity .3s;}
+    .backtop.show{display:block; opacity: 1;}
+    .backtop button{width:46px; height:46px; border-radius:50%; border:none; background:#fff; color: var(--brand); font-size: 1.2rem; box-shadow:0 4px 16px rgba(0,0,0,.15); cursor:pointer; transition: all .2s;}
+    .backtop button:hover{background:var(--brand); color:#fff; transform:translateY(-2px);}
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
     /* Utils */
     html{scroll-behavior:smooth}
     [hidden]{display:none !important}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 24px)}
+    .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out}
     .reveal.show{opacity:1; transform:none}
+    strong { color: var(--brand); }
   </style>
+
   <style id="beautify-main">
-    /* ===== Page layout: two-column with sticky TOC on wide screens ===== */
+    /* ===== Page layout: two-column with sticky TOC ===== */
     @media (min-width: 1100px){
-      main.wrap{
-        display:grid;
-        grid-template-columns: 300px minmax(0,1fr);
-        gap:20px;
-        align-items:start;
-      }
-      /* place elements */
-      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px); }
-      .part-switch{ grid-column:2; position:sticky; top:calc(var(--header-h) + 10px); z-index:1 }
-      section.section-block{ grid-column:2; }
+      main.wrap{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap:32px; align-items:start; }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 24px); }
+      .main-content { grid-column:2; }
     }
 
     /* ===== Section cards & headings ===== */
     section.section-block{
-      background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1);
-      position:relative; overflow:hidden; margin-bottom:16px;
+      background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position:relative; margin-bottom:24px; transition: box-shadow .3s;
     }
+    section.section-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
     section.section-block::after{
-      content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
-      background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85;
+      content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+      background:linear-gradient(90deg,var(--brand),#59a286,#9bd4b9);
     }
-    h2.section{ display:flex; align-items:center; gap:10px; font-weight:800; }
-    /* Emoji icons per section (no extra markup) */
-    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
+    
+    /* Icons in headings */
+    h2.section::before{ content:var(--icon, "📘"); font-size:22px; margin-right: 8px; vertical-align: middle;}
     #rec>h2.section{ --icon:"📊" }
     #prep>h2.section{ --icon:"🧼" }
     #window>h2.section{ --icon:"🎛️" }
@@ -287,92 +274,26 @@
     #care>h2.section{ --icon:"🛡️" }
     #defects>h2.section{ --icon:"🚨" }
     #links>h2.section{ --icon:"🔗" }
-    /* Hover anchor hint */
-    .section-block>h2.section{ position:relative }
-    .section-block>h2.section::after{ content:"#"; position:absolute; right:10px; top:50%; transform:translateY(-50%);
-      opacity:0; transition:opacity .2s ease; font-weight:800; color:var(--muted); font-size:.92rem }
-    .section-block:hover>h2.section::after{ opacity:.85 }
 
-/* ===== TOC styling — Card + pill items (Sep-2025 look) ===== */
-#toc{
-  background:#fff;
-  border:1px solid #e3ece5;
-  border-radius:16px;
-  box-shadow:var(--shadow-1);
-  padding:12px;
-}
-#toc h2.section{ font-size:1rem; margin:2px 0 8px }
-
-#toc .toc-list{
-  /* เลิกบูเลท → ใช้แคปซูล */
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:grid;
-  gap:8px;
-}
-
-/* รายการเริ่มต้น (เทาเขียวอ่อน) */
-#toc .toc-list li{
-  position:relative;
-  border:1px solid #d8e7dd;
-  background:#f2f7f4;
-  border-radius:12px;
-  transition:filter .15s ease, background .15s ease, border-color .15s ease;
-}
-#toc .toc-link{
-  display:block;
-  padding:12px 40px 12px 12px; /* เว้นที่ให้ลูกศรขวา */
-  text-decoration:none;
-  color:#1f2a24;
-  font-weight:800;
-  border-radius:10px;
-}
-#toc .toc-list li:hover{ filter:brightness(.98) }
-
-/* ลูกศรทางขวา */
-#toc .toc-list li::after{
-  content:"›";
-  position:absolute; right:12px; top:50%;
-  transform:translateY(-50%);
-  color:#2c5e4e; opacity:.55; font-weight:900;
-}
-
-/* สถานะ Active (เขียวเข้ม ตัวอักษรขาว) */
-#toc .toc-list li[aria-current="true"]{
-  background:var(--brand-2);
-  border-color:transparent;
-  box-shadow:0 6px 16px rgba(2,8,20,.12);
-}
-#toc .toc-list li[aria-current="true"] .toc-link{ color:#fff }
-#toc .toc-list li[aria-current="true"]::after{ color:#fff; opacity:.9 }
-
-/* โฟกัสด้วยคีย์บอร์ด */
-#toc .toc-link:focus-visible{
-  outline:2px solid var(--brand-2);
-  outline-offset:2px;
-}
-
-
-    /* ===== Tables polish ===== */
-    .table table{ border-radius:14px }
-    .table thead th{ position:sticky; top:0; z-index:1 }
-    .table tbody tr:hover{ background:#f6fbf8 }
-
-    /* ===== Subtle background accents for sections ===== */
-    .section-block::before{ content:""; position:absolute; width:140px; height:140px; right:-60px; top:-60px; border-radius:50%;
-      background:radial-gradient(closest-side, #e9f5ef 0%, #f7fbf9 60%, transparent 100%); filter:saturate(120%); pointer-events:none }
-
-    /* Part switcher buttons refinement */
-    .part-switch{ background:#fff; border:1px solid #e3ece5; border-radius:999px; padding:6px; box-shadow:var(--shadow-1) }
-    .part-btn{ background:#f2f7f4; border-color:#d8e7dd }
-    .part-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; border-color:transparent }
+    /* ===== TOC styling ===== */
+    #toc{ background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:var(--shadow-1); padding:20px; }
+    #toc h2.section{ font-size:1.1rem; border-bottom: none; margin-bottom: 16px; padding-bottom: 0; color: var(--brand); }
+    #toc .toc-list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+    #toc .toc-list li{ position:relative; border-radius:10px; transition:all .2s; }
+    #toc .toc-link{ display:block; padding:10px 32px 10px 14px; text-decoration:none; color:#475569; font-weight:600; border-radius:8px; font-size: 0.95rem; }
+    #toc .toc-list li:hover { background: #f1f5f9; }
+    #toc .toc-list li:hover .toc-link{ color: var(--brand); }
+    
+    #toc .toc-list li::after{ content:"›"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-weight:800; transition: color .2s; }
+    #toc .toc-list li[aria-current="true"]{ background:var(--brand-2); box-shadow:0 4px 12px rgba(56, 123, 91, 0.2); }
+    #toc .toc-list li[aria-current="true"] .toc-link{ color:#fff; }
+    #toc .toc-list li[aria-current="true"]::after{ color:#fff; }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== Header (transparent start → dark on scroll) ===== -->
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="header-inner">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -389,7 +310,6 @@
             <li><a href="https://www.baumechemical.com/contact-us.html">Contact Us</a></li>
             <li><a href="https://www.baumechemical.com/blog/" aria-current="page">Blog</a></li>
           </ul>
-          <!-- Language switch: beside menu on desktop, inside dropdown on mobile -->
           <div class="lang-switch" id="langSwitch" role="group" aria-label="Language switcher">
             <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
               <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -399,7 +319,6 @@
             </button>
           </div>
         </nav>
-
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span class="bar" aria-hidden="true"></span>
         </button>
@@ -410,195 +329,183 @@
 
   <!-- ===== Hero ===== -->
   <header class="hero">
-    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back>← กลับเมนูหลัก</a>
-    <div class="wrap">
-      <h1 data-i18n-key="hero_title">คู่มือ Electropolishing อลูมิเนียม</h1>
-      <p data-i18n-key="hero_tagline">การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลบ่อกัดเงา และวิธีคุมให้เงาเรียบเสมอ</p>
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับหน้าบทความ</a>
+    <div class="wrap" style="padding:0">
+      <h1 data-i18n-key="hero_title">คู่มือ Electropolishing อลูมิเนียมฉบับสมบูรณ์</h1>
+      <p data-i18n-key="hero_tagline">เจาะลึกกระบวนการกัดเงาด้วยไฟฟ้า การคุมตัวแปร การเลือกจิ๊ก และการแก้ปัญหาเพื่อผิวงานระดับพรีเมียม</p>
     </div>
   </header>
 
-  <!-- ===== Main content (unchanged text/sections) ===== -->
+  <!-- ===== Main content ===== -->
   <main class="wrap">
-    <!-- Part Switcher -->
-    <div class="part-switch" role="tablist" aria-label="เลือกพาร์ต">
-      <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">พาร์ต 1: ตั้งต้น & กระบวนการ</span></button>
-      <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ปัญหา</span></button>
+    
+    <!-- TOC -->
+    <nav id="toc" class="reveal" aria-label="สารบัญ">
+      <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
+      <ul class="toc-list" role="list">
+        <li data-part="1"><a class="toc-link" href="#rec" data-i18n-key="toc_rec">หลักการ & ค่าเริ่มต้น</a></li>
+        <li data-part="1"><a class="toc-link" href="#prep" data-i18n-key="toc_prep">การเตรียมผิวก่อนกัดเงา</a></li>
+        <li data-part="1"><a class="toc-link" href="#window" data-i18n-key="toc_window">หน้าต่างกระบวนการ (Process Window)</a></li>
+        <li data-part="2"><a class="toc-link" href="#fixture" data-i18n-key="toc_fixture">เทคนิคการจัดวางและจิ๊ก</a></li>
+        <li data-part="2"><a class="toc-link" href="#care" data-i18n-key="toc_care">การดูแลบ่อและควบคุมคุณภาพ</a></li>
+        <li data-part="2"><a class="toc-link" href="#defects" data-i18n-key="toc_defects">การแก้ไขปัญหาที่พบบ่อย</a></li>
+        <li data-part="2"><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <!-- Part Switcher -->
+      <div class="part-switch" role="tablist" aria-label="เลือกหัวข้อหลัก">
+        <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">ส่วนที่ 1: พื้นฐาน & กระบวนการ</span></button>
+        <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">ส่วนที่ 2: อุปกรณ์ & การแก้ปัญหา</span></button>
+      </div>
+
+      <!-- Sections Part 1 -->
+      <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
+        <h2 id="rec-h" class="section" data-i18n-key="rec_h">หลักการทำงาน & ค่าเริ่มต้นที่แนะนำ</h2>
+        <p data-i18n-key="rec_p1">การขัดเงาด้วยไฟฟ้า (Electropolishing) บนอลูมิเนียม คือกระบวนการที่กลับด้านกับการชุบ โดยชิ้นงานทำหน้าที่เป็น <strong>แอโนด (ขั้วบวก)</strong> เมื่อจ่ายกระแสไฟตรง (DC) ลงในบ่อเคมีเฉพาะทาง เนื้อโลหะจะถูกละลายออกไปอย่างควบคุมได้ กระแสไฟจะวิ่งไปที่ "ยอดแหลม" ของความขรุขระบนพื้นผิว (Micro-peaks) มากกว่าบริเวณร่องลึก (Micro-valleys) ทำให้ผิวถูกปาดให้เรียบเนียนระดับไมครอน ส่งผลให้พื้นผิวเงางาม สะท้อนแสงได้ดีเยี่ยม และเพิ่มความต้านทานการกัดกร่อน เป็นการเตรียมผิวที่สมบูรณ์แบบก่อนนำไปชุบอโนไดซ์</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="rec_th_param">พารามิเตอร์</th>
+                <th data-i18n-key="rec_th_range">ค่ามาตรฐานตั้งต้น</th>
+                <th data-i18n-key="rec_th_note">หมายเหตุทางเทคนิค</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="rec_t_temp">อุณหภูมิบ่อ (Temperature)</td>
+                <td data-i18n-key="rec_v_temp">60-80 °C (คุมให้แกว่งน้อยที่สุด)</td>
+                <td data-i18n-key="rec_n_temp">ความหนืดของน้ำยาจะเปลี่ยนตามอุณหภูมิ หากอุณหภูมิแกว่งจะทำให้เงาไม่สม่ำเสมอ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="rec_t_cd">ความหนาแน่นกระแส (Current Density)</td>
+                <td data-i18n-key="rec_v_cd">10–30 A/dm²</td>
+                <td data-i18n-key="rec_n_cd">ต้องดันกระแสให้ถึงจุด "Polishing Plateau" หากต่ำไปจะเป็นการกัดกรดธรรมดา (Etching)</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="rec_t_time">เวลา (Dwell Time)</td>
+                <td data-i18n-key="rec_v_time">2–5 นาที</td>
+                <td data-i18n-key="rec_n_time">ขึ้นอยู่กับความหยาบเริ่มต้นและเกรดอลูมิเนียม นานไปอาจทำให้เกิดผิวส้ม (Orange Peel)</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="rec_t_flow">การกวน (Agitation)</td>
+                <td data-i18n-key="rec_v_flow">Air Agitation / Mechanical</td>
+                <td data-i18n-key="rec_n_flow">กวนเพื่อระบายความร้อนที่ผิวงาน และไล่ฟองก๊าซออกซิเจนที่เกาะผิวชิ้นงาน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="rec_t_ratio">สัดส่วน Cathode : Anode</td>
+                <td data-i18n-key="rec_v_ratio">1:1 ถึง 2:1</td>
+                <td data-i18n-key="rec_n_ratio">แผ่นแคโทดมักใช้ตะกั่ว (Lead) หรือสแตนเลส (316L) ขึ้นอยู่กับสูตรน้ำยา</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
+        <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนกัดเงา (Pretreatment)</h2>
+        <p data-i18n-key="prep_p1">หัวใจสำคัญของการกัดเงาคือผิวที่ปราศจากสิ่งปนเปื้อน หากมีคราบน้ำมันหลงเหลือ กระแสไฟจะไม่สามารถทำปฏิกิริยากับผิวเนื้อโลหะได้ตรงจุดนั้น ทำให้เกิดรอยด่าง เริ่มต้นด้วยการล้างไขมัน (Degreasing) แนะนำให้ใช้ระบบคลื่นอัลตร้าโซนิค (Ultrasonic) ร่วมกับน้ำยาล้างไขมันแบบด่างอ่อนๆ จากนั้นต้องล้างน้ำ (Rinse) ด้วยระบบน้ำล้นอย่างน้อย 2 บ่อ</p>
+        <p data-i18n-key="prep_p2">ในอลูมิเนียมซีรีส์ที่มีส่วนผสมของซิลิกอน (เช่น ซีรีส์ 4xxx หรืออลูมิเนียมหล่อ) หรือทองแดง (ซีรีส์ 2xxx) จำเป็นต้องมีขั้นตอนการลอกคราบดำ (Desmutting) ที่เหมาะสม แนะนำให้ใช้น้ำยา Desmut ที่ไม่มีส่วนผสมของกรดไนตริก (Non-nitric) เพื่อลดไอระเหยพิษ คุมเวลาแช่ให้พอดีกับการสลายคราบสมัท</p>
+        <p data-i18n-key="prep_p3"><strong>ทริค:</strong> ใช้น้ำ DI (Deionized Water) ในบ่อล้างสุดท้ายก่อนลงอ่างกัดเงา จะช่วยลดการนำพาสารแขวนลอย (Drag-in) และคลอไรด์เข้าสู่อ่าง ซึ่งเป็นตัวการทำให้อายุการใช้งานของน้ำยากัดเงาสั้นลงและทำให้ผิวเกิดรูพรุน (Pitting)</p>
+      </section>
+
+      <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
+        <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ (Process Window)</h2>
+        <p data-i18n-key="window_p1">การหาพารามิเตอร์ที่เหมาะสม ต้องดูสมดุลระหว่าง "อุณหภูมิ" และ "กระแส" กราฟความสัมพันธ์ระหว่างแรงดัน (Voltage) และกระแส (Current) ในงานขัดเงาด้วยไฟฟ้าจะมีช่วงที่เรียกว่า <strong>Polishing Plateau</strong> ซึ่งเป็นช่วงที่กระแสคงที่แม้แรงดันจะเพิ่มขึ้น ช่วงนี้คือจุดที่ฟิล์มความหนืด (Viscous layer) หุ้มชิ้นงานได้พอดีที่สุด</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="win_th_cond">ตัวแปร</th>
+                <th data-i18n-key="win_th_low">ผลเมื่อค่าน้อยเกินไป</th>
+                <th data-i18n-key="win_th_mid">จุดเหมาะสม (Sweet Spot)</th>
+                <th data-i18n-key="win_th_high">ผลเมื่อค่ามากเกินไป</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="win_r_temp">อุณหภูมิ</td>
+                <td data-i18n-key="win_v_temp_low">น้ำยาหนืดไป ฟิล์มหนา กระแสเดินยาก ผิวเงาช้าหรือไม่เงาเลย</td>
+                <td data-i18n-key="win_v_temp_mid">ฟิล์มคุมความเรียบเสถียร เงาสม่ำเสมอทั่วชิ้นงาน</td>
+                <td data-i18n-key="win_v_temp_high">ฟิล์มละลายเร็วไป กัดแรง เสี่ยงเกิดขอบไหม้รุนแรง (Etching/Burning)</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="win_r_cd">กระแสไฟ</td>
+                <td data-i18n-key="win_v_cd_low">ไม่ถึงจุด Plateau กลายเป็นการกัดกรดธรรมดา ผิวจะขุ่นและสาก</td>
+                <td data-i18n-key="win_v_cd_mid">ฟิล์มออกซิไดซ์บางๆ ควบคุมการละลายยอดแหลมได้ดีที่สุด</td>
+                <td data-i18n-key="win_v_cd_high">เกิดก๊าซออกซิเจนพ่นแรงเกินไป ฟองก๊าซทิ้งรอยทางน้ำไหล (Gas Streaking) ขอบชิ้นงานละลาย</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sections Part 2 -->
+      <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h" hidden>
+        <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">เทคนิคการจัดวางและจิ๊ก (Fixturing & Racking)</h2>
+        <p data-i18n-key="fixture_p1">กระแสไฟในอ่าง Electropolishing ต้องการการนำไฟฟ้าที่สมบูรณ์แบบ แนะนำให้ใช้จิ๊ก (Rack) ที่ทำจาก <strong>ไทเทเนียม (Titanium)</strong> แทนอลูมิเนียมทั่วไป เพราะไทเทเนียมจะไม่ถูกกัดละลายในอ่าง ช่วยให้อายุการใช้งานยาวนานและกระแสไฟสม่ำเสมอ หากจำเป็นต้องใช้อลูมิเนียม ต้องมั่นใจว่าจุดสัมผัส (Contact points) กดแน่นมากพอเพื่อป้องกันการอาร์ค (Arcing) ที่จะทำลายผิวงานบริเวณนั้น</p>
+        <p data-i18n-key="fixture_p2">การจัดวางชิ้นงานมีผลอย่างมากต่อก๊าซที่เกิดขึ้น (ออกซิเจน) ชิ้นงานควรแขวนทำมุมเล็กน้อย เพื่อป้องกันไม่ให้ฟองก๊าซติดค้างอยู่ใต้พื้นที่ราบ (Blind spots) ซึ่งฟองก๊าซเหล่านี้จะบล็อกกระแสไฟ ทำให้เกิดหลุมหรือรอยด่าง นอกจากนี้ หากชิ้นงานมีมุมแหลมหรือขอบบาง ควรพิจารณาใช้ "แผ่นขโมยกระแส" (Thieves/Robbers) หรือฉากกั้น (Shields) เพื่อป้องกันกระแสไปรวมตัวที่ขอบมากเกินจนเกิดอาการขอบไหม้</p>
+      </section>
+
+      <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h" hidden>
+        <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อและควบคุมคุณภาพ (Bath Care & Maintenance)</h2>
+        <p data-i18n-key="care_p1">น้ำยาขัดเงาส่วนใหญ่ประกอบด้วยกรดฟอสฟอริก (Phosphoric Acid) และกรดซัลฟิวริก (Sulfuric Acid) สิ่งสำคัญที่ต้องติดตามคือ <strong>ค่าความถ่วงจำเพาะ (Specific Gravity หรือ Baume)</strong> หากน้ำยามีความถ่วงจำเพาะเปลี่ยนไปจากสเปค จะมีผลโดยตรงต่อความหนืดและการเกิดฟิล์ม นอกจากนี้ ปริมาณอลูมิเนียมที่ละลายสะสมอยู่ในอ่าง (Dissolved Aluminum) จะค่อยๆ เพิ่มขึ้น โดยทั่วไปหากค่าสะสมเกินขีดจำกัด (เช่น เกิน 25-35 กรัม/ลิตร ขึ้นอยู่กับสูตร) อ่างจะสูญเสียความสามารถในการขัดเงา ต้องทำการถ่ายทิ้งบางส่วนและเติมน้ำยาใหม่ (Decant & Replenish)</p>
+        <p data-i18n-key="care_p2">ความชื้นและน้ำ เป็นศัตรูตัวร้ายของอ่างขัดเงาอลูมิเนียม (ยกเว้นสูตรที่ออกแบบให้มีน้ำ) ปริมาณน้ำล้างที่ติดมากับชิ้นงาน (Drag-in) ต้องให้น้อยที่สุด การติดตั้งระบบกรอง (Filtration) ต่อเนื่องเพื่อดักจับสิ่งสกปรกและกากโลหะ เป็นสิ่งจำเป็นที่จะช่วยลดปัญหาเม็ดทรายบนผิวงานได้ดีเยี่ยม</p>
+      </section>
+
+      <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h" hidden>
+        <h2 id="defects-h" class="section" data-i18n-key="def_h">การแก้ไขปัญหาที่พบบ่อย (Troubleshooting)</h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="def_th_sym">ลักษณะข้อบกพร่อง</th>
+                <th data-i18n-key="def_th_cause">สาเหตุทางเทคนิค</th>
+                <th data-i18n-key="def_th_fix">แนวทางแก้ไข</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="def_r1_s">ผิวด้าน ไม่ขึ้นเงา (Dull/Milky Finish)</td>
+                <td data-i18n-key="def_r1_c">อุณหภูมิต่ำไป, กระแสไฟต่ำกว่า Polishing plateau, ปริมาณอลูมิเนียมสะสมในบ่อสูงเกินไป</td>
+                <td data-i18n-key="def_r1_f">เช็คฮีตเตอร์ เพิ่มกระแสไฟให้ถึงจุดทำงาน เช็คค่าอลูมิเนียมในบ่อ (Titration) และอาจต้องถ่ายน้ำยาบางส่วน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="def_r2_s">ขอบไหม้ ขรุขระ (Edge Burn/Pitting)</td>
+                <td data-i18n-key="def_r2_c">กระแสไฟกองที่ขอบมากเกินไป, อุณหภูมิสูงจัด, มีคลอไรด์ปนเปื้อนในบ่อ</td>
+                <td data-i18n-key="def_r2_f">ลดโวลต์/กระแสรวม เพิ่มระยะห่างระหว่างชิ้นงานกับแคโทด ใช้น้ำ DI ในขั้นตอนล้างเพื่อป้องกันคลอไรด์</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="def_r3_s">รอยขีดข่วนจากก๊าซ (Gas Streaking)</td>
+                <td data-i18n-key="def_r3_c">ฟองออกซิเจนวิ่งขึ้นตามแนวตั้งและกัดเซาะผิวเป็นเส้นทาง, การกวนน้ำยาไม่แรงพอ</td>
+                <td data-i18n-key="def_r3_f">ปรับมุมแขวนชิ้นงาน เพิ่มระบบเป่าลม (Air Agitation) หรือเขย่าบาร์ (Cathode Rocker) ให้ฟองหลุดเร็วขึ้น</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="def_r5_s">คราบรอยน้ำมันซึม (White/Stained patches)</td>
+                <td data-i18n-key="def_r5_c">ขั้นตอน Pretreatment ไม่สะอาด ล้างไขมันไม่หมด หรือพักงานรอนานเกินไปจนเกิดออกไซด์ใหม่</td>
+                <td data-i18n-key="def_r5_f">ปรับปรุงบ่อล้างด่าง/อัลตร้าโซนิค เพิ่มความแรงการล้าง และลงบ่อขัดเงาทันทีหลังล้างน้ำ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h" hidden>
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+        <ul>
+          <li><a href="https://www.baumechemical.com/products/polishing/" data-i18n-key="link_polish">หมวดน้ำยาเคมีกัดเงาและขัดเงาโลหะ (Chemical & Electro Polishing)</a></li>
+          <li><a href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment: น้ำยาล้างไขมันและลอกผิวชั้นแรก</a></li>
+          <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">บทความ: คู่มือ Salt Spray Test และการอ่านผลทดสอบสนิม</a></li>
+          <li><a href="https://www.baumechemical.com/products/passivation/" data-i18n-key="link_pass">การทำ Passivation เพื่อปกป้องผิวโลหะขั้นสูงสุด</a></li>
+          <li><a href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">หมวดเครื่องมือและอุปกรณ์ (Rectifiers, Filters & Titanium Heaters)</a></li>
+        </ul>
+      </section>
     </div>
-
-<!-- แทนที่ทั้ง <nav id="toc"> เดิมด้วยบล็อกนี้ -->
-<nav id="toc" class="reveal" aria-label="สารบัญ">
-  <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-  <ul class="toc-list" role="list">
-    <li data-part="1"><a class="toc-link" href="#rec" data-i18n-key="toc_rec">ค่าเริ่มต้นที่แนะนำ</a></li>
-    <li data-part="1"><a class="toc-link" href="#prep" data-i18n-key="toc_prep">การเตรียมผิวก่อนกัดเงา</a></li>
-    <li data-part="1"><a class="toc-link" href="#window" data-i18n-key="toc_window">หน้าต่างกระบวนการ</a></li>
-    <li data-part="2"><a class="toc-link" href="#fixture" data-i18n-key="toc_fixture">การจัดวาง</a></li>
-    <li data-part="2"><a class="toc-link" href="#care" data-i18n-key="toc_care">การดูแลบ่อกัดเงาและคุณภาพ</a></li>
-    <li data-part="2"><a class="toc-link" href="#defects" data-i18n-key="toc_defects">ตารางปัญหาพบเจอบ่อย</a></li>
-    <li data-part="2"><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้องกับบทความนี้</a></li>
-  </ul>
-</nav>
-
-
-    <!-- Sections — content unchanged -->
-    <section id="rec" data-part="1" class="reveal section-block" aria-labelledby="rec-h">
-      <h2 id="rec-h" class="section" data-i18n-key="rec_h">ค่าเริ่มต้นที่แนะนำ</h2>
-      <p data-i18n-key="rec_p1">กัดเงาอลูมิเนียมคือการทำความสะอาดผิวอลูมิเนียมด้วยสารเคมี เพื่อกำจัดคราบสกปรก คราบไขมัน และคราบสนิม ทำให้ผิวอลูมิเนียมสะอาดและพร้อมสำหรับขั้นตอนต่อไป เช่น การทำสี หรือการทำอโนไดซ์ การกัดเงาอลูมิเนียม
-การกัดเงาอลูมิเนียม (Aluminum Etching) คือกระบวนการที่ใช้สารเคมีหรือไฟฟ้าเพื่อขจัดชั้นออกไซด์ตามธรรมชาติและสิ่งสกปรกบนผิวอลูมิเนียม ทำให้พื้นผิวเรียบเนียนและเงางามขึ้น มักใช้เป็นขั้นตอนเตรียมผิวสำหรับกระบวนการชุบเคลือบผิวอื่นๆ เช่น การชุบอโนไดซ์ (Anodizing) ซึ่งจะทำให้สีติดแน่นทนทาน </p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="rec_th_param">พารามิเตอร์</th>
-              <th data-i18n-key="rec_th_range">ช่วงตั้งต้น</th>
-              <th data-i18n-key="rec_th_note">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="rec_t_temp">อุณหภูมิบ่อกัดเงา</td>
-              <td data-i18n-key="rec_v_temp">60-80 °C</td>
-              <td data-i18n-key="rec_n_temp">คงที่เพื่อลดริ้วเงาไม่สม่ำเสมอ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="rec_t_cd">ความหนาแน่นกระแส</td>
-              <td data-i18n-key="rec_v_cd">10–30 A/dm²</td>
-              <td data-i18n-key="rec_n_cd">ต่ำเกินไป → เงาไม่ขึ้น / สูงเกินไป → ผิวไหม้</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="rec_t_time">เวลา</td>
-              <td data-i18n-key="rec_v_time">1–5 นาที</td>
-              <td data-i18n-key="rec_n_time">พอให้ผิวเรียบและเงาโดยไม่ไหม้ขอบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="rec_t_flow">การกวนและการกรอง</td>
-              <td data-i18n-key="rec_v_flow">ไหลเวียนต่อเนื่อง กรองละเอียด</td>
-              <td data-i18n-key="rec_n_flow">ให้ผิวเงาสม่ำเสมอและลดคราบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="rec_t_ratio">อัตราส่วนแคโทดต่อแอโนด</td>
-              <td data-i18n-key="rec_v_ratio">1:1 ถึง 2:1</td>
-              <td data-i18n-key="rec_n_ratio">ให้กระแสกระจายสม่ำเสมอ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
-      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวก่อนกัดเงา</h2>
-      <p data-i18n-key="prep_p1">ความสะอาดของผิวและการขจัดชั้นออกไซด์ส่งผลต่อความเงาและความสม่ำเสมอโดยตรง เริ่มจากล้างคราบน้ำมันและไขมันด้วยน้ำยาด่างหรือทำความสะอาดด้วยคลื่นเสียงความถี่สูง แล้วล้างออกด้วยน้ำสะอาดต่อด้วยการลอกชั้นออกไซด์แบบอ่อนเพื่อกำจัดคราบและผิวด้าน จากนั้นล้างน้ำออกจากผิวให้หมด</p>
-      <p data-i18n-key="prep_p2">กำจัดคราบดำหลังการกัดบนผิวอลูมิเนียมโดยใช้น้ำยาที่ไม่ใช้กรดดินประสิว เลือกชนิดน้ำยาให้เหมาะกับชนิดอลูมิเนียมและลักษณะงาน เช่น หากชิ้นงานมีรอยตัดหรือมีคราบสี ควรเพิ่มระยะเวลาในขั้นตอนเตรียมผิวให้พอเหมาะ และลดช่วงรอระหว่างแต่ละขั้นตอนให้สั้นที่สุดเพื่อป้องกันคราบตกค้างบนผิวงาน</p>
-      <p data-i18n-key="prep_p3">ตรวจสภาพผิวด้วยแสงส่องเฉียงมุมต่ำก่อนนำชิ้นงานลงบ่อกัดเงา ให้แน่ใจว่าผิวสะอาด ปราศจากคราบน้ำมัน และไม่มีคราบน้ำเกาะผิว</p>
-    </section>
-
-    <section id="window" data-part="1" class="reveal section-block" aria-labelledby="window-h">
-      <h2 id="window-h" class="section" data-i18n-key="window_h">หน้าต่างกระบวนการ</h2>
-      <p data-i18n-key="window_p1">หน้าต่างกระบวนการคือช่วงอุณหภูมิ กระแส และเวลา ที่ให้เงาเรียบสม่ำเสมอโดยไม่เกิดไหม้ขอบหรือผิวด้าน เริ่มจากค่ากลาง แล้วขยับทีละตัวและบันทึกผล</p>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="win_th_cond">เงื่อนไข</th>
-              <th data-i18n-key="win_th_low">ต่ำ</th>
-              <th data-i18n-key="win_th_mid">กลาง</th>
-              <th data-i18n-key="win_th_high">สูง</th>
-              <th data-i18n-key="win_th_obs">สังเกตการณ์</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="win_r_temp">อุณหภูมิ</td>
-              <td data-i18n-key="win_v_temp_low">ต่ำกว่าค่ากลางเล็กน้อย</td>
-              <td data-i18n-key="win_v_temp_mid">ค่ากลางที่คงที่</td>
-              <td data-i18n-key="win_v_temp_high">สูงกว่าค่ากลางเล็กน้อย</td>
-              <td data-i18n-key="win_n_temp">อุณหภูมิสูงไปเพิ่มโอกาสไหม้ขอบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="win_r_cd">ความหนาแน่นกระแส</td>
-              <td data-i18n-key="win_v_cd_low">ให้เงาช้า</td>
-              <td data-i18n-key="win_v_cd_mid">เงาสม่ำเสมอ</td>
-              <td data-i18n-key="win_v_cd_high">เสี่ยงไหม้ขอบและริ้ว</td>
-              <td data-i18n-key="win_n_cd">เฝ้าดูโซนมุมและขอบชิ้นงาน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="win_r_time">เวลา</td>
-              <td data-i18n-key="win_v_time_low">ยังไม่เรียบ</td>
-              <td data-i18n-key="win_v_time_mid">เรียบและเงา</td>
-              <td data-i18n-key="win_v_time_high">ผิวเริ่มด้านหรือเกิดคราบ</td>
-              <td data-i18n-key="win_n_time">ตั้งเวลาเท่ากันทั้งชุดทดสอบ</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p data-i18n-key="window_p2">ควบคุมให้ผิวอลูมิเนียมเรียบเนียนและเงาสม่ำเสมอ ลดรอยจากการกลึง การเจียร หรือการกัดด้วยกรด โดยทำงานในสารละลายกรด ใช้ไฟฟ้ากระแสตรง และกำหนดอุณหภูมิกับเวลาให้เหมาะสม</p>
-    </section>
-
-    <section id="fixture" data-part="2" class="reveal section-block" aria-labelledby="fixture-h">
-      <h2 id="fixture-h" class="section" data-i18n-key="fixture_h">การจัดวาง</h2>
-      <p data-i18n-key="fixture_p1">เทคนิคการกวนและเขย่าชิ้นงานควบคู่ไปด้วย การกวนและเขย่าจะช่วยให้สารละลายสัมผัสกับผิวชิ้นงานได้อย่างทั่วถึง ลดการเกิดฟองอากาศ และป้องกันการสะสมของสารเคมีเฉพาะจุดซึ่งเป็นสาเหตุของความเงาที่ไม่สม่ำเสมอ นอกจากนี้การจัดวางชิ้นงานให้ด้านที่ต้องการความเงาเป็นพิเศษหันเข้าหาขั้วไฟฟ้าอย่างสม่ำเสมอจะช่วยลดจุดบอดและความเงาไม่เท่ากัน และควรควบคุมระยะห่างระหว่างชิ้นงานกับขั้วแคโทดให้อยู่ในระยะที่เหมาะสม ไม่ชิดเกินไปจนขอบไหม้หรือห่างเกินไปจนไม่เงา</p>
-      <p data-i18n-key="fixture_p2">หากชิ้นงานมีรูปทรงซับซ้อน ควรใช้แผ่นบังเพื่อลดกระแสเกินเฉพาะจุดและทำให้ความเงาสม่ำเสมอทั่วทั้งชิ้น การวางชิ้นงานในแนวตั้งยังช่วยให้ฟองก๊าซที่เกิดขึ้นลอยตัวออกได้ดีขึ้น และจุดที่ใช้คีบหรือยึดชิ้นงานต้องสะอาดและแน่นหนาเพื่อให้กระแสไฟฟ้าไหลผ่านได้อย่างมีประสิทธิภาพ และสิ่งสำคัญสุดท้ายคือควรทดสอบกับชิ้นงานที่มีรูปทรงคล้ายกันก่อนลงมือทำจริงเพื่อตรวจสอบว่ากระแสไฟมากไปหรือไฟน้อยไป</p>
-    </section>
-
-    <section id="care" data-part="2" class="reveal section-block" aria-labelledby="care-h">
-      <h2 id="care-h" class="section" data-i18n-key="care_h">การดูแลบ่อกัดเงาและคุณภาพ</h2>
-      <p data-i18n-key="care_p1">การกัดเงาอะลูมิเนียม เป็นกระบวนการที่ทำให้อะลูมิเนียมมีพื้นผิวที่เงาและเรียบลื่นคล้ายกระจก โดยใช้สารเคมีกัดกรดเพื่อขจัดชั้นผิวที่ไม่เรียบออกไป</p>
-      <p data-i18n-key="care_p2">การกัดเงาอะลูมิเนียมต้องอาศัยการควบคุมกระบวนการอย่างพิถีพิถัน เริ่มจากการติดตามปริมาณโลหะและส่วนประกอบในอ่าง แล้วเติมสารเคมีให้เหมาะสมกับปริมาณไฟฟ้าที่ใช้ ควบคุมคุณภาพน้ำล้างให้คงที่และไหลย้อนกลับเพื่อลดคราบสะสมในอ่าง ต้องกรองสิ่งสกปรกอย่างต่อเนื่องและทำความสะอาดถุงแอโนดตามรอบ การควบคุมปัจจัยเหล่านี้จะช่วยให้ได้ชิ้นงานที่เงางามและมีคุณภาพสม่ำเสมอ</p>
-    </section>
-
-    <section id="defects" data-part="2" class="reveal section-block" aria-labelledby="defects-h">
-      <h2 id="defects-h" class="section" data-i18n-key="def_h">ตารางปัญหาพบเจอบ่อย</h2>
-      <div class="table">
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n-key="def_th_sym">อาการ</th>
-              <th data-i18n-key="def_th_cause">สาเหตุหลัก</th>
-              <th data-i18n-key="def_th_fix">แนวทางแก้</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="def_r1_s">ไม่เงา ผิวด้าน</td>
-              <td data-i18n-key="def_r1_c">กระแสต่ำ การกวนไม่พอ ผิวไม่สะอาด</td>
-              <td data-i18n-key="def_r1_f">เพิ่มกระแสทีละน้อย เพิ่มการไหลเวียนและตรวจขั้นเตรียมผิว</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="def_r2_s">ไหม้ขอบ</td>
-              <td data-i18n-key="def_r2_c">กระแสสูงเฉพาะจุด ระยะขั้วแคบ การบังไม่พอ</td>
-              <td data-i18n-key="def_r2_f">เพิ่มระยะขั้ว ใช้หรือแผ่นบัง และปรับจิ๊กให้กระแสกระจาย</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="def_r3_s">ชิ้นงานเป็นรู</td>
-              <td data-i18n-key="def_r3_c">ฟองหรืออนุภาคปนเปื้อน น้ำล้างสกปรก สารลดแรงตึงผิวไม่พอ</td>
-              <td data-i18n-key="def_r3_f">ปรับการกวนและกรอง เติมสารช่วยเปียก ตรวจและรีเฟรชน้ำล้าง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="def_r4_s">ริ้วเงาไม่สม่ำเสมอ</td>
-              <td data-i18n-key="def_r4_c">อุณหภูมิไม่นิ่ง กระแสแปรปรวน การจัดวางไม่สมดุล</td>
-              <td data-i18n-key="def_r4_f">คุมอุณหภูมิให้คงที่ ปรับแหล่งจ่ายไฟ และทบทวนการจัดวาง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="def_r5_s">คราบหลังล้างและเก็บ</td>
-              <td data-i18n-key="def_r5_c">น้ำกระด้าง คราบสารค้างผิว ไม่มีการปกป้องหลังงาน</td>
-              <td data-i18n-key="def_r5_f">ใช้ระบบน้ำคุณภาพดี เพิ่มขั้นล้างและอบแห้งเร็ว ใช้น้ำยาปกป้องผิวที่เหมาะสม</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้องกับบทความนี้</h2>
-      <p><a class="more" href="https://www.baumechemical.com/products/polishing/" data-i18n-key="link_polish">หมวดน้ำยากัดเงาและขัดเงาโลหะ</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/pretreatment/" data-i18n-key="link_pretreat">หมวด Pretreatment สำหรับการเตรียมผิว</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" data-i18n-key="link_salt">คู่มือ Salt Spray และการอ่านผล</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/passivation/" data-i18n-key="link_pass">โครเมตบนซิงค์และงานปกป้องผิว</a></p>
-      <p><a class="more" href="https://www.baumechemical.com/products/equipment/" data-i18n-key="link_equip">อุปกรณ์งานชุบและระบบกรอง</a></p>
-    </section>
   </main>
 
-  <!-- ===== Footer (content unchanged) ===== -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -641,113 +548,106 @@
       </div>
 
       <div class="footer-bottom">
-        <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
+        <div data-i18n-key="footer_copy">© 2026 Baume Chemical Co., Ltd. All rights reserved.</div>
       </div>
     </div>
   </footer>
 
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
   <!-- ===== JS ===== -->
-  <!-- Reveal on scroll -->
   <script>
+    // Reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
+    }, {threshold:.1});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- i18n (keep texts unchanged, only wiring the switch) -->
   <script>
+    // Translations Data
     const I18N = {
       th: {
-        back_home:"← กลับเมนูหลัก",
-        hero_title: "คู่มือ Electropolishing อลูมิเนียม",
-        hero_tagline: "การเตรียมผิว หน้าต่างกระแส/อุณหภูมิ การจัดวางชิ้นงาน สูตรและการดูแลอ่าง และวิธีคุมให้เงาเรียบเสมอ",
-        /* Part switcher */
-        part1:"พาร์ต 1: ตั้งต้น & กระบวนการ",
-        part2:"พาร์ต 2: ฟิกซ์เจอร์/คุณภาพ/ปัญหา",
-        /* TOC */
-        toc_title:"สารบัญ", toc_rec:"ค่าเริ่มต้นที่แนะนำ", toc_prep:"การเตรียมผิวก่อนกัดเงา", toc_window:"หน้าต่างกระบวนการ", toc_fixture:"การจัดวาง", toc_care:"การดูแลบ่อกัดเงาและคุณภาพ", toc_defects:"ตารางปัญหาพบเจอบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
-        /* Sections */
-        rec_h:"ค่าเริ่มต้นที่แนะนำ",
-        rec_p1:"กัดเงาอลูมิเนียมคือการทำความสะอาดผิวอลูมิเนียมด้วยสารเคมี เพื่อกำจัดคราบสกปรก คราบไขมัน และคราบสนิม ทำให้ผิวอลูมิเนียมสะอาดและพร้อมสำหรับขั้นตอนต่อไป เช่น การทำสี หรือการทำอโนไดซ์ การกัดเงาอลูมิเนียม การกัดเงาอลูมิเนียม (Aluminum Etching) คือกระบวนการที่ใช้สารเคมีหรือไฟฟ้าเพื่อขจัดชั้นออกไซด์ตามธรรมชาติและสิ่งสกปรกบนผิวอลูมิเนียม ทำให้พื้นผิวเรียบเนียนและเงางามขึ้น มักใช้เป็นขั้นตอนเตรียมผิวสำหรับกระบวนการชุบเคลือบผิวอื่นๆ เช่น การชุบอโนไดซ์ (Anodizing) ซึ่งจะทำให้สีติดแน่นทนทาน",
-        rec_th_param:"พารามิเตอร์", rec_th_range:"ช่วงตั้งต้น", rec_th_note:"หมายเหตุ",
-        rec_t_temp:"อุณหภูมิบ่อกัดเงา", rec_v_temp:"60-80 °C", rec_n_temp:"คงที่เพื่อลดริ้วเงาไม่สม่ำเสมอ",
-        rec_t_cd:"ความหนาแน่นกระแส", rec_v_cd:"10–30 A/dm²", rec_n_cd:"เริ่มค่ากลางแล้วไล่ขึ้นหรือลงตามความเงา",
-        rec_t_time:"เวลา", rec_v_time:"1–5 นาที", rec_n_time:"พอให้ผิวเรียบและเงาโดยไม่ไหม้ขอบ",
-        rec_t_flow:"การกวนและการกรอง", rec_v_flow:"ไหลเวียนต่อเนื่อง กรองละเอียด", rec_n_flow:"ช่วยลดชิ้นงานเป็นรูและคราบหมอก",
-        rec_t_ratio:"อัตราส่วนแคโทดต่อแอโนด", rec_v_ratio:"1:1 ถึง 2:1", rec_n_ratio:"ให้กระแสกระจายสม่ำเสมอ",
-        prep_h:"การเตรียมผิวก่อนกัดเงา",
-        prep_p1:"ความสะอาดของผิวและการขจัดชั้นออกไซด์ส่งผลต่อความเงาและความสม่ำเสมอโดยตรง เริ่มจากล้างคราบน้ำมันและไขมันด้วยน้ำยาด่างหรือทำความสะอาดด้วยคลื่นเสียงความถี่สูง แล้วล้างออกด้วยน้ำสะอาดต่อด้วยการลอกชั้นออกไซด์แบบอ่อนเพื่อกำจัดคราบและผิวด้าน จากนั้นล้างน้ำออกจากผิวให้หมด",
-        prep_p2:"กำจัดคราบดำหลังการกัดบนผิวอลูมิเนียมโดยใช้น้ำยาที่ไม่ใช้กรดดินประสิว เลือกชนิดน้ำยาให้เหมาะกับชนิดอลูมิเนียมและลักษณะงาน เช่น หากชิ้นงานมีรอยตัดหรือมีคราบสี ควรเพิ่มระยะเวลาในขั้นตอนเตรียมผิวให้พอเหมาะ และลดช่วงรอระหว่างแต่ละขั้นตอนให้สั้นที่สุดเพื่อป้องกันคราบตกค้างบนผิวงาน",
-        prep_p3:"ตรวจสภาพผิวด้วยแสงส่องเฉียงมุมต่ำก่อนนำชิ้นงานลงบ่อกัดเงา ให้แน่ใจว่าผิวสะอาด ปราศจากคราบน้ำมัน และไม่มีคราบน้ำเกาะผิว",
-        window_h:"หน้าต่างกระบวนการ",
-        window_p1:"หน้าต่างกระบวนการคือช่วงอุณหภูมิ กระแส และเวลา ที่ให้เงาเรียบสม่ำเสมอโดยไม่เกิดไหม้ขอบหรือผิวด้าน เริ่มจากค่ากลาง แล้วขยับทีละตัวและบันทึกผล",
-        win_th_cond:"เงื่อนไข", win_th_low:"ต่ำ", win_th_mid:"กลาง", win_th_high:"สูง", win_th_obs:"สังเกตการณ์",
-        win_r_temp:"อุณหภูมิ", win_v_temp_low:"ต่ำกว่าค่ากลางเล็กน้อย", win_v_temp_mid:"ค่ากลางที่คงที่", win_v_temp_high:"สูงกว่าค่ากลางเล็กน้อย", win_n_temp:"อุณหภูมิสูงไปเพิ่มโอกาสไหม้ขอบ",
-        win_r_cd:"ความหนาแน่นกระแส", win_v_cd_low:"ให้เงาช้า", win_v_cd_mid:"เงาสม่ำเสมอ", win_v_cd_high:"เสี่ยงไหม้ขอบและริ้ว", win_n_cd:"เฝ้าดูโซนมุมและขอบชิ้นงาน",
-        win_r_time:"เวลา", win_v_time_low:"ยังไม่เรียบ", win_v_time_mid:"เรียบและเงา", win_v_time_high:"ผิวเริ่มด้านหรือเกิดคราบ", win_n_time:"ตั้งเวลาเท่ากันทั้งชุดทดสอบ",
-        fixture_h:"การจัดวาง",
-        fixture_p1:"เทคนิคการกวนและเขย่าชิ้นงานควบคู่ไปด้วย การกวนและเขย่าจะช่วยให้สารละลายสัมผัสกับผิวชิ้นงานได้อย่างทั่วถึง ลดการเกิดฟองอากาศ และป้องกันการสะสมของสารเคมีเฉพาะจุดซึ่งเป็นสาเหตุของความเงาที่ไม่สม่ำเสมอ นอกจากนี้การจัดวางชิ้นงานให้ด้านที่ต้องการความเงาเป็นพิเศษหันเข้าหาขั้วไฟฟ้าอย่างสม่ำเสมอจะช่วยลดจุดบอดและความเงาไม่เท่ากัน และควรควบคุมระยะห่างระหว่างชิ้นงานกับขั้วแคโทดให้อยู่ในระยะที่เหมาะสม ไม่ชิดเกินไปจนขอบไหม้หรือห่างเกินไปจนไม่เงา",
-        fixture_p2:"หากชิ้นงานมีรูปทรงซับซ้อน ควรใช้แผ่นบังเพื่อลดกระแสเกินเฉพาะจุดและทำให้ความเงาสม่ำเสมอทั่วทั้งชิ้น การวางชิ้นงานในแนวตั้งยังช่วยให้ฟองก๊าซที่เกิดขึ้นลอยตัวออกได้ดีขึ้น และจุดที่ใช้คีบหรือยึดชิ้นงานต้องสะอาดและแน่นหนาเพื่อให้กระแสไฟฟ้าไหลผ่านได้อย่างมีประสิทธิภาพ และสิ่งสำคัญสุดท้ายคือควรทดสอบกับชิ้นงานที่มีรูปทรงคล้ายกันก่อนลงมือทำจริงเพื่อตรวจสอบว่ากระแสไฟมากไปหรือไฟน้อยไป",
-        care_h:"การดูแลบ่อกัดเงาและคุณภาพ",
-        care_p1:"ติดตามปริมาณโลหะที่ละลายและส่วนประกอบหลักของบ่อกัดเงา เติมสารตามปริมาณไฟฟ้าสะสม คุมคุณภาพน้ำให้คงที่ ตรวจคุณภาพน้ำล้างและจัดล้างแบบไหลทวนหลายช่วงเพื่อลดการพาคราบย้อนกลับเข้าบ่อ กรองอย่างต่อเนื่องด้วยไส้กรองละเอียดและทำความสะอาดถุงขั้วบวกตามรอบที่กำหนด",
-        care_p2:"บันทึกอุณหภูมิ ค่ากรดด่าง กระแส และเวลาในทุกกะ ตรวจชิ้นงานตามตัวชี้วัดสำคัญอย่างความเงา ความสม่ำเสมอ การยึดเกาะ และความทนต่อการกัดกร่อน วางแผนบำรุงรักษารายสัปดาห์และรายเดือน เช่น เปลี่ยนไส้กรอง ตรวจจุดสัมผัส ปรับเทียบเครื่องมือ และทบทวนแนวโน้มจากกราฟควบคุม",
-        def_h:"ตารางปัญหาพบเจอบ่อย",
-        def_th_sym:"อาการ", def_th_cause:"สาเหตุหลัก", def_th_fix:"แนวทางแก้",
-        def_r1_s:"ไม่เงา ผิวด้าน", def_r1_c:"กระแสต่ำ การกวนไม่พอ ผิวไม่สะอาด", def_r1_f:"เพิ่มกระแสทีละน้อย เพิ่มการไหลเวียนและตรวจขั้นเตรียมผิว",
-        def_r2_s:"ไหม้ขอบ", def_r2_c:"กระแสสูงเฉพาะจุด ระยะขั้วแคบ การบังไม่พอ", def_r2_f:"เพิ่มระยะขั้ว ใช้แผ่นบัง และปรับจิ๊กให้กระแสกระจาย",
-        def_r3_s:"ชิ้นงานเป็นรู", def_r3_c:"ฟองหรืออนุภาคปนเปื้อน น้ำล้างสกปรก สารลดแรงตึงผิวไม่พอ", def_r3_f:"ปรับการกวนและกรอง เติมสารช่วยเปียก ตรวจและรีเฟรชน้ำล้าง",
-        def_r4_s:"ริ้วเงาไม่สม่ำเสมอ", def_r4_c:"อุณหภูมิไม่นิ่ง กระแสแปรปรวน การจัดวางไม่สมดุล", def_r4_f:"คุมอุณหภูมิให้คงที่ ปรับแหล่งจ่ายไฟ และทบทวนการจัดวาง",
-        def_r5_s:"คราบหลังล้างและเก็บ", def_r5_c:"น้ำกระด้าง คราบสารค้างผิว ไม่มีการปกป้องหลังงาน", def_r5_f:"ใช้ระบบน้ำคุณภาพดี เพิ่มขั้นล้างและอบแห้งเร็ว ใช้น้ำยาปกป้องผิวที่เหมาะสม",
-        links_h:"ลิงก์ที่เกี่ยวข้องกับบทความนี้",
-        link_polish:"หมวดน้ำยากัดเงาและขัดเงาโลหะ", link_pretreat:"หมวด Pretreatment สำหรับการเตรียมผิว", link_salt:"คู่มือ Salt Spray และการอ่านผล", link_pass:"โครเมตบนซิงค์และงานปกป้องผิว", link_equip:"อุปกรณ์งานชุบและระบบกรอง",
-        footer_products: "หมวดผลิตภัณฑ์", footer_contact: "ติดต่อเรา", footer_copy: "© 2025 Baume Chemical. All rights reserved."
+        back_home:"← กลับหน้าบทความ",
+        hero_title: "คู่มือ Electropolishing อลูมิเนียมฉบับสมบูรณ์",
+        hero_tagline: "เจาะลึกกระบวนการกัดเงาด้วยไฟฟ้า การคุมตัวแปร การเลือกจิ๊ก และการแก้ปัญหาเพื่อผิวงานระดับพรีเมียม",
+        part1:"ส่วนที่ 1: พื้นฐาน & กระบวนการ",
+        part2:"ส่วนที่ 2: อุปกรณ์ & การแก้ปัญหา",
+        toc_title:"สารบัญ", toc_rec:"หลักการ & ค่าเริ่มต้น", toc_prep:"การเตรียมผิวก่อนกัดเงา", toc_window:"หน้าต่างกระบวนการ (Process Window)", toc_fixture:"เทคนิคการจัดวางและจิ๊ก", toc_care:"การดูแลบ่อและควบคุมคุณภาพ", toc_defects:"การแก้ไขปัญหาที่พบบ่อย", toc_links:"ลิงก์ที่เกี่ยวข้อง",
+        rec_h:"หลักการทำงาน & ค่าเริ่มต้นที่แนะนำ",
+        rec_p1:"การขัดเงาด้วยไฟฟ้า (Electropolishing) บนอลูมิเนียม คือกระบวนการที่กลับด้านกับการชุบ โดยชิ้นงานทำหน้าที่เป็น แอโนด (ขั้วบวก) เมื่อจ่ายกระแสไฟตรง (DC) ลงในบ่อเคมีเฉพาะทาง เนื้อโลหะจะถูกละลายออกไปอย่างควบคุมได้ กระแสไฟจะวิ่งไปที่ \"ยอดแหลม\" ของความขรุขระบนพื้นผิว (Micro-peaks) มากกว่าบริเวณร่องลึก (Micro-valleys) ทำให้ผิวถูกปาดให้เรียบเนียนระดับไมครอน ส่งผลให้พื้นผิวเงางาม สะท้อนแสงได้ดีเยี่ยม และเพิ่มความต้านทานการกัดกร่อน เป็นการเตรียมผิวที่สมบูรณ์แบบก่อนนำไปชุบอโนไดซ์",
+        rec_th_param:"พารามิเตอร์", rec_th_range:"ค่ามาตรฐานตั้งต้น", rec_th_note:"หมายเหตุทางเทคนิค",
+        rec_t_temp:"อุณหภูมิบ่อ (Temperature)", rec_v_temp:"60-80 °C (คุมให้แกว่งน้อยที่สุด)", rec_n_temp:"ความหนืดของน้ำยาจะเปลี่ยนตามอุณหภูมิ หากอุณหภูมิแกว่งจะทำให้เงาไม่สม่ำเสมอ",
+        rec_t_cd:"ความหนาแน่นกระแส (Current Density)", rec_v_cd:"10–30 A/dm²", rec_n_cd:"ต้องดันกระแสให้ถึงจุด \"Polishing Plateau\" หากต่ำไปจะเป็นการกัดกรดธรรมดา (Etching)",
+        rec_t_time:"เวลา (Dwell Time)", rec_v_time:"2–5 นาที", rec_n_time:"ขึ้นอยู่กับความหยาบเริ่มต้นและเกรดอลูมิเนียม นานไปอาจทำให้เกิดผิวส้ม (Orange Peel)",
+        rec_t_flow:"การกวน (Agitation)", rec_v_flow:"Air Agitation / Mechanical", rec_n_flow:"กวนเพื่อระบายความร้อนที่ผิวงาน และไล่ฟองก๊าซออกซิเจนที่เกาะผิวชิ้นงาน",
+        rec_t_ratio:"สัดส่วน Cathode : Anode", rec_v_ratio:"1:1 ถึง 2:1", rec_n_ratio:"แผ่นแคโทดมักใช้ตะกั่ว (Lead) หรือสแตนเลส (316L) ขึ้นอยู่กับสูตรน้ำยา",
+        prep_h:"การเตรียมผิวก่อนกัดเงา (Pretreatment)",
+        prep_p1:"หัวใจสำคัญของการกัดเงาคือผิวที่ปราศจากสิ่งปนเปื้อน หากมีคราบน้ำมันหลงเหลือ กระแสไฟจะไม่สามารถทำปฏิกิริยากับผิวเนื้อโลหะได้ตรงจุดนั้น ทำให้เกิดรอยด่าง เริ่มต้นด้วยการล้างไขมัน (Degreasing) แนะนำให้ใช้ระบบคลื่นอัลตร้าโซนิค (Ultrasonic) ร่วมกับน้ำยาล้างไขมันแบบด่างอ่อนๆ จากนั้นต้องล้างน้ำ (Rinse) ด้วยระบบน้ำล้นอย่างน้อย 2 บ่อ",
+        prep_p2:"ในอลูมิเนียมซีรีส์ที่มีส่วนผสมของซิลิกอน (เช่น ซีรีส์ 4xxx หรืออลูมิเนียมหล่อ) หรือทองแดง (ซีรีส์ 2xxx) จำเป็นต้องมีขั้นตอนการลอกคราบดำ (Desmutting) ที่เหมาะสม แนะนำให้ใช้น้ำยา Desmut ที่ไม่มีส่วนผสมของกรดไนตริก (Non-nitric) เพื่อลดไอระเหยพิษ คุมเวลาแช่ให้พอดีกับการสลายคราบสมัท",
+        prep_p3:"ทริค: ใช้น้ำ DI (Deionized Water) ในบ่อล้างสุดท้ายก่อนลงอ่างกัดเงา จะช่วยลดการนำพาสารแขวนลอย (Drag-in) และคลอไรด์เข้าสู่อ่าง ซึ่งเป็นตัวการทำให้อายุการใช้งานของน้ำยากัดเงาสั้นลงและทำให้ผิวเกิดรูพรุน (Pitting)",
+        window_h:"หน้าต่างกระบวนการ (Process Window)",
+        window_p1:"การหาพารามิเตอร์ที่เหมาะสม ต้องดูสมดุลระหว่าง \"อุณหภูมิ\" และ \"กระแส\" กราฟความสัมพันธ์ระหว่างแรงดัน (Voltage) และกระแส (Current) ในงานขัดเงาด้วยไฟฟ้าจะมีช่วงที่เรียกว่า Polishing Plateau ซึ่งเป็นช่วงที่กระแสคงที่แม้แรงดันจะเพิ่มขึ้น ช่วงนี้คือจุดที่ฟิล์มความหนืด (Viscous layer) หุ้มชิ้นงานได้พอดีที่สุด",
+        win_th_cond:"ตัวแปร", win_th_low:"ผลเมื่อค่าน้อยเกินไป", win_th_mid:"จุดเหมาะสม (Sweet Spot)", win_th_high:"ผลเมื่อค่ามากเกินไป",
+        win_r_temp:"อุณหภูมิ", win_v_temp_low:"น้ำยาหนืดไป ฟิล์มหนา กระแสเดินยาก ผิวเงาช้าหรือไม่เงาเลย", win_v_temp_mid:"ฟิล์มคุมความเรียบเสถียร เงาสม่ำเสมอทั่วชิ้นงาน", win_v_temp_high:"ฟิล์มละลายเร็วไป กัดแรง เสี่ยงเกิดขอบไหม้รุนแรง (Etching/Burning)",
+        win_r_cd:"กระแสไฟ", win_v_cd_low:"ไม่ถึงจุด Plateau กลายเป็นการกัดกรดธรรมดา ผิวจะขุ่นและสาก", win_v_cd_mid:"ฟิล์มออกซิไดซ์บางๆ ควบคุมการละลายยอดแหลมได้ดีที่สุด", win_v_cd_high:"เกิดก๊าซออกซิเจนพ่นแรงเกินไป ฟองก๊าซทิ้งรอยทางน้ำไหล (Gas Streaking) ขอบชิ้นงานละลาย",
+        fixture_h:"เทคนิคการจัดวางและจิ๊ก (Fixturing & Racking)",
+        fixture_p1:"กระแสไฟในอ่าง Electropolishing ต้องการการนำไฟฟ้าที่สมบูรณ์แบบ แนะนำให้ใช้จิ๊ก (Rack) ที่ทำจาก ไทเทเนียม (Titanium) แทนอลูมิเนียมทั่วไป เพราะไทเทเนียมจะไม่ถูกกัดละลายในอ่าง ช่วยให้อายุการใช้งานยาวนานและกระแสไฟสม่ำเสมอ หากจำเป็นต้องใช้อลูมิเนียม ต้องมั่นใจว่าจุดสัมผัส (Contact points) กดแน่นมากพอเพื่อป้องกันการอาร์ค (Arcing) ที่จะทำลายผิวงานบริเวณนั้น",
+        fixture_p2:"การจัดวางชิ้นงานมีผลอย่างมากต่อก๊าซที่เกิดขึ้น (ออกซิเจน) ชิ้นงานควรแขวนทำมุมเล็กน้อย เพื่อป้องกันไม่ให้ฟองก๊าซติดค้างอยู่ใต้พื้นที่ราบ (Blind spots) ซึ่งฟองก๊าซเหล่านี้จะบล็อกกระแสไฟ ทำให้เกิดหลุมหรือรอยด่าง นอกจากนี้ หากชิ้นงานมีมุมแหลมหรือขอบบาง ควรพิจารณาใช้ \"แผ่นขโมยกระแส\" (Thieves/Robbers) หรือฉากกั้น (Shields) เพื่อป้องกันกระแสไปรวมตัวที่ขอบมากเกินจนเกิดอาการขอบไหม้",
+        care_h:"การดูแลบ่อและควบคุมคุณภาพ (Bath Care & Maintenance)",
+        care_p1:"น้ำยาขัดเงาส่วนใหญ่ประกอบด้วยกรดฟอสฟอริก (Phosphoric Acid) และกรดซัลฟิวริก (Sulfuric Acid) สิ่งสำคัญที่ต้องติดตามคือ ค่าความถ่วงจำเพาะ (Specific Gravity หรือ Baume) หากน้ำยามีความถ่วงจำเพาะเปลี่ยนไปจากสเปค จะมีผลโดยตรงต่อความหนืดและการเกิดฟิล์ม นอกจากนี้ ปริมาณอลูมิเนียมที่ละลายสะสมอยู่ในอ่าง (Dissolved Aluminum) จะค่อยๆ เพิ่มขึ้น โดยทั่วไปหากค่าสะสมเกินขีดจำกัด (เช่น เกิน 25-35 กรัม/ลิตร ขึ้นอยู่กับสูตร) อ่างจะสูญเสียความสามารถในการขัดเงา ต้องทำการถ่ายทิ้งบางส่วนและเติมน้ำยาใหม่ (Decant & Replenish)",
+        care_p2:"ความชื้นและน้ำ เป็นศัตรูตัวร้ายของอ่างขัดเงาอลูมิเนียม (ยกเว้นสูตรที่ออกแบบให้มีน้ำ) ปริมาณน้ำล้างที่ติดมากับชิ้นงาน (Drag-in) ต้องให้น้อยที่สุด การติดตั้งระบบกรอง (Filtration) ต่อเนื่องเพื่อดักจับสิ่งสกปรกและกากโลหะ เป็นสิ่งจำเป็นที่จะช่วยลดปัญหาเม็ดทรายบนผิวงานได้ดีเยี่ยม",
+        def_h:"การแก้ไขปัญหาที่พบบ่อย (Troubleshooting)",
+        def_th_sym:"ลักษณะข้อบกพร่อง", def_th_cause:"สาเหตุทางเทคนิค", def_th_fix:"แนวทางแก้ไข",
+        def_r1_s:"ผิวด้าน ไม่ขึ้นเงา (Dull/Milky Finish)", def_r1_c:"อุณหภูมิต่ำไป, กระแสไฟต่ำกว่า Polishing plateau, ปริมาณอลูมิเนียมสะสมในบ่อสูงเกินไป", def_r1_f:"เช็คฮีตเตอร์ เพิ่มกระแสไฟให้ถึงจุดทำงาน เช็คค่าอลูมิเนียมในบ่อ (Titration) และอาจต้องถ่ายน้ำยาบางส่วน",
+        def_r2_s:"ขอบไหม้ ขรุขระ (Edge Burn/Pitting)", def_r2_c:"กระแสไฟกองที่ขอบมากเกินไป, อุณหภูมิสูงจัด, มีคลอไรด์ปนเปื้อนในบ่อ", def_r2_f:"ลดโวลต์/กระแสรวม เพิ่มระยะห่างระหว่างชิ้นงานกับแคโทด ใช้น้ำ DI ในขั้นตอนล้างเพื่อป้องกันคลอไรด์",
+        def_r3_s:"รอยขีดข่วนจากก๊าซ (Gas Streaking)", def_r3_c:"ฟองออกซิเจนวิ่งขึ้นตามแนวตั้งและกัดเซาะผิวเป็นเส้นทาง, การกวนน้ำยาไม่แรงพอ", def_r3_f:"ปรับมุมแขวนชิ้นงาน เพิ่มระบบเป่าลม (Air Agitation) หรือเขย่าบาร์ (Cathode Rocker) ให้ฟองหลุดเร็วขึ้น",
+        def_r5_s:"คราบรอยน้ำมันซึม (White/Stained patches)", def_r5_c:"ขั้นตอน Pretreatment ไม่สะอาด ล้างไขมันไม่หมด หรือพักงานรอนานเกินไปจนเกิดออกไซด์ใหม่", def_r5_f:"ปรับปรุงบ่อล้างด่าง/อัลตร้าโซนิค เพิ่มความแรงการล้าง และลงบ่อขัดเงาทันทีหลังล้างน้ำ",
+        links_h:"ลิงก์ที่เกี่ยวข้อง",
+        link_polish:"หมวดน้ำยาเคมีกัดเงาและขัดเงาโลหะ (Chemical & Electro Polishing)", link_pretreat:"หมวด Pretreatment: น้ำยาล้างไขมันและลอกผิวชั้นแรก", link_salt:"บทความ: คู่มือ Salt Spray Test และการอ่านผลทดสอบสนิม", link_pass:"การทำ Passivation เพื่อปกป้องผิวโลหะขั้นสูงสุด", link_equip:"หมวดเครื่องมือและอุปกรณ์ (Rectifiers, Filters & Titanium Heaters)",
+        footer_products: "หมวดผลิตภัณฑ์", footer_contact: "ติดต่อเรา", footer_copy: "© 2026 Baume Chemical Co., Ltd. All rights reserved."
       },
       en: {
-        back_home:"← Back to Home",
-        hero_title: "Aluminum Electropolishing Guide",
-        hero_tagline: "Surface preparation, current/temperature window, fixturing, bath recipe & care, and techniques for uniform gloss.",
-        part1:"Part 1: Basics & Process",
-        part2:"Part 2: Fixturing/QA/Troubleshooting",
-        toc_title:"Contents", toc_rec:"Recommended starting values", toc_prep:"Surface preparation", toc_window:"Process window", toc_fixture:"Fixturing", toc_care:"Bath care & Quality", toc_defects:"Common defects table", toc_links:"Related links",
-        rec_h:"Recommended starting values",
-        rec_p1:"Polishing aluminum is the process of cleaning the aluminum surface with chemicals to remove dirt, grease, and rust stains. This leaves the aluminum surface clean and ready for the next steps, such as coloring or anodizing. Aluminum etching, or chemical milling, is a process that uses chemicals or electricity to remove the natural oxide layer and other contaminants from the surface of the aluminum. This makes the surface smooth and shiny. It is often used as a preparatory step for other coating processes like anodizing, which ensures a durable and long-lasting finish.",
-        rec_th_param:"Parameter", rec_th_range:"Baseline range", rec_th_note:"Notes",
-        rec_t_temp:"Bath temperature", rec_v_temp:"60-80 °C", rec_n_temp:"Keep steady to avoid streaky gloss",
-        rec_t_cd:"Current density", rec_v_cd:"10–30 A/dm²", rec_n_cd:"Increase/decrease gradually for target gloss",
-        rec_t_time:"Time", rec_v_time:"1–5 นาที", rec_n_time:"Smooth & bright without edge burn",
-        rec_t_flow:"Agitation & filtration", rec_v_flow:"Continuous flow, fine filtration", rec_n_flow:"Reduces pitting and haze",
-        rec_t_ratio:"Cathode/Anode ratio", rec_v_ratio:"1:1 to 2:1", rec_n_ratio:"For even current distribution",
-        prep_h:"Surface preparation",
-        prep_p1:"Degrease (alkaline/ultrasonic), rinse with good water, light de-oxidize, then multi-stage rinse.",
-        prep_p2:"De-smut with non-nitric options where possible. Tune dwell times for alloy & condition. Minimize delays between steps.",
-        prep_p3:"Inspect under low-angle light; surface must be clean and water-break free.",
-        window_h:"Process window",
-        window_p1:"Define the temperature, current, and time ranges that yield uniform gloss without edge burn.",
-        win_th_cond:"Condition", win_th_low:"Low", win_th_mid:"Mid", win_th_high:"High", win_th_obs:"Observation",
-        win_r_temp:"Temperature", win_v_temp_low:"Slightly below mid", win_v_temp_mid:"Stable mid", win_v_temp_high:"Slightly above mid", win_n_temp:"Higher temp increases edge-burn risk",
-        win_r_cd:"Current density", win_v_cd_low:"Slow brightening", win_v_cd_mid:"Uniform gloss", win_v_cd_high:"Edge burn/streak risk", win_n_cd:"Watch corners/edges",
-        win_r_time:"Time", win_v_time_low:"Not smooth yet", win_v_time_mid:"Smooth & bright", win_v_time_high:"Haze/over-etched", win_n_time:"Use the same time across trials",
-        fixture_h:"Fixturing",
-        fixture_p1:"The technique involves stirring and shaking the workpiece. This helps the solution make full contact with the surface, reduces air bubbles, and prevents chemical buildup in specific areas that can cause uneven shine. Additionally, positioning the part with its key surfaces facing the electrodes consistently helps reduce blind spots and uneven luster. You should also control the distance between the part and the cathode to an appropriate range, ensuring it's not too close to burn the edges or too far to prevent proper polishing.",
-        fixture_p2:"For parts with complex shapes, use a shield to reduce excessive current in specific spots and ensure a uniform shine across the entire piece. Placing the workpiece vertically also helps any gas bubbles that form to rise and escape better. The clamping points used to hold or secure the part must be clean and secure for efficient electrical current flow. Finally, it's crucial to test the process on a similarly shaped part before working on the actual piece to check for areas with too much or too little current.",
-        care_h:"Bath care & Quality",
-        care_p1:"Track the amount of dissolved metal and the main components of the etching bath. Replenish chemicals based on cumulative ampere-hours, and maintain consistent water quality. Check the quality of the rinse water and use a multi-stage counter-current rinsing system to prevent contaminants from re-entering the bath. Continuously filter the solution with fine filter cartridges and clean the anode bags on a regular schedule.",
-        care_p2:"Record temperature, pH, current, and time for every shift. Inspect the workpieces against key indicators such as luster, uniformity, adhesion, and corrosion resistance. Plan weekly and monthly maintenance, including replacing filter cartridges, checking contact points, calibrating instruments, and reviewing trends from control charts.",
-        def_h:"Common defects table",
-        def_th_sym:"Symptom", def_th_cause:"Likely causes", def_th_fix:"Fix",
-        def_r1_s:"Dull finish", def_r1_c:"Low current, poor agitation, dirty surface", def_r1_f:"Step up current, improve flow, re-prep surface",
-        def_r2_s:"Edge burn", def_r2_c:"Local high current, small spacing, poor masking", def_r2_f:"Increase spacing, add thieves/masks, tune rack",
-        def_r3_s:"Pitting", def_r3_c:"Gas/particulates, dirty rinse, low wetting", def_r3_f:"Improve agitation/filtration, add wetter, refresh rinses",
-        def_r4_s:"Streaky gloss", def_r4_c:"Unstable temp, pulsing current, poor fixturing", def_r4_f:"Stabilize temp/supply, re-balance fixturing",
-        def_r5_s:"Post-rinse stains", def_r5_c:"Hard water, residues, no final protection", def_r5_f:"DI water, faster dry, suitable after-treat",
-        links_h:"Related links",
-        link_polish:"Polishing & Electropolishing", link_pretreat:"Pretreatment", link_salt:"Salt Spray quick guide", link_pass:"Zinc passivation & protective", link_equip:"Equipment & filtration",
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        back_home:"← Back to Articles",
+        hero_title: "The Ultimate Guide to Aluminum Electropolishing",
+        hero_tagline: "In-depth insights into the electropolishing process, parameters control, fixturing, and troubleshooting for premium finishes.",
+        part1:"Part 1: Basics & Process Window",
+        part2:"Part 2: Fixturing & Troubleshooting",
+        toc_title:"Contents", toc_rec:"Principles & Baselines", toc_prep:"Surface Preparation", toc_window:"Process Window", toc_fixture:"Racking & Fixturing", toc_care:"Bath Maintenance", toc_defects:"Troubleshooting Guide", toc_links:"Related Links",
+        rec_h:"Principles & Recommended Baselines",
+        rec_p1:"Aluminum electropolishing is essentially the reverse of electroplating. The workpiece acts as the anode. When direct current (DC) is applied in a specialized chemical bath, the metal dissolves in a highly controlled manner. The current concentrates on the surface's micro-peaks rather than micro-valleys, leveling the surface at a microscopic scale. This results in a highly reflective, mirror-like finish and increased corrosion resistance, serving as a perfect pretreatment before anodizing.",
+        rec_th_param:"Parameter", rec_th_range:"Baseline Target", rec_th_note:"Technical Notes",
+        rec_t_temp:"Bath Temperature", rec_v_temp:"60-80 °C (Minimize fluctuations)", rec_n_temp:"Viscosity changes with temperature. Fluctuations lead to uneven gloss.",
+        rec_t_cd:"Current Density", rec_v_cd:"10–30 A/dm²", rec_n_cd:"Must reach the 'Polishing Plateau'. If too low, it merely etches the part.",
+        rec_t_time:"Dwell Time", rec_v_time:"2–5 minutes", rec_n_time:"Depends on initial roughness. Over-polishing can cause 'Orange Peel'.",
+        rec_t_flow:"Agitation", rec_v_flow:"Air / Mechanical", rec_n_flow:"Crucial for heat dissipation and dislodging oxygen bubbles from the surface.",
+        rec_t_ratio:"Cathode to Anode Ratio", rec_v_ratio:"1:1 up to 2:1", rec_n_ratio:"Cathodes are typically Lead or 316L Stainless Steel, depending on chemistry.",
+        prep_h:"Surface Preparation (Pretreatment)",
+        prep_p1:"The key to flawless electropolishing is an immaculately clean surface. Any residual oils will block the electrical current, preventing dissolution and causing dull spots. Start with thorough degreasing—ultrasonic cleaning with a mild alkaline cleaner is highly recommended. Follow this with a rigorous counter-flowing double rinse.",
+        prep_p2:"For alloys containing Silicon (4xxx series, cast aluminum) or Copper (2xxx series), a proper desmutting step is mandatory. We recommend non-nitric desmutting agents to eliminate toxic fumes. Time the immersion carefully to just remove the smut.",
+        prep_p3:"Pro-tip: Using DI (Deionized) water in the final rinse before the electropolishing bath minimizes drag-in of impurities and chlorides, which drastically shorten bath life and cause pitting.",
+        window_h:"The Process Window",
+        window_p1:"Finding the right parameters involves balancing temperature and current. The Voltage vs. Current curve in electropolishing features a 'Polishing Plateau'—a region where current remains constant even as voltage increases. This plateau represents the ideal formation of a viscous anodic film across the workpiece.",
+        win_th_cond:"Variable", win_th_low:"If too low...", win_th_mid:"Sweet Spot", win_th_high:"If too high...",
+        win_r_temp:"Temperature", win_v_temp_low:"Solution too viscous, heavy film, poor current flow, dull finish.", win_v_temp_mid:"Stable viscous film, uniform leveling and brilliant gloss.", win_v_temp_high:"Film dissolves too fast, aggressive etching, severe edge burn.",
+        win_r_cd:"Current", win_v_cd_low:"Fails to reach plateau. Results in a matte, etched surface.", win_v_cd_mid:"Optimal thin oxide film governing micro-peak dissolution.", win_v_cd_high:"Excessive oxygen evolution. Causes gas streaking and melted edges.",
+        fixture_h:"Racking & Fixturing Techniques",
+        fixture_p1:"Electropolishing demands flawless electrical contact. We strongly recommend using Titanium racks rather than aluminum. Titanium does not dissolve in the bath, ensuring longevity and consistent current delivery. If aluminum racks must be used, contact points must be extremely tight to prevent arcing, which will destroy the part.",
+        fixture_p2:"Orientation dictates how oxygen gas escapes. Parts should be angled slightly so bubbles don't become trapped under flat surfaces (blind spots), which blocks current and causes pitting. For parts with sharp corners, utilize 'thieves' (robbers) or shields to deflect excessive current density away from the edges to prevent burning.",
+        care_h:"Bath Care & Quality Maintenance",
+        care_p1:"Most electropolishing solutions are based on Phosphoric and Sulfuric acids. The most critical metric to monitor is Specific Gravity (Baume). Any deviation directly impacts viscosity and film formation. Furthermore, Dissolved Aluminum will accumulate over time. Once it exceeds the threshold (e.g., 25-35 g/L), the bath loses its polishing capability, requiring a partial decant and chemical replenishment.",
+        care_p2:"Water is the enemy of standard aluminum electropolishing baths. Drag-in from rinse tanks must be strictly minimized. Installing continuous filtration to capture particulate matter is vital for preventing a sandy, pitted texture on the finished parts.",
+        def_h:"Troubleshooting Guide",
+        def_th_sym:"Defect", def_th_cause:"Technical Cause", def_th_fix:"Corrective Action",
+        def_r1_s:"Dull/Milky Finish", def_r1_c:"Temp too low, current below plateau, or dissolved Al is maxed out.", def_r1_f:"Check heaters, increase voltage/current. Titrate for Al content; decant if necessary.",
+        def_r2_s:"Edge Burn / Pitting", def_r2_c:"Extreme local current density, overheating, or chloride contamination.", def_r2_f:"Lower total current. Increase anode-to-cathode distance. Switch to DI rinse water.",
+        def_r3_s:"Gas Streaking", def_r3_c:"Oxygen bubbles traveling vertically carving tracks into the soft surface.", def_r3_f:"Adjust racking angles. Increase air agitation or use a cathode rocker.",
+        def_r5_s:"White/Stained Patches", def_r5_c:"Poor pretreatment. Remaining oils block current, or delay caused re-oxidation.", def_r5_f:"Improve ultrasonic cleaning/alkaline soak. Transfer to polish bath immediately after rinsing.",
+        links_h:"Related Links",
+        link_polish:"Chemical & Electro Polishing Products", link_pretreat:"Pretreatment: Degreasers & Desmutters", link_salt:"Guide: Salt Spray Testing & Evaluation", link_pass:"Zinc Passivation for Ultimate Protection", link_equip:"Plating Equipment (Rectifiers, Heaters)",
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved."
       }
     };
 
@@ -762,7 +662,10 @@
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+        if (key && I18N[sel] && I18N[sel][key]) {
+            // allows basic HTML tags like <strong> in translation
+            node.innerHTML = I18N[sel][key]; 
+        }
       });
       try{ localStorage.setItem('lang', sel); }catch(e){}
     }
@@ -772,7 +675,6 @@
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=>{
         applyLang(btn.dataset.lang);
-        // update header var in case text length changes
         try{
           const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
           document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -781,62 +683,60 @@
     })();
   </script>
 
-<script>
-(function(){
-  const buttons = document.querySelectorAll('.part-switch .part-btn');
-  const tocItems = document.querySelectorAll('#toc .toc-list li[data-part]');
-  const sections = document.querySelectorAll('section[data-part]');
-
-  function setPart(p){
-    const part = (p === '2') ? '2' : '1';
-    document.documentElement.setAttribute('data-part', part);
-
-    sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
-    tocItems.forEach(li => li.hidden = (li.dataset.part !== part));
-
-    buttons.forEach(b => {
-      const on = (b.dataset.part === part);
-      b.setAttribute('aria-pressed', String(on));
-      b.setAttribute('aria-selected', String(on));
-    });
-
-    try{ localStorage.setItem('ep_part', part); }catch(e){}
-
-    // เขียน query ?part= ให้ deep-link
-    const url = new URL(location);
-    url.searchParams.set('part', part);
-    history.replaceState(null,'',url);
-  }
-
-  const urlPart = new URLSearchParams(location.search).get('part');
-  const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ep_part')) || '1';
-  setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
-
-  buttons.forEach(b => b.addEventListener('click', ()=>{
-    setPart(b.dataset.part);
-    document.getElementById('toc')?.scrollIntoView({behavior:'smooth', block:'start'});
-  }));
-
-  // คลิกจาก TOC → สลับพาร์ตก่อนเลื่อนไป
-  document.querySelectorAll('#toc .toc-link').forEach(a=>{
-    a.addEventListener('click', ()=>{
-      const li = a.closest('li[data-part]');
-      if(li) setPart(li.dataset.part);
-    });
-  });
-})();
-</script>
-
-
-  <!-- Header glass, mobile menu (scrim+lock), back-chip smart, highlight current -->
   <script>
+    // Part Switcher Logic
+    (function(){
+      const buttons = document.querySelectorAll('.part-switch .part-btn');
+      const tocItems = document.querySelectorAll('#toc .toc-list li[data-part]');
+      const sections = document.querySelectorAll('section[data-part]');
+
+      function setPart(p){
+        const part = (p === '2') ? '2' : '1';
+        document.documentElement.setAttribute('data-part', part);
+
+        sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+        tocItems.forEach(li => li.hidden = (li.dataset.part !== part));
+
+        buttons.forEach(b => {
+          const on = (b.dataset.part === part);
+          b.setAttribute('aria-pressed', String(on));
+          b.setAttribute('aria-selected', String(on));
+        });
+
+        try{ localStorage.setItem('ep_part', part); }catch(e){}
+
+        const url = new URL(location);
+        url.searchParams.set('part', part);
+        history.replaceState(null,'',url);
+      }
+
+      const urlPart = new URLSearchParams(location.search).get('part');
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('ep_part')) || '1';
+      setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+      buttons.forEach(b => b.addEventListener('click', ()=>{
+        setPart(b.dataset.part);
+        // smooth scroll top of content
+        document.querySelector('.part-switch')?.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+
+      document.querySelectorAll('#toc .toc-link').forEach(a=>{
+        a.addEventListener('click', ()=>{
+          const li = a.closest('li[data-part]');
+          if(li) setPart(li.dataset.part);
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    // Header Glass, Menu Scrim & Back-chip
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
 
-      // Set header height var & glass on scroll
       const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
@@ -844,7 +744,6 @@
       window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
 
-      // Mobile menu open/close with body lock
       if(toggle && nav && scrim){
         let lockY = 0;
         function openMenu(v){
@@ -872,19 +771,17 @@
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Products when under /products/*
       try{
         const here = location.pathname.replace(/\/+$/,'');
-        const isProducts = here.startsWith('/products');
+        const isBlog = here.startsWith('/blog');
         document.querySelectorAll('.menu a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
-          if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
+          if (isBlog && /\/blog(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
           else if (here === path) a.setAttribute('aria-current','page');
           else a.removeAttribute('aria-current');
         });
       }catch(e){}
 
-      // Back smart: prefer history if same-origin
       (function(){
         const btn = document.querySelector('[data-back]');
         if(!btn) return;
@@ -898,69 +795,68 @@
       })();
     })();
   </script>
-<script id="toc-scrollspy">
-  // คลิกหัวข้อ H2 ให้ขึ้น #anchor
-  document.querySelectorAll('.section-block>h2.section').forEach(h=>{
-    h.addEventListener('click', ()=>{
-      const sec = h.closest('.section-block');
-      if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
-    });
-  });
 
-  // Scroll-spy (กับ bullet list)
-  (function(){
-    const items = Array.from(document.querySelectorAll('#toc .toc-list li'));
-    if(!items.length) return;
-
-    const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
-    const map = new Map();
-
-    items.forEach(li=>{
-      const a = li.querySelector('a.toc-link');
-      if(!a) return;
-      const id = (a.getAttribute('href')||'').replace('#','');
-      const sec = document.getElementById(id);
-      if(sec) map.set(id, {sec, li});
-    });
-
-    const setActive = (id)=>{
-      items.forEach(li=> li.setAttribute('aria-current','false'));
-      const found = map.get(id)?.li;
-      if(found) found.setAttribute('aria-current','true');
-    };
-
-    const obs = new IntersectionObserver((entries)=>{
-      const headerH = getHeaderH();
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          const id = e.target.id;
-          // ข้ามเซคชันที่ถูกซ่อนเพราะพาร์ตไม่ตรง
-          if(e.target.hidden) return;
-          setActive(id);
-          history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
-        }
+  <script id="toc-scrollspy">
+    // Update hash on heading click
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
       });
-    }, {rootMargin:`-${getHeaderH()+24}px 0% -60% 0%`, threshold:.1});
+    });
 
-    map.forEach(({sec})=> obs.observe(sec));
-  })();
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
+    // TOC Scroll-spy
+    (function(){
+      const items = Array.from(document.querySelectorAll('#toc .toc-list li'));
+      if(!items.length) return;
 
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
+      const getHeaderH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||64;
+      const map = new Map();
 
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
-</script>
+      items.forEach(li=>{
+        const a = li.querySelector('a.toc-link');
+        if(!a) return;
+        const id = (a.getAttribute('href')||'').replace('#','');
+        const sec = document.getElementById(id);
+        if(sec) map.set(id, {sec, li});
+      });
+
+      const setActive = (id)=>{
+        items.forEach(li=> li.setAttribute('aria-current','false'));
+        const found = map.get(id)?.li;
+        if(found) found.setAttribute('aria-current','true');
+      };
+
+      const obs = new IntersectionObserver((entries)=>{
+        const headerH = getHeaderH();
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            const id = e.target.id;
+            if(e.target.hidden) return; // ignore hidden sections
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin:`-${getHeaderH()+40}px 0% -60% 0%`, threshold: 0.1});
+
+      map.forEach(({sec})=> obs.observe(sec));
+    })();
+
+    // Back to top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 300); 
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
 
 </body>
 </html>
