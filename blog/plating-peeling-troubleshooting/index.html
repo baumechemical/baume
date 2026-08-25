@@ -1,303 +1,251 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="metaTitle">อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน | Baume Chemical Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n-key="title">อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน | Baume Chemical Blog</title>
 
-  <!-- === SEO base === -->
-  <meta name="description" id="metaDesc" content="คู่มือแก้ปัญหาชั้นชุบลอกแบบรอบด้าน: ตั้งแต่การเตรียมผิว, ค่ากระแส/อุณหภูมิ/ส่วนผสมในบ่อ, ความเข้ากันได้ของโลหะ, ขั้นตอนหลังชุบ, การทดสอบคุณภาพ และแนวทางป้องกัน">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <link rel="canonical" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
-  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
-  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
-
-  <!-- Favicons (ตามที่ตั้งไว้ในราก /) -->
+  <!-- === SEO Base === -->
+  <meta name="description" content="คู่มือแก้ปัญหาชั้นชุบลอกแบบรอบด้าน: ตั้งแต่การเตรียมผิว ค่ากระแสไฟฟ้า อุณหภูมิ ความเข้ากันได้ของโลหะ การอบไล่ก๊าซไฮโดรเจน และตารางการวินิจฉัยปัญหาสำหรับโรงชุบ" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" />
+  <link rel="alternate" hreflang="th" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" />
+  <link rel="alternate" hreflang="en" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" />
+  
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
-  <meta name="theme-color" content="#2c5e4e">
+  <meta name="theme-color" content="#2c5e4e" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="th_TH" id="ogLocale">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Baume Chemical">
-  <meta property="og:title" id="ogTitle" content="อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน — Baume Chemical Blog">
-  <meta property="og:description" id="ogDesc" content="แนวทางแก้ปัญหาผิวชุบลอก ตั้งแต่เตรียมผิว คุมบ่อชุบ ไปจนถึงทดสอบคุณภาพ">
-  <meta property="og:url" content="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html">
-  <meta property="og:image" content="https://img2.pic.in.th/pic/image8-1.jpeg">
-  <meta property="og:image:alt" content="Electroplating Quality & Peeling Prevention — Baume Chemical Blog">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- OG / Twitter -->
+  <meta property="og:locale" content="th_TH" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Baume Chemical" />
+  <meta property="og:title" content="อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน" />
+  <meta property="og:description" content="แนวทางแก้ปัญหาผิวชุบลอก ตั้งแต่เตรียมผิว คุมบ่อชุบ ไปจนถึงการทดสอบคุณภาพและการอบชิ้นงาน" />
+  <meta property="og:url" content="https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html" />
+  <meta property="og:image" content="https://www.baumechemical.com/picture/peel.jpeg" />
+  <meta property="og:image:alt" content="Electroplating Peeling Prevention — Baume Chemical" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured Data (JSON-LD) -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Baume Chemical","alternateName":["Baume Chemical Blog","Baume"],"url":"https://www.baumechemical.com/","logo":{"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},"sameAs":["https://line.me/ti/p/~baumechemical"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Baume Chemical",
+    "url": "https://www.baumechemical.com/",
+    "logo": {"@type":"ImageObject","url":"https://www.baumechemical.com/assets/logo.png"},
+    "sameAs": ["https://line.me/ti/p/~baumechemical"]
+  }
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Baume Chemical","alternateName":["Baume Chemical Blog","Baume"],"url":"https://www.baumechemical.com/","inLanguage":"th"}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกันอย่างรอบด้าน","url":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html","inLanguage":"th","description":"ไกด์ป้องกันชั้นชุบลอก ครบตั้งแต่เตรียมผิว คุมบ่อ ความเข้ากันได้ของโลหะ Post-treatment การทดสอบ และมาตรการป้องกัน","publisher":{"@type":"Organization","name":"Baume Chemical","url":"https://www.baumechemical.com/"},"image":"https://img2.pic.in.th/pic/image8-1.jpeg"}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.baumechemical.com/blog/"},
-    {"@type":"ListItem","position":3,"name":"Plating Peeling Prevention","item":"https://www.baumechemical.com/blog/plating-peeling-troubleshooting/index.html"}
-  ]}
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "inLanguage":"th"
+  }
   </script>
 
   <!-- Fonts & Perf -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img2.pic.in.th/pic/image8-1.jpeg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/peel.jpeg" />
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
       --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:64px; 
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.7}
+    p { margin-top: 0; margin-bottom: 1.2em; color: #334155; }
+    strong { color: var(--brand); }
 
-    /* ===== Header: ใส → เข้มเมื่อเลื่อน (glass) ===== */
-    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease}
-    .site-header.is-scrolled{background:rgba(15,23,42,.70); backdrop-filter:saturate(140%) blur(10px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
+    /* ===== GLASS HEADER ===== */
+    .site-header{position:fixed; inset:0 0 auto 0; z-index:1400; background:transparent; border-bottom:1px solid rgba(255,255,255,.14); transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease}
+    .site-header.is-scrolled{background:rgba(15,23,42,.85); backdrop-filter:saturate(140%) blur(12px); box-shadow:0 8px 26px rgba(2,8,20,.18)}
     .nav-bar{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; align-items:center; gap:14px; justify-content:space-between; min-height:var(--header-h) }
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .brand-logo{width:42px;height:42px;border-radius:10px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff}
+    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
 
     .primary-nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700 }
+    .primary-nav a{ text-decoration:none; color:#fff; padding:10px 12px; border-radius:10px; font-weight:700; transition: background .2s;}
     .primary-nav a:hover{ background:rgba(255,255,255,.12) }
     .primary-nav a[aria-current="page"]{ background:rgba(255,255,255,.18) }
 
-    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.is-scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;padding:6px 10px;border-radius:999px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
+    .lang-switch{display:flex; gap:6px; margin-left:auto; padding:4px; border:1px solid rgba(226,232,240,.4); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12); transition: background .3s;}
+    .site-header.is-scrolled .lang-switch{background:#ffffffdd; border-color: rgba(226,232,240, 1);}
+    .lang-btn{appearance:none; border:0; background:transparent; padding:6px 12px; border-radius:999px; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px; color:#0f172a; transition: all .2s;}
+    .lang-btn[aria-pressed="true"]{ background:var(--brand-2); color:#fff; box-shadow: 0 4px 10px rgba(56, 123, 91, 0.3); }
     .lang-btn img{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
-    /* Burger (mobile) */
     .nav-toggle{ display:none; width:38px; height:38px; border-radius:9px; background:transparent; cursor:pointer; border:0 }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px}
     .nav-toggle .bar::before{top:-7px} .nav-toggle .bar::after{top:7px}
-    .nav-toggle:focus-visible{outline:2px solid #fff; outline-offset:2px}
 
     @media (max-width:900px){
       .nav-toggle{ display:inline-flex; align-items:center; justify-content:center }
-      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
+      .primary-nav{ position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172ae6; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); border-radius:14px; display:grid; gap:6px; padding:12px; z-index:1400; transform:translateY(-12px); opacity:0; pointer-events:none; transition:transform .2s ease,opacity .2s ease }
       .primary-nav a{ color:#fff; padding:12px 10px; }
       .site-header.open .primary-nav{ transform:none; opacity:1; pointer-events:auto }
       .lang-switch{ width:100%; margin:6px 0 0; background:#ffffff1c; border-color:rgba(255,255,255,.35); box-shadow:none }
       .lang-btn{ color:#fff }
       .lang-btn[aria-pressed="true"]{ background:#ffffff; color:#0f172a }
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
+
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.4); z-index:1300; display:none; backdrop-filter: blur(3px); }
     .menu-scrim:not([hidden]){ display:block }
     body.no-scroll{ position:fixed; width:100% }
 
     /* ===== Hero ===== */
-    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(420px, 60vh, 620px); background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)), url('https://i.imgur.com/3xwVLZZ.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 12px)}
-    .hero h1{margin:6px 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .hero{position:relative; overflow:hidden; display:grid; place-items:center; text-align:center; color:#fff; min-height: clamp(380px, 50vh, 550px); background: linear-gradient(180deg, rgba(15,23,42,.6), rgba(44,94,78,.85)), url('https://www.baumechemical.com/picture/peel.jpeg') center/cover no-repeat; padding: 28px 16px; padding-top:calc(var(--header-h) + 20px)}
+    .hero h1{margin:6px 0 12px; font-weight:800; font-size:clamp(28px,4.5vw,48px); text-shadow:0 6px 28px rgba(0,0,0,.5); letter-spacing: -0.5px; max-width: 900px; margin-left: auto; margin-right: auto;}
+    .hero p{max-width:800px; margin:0 auto; color:#e2e8f0; font-size: 1.1rem; line-height: 1.6;}
+    .back-chip{position:absolute; top:calc(var(--header-h) + 16px); left:16px; z-index:1; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:999px; font-weight:700; text-decoration:none; background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.3); color:#fff; transition: all .2s;}
+    .back-chip:hover{ background:#fff; color:var(--brand); transform:translateY(-1px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-    /* Back button chip */
-.back-chip{
-  position:absolute; 
-  top:calc(var(--header-h) + 10px); 
-  left:16px; z-index:1;
-  display:inline-flex; align-items:center; gap:6px;
-  padding:8px 12px; border-radius:999px;
-  font-weight:800; text-decoration:none;
-  background:#fff; color:#0f172a;
-  border:1px solid rgba(2,8,20,.08); 
-  box-shadow:var(--shadow-1);
-}
-.back-chip:hover{ transform:translateY(-1px) }
-
-    /* ===== Layout & TOC ===== */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
+    /* ===== Layout & Tables ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:40px 16px}
     @media (min-width:1100px){
-      main.wrap{ display:grid; grid-template-columns: 300px minmax(0,1fr); gap:20px; align-items:start }
-      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 10px) }
-      section.section-block{ grid-column:2 }
+      main.wrap{ display:grid; grid-template-columns: 280px minmax(0,1fr); gap:32px; align-items:start }
+      #toc{ grid-column:1; position:sticky; top:calc(var(--header-h) + 24px) }
+      .main-content{ grid-column:2; }
     }
-    #toc{ background:#fff;border:1px solid #e3ece5;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow-1) }
-    #toc h2.section{ font-size:1rem; margin:0 0 6px; display:flex; align-items:center; gap:10px }
-    #toc p{display:grid;gap:8px;margin:10px 0 0}
-    .toc-chip{display:flex; align-items:center; justify-content:space-between; width:100%; padding:10px 12px;border-radius:10px;background:#ecf4ef;border:1px solid #d8e7dd;color:#1f2a24;text-decoration:none;font-weight:800}
-    .toc-chip::after{ content:"›"; opacity:.5 }
-    .toc-chip[aria-current="true"], .toc-chip.is-active{background:var(--brand-2); color:#fff; border-color:transparent; box-shadow:0 6px 16px rgba(2,8,20,.12)}
 
-    /* ===== Sections ===== */
-    section.section-block{background:#fff; border:1px solid #e3ece5; border-radius:16px; padding:18px 16px; box-shadow:var(--shadow-1); position:relative; overflow:hidden; margin-bottom:16px}
-    section.section-block::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--brand-2),#59a286,#9bd4b9); opacity:.85}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24; display:flex; align-items:center; gap:10px; position:relative}
-    .section-block>h2.section::before{ content:var(--icon, "📘"); font-size:20px; line-height:1 }
-/* ไอคอนสำหรับหมวดในหัวข้อ "ชุบแล้วลอก" */
-#intro>h2.section{ --icon:"📘" }
-#prep>h2.section{ --icon:"🧼" }
-#process>h2.section{ --icon:"⚙️" }
-#compat>h2.section{ --icon:"🧲" }
-#post>h2.section{ --icon:"🧴" }
-#symptoms>h2.section{ --icon:"🚩" }
-#qa>h2.section{ --icon:"🧪" }
-#summary>h2.section{ --icon:"✅" }
-#links>h2.section{ --icon:"🔗" }
-    .lead{margin:0 0 16px; color:var(--muted)}
+    /* Section Cards */
+    section.section-block{
+      background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:24px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position:relative; margin-bottom:24px; transition: box-shadow .3s;
+    }
+    section.section-block:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    section.section-block::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:5px;
+      background:linear-gradient(90deg,var(--brand),#59a286,#9bd4b9);
+    }
+    
+    /* Icons in headings */
+    h2.section{margin:0 0 16px; font-size:clamp(22px,2.6vw,28px); font-weight:800; color:#0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;}
+    h2.section::before{ content:var(--icon, "📘"); font-size:22px; margin-right: 8px; vertical-align: middle;}
+    #intro>h2.section{ --icon:"📖" }
+    #prep>h2.section{ --icon:"🧼" }
+    #process>h2.section{ --icon:"⚙️" }
+    #compat>h2.section{ --icon:"🧲" }
+    #post>h2.section{ --icon:"🔥" }
+    #symptoms>h2.section{ --icon:"🚩" }
+    #qa>h2.section{ --icon:"🧪" }
+    #summary>h2.section{ --icon:"✅" }
+    #links>h2.section{ --icon:"🔗" }
 
-    /* Lists & utilities */
-    ul.nice{margin:8px 0 0; padding-left:22px}
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
-    .reveal.show{opacity:1; transform:none}
-    .section-block{scroll-margin-top:calc(var(--header-h) + 18px)}
-    html{scroll-behavior:smooth}
+    /* ===== TOC styling ===== */
+    #toc{ background:#fff; border:1px solid #e2e8f0; border-radius:16px; box-shadow:var(--shadow-1); padding:20px; }
+    #toc h2.section{ font-size:1.1rem; border-bottom: none; margin-bottom: 16px; padding-bottom: 0; color: var(--brand); }
+    #toc .toc-list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+    #toc .toc-list li{ position:relative; border-radius:10px; transition:all .2s; }
+    #toc .toc-link{ display:block; padding:10px 32px 10px 14px; text-decoration:none; color:#475569; font-weight:600; border-radius:8px; font-size: 0.95rem; }
+    #toc .toc-list li:hover { background: #f1f5f9; }
+    #toc .toc-list li:hover .toc-link{ color: var(--brand); }
+    
+    #toc .toc-list li::after{ content:"›"; position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#94a3b8; font-weight:800; transition: color .2s; }
+    #toc .toc-list li[aria-current="true"]{ background:var(--brand-2); box-shadow:0 4px 12px rgba(56, 123, 91, 0.2); }
+    #toc .toc-list li[aria-current="true"] .toc-link{ color:#fff; }
+    #toc .toc-list li[aria-current="true"]::after{ color:#fff; }
 
-    /* ===== Footer ===== */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    /* Part switcher */
+    [hidden]{display:none !important}
+    .part-switch {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 5px;
+      border-radius: 14px;
+      margin: 0 0 24px 0;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.06);
+    }
+    .part-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #64748b;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .part-btn:hover { color: #334155; }
+    .part-btn[aria-pressed="true"] {
+      background: #fff;
+      color: var(--brand);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    ul.nice { margin: 8px 0 16px; padding-left: 24px; color: #334155; }
+    ul.nice li { margin-bottom: 8px; }
+
+    /* Tables */
+    .table{ border-radius: 12px; overflow: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; margin-bottom: 20px;}
+    .table table{width:100%; min-width: 600px; border-collapse:collapse; background: #fff;}
+    .table thead th{background:var(--brand); color: #fff; font-weight: 600; letter-spacing: 0.5px;}
+    .table th,.table td{padding:14px 16px; border-bottom:1px solid #e2e8f0; vertical-align:top; text-align: left;}
+    .table tbody tr:last-child td { border-bottom: none; }
+    .table tbody tr:hover{background:#f8fafc}
+
+    /* Footer */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color .2s;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:48px 20px 24px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
-    .ft-logo{width:44px; height:44px; border-radius:10px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
-    .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:48px; height:48px; border-radius:12px; background:#2c5e4e; background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.2rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.5px;}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#94a3b8}
 
-/* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{position:fixed; right:20px; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:900;}
+    .float-line a{display:grid; place-items:center; width:56px; height:56px; border-radius:50%; background:#00c300; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform .2s;}
+    .float-line a:hover{transform:translateY(-2px) scale(1.05);}
+    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 15px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    .backtop{position:fixed; right:20px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; opacity: 0; transition: opacity .3s;}
+    .backtop.show{display:block; opacity: 1;}
+    .backtop button{width:46px; height:46px; border-radius:50%; border:none; background:#fff; color: var(--brand); font-size: 1.2rem; box-shadow:0 4px 16px rgba(0,0,0,.15); cursor:pointer; transition: all .2s;}
+    .backtop button:hover{background:var(--brand); color:#fff; transform:translateY(-2px);}
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-/* ===== Pretty tables (responsive + sticky header) ===== */
-.table{
-  margin-top:12px;
-  background:#fff;
-  border:1px solid #e3ece5;
-  border-radius:12px;
-  box-shadow:var(--shadow-1);
-  overflow:auto;                 /* เลื่อนแนวนอนได้บนจอเล็ก */
-  -webkit-overflow-scrolling:touch;
-  /* ขอบจาง ๆ ตอนเลื่อน */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
-}
-
-.table table{
-  width:100%;
-  min-width:720px;               /* กันบีบคอลัมน์จนอ่านยาก */
-  border-collapse:separate;
-  border-spacing:0;
-  font-variant-numeric: tabular-nums;
-}
-
-.table thead th{
-  position: sticky; top: 0;
-  z-index: 1;
-  text-align:left;
-  font-weight:800;
-  color:#1f2a24;
-  padding:12px 14px;
-  background:linear-gradient(180deg,#f7fbf9,#f0f7f3);
-  border-bottom:1px solid #dce8e1;
-  white-space:nowrap;
-}
-
-.table tbody td{
-  padding:10px 14px;
-  color:#1f2a24;
-  border-bottom:1px solid #eef4f0;
-  vertical-align:top;
-}
-
-.table tbody tr:last-child td{ border-bottom:none; }
-.table tbody tr:nth-child(odd){ background:#fbfdfc; } /* zebra */
-.table tbody tr:hover{ background:#f1f7f3; }          /* hover row */
-
-.table th+th, .table td+td{ border-left:1px solid #eef2ee; } /* เส้นคอลัมน์จาง ๆ */
-
-/* มุมมนจริง ๆ ที่มุม 4 ด้าน */
-.table table thead tr:first-child th:first-child{ border-top-left-radius:12px; }
-.table table thead tr:first-child th:last-child{ border-top-right-radius:12px; }
-.table table tbody tr:last-child td:first-child{ border-bottom-left-radius:12px; }
-.table table tbody tr:last-child td:last-child{ border-bottom-right-radius:12px; }
-
-/* สกรอลบาร์สวยขึ้นนิดหน่อย (เฉพาะ WebKit) */
-.table::-webkit-scrollbar{ height:10px; }
-.table::-webkit-scrollbar-thumb{ background:#d1e2da; border-radius:999px; border:2px solid #fff; }
-.table::-webkit-scrollbar-track{ background:#f3f7f5; border-radius:999px; }
-
-/* จอเล็ก: ปล่อยให้เลื่อนแนวนอนแทนบีบคอลัมน์ */
-@media (max-width:600px){
-  .table table{ min-width:560px; }
-}
-
-/* ตัวเลือกเสริม: โหมดคอมแพ็ค (ใส่ class table--compact ที่ wrapper ถ้าต้องการ) */
-.table.table--compact thead th{ padding:10px 12px; }
-.table.table--compact tbody td{ padding:8px 12px; }
-
-</style>
+    /* Reveal */
+    .reveal{opacity:0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out}
+    .reveal.show{opacity:1; transform:none}
+    html{scroll-behavior:smooth}
+    .section-block{scroll-margin-top:calc(var(--header-h) + 24px)}
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ===== Header ===== -->
   <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
     <div class="nav-bar">
       <a class="brand" href="https://www.baumechemical.com/" aria-label="Baume Chemical Home">
@@ -305,7 +253,7 @@
         <span class="brand-name">Baume Chemical</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="เปิดเมนู">
         <span class="bar"></span>
       </button>
 
@@ -329,303 +277,308 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <header class="hero">
-    <div class="wrap" style="display:block; padding:28px 16px; max-width:1200px; margin:auto">
-      <a class="back-chip" href="https://www.baumechemical.com/blog" data-back data-i18n-key="back_home">← กลับสู่หน้า Blog</a>
-      <h1 data-i18n-key="hero_title">สาเหตุและวิธีแก้ไขของการชุบโลหะแล้วลอก</h1>
-      <p data-i18n-key="hero_tagline">คู่มือเจาะลึกตั้งแต่การเตรียมผิว เงื่อนไขบ่อ ความเข้ากันได้ของโลหะ ขั้นตอนหลังชุบ อาการและการวินิจฉัย ไปจนถึงมาตรการ QA เพื่อป้องกันการลอกอย่างยั่งยืน</p>
+    <a class="back-chip" href="https://www.baumechemical.com/blog/" data-back data-i18n-key="back_home">← กลับหน้าบทความ</a>
+    <div class="wrap" style="display:block; padding:0; margin:auto">
+      <h1 data-i18n-key="hero_title">อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน</h1>
+      <p data-i18n-key="hero_tagline">เจาะลึกตั้งแต่การเตรียมผิว การจัดการบ่อชุบ ความเข้ากันได้ของโลหะ การอบไล่ความชื้น ไปจนถึงมาตรการควบคุมคุณภาพเพื่อป้องกันการลอกอย่างยั่งยืน</p>
     </div>
   </header>
 
-  <!-- Main + TOC -->
   <main class="wrap">
+    
+    <!-- TOC -->
     <nav id="toc" class="reveal" aria-label="สารบัญ">
       <h2 class="section" data-i18n-key="toc_title">สารบัญ</h2>
-      <p>
-<a class="toc-chip" href="#intro" data-i18n-key="toc_intro">บทนำ</a>
-<a class="toc-chip" href="#prep" data-i18n-key="toc_prep">การเตรียมผิว</a>
-<a class="toc-chip" href="#process" data-i18n-key="toc_process">เงื่อนไขบ่อ & พารามิเตอร์</a>
-<a class="toc-chip" href="#compat" data-i18n-key="toc_compat">ความเข้ากันได้ของโลหะ</a>
-<a class="toc-chip" href="#post" data-i18n-key="toc_post">ขั้นตอนหลังชุบ</a>
-<a class="toc-chip" href="#symptoms" data-i18n-key="toc_symptoms">อาการ & การวินิจฉัย</a>
-<a class="toc-chip" href="#qa" data-i18n-key="toc_qa">QA/การทดสอบ</a>
-<a class="toc-chip" href="#summary" data-i18n-key="toc_summary">สรุป</a>
-<a class="toc-chip" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a>
-      </p>
+      <ul class="toc-list" role="list">
+        <li data-part="1"><a class="toc-link" href="#intro" data-i18n-key="toc_intro">ทำไมงานชุบถึงลอก? (ภาพรวม)</a></li>
+        <li data-part="1"><a class="toc-link" href="#prep" data-i18n-key="toc_prep">การเตรียมผิวและการล้างไขมัน</a></li>
+        <li data-part="1"><a class="toc-link" href="#process" data-i18n-key="toc_process">การตั้งค่าพารามิเตอร์ในบ่อชุบ</a></li>
+        <li data-part="2"><a class="toc-link" href="#compat" data-i18n-key="toc_compat">ความเข้ากันได้ของชั้นโลหะ</a></li>
+        <li data-part="2"><a class="toc-link" href="#post" data-i18n-key="toc_post">การจัดการหลังการชุบ (การอบไล่ก๊าซ)</a></li>
+        <li data-part="2"><a class="toc-link" href="#symptoms" data-i18n-key="toc_symptoms">ตารางวิเคราะห์อาการและวิธีแก้ไข</a></li>
+        <li data-part="2"><a class="toc-link" href="#qa" data-i18n-key="toc_qa">การควบคุมคุณภาพและการทดสอบ</a></li>
+        <li data-part="2"><a class="toc-link" href="#links" data-i18n-key="toc_links">ลิงก์ที่เกี่ยวข้อง</a></li>
+      </ul>
     </nav>
 
-    <!-- ===== Sections ===== -->
-    <section id="intro" class="reveal section-block" aria-labelledby="intro-h">
-      <h2 id="intro-h" class="section" data-i18n-key="intro_h">บทนำ: ทำไมงานชุบถึงลอก</h2>
-      <p class="lead" data-i18n-key="intro_p1">ชั้นชุบลอกส่งผลทันทีต่อภาพลักษณ์ ความทนทาน และความน่าเชื่อถือของผลิตภัณฑ์ สาเหตุไม่ได้มาจากจุดเดียว แต่เชื่อมโยงตั้งแต่การเตรียมผิว พารามิเตอร์ของบ่อ ความเข้ากันได้ของโลหะ ไปจนถึงการล้าง อบแห้ง ซีล และการจัดการหลังชุบ</p>
-      <p data-i18n-key="intro_p2">1. ความสะอาดในการเตรียมผิว (Pre-treatment Failure) นี่คือสาเหตุอันดับหนึ่งของการลอก การทำความสะอาดผิวที่ไม่สมบูรณ์ คือปัจจัยหลัก โดยมีคราบไขมัน คราบน้ำมัน สารออกไซด์ หรืออนุภาคสนิมหลงเหลืออยู่ ซึ่งเป็นตัวขวางกั้นไม่ให้โลหะชุบยึดเกาะกับโลหะพื้นผิวได้โดยตรง หากผิวยังมีคราบหลงเหลืออยู่ การชุบที่เกิดขึ้นก็จะเป็นเพียงการเคลือบทับบนสิ่งสกปรกเท่านั้น</p>
-      <p data-i18n-key="intro_p3">2. การควบคุมพารามิเตอร์บ่อชุบผิดพลาด (Plating Bath Parameter Errors) ความแม่นยำในการควบคุมสารละลายเป็นหัวใจสำคัญ หากเกิดความผิดพลาดจะส่งผลต่อโครงสร้างของชั้นชุบ: กระแสไฟฟ้า (Current Density): การใช้กระแสที่สูงเกินไปทำให้เกิดการชุบเร็ว ชั้นชุบมีความเค้นภายในสูง (High Internal Stress) ทำให้ชั้นชุบเปราะ แตก และลอกง่าย ในขณะที่กระแสต่ำเกินไปก็ทำให้การยึดเกาะไม่สมบูรณ์ อุณหภูมิ, pH, ความเข้มข้น: การเบี่ยงเบนจากค่ามาตรฐานเพียงเล็กน้อย อาจทำให้สูตรเคมีไม่สมดุล โครงสร้างผลึกผิดรูป หรือเกิดการตกตะกอนที่ไม่พึงประสงค์ สิ่งเจือปน (Impurities): การสะสมของโลหะแปลกปลอมหรือสารอินทรีย์ในบ่อชุบ จะขัดขวางการยึดเกาะในบริเวณที่มีการสะสมสูง</p>
-      <p data-i18n-key="intro_p4">3. ความไม่เข้ากันของโลหะและการรองพื้นไม่ดี (Compatibility & Strike Layer Issues) สำหรับวัสดุที่ชุบยาก เช่น อะลูมิเนียม หรือ สแตนเลส จำเป็นต้องใช้ Strike Layer (เช่น ทองแดงไพรเมอร์ หรือกระบวนการ Zincate) เพื่อสร้างชั้นบาง ๆ ที่มีการยึดเกาะกับโลหะพื้นผิวได้ดีเป็นตัวกลางก่อน หากชั้นไพรเมอร์นี้มีความบกพร่อง การชุบชั้นต่อมาทั้งหมดก็จะลอกตามมาทันที</p>
-      <p data-i18n-key="intro_p5">4. ปัจจัยหลังการชุบและการจัดการ (Post-treatment & Handling) ความผิดพลาดในขั้นตอนสุดท้ายก็ทำให้ลอกได้: การอบไล่ไฮโดรเจน (Baking for Hydrogen Embrittlement Relief): สำหรับชิ้นงานเหล็กที่มีความแข็งแรงสูง (High-Tensile Steel) หากไม่อบไล่ไฮโดรเจนที่สะสมระหว่างการชุบ จะทำให้ชั้นชุบเปราะและลอกเมื่อได้รับการกระทบ การเกิดการกัดกร่อนภายใต้รอยซีล: การใช้สารซีล (Passivation/Sealer) ที่ไม่เหมาะสมกับโลหะชั้นนอกสุด อาจก่อให้เกิดปฏิกิริยาการกัดกร่อนแบบ Galvanic Corrosion ที่ใต้ชั้นชุบ ทำให้เกิดการลอกในระยะยาว</p>
-    </section>
-
-    <section id="prep" class="reveal section-block" aria-labelledby="prep-h">
-      <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิว</h2>
-      <p class="lead" data-i18n-key="prep_p1">ถ้าผิวไม่สะอาดและไม่ active ต่อให้บ่อสมบูรณ์ งานก็ลอกได้</p>
-      <ul class="nice">
-        <li data-i18n-key="prep_l1"><strong>ขจัดคราบมัน/คราบขึ้นรูป</strong> ด้วยด่างร้อน + อัลตราโซนิก และ/หรือไฟฟ้าด่าง (Electrocleaning) ตามด้วยล้างน้ำหลายขั้น</li>
-        <li data-i18n-key="prep_l2"><strong>กำจัดออกไซด์/สนิม/ชั้นพาสซีฟ</strong> ใช้ Pickle ที่เหมาะกับโลหะฐาน และควบคุมเวลาเพื่อหลีกเลี่ยงการกัดลงเนื้อ</li>
-        <li data-i18n-key="prep_l3"><strong>Activate</strong> ด้วยกรดเจือจาง/strike กรดไฟฟ้า/ Wood’s Nickel (สำหรับสแตนเลส) หรือ Double Zincate (สำหรับอะลูมิเนียม)</li>
-        <li data-i18n-key="prep_l4"><strong>อย่าแตะผิวหลัง activate</strong> ใช้คีม/ตะขอที่สะอาด ป้องกันการปนเปื้อนจากมือและอากาศ</li>
-      </ul>
-
-      <div class="table" style="margin-top:12px">
-        <table id="tbl_contaminants">
-          <thead>
-            <tr>
-              <th data-i18n-key="prep_tbl_h1">สิ่งปนเปื้อน</th>
-              <th data-i18n-key="prep_tbl_h2">ที่มา</th>
-              <th data-i18n-key="prep_tbl_h3">วิธีแก้/เคมีที่ใช้</th>
-              <th data-i18n-key="prep_tbl_h4">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="prep_tbl_c1">น้ำมัน/จาระบี</td>
-              <td data-i18n-key="prep_tbl_c2">ขึ้นรูป ตัด กลึง ปั๊ม รีด</td>
-              <td data-i18n-key="prep_tbl_c3">ด่างร้อน + อัลตราโซนิก / ไฟฟ้าด่าง / ตัวทำละลาย</td>
-              <td data-i18n-key="prep_tbl_c4">ทดสอบน้ำกรดไหลแผ่ (water-break) ต้องผ่าน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="prep_tbl_c5">ออกไซด์/สนิม</td>
-              <td data-i18n-key="prep_tbl_c6">การเก็บ/บรรยากาศ/ความร้อน</td>
-              <td data-i18n-key="prep_tbl_c7">Pickle ตามโลหะฐาน (HCl/H2SO4/ผสม), Inhibitor</td>
-              <td data-i18n-key="prep_tbl_c8">ควบคุมเวลาและอุณหภูมิ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="prep_tbl_c9">ชั้นพาสซีฟ/สเกล</td>
-              <td data-i18n-key="prep_tbl_c10">สแตนเลส/อบชุบความร้อน/เลเซอร์สเกล</td>
-              <td data-i18n-key="prep_tbl_c11">Wood’s Nickel Strike / HF‑based สำหรับ Al (ผ่าน zincate)</td>
-              <td data-i18n-key="prep_tbl_c12">หลีกเลี่ยงการ over‑etch</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="prep_tbl_c13">สิ่งฝังตัว (ฝุ่น/ผงขัด)</td>
-              <td data-i18n-key="prep_tbl_c14">ขัด/พ่นทราย/ขัดแฮนด์</td>
-              <td data-i18n-key="prep_tbl_c15">ล้างแรงดัน/อัลตราโซนิก/แปรงไนลอน</td>
-              <td data-i18n-key="prep_tbl_c16">ตรวจด้วยไฟเฉียง/กล้องขยาย</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="process" class="reveal section-block" aria-labelledby="proc-h">
-      <h2 id="proc-h" class="section" data-i18n-key="proc_h">เงื่อนไขบ่อ & พารามิเตอร์</h2>
-      <p class="lead" data-i18n-key="proc_p1">บ่อที่ “ภาพรวมดี” อาจยังเสี่ยงลอก ถ้าพารามิเตอร์บางตัวหลุดช่วงควบคุม</p>
-
-      <div class="table" style="margin-top:12px">
-        <table id="tbl_bath_vars">
-          <thead>
-            <tr>
-              <th data-i18n-key="proc_tbl_h1">ตัวแปร</th>
-              <th data-i18n-key="proc_tbl_h2">ช่วงควบคุมทั่วไป</th>
-              <th data-i18n-key="proc_tbl_h3">ผลกระทบเมื่อหลุดช่วง</th>
-              <th data-i18n-key="proc_tbl_h4">แนวทางควบคุม</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="proc_tbl_v1">pH</td>
-              <td data-i18n-key="proc_tbl_v2">ตามชนิดบ่อ (เช่น กรด/ด่าง/ไซยาไนด์/ไร้ไซยาไนด์)</td>
-              <td data-i18n-key="proc_tbl_v3">การยึดเกาะแย่/ขอบคริสตัลผิดปกติ/หมอง</td>
-              <td data-i18n-key="proc_tbl_v4">ปรับด้วยกรด/ด่างอย่างช้า ๆ และบันทึก SPC</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v5">อุณหภูมิ</td>
-              <td data-i18n-key="proc_tbl_v6">±2–3°C จากค่ากลางของสูตร</td>
-              <td data-i18n-key="proc_tbl_v7">เปลี่ยนแปลงโครงสร้างผลึก/ความเค้นภายใน</td>
-              <td data-i18n-key="proc_tbl_v8">ฮีตเตอร์/คอยล์/เซนเซอร์สอบเทียบ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v9">โลหะหลัก (g/L)</td>
-              <td data-i18n-key="proc_tbl_v10">ช่วงที่ซัพพลายเออร์กำหนด</td>
-              <td data-i18n-key="proc_tbl_v11">บาง/เปราะ/ความตึงภายในสูง</td>
-              <td data-i18n-key="proc_tbl_v12">Make‑up/เติมตามใบวิเคราะห์</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v13">ไบรท์/แอดิทีฟ</td>
-              <td data-i18n-key="proc_tbl_v14">ตาม Hull cell/ไทเทรต</td>
-              <td data-i18n-key="proc_tbl_v15">ผิวด่าง/ลอกใน HCD/LCD</td>
-              <td data-i18n-key="proc_tbl_v16">ควบคุมด้วยงานทดสอบประจำสัปดาห์</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v17">การกรอง & หมุนเวียน</td>
-              <td data-i18n-key="proc_tbl_v18">≥ 5–10 เท่าปริมาตรบ่อต่อชั่วโมง</td>
-              <td data-i18n-key="proc_tbl_v19">สิ่งแปลกปลอมเกาะผิว/จุดลอก</td>
-              <td data-i18n-key="proc_tbl_v20">เลือกไส้กรองเหมาะสม + ตรวจอุดตัน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v21">แอโนด/แคโทด</td>
-              <td data-i18n-key="proc_tbl_v22">ชนิด/ถุงแอโนด/พื้นที่/ระยะห่างถูกต้อง</td>
-              <td data-i18n-key="proc_tbl_v23">โลหะปน/ฟิล์มแอโนดผิดปกติ → ลอก</td>
-              <td data-i18n-key="proc_tbl_v24">ทำความสะอาดถุง/ตรวจฟิล์ม/เปลี่ยนทิศไหล</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="proc_tbl_v25">กระแส/เวลาชุบ</td>
-              <td data-i18n-key="proc_tbl_v26">ตามความหนาเป้าหมายและรูปทรง</td>
-              <td data-i18n-key="proc_tbl_v27">เปราะ/ฟอง/ลอกที่ขอบ</td>
-              <td data-i18n-key="proc_tbl_v28">Ramp‑up/Ramp‑down/หนีบงานให้แน่น</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="main-content">
+      <!-- Part Switcher -->
+      <div class="part-switch" role="tablist" aria-label="เลือกหัวข้อหลัก">
+        <button class="part-btn" role="tab" data-part="1" aria-pressed="true" aria-selected="true"><span data-i18n-key="part1">ส่วนที่ 1: สาเหตุหลักและการเตรียมการ</span></button>
+        <button class="part-btn" role="tab" data-part="2" aria-pressed="false" aria-selected="false"><span data-i18n-key="part2">ส่วนที่ 2: การรองพื้น การทดสอบ และสรุป</span></button>
       </div>
 
-      <ul class="nice" style="margin-top:12px">
-        <li data-i18n-key="proc_l1"><strong>สแตนเลส</strong>: ใช้ Wood’s Nickel Strike ก่อนเข้าบ่อหลัก</li>
-        <li data-i18n-key="proc_l2"><strong>อะลูมิเนียม</strong>: Double zincate → Alkaline Cu → Acid Cu → Ni/Cr</li>
-        <li data-i18n-key="proc_l3"><strong>สังกะสีไดคาสต์</strong>: Alkaline (หรือ Cyanide) Cu Strike → Acid Cu → Ni</li>
-        <li data-i18n-key="proc_l4"><strong>เหล็ก</strong>: Acid Pickle + Activate → Copper strike/Acid Cu → Ni → Cr/Brass ฯลฯ</li>
-      </ul>
-    </section>
+      <!-- Sections Part 1 -->
+      <section id="intro" data-part="1" class="reveal section-block" aria-labelledby="intro-h">
+        <h2 id="intro-h" class="section" data-i18n-key="intro_h">บทนำ: ทำไมงานชุบถึงลอก?</h2>
+        <p data-i18n-key="intro_p1">การที่ชั้นเคลือบโลหะลอกหลุด ส่งผลกระทบโดยตรงต่อภาพลักษณ์ ความทนทาน และความน่าเชื่อถือของผลิตภัณฑ์ สาเหตุของการลอกนั้นไม่ได้เกิดจากจุดใดจุดหนึ่งเพียงจุดเดียว แต่เป็นผลลัพธ์ที่เชื่อมโยงกันตลอดทั้งสายการผลิต ตั้งแต่การเตรียมผิว การตั้งค่าสัดส่วนน้ำยาและตู้ไฟของบ่อชุบ ความเข้ากันได้ของโลหะ ไปจนถึงการล้าง การอบแห้ง และการจัดการหลังการชุบ</p>
+        <p data-i18n-key="intro_p2"><strong>1. ความผิดพลาดในการเตรียมผิว:</strong> นี่คือสาเหตุอันดับหนึ่งของการหลุดร่อน การทำความสะอาดผิวที่ไม่สมบูรณ์ ทำให้มีคราบไขมัน คราบน้ำมันหล่อเย็น ชั้นออกไซด์ หรืออนุภาคสนิมหลงเหลืออยู่ สิ่งสกปรกเหล่านี้จะเป็นตัวขวางกั้นไม่ให้ไอออนของโลหะที่ชุบเกิดพันธะยึดเกาะกับโลหะพื้นผิวได้โดยตรง หากผิวยังมีคราบหลงเหลืออยู่ การชุบที่เกิดขึ้นก็จะเป็นเพียงการเคลือบทับบนสิ่งสกปรก ซึ่งพร้อมจะหลุดร่อนออกเสมอ</p>
+        <p data-i18n-key="intro_p3"><strong>2. การควบคุมสัดส่วนน้ำยาและตู้ไฟของบ่อชุบผิดพลาด:</strong> ความแม่นยำในการควบคุมสารละลายเป็นหัวใจสำคัญ หากเกิดความผิดพลาดจะส่งผลต่อโครงสร้างของชั้นเคลือบ เช่น <strong>ความหนาแน่นกระแสไฟฟ้า:</strong> หากจ่ายกระแสสูงเกินไป การสะสมตัวของโลหะจะเกิดขึ้นเร็วเกินไป ทำให้ชั้นชุบมีความเค้นภายในสูง ส่งผลให้ชั้นเคลือบเปราะ แตก และลอกง่าย ในขณะที่กระแสต่ำเกินไปก็ทำให้การยึดเกาะไม่สมบูรณ์ นอกจากนี้ อุณหภูมิ ค่าความเป็นกรดด่าง และสารเจือปนที่สะสมในบ่อ ก็สามารถขัดขวางการยึดเกาะได้เช่นกัน</p>
+        <p data-i18n-key="intro_p4"><strong>3. ความไม่เข้ากันของโลหะและการรองพื้นไม่ดี:</strong> สำหรับวัสดุบางประเภทที่ชุบติดยาก เช่น อะลูมิเนียม หรือ สแตนเลส จำเป็นต้องมีการทำชั้นรองพื้น หรือกระบวนการชุบเริ่มต้น เพื่อสร้างชั้นโลหะบางๆ ที่สามารถยึดเกาะกับโลหะพื้นผิวได้อย่างแน่นหนาก่อนเป็นตัวกลาง หากชั้นรองพื้นนี้เกิดความบกพร่อง การชุบชั้นต่อมาทั้งหมดก็จะลอกหลุดตามมาเป็นแผ่นทันที</p>
+        <p data-i18n-key="intro_p5"><strong>4. ปัจจัยหลังการชุบและการจัดการ:</strong> ความผิดพลาดในขั้นตอนสุดท้ายก็ทำให้งานลอกได้เช่นกัน ตัวอย่างเช่น การไม่อบไล่ก๊าซไฮโดรเจน สำหรับชิ้นงานเหล็กกล้าที่มีความแข็งแรงสูง หากไม่อบไล่ก๊าซไฮโดรเจนที่แทรกซึมเข้าไปในเนื้อโลหะระหว่างการชุบ จะทำให้โครงสร้างเปราะและชั้นเคลือบจะลอกหรือแตกเมื่อได้รับการกระทบกระเทือน</p>
+      </section>
 
-    <section id="compat" class="reveal section-block" aria-labelledby="compat-h">
-      <h2 id="compat-h" class="section" data-i18n-key="compat_h">ความเข้ากันได้ของโลหะ & ลำดับชั้นชุบ</h2>
-      <p class="lead" data-i18n-key="compat_p1">เลือกชั้นกลางที่เหมาะสมเพื่อลดศักย์ต่างและเพิ่มการยึดเกาะ</p>
-      <div class="table" style="margin-top:12px">
-        <table id="tbl_stack">
-          <thead>
-            <tr>
-              <th data-i18n-key="compat_tbl_h1">โลหะฐาน</th>
-              <th data-i18n-key="compat_tbl_h2">ลำดับชั้นแนะนำ</th>
-              <th data-i18n-key="compat_tbl_h3">ข้อควรระวัง</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="compat_tbl_b1">เหล็ก</td>
-              <td data-i18n-key="compat_tbl_s1">Pickle/Activate → Copper Strike/Acid Cu → Nickel (5–15 µm) → Topcoat</td>
-              <td data-i18n-key="compat_tbl_n1">หลีกเลี่ยงการจุ่มทิ้งระหว่างขั้นตอนนานเกิน</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="compat_tbl_b2">สแตนเลส</td>
-              <td data-i18n-key="compat_tbl_s2">Degrease → Wood’s Nickel Strike → Ni/Cr หรือ Cu → Ni</td>
-              <td data-i18n-key="compat_tbl_n2">ดูแลศักย์พื้นผิวและความสะอาดสูง</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="compat_tbl_b3">อะลูมิเนียม</td>
-              <td data-i18n-key="compat_tbl_s3">Double Zincate → Alkaline Cu → Acid Cu → Ni → Topcoat</td>
-              <td data-i18n-key="compat_tbl_n3">ล้างทันทีหลัง zincate/ห้ามแห้งผิว</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="compat_tbl_b4">สังกะสีไดคาสต์</td>
-              <td data-i18n-key="compat_tbl_s4">Alkaline/CN Cu Strike → Acid Cu → Ni</td>
-              <td data-i18n-key="compat_tbl_n4">คุม porosity และอุณหภูมิ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="compat_tbl_b5">ทองเหลือง/ทองแดง</td>
-              <td data-i18n-key="compat_tbl_s5">Activate → Acid Cu (ถ้าจำเป็น) → Ni → Topcoat</td>
-              <td data-i18n-key="compat_tbl_n5">หลีกเลี่ยงการ over‑etch ทำให้ผิวพรุน</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section id="prep" data-part="1" class="reveal section-block" aria-labelledby="prep-h">
+        <h2 id="prep-h" class="section" data-i18n-key="prep_h">การเตรียมผิวและการล้างไขมัน</h2>
+        <p class="lead" data-i18n-key="prep_p1">กฎเหล็กของการชุบ: "ถ้าผิวชิ้นงานไม่สะอาดและไม่เปิดรับปฏิกิริยา ต่อให้อ่างชุบสมบูรณ์แบบแค่ไหน งานก็ลอกได้"</p>
+        <ul class="nice">
+          <li data-i18n-key="prep_l1"><strong>การขจัดคราบมันและคราบจากการขึ้นรูป:</strong> ต้องใช้สารละลายด่างร้อนร่วมกับระบบอัลตราโซนิก และ/หรือ การทำความสะอาดด้วยไฟฟ้า เพื่อดึงคราบฝังลึกออกให้หมด ตามด้วยการล้างน้ำสะอาดไหลล้นหลายขั้นตอน</li>
+          <li data-i18n-key="prep_l2"><strong>การกำจัดชั้นออกไซด์และสนิม:</strong> ใช้สารละลายกรดเพื่อกัดเปิดผิว โดยต้องเลือกชนิดของกรดให้เหมาะสมกับโลหะฐาน และควบคุมระยะเวลาอย่างเคร่งครัดเพื่อหลีกเลี่ยงการกัดเซาะลึกถึงเนื้อโลหะหลัก</li>
+          <li data-i18n-key="prep_l3"><strong>การกระตุ้นผิวเฉพาะทาง:</strong> ใช้น้ำยากระตุ้นผิวแบบเจือจาง หรือ นิกเกิลแบบวูดส์ (สำหรับสแตนเลส) หรือ กระบวนการเคลือบสังกะสีนำร่องแบบสองขั้นตอน (สำหรับอะลูมิเนียม) ก่อนลงชุบจริง</li>
+          <li data-i18n-key="prep_l4"><strong>ข้อควรระวังหลังการกระตุ้นผิว:</strong> ห้ามใช้มือสัมผัสผิวชิ้นงานเด็ดขาด ต้องใช้คีมคีบหรือตะขอแขวนที่สะอาดเท่านั้น เพื่อป้องกันการปนเปื้อนจากคราบไขมันบนมือและฝุ่นละอองในอากาศ</li>
+        </ul>
 
-    <section id="post" class="reveal section-block" aria-labelledby="post-h">
-      <h2 id="post-h" class="section" data-i18n-key="post_h">ขั้นตอนหลังชุบ</h2>
-      <ul class="nice">
-        <li data-i18n-key="post_l1"><strong>การล้าง</strong>: หลายขั้น/ไหลต่อเนื่อง ลด drag‑out ไม่ให้เกลือย้อนกลับไปขั้นก่อน</li>
-        <li data-i18n-key="post_l2"><strong>ดีไอร้อน</strong>: ลดรอยน้ำและเร่งการระเหย</li>
-        <li data-i18n-key="post_l3"><strong>อบไล่ความชื้น</strong>: 80–120°C 10–30 นาที ตามชิ้นงาน</li>
-        <li data-i18n-key="post_l4"><strong>ซีล/แลคเกอร์</strong>: สำหรับทองเหลือง/เงิน/ดีบุก เพื่อลดการหมอง</li>
-        <li data-i18n-key="post_l5"><strong>ห้ามสัมผัสผิว</strong> ด้วยมือเปียก/ถุงมือสกปรกหลังชุบใหม่</li>
-      </ul>
-    </section>
+        <div class="table" style="margin-top:16px">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="prep_tbl_h1">สิ่งปนเปื้อนบนพื้นผิว</th>
+                <th data-i18n-key="prep_tbl_h2">แหล่งที่มา</th>
+                <th data-i18n-key="prep_tbl_h3">สารเคมี / วิธีการกำจัด</th>
+                <th data-i18n-key="prep_tbl_h4">ข้อสังเกตเพิ่มเติม</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="prep_tbl_c1">น้ำมันและจาระบี</td>
+                <td data-i18n-key="prep_tbl_c2">น้ำมันหล่อเย็นจากการขึ้นรูป ตัด กลึง ปั๊ม รีด</td>
+                <td data-i18n-key="prep_tbl_c3">ด่างร้อน + อัลตราโซนิก / การทำความสะอาดด้วยไฟฟ้า</td>
+                <td data-i18n-key="prep_tbl_c4">ทดสอบการเกาะตัวของน้ำบนผิวชิ้นงาน หากน้ำเคลือบเป็นแผ่นบางๆ ทั่วทั้งชิ้น ถือว่าผ่าน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="prep_tbl_c5">ออกไซด์และคราบสนิม</td>
+                <td data-i18n-key="prep_tbl_c6">เกิดจากการจัดเก็บ สัมผัสบรรยากาศ หรือผ่านความร้อน</td>
+                <td data-i18n-key="prep_tbl_c7">การกัดกรดตามชนิดของโลหะฐาน (กรดเกลือ/กรดกำมะถัน)</td>
+                <td data-i18n-key="prep_tbl_c8">ต้องควบคุมเวลาและอุณหภูมิของบ่อกรดให้แม่นยำ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="prep_tbl_c9">ชั้นพาสซีฟและคราบสเกล</td>
+                <td data-i18n-key="prep_tbl_c10">ผิวสแตนเลส หรือรอยไหม้จากการตัดด้วยเลเซอร์</td>
+                <td data-i18n-key="prep_tbl_c11">นิกเกิลแบบวูดส์ หรือ กรดกัดแก้ว (สำหรับผิวอะลูมิเนียม)</td>
+                <td data-i18n-key="prep_tbl_c12">ระมัดระวังการกัดเซาะผิวชิ้นงานมากเกินไป</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="prep_tbl_c13">สิ่งฝังตัว (ฝุ่นผงจากการขัด)</td>
+                <td data-i18n-key="prep_tbl_c14">เศษผงจากยาขัดเงา การพ่นทราย หรือการขัดด้วยมือ</td>
+                <td data-i18n-key="prep_tbl_c15">การฉีดล้างแรงดันสูง / อัลตราโซนิก / การขัดด้วยแปรงไนลอน</td>
+                <td data-i18n-key="prep_tbl_c16">ตรวจสอบความสะอาดด้วยไฟส่องเฉียงหรือแว่นขยาย</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="symptoms" class="reveal section-block" aria-labelledby="sym-h">
-      <h2 id="sym-h" class="section" data-i18n-key="sym_h">อาการ & การวินิจฉัย (Root Cause)</h2>
-      <div class="table" style="margin-top:12px">
-        <table id="tbl_symptoms">
-          <thead>
-            <tr>
-              <th data-i18n-key="sym_tbl_h1">อาการ</th>
-              <th data-i18n-key="sym_tbl_h2">สาเหตุที่เป็นไปได้</th>
-              <th data-i18n-key="sym_tbl_h3">การทดสอบยืนยัน</th>
-              <th data-i18n-key="sym_tbl_h4">วิธีแก้/ป้องกัน</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="sym_tbl_s1">ลอกทันทีหลังล้าง</td>
-              <td data-i18n-key="sym_tbl_c1">ผิวไม่สะอาด/ไม่ active, เวลาระหว่างขั้นนาน</td>
-              <td data-i18n-key="sym_tbl_t1">Water‑break, ส่องไฟเฉียง, Tape pull</td>
-              <td data-i18n-key="sym_tbl_f1">ปรับดีเกรส/พิคเคิล/activate, ลด WIP time</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="sym_tbl_s2">ลอกหลังอบ/ทนความร้อนไม่ได้</td>
-              <td data-i18n-key="sym_tbl_c2">ความเค้นภายในสูง/ความหนาไม่พอ/โลหะไม่เข้ากัน</td>
-              <td data-i18n-key="sym_tbl_t2">Heat‑quench/thermal shock, bend test</td>
-              <td data-i18n-key="sym_tbl_f2">ปรับกระแส/อุณหภูมิ/แอดิทีฟ, เพิ่มชั้นกั้น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="sym_tbl_s3">ลอกเฉพาะมุม/ขอบ/รู</td>
-              <td data-i18n-key="sym_tbl_c3">กระแสเฉพาะที่สูง/ฟอง/จับงานหลวม</td>
-              <td data-i18n-key="sym_tbl_t3">ดูแผนที่ความหนา, Hull cell</td>
-              <td data-i18n-key="sym_tbl_f3">ปรับ fixturing, anode shield, ramp‑up</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="sym_tbl_s4">ลอกเป็นแผ่นใหญ่</td>
-              <td data-i18n-key="sym_tbl_c4">ไม่มีพันธะกับโลหะฐาน (prep/activate ผิด)</td>
-              <td data-i18n-key="sym_tbl_t4">Cross‑section/SEM ภายใน, tape test</td>
-              <td data-i18n-key="sym_tbl_f4">ทบทวนลำดับล้างและ activate ใหม่</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="sym_tbl_s5">ลอกเป็นผง/ผิวผุกร่อน</td>
-              <td data-i18n-key="sym_tbl_c5">องค์ประกอบบ่อเพี้ยน/ปนเปื้อนโลหะ</td>
-              <td data-i18n-key="sym_tbl_t5">วิเคราะห์บ่อ/คาร์บอนทรีต/ไส้กรอง</td>
-              <td data-i18n-key="sym_tbl_f5">รีเฟรชบ่อบางส่วน/คาร์บอน/เพิ่มกรอง</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <section id="process" data-part="1" class="reveal section-block" aria-labelledby="proc-h">
+        <h2 id="proc-h" class="section" data-i18n-key="proc_h">การตั้งค่าพารามิเตอร์ในบ่อชุบ</h2>
+        <p class="lead" data-i18n-key="proc_p1">อ่างชุบที่สีสันดูปกติ อาจยังมีความเสี่ยงทำให้ชั้นเคลือบหลุดร่อนได้ หากพารามิเตอร์บางตัวหลุดออกจากช่วงการควบคุมมาตรฐาน</p>
 
-    <section id="qa" class="reveal section-block" aria-labelledby="qa-h">
-      <h2 id="qa-h" class="section" data-i18n-key="qa_h">QA/การทดสอบ & แผนควบคุม</h2>
-      <ul class="nice">
-        <li data-i18n-key="qa_l1"><strong>ตัวอย่างอ้างอิง/คูปอง</strong>: ชุบคูปองมาตรฐานรายกะ เพื่อตรวจแนวโน้ม</li>
-        <li data-i18n-key="qa_l2"><strong>Hull cell รายสัปดาห์</strong>: ตรวจแอดิทีฟ/หน้าต่างกระแส</li>
-        <li data-i18n-key="qa_l3"><strong>SPC</strong>: pH, อุณหภูมิ, โลหะ, สารเติมแต่ง, การนำไฟฟ้า</li>
-        <li data-i18n-key="qa_l4"><strong>Adhesion tests</strong>: tape, bend, punch, heat‑quench ตามสเปกลูกค้า</li>
-        <li data-i18n-key="qa_l5"><strong>Maintenance</strong>: ฟอกคาร์บอนตามชั่วโมงทำงาน, เปลี่ยนไส้กรอง, ทำความสะอาดถุงแอโนด</li>
-        <li data-i18n-key="qa_l6"><strong>เวลา WIP</strong>: กำหนดเวลา “สูงสุด” ระหว่างขั้นตอนที่ผิวเสี่ยงพาสซีฟ</li>
-      </ul>
-    </section>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="proc_tbl_h1">ตัวแปรสำคัญ</th>
+                <th data-i18n-key="proc_tbl_h2">ความคลาดเคลื่อนที่พบ</th>
+                <th data-i18n-key="proc_tbl_h3">ผลกระทบเมื่อหลุดช่วงการควบคุม</th>
+                <th data-i18n-key="proc_tbl_h4">แนวทางการแก้ไขและป้องกัน</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="proc_tbl_v1">ค่าความเป็นกรด-ด่าง</td>
+                <td data-i18n-key="proc_tbl_v2">สูงหรือต่ำกว่ามาตรฐานของชนิดบ่อนั้นๆ</td>
+                <td data-i18n-key="proc_tbl_v3">การยึดเกาะแย่ลง ขอบคริสตัลผิดปกติ ผิวเคลือบดูหมอง</td>
+                <td data-i18n-key="proc_tbl_v4">ปรับค่าด้วยกรดหรือด่างอย่างช้าๆ และจดบันทึกสถิติ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v5">อุณหภูมิของสารละลาย</td>
+                <td data-i18n-key="proc_tbl_v6">แกว่งเกินกว่า ±2–3°C จากค่าที่กำหนดไว้</td>
+                <td data-i18n-key="proc_tbl_v7">เปลี่ยนแปลงโครงสร้างผลึกโลหะ เพิ่มความเค้นภายในชั้นเคลือบ</td>
+                <td data-i18n-key="proc_tbl_v8">สอบเทียบเซนเซอร์ และหมั่นตรวจสอบการทำงานของเครื่องทำความร้อน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v9">ปริมาณโลหะหลัก (กรัม/ลิตร)</td>
+                <td data-i18n-key="proc_tbl_v10">ต่ำกว่าช่วงที่ผู้ผลิตสารเคมีกำหนด</td>
+                <td data-i18n-key="proc_tbl_v11">ชั้นเคลือบบางลง เปราะบาง และมีความตึงเครียดภายในสูง</td>
+                <td data-i18n-key="proc_tbl_v12">เติมสารเคมีชดเชยตามผลการวิเคราะห์ในห้องปฏิบัติการ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v13">สารเพิ่มความเงา/สารเติมแต่ง</td>
+                <td data-i18n-key="proc_tbl_v14">เติมมากเกินไป หรือขาดการเติมอย่างต่อเนื่อง</td>
+                <td data-i18n-key="proc_tbl_v15">เกิดรอยด่าง หรือหลุดลอกในบริเวณความหนาแน่นกระแสไฟฟ้าต่ำ</td>
+                <td data-i18n-key="proc_tbl_v16">ควบคุมอัตราการเติมตามแอมแปร์-ชั่วโมง และตรวจสอบด้วยฮัลล์เซลล์</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v17">ระบบกรองและการหมุนเวียน</td>
+                <td data-i18n-key="proc_tbl_v18">อัตราการไหลเวียนต่ำกว่า 5 เท่าของปริมาตรบ่อต่อชั่วโมง</td>
+                <td data-i18n-key="proc_tbl_v19">สิ่งแปลกปลอมและตะกอนไปเกาะที่ผิวงาน ทำให้เกิดจุดหลุดลอก</td>
+                <td data-i18n-key="proc_tbl_v20">ทำความสะอาดไส้กรอง และตรวจสอบอาการอุดตันของปั๊ม</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v21">ขั้วบวกและขั้วลบ</td>
+                <td data-i18n-key="proc_tbl_v22">ระยะห่างไม่ถูกต้อง หรือถุงหุ้มขั้วบวกขาด</td>
+                <td data-i18n-key="proc_tbl_v23">กระแสไฟกระจายไม่สม่ำเสมอ ฟิล์มที่ได้ผิดปกติและลอกได้ง่าย</td>
+                <td data-i18n-key="proc_tbl_v24">ทำความสะอาดถุงผ้าหุ้มขั้วบวก และตรวจสอบการจัดวางชิ้นงาน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="proc_tbl_v25">กระแสไฟฟ้าและเวลาการชุบ</td>
+                <td data-i18n-key="proc_tbl_v26">จ่ายกระแสสูงเกินไปในระยะเวลาที่สั้นเกินไป</td>
+                <td data-i18n-key="proc_tbl_v27">ผิวงานเปราะบาง เกิดฟองก๊าซ และไหม้หรือลอกที่บริเวณขอบ</td>
+                <td data-i18n-key="proc_tbl_v28">ใช้ระบบค่อยๆ เพิ่มกระแสไฟ และจับยึดชิ้นงานให้แน่นหนา</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="summary" class="reveal section-block" aria-labelledby="sum-h">
-      <h2 id="sum-h" class="section" data-i18n-key="sum_h">สรุป</h2>
-      <p data-i18n-key="sum_p1">การลอกมักเป็นผลรวมของหลายปัจจัย: ผิวไม่สะอาด/ไม่ active, บ่อหลุดคุม, ลำดับชั้นไม่เหมาะ, และงานหลังชุบที่ไม่ครบถ้วน</p>
-      <p data-i18n-key="sum_p2">ตั้งระบบความสะอาด + activate เฉพาะทาง, คุมพารามิเตอร์บ่อด้วย SPC/Hull cell, เลือกลำดับชั้นชุบให้เข้ากัน และปิดงานด้วยการล้าง‑อบ‑ซีลอย่างถูกต้อง คือแกนหลักของการลดการลอกอย่างยั่งยืน</p>
-    </section>
+      <!-- Sections Part 2 -->
+      <section id="compat" data-part="2" class="reveal section-block" aria-labelledby="compat-h" hidden>
+        <h2 id="compat-h" class="section" data-i18n-key="compat_h">ความเข้ากันได้ของโลหะและชั้นรองพื้น</h2>
+        <p class="lead" data-i18n-key="compat_p1">การเลือกใช้ชั้นโลหะรองพื้นที่เหมาะสม จะช่วยลดความแตกต่างของศักย์ไฟฟ้าและเพิ่มพลังการยึดเกาะระหว่างโลหะได้อย่างมหาศาล</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n-key="compat_tbl_h1">ชนิดของโลหะฐาน</th>
+                <th data-i18n-key="compat_tbl_h2">ลำดับชั้นรองพื้นที่แนะนำ (Stack Design)</th>
+                <th data-i18n-key="compat_tbl_h3">ข้อควรระวังสำคัญ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="compat_tbl_b1">เหล็กกล้าคาร์บอน</td>
+                <td data-i18n-key="compat_tbl_s1">กัดกรด/กระตุ้นผิว → ชั้นชุบทองแดงเริ่มต้น → นิกเกิล → เคลือบผิวชั้นบน</td>
+                <td data-i18n-key="compat_tbl_n1">หลีกเลี่ยงการปล่อยชิ้นงานแช่ทิ้งไว้ในน้ำล้างระหว่างขั้นตอนนานเกินไป</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="compat_tbl_b2">สแตนเลสสตีล</td>
+                <td data-i18n-key="compat_tbl_s2">ล้างไขมัน → นิกเกิลแบบวูดส์ → นิกเกิลเงา หรือ ทองแดง</td>
+                <td data-i18n-key="compat_tbl_n2">ต้องดูแลกระบวนการกระตุ้นผิวสแตนเลสให้มีความเข้มข้นและสะอาดสูงสุด</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="compat_tbl_b3">อะลูมิเนียมอัลลอย</td>
+                <td data-i18n-key="compat_tbl_s3">กระบวนการเคลือบสังกะสีนำร่อง 2 รอบ → ทองแดงด่าง → ทองแดงกรด → นิกเกิล</td>
+                <td data-i18n-key="compat_tbl_n3">ต้องล้างน้ำทันทีหลังจากเคลือบสังกะสีนำร่อง ห้ามปล่อยให้ผิวอะลูมิเนียมแห้ง</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="compat_tbl_b4">สังกะสีไดคาสต์</td>
+                <td data-i18n-key="compat_tbl_s4">ชั้นชุบทองแดงด่างแบบไร้ไซยาไนด์ → ทองแดงกรด → นิกเกิล</td>
+                <td data-i18n-key="compat_tbl_n4">ควบคุมความพรุนของผิวสังกะสีและอุณหภูมิของบ่อชุบไม่ให้สูงเกินไป</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="compat_tbl_b5">ทองเหลืองและทองแดง</td>
+                <td data-i18n-key="compat_tbl_s5">กระตุ้นผิวด้วยกรดอ่อน → นิกเกิล → เคลือบผิวชั้นบนสุด</td>
+                <td data-i18n-key="compat_tbl_n5">หลีกเลี่ยงการกัดผิวทองเหลืองแรงเกินไปจนทำให้ผิวสูญเสียสังกะสีและเกิดรูพรุน</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <section id="links" class="reveal section-block" aria-labelledby="links-h">
-      <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์/คู่มือที่เกี่ยวข้อง</h2>
-      <ul class="nice">
-        <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener" data-i18n-key="links_l1">หมวดผลิตภัณฑ์งานชุบ</a></li>
-        <li><a href="https://www.baumechemical.com/blog/" target="_blank" rel="noopener" data-i18n-key="links_l2">บทความ/คู่มืออื่น ๆ</a></li>
-        <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener" data-i18n-key="links_l3">Pretreatment</a></li>
-        <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener" data-i18n-key="links_l4">Protective Treatment</a></li>
-      </ul>
-    </section>
+      <section id="post" data-part="2" class="reveal section-block" aria-labelledby="post-h" hidden>
+        <h2 id="post-h" class="section" data-i18n-key="post_h">การจัดการหลังการชุบ (การอบไล่ก๊าซและซีลผิว)</h2>
+        <ul class="nice">
+          <li data-i18n-key="post_l1"><strong>การล้างทำความสะอาด:</strong> ควรใช้ระบบล้างน้ำหลายขั้นตอนแบบไหลต่อเนื่อง เพื่อล้างสารเคมีและเกลือตกค้างออกให้หมด ป้องกันไม่ให้เกิดคราบด่างย้อนกลับ</li>
+          <li data-i18n-key="post_l2"><strong>การล้างด้วยน้ำบริสุทธิ์อุณหภูมิสูง:</strong> ช่วยลดรอยคราบหยดน้ำบนผิวชิ้นงาน และเร่งให้ความชื้นระเหยออกไปได้เร็วขึ้น</li>
+          <li data-i18n-key="post_l3"><strong>การอบไล่ก๊าซไฮโดรเจนและความชื้น:</strong> อบที่อุณหภูมิ 80–120 องศาเซลเซียส เป็นเวลา 10–30 นาที ขึ้นอยู่กับขนาดและประเภทของชิ้นงาน เพื่อป้องกันความเปราะบาง</li>
+          <li data-i18n-key="post_l4"><strong>การซีลผิวหรือเคลือบแลคเกอร์:</strong> เป็นขั้นตอนสำคัญสำหรับโลหะที่มีโอกาสทำปฏิกิริยากับอากาศสูง เช่น ทองเหลือง เงิน หรือดีบุก เพื่อป้องกันความหมองคล้ำและการกัดกร่อน</li>
+          <li data-i18n-key="post_l5"><strong>กฎด้านสุขอนามัยหลังชุบ:</strong> ห้ามใช้มือเปล่าที่เปียกชื้น หรือถุงมือที่เปื้อนคราบสกปรก สัมผัสกับชิ้นงานที่เพิ่งชุบเสร็จใหม่ๆ โดยเด็ดขาด</li>
+        </ul>
+      </section>
+
+      <section id="symptoms" data-part="2" class="reveal section-block" aria-labelledby="sym-h" hidden>
+        <h2 id="sym-h" class="section" data-i18n-key="sym_h">ตารางวิเคราะห์อาการและวิธีแก้ไข (Troubleshooting)</h2>
+        <div class="table">
+          <table id="tbl_symptoms">
+            <thead>
+              <tr>
+                <th data-i18n-key="sym_tbl_h1">ลักษณะอาการที่พบ</th>
+                <th data-i18n-key="sym_tbl_h2">สาเหตุเชิงลึกที่เป็นไปได้</th>
+                <th data-i18n-key="sym_tbl_h3">วิธีการทดสอบเพื่อยืนยัน</th>
+                <th data-i18n-key="sym_tbl_h4">วิธีแก้ไขและมาตรการป้องกัน</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-key="sym_tbl_s1">ผิวเคลือบลอกเป็นแผ่นทันทีหลังล้างน้ำเสร็จ</td>
+                <td data-i18n-key="sym_tbl_c1">พื้นผิวเดิมไม่สะอาด การกระตุ้นผิวไม่สมบูรณ์ หรือทิ้งช่วงรอระหว่างขั้นตอนนานเกินไป</td>
+                <td data-i18n-key="sym_tbl_t1">ทดสอบการเกาะตัวของน้ำบนผิวชิ้นงาน, ส่องดูด้วยไฟฉายเฉียง, ทดสอบดึงด้วยเทปกาว</td>
+                <td data-i18n-key="sym_tbl_f1">ปรับปรุงความเข้มข้นของบ่อล้างไขมันและบ่อกรด และลดเวลาการเคลื่อนย้ายชิ้นงาน</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="sym_tbl_s2">ผิวเคลือบลอกหลังจากเข้าเตาอบ หรือทนความร้อนไม่ได้</td>
+                <td data-i18n-key="sym_tbl_c2">ความเค้นภายในของชั้นเคลือบสูงเกินไป ความหนาไม่เพียงพอ หรือโลหะรองพื้นไม่เข้ากัน</td>
+                <td data-i18n-key="sym_tbl_t2">ทดสอบการเปลี่ยนแปลงอุณหภูมิแบบฉับพลัน, ทดสอบการดัดงอชิ้นงาน</td>
+                <td data-i18n-key="sym_tbl_f2">ปรับลดกระแสไฟฟ้าและอุณหภูมิบ่อชุบ ตรวจสอบสารเติมแต่ง หรือเพิ่มชั้นโลหะรองพื้น</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="sym_tbl_s3">ผิวลอกเฉพาะบริเวณมุม ขอบ หรือในรูลึก</td>
+                <td data-i18n-key="sym_tbl_c3">กระแสไฟฟ้ากระจุกตัวเฉพาะจุด มีฟองอากาศสะสม หรือการจับยึดชิ้นงานหลวมเกินไป</td>
+                <td data-i18n-key="sym_tbl_t3">วัดความหนาของชั้นเคลือบแต่ละจุด, นำน้ำยาไปทดสอบด้วยฮัลล์เซลล์</td>
+                <td data-i18n-key="sym_tbl_f3">ปรับเปลี่ยนรูปแบบการแขวนชิ้นงาน ใช้แผ่นกันกระแสไฟฟ้า และค่อยๆ เพิ่มกระแสไฟตอนเริ่มชุบ</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="sym_tbl_s4">ลอกหลุดร่อนออกเป็นแผ่นขนาดใหญ่</td>
+                <td data-i18n-key="sym_tbl_c4">ชั้นเคลือบไม่เกิดพันธะกับโลหะพื้นผิวโดยสิ้นเชิง (ความผิดพลาดในขั้นตอนเปิดผิว)</td>
+                <td data-i18n-key="sym_tbl_t4">ตัดชิ้นงานเพื่อส่องกล้องจุลทรรศน์อิเล็กตรอนดูรอยต่อ, ทดสอบดึงด้วยเทปกาว</td>
+                <td data-i18n-key="sym_tbl_f4">รื้อและทบทวนลำดับขั้นตอนการล้างและการกระตุ้นผิวในสายการผลิตใหม่ทั้งหมด</td>
+              </tr>
+              <tr>
+                <td data-i18n-key="sym_tbl_s5">ชั้นเคลือบลอกเป็นผง หรือผิวดูผุกร่อน</td>
+                <td data-i18n-key="sym_tbl_c5">องค์ประกอบทางเคมีของอ่างชุบผิดเพี้ยน หรือมีการปนเปื้อนของโลหะหนักชนิดอื่น</td>
+                <td data-i18n-key="sym_tbl_t5">ส่งตัวอย่างน้ำยาไปวิเคราะห์ในห้องปฏิบัติการ ทำการบำบัดด้วยคาร์บอน</td>
+                <td data-i18n-key="sym_tbl_f5">ถ่ายน้ำยาออกบางส่วนแล้วผสมใหม่ ทำคาร์บอนทรีตเมนต์ และเพิ่มความละเอียดของไส้กรอง</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="qa" data-part="2" class="reveal section-block" aria-labelledby="qa-h" hidden>
+        <h2 id="qa-h" class="section" data-i18n-key="qa_h">การควบคุมคุณภาพและการทดสอบ</h2>
+        <ul class="nice">
+          <li data-i18n-key="qa_l1"><strong>ชิ้นงานตัวอย่างอ้างอิง:</strong> ควรทำการชุบชิ้นงานตัวอย่างมาตรฐานในแต่ละกะการทำงาน เพื่อใช้ตรวจสอบแนวโน้มของคุณภาพงาน</li>
+          <li data-i18n-key="qa_l2"><strong>ทดสอบด้วยฮัลล์เซลล์รายสัปดาห์:</strong> เพื่อตรวจสอบประสิทธิภาพของสารเติมแต่งและประเมินหน้าต่างการจ่ายกระแสไฟฟ้าที่เหมาะสม</li>
+          <li data-i18n-key="qa_l3"><strong>แผนภูมิควบคุมกระบวนการทางสถิติ:</strong> จดบันทึกค่าความเป็นกรด-ด่าง, อุณหภูมิ, ความเข้มข้นโลหะ, ปริมาณสารเติมแต่ง, และความนำไฟฟ้า เพื่อวิเคราะห์ความเสถียรของระบบ</li>
+          <li data-i18n-key="qa_l4"><strong>การทดสอบการยึดเกาะ:</strong> ทำการทดสอบด้วยเทปกาว, การดัดงอ, หรือการทดสอบด้วยความร้อนฉับพลัน ตามมาตรฐานที่ลูกค้ากำหนดอย่างเคร่งครัด</li>
+          <li data-i18n-key="qa_l5"><strong>ตารางการบำรุงรักษาอ่าง:</strong> กำหนดรอบการบำบัดน้ำยาด้วยคาร์บอน การเปลี่ยนไส้กรอง และการนำถุงผ้าหุ้มขั้วบวกมาซักทำความสะอาดตามระยะเวลาที่ชัดเจน</li>
+          <li data-i18n-key="qa_l6"><strong>ควบคุมเวลารอคอย:</strong> กำหนดเวลา "สูงสุด" ที่อนุญาตให้ชิ้นงานรอในอากาศระหว่างขั้นตอน เพื่อป้องกันไม่ให้พื้นผิวโลหะเกิดการสร้างชั้นออกไซด์ขึ้นมาใหม่</li>
+        </ul>
+      </section>
+
+      <section id="summary" data-part="2" class="reveal section-block" aria-labelledby="sum-h" hidden>
+        <h2 id="summary-h" class="section" data-i18n-key="sum_h">บทสรุป</h2>
+        <p data-i18n-key="sum_p1">ปัญหาชั้นชุบลอกหลุดร่อน มักเป็นผลรวมของความบกพร่องจากหลายปัจจัยรวมกัน ตั้งแต่ผิวชิ้นงานที่ไม่สะอาดหรือไม่ได้ถูกกระตุ้นอย่างถูกต้อง, สารเคมีในบ่อชุบที่หลุดออกจากการควบคุมมาตรฐาน, การจัดลำดับชั้นโลหะรองพื้นที่ไม่สอดคล้องกัน, และการละเลยกระบวนการล้างและอบแห้งในขั้นตอนสุดท้าย</p>
+        <p data-i18n-key="sum_p2">การวางระบบทำความสะอาดและกระตุ้นผิวที่แม่นยำ, การควบคุมสัดส่วนน้ำยาและตู้ไฟของบ่อชุบด้วยเครื่องมือวิเคราะห์, การเลือกลำดับชั้นเคลือบโลหะให้เข้ากันทางเคมีไฟฟ้า, และการจบงานด้วยการล้าง อบ และซีลผิวอย่างถูกวิธี คือแกนหลักสำคัญที่จะช่วยป้องกันและลดปัญหาการลอกของชิ้นงานชุบเคลือบผิวได้อย่างยั่งยืนและเป็นมืออาชีพครับ</p>
+      </section>
+
+      <section id="links" data-part="2" class="reveal section-block" aria-labelledby="links-h" hidden>
+        <h2 id="links-h" class="section" data-i18n-key="links_h">ลิงก์ที่เกี่ยวข้อง</h2>
+        <ul class="nice">
+          <li><a href="https://www.baumechemical.com/products/platingcoating/" target="_blank" rel="noopener" data-i18n-key="links_l1">หมวดหมู่ผลิตภัณฑ์งานชุบเคลือบผิว (Plating & Coating)</a></li>
+          <li><a href="https://www.baumechemical.com/products/pretreatment/" target="_blank" rel="noopener" data-i18n-key="links_l3">หมวดหมู่ผลิตภัณฑ์เตรียมผิวก่อนชุบ (Pretreatment)</a></li>
+          <li><a href="https://www.baumechemical.com/products/protective/" target="_blank" rel="noopener" data-i18n-key="links_l4">หมวดหมู่ผลิตภัณฑ์เคลือบปกป้องผิวและสารกันหมอง</a></li>
+          <li><a href="https://www.baumechemical.com/blog/salt-spray-quick-guide/" target="_blank" rel="noopener" data-i18n-key="link_salt">บทความ: คู่มือทดสอบการพ่นละอองเกลือและการอ่านผล</a></li>
+        </ul>
+      </section>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <section class="footer-brand">
-          <div class="ft-head"><div class="ft-logo"></div><div class="ft-name">Baume Chemical</div></div>
+          <div class="ft-head">
+            <div class="ft-logo" aria-hidden="true"></div>
+            <div class="ft-name">Baume Chemical</div>
+          </div>
           <ul class="footer-list">
-            <li>📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
-            <li>📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
-            <li>🕒 เวลาทำการ 08.00 - 17.00 น.</li>
-            <li>📱 <a href="tel:+66925469887">092 546 9887</a></li>
+            <li data-i18n-key="addr_1">📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก</li>
+            <li data-i18n-key="addr_2">📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160</li>
+            <li data-i18n-key="addr_3">🕒 เวลาทำการ 08.00 - 17.00 น.</li>
+            <li data-i18n-key="addr_4">📱 092 546 9887</li>
           </ul>
         </section>
 
@@ -652,231 +605,226 @@
           </ul>
         </section>
       </div>
-      <div class="footer-bottom"><div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div></div>
+
+      <div class="footer-bottom">
+        <div data-i18n-key="footer_copy">© 2026 Baume Chemical Co., Ltd. All rights reserved.</div>
+      </div>
     </div>
   </footer>
+
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- JS: Reveal on scroll -->
+  <!-- ===== JS ===== -->
   <script>
     const revealEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver((entries,obs)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-    }, {threshold:.18});
+    }, {threshold:.1});
     revealEls.forEach(el=>revObs.observe(el));
   </script>
 
-  <!-- JS: i18n dictionary + switch -->
   <script>
+    // Translations Data
     const I18N = {
       th: {
-        /* Nav */
+        title:"อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← กลับสู่หน้า Blog",
+        back_home: "← กลับหน้าบทความ",
+        hero_title: "อาการโลหะที่ชุบด้วยไฟฟ้าแล้วลอก: สาเหตุและการป้องกัน",
+        hero_tagline: "เจาะลึกตั้งแต่การเตรียมผิว การจัดการบ่อชุบ ความเข้ากันได้ของโลหะ การอบไล่ความชื้น ไปจนถึงมาตรการควบคุมคุณภาพเพื่อป้องกันการลอกอย่างยั่งยืน",
+        
+        part1:"ส่วนที่ 1: สาเหตุหลักและการเตรียมการ",
+        part2:"ส่วนที่ 2: การรองพื้น การทดสอบ และสรุป",
 
-        /* Hero */
-        hero_title:"สาเหตุและวิธีแก้ไขของการชุบโลหะแล้วลอก",
-        hero_tagline:"คู่มือเจาะลึกตั้งแต่การเตรียมผิว เงื่อนไขบ่อ ความเข้ากันได้ของโลหะ ขั้นตอนหลังชุบ อาการและการวินิจฉัย ไปจนถึงมาตรการ QA เพื่อป้องกันการลอกอย่างยั่งยืน",
+        toc_title: "สารบัญ",
+        toc_intro: "ทำไมงานชุบถึงลอก? (ภาพรวม)",
+        toc_prep: "การเตรียมผิวและการล้างไขมัน",
+        toc_process: "การตั้งค่าพารามิเตอร์ในบ่อชุบ",
+        toc_compat: "ความเข้ากันได้ของชั้นโลหะ",
+        toc_post: "การจัดการหลังการชุบ (การอบไล่ก๊าซ)",
+        toc_symptoms: "ตารางวิเคราะห์อาการและวิธีแก้ไข",
+        toc_qa: "การควบคุมคุณภาพและการทดสอบ",
+        toc_links: "ลิงก์ที่เกี่ยวข้อง",
 
-        /* TOC */
-        toc_title:"สารบัญ",
-        toc_intro:"บทนำ",
-        toc_prep:"การเตรียมผิว",
-        toc_process:"เงื่อนไขบ่อ & พารามิเตอร์",
-        toc_compat:"ความเข้ากันได้ของโลหะ",
-        toc_post:"ขั้นตอนหลังชุบ",
-        toc_symptoms:"อาการ & การวินิจฉัย",
-        toc_qa:"QA/การทดสอบ",
-        toc_summary:"สรุป",
-        toc_links:"ลิงก์ที่เกี่ยวข้อง",
+        intro_h: "บทนำ: ทำไมงานชุบถึงลอก?",
+        intro_p1: "การที่ชั้นเคลือบโลหะลอกหลุด ส่งผลกระทบโดยตรงต่อภาพลักษณ์ ความทนทาน และความน่าเชื่อถือของผลิตภัณฑ์ สาเหตุของการลอกนั้นไม่ได้เกิดจากจุดใดจุดหนึ่งเพียงจุดเดียว แต่เป็นผลลัพธ์ที่เชื่อมโยงกันตลอดทั้งสายการผลิต ตั้งแต่การเตรียมผิว การตั้งค่าสัดส่วนน้ำยาและตู้ไฟของบ่อชุบ ความเข้ากันได้ของโลหะ ไปจนถึงการล้าง การอบแห้ง และการจัดการหลังการชุบ",
+        intro_p2: "<strong>1. ความผิดพลาดในการเตรียมผิว:</strong> นี่คือสาเหตุอันดับหนึ่งของการหลุดร่อน การทำความสะอาดผิวที่ไม่สมบูรณ์ ทำให้มีคราบไขมัน คราบน้ำมันหล่อเย็น ชั้นออกไซด์ หรืออนุภาคสนิมหลงเหลืออยู่ สิ่งสกปรกเหล่านี้จะเป็นตัวขวางกั้นไม่ให้ไอออนของโลหะที่ชุบเกิดพันธะยึดเกาะกับโลหะพื้นผิวได้โดยตรง หากผิวยังมีคราบหลงเหลืออยู่ การชุบที่เกิดขึ้นก็จะเป็นเพียงการเคลือบทับบนสิ่งสกปรก ซึ่งพร้อมจะหลุดร่อนออกเสมอ",
+        intro_p3: "<strong>2. การควบคุมสัดส่วนน้ำยาและตู้ไฟของบ่อชุบผิดพลาด:</strong> ความแม่นยำในการควบคุมสารละลายเป็นหัวใจสำคัญ หากเกิดความผิดพลาดจะส่งผลต่อโครงสร้างของชั้นเคลือบ เช่น <strong>ความหนาแน่นกระแสไฟฟ้า:</strong> หากจ่ายกระแสสูงเกินไป การสะสมตัวของโลหะจะเกิดขึ้นเร็วเกินไป ทำให้ชั้นชุบมีความเค้นภายในสูง ส่งผลให้ชั้นเคลือบเปราะ แตก และลอกง่าย ในขณะที่กระแสต่ำเกินไปก็ทำให้การยึดเกาะไม่สมบูรณ์ นอกจากนี้ อุณหภูมิ ค่าความเป็นกรดด่าง และสารเจือปนที่สะสมในบ่อ ก็สามารถขัดขวางการยึดเกาะได้เช่นกัน",
+        intro_p4: "<strong>3. ความไม่เข้ากันของโลหะและการรองพื้นไม่ดี:</strong> สำหรับวัสดุบางประเภทที่ชุบติดยาก เช่น อะลูมิเนียม หรือ สแตนเลส จำเป็นต้องมีการทำชั้นรองพื้น หรือกระบวนการชุบเริ่มต้น เพื่อสร้างชั้นโลหะบางๆ ที่สามารถยึดเกาะกับโลหะพื้นผิวได้อย่างแน่นหนาก่อนเป็นตัวกลาง หากชั้นรองพื้นนี้เกิดความบกพร่อง การชุบชั้นต่อมาทั้งหมดก็จะลอกหลุดตามมาเป็นแผ่นทันที",
+        intro_p5: "<strong>4. ปัจจัยหลังการชุบและการจัดการ:</strong> ความผิดพลาดในขั้นตอนสุดท้ายก็ทำให้งานลอกได้เช่นกัน ตัวอย่างเช่น การไม่อบไล่ก๊าซไฮโดรเจน สำหรับชิ้นงานเหล็กกล้าที่มีความแข็งแรงสูง หากไม่อบไล่ก๊าซไฮโดรเจนที่แทรกซึมเข้าไปในเนื้อโลหะระหว่างการชุบ จะทำให้โครงสร้างเปราะและชั้นเคลือบจะลอกหรือแตกเมื่อได้รับการกระทบกระเทือน",
 
-        /* Intro */
-        intro_h:"บทนำ: ทำไมงานชุบถึงลอก",
-intro_p1:"ชั้นชุบลอกส่งผลทันทีต่อภาพลักษณ์ ความทนทาน และความน่าเชื่อถือของผลิตภัณฑ์ สาเหตุไม่ได้มาจากจุดเดียว แต่เชื่อมโยงตั้งแต่การเตรียมผิว พารามิเตอร์ของบ่อ ความเข้ากันได้ของโลหะ ไปจนถึงการล้าง อบแห้ง ซีล และการจัดการหลังชุบ",
-intro_p2:"1. ความสะอาดในการเตรียมผิว (Pre-treatment Failure) นี่คือสาเหตุอันดับหนึ่งของการลอก การทำความสะอาดผิวที่ไม่สมบูรณ์ คือปัจจัยหลัก โดยมีคราบไขมัน คราบน้ำมัน สารออกไซด์ หรืออนุภาคสนิมหลงเหลืออยู่ ซึ่งเป็นตัวขวางกั้นไม่ให้โลหะชุบยึดเกาะกับโลหะพื้นผิวได้โดยตรง หากผิวยังมีคราบหลงเหลืออยู่ การชุบที่เกิดขึ้นก็จะเป็นเพียงการเคลือบทับบนสิ่งสกปรกเท่านั้น",
-intro_p3:"2. การควบคุมพารามิเตอร์บ่อชุบผิดพลาด (Plating Bath Parameter Errors) ความแม่นยำในการควบคุมสารละลายเป็นหัวใจสำคัญ หากเกิดความผิดพลาดจะส่งผลต่อโครงสร้างของชั้นชุบ: กระแสไฟฟ้า (Current Density): การใช้กระแสที่สูงเกินไปทำให้เกิดการชุบเร็ว ชั้นชุบมีความเค้นภายในสูง (High Internal Stress) ทำให้ชั้นชุบเปราะ แตก และลอกง่าย ในขณะที่กระแสต่ำเกินไปก็ทำให้การยึดเกาะไม่สมบูรณ์ อุณหภูมิ, pH, ความเข้มข้น: การเบี่ยงเบนจากค่ามาตรฐานเพียงเล็กน้อย อาจทำให้สูตรเคมีไม่สมดุล โครงสร้างผลึกผิดรูป หรือเกิดการตกตะกอนที่ไม่พึงประสงค์ สิ่งเจือปน (Impurities): การสะสมของโลหะแปลกปลอมหรือสารอินทรีย์ในบ่อชุบ จะขัดขวางการยึดเกาะในบริเวณที่มีการสะสมสูง",
-intro_p4:"3. ความไม่เข้ากันของโลหะและการรองพื้นไม่ดี (Compatibility & Strike Layer Issues) สำหรับวัสดุที่ชุบยาก เช่น อะลูมิเนียม หรือ สแตนเลส จำเป็นต้องใช้ Strike Layer (เช่น ทองแดงไพรเมอร์ หรือกระบวนการ Zincate) เพื่อสร้างชั้นบาง ๆ ที่มีการยึดเกาะกับโลหะพื้นผิวได้ดีเป็นตัวกลางก่อน หากชั้นไพรเมอร์นี้มีความบกพร่อง การชุบชั้นต่อมาทั้งหมดก็จะลอกตามมาทันที",
-intro_p5:"4. ปัจจัยหลังการชุบและการจัดการ (Post-treatment & Handling) ความผิดพลาดในขั้นตอนสุดท้ายก็ทำให้ลอกได้: การอบไล่ไฮโดรเจน (Baking for Hydrogen Embrittlement Relief): สำหรับชิ้นงานเหล็กที่มีความแข็งแรงสูง (High-Tensile Steel) หากไม่อบไล่ไฮโดรเจนที่สะสมระหว่างการชุบ จะทำให้ชั้นชุบเปราะและลอกเมื่อได้รับการกระทบ การเกิดการกัดกร่อนภายใต้รอยซีล: การใช้สารซีล (Passivation/Sealer) ที่ไม่เหมาะสมกับโลหะชั้นนอกสุด อาจก่อให้เกิดปฏิกิริยาการกัดกร่อนแบบ Galvanic Corrosion ที่ใต้ชั้นชุบ ทำให้เกิดการลอกในระยะยาว",
-        /* Prep */
-        prep_h:"การเตรียมผิว",
-        prep_p1:"ถ้าผิวไม่สะอาดและไม่ active ต่อให้บ่อสมบูรณ์ งานก็ลอกได้",
-        prep_l1:"ขจัดคราบมัน/คราบขึ้นรูป ด้วยด่างร้อน + อัลตราโซนิก และ/หรือไฟฟ้าด่าง (Electrocleaning) ตามด้วยล้างน้ำหลายขั้น",
-        prep_l2:"กำจัดออกไซด์/สนิม/ชั้นพาสซีฟ ใช้ Pickle ที่เหมาะกับโลหะฐาน และควบคุมเวลาเพื่อหลีกเลี่ยงการกัดลงเนื้อ",
-        prep_l3:"Activate ด้วยกรดเจือจาง/strike กรดไฟฟ้า/ Wood’s Nickel (สำหรับสแตนเลส) หรือ Double Zincate (สำหรับอะลูมิเนียม)",
-        prep_l4:"อย่าแตะผิวหลัง activate ใช้คีม/ตะขอที่สะอาด ป้องกันการปนเปื้อนจากมือและอากาศ",
-        prep_tbl_h1:"สิ่งปนเปื้อน", prep_tbl_h2:"ที่มา", prep_tbl_h3:"วิธีแก้/เคมีที่ใช้", prep_tbl_h4:"หมายเหตุ",
-        prep_tbl_c1:"น้ำมัน/จาระบี", prep_tbl_c2:"ขึ้นรูป ตัด กลึง ปั๊ม รีด", prep_tbl_c3:"ด่างร้อน + อัลตราโซนิก / ไฟฟ้าด่าง / ตัวทำละลาย", prep_tbl_c4:"ทดสอบน้ำกรดไหลแผ่ (water-break) ต้องผ่าน",
-        prep_tbl_c5:"ออกไซด์/สนิม", prep_tbl_c6:"การเก็บ/บรรยากาศ/ความร้อน", prep_tbl_c7:"Pickle ตามโลหะฐาน (HCl/H2SO4/ผสม), Inhibitor", prep_tbl_c8:"ควบคุมเวลาและอุณหภูมิ",
-        prep_tbl_c9:"ชั้นพาสซีฟ/สเกล", prep_tbl_c10:"สแตนเลส/อบชุบความร้อน/เลเซอร์สเกล", prep_tbl_c11:"Wood’s Nickel Strike / HF‑based สำหรับ Al (ผ่าน zincate)", prep_tbl_c12:"หลีกเลี่ยงการ over‑etch",
-        prep_tbl_c13:"สิ่งฝังตัว (ฝุ่น/ผงขัด)", prep_tbl_c14:"ขัด/พ่นทราย/ขัดแฮนด์", prep_tbl_c15:"ล้างแรงดัน/อัลตราโซนิก/แปรงไนลอน", prep_tbl_c16:"ตรวจด้วยไฟเฉียง/กล้องขยาย",
+        prep_h: "การเตรียมผิวและการล้างไขมัน",
+        prep_p1: "กฎเหล็กของการชุบ: \"ถ้าผิวชิ้นงานไม่สะอาดและไม่เปิดรับปฏิกิริยา ต่อให้อ่างชุบสมบูรณ์แบบแค่ไหน งานก็ลอกได้\"",
+        prep_l1: "<strong>การขจัดคราบมันและคราบจากการขึ้นรูป:</strong> ต้องใช้สารละลายด่างร้อนร่วมกับระบบอัลตราโซนิก และ/หรือ การทำความสะอาดด้วยไฟฟ้า เพื่อดึงคราบฝังลึกออกให้หมด ตามด้วยการล้างน้ำสะอาดไหลล้นหลายขั้นตอน",
+        prep_l2: "<strong>การกำจัดชั้นออกไซด์และสนิม:</strong> ใช้สารละลายกรดเพื่อกัดเปิดผิว โดยต้องเลือกชนิดของกรดให้เหมาะสมกับโลหะฐาน และควบคุมระยะเวลาอย่างเคร่งครัดเพื่อหลีกเลี่ยงการกัดเซาะลึกถึงเนื้อโลหะหลัก",
+        prep_l3: "<strong>การกระตุ้นผิวเฉพาะทาง:</strong> ใช้น้ำยากระตุ้นผิวแบบเจือจาง หรือ นิกเกิลแบบวูดส์ (สำหรับสแตนเลส) หรือ กระบวนการเคลือบสังกะสีนำร่องแบบสองขั้นตอน (สำหรับอะลูมิเนียม) ก่อนลงชุบจริง",
+        prep_l4: "<strong>ข้อควรระวังหลังการกระตุ้นผิว:</strong> ห้ามใช้มือสัมผัสผิวชิ้นงานเด็ดขาด ต้องใช้คีมคีบหรือตะขอแขวนที่สะอาดเท่านั้น เพื่อป้องกันการปนเปื้อนจากคราบไขมันบนมือและฝุ่นละอองในอากาศ",
+        
+        prep_tbl_h1: "สิ่งปนเปื้อนบนพื้นผิว", prep_tbl_h2: "แหล่งที่มา", prep_tbl_h3: "สารเคมี / วิธีการกำจัด", prep_tbl_h4: "ข้อสังเกตเพิ่มเติม",
+        prep_tbl_c1: "น้ำมันและจาระบี", prep_tbl_c2: "น้ำมันหล่อเย็นจากการขึ้นรูป ตัด กลึง ปั๊ม รีด", prep_tbl_c3: "ด่างร้อน + อัลตราโซนิก / การทำความสะอาดด้วยไฟฟ้า", prep_tbl_c4: "ทดสอบการเกาะตัวของน้ำบนผิวชิ้นงาน หากน้ำเคลือบเป็นแผ่นบางๆ ทั่วทั้งชิ้น ถือว่าผ่าน",
+        prep_tbl_c5: "ออกไซด์และคราบสนิม", prep_tbl_c6: "เกิดจากการจัดเก็บ สัมผัสบรรยากาศ หรือผ่านความร้อน", prep_tbl_c7: "การกัดกรดตามชนิดของโลหะฐาน (กรดเกลือ/กรดกำมะถัน)", prep_tbl_c8: "ต้องควบคุมเวลาและอุณหภูมิของบ่อกรดให้แม่นยำ",
+        prep_tbl_c9: "ชั้นพาสซีฟและคราบสเกล", prep_tbl_c10: "ผิวสแตนเลส หรือรอยไหม้จากการตัดด้วยเลเซอร์", prep_tbl_c11: "นิกเกิลแบบวูดส์ หรือ กรดกัดแก้ว (สำหรับผิวอะลูมิเนียม)", prep_tbl_c12: "ระมัดระวังการกัดเซาะผิวชิ้นงานมากเกินไป",
+        prep_tbl_c13: "สิ่งฝังตัว (ฝุ่นผงจากการขัด)", prep_tbl_c14: "เศษผงจากยาขัดเงา การพ่นทราย หรือการขัดด้วยมือ", prep_tbl_c15: "การฉีดล้างแรงดันสูง / อัลตราโซนิก / การขัดด้วยแปรงไนลอน", prep_tbl_c16: "ตรวจสอบความสะอาดด้วยไฟส่องเฉียงหรือแว่นขยาย",
 
-        /* Process */
-        proc_h:"เงื่อนไขบ่อ & พารามิเตอร์",
-        proc_p1:"บ่อที่ “ภาพรวมดี” อาจยังเสี่ยงลอก ถ้าพารามิเตอร์บางตัวหลุดช่วงควบคุม",
-        proc_tbl_h1:"ตัวแปร", proc_tbl_h2:"ช่วงควบคุมทั่วไป", proc_tbl_h3:"ผลกระทบเมื่อหลุดช่วง", proc_tbl_h4:"แนวทางควบคุม",
-        proc_tbl_v1:"pH", proc_tbl_v2:"ตามชนิดบ่อ (เช่น กรด/ด่าง/ไซยาไนด์/ไร้ไซยาไนด์)", proc_tbl_v3:"การยึดเกาะแย่/ขอบคริสตัลผิดปกติ/หมอง", proc_tbl_v4:"ปรับด้วยกรด/ด่างอย่างช้า ๆ และบันทึก SPC",
-        proc_tbl_v5:"อุณหภูมิ", proc_tbl_v6:"±2–3°C จากค่ากลางของสูตร", proc_tbl_v7:"เปลี่ยนแปลงโครงสร้างผลึก/ความเค้นภายใน", proc_tbl_v8:"ฮีตเตอร์/คอยล์/เซนเซอร์สอบเทียบ",
-        proc_tbl_v9:"โลหะหลัก (g/L)", proc_tbl_v10:"ช่วงที่ซัพพลายเออร์กำหนด", proc_tbl_v11:"บาง/เปราะ/ความตึงภายในสูง", proc_tbl_v12:"Make‑up/เติมตามใบวิเคราะห์",
-        proc_tbl_v13:"ไบรท์/แอดิทีฟ", proc_tbl_v14:"ตาม Hull cell/ไทเทรต", proc_tbl_v15:"ผิวด่าง/ลอกใน HCD/LCD", proc_tbl_v16:"ควบคุมด้วยงานทดสอบประจำสัปดาห์",
-        proc_tbl_v17:"การกรอง & หมุนเวียน", proc_tbl_v18:">= 5–10 เท่าปริมาตรบ่อต่อชั่วโมง", proc_tbl_v19:"สิ่งแปลกปลอมเกาะผิว/จุดลอก", proc_tbl_v20:"เลือกไส้กรองเหมาะสม + ตรวจอุดตัน",
-        proc_tbl_v21:"แอโนด/แคโทด", proc_tbl_v22:"ชนิด/ถุงแอโนด/พื้นที่/ระยะห่างถูกต้อง", proc_tbl_v23:"โลหะปน/ฟิล์มแอโนดผิดปกติ → ลอก", proc_tbl_v24:"ทำความสะอาดถุง/ตรวจฟิล์ม/เปลี่ยนทิศไหล",
-        proc_tbl_v25:"กระแส/เวลาชุบ", proc_tbl_v26:"ตามความหนาเป้าหมายและรูปทรง", proc_tbl_v27:"เปราะ/ฟอง/ลอกที่ขอบ", proc_tbl_v28:"Ramp‑up/Ramp‑down/หนีบงานให้แน่น",
-        proc_l1:"สแตนเลส: ใช้ Wood’s Nickel Strike ก่อนเข้าบ่อหลัก",
-        proc_l2:"อะลูมิเนียม: Double zincate → Alkaline Cu → Acid Cu → Ni/Cr",
-        proc_l3:"สังกะสีไดคาสต์: Alkaline (หรือ Cyanide) Cu Strike → Acid Cu → Ni",
-        proc_l4:"เหล็ก: Acid Pickle + Activate → Copper strike/Acid Cu → Ni → Cr/Brass ฯลฯ",
+        proc_h: "การตั้งค่าพารามิเตอร์ในบ่อชุบ",
+        proc_p1: "อ่างชุบที่สีสันดูปกติ อาจยังมีความเสี่ยงทำให้ชั้นเคลือบหลุดร่อนได้ หากพารามิเตอร์บางตัวหลุดออกจากช่วงการควบคุมมาตรฐาน",
+        proc_tbl_h1: "ตัวแปรสำคัญ", proc_tbl_h2: "ความคลาดเคลื่อนที่พบ", proc_tbl_h3: "ผลกระทบเมื่อหลุดช่วงการควบคุม", proc_tbl_h4: "แนวทางการแก้ไขและป้องกัน",
+        proc_tbl_v1: "ค่าความเป็นกรด-ด่าง", proc_tbl_v2: "สูงหรือต่ำกว่ามาตรฐานของชนิดบ่อนั้นๆ", proc_tbl_v3: "การยึดเกาะแย่ลง ขอบคริสตัลผิดปกติ ผิวเคลือบดูหมอง", proc_tbl_v4: "ปรับค่าด้วยกรดหรือด่างอย่างช้าๆ และจดบันทึกสถิติ",
+        proc_tbl_v5: "อุณหภูมิของสารละลาย", proc_tbl_v6: "แกว่งเกินกว่า ±2–3°C จากค่าที่กำหนดไว้", proc_tbl_v7: "เปลี่ยนแปลงโครงสร้างผลึกโลหะ เพิ่มความเค้นภายในชั้นเคลือบ", proc_tbl_v8: "สอบเทียบเซนเซอร์ และหมั่นตรวจสอบการทำงานของเครื่องทำความร้อน",
+        proc_tbl_v9: "ปริมาณโลหะหลัก (กรัม/ลิตร)", proc_tbl_v10: "ต่ำกว่าช่วงที่ผู้ผลิตสารเคมีกำหนด", proc_tbl_v11: "ชั้นเคลือบบางลง เปราะบาง และมีความตึงเครียดภายในสูง", proc_tbl_v12: "เติมสารเคมีชดเชยตามผลการวิเคราะห์ในห้องปฏิบัติการ",
+        proc_tbl_v13: "สารเพิ่มความเงา/สารเติมแต่ง", proc_tbl_v14: "เติมมากเกินไป หรือขาดการเติมอย่างต่อเนื่อง", proc_tbl_v15: "เกิดรอยด่าง หรือหลุดลอกในบริเวณความหนาแน่นกระแสไฟฟ้าต่ำ", proc_tbl_v16: "ควบคุมอัตราการเติมตามแอมแปร์-ชั่วโมง และตรวจสอบด้วยฮัลล์เซลล์",
+        proc_tbl_v17: "ระบบกรองและการหมุนเวียน", proc_tbl_v18: "อัตราการไหลเวียนต่ำกว่า 5 เท่าของปริมาตรบ่อต่อชั่วโมง", proc_tbl_v19: "สิ่งแปลกปลอมและตะกอนไปเกาะที่ผิวงาน ทำให้เกิดจุดหลุดลอก", proc_tbl_v20: "ทำความสะอาดไส้กรอง และตรวจสอบอาการอุดตันของปั๊ม",
+        proc_tbl_v21: "ขั้วบวกและขั้วลบ", proc_tbl_v22: "ระยะห่างไม่ถูกต้อง หรือถุงหุ้มขั้วบวกขาด", proc_tbl_v23: "กระแสไฟกระจายไม่สม่ำเสมอ ฟิล์มที่ได้ผิดปกติและลอกได้ง่าย", proc_tbl_v24: "ทำความสะอาดถุงผ้าหุ้มขั้วบวก และตรวจสอบการจัดวางชิ้นงาน",
+        proc_tbl_v25: "กระแสไฟฟ้าและเวลาการชุบ", proc_tbl_v26: "จ่ายกระแสสูงเกินไปในระยะเวลาที่สั้นเกินไป", proc_tbl_v27: "ผิวงานเปราะบาง เกิดฟองก๊าซ และไหม้หรือลอกที่บริเวณขอบ", proc_tbl_v28: "ใช้ระบบค่อยๆ เพิ่มกระแสไฟ และจับยึดชิ้นงานให้แน่นหนา",
 
-        /* Compat */
-        compat_h:"ความเข้ากันได้ของโลหะ & ลำดับชั้นชุบ",
-        compat_p1:"เลือกชั้นกลางที่เหมาะสมเพื่อลดศักย์ต่างและเพิ่มการยึดเกาะ",
-        compat_tbl_h1:"โลหะฐาน", compat_tbl_h2:"ลำดับชั้นแนะนำ", compat_tbl_h3:"ข้อควรระวัง",
-        compat_tbl_b1:"เหล็ก", compat_tbl_s1:"Pickle/Activate → Copper Strike/Acid Cu → Nickel (5–15 µm) → Topcoat", compat_tbl_n1:"หลีกเลี่ยงการจุ่มทิ้งระหว่างขั้นตอนนานเกิน",
-        compat_tbl_b2:"สแตนเลส", compat_tbl_s2:"Degrease → Wood’s Nickel Strike → Ni/Cr หรือ Cu → Ni", compat_tbl_n2:"ดูแลศักย์พื้นผิวและความสะอาดสูง",
-        compat_tbl_b3:"อะลูมิเนียม", compat_tbl_s3:"Double Zincate → Alkaline Cu → Acid Cu → Ni → Topcoat", compat_tbl_n3:"ล้างทันทีหลัง zincate/ห้ามแห้งผิว",
-        compat_tbl_b4:"สังกะสีไดคาสต์", compat_tbl_s4:"Alkaline/CN Cu Strike → Acid Cu → Ni", compat_tbl_n4:"คุม porosity และอุณหภูมิ",
-        compat_tbl_b5:"ทองเหลือง/ทองแดง", compat_tbl_s5:"Activate → Acid Cu (ถ้าจำเป็น) → Ni → Topcoat", compat_tbl_n5:"หลีกเลี่ยงการ over‑etch ทำให้ผิวพรุน",
+        compat_h: "ความเข้ากันได้ของโลหะและชั้นรองพื้น",
+        compat_p1: "การเลือกใช้ชั้นโลหะรองพื้นที่เหมาะสม จะช่วยลดความแตกต่างของศักย์ไฟฟ้าและเพิ่มพลังการยึดเกาะระหว่างโลหะได้อย่างมหาศาล",
+        compat_tbl_h1: "ชนิดของโลหะฐาน", compat_tbl_h2: "ลำดับชั้นรองพื้นที่แนะนำ (Stack Design)", compat_tbl_h3: "ข้อควรระวังสำคัญ",
+        compat_tbl_b1: "เหล็กกล้าคาร์บอน", compat_tbl_s1: "กัดกรด/กระตุ้นผิว → ชั้นชุบทองแดงเริ่มต้น → นิกเกิล → เคลือบผิวชั้นบน", compat_tbl_n1: "หลีกเลี่ยงการปล่อยชิ้นงานแช่ทิ้งไว้ในน้ำล้างระหว่างขั้นตอนนานเกินไป",
+        compat_tbl_b2: "สแตนเลสสตีล", compat_tbl_s2: "ล้างไขมัน → นิกเกิลแบบวูดส์ → นิกเกิลเงา หรือ ทองแดง", compat_tbl_n2: "ต้องดูแลกระบวนการกระตุ้นผิวสแตนเลสให้มีความเข้มข้นและสะอาดสูงสุด",
+        compat_tbl_b3: "อะลูมิเนียมอัลลอย", compat_tbl_s3: "กระบวนการเคลือบสังกะสีนำร่อง 2 รอบ → ทองแดงด่าง → ทองแดงกรด → นิกเกิล", compat_tbl_n3: "ต้องล้างน้ำทันทีหลังจากเคลือบสังกะสีนำร่อง ห้ามปล่อยให้ผิวอะลูมิเนียมแห้ง",
+        compat_tbl_b4: "สังกะสีไดคาสต์", compat_tbl_s4: "ชั้นชุบทองแดงด่างแบบไร้ไซยาไนด์ → ทองแดงกรด → นิกเกิล", compat_tbl_n4: "ควบคุมความพรุนของผิวสังกะสีและอุณหภูมิของบ่อชุบไม่ให้สูงเกินไป",
+        compat_tbl_b5: "ทองเหลืองและทองแดง", compat_tbl_s5: "กระตุ้นผิวด้วยกรดอ่อน → นิกเกิล → เคลือบผิวชั้นบนสุด", compat_tbl_n5: "หลีกเลี่ยงการกัดผิวทองเหลืองแรงเกินไปจนทำให้ผิวสูญเสียสังกะสีและเกิดรูพรุน",
 
-        /* Post */
-        post_h:"ขั้นตอนหลังชุบ",
-        post_l1:"การล้าง: หลายขั้น/ไหลต่อเนื่อง ลด drag‑out ไม่ให้เกลือย้อนกลับไปขั้นก่อน",
-        post_l2:"ดีไอร้อน: ลดรอยน้ำและเร่งการระเหย",
-        post_l3:"อบไล่ความชื้น: 80–120°C 10–30 นาที ตามชิ้นงาน",
-        post_l4:"ซีล/แลคเกอร์: สำหรับทองเหลือง/เงิน/ดีบุก เพื่อลดการหมอง",
-        post_l5:"ห้ามสัมผัสผิว ด้วยมือเปียก/ถุงมือสกปรกหลังชุบใหม่",
+        post_h: "การจัดการหลังการชุบ (การอบไล่ก๊าซและซีลผิว)",
+        post_l1: "<strong>การล้างทำความสะอาด:</strong> ควรใช้ระบบล้างน้ำหลายขั้นตอนแบบไหลต่อเนื่อง เพื่อล้างสารเคมีและเกลือตกค้างออกให้หมด ป้องกันไม่ให้เกิดคราบด่างย้อนกลับ",
+        post_l2: "<strong>การล้างด้วยน้ำบริสุทธิ์อุณหภูมิสูง:</strong> ช่วยลดรอยคราบหยดน้ำบนผิวชิ้นงาน และเร่งให้ความชื้นระเหยออกไปได้เร็วขึ้น",
+        post_l3: "<strong>การอบไล่ก๊าซไฮโดรเจนและความชื้น:</strong> อบที่อุณหภูมิ 80–120 องศาเซลเซียส เป็นเวลา 10–30 นาที ขึ้นอยู่กับขนาดและประเภทของชิ้นงาน เพื่อป้องกันความเปราะบาง",
+        post_l4: "<strong>การซีลผิวหรือเคลือบแลคเกอร์:</strong> เป็นขั้นตอนสำคัญสำหรับโลหะที่มีโอกาสทำปฏิกิริยากับอากาศสูง เช่น ทองเหลือง เงิน หรือดีบุก เพื่อป้องกันความหมองคล้ำและการกัดกร่อน",
+        post_l5: "<strong>กฎด้านสุขอนามัยหลังชุบ:</strong> ห้ามใช้มือเปล่าที่เปียกชื้น หรือถุงมือที่เปื้อนคราบสกปรก สัมผัสกับชิ้นงานที่เพิ่งชุบเสร็จใหม่ๆ โดยเด็ดขาด",
 
-        /* Symptoms */
-        sym_h:"อาการ & การวินิจฉัย (Root Cause)",
-        sym_tbl_h1:"อาการ", sym_tbl_h2:"สาเหตุที่เป็นไปได้", sym_tbl_h3:"การทดสอบยืนยัน", sym_tbl_h4:"วิธีแก้/ป้องกัน",
-        sym_tbl_s1:"ลอกทันทีหลังล้าง", sym_tbl_c1:"ผิวไม่สะอาด/ไม่ active, เวลาระหว่างขั้นนาน", sym_tbl_t1:"Water‑break, ส่องไฟเฉียง, Tape pull", sym_tbl_f1:"ปรับดีเกรส/พิคเคิล/activate, ลด WIP time",
-        sym_tbl_s2:"ลอกหลังอบ/ทนความร้อนไม่ได้", sym_tbl_c2:"ความเค้นภายในสูง/ความหนาไม่พอ/โลหะไม่เข้ากัน", sym_tbl_t2:"Heat‑quench/thermal shock, bend test", sym_tbl_f2:"ปรับกระแส/อุณหภูมิ/แอดิทีฟ, เพิ่มชั้นกั้น",
-        sym_tbl_s3:"ลอกเฉพาะมุม/ขอบ/รู", sym_tbl_c3:"กระแสเฉพาะที่สูง/ฟอง/จับงานหลวม", sym_tbl_t3:"ดูแผนที่ความหนา, Hull cell", sym_tbl_f3:"ปรับ fixturing, anode shield, ramp‑up",
-        sym_tbl_s4:"ลอกเป็นแผ่นใหญ่", sym_tbl_c4:"ไม่มีพันธะกับโลหะฐาน (prep/activate ผิด)", sym_tbl_t4:"Cross‑section/SEM ภายใน, tape test", sym_tbl_f4:"ทบทวนลำดับล้างและ activate ใหม่",
-        sym_tbl_s5:"ลอกเป็นผง/ผิวผุกร่อน", sym_tbl_c5:"องค์ประกอบบ่อเพี้ยน/ปนเปื้อนโลหะ", sym_tbl_t5:"วิเคราะห์บ่อ/คาร์บอนทรีต/ไส้กรอง", sym_tbl_f5:"รีเฟรชบ่อบางส่วน/คาร์บอน/เพิ่มกรอง",
+        sym_h: "ตารางวิเคราะห์อาการและวิธีแก้ไข (Troubleshooting)",
+        sym_tbl_h1: "ลักษณะอาการที่พบ", sym_tbl_h2: "สาเหตุเชิงลึกที่เป็นไปได้", sym_tbl_h3: "วิธีการทดสอบเพื่อยืนยัน", sym_tbl_h4: "วิธีแก้ไขและมาตรการป้องกัน",
+        sym_tbl_s1: "ผิวเคลือบลอกเป็นแผ่นทันทีหลังล้างน้ำเสร็จ", sym_tbl_c1: "พื้นผิวเดิมไม่สะอาด การกระตุ้นผิวไม่สมบูรณ์ หรือทิ้งช่วงรอระหว่างขั้นตอนนานเกินไป", sym_tbl_t1: "ทดสอบการเกาะตัวของน้ำบนผิวชิ้นงาน, ส่องดูด้วยไฟฉายเฉียง, ทดสอบดึงด้วยเทปกาว", sym_tbl_f1: "ปรับปรุงความเข้มข้นของบ่อล้างไขมันและบ่อกรด และลดเวลาการเคลื่อนย้ายชิ้นงาน",
+        sym_tbl_s2: "ผิวเคลือบลอกหลังจากเข้าเตาอบ หรือทนความร้อนไม่ได้", sym_tbl_c2: "ความเค้นภายในของชั้นเคลือบสูงเกินไป ความหนาไม่เพียงพอ หรือโลหะรองพื้นไม่เข้ากัน", sym_tbl_t2: "ทดสอบการเปลี่ยนแปลงอุณหภูมิแบบฉับพลัน, ทดสอบการดัดงอชิ้นงาน", sym_tbl_f2: "ปรับลดกระแสไฟฟ้าและอุณหภูมิบ่อชุบ ตรวจสอบสารเติมแต่ง หรือเพิ่มชั้นโลหะรองพื้น",
+        sym_tbl_s3: "ผิวลอกเฉพาะบริเวณมุม ขอบ หรือในรูลึก", sym_tbl_c3: "กระแสไฟฟ้ากระจุกตัวเฉพาะจุด มีฟองอากาศสะสม หรือการจับยึดชิ้นงานหลวมเกินไป", sym_tbl_t3: "วัดความหนาของชั้นเคลือบแต่ละจุด, นำน้ำยาไปทดสอบด้วยฮัลล์เซลล์", sym_tbl_f3: "ปรับเปลี่ยนรูปแบบการแขวนชิ้นงาน ใช้แผ่นกันกระแสไฟฟ้า และค่อยๆ เพิ่มกระแสไฟตอนเริ่มชุบ",
+        sym_tbl_s4: "ลอกหลุดร่อนออกเป็นแผ่นขนาดใหญ่", sym_tbl_c4: "ชั้นเคลือบไม่เกิดพันธะกับโลหะพื้นผิวโดยสิ้นเชิง (ความผิดพลาดในขั้นตอนเปิดผิว)", sym_tbl_t4: "ตัดชิ้นงานเพื่อส่องกล้องจุลทรรศน์อิเล็กตรอนดูรอยต่อ, ทดสอบดึงด้วยเทปกาว", sym_tbl_f4: "รื้อและทบทวนลำดับขั้นตอนการล้างและการกระตุ้นผิวในสายการผลิตใหม่ทั้งหมด",
+        sym_tbl_s5: "ชั้นเคลือบลอกเป็นผง หรือผิวดูผุกร่อน", sym_tbl_c5: "องค์ประกอบทางเคมีของอ่างชุบผิดเพี้ยน หรือมีการปนเปื้อนของโลหะหนักชนิดอื่น", sym_tbl_t5: "ส่งตัวอย่างน้ำยาไปวิเคราะห์ในห้องปฏิบัติการ ทำการบำบัดด้วยคาร์บอน", sym_tbl_f5: "ถ่ายน้ำยาออกบางส่วนแล้วผสมใหม่ ทำคาร์บอนทรีตเมนต์ และเพิ่มความละเอียดของไส้กรอง",
 
-        /* QA */
-        qa_h:"QA/การทดสอบ & แผนควบคุม",
-        qa_l1:"ตัวอย่างอ้างอิง/คูปอง: ชุบคูปองมาตรฐานรายกะ เพื่อตรวจแนวโน้ม",
-        qa_l2:"Hull cell รายสัปดาห์: ตรวจแอดิทีฟ/หน้าต่างกระแส",
-        qa_l3:"SPC: pH, อุณหภูมิ, โลหะ, สารเติมแต่ง, การนำไฟฟ้า",
-        qa_l4:"Adhesion tests: tape, bend, punch, heat‑quench ตามสเปกลูกค้า",
-        qa_l5:"Maintenance: ฟอกคาร์บอนตามชั่วโมงทำงาน, เปลี่ยนไส้กรอง, ทำความสะอาดถุงแอโนด",
-        qa_l6:"เวลา WIP: กำหนดเวลา “สูงสุด” ระหว่างขั้นตอนที่ผิวเสี่ยงพาสซีฟ",
+        qa_h: "การควบคุมคุณภาพและการทดสอบ",
+        qa_l1: "<strong>ชิ้นงานตัวอย่างอ้างอิง:</strong> ควรทำการชุบชิ้นงานตัวอย่างมาตรฐานในแต่ละกะการทำงาน เพื่อใช้ตรวจสอบแนวโน้มของคุณภาพงาน",
+        qa_l2: "<strong>ทดสอบด้วยฮัลล์เซลล์รายสัปดาห์:</strong> เพื่อตรวจสอบประสิทธิภาพของสารเติมแต่งและประเมินหน้าต่างการจ่ายกระแสไฟฟ้าที่เหมาะสม",
+        qa_l3: "<strong>แผนภูมิควบคุมกระบวนการทางสถิติ:</strong> จดบันทึกค่าความเป็นกรด-ด่าง, อุณหภูมิ, ความเข้มข้นโลหะ, ปริมาณสารเติมแต่ง, และความนำไฟฟ้า เพื่อวิเคราะห์ความเสถียรของระบบ",
+        qa_l4: "<strong>การทดสอบการยึดเกาะ:</strong> ทำการทดสอบด้วยเทปกาว, การดัดงอ, หรือการทดสอบด้วยความร้อนฉับพลัน ตามมาตรฐานที่ลูกค้ากำหนดอย่างเคร่งครัด",
+        qa_l5: "<strong>ตารางการบำรุงรักษาอ่าง:</strong> กำหนดรอบการบำบัดน้ำยาด้วยคาร์บอน การเปลี่ยนไส้กรอง และการนำถุงผ้าหุ้มขั้วบวกมาซักทำความสะอาดตามระยะเวลาที่ชัดเจน",
+        qa_l6: "<strong>ควบคุมเวลารอคอย:</strong> กำหนดเวลา \"สูงสุด\" ที่อนุญาตให้ชิ้นงานรอในอากาศระหว่างขั้นตอน เพื่อป้องกันไม่ให้พื้นผิวโลหะเกิดการสร้างชั้นออกไซด์ขึ้นมาใหม่",
 
-        /* Summary */
-        sum_h:"สรุป",
-        sum_p1:"การลอกมักเป็นผลรวมของหลายปัจจัย: ผิวไม่สะอาด/ไม่ active, บ่อหลุดคุม, ลำดับชั้นไม่เหมาะ, และงานหลังชุบที่ไม่ครบถ้วน",
-        sum_p2:"ตั้งระบบความสะอาด + activate เฉพาะทาง, คุมพารามิเตอร์บ่อด้วย SPC/Hull cell, เลือกลำดับชั้นชุบให้เข้ากัน และปิดงานด้วยการล้าง‑อบ‑ซีลอย่างถูกต้อง คือแกนหลักของการลดการลอกอย่างยั่งยืน",
+        sum_h: "บทสรุป",
+        sum_p1: "ปัญหาชั้นชุบลอกหลุดร่อน มักเป็นผลรวมของความบกพร่องจากหลายปัจจัยรวมกัน ตั้งแต่ผิวชิ้นงานที่ไม่สะอาดหรือไม่ได้ถูกกระตุ้นอย่างถูกต้อง, สารเคมีในบ่อชุบที่หลุดออกจากการควบคุมมาตรฐาน, การจัดลำดับชั้นโลหะรองพื้นที่ไม่สอดคล้องกัน, และการละเลยกระบวนการล้างและอบแห้งในขั้นตอนสุดท้าย",
+        sum_p2: "การวางระบบทำความสะอาดและกระตุ้นผิวที่แม่นยำ, การควบคุมสัดส่วนน้ำยาและตู้ไฟของบ่อชุบด้วยเครื่องมือวิเคราะห์, การเลือกลำดับชั้นเคลือบโลหะให้เข้ากันทางเคมีไฟฟ้า, และการจบงานด้วยการล้าง อบ และซีลผิวอย่างถูกวิธี คือแกนหลักสำคัญที่จะช่วยป้องกันและลดปัญหาการลอกของชิ้นงานชุบเคลือบผิวได้อย่างยั่งยืนและเป็นมืออาชีพครับ",
 
-        links_h:"ลิงก์ที่เกี่ยวข้อง",
-        link_at:"คู่มือเลือกสารกันหมอง (อ้างโครง/สไตล์)",
-        link_salt:"คู่มือ Salt Spray และการอ่านผล",
-        link_pretreat:"หมวด Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"อุปกรณ์ระบบกรอง/มีดลม/อบแห้ง",
+        links_h: "ลิงก์ที่เกี่ยวข้อง",
+        link_plating: "หมวดหมู่ผลิตภัณฑ์งานชุบเคลือบผิว (Plating & Coating)",
+        link_pretreat: "หมวดหมู่ผลิตภัณฑ์เตรียมผิวก่อนชุบ (Pretreatment)",
+        link_salt: "บทความ: คู่มือทดสอบการพ่นละอองเกลือและการอ่านผล",
+        link_protect: "หมวดหมู่ผลิตภัณฑ์เคลือบปกป้องผิวและสารกันหมอง",
 
-        /* Links + Footer */
-        links_h:"ลิงก์/คู่มือที่เกี่ยวข้อง", links_l1:"หมวดผลิตภัณฑ์งานชุบ", links_l2:"บทความ/คู่มืออื่น ๆ",
-        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved.",
+        addr_1:"📍 31 ซอย เพชรเกษม 48 แยก 24 แขวง บางแวก",
+        addr_2:"📍 เขต ภาษีเจริญ กรุงเทพมหานคร 10160",
+        addr_3:"🕒 เวลาทำการ 08.00 - 17.00 น.",
+        addr_4:"📱 092 546 9887"
       },
 
       en: {
+        title:"Electroplating Peeling: Causes and Prevention | Baume Chemical Blog",
         nav_home:"Home", nav_about:"About us", nav_products:"Products", nav_contact:"Contact Us", nav_blog:"Blog",
-        back_home:"← Back to Blog",
+        back_home: "← Back to Articles",
+        hero_title: "Electroplating Peeling: Causes and Prevention",
+        hero_tagline: "A comprehensive guide covering surface prep, bath parameters, metal compatibility, post-treatment, and QA controls to stop peeling for good.",
+        
+        part1:"Part 1: Root Causes & Prep",
+        part2:"Part 2: Compatibility, QA & Summary",
 
-        hero_title:"Electroplating Peeling: Causes and Fixes",
-        hero_tagline:"From surface prep, bath parameters, and metal compatibility to post‑treatments, symptom‑based diagnosis, and QA controls to prevent peeling for good.",
+        toc_title: "Table of Contents",
+        toc_intro: "Why Coatings Peel (Overview)",
+        toc_prep: "Surface Prep & Degreasing",
+        toc_process: "Bath Parameters & Conditions",
+        toc_compat: "Metal Compatibility & Stacks",
+        toc_post: "Post-Plating & Baking",
+        toc_symptoms: "Symptoms & Troubleshooting",
+        toc_qa: "QA & Testing Controls",
+        toc_links: "Related Links",
 
-        toc_title:"Contents",
-        toc_intro:"Introduction",
-        toc_prep:"Surface Preparation",
-        toc_process:"Bath Conditions & Parameters",
-        toc_compat:"Metal Compatibility",
-        toc_post:"Post‑Plating Steps",
-        toc_symptoms:"Symptoms & Diagnosis",
-        toc_qa:"QA/Testing",
-        toc_summary:"Summary",
-        toc_links:"Related Links",
+        intro_h: "Introduction: Why Coatings Peel",
+        intro_p1: "Peeling plating immediately impacts the appearance, durability, and reliability of a product. The causes rarely stem from a single source; rather, they are linked end-to-end—from surface preparation and bath parameters to metal compatibility, rinsing, drying, and post-plating handling.",
+        intro_p2: "<strong>1. Pre-treatment Failure:</strong> This is the number-one cause of peeling. Incomplete surface cleaning leaves behind oils, grease, oxides, or rust particles. These contaminants block metal ions from bonding directly to the base metal. If the surface isn't immaculate, you are simply plating over dirt, and it will eventually flake off.",
+        intro_p3: "<strong>2. Bath Parameter Errors:</strong> Precision in controlling the chemical solution is critical. Errors here disrupt the coating's structure. <strong>Current Density:</strong> Too high causes rapid deposition and high internal stress, making the coating brittle and prone to peeling. Too low results in poor adhesion. Furthermore, deviations in temperature, pH, and the buildup of impurities can severely obstruct the bonding process.",
+        intro_p4: "<strong>3. Incompatible Metals & Poor Strikes:</strong> Difficult-to-plate substrates, like aluminum or stainless steel, require a strike layer or specific primer (such as a Zincate process) to create a bonding bridge. If this intermediate layer is defective, all subsequent plating layers will delaminate as a single sheet.",
+        intro_p5: "<strong>4. Post-Treatment & Handling:</strong> Late-stage mistakes are equally fatal. For instance, skipping hydrogen de-embrittlement baking on high-tensile steels leaves the structure dangerously brittle, causing the coating to crack or peel under minimal stress.",
 
-        intro_h:"Introduction: Why Coatings Peel",
-intro_p1:"Peeling immediately impacts appearance, durability, and product trust. Causes are not from a single point but are linked end-to-end—from surface preparation and bath parameters, metal compatibility, through rinsing, drying, sealing, and post-plating handling.",
-intro_p2:"1. Surface cleanliness in pre-treatment (Pre-treatment Failure). This is the number-one cause of peeling. Incomplete cleaning leaves films of oil/grease, oxides, or rust particles that block direct metal-to-metal bonding. If contamination remains, the deposit forms on the dirt—not on the substrate—so it will delaminate.",
-intro_p3:"2. Plating bath parameter errors. Tight solution control is critical. If parameters drift, the deposit suffers: Current density—too high yields fast deposition with high internal stress (brittle, crack/peel); too low causes poor adhesion. Temperature, pH, concentrations—even small deviations—can unbalance the chemistry, distort crystal structure, or trigger unwanted precipitates. Impurities—build-up of foreign metals/organics obstructs adhesion in contaminated zones.",
-intro_p4:"3. Metal incompatibility and inadequate strike/primer layer. Difficult substrates (e.g., aluminum or stainless) need a strike (copper primer or zincate) to create a thin, well-adhered bridge. If this primer is defective, subsequent layers peel as a stack.",
-intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: bake for hydrogen embrittlement relief on high-tensile steels—skipping it leaves a brittle, peel-prone deposit; and watch for under-film corrosion when passivation/sealers are incompatible with the outer metal, which can drive galvanic corrosion and long-term delamination.",
+        prep_h: "Surface Preparation & Degreasing",
+        prep_p1: "The golden rule of plating: 'If the surface isn’t perfectly clean and chemically active, even a flawless plating bath will result in peeling.'",
+        prep_l1: "<strong>Remove oils and forming residues:</strong> Use hot alkaline soaks combined with ultrasonic cleaning and/or electrocleaning to draw out deep-seated dirt. Follow with multiple cascading water rinses.",
+        prep_l2: "<strong>Remove oxides and rust:</strong> Use an appropriate acid pickle for the specific base metal. Strictly control the immersion time to avoid over-etching into the base material.",
+        prep_l3: "<strong>Specialized Activation:</strong> Use dilute acid dips, Wood's Nickel strike (for stainless steel), or a double zincate process (for aluminum) before entering the main plating bath.",
+        prep_l4: "<strong>Post-activation Handling:</strong> Never touch the activated surface with bare hands. Use clean hooks or tongs to prevent contamination from skin oils and airborne dust.",
+        
+        prep_tbl_h1: "Contaminant", prep_tbl_h2: "Source", prep_tbl_h3: "Chemical / Removal Method", prep_tbl_h4: "Important Notes",
+        prep_tbl_c1: "Oils and Grease", prep_tbl_c2: "Coolants from cutting, stamping, or machining", prep_tbl_c3: "Hot alkaline + ultrasonic / Electrocleaning", prep_tbl_c4: "Must pass the water-break free test to confirm readiness.",
+        prep_tbl_c5: "Oxides and Rust", prep_tbl_c6: "Atmospheric exposure, storage, or heat treatments", prep_tbl_c7: "Acid pickling (HCl or H2SO4) tailored to the metal", prep_tbl_c8: "Strictly control temperature and immersion time.",
+        prep_tbl_c9: "Passive Layers / Scale", prep_tbl_c10: "Stainless steel surfaces or laser-cut scale", prep_tbl_c11: "Wood’s Nickel Strike / HF-based dips (for Aluminum)", prep_tbl_c12: "Be extremely careful to avoid over-etching the part.",
+        prep_tbl_c13: "Embedded Debris", prep_tbl_c14: "Polishing compounds, sandblasting dust", prep_tbl_c15: "High-pressure rinsing / Ultrasonic / Nylon brushing", prep_tbl_c16: "Inspect closely with raking light or magnification.",
 
-        prep_h:"Surface Preparation",
-        prep_p1:"Golden rule: if the surface isn’t clean and active, even a perfect bath will peel.",
-        prep_l1:"Remove oils/forming residues with hot alkaline + ultrasonic and/or electro‑clean, followed by multiple rinses.",
-        prep_l2:"Remove oxides/rust/passive films using a suitable pickle; control time to avoid base‑metal attack.",
-        prep_l3:"Activate with dilute acid/electro‑acid strike; Wood’s Nickel for stainless; double zincate for aluminum.",
-        prep_l4:"Do not touch after activation; use clean hooks/handlers to prevent re‑contamination.",
-        prep_tbl_h1:"Contaminant", prep_tbl_h2:"Source", prep_tbl_h3:"Remedy/Chemistry", prep_tbl_h4:"Notes",
-        prep_tbl_c1:"Oil/grease", prep_tbl_c2:"Forming/cutting/machining/stamping", prep_tbl_c3:"Hot alkaline + ultrasonic / electro‑clean / solvent", prep_tbl_c4:"Must pass water‑break test",
-        prep_tbl_c5:"Oxides/rust", prep_tbl_c6:"Storage/atmosphere/heat", prep_tbl_c7:"Pickle per substrate (HCl/H2SO4/mixed), inhibitor", prep_tbl_c8:"Control time and temperature",
-        prep_tbl_c9:"Passive/scale", prep_tbl_c10:"Stainless/heat‑treat/laser scale", prep_tbl_c11:"Wood’s Nickel Strike / HF‑based for Al (post‑zincate)", prep_tbl_c12:"Avoid over‑etch",
-        prep_tbl_c13:"Embedded debris", prep_tbl_c14:"Buffing/sand‑blast/hand‑finish", prep_tbl_c15:"Pressure rinse/ultrasonic/nylon brush", prep_tbl_c16:"Inspect with raking light/magnifier",
+        proc_h: "Bath Conditions & Parameters",
+        proc_p1: "A plating bath that looks 'fine' visually can still cause peeling if key parameters drift outside their established control windows.",
+        proc_tbl_h1: "Key Variable", proc_tbl_h2: "Common Deviation", proc_tbl_h3: "Impact When Out of Range", proc_tbl_h4: "Control Actions",
+        proc_tbl_v1: "pH Level", proc_tbl_v2: "Drifts higher or lower than the bath's standard", proc_tbl_v3: "Poor adhesion, abnormal crystal growth at edges, dull finish.", proc_tbl_v4: "Adjust slowly with acid or base and log data in SPC charts.",
+        proc_tbl_v5: "Bath Temperature", proc_tbl_v6: "Fluctuates more than ±2–3°C from the setpoint", proc_tbl_v7: "Alters metal crystal structure, sharply increases internal stress.", proc_tbl_v8: "Calibrate sensors regularly and monitor heater performance.",
+        proc_tbl_v9: "Primary Metal Content", proc_tbl_v10: "Falls below the supplier's recommended range", proc_tbl_v11: "Coating becomes thin, highly stressed, and brittle.", proc_tbl_v12: "Replenish chemicals based on laboratory titration results.",
+        proc_tbl_v13: "Brighteners / Additives", proc_tbl_v14: "Overdosed or irregularly replenished", proc_tbl_v15: "Causes blotching or peeling, especially in Low Current Density areas.", proc_tbl_v16: "Dose based strictly on Ampere-Hours; verify via Hull Cell tests.",
+        proc_tbl_v17: "Filtration & Circulation", proc_tbl_v18: "Flow rate drops below 5x tank volume per hour", proc_tbl_v19: "Particulates settle on parts, creating nodules and peeling spots.", proc_tbl_v20: "Clean or replace filter cartridges and check for pump clogs.",
+        proc_tbl_v21: "Anodes & Cathodes", proc_tbl_v22: "Improper spacing or torn anode bags", proc_tbl_v23: "Uneven current distribution leads to abnormal, peel-prone films.", proc_tbl_v24: "Clean anode bags regularly and ensure correct part orientation.",
+        proc_tbl_v25: "Current & Time", proc_tbl_v26: "Applying too much current too quickly", proc_tbl_v27: "Causes brittle deposits, heavy gassing, and burning at edges.", proc_tbl_v28: "Use a slow ramp-up for current and ensure tight, secure racking.",
 
-        proc_h:"Bath Conditions & Parameters",
-        proc_p1:"A bath that looks ‘fine’ can still peel if a few variables drift out of control.",
-        proc_tbl_h1:"Variable", proc_tbl_h2:"Typical Control Range", proc_tbl_h3:"If Out‑of‑Range", proc_tbl_h4:"Control Actions",
-        proc_tbl_v1:"pH", proc_tbl_v2:"Per bath type (acid/alkaline/cyanide/non‑cyanide)", proc_tbl_v3:"Poor adhesion/abnormal crystals/dull", proc_tbl_v4:"Adjust slowly with acid/alkali; log in SPC",
-        proc_tbl_v5:"Temperature", proc_tbl_v6:"±2–3°C from set‑point", proc_tbl_v7:"Crystal structure shift/internal stress", proc_tbl_v8:"Calibrated heaters/coils/sensors",
-        proc_tbl_v9:"Metal content (g/L)", proc_tbl_v10:"Supplier‑specified window", proc_tbl_v11:"Thin/brittle/high internal stress", proc_tbl_v12:"Make‑up/add per analysis",
-        proc_tbl_v13:"Brighteners/additives", proc_tbl_v14:"Per Hull cell/titration", proc_tbl_v15:"Blotch/LCD‑HCD peeling", proc_tbl_v16:"Weekly test panels and adjustments",
-        proc_tbl_v17:"Filtration & turnover", proc_tbl_v18:">= 5–10× tank volume per hour", proc_tbl_v19:"Particulates cause nodules/peel spots", proc_tbl_v20:"Right media & maintenance; check clogs",
-        proc_tbl_v21:"Anode/cathode setup", proc_tbl_v22:"Correct type/bags/area/spacing", proc_tbl_v23:"Metal contamination/anode film issues → peeling", proc_tbl_v24:"Clean bags/check film/flow direction",
-        proc_tbl_v25:"Current/time", proc_tbl_v26:"Per target thickness & geometry", proc_tbl_v27:"Brittle/foamy/edge‑peel", proc_tbl_v28:"Ramp‑up/down; secure fixturing",
-        proc_l1:"Stainless: Wood’s Nickel Strike before main bath",
-        proc_l2:"Aluminum: Double zincate → Alkaline Cu → Acid Cu → Ni/Cr",
-        proc_l3:"Zinc die‑cast: Alkaline (or CN) Cu strike → Acid Cu → Ni",
-        proc_l4:"Steel: Acid Pickle + Activate → Copper strike/Acid Cu → Ni → Cr/Brass etc.",
+        compat_h: "Metal Compatibility & Stack Design",
+        compat_p1: "Selecting the correct intermediate (strike) layer minimizes electrochemical potential differences and exponentially increases metal-to-metal bonding strength.",
+        compat_tbl_h1: "Base Material", compat_tbl_h2: "Recommended Stack Sequence", compat_tbl_h3: "Crucial Cautions",
+        compat_tbl_b1: "Carbon Steel", compat_tbl_s1: "Pickle/Activate → Copper Strike → Nickel → Topcoat", compat_tbl_n1: "Avoid leaving parts soaking in rinse tanks for extended periods.",
+        compat_tbl_b2: "Stainless Steel", compat_tbl_s2: "Degrease → Wood’s Nickel Strike → Bright Nickel", compat_tbl_n2: "Maintain the highest level of cleanliness and activation strength.",
+        compat_tbl_b3: "Aluminum Alloys", compat_tbl_s3: "Double Zincate → Alkaline Copper → Acid Copper → Nickel", compat_tbl_n3: "Rinse immediately after zincating; never let the surface dry out.",
+        compat_tbl_b4: "Zinc Die-cast", compat_tbl_s4: "Non-Cyanide Alkaline Copper Strike → Acid Copper → Nickel", compat_tbl_n4: "Strictly control surface porosity and keep bath temperatures moderate.",
+        compat_tbl_b5: "Brass & Copper", compat_tbl_s5: "Mild Acid Activate → Nickel → Topcoat", compat_tbl_n5: "Avoid aggressive etching that causes dezincification and porosity.",
 
-        compat_h:"Metal Compatibility & Stack Design",
-        compat_p1:"Use the right interlayer to reduce potential differences and improve bonding.",
-        compat_tbl_h1:"Base Metal", compat_tbl_h2:"Recommended Stack", compat_tbl_h3:"Cautions",
-        compat_tbl_b1:"Steel", compat_tbl_s1:"Pickle/Activate → Cu Strike/Acid Cu → Ni (5–15 µm) → Topcoat", compat_tbl_n1:"Avoid long idle times between steps",
-        compat_tbl_b2:"Stainless", compat_tbl_s2:"Degrease → Wood’s Nickel Strike → Ni/Cr or Cu → Ni", compat_tbl_n2:"Maintain high cleanliness and activation",
-        compat_tbl_b3:"Aluminum", compat_tbl_s3:"Double Zincate → Alkaline Cu → Acid Cu → Ni → Topcoat", compat_tbl_n3:"Immediate rinse after zincate; do not dry",
-        compat_tbl_b4:"Zinc die‑cast", compat_tbl_s4:"Alkaline/CN Cu Strike → Acid Cu → Ni", compat_tbl_n4:"Control porosity and temperature",
-        compat_tbl_b5:"Brass/Copper", compat_tbl_s5:"Activate → Acid Cu (if needed) → Ni → Topcoat", compat_tbl_n5:"Avoid over‑etch leading to porosity",
+        post_h: "Post-Plating Handling (Baking & Sealing)",
+        post_l1: "<strong>Rinsing:</strong> Utilize continuous, multi-stage counter-flow rinsing to remove all chemical and salt residues, preventing reverse-staining.",
+        post_l2: "<strong>Hot DI Water Rinse:</strong> Reduces water spotting and accelerates the evaporation of moisture from the part's surface.",
+        post_l3: "<strong>Hydrogen De-embrittlement Baking:</strong> Bake at 190–220 °C for 2 to 4 hours (depending on part size) immediately after plating to prevent structural brittleness.",
+        post_l4: "<strong>Sealing / Lacquering:</strong> Essential for metals highly reactive to the atmosphere (e.g., brass, silver) to prevent tarnishing and corrosion.",
+        post_l5: "<strong>Handling Rules:</strong> Never touch freshly plated parts with bare, damp hands or dirty gloves.",
 
-        post_h:"Post‑Plating Steps",
-        post_l1:"Rinsing: multiple/staged to reduce drag‑out and back‑contamination",
-        post_l2:"Hot DI: reduces water marks and speeds drying",
-        post_l3:"Drying/Bake‑out: 80–120°C for 10–30 min depending on parts",
-        post_l4:"Seal/Lacquer: for brass/silver/tin to slow tarnish",
-        post_l5:"No handling with wet/dirty gloves right after plating",
+        sym_h: "Symptoms & Troubleshooting",
+        sym_tbl_h1: "Observed Symptom", sym_tbl_h2: "Deep Root Cause", sym_tbl_h3: "Verification Test", sym_tbl_h4: "Corrective Action",
+        sym_tbl_s1: "Peels immediately after rinsing", sym_tbl_c1: "Incomplete cleaning, poor activation, or excessive idle time between tanks.", sym_tbl_t1: "Water-break free test, raking light inspection, tape pull test.", sym_tbl_f1: "Strengthen degreasing/pickling baths and minimize transfer times.",
+        sym_tbl_s2: "Peels after baking / Fails thermal test", sym_tbl_c2: "High internal stress, insufficient thickness, or incompatible metal stack.", sym_tbl_t2: "Thermal shock test (heat-quench), severe bend test.", sym_tbl_f2: "Reduce current/temp, verify brighteners, or add an intermediate strike.",
+        sym_tbl_s3: "Peels only at edges, corners, or deep holes", sym_tbl_c3: "Current localized too intensely, trapped gas bubbles, or loose racking.", sym_tbl_t3: "Measure thickness mapping, run Hull Cell tests.", sym_tbl_f3: "Adjust rack orientation, use current shields, and ramp up current slowly.",
+        sym_tbl_s4: "Delaminates in large, solid sheets", sym_tbl_c4: "Zero metallurgical bond formed with the base metal (critical activation failure).", sym_tbl_t4: "Cross-section microscopy (SEM), aggressive tape test.", sym_tbl_f4: "Completely overhaul the pre-treatment and activation sequence.",
+        sym_tbl_s5: "Coating is powdery, flaky, or rough", sym_tbl_c5: "Severe chemical imbalance or heavy heavy-metal contamination in the bath.", sym_tbl_t5: "Laboratory bath analysis, carbon treatment effectiveness check.", sym_tbl_f5: "Partial bath replacement, full carbon treatment, and finer filtration.",
 
-        sym_h:"Symptoms & Diagnosis (Root Cause)",
-        sym_tbl_h1:"Symptom", sym_tbl_h2:"Likely Causes", sym_tbl_h3:"Confirm by", sym_tbl_h4:"Fix/Prevention",
-        sym_tbl_s1:"Peel right after rinse", sym_tbl_c1:"Unclean/inactive surface; long WIP between steps", sym_tbl_t1:"Water‑break, raking light, tape pull", sym_tbl_f1:"Improve degrease/pickle/activate; shorten WIP",
-        sym_tbl_s2:"Peel after heat/poor thermal resistance", sym_tbl_c2:"High internal stress/insufficient thickness/incompatible stack", sym_tbl_t2:"Heat‑quench/thermal shock; bend test", sym_tbl_f2:"Adjust current/temp/additives; add barrier layer",
-        sym_tbl_s3:"Edge/hole‑only peel", sym_tbl_c3:"Local high current/bubbles/loose fixturing", sym_tbl_t3:"Thickness mapping; Hull cell", sym_tbl_f3:"Improve fixturing; shields; ramp‑up",
-        sym_tbl_s4:"Large‑sheet delamination", sym_tbl_c4:"No bonding to substrate (prep/activation error)", sym_tbl_t4:"Cross‑section/SEM; tape test", sym_tbl_f4:"Rework rinses and activation sequence",
-        sym_tbl_s5:"Powdery/flaky surface", sym_tbl_c5:"Bath composition drift/metal contamination", sym_tbl_t5:"Bath analysis/carbon treat/filter", sym_tbl_f5:"Partial dump/refresh; carbon treatment; more filtration",
+        qa_h: "Quality Control & Testing",
+        qa_l1: "<strong>Reference Samples:</strong> Plate standard coupons during each shift to monitor quality trends.",
+        qa_l2: "<strong>Weekly Hull Cell Tests:</strong> To evaluate additive performance and determine the optimal current density window.",
+        qa_l3: "<strong>Statistical Process Control (SPC):</strong> Log pH, temperature, metal content, and conductivity to ensure long-term system stability.",
+        qa_l4: "<strong>Adhesion Testing:</strong> Perform tape tests, bending, or thermal shock tests strictly according to customer specifications.",
+        qa_l5: "<strong>Maintenance Schedule:</strong> Set firm intervals for carbon treatments, filter replacements, and anode bag laundering.",
+        qa_l6: "<strong>WIP Time Limits:</strong> Establish 'maximum allowable times' for parts to sit in the air between tanks to prevent re-oxidation.",
 
-        qa_h:"QA/Testing & Control Plan",
-        qa_l1:"Reference parts/coupons per shift to trend defects",
-        qa_l2:"Weekly Hull cell to check additives/current window",
-        qa_l3:"SPC on pH, temp, metal, additives, conductivity",
-        qa_l4:"Adhesion tests: tape, bend, punch, heat‑quench per spec",
-        qa_l5:"Maintenance: scheduled carbon treat, filter change, anode‑bag cleaning",
-        qa_l6:"WIP timing: set max time between activation‑sensitive steps",
+        sum_h: "Conclusion",
+        sum_p1: "Peeling defects are usually the cumulative result of multiple flaws: an improperly cleaned surface, a bath that has drifted out of spec, mismatched plating layers, or neglected post-plating steps like baking and sealing.",
+        sum_p2: "Establishing a precise cleaning sequence, strictly controlling bath parameters via analysis, selecting electrochemically compatible layers, and finishing with proper rinsing and baking are the core pillars to eliminating peeling issues sustainably and professionally.",
 
-        sum_h:"Summary",
-        sum_p1:"Peeling is usually multi‑factor: unclean/inactive surface, out‑of‑control bath, poor stack design, or incomplete post‑treatments.",
-        sum_p2:"Clean + targeted activation, SPC/Hull‑cell control, compatible stack design, and proper rinse‑bake‑seal are the pillars to eliminate peeling sustainably.",
+        links_h: "Related Links",
+        link_plating: "Plating & Coating Products Overview",
+        link_pretreat: "Pretreatment Products (Degreasers & Activators)",
+        link_salt: "Article: Guide to Salt Spray Testing and Evaluation",
+        link_protect: "Protective Treatments & Anti-tarnish",
 
-        links_h:"Related links",
-        link_at:"Anti-tarnish selection guide (style ref)",
-        link_salt:"Salt Spray quick guide",
-        link_pretreat:"Pretreatment",
-        link_protect:"Protective Treatment",
-        link_equip:"Filtration & hot-air knife equipment",
-
-        links_h:"Related Links", links_l1:"Plating products", links_l2:"More guides/articles",
-        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
+        footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2026 Baume Chemical Co., Ltd. All rights reserved.",
+        addr_1:"📍 31 Soi Phetkasem 48 Yak 24, Bang Waek",
+        addr_2:"📍 Phasi Charoen, Bangkok 10160",
+        addr_3:"🕒 Hours 08:00–17:00",
+        addr_4:"📱 +66 92 546 9887"
       }
     };
 
@@ -888,13 +836,21 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
     function applyLang(lang){
       const sel = (lang === 'en') ? 'en' : 'th';
       document.documentElement.lang = sel;
+
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === sel)));
+
       els.translatables().forEach(node => {
         const key = node.getAttribute('data-i18n-key');
-        if (key && I18N[sel] && I18N[sel][key]) node.textContent = I18N[sel][key];
+        if (key && I18N[sel] && I18N[sel][key]) {
+          if (/<\/?[a-z][\s\S]*>/i.test(I18N[sel][key])) node.innerHTML = I18N[sel][key];
+          else node.textContent = I18N[sel][key];
+        }
       });
+
+      const titleEl = document.querySelector('title[data-i18n-key="title"]');
+      if (titleEl && I18N[sel].title) titleEl.textContent = I18N[sel].title;
+
       try{ localStorage.setItem('lang', sel); }catch(e){}
-      // recalc header height (text wrapping may change)
       try{
         const h = document.getElementById('siteHeader').getBoundingClientRect().height|0;
         document.documentElement.style.setProperty('--header-h', h + 'px');
@@ -908,7 +864,54 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
     })();
   </script>
 
-  <!-- JS: Header glass, mobile menu, highlight current, TOC scroll spy -->
+  <!-- Part Switcher Logic -->
+  <script>
+    (function(){
+      const buttons = document.querySelectorAll('.part-switch .part-btn');
+      const tocLinks = document.querySelectorAll('#toc a[data-part]');
+      const sections = document.querySelectorAll('section[data-part]');
+
+      function setPart(p){
+        const part = (p === '2') ? '2' : '1';
+        document.documentElement.setAttribute('data-part', part);
+        sections.forEach(sec => sec.hidden = (sec.dataset.part !== part));
+        tocLinks.forEach(a => {
+            if(a.parentElement.tagName === 'LI') {
+                a.parentElement.hidden = (a.dataset.part !== part);
+            } else {
+                a.hidden = (a.dataset.part !== part);
+            }
+        });
+        buttons.forEach(b => {
+          const on = (b.dataset.part === part);
+          b.setAttribute('aria-pressed', String(on));
+          b.setAttribute('aria-selected', String(on));
+        });
+        try{ localStorage.setItem('peel_part', part); }catch(e){}
+        const url = new URL(location);
+        url.searchParams.set('part', part);
+        history.replaceState(null,'',url);
+      }
+
+      const urlPart = new URLSearchParams(location.search).get('part');
+      const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('peel_part')) || '1';
+      setPart(urlPart === '2' ? '2' : (urlPart === '1' ? '1' : saved));
+
+      buttons.forEach(b => b.addEventListener('click', ()=>{
+        setPart(b.dataset.part);
+        document.querySelector('.part-switch')?.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+
+      document.querySelectorAll('#toc a[data-part]').forEach(a=>{
+        a.addEventListener('click', ()=>{
+          const p = a.getAttribute('data-part');
+          setPart(p);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Header glass / mobile menu / highlight current / smart back -->
   <script>
     (function(){
       const header = document.getElementById('siteHeader');
@@ -916,7 +919,6 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
       const nav = document.getElementById('primary-nav');
       const scrim = document.querySelector('.menu-scrim');
 
-      // Set header height var & darken on scroll
       const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('is-scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
@@ -924,7 +926,6 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
       window.addEventListener('scroll', onScroll, {passive:true});
       setH(); onScroll();
 
-      // Mobile menu with body lock
       if(toggle && nav && scrim){
         let lockY = 0;
         function openMenu(v){
@@ -942,7 +943,7 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
             document.body.classList.remove('no-scroll');
             document.body.style.top = '';
             window.scrollTo(0, lockY);
-            toggle.focus({preventScroll:true});
+            toggle?.focus({preventScroll:true});
           }
         }
         toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
@@ -952,7 +953,6 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
 
-      // Highlight current page; force Blog when under /blog/*
       try{
         const here = location.pathname.replace(/\/+$/,'');
         const isBlog = here.startsWith('/blog');
@@ -964,40 +964,70 @@ intro_p5:"4. Post-treatment & handling. Late-stage mistakes also cause peeling: 
         });
       }catch(e){}
 
-      // TOC scroll spy
       (function(){
-        const links = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
-        if (!links.length) return;
-        const map = new Map();
-        links.forEach(a=>{
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (el) map.set(id, {link:a, el});
+        const btn = document.querySelector('.back-chip');
+        if(!btn) return;
+        btn.addEventListener('click', function(e){
+          try{
+            const ref = document.referrer;
+            const sameOrigin = ref && new URL(ref, location.href).origin === location.origin;
+            if(sameOrigin){ e.preventDefault(); history.back(); }
+          }catch(err){}
         });
-
-        const setActive = (id)=>{
-          links.forEach(a=> a.classList.remove('is-active'));
-          links.forEach(a=> a.setAttribute('aria-current','false'));
-          const item = map.get(id);
-          if (item){ item.link.classList.add('is-active'); item.link.setAttribute('aria-current','true'); }
-        };
-
-        const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
-        const obs = new IntersectionObserver((entries)=>{
-          entries.forEach(e=>{
-            if (e.isIntersecting){
-              const id = e.target.id;
-              setActive(id);
-              history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
-            }
-          });
-        }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
-
-        map.forEach(({el})=> obs.observe(el));
       })();
     })();
+  </script>
 
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
+  <!-- Scroll-spy for TOC + heading anchors -->
+  <script>
+    document.querySelectorAll('.section-block>h2.section').forEach(h=>{
+      h.addEventListener('click', ()=>{
+        const sec = h.closest('.section-block');
+        if(sec && sec.id){ history.pushState(null,'','#'+sec.id); }
+      });
+    });
+
+    (function(){
+      const tocLinks = Array.from(document.querySelectorAll('#toc a[href^="#"]'));
+      if (!tocLinks.length) return;
+      const map = new Map();
+      tocLinks.forEach(a=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        const li = a.closest('li');
+        if (el) map.set(id, {link:a, li:li, el:el});
+      });
+
+      const setActive = (id)=>{
+        tocLinks.forEach(a=>{
+            a.classList.remove('is-active');
+            a.setAttribute('aria-current','false');
+            if(a.closest('li')) a.closest('li').setAttribute('aria-current', 'false');
+        });
+        const item = map.get(id);
+        if (item){ 
+            item.link.classList.add('is-active'); 
+            item.link.setAttribute('aria-current','true'); 
+            if(item.li) item.li.setAttribute('aria-current', 'true');
+        }
+      };
+
+      const headerH = ()=> parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'))||56;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            if(e.target.hidden) return;
+            const id = e.target.id;
+            setActive(id);
+            history.replaceState(null,'', `${location.pathname}${location.search}#${id}`);
+          }
+        });
+      }, {rootMargin: `-${headerH()+24}px 0% -60% 0%`, threshold:.1});
+
+      map.forEach(({el})=> obs.observe(el));
+    })();
+
+    // Back-to-top
     (function(){
       const backTop = document.getElementById('backTop');
       if(!backTop) return;
