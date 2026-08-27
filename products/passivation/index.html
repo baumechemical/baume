@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- Open Graph / Twitter (ใช้รูปเดิม) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:url" content="https://www.baumechemical.com/products/passivation/index.html">
@@ -37,7 +37,6 @@
   <!-- Performance Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://img2.pic.in.th" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://www.baumechemical.com/picture/cb.jpeg"/>
 
@@ -58,7 +57,6 @@
   }
   </script>
 
-  <!-- ใช้ CollectionPage + ItemList (หน้าหมวด) -->
   <script id="ld-collection" type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -82,247 +80,239 @@
         {"@type":"ListItem","position":7,"name":"Yellow Chromate 6","url":"https://www.baumechemical.com/products/passivation/yellow-6-passivation-on-zinc"},
         {"@type":"ListItem","position":8,"name":"Olive Drab Chromate 6","url":"https://www.baumechemical.com/products/passivation/olive-6-passivation-on-zinc"}
       ]
-    },
-    "hasPart":[
-      {"@type":"WebPage","name":"Blue/White Chromate 3","url":"https://www.baumechemical.com/products/passivation/blue-passivation-on-zinc"},
-      {"@type":"WebPage","name":"Black Chromate 3","url":"https://www.baumechemical.com/products/passivation/trivalent-black"},
-      {"@type":"WebPage","name":"Iridescent Chromate 3","url":"https://www.baumechemical.com/products/passivation/iridescent-passivation-on-zinc"},
-      {"@type":"WebPage","name":"Yellow Chromate 3","url":"https://www.baumechemical.com/products/passivation/yellow-passivation-on-zinc"},
-      {"@type":"WebPage","name":"Blue/White Chromate 6","url":"https://www.baumechemical.com/products/passivation/hex-blue"},
-      {"@type":"WebPage","name":"Black Chromate 6","url":"https://www.baumechemical.com/products/passivation/hex-black"},
-      {"@type":"WebPage","name":"Yellow Chromate 6","url":"https://www.baumechemical.com/products/passivation/yellow-6-passivation-on-zinc"},
-      {"@type":"WebPage","name":"Olive Drab Chromate 6","url":"https://www.baumechemical.com/products/passivation/olive-6-passivation-on-zinc"}
-    ]
+    }
   }
   </script>
-
-  <!-- Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},
-      {"@type":"ListItem","position":3,"name":"Passivation","item":"https://www.baumechemical.com/products/passivation/index.html"}
-    ]
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/cb.jpeg">
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b;
-      --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
-      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#5b6675; --bg:#f4f7f6;
+      --radius:24px; 
+      --shadow-1:0 12px 30px -10px rgba(2,8,20,.08); 
+      --shadow-2:0 20px 40px -10px rgba(44,94,78,.18);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:56px; 
+      --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; overflow-x: hidden;}
 
-    /* ===== Header: fixed glass ===== */
+    /* ===== Header ===== */
     .site-header{
       position:fixed; inset:0 0 auto 0; z-index:1400;
       background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
-      transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
-      -webkit-backdrop-filter:none; backdrop-filter:none;
+      transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease;
     }
     .site-header.scrolled{
-      background:rgba(15,23,42,.70);
-      -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
-      box-shadow:0 8px 26px rgba(2,8,20,.18);
+      background:rgba(15,23,42,.75);
+      -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
+      box-shadow:0 4px 20px rgba(2,8,20,.15);
     }
-    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:10px 16px}
-    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px; background:#e8f1ec var(--logo-url) center/cover no-repeat; box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800; color:#fff; font-size:1.02rem; letter-spacing:.2px}
+    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:6px 16px}
+    .brand{display:flex; align-items:center; gap:8px; text-decoration:none}
+    .brand-logo{width:34px;height:34px;border-radius:8px;flex:0 0 34px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:0.95rem;letter-spacing:.2px}
 
-    .header-right{display:flex; align-items:center; gap:10px}
-    .primary-nav{display:flex; align-items:center; gap:12px}
-    .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .header-right{display:flex;align-items:center;gap:10px}
+    .primary-nav{display:flex;align-items:center;gap:8px}
+    .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:8px 10px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600; font-size: 0.9rem; transition: background 0.3s;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
 
-    .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
-    .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
-    .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before,.nav-toggle .bar::after{ content:""; position:absolute; left:0; right:0; height:2px; background:#fff; border-radius:2px }
-    .nav-toggle .bar::before{ top:-7px } .nav-toggle .bar::after{ top:7px }
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:34px;height:34px;border-radius:8px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:20px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle .bar::before{top:-6px}.nav-toggle .bar::after{top:6px}
+    .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
     /* Header Language switch */
-    .lang-switch{display:flex; gap:6px; padding:4px; border:1px solid rgba(226,232,240,.9); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.scrolled .lang-switch{ background:#ffffffdd }
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
-    .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
+    .lang-switch{display:flex;gap:4px;padding:3px;border:1px solid rgba(226,232,240,.6);border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(2,8,20,.1)}
+    .site-header.scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:5px 8px;border-radius:999px;font-weight:800;font-size:0.85rem;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:16px;height:12px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     @media (max-width:920px){
-      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400}
-      .menu li a{ display:block; padding:12px 14px; border-radius:10px }
-      .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
-      .nav-toggle{ display:inline-flex }
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .3s ease,opacity .3s ease;z-index:1400}
+      .menu li a{display:block;padding:12px 14px;border-radius:10px}
+      .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
+      .nav-toggle{display:inline-flex}
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
-    .menu-scrim:not([hidden]){ display:block }
-    body.no-scroll{ position:fixed; width:100%; }
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.3);z-index:1300;display:none; backdrop-filter: blur(4px);}
+    .menu-scrim:not([hidden]){display:block; animation: fadeIn 0.3s ease;}
+    body.no-scroll{position:fixed;width:100%}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    /* === Language FAB (synced with header) === */
-    .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
-    .lang-fab .lang-btn{ padding:6px 10px }
-
-    /* === Hero === */
-/* === Hero === */
+    /* ===== Hero (Modern Glassmorphism) ===== */
     .hero{ 
-      position:relative; overflow:hidden; display:grid; place-items:center; 
+      position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;
       text-align:center; color:#fff; 
-      min-height: clamp(420px, 60vh, 620px); 
-      padding-top:var(--header-h); 
+      min-height: clamp(500px, 75vh, 720px); 
+      padding-top:calc(var(--header-h) + 20px); 
+      padding-bottom: 40px;
     }
-    
-    /* สไตล์สำหรับ Slider */
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
-      position:absolute; inset:-4%; /* เผื่อขอบภาพตอนซูม */
+      position:absolute; inset:-4%;
       background-size:cover; background-position:center;
-      filter:brightness(.82); transform:scale(1.04);
-      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+      filter:brightness(0.85); transform:scale(1.04);
+      opacity:0; transition:opacity 1200ms ease, transform 6000ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
     
-    /* ฟิลเตอร์เงาดำ (กันไม่ให้บังเมาส์เวลาคลิกปุ่ม) */
     .hero::after{ 
       content:""; position:absolute; inset:0; 
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); 
+      background:linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(44,94,78,0.65) 100%); 
       z-index:1; pointer-events:none; 
     }
     
-    /* เนื้อหาข้อความ */
-    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:960px; margin:0 auto; color:#e6f2ef}
-    .hero .actions{display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap}
+    .hero-inner{ 
+      position:relative; z-index:2; 
+      padding:40px 30px; margin: 0 16px;
+      max-width: 860px; width:100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+      animation: floatUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes floatUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero h1{
+      margin:0 0 16px; font-weight:800; font-size:clamp(28px,4vw,48px); 
+      background: linear-gradient(to right, #ffffff, #d1fae5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.3;
+    }
+    .hero p{ max-width:700px; margin:0 auto; color:#e2e8f0; font-size: 1.05rem; line-height: 1.7; font-weight: 400; }
+    .hero .actions{ display:flex; gap:16px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
     
-    /* สไตล์ปุ่ม */
-    .btn{appearance:none; border:1px solid var(--brand); background:var(--accent); color:#1b2637; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none}
-    .btn.ghost{background:transparent; border-color:#fff; color:#fff}
+    .btn{
+      appearance:none; border:none;
+      background: linear-gradient(135deg, #ff9800, #ff6b00); 
+      color:#fff; padding:12px 24px; 
+      border-radius:999px; font-weight:800; text-decoration:none;
+      box-shadow: 0 8px 20px rgba(255, 152, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .btn:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255, 152, 0, 0.5); }
     
-    /* ปุ่มหน้าปกสีส้ม */
-    .hero .btn:not(.ghost){ border-color:#ff9800; background:#ff9800; color:#fff; }
-    .hero .btn:not(.ghost):hover{ opacity:.92 }
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:6px 14px; 
+      border-radius:999px; background: rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.3); 
+      color:#fff; text-decoration:none; font-size: 0.9rem; font-weight:600; 
+      transition: all 0.3s ease;
+    }
+    .home-back:hover{ background:rgba(255,255,255,.2); border-color:#fff; }
 
-    /* Hero buttons = orange like other pages */
-.hero .btn:not(.ghost){
-  border-color:#ff9800;
-  background:#ff9800;
-  color:#fff;              /* เปลี่ยนเป็นตัวอักษรสีขาวให้คอนทราสต์ดี */
-}
-.hero .btn:not(.ghost):hover{ opacity:.92 }
+    /* ===== Layout ===== */
+    .wrap{max-width:var(--container); margin:auto; padding:60px 16px}
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h2.section{
+      margin:0 0 12px; font-size:clamp(28px, 3.5vw, 36px); font-weight:800;
+      background: linear-gradient(135deg, var(--brand), #0f172a);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    p.lead{margin:0 auto; color:#5b6675; font-size:1.1rem; max-width: 800px;}
 
+    /* ===== Cards (Bento-style + Premium Feature List) ===== */
+    .grid{display:grid; gap:24px; grid-template-columns:repeat(3,1fr)}
+    @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:640px){ .grid{grid-template-columns:1fr} }
+    
+    .card{
+      background:#fff; border:none; border-radius:var(--radius); overflow:hidden;
+      box-shadow:var(--shadow-1); transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex; flex-direction: column;
+    }
+    .card-img-wrapper { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #eff5f0; }
+    .card picture, .card img{ display:block; width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease; }
+    .card .body{padding:24px; flex-grow: 1; display: flex; flex-direction: column;}
+    
+    .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px}
+    .badge{
+      font-size:11px; font-weight:700; letter-spacing: 0.3px; text-transform: uppercase;
+      background:#ecfdf5; color:#059669; padding:4px 10px; border-radius:999px;
+    }
+    
+    .card h3{margin:0 0 8px; font-size:1.15rem; color:#1e293b; font-weight:800; transition: color 0.3s;}
+    .card p{margin:0; color:#64748b; font-size:0.95rem; line-height: 1.6;}
+    
+    /* Feature List Styling */
+    .feature-list {
+      list-style: none; padding: 0; margin: 16px 0 0 0;
+      border-top: 1px solid #f1f5f9; padding-top: 16px;
+      font-size: 0.9rem; color: #475569;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .feature-list li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+    .feature-list li::before {
+      content: "✓"; color: #059669; font-weight: 800; background: #ecfdf5; border-radius: 50%;
+      width: 18px; height: 18px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.75rem; margin-top: 1px;
+    }
 
-    /* === Layout === */
-    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
-    p.lead{margin:0 0 16px;color:#5f6d7c}
+    .card .more{
+      display:inline-flex; align-items:center; gap:6px; margin-top:auto; padding-top:20px;
+      color:var(--accent); font-weight:800; text-decoration:none; font-size: 0.95rem;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+    
+    .card.lift{will-change:transform,box-shadow}
+    @media(hover:hover) and (pointer:fine){
+      .card.lift:hover, .card.lift:focus-within{transform:translateY(-12px); box-shadow:var(--shadow-2)}
+      .card.lift:hover img {transform: scale(1.08);}
+      .card.lift:hover h3 {color: var(--brand);}
+      .card.lift:hover .more {gap: 12px; color: #e65100;}
+    }
 
-    /* === Cards grid with lift === */
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{background:#fff;border:1px solid #e3ece5;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-1);transition:transform .18s ease,box-shadow .18s ease}
-    .card picture,.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eff5f0}
-    .card .body{padding:14px}
-    .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-    .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
-    .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
-    .card p{margin:0;color:#5b6675;font-size:.96rem}
-    .card .more{display:inline-block;margin-top:10px;color:#ff9800;font-weight:800;text-decoration:none}
-    .card .more:hover{text-decoration:underline}
+    .reveal{opacity:0; transform:translateY(24px); transition:opacity .6s ease-out, transform .6s ease-out}
+    .reveal.show{opacity:1; transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{transition:none; opacity:1; transform:none}}
 
-    /* Lift (opt-in) + reveal */
-    .card.lift{ will-change: transform, box-shadow }
-    @media (hover:hover) and (pointer:fine){ .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) } }
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
-    @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+    /* ===== Footer ===== */
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:48px 20px 38px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:40px; height:40px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.1rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1rem}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0; font-size: 0.95rem;}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#9fb1c6}
 
-    /* === Footer === */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
-    .site-footer a{color:#e2e8f0;text-decoration:none}
-    .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+    /* Floating LINE & Back to top */
+    .float-line{ position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900; }
+    .float-line a{
+      display:grid; place-items:center; width:50px; height:50px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 8px 20px rgba(0,0,0,.25); animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover, .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    @keyframes pulse{ 0%{box-shadow:0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 14px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
-
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
-
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-
-</style>
+    .backtop{ position:fixed; right:16px; bottom:calc(82px + env(safe-area-inset-bottom)); z-index:900; display:none; }
+    .backtop.show{ display:block; animation: fadeIn 0.3s; }
+    .backtop button{
+      width:40px; height:40px; border-radius:999px; border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 8px 20px rgba(0,0,0,.15); cursor:pointer; color: var(--brand); font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease;
+    }
+    .backtop button:hover, .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.2) }
+  </style>
 </head>
 <body>
-  <!-- === Header (logo + nav + lang) === -->
-  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner" id="siteHeader" aria-label="Site header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
@@ -332,15 +322,15 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
+            <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
           </ul>
         </nav>
 
-        <!-- Header language switch -->
+        <!-- Language switcher (header) -->
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
             <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -358,119 +348,186 @@
   </header>
   <div class="menu-scrim" hidden></div>
 
-  <!-- === Hero === -->
-<section class="hero" aria-label="Passivation hero">
-    
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-label="Passivation hero">
     <div class="slides" id="heroSlides">
-      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/cb.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cw.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cd.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cr.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cy.jpeg')"></div> </div>
+      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/cb.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cw.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cd.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cr.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/cy.jpeg')"></div> 
+    </div>
 
     <div class="hero-inner">
+      <div style="margin-bottom:20px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span data-i18n-key="back_home">กลับหน้าแรก</span>
+        </a>
+      </div>
       <h1 data-i18n-key="hero_title">โครเมตบนซิงค์ (Passivation)</h1>
       <p data-i18n-key="hero_tagline">เพิ่มความทนการกัดกร่อน การยึดเกาะสี ลด White Rust และเพิ่มความสวยงาม — มีทั้ง Cr3/Cr6: ฟ้า/ขาว, ดำ, รุ้ง, เหลือง และ Olive Drab ให้เลือกตามสเปกงาน</p>
       <div class="actions">
-        <a class="btn ghost" href="https://www.baumechemical.com/index.html" data-i18n-key="btn_home">← กลับหน้าแรก</a>
         <a class="btn" href="https://www.baumechemical.com/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
       </div>
     </div>
   </section>
 
-  <!-- === Products Grid === -->
+  <!-- ===== Products Grid ===== -->
   <main class="wrap">
-    <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์</h2>
-    <p class="lead" data-i18n-key="sec_products_lead">เลือกสูตรโครเมตให้เหมาะกับมาตรฐานการทดสอบและรูปลักษณ์ที่ต้องการ</p>
+    <div class="section-header">
+      <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์</h2>
+      <p class="lead" data-i18n-key="sec_products_lead">เลือกสูตรโครเมตให้เหมาะกับมาตรฐานการทดสอบและรูปลักษณ์ที่ต้องการ</p>
+    </div>
 
     <div class="grid">
       <!-- Blue (White) Chromate 3 -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/nwKlx5m.jpeg" alt="Blue (White) Chromate 3"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/bc3.jpeg" alt="Blue (White) Chromate 3"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr³⁺</span></div>
           <h3 data-i18n-key="c3_blue_t">Blue (White) Chromate 3</h3>
-          <p data-i18n-key="c3_blue_d">สร้างฟิล์มบางๆ สีฟ้าอมขาวและเพิ่มความทนทานต่อการกัดกร่อน สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น และสามารถทนการทดสอบ Salt Spray ได้นานกว่า 96 ชั่วโมง</p>
-          <a class="more" href="blue-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c3_blue_d">สร้างฟิล์มบางๆ สีฟ้าอมขาวและเพิ่มความทนทานต่อการกัดกร่อน สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c3_blue_feat1">ฟิล์มสีฟ้าอมขาวเงางามบนผิวซิงค์</li>
+            <li data-i18n-key="c3_blue_feat2">ใช้ โครเมียม 3 (Cr³⁺) ปลอดภัยต่อสิ่งแวดล้อม</li>
+            <li data-i18n-key="c3_blue_feat3">ทนการทดสอบ Salt Spray ได้นานกว่า 96 ชม.</li>
+          </ul>
+          <a class="more" href="blue-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Black Chromate 3 -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/LrItUAB.jpeg" alt="Black Chromate 3"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/blc3.jpeg" alt="Black Chromate 3"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr³⁺</span></div>
           <h3 data-i18n-key="c3_black_t">Black Chromate 3</h3>
-          <p data-i18n-key="c3_black_d">สร้างฟิล์มสีดำเงาสนิทที่สวยงาม ซึ่งความเข้มของสีจะปรับได้ตามระยะเวลาที่แช่ชิ้นงานในน้ำยา โดยสามารถทนการทดสอบ Salt Spray ได้นาน 96 ชั่วโมง และจะทนทานยิ่งขึ้นเมื่อเคลือบด้วยน้ำยาซีลอีกชั้น</p>
-          <a class="more" href="troubleshootingtrivalentchromeblack.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c3_black_d">สร้างฟิล์มสีดำเงาสนิทที่สวยงาม ซึ่งความเข้มของสีจะปรับได้ตามระยะเวลาที่แช่ชิ้นงานในน้ำยา สามารถเพิ่มความทนทานได้เมื่อเคลือบด้วยน้ำยาซีล</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c3_black_feat1">สร้างฟิล์มสีดำเงาสนิท สม่ำเสมอทั่วชิ้นงาน</li>
+            <li data-i18n-key="c3_black_feat2">ปรับความเข้มของสีดำได้ตามระยะเวลาการจุ่ม</li>
+            <li data-i18n-key="c3_black_feat3">ทน Salt Spray ได้นาน 96 ชม. (เพิ่มได้เมื่อซีลผิว)</li>
+          </ul>
+          <a class="more" href="troubleshootingtrivalentchromeblack.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Iridescent Chromate 3 -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/8CCfxaM.jpeg" alt="Iridescent Chromate 3"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/rc3.jpeg" alt="Iridescent Chromate 3"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr³⁺</span></div>
           <h3 data-i18n-key="c3_iri_t">Iridescent Chromate 3</h3>
-          <p data-i18n-key="c3_iri_d">โทนรุ้ง สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น สีออกฟ้า–เขียว/เขียว/ม่วงฟ้าปนแดงตามสภาพและเวลาแช่ และยังทนทานต่อการเกิด White Rust (สนิมขาว) ได้นานถึง 144–196 ชั่วโมง</p>
-          <a class="more" href="iridescent-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c3_iri_d">โทนรุ้ง สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น สีออกฟ้า–เขียว/เขียว/ม่วงฟ้าปนแดงตามสภาพและเวลาแช่</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c3_iri_feat1">ให้โทนสีรุ้งสวยงาม (ฟ้า-เขียว-ม่วงแดง)</li>
+            <li data-i18n-key="c3_iri_feat2">ใช้ โครเมียม 3 (Cr³⁺) ลดต้นทุนการบำบัดน้ำเสีย</li>
+            <li data-i18n-key="c3_iri_feat3">ทนการเกิดสนิมขาว (White Rust) ได้ 144–196 ชม.</li>
+          </ul>
+          <a class="more" href="iridescent-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Yellow Chromate 3 -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/LAe2sGy.jpeg" alt="Yellow Chromate 3"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/yc3.jpeg" alt="Yellow Chromate 3"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr³⁺</span></div>
           <h3 data-i18n-key="c3_yellow_t">Yellow Chromate 3</h3>
-          <p data-i18n-key="c3_yellow_d">สร้างฟิล์มสี เหลือง-รุ้ง แต่ใช้ โครเมียม 3 (Cr³⁺) ที่ปลอดภัยกว่า สารนี้เป็นมิตรต่อสิ่งแวดล้อมและสามารถทนต่อการกัดกร่อนได้นาน 72–100 ชั่วโมง โดยสามารถเพิ่มความทนทานได้อีกด้วยการอบที่อุณหภูมิ 120 °C</p>
-          <a class="more" href="yellow-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c3_yellow_d">สร้างฟิล์มสี เหลือง-รุ้ง แต่ใช้ โครเมียม 3 (Cr³⁺) ที่ปลอดภัยกว่า สารนี้เป็นมิตรต่อสิ่งแวดล้อมและสามารถทนต่อการกัดกร่อนได้ดีเยี่ยม</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c3_yellow_feat1">สร้างฟิล์มสีเหลือง-รุ้งสวยงามและเรียบเนียน</li>
+            <li data-i18n-key="c3_yellow_feat2">ทางเลือกทดแทนโครเมียม 6 ที่ปลอดภัยกว่า</li>
+            <li data-i18n-key="c3_yellow_feat3">อบที่ 120 °C เพื่อเพิ่มความทนทานได้ยิ่งขึ้น</li>
+          </ul>
+          <a class="more" href="yellow-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Blue (White) Chromate 6 -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/cb.jpeg" alt="Blue (White) Chromate 6"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/cb.jpeg" alt="Blue (White) Chromate 6"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr⁶⁺</span></div>
           <h3 data-i18n-key="c6_blue_t">Blue (White) Chromate 6</h3>
-          <p data-i18n-key="c6_blue_d">ชนิดโครเมียม 6 (Cr⁶⁺) ซึ่งเป็นสารเคมีดั้งเดิมที่มีความเสถียรสูง ทำให้การปรับปรุงบ่อชุบง่ายและค่า pH คงที่ นอกจากนี้ยังสามารถเพิ่มความเข้มของสีฟ้าได้ด้วยการเติมสีย้อมอีกด้วย ชิ้นงานทนทานต่อการกัดกร่อนได้นานกว่า 48 ชั่วโมง</p>
-          <a class="more" href="troubleshootinghexavalentchromeblue.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c6_blue_d">ชนิดโครเมียม 6 (Cr⁶⁺) ซึ่งเป็นสารเคมีดั้งเดิมที่มีความเสถียรสูง ทำให้การปรับปรุงบ่อชุบง่ายและค่า pH คงที่ สามารถเพิ่มความเข้มของสีฟ้าได้ด้วยการเติมสีย้อม</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c6_blue_feat1">สารเคมีมีความเสถียร บ่อชุบคุมค่า pH ได้ง่าย</li>
+            <li data-i18n-key="c6_blue_feat2">สามารถเติมสีย้อมเพื่อเพิ่มความเข้มของสีฟ้าได้</li>
+            <li data-i18n-key="c6_blue_feat3">ทนการเกิดสนิมขาว (White Rust) ได้มากกว่า 48 ชม.</li>
+          </ul>
+          <a class="more" href="troubleshootinghexavalentchromeblue.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Black Chromate 6 -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/C6.jpg" alt="Black Chromate 6"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/C6.jpg" alt="Black Chromate 6"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr⁶⁺</span></div>
           <h3 data-i18n-key="c6_black_t">Black Chromate 6</h3>
-          <p data-i18n-key="c6_black_d">สร้างฟิล์มสีดำเงาสวยงามและมีความทนทานสูงมาก คุณสมบัติเด่นคือสามารถทนการกัดกร่อนจาก White Rust (สนิมขาว) ได้นานถึง 240–288 ชั่วโมง</p>
-          <a class="more" href="troubleshootinghexavalentchromeblack.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c6_black_d">สร้างฟิล์มสีดำเงาสวยงามและมีความทนทานสูงมาก คุณสมบัติเด่นคือสามารถทนการกัดกร่อนจากความชื้นได้ยาวนานที่สุด</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c6_black_feat1">สร้างชั้นฟิล์มสีดำเงางามที่มีความทนทานสูงมาก</li>
+            <li data-i18n-key="c6_black_feat2">รองรับการชุบทั้งแบบถังแขวนและถังกลิ้ง</li>
+            <li data-i18n-key="c6_black_feat3">ทนการเกิดสนิมขาว (White Rust) ได้ถึง 240–288 ชม.</li>
+          </ul>
+          <a class="more" href="troubleshootinghexavalentchromeblack.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Yellow Chromate 6 -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/C7.jpg" alt="Yellow Chromate 6"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/C7.jpg" alt="Yellow Chromate 6"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr⁶⁺</span></div>
           <h3 data-i18n-key="c6_yellow_t">Yellow Chromate 6</h3>
-          <p data-i18n-key="c6_yellow_d">สร้างฟิล์มที่มีสี เหลือง-รุ้ง สวยงาม ใช้ปริมาณน้อย, ดูแลรักษาง่าย, และสามารถปรับความเข้มของสีได้ด้วยการเติมน้ำหรือสีย้อม นอกจากนี้ยังช่วยให้ชิ้นงานทนทานต่อการกัดกร่อนได้นาน 72 ชั่วโมง</p>
-          <a class="more" href="yellow-6-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c6_yellow_d">สร้างฟิล์มที่มีสี เหลือง-รุ้ง สวยงามคลาสสิก ใช้ปริมาณน้อย ดูแลรักษาง่าย และสามารถปรับความเข้มของสีได้ด้วยการเติมน้ำหรือสีย้อม</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c6_yellow_feat1">ให้เฉดสีเหลือง-รุ้งแบบคลาสสิก</li>
+            <li data-i18n-key="c6_yellow_feat2">ใช้ปริมาณสารน้อย บำรุงรักษาบ่อชุบได้ง่าย</li>
+            <li data-i18n-key="c6_yellow_feat3">ทนการเกิดสนิมขาวได้ 72 ชั่วโมงขึ้นไป</li>
+          </ul>
+          <a class="more" href="yellow-6-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Olive Drab Chromate 6 -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/C8.jpg" alt="Olive Drab Chromate 6"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/C8.jpg" alt="Olive Drab Chromate 6"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Passivation</span><span class="badge">Cr⁶⁺</span></div>
           <h3 data-i18n-key="c6_olive_t">Olive Drab Chromate 6</h3>
-          <p data-i18n-key="c6_olive_d">สร้างฟิล์มสีเขียวทหาร (Olive Drab) ที่ดูแข็งแรงและมีความทนทานสูง ความทนทานต่อการกัดกร่อน: สารเคลือบนี้ช่วยให้ชิ้นงานสามารถทนทานต่อการกัดกร่อนได้นานถึง 240–288 ชั่วโมง</p>
-          <a class="more" href="olive-6-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="c6_olive_d">สร้างฟิล์มสีเขียวทหาร (Olive Drab) ที่ดูแข็งแรง ดุดัน และมีความทนทานต่อการกัดกร่อนสูง เหมาะสำหรับชิ้นงานที่ต้องการการยึดเกาะสีที่ดีเยี่ยม</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c6_olive_feat1">ฟิล์มสีเขียวทหาร (Olive Drab) แข็งแรงทนทาน</li>
+            <li data-i18n-key="c6_olive_feat2">เป็นชั้นรองพื้นเพื่อการยึดเกาะของสีทับหน้าที่ยอดเยี่ยม</li>
+            <li data-i18n-key="c6_olive_feat3">ทนการเกิดสนิมขาวได้สูงสุดถึง 240–288 ชม.</li>
+          </ul>
+          <a class="more" href="olive-6-passivation-on-zinc.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- === Footer === -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
@@ -521,12 +578,12 @@
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- === JS: header glass, mobile nav (scrim+lock), reveal, i18n + meta sync === -->
+  <!-- ===== JS ===== -->
   <script>
     // Header height + glass on scroll
     (function(){
       const header = document.getElementById('siteHeader');
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 56; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
       window.addEventListener('resize', setH);
@@ -534,7 +591,7 @@
       setH(); onScroll();
     })();
 
-    // Mobile nav (scrim + body lock) + highlight current (Products)
+    // Mobile nav (scrim + body lock) + highlight current
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
@@ -566,7 +623,6 @@
         window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
       }
-      // highlight "Products" when under /products
       try{
         const here = location.pathname.replace(/\/+$/,'');
         document.querySelectorAll('.menu a').forEach(a=>{
@@ -598,11 +654,11 @@
           slides[sidx].classList.remove('active'); 
           sidx = (sidx + 1) % slides.length; 
           slides[sidx].classList.add('active'); 
-        }, 5200); // สลับรูปโครเมตทุกๆ 5.2 วินาที
+        }, 5200); 
       }
     })();
 
-    // i18n + meta sync (shared keys)
+    // i18n
     const I18N = {
       th:{
         meta_title:"โครเมตบนซิงค์ (Passivation) | Baume Chemical",
@@ -612,28 +668,46 @@
         tw_title:"โครเมตบนซิงค์ (Passivation) - Baume Chemical",
         tw_desc:"ระบบโครเมตหลายเฉดบนซิงค์ เพิ่มความทนการกัดกร่อนและการยึดเกาะสี",
 
-        btn_home:"← กลับหน้าแรก", btn_consult:"ปรึกษาทีมเทคนิค",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"กลับหน้าแรก", btn_consult:"ปรึกษาทีมเทคนิค",
         hero_title:"โครเมตบนซิงค์ (Passivation)",
         hero_tagline:"เพิ่มความทนการกัดกร่อน การยึดเกาะสี ลด White Rust และเพิ่มความสวยงาม — มีทั้ง Cr3/Cr6: ฟ้า/ขาว, ดำ, รุ้ง, เหลือง และ Olive Drab ให้เลือกตามสเปกงาน",
         sec_products:"ผลิตภัณฑ์",
         sec_products_lead:"เลือกสูตรโครเมตให้เหมาะกับมาตรฐานการทดสอบและรูปลักษณ์ที่ต้องการ",
+        
         c3_blue_t:"Blue (White) Chromate 3",
-        c3_blue_d:"สร้างฟิล์มบางๆ สีฟ้าอมขาวและเพิ่มความทนทานต่อการกัดกร่อน สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น และสามารถทนการทดสอบ Salt Spray ได้นานกว่า 96 ชั่วโมง",
+        c3_blue_d:"สร้างฟิล์มบางๆ สีฟ้าอมขาวและเพิ่มความทนทานต่อการกัดกร่อน สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น",
+        c3_blue_feat1:"ฟิล์มสีฟ้าอมขาวเงางามบนผิวซิงค์", c3_blue_feat2:"ใช้ โครเมียม 3 (Cr³⁺) ปลอดภัยต่อสิ่งแวดล้อม", c3_blue_feat3:"ทนการทดสอบ Salt Spray ได้นานกว่า 96 ชม.",
+
         c3_black_t:"Black Chromate 3",
-        c3_black_d:"สร้างฟิล์มสีดำเงาสนิทที่สวยงาม ซึ่งความเข้มของสีจะปรับได้ตามระยะเวลาที่แช่ชิ้นงานในน้ำยา โดยสามารถทนการทดสอบ Salt Spray ได้นาน 96 ชั่วโมง และจะทนทานยิ่งขึ้นเมื่อเคลือบด้วยน้ำยาซีลอีกชั้น",
+        c3_black_d:"สร้างฟิล์มสีดำเงาสนิทที่สวยงาม ซึ่งความเข้มของสีจะปรับได้ตามระยะเวลาที่แช่ชิ้นงานในน้ำยา สามารถเพิ่มความทนทานได้เมื่อเคลือบด้วยน้ำยาซีล",
+        c3_black_feat1:"สร้างฟิล์มสีดำเงาสนิท สม่ำเสมอทั่วชิ้นงาน", c3_black_feat2:"ปรับความเข้มของสีดำได้ตามระยะเวลาการจุ่ม", c3_black_feat3:"ทน Salt Spray ได้นาน 96 ชม. (เพิ่มได้เมื่อซีลผิว)",
+
         c3_iri_t:"Iridescent Chromate 3",
-        c3_iri_d:"โทนรุ้ง สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น สีออกฟ้า–เขียว/เขียว/ม่วงฟ้าปนแดงตามสภาพและเวลาแช่ และยังทนทานต่อการเกิด White Rust (สนิมขาว) ได้นานถึง 144–196 ชั่วโมง<",
+        c3_iri_d:"โทนรุ้ง สารนี้ใช้ โครเมียม 3 (Cr³⁺) ซึ่งปลอดภัยและเป็นมิตรต่อสิ่งแวดล้อม ทำให้การบำบัดน้ำเสียง่ายขึ้น สีออกฟ้า–เขียว/เขียว/ม่วงฟ้าปนแดงตามสภาพและเวลาแช่",
+        c3_iri_feat1:"ให้โทนสีรุ้งสวยงาม (ฟ้า-เขียว-ม่วงแดง)", c3_iri_feat2:"ใช้ โครเมียม 3 (Cr³⁺) ลดต้นทุนการบำบัดน้ำเสีย", c3_iri_feat3:"ทนการเกิดสนิมขาว (White Rust) ได้ 144–196 ชม.",
+
         c3_yellow_t:"Yellow Chromate 3",
-        c3_yellow_d:"สร้างฟิล์มสี เหลือง-รุ้ง แต่ใช้ โครเมียม 3 (Cr³⁺) ที่ปลอดภัยกว่า สารนี้เป็นมิตรต่อสิ่งแวดล้อมและสามารถทนต่อการกัดกร่อนได้นาน 72–100 ชั่วโมง โดยสามารถเพิ่มความทนทานได้อีกด้วยการอบที่อุณหภูมิ 120 °C",
+        c3_yellow_d:"สร้างฟิล์มสี เหลือง-รุ้ง แต่ใช้ โครเมียม 3 (Cr³⁺) ที่ปลอดภัยกว่า สารนี้เป็นมิตรต่อสิ่งแวดล้อมและสามารถทนต่อการกัดกร่อนได้ดีเยี่ยม",
+        c3_yellow_feat1:"สร้างฟิล์มสีเหลือง-รุ้งสวยงามและเรียบเนียน", c3_yellow_feat2:"ทางเลือกทดแทนโครเมียม 6 ที่ปลอดภัยกว่า", c3_yellow_feat3:"อบที่ 120 °C เพื่อเพิ่มความทนทานได้ยิ่งขึ้น",
+
         c6_blue_t:"Blue (White) Chromate 6",
-        c6_blue_d:"ชนิดโครเมียม 6 (Cr⁶⁺) ซึ่งเป็นสารเคมีดั้งเดิมที่มีความเสถียรสูง ทำให้การปรับปรุงบ่อชุบง่ายและค่า pH คงที่ นอกจากนี้ยังสามารถเพิ่มความเข้มของสีฟ้าได้ด้วยการเติมสีย้อมอีกด้วย ชิ้นงานทนทานต่อการกัดกร่อนได้นานกว่า 48 ชั่วโมง",
+        c6_blue_d:"ชนิดโครเมียม 6 (Cr⁶⁺) ซึ่งเป็นสารเคมีดั้งเดิมที่มีความเสถียรสูง ทำให้การปรับปรุงบ่อชุบง่ายและค่า pH คงที่ สามารถเพิ่มความเข้มของสีฟ้าได้ด้วยการเติมสีย้อม",
+        c6_blue_feat1:"สารเคมีมีความเสถียร บ่อชุบคุมค่า pH ได้ง่าย", c6_blue_feat2:"สามารถเติมสีย้อมเพื่อเพิ่มความเข้มของสีฟ้าได้", c6_blue_feat3:"ทนการเกิดสนิมขาว (White Rust) ได้มากกว่า 48 ชม.",
+
         c6_black_t:"Black Chromate 6",
-        c6_black_d:"สร้างฟิล์มสีดำเงาสวยงามและมีความทนทานสูงมาก คุณสมบัติเด่นคือสามารถทนการกัดกร่อนจาก White Rust (สนิมขาว) ได้นานถึง 240–288 ชั่วโมง",
+        c6_black_d:"สร้างฟิล์มสีดำเงาสวยงามและมีความทนทานสูงมาก คุณสมบัติเด่นคือสามารถทนการกัดกร่อนจากความชื้นได้ยาวนานที่สุด",
+        c6_black_feat1:"สร้างชั้นฟิล์มสีดำเงางามที่มีความทนทานสูงมาก", c6_black_feat2:"รองรับการชุบทั้งแบบถังแขวนและถังกลิ้ง", c6_black_feat3:"ทนการเกิดสนิมขาว (White Rust) ได้ถึง 240–288 ชม.",
+
         c6_yellow_t:"Yellow Chromate 6",
-        c6_yellow_d:"สร้างฟิล์มที่มีสี เหลือง-รุ้ง สวยงาม ใช้ปริมาณน้อย, ดูแลรักษาง่าย, และสามารถปรับความเข้มของสีได้ด้วยการเติมน้ำหรือสีย้อม นอกจากนี้ยังช่วยให้ชิ้นงานทนทานต่อการกัดกร่อนได้นาน 72 ชั่วโมง",
+        c6_yellow_d:"สร้างฟิล์มที่มีสี เหลือง-รุ้ง สวยงามคลาสสิก ใช้ปริมาณน้อย ดูแลรักษาง่าย และสามารถปรับความเข้มของสีได้ด้วยการเติมน้ำหรือสีย้อม",
+        c6_yellow_feat1:"ให้เฉดสีเหลือง-รุ้งแบบคลาสสิก", c6_yellow_feat2:"ใช้ปริมาณสารน้อย บำรุงรักษาบ่อชุบได้ง่าย", c6_yellow_feat3:"ทนการเกิดสนิมขาวได้ 72 ชั่วโมงขึ้นไป",
+
         c6_olive_t:"Olive Drab Chromate 6",
-        c6_olive_d:"สร้างฟิล์มสีเขียวทหาร (Olive Drab) ที่ดูแข็งแรงและมีความทนทานสูง ความทนทานต่อการกัดกร่อน: สารเคลือบนี้ช่วยให้ชิ้นงานสามารถทนทานต่อการกัดกร่อนได้นานถึง 240–288 ชั่วโมง",
-        view_details:"ดูรายละเอียด →",
+        c6_olive_d:"สร้างฟิล์มสีเขียวทหาร (Olive Drab) ที่ดูแข็งแรง ดุดัน และมีความทนทานต่อการกัดกร่อนสูง เหมาะสำหรับชิ้นงานที่ต้องการการยึดเกาะสีที่ดีเยี่ยม",
+        c6_olive_feat1:"ฟิล์มสีเขียวทหาร (Olive Drab) แข็งแรงทนทาน", c6_olive_feat2:"เป็นชั้นรองพื้นเพื่อการยึดเกาะของสีทับหน้าที่ยอดเยี่ยม", c6_olive_feat3:"ทนการเกิดสนิมขาวได้สูงสุดถึง 240–288 ชม.",
+
+        view_details:"ดูรายละเอียด",
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -646,28 +720,46 @@
         tw_title:"Chromate on Zinc - Baume Chemical",
         tw_desc:"Multi-shade chromate on zinc for corrosion resistance and paintability.",
 
-        btn_home:"← Home", btn_consult:"Talk to a Specialist",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"Back to Home", btn_consult:"Talk to a Specialist",
         hero_title:"Chromate on Zinc (Passivation)",
         hero_tagline:"Boost corrosion resistance, paint adhesion, and appearance — available in Cr3/Cr6: blue/white, black, iridescent, yellow, and olive drab.",
         sec_products:"Products",
         sec_products_lead:"Pick a chromate system that meets your test spec and desired finish.",
+
         c3_blue_t:"Blue (White) Chromate 3",
-        c3_blue_d:"Works with acid/alkaline and cyanide-free zinc. Bluish-white; salt spray >96 h at 5% v/v. Cr3 (no Cr6), easier on the environment and maintenance.",
+        c3_blue_d:"Bluish-white film. Eco-friendly Cr3+ formulation. Easier on the environment and wastewater treatment.",
+        c3_blue_feat1:"Bluish-white film on zinc surfaces", c3_blue_feat2:"Eco-friendly Cr3+ (No Cr6)", c3_blue_feat3:"Salt spray resistance > 96 hours",
+
         c3_black_t:"Black Chromate 3",
-        c3_black_d:"For acid/alkaline zinc; deep glossy black, stronger with a sealant. White rust: ~48–72 h (barrel), ~72–96 h (rack).",
+        c3_black_d:"Deep glossy black finish. Intensity can be adjusted via immersion time. Much stronger with a sealant.",
+        c3_black_feat1:"Deep glossy black finish, uniform across parts", c3_black_feat2:"Adjustable color intensity via immersion time", c3_black_feat3:"Salt spray resistance ~96 h (improves with seal)",
+
         c3_iri_t:"Iridescent Chromate 3",
-        c3_iri_d:"Rainbow tone, Cr6-free and WWTP-friendly. Color varies with dwell/conditions; white rust ~144–196 h.",
+        c3_iri_d:"Rainbow tone. Cr6-free and WWTP-friendly. Color varies with dwell/conditions.",
+        c3_iri_feat1:"Beautiful rainbow iridescent tone", c3_iri_feat2:"Eco-friendly and WWTP safe", c3_iri_feat3:"White rust resistance 144–196 hours",
+
         c3_yellow_t:"Yellow Chromate 3",
-        c3_yellow_d:"Yellow/rainbow similar to Cr6 but Cr3-based. White rust ~72–100 h; 120°C bake improves resistance.",
+        c3_yellow_d:"Yellow/rainbow similar to Cr6 but Cr3-based. 120°C bake improves resistance.",
+        c3_yellow_feat1:"Smooth yellow/rainbow finish", c3_yellow_feat2:"Safer Cr3+ alternative to hexavalent", c3_yellow_feat3:"Bake at 120°C to improve resistance",
+
         c6_blue_t:"Blue (White) Chromate 6",
-        c6_blue_d:"Cr6 system with stable pH; bluish-white; can intensify with blue dye. >48 h white rust.",
+        c6_blue_d:"Stable Cr6+ system. Easy bath maintenance and pH control. Can intensify with blue dye.",
+        c6_blue_feat1:"Highly stable bath, easy pH control", c6_blue_feat2:"Color can be intensified with blue dye", c6_blue_feat3:"White rust resistance > 48 hours",
+
         c6_black_t:"Black Chromate 6",
-        c6_black_d:"Glossy black for rack/barrel, wide window and easy titration. White rust ~240–288 h.",
+        c6_black_d:"Highly durable glossy black for rack/barrel. Extremely high corrosion resistance.",
+        c6_black_feat1:"Highly durable glossy black finish", c6_black_feat2:"Suitable for rack and barrel plating", c6_black_feat3:"White rust resistance 240–288 hours",
+
         c6_yellow_t:"Yellow Chromate 6",
-        c6_yellow_d:"Low make-up, easy upkeep; tune shade with water/dye. White rust ≥72 h.",
+        c6_yellow_d:"Classic yellow-rainbow finish. Low make-up, easy upkeep; tune shade with water/dye.",
+        c6_yellow_feat1:"Classic yellow-rainbow finish", c6_yellow_feat2:"Low make-up and easy maintenance", c6_yellow_feat3:"White rust resistance ≥ 72 hours",
+
         c6_olive_t:"Olive Drab Chromate 6",
-        c6_olive_d:"Deep olive-drab, high corrosion resistance; good paint base. White rust ~240–288 h.",
-        view_details:"View Details →",
+        c6_olive_d:"Deep olive-drab military finish, excellent base for paint adhesion. Maximum corrosion resistance.",
+        c6_olive_feat1:"Deep olive-drab military finish", c6_olive_feat2:"Excellent base for paint adhesion", c6_olive_feat3:"Maximum corrosion resistance (240–288 h)",
+
+        view_details:"View Details",
         footer_products:"Products",
         footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -690,17 +782,23 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // sync buttons (header + FAB)
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
 
-      // translate content
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const dict = I18N[L];
-        if(key && dict && dict[key] !== undefined) node.textContent = dict[key];
+        if(key && dict && dict[key] !== undefined) {
+            if(key === "view_details") {
+                node.innerHTML = dict[key] + " <span>→</span>";
+            }
+            else if(node.tagName === 'LI' || node.tagName === 'SPAN' || node.tagName === 'DIV' || node.tagName === 'H3' || node.tagName === 'H1' || node.tagName === 'P' || node.tagName === 'A' || node.tagName === 'TH' || node.tagName === 'TD') {
+                 node.innerHTML = dict[key];
+            } else {
+                 node.textContent = dict[key];
+            }
+        }
       });
 
-      // update meta for SEO/OG/Twitter
       const t = I18N[L];
       if(t){
         els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
@@ -722,22 +820,18 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
 
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
-
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
+    // ==== Back-to-top ====
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
 
   </script>
 </body>
