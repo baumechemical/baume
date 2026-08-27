@@ -104,17 +104,11 @@
   }
   </script>
 
-  <!-- Fonts & Perf -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/ps.jpeg">
-
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b;
       --ink:#0f172a; --muted:#5b6775; --bg:#f4f6f5; --card:#fff;
-      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.12);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png'); --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
@@ -125,13 +119,14 @@
     .site-header{
       position:fixed; inset:0 0 auto 0; z-index:1400;
       background:transparent; border-bottom:1px solid rgba(255,255,255,.12);
-      transition:background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
+      transition:background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease;
       -webkit-backdrop-filter:none; backdrop-filter:none;
     }
     .site-header.scrolled{
-      background:rgba(15,23,42,.70);
-      -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
-      box-shadow:0 8px 26px rgba(2,8,20,.18);
+      background:rgba(15,23,42,.75);
+      -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
+      box-shadow:0 8px 30px rgba(0,0,0,.15);
+      border-bottom: 1px solid rgba(255,255,255,.05);
     }
     .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:10px 16px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
@@ -141,9 +136,9 @@
     .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a{display:inline-block; padding:10px 14px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600; transition: background 0.2s ease, color 0.2s ease;}
     .menu a:hover{background:rgba(255,255,255,.12)}
-    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.2)}
     .menu a.cta{border:1px solid rgba(255,255,255,.35)}
     .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
 
@@ -156,34 +151,34 @@
     /* Header Language switch */
     .lang-switch{display:flex; gap:6px; padding:4px; border:1px solid rgba(226,232,240,.9); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .site-header.scrolled .lang-switch{ background:#ffffffdd }
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
     .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     @media (max-width:920px){
-      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400}
+      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,.15); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .3s ease, opacity .3s ease; z-index:1400; box-shadow: 0 10px 40px rgba(0,0,0,.25);}
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
-    .menu-scrim:not([hidden]){ display:block }
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.3); backdrop-filter: blur(4px); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block; animation: fadeIn 0.3s ease; }
     body.no-scroll{ position:fixed; width:100%; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     /* ===== Floating Language FAB (synced) ===== */
     .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
     .lang-fab .lang-btn{ padding:6px 10px }
 
     /* ===== Hero ===== */
-/* ===== Hero ===== */
     .hero{ 
       position:relative; overflow:hidden; display:grid; place-items:center; 
       text-align:center; color:#fff; 
-      min-height: clamp(420px, 60vh, 620px); /* ควบคุมความสูงให้กลับมาเท่าเดิม */
+      min-height: clamp(420px, 60vh, 620px); 
       padding-top:var(--header-h); 
     }
     
-    /* สไตล์สำหรับ Slider */
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
       position:absolute; inset:-4%;
@@ -193,121 +188,140 @@
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
     
-    /* ฟิลเตอร์เงาดำ (สั่ง pointer-events: none เพื่อไม่ให้มันบล็อกเมาส์) */
     .hero::after{ 
       content:""; position:absolute; inset:0; 
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); 
+      background:linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6)); 
       z-index:1; pointer-events:none; 
     }
     
-    /* เนื้อหาข้างใน (ตั้ง z-index ให้สูงสุด จะได้กดปุ่มได้) */
     .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 4px 20px rgba(0,0,0,.5)}
+    .hero p{max-width:980px; margin:0 auto; color:#f0f7f5; text-shadow:0 2px 10px rgba(0,0,0,.4)}
     
-    /* ปุ่มย้อนกลับ */
+    /* ===== ปรับปรุงปุ่มย้อนกลับให้สวยและพรีเมียมขึ้น ===== */
     .home-back{ 
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
-      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
-      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+      display:inline-flex; align-items:center; gap:8px; padding:10px 20px; 
+      border-radius:999px; border:1px solid rgba(255,255,255,.3); 
+      background: rgba(255,255,255,.15); /* Glassmorphism background */
+      color:#fff; text-decoration:none; font-weight:600; font-size: 0.96rem;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .home-back:hover{ background:rgba(255,255,255,.12) }
+    .home-back:hover{ 
+      background: rgba(255,255,255,.25); 
+      border-color: rgba(255,255,255,.6);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
 
     /* ===== Layout ===== */
     .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
     h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
+    p.lead{margin:0 0 24px; color:#5f6d7c}
 
     /* ===== Cards ===== */
-    .grid{display:grid;gap:16px;grid-template-columns:1fr}
+    .grid{display:grid;gap:18px;grid-template-columns:1fr}
     @media(min-width:880px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--card);border:1px solid #e3ece5;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-1);transition:transform .18s ease, box-shadow .18s ease}
-    .card picture,.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eff5f0}
-    .card .body{padding:14px}
-    .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-    .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
-    .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
+    .card{background:var(--card);border:1px solid #eef2ef;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-1);transition:all .3s cubic-bezier(0.4, 0, 0.2, 1)}
+    
+    /* ซ่อนส่วนที่ล้นเวลารูปซูม */
+    .card picture { display:block; overflow:hidden; background:#eff5f0; } 
+    /* เพิ่ม Transition ให้รูปภาพเพื่อทำ Zoom Effect */
+    .card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .card .body{padding:18px}
+    .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+    .badge{font-size:12px;font-weight:600;background:#e8f4ed;color:#215c44;padding:4px 10px;border-radius:999px;display:inline-block}
+    .card h3{margin:0 0 8px; font-size:1.1rem; color:#1a2b21}
     .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
-    .card .more:hover{ text-decoration:underline }
+    .card .more{display:inline-block; margin-top:14px; color:var(--accent); font-weight:800; text-decoration:none; transition: color 0.2s ease;}
+    .card .more:hover{ color: #23543d; text-decoration:underline }
+    
     .card.lift{ will-change: transform, box-shadow }
-    @media (hover:hover) and (pointer:fine){ .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) } }
+    @media (hover:hover) and (pointer:fine){ 
+      .card.lift:hover, .card.lift:focus-within{ transform:translateY(-6px); box-shadow:var(--shadow-2); border-color:#d0e0d6; } 
+      /* ซูมรูปเมื่อเอาเมาส์ชี้การ์ด */
+      .card.lift:hover img { transform: scale(1.06); }
+    }
 
     /* Reveal */
     .reveal{opacity:0; transform: translateY(12px) scale(.98); transition: opacity .6s ease, transform .6s ease}
     .reveal.show{opacity:1; transform:none}
     @media (prefers-reduced-motion: reduce){ .reveal{transition:none; opacity:1; transform:none} }
 
-    /* ===== Table ===== */
-    .table{overflow:auto;background:#fff;border:1px solid #e3ece5;border-radius:12px}
+    /* ===== Table (ปรับให้สวยงามและดูสะอาดขึ้น) ===== */
+    .table{overflow:auto;background:#fff;border-radius:12px; border:1px solid #ebf1ed; box-shadow: 0 4px 24px rgba(2,8,20,.03);}
     table{border-collapse:collapse;width:100%;min-width:720px}
-    th,td{padding:10px 12px;border-bottom:1px solid #edf2ef;text-align:left;font-size:.96rem}
-    th{white-space:nowrap;background:#f7fbf8;color:#2b3a33}
+    th,td{padding:14px 16px;border-bottom:1px solid #f0f4f2;text-align:left;font-size:.96rem; transition: background 0.2s ease;}
+    th{white-space:nowrap;background:#eef5f1;color:#1f3326;font-weight:800; border-bottom: 2px solid #dce8e1;}
+    tbody tr:hover td { background: #f8fbf9; } /* ไฮไลต์แถวเมื่อเอาเมาส์ชี้ */
 
     /* ===== Footer ===== */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer{background:#0b111f; color:#cbd5e1; margin-top:32px; border-top: 4px solid var(--brand);}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color 0.2s ease;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:44px 20px}
+    .footer-grid{display:grid; gap:28px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 14px}
     .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .ft-name{font-weight:800; color:#fff; font-size:1.1rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#879ab0}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE Button */
+    .float-line{
+      position:fixed;
+      right:16px;
+      bottom:calc(18px + env(safe-area-inset-bottom)); 
+      z-index:900; 
+    }
+    .float-line a{
+      display:grid; place-items:center;
+      width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 6px 20px rgba(0,195,0,.3);
+      animation:pulse 2.6s infinite;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .float-line a:hover,
+    .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,195,0,.4) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
+      70%{box-shadow:0 0 0 16px rgba(0,195,0,0)}
+      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
+    /* Back-to-top */
+    .backtop{
+      position:fixed;
+      right:16px;
+      bottom:calc(90px + env(safe-area-inset-bottom)); 
+      z-index:900;
+      display:none;
+    }
+    .backtop.show{ display:block; animation: fadeIn 0.3s ease; }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px;
+      border:1px solid #d8e4e1; background:#fff; color:#215c44; font-weight: bold;
+      box-shadow:0 6px 20px rgba(0,0,0,.1);
+      cursor:pointer;
+      transition: all 0.2s ease;
+    }
+    .backtop button:hover,
+    .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.15); background:#f4f9f6; }
 
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-
-</style>
+    /* ย่อขนาดบนจอเล็ก */
+    @media (max-width:420px){
+      .float-line a{ width:50px; height:50px }
+      .backtop button{ width:42px; height:42px }
+    }
+  </style>
 </head>
 <body>
 
