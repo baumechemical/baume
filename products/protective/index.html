@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
 
-  <!-- Open Graph / Twitter (ใช้รูปเดิมจาก pic.in.th) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:url" content="https://www.baumechemical.com/products/protective/index.html">
@@ -78,14 +78,7 @@
         {"@type":"ListItem","position":4,"name":"Tin Anti-Tarnish","url":"https://www.baumechemical.com/products/protective/tin-anti-tarnish-b100"},
         {"@type":"ListItem","position":5,"name":"Lacquer Coating","url":"https://www.baumechemical.com/products/platingcoating/electrophoreticlacquer/troubleshootingelectrophoreticlacquer"}
       ]
-    },
-    "hasPart":[
-      {"@type":"WebPage","name":"Cold Dip Anti-Tarnish (Cu/Brass)","url":"https://www.baumechemical.com/products/protective/antitarnish-for-copper"},
-      {"@type":"WebPage","name":"Hot Dip Anti-Tarnish","url":"https://www.baumechemical.com/products/protective/anti-tarnish-bu-186"},
-      {"@type":"WebPage","name":"Electro Anti-Tarnish","url":"https://www.baumechemical.com/products/protective/anti-tarnish-bu-20"},
-      {"@type":"WebPage","name":"Tin Anti-Tarnish","url":"https://www.baumechemical.com/products/protective/tin-anti-tarnish-b100"},
-      {"@type":"WebPage","name":"Lacquer Coating","url":"https://www.baumechemical.com/products/platingcoating/electrophoreticlacquer/troubleshootingelectrophoreticlacquer"}
-    ]
+    }
   }
   </script>
 
@@ -102,219 +95,239 @@
   }
   </script>
 
-  <!-- Fonts & Preloads -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/image8a6055e938ac1f34c.jpeg"/>
-
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
-      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#5b6675; --bg:#f4f7f6;
+      --radius:24px; 
+      --shadow-1:0 12px 30px -10px rgba(2,8,20,.08); 
+      --shadow-2:0 20px 40px -10px rgba(44,94,78,.18);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:56px; 
+      --container:1200px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6; overflow-x: hidden;}
 
-    /* ===== Header: fixed glass ===== */
-    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
-    .site-header.scrolled{background:rgba(15,23,42,.70);-webkit-backdrop-filter:saturate(140%) blur(10px);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
-    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
+    /* ===== Header ===== */
+    .site-header{
+      position:fixed; inset:0 0 auto 0; z-index:1400;
+      background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.75);
+      -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
+      box-shadow:0 4px 20px rgba(2,8,20,.15);
+    }
+    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:6px 16px}
+    .brand{display:flex; align-items:center; gap:8px; text-decoration:none}
+    .brand-logo{width:34px;height:34px;border-radius:8px;flex:0 0 34px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:0.95rem;letter-spacing:.2px}
+
     .header-right{display:flex;align-items:center;gap:10px}
-
-    .primary-nav{display:flex;align-items:center;gap:12px}
-    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
-    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .primary-nav{display:flex;align-items:center;gap:8px}
+    .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:8px 10px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600; font-size: 0.9rem; transition: background 0.3s;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
 
-    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
-    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:34px;height:34px;border-radius:8px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:20px;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle .bar::before{top:-6px}.nav-toggle .bar::after{top:6px}
     .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
     /* Header language switch */
-    .lang-switch{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
+    .lang-switch{display:flex;gap:4px;padding:3px;border:1px solid rgba(226,232,240,.6);border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(2,8,20,.1)}
     .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:5px 8px;border-radius:999px;font-weight:800;font-size:0.85rem;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
     .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .flag{width:16px;height:12px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     @media (max-width:920px){
-      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .3s ease,opacity .3s ease;z-index:1400}
       .menu li a{display:block;padding:12px 14px;border-radius:10px}
       .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
       .nav-toggle{display:inline-flex}
     }
-    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
-    .menu-scrim:not([hidden]){display:block}
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.3);z-index:1300;display:none; backdrop-filter: blur(4px);}
+    .menu-scrim:not([hidden]){display:block; animation: fadeIn 0.3s ease;}
     body.no-scroll{position:fixed;width:100%}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    /* FAB language (synced with header) */
-    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100;display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .lang-fab .lang-btn{padding:6px 10px}
-
-    /* ===== Hero ===== */
-/* ===== Hero ===== */
+    /* ===== Hero (Modern Glassmorphism) ===== */
     .hero{ 
-      position:relative; overflow:hidden; display:grid; place-items:center; 
+      position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;
       text-align:center; color:#fff; 
-      min-height: clamp(420px, 60vh, 620px); 
-      padding-top:var(--header-h); 
+      min-height: clamp(500px, 75vh, 720px); 
+      padding-top:calc(var(--header-h) + 20px); 
+      padding-bottom: 40px;
     }
     
-    /* สไตล์ Slider */
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
       position:absolute; inset:-4%;
       background-size:cover; background-position:center;
-      filter:brightness(.82); transform:scale(1.04);
-      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+      filter:brightness(0.85); transform:scale(1.04);
+      opacity:0; transition:opacity 1200ms ease, transform 6000ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
     
-    /* ฟิลเตอร์เงาดำ (กันไม่ให้บังเมาส์คลิก) */
     .hero::after{ 
       content:""; position:absolute; inset:0; 
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)); 
+      background:linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(44,94,78,0.65) 100%); 
       z-index:1; pointer-events:none; 
     }
     
-    /* เนื้อหาข้อความ */
-    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:960px; margin:0 auto; color:#e6f2ef}
-    
-    /* ปุ่มย้อนกลับ (ใช้สไตล์เดียวกันกับหน้าอื่น) */
-    .home-back{ 
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
-      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
-      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+    .hero-inner{ 
+      position:relative; z-index:2; 
+      padding:40px 30px; margin: 0 16px;
+      max-width: 860px; width:100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+      animation: floatUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    .home-back:hover{ background:rgba(255,255,255,.12) }
+    
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1{
+      margin:0 0 16px; font-weight:800; font-size:clamp(28px,4vw,48px); 
+      background: linear-gradient(to right, #ffffff, #d1fae5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.3;
+    }
+    .hero p{
+      max-width:700px; margin:0 auto; color:#e2e8f0; font-size: 1.05rem; 
+      line-height: 1.7; font-weight: 400;
+    }
+    .hero .actions{ display:flex; gap:16px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
+    
+    .btn{
+      appearance:none; border:none;
+      background: linear-gradient(135deg, #ff9800, #ff6b00); 
+      color:#fff; padding:12px 24px; 
+      border-radius:999px; font-weight:800; text-decoration:none;
+      box-shadow: 0 8px 20px rgba(255, 152, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .btn:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255, 152, 0, 0.5); }
+    
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:6px 14px; 
+      border-radius:999px; background: rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.3); 
+      color:#fff; text-decoration:none; font-size: 0.9rem; font-weight:600; 
+      transition: all 0.3s ease;
+    }
+    .home-back:hover{ background:rgba(255,255,255,.2); border-color:#fff; }
 
     /* ===== Layout ===== */
-    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
-    p.lead{margin:0 0 16px;color:#5f6d7c}
+    .wrap{max-width:var(--container);margin:auto;padding:60px 16px}
+    
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h2.section{
+      margin:0 0 12px; font-size:clamp(28px, 3.5vw, 36px); font-weight:800;
+      background: linear-gradient(135deg, var(--brand), #0f172a);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    p.lead{margin:0 auto;color:#5b6675;font-size:1.1rem; max-width: 800px;}
 
-    /* ===== Cards ===== */
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    /* ===== Cards (Bento-style + Feature List) ===== */
+    .grid{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{background:#fff;border:1px solid #e3ece5;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-1);transition:transform .18s ease,box-shadow .18s ease}
-    .card picture,.card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eff5f0}
-    .card .body{padding:14px}
-    .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-    .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
-    .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
-    .card p{margin:0;color:#5b6675;font-size:.96rem}
-    .card .more{display:inline-block;margin-top:10px;color:var(--accent);font-weight:800;text-decoration:none}
-    .card .more:hover{text-decoration:underline}
-    .card.lift{will-change:transform,box-shadow}
-    @media(hover:hover) and (pointer:fine){.card.lift:hover,.card.lift:focus-within{transform:translateY(-8px);box-shadow:var(--shadow-2)}}
+    
+    .card{
+      background:#fff; border:none; border-radius:var(--radius); overflow:hidden;
+      box-shadow:var(--shadow-1); transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex; flex-direction: column;
+    }
+    
+    .card-img-wrapper { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #eff5f0; }
+    .card picture, .card img{ display:block;width:100%;height:100%;object-fit:cover; transition: transform 0.6s ease; }
+    .card .body{padding:24px; flex-grow: 1; display: flex; flex-direction: column;}
+    
+    .badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .badge{
+      font-size:11px;font-weight:700;letter-spacing: 0.3px;text-transform: uppercase;
+      background:#ecfdf5;color:#059669;padding:4px 10px;border-radius:999px;
+    }
+    
+    .card h3{margin:0 0 8px;font-size:1.15rem;color:#1e293b;font-weight:800; transition: color 0.3s;}
+    .card p{margin:0;color:#64748b;font-size:0.95rem; line-height: 1.6;}
+    
+    /* Feature List Styling */
+    .feature-list {
+      list-style: none; padding: 0; margin: 16px 0 0 0;
+      border-top: 1px solid #f1f5f9; padding-top: 16px;
+      font-size: 0.9rem; color: #475569; display: flex; flex-direction: column; gap: 8px;
+    }
+    .feature-list li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+    .feature-list li::before {
+      content: "✓"; color: #059669; font-weight: 800; background: #ecfdf5; border-radius: 50%;
+      width: 18px; height: 18px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.75rem; margin-top: 1px;
+    }
 
-    /* Reveal */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .card .more{
+      display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding-top:20px;
+      color:var(--accent);font-weight:800;text-decoration:none; font-size: 0.95rem;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+    
+    .card.lift{will-change:transform,box-shadow}
+    @media(hover:hover) and (pointer:fine){
+      .card.lift:hover, .card.lift:focus-within{transform:translateY(-12px);box-shadow:var(--shadow-2)}
+      .card.lift:hover img {transform: scale(1.08);}
+      .card.lift:hover h3 {color: var(--brand);}
+      .card.lift:hover .more {gap: 12px; color: #e65100;}
+    }
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out}
     .reveal.show{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
 
     /* ===== Footer ===== */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
+    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:40px}
     .site-footer a{color:#e2e8f0;text-decoration:none}
     .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:var(--container);margin:0 auto;padding:48px 20px 38px}
+    .footer-grid{display:grid;gap:32px;grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
- 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 16px}
+    .ft-logo{width:40px;height:40px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800;color:#fff; font-size: 1.1rem;}
+    .footer-title{margin:0 0 12px;color:#fff;font-weight:800;font-size:1rem}
+    .footer-list{list-style:none;margin:0;padding:0}
+    .footer-list li{margin:8px 0; font-size: 0.95rem;}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15);margin-top:32px;padding-top:20px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.9rem;color:#9fb1c6}
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    /* Floating LINE & Back to top */
+    .float-line{ position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900; }
+    .float-line a{
+      display:grid; place-items:center; width:50px; height:50px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 8px 20px rgba(0,0,0,.25); animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover, .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    @keyframes pulse{ 0%{box-shadow:0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 14px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
-
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-
-    /* Back chip on hero */
-.back-chip{
-  position:absolute;
-  top:calc(var(--header-h) + 10px);
-  left:16px;
-  z-index:1;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border-radius:999px;
-  background:#fff;
-  color:#0f172a;
-  text-decoration:none;
-  font-weight:800;
-  line-height:1;
-  border:1px solid rgba(2,8,20,.08);
-  box-shadow:var(--shadow-1);
-}
-.back-chip:focus-visible{outline:2px solid #0f172a; outline-offset:2px}
-@media (hover:hover) and (pointer:fine){
-  .back-chip:hover{transform:translateY(-1px)}
-}
-
+    .backtop{ position:fixed; right:16px; bottom:calc(82px + env(safe-area-inset-bottom)); z-index:900; display:none; }
+    .backtop.show{ display:block; animation: fadeIn 0.3s; }
+    .backtop button{
+      width:40px; height:40px; border-radius:999px; border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 8px 20px rgba(0,0,0,.15); cursor:pointer; color: var(--brand); font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease;
+    }
+    .backtop button:hover, .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.2) }
   </style>
 </head>
 <body>
@@ -329,15 +342,14 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
+            <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
           </ul>
         </nav>
 
-        <!-- Header language switch -->
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
             <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -356,89 +368,142 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero ===== -->
-<section class="hero" aria-label="Protective hero">
-
+  <section class="hero" aria-label="Protective hero">
     <div class="slides" id="heroSlides">
-      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/thumbnail (1).jpg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/image9.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/image4bb21a99d474156ba.jpeg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/pee.jpeg')"></div> </div>
+      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/thumbnail (1).jpg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/image9.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/image4bb21a99d474156ba.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/pee.jpeg')"></div> 
+    </div>
 
     <div class="hero-inner">
-      <div style="margin-bottom:12px">
-        <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
+      <div style="margin-bottom:20px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span data-i18n-key="back_home">กลับหน้าแรก</span>
+        </a>
       </div>
       <h1 data-i18n-key="hero_title">สารเคลือบป้องกันผิว (Anti-Tarnish &amp; Lacquer)</h1>
       <p data-i18n-key="hero_tagline">ปกป้องผิวโลหะจากออกซิเดชันและสีหมอง โดยคงความเงางาม มีทั้งจุ่มเย็น/จุ่มร้อน/อิเล็กโทร, ป้องกันหมองบนดีบุก และแลคเกอร์น้ำ</p>
+      <div class="actions">
+        <a class="btn" href="https://www.baumechemical.com/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+      </div>
     </div>
   </section>
 
   <!-- ===== Products Grid ===== -->
   <main class="wrap">
-    <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์</h2>
-    <p class="lead" data-i18n-key="sec_products_lead">เลือกท็อปโค้ต/แอนติทาร์นิชให้เหมาะกับโลหะและมาตรฐานการทดสอบ</p>
+    <div class="section-header">
+        <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์</h2>
+        <p class="lead" data-i18n-key="sec_products_lead">เลือกท็อปโค้ต/แอนติทาร์นิชให้เหมาะกับโลหะและมาตรฐานการทดสอบ</p>
+    </div>
 
     <div class="grid">
       <!-- Cold Dip Anti-Tarnish -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/pc.jpeg" alt="Cold Dip Anti-Tarnish for copper and brass"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/pc.jpeg" alt="Cold Dip Anti-Tarnish for copper and brass"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Cold Dip</span></div>
           <h3 data-i18n-key="cold_t">Cold Dip Anti-Tarnish (Cu/Brass)</h3>
-          <p data-i18n-key="cold_d">น้ำยาใสอมเหลือง ใช้เป็นบ่อสุดท้ายหลังชุบหรือหลังล้างเงา ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย สร้างฟิล์มใสป้องกันหมอง เหมาะงานอิเล็กทรอนิกส์/จิวเวลรี่ ทดสอบความชื้นได้ ~200 ชม.</p>
-          <a class="more" href="antitarnish-for-copper.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="cold_d">น้ำยาใสอมเหลือง ใช้เป็นบ่อสุดท้ายหลังชุบหรือหลังล้างเงา ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย สร้างฟิล์มใสป้องกันหมอง เหมาะงานอิเล็กทรอนิกส์/จิวเวลรี่</p>
+          <ul class="feature-list">
+            <li data-i18n-key="cold_feat1">ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย</li>
+            <li data-i18n-key="cold_feat2">สร้างฟิล์มใสป้องกันหมองบนทองแดง/ทองเหลือง</li>
+            <li data-i18n-key="cold_feat3">ผ่านการทดสอบความชื้นได้นานถึง 200 ชม.</li>
+          </ul>
+          <a class="more" href="antitarnish-for-copper.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Hot Dip Anti-Tarnish -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/thumbnail (1).jpg" alt="Hot Dip Anti-Tarnish"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/thumbnail (1).jpg" alt="Hot Dip Anti-Tarnish"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Hot Dip</span></div>
           <h3 data-i18n-key="hot_t">Hot Dip Anti-Tarnish</h3>
-          <p data-i18n-key="hot_d">เคมีเคลือบผิวสำหรับซิงค์ นิกเกิล โครม สแตนเลส ทอง เงิน ฯลฯ ไล่คราบน้ำ แห้งไว ป้องกันสนิมบริเวณไม่ได้ชุบ ฟิล์มยืดหยุ่น ทนทาน ไร้สารตะกั่ว ผิวสัมผัสปลอดภัย.</p>
-          <a class="more" href="anti-tarnish-bu-186.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="hot_d">เคมีเคลือบผิวสำหรับซิงค์ นิกเกิล โครม สแตนเลส ทอง เงิน ฯลฯ ไล่คราบน้ำ แห้งไว ป้องกันสนิมบริเวณไม่ได้ชุบ ฟิล์มยืดหยุ่น ทนทาน ไร้สารตะกั่ว</p>
+          <ul class="feature-list">
+            <li data-i18n-key="hot_feat1">ป้องกันสนิมบริเวณที่ไม่ได้ชุบอย่างมีประสิทธิภาพ</li>
+            <li data-i18n-key="hot_feat2">ฟิล์มเคลือบมีความยืดหยุ่น ทนทาน ไร้สารตะกั่ว</li>
+            <li data-i18n-key="hot_feat3">ปลอดภัยเมื่อสัมผัสผิวหนัง (Skin-contact friendly)</li>
+          </ul>
+          <a class="more" href="anti-tarnish-bu-186.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Electro Anti-Tarnish -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/pe.jpeg" alt="Electro Anti-Tarnish"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/pe.jpeg" alt="Electro Anti-Tarnish"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Electro</span></div>
           <h3 data-i18n-key="elec_t">Electro Anti-Tarnish</h3>
-          <p data-i18n-key="elec_d">สำหรับเงิน ทอง นิกเกิล ทองแดงและอัลลอยด์ เคลือบไฟฟ้าเพื่อล็อกสี ลดหมอง ช่วยแห้งไว เพิ่มความลื่นผิว ฟิล์มไม่ระคายเคืองผิวหนัง และไม่ก่อสีผิดเพี้ยน.</p>
-          <a class="more" href="anti-tarnish-bu-20.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="elec_d">สำหรับเงิน ทอง นิกเกิล ทองแดงและอัลลอยด์ เคลือบไฟฟ้าเพื่อล็อกสี ลดหมอง ช่วยแห้งไว เพิ่มความลื่นผิว ฟิล์มไม่ระคายเคืองผิวหนัง และไม่ก่อสีผิดเพี้ยน</p>
+          <ul class="feature-list">
+            <li data-i18n-key="elec_feat1">ล็อกสีและลดความหมองด้วยระบบการชุบไฟฟ้า</li>
+            <li data-i18n-key="elec_feat2">แห้งไวและช่วยเพิ่มความลื่นให้ผิวชิ้นงาน</li>
+            <li data-i18n-key="elec_feat3">ไม่ก่อให้เกิดการระคายเคืองหรือทำให้สีเพี้ยน</li>
+          </ul>
+          <a class="more" href="anti-tarnish-bu-20.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Tin Anti-Tarnish -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/Pr4.jpg" alt="Tin Anti-Tarnish"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/Pr4.jpg" alt="Tin Anti-Tarnish"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Tin</span></div>
           <h3 data-i18n-key="tin_t">Tin Anti-Tarnish</h3>
           <p data-i18n-key="tin_d">น้ำยาป้องกันหมองบนผิวดีบุก ช่วยคงโทนสีเดิมได้ยาวนาน เพิ่มความทนผิว อ่างมีเสถียรภาพสูง อายุการเก็บนานนับปีโดยไม่เสื่อม</p>
-          <a class="more" href="tin-anti-tarnish-b100.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <ul class="feature-list">
+            <li data-i18n-key="tin_feat1">คงโทนสีเดิมของผิวดีบุกได้ยาวนานเป็นพิเศษ</li>
+            <li data-i18n-key="tin_feat2">เพิ่มความทนทานและการปกป้องให้พื้นผิว</li>
+            <li data-i18n-key="tin_feat3">อ่างมีความเสถียรสูง อายุการเก็บรักษายาวนาน</li>
+          </ul>
+          <a class="more" href="tin-anti-tarnish-b100.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Electro Lacquer -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/pee.jpeg" alt="Electro lacquer coating"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/pee.jpeg" alt="Electro lacquer coating"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Lacquer (Water-based)</span></div>
           <h3 data-i18n-key="lacq_t">Lacquer Coating</h3>
-          <p data-i18n-key="lacq_d">แลคเกอร์น้ำ เพิ่มความทนเค็มและกันหมอง ใช้กับซิงค์/อัลลอยด์ได้แม้ไม่โครเมต หรือทับบน Cr3/Cr6 ก็ได้ โทนผิวไม่เพี้ยน เหมาะกับนิกเกิล (Ni), โครเมียม (Cr), ทองแดง (Cu), ทองเหลือง (Brass), สเตนเลส (SS), และ อะลูมิเนียม (Al)</p>
-          <a class="more" href="troubleshootingelectrophoreticlacquer.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <p data-i18n-key="lacq_d">แลคเกอร์น้ำ เพิ่มความทนเค็มและกันหมอง ใช้กับซิงค์/อัลลอยด์ได้แม้ไม่โครเมต โทนผิวไม่เพี้ยน เหมาะกับนิกเกิล, โครเมียม, ทองแดง, ทองเหลือง ฯลฯ</p>
+          <ul class="feature-list">
+            <li data-i18n-key="lacq_feat1">เพิ่มความทนทานต่อไอเกลือ (Salt-spray) และกันหมอง</li>
+            <li data-i18n-key="lacq_feat2">ใช้เคลือบทับผิวโลหะได้หลากหลายชนิด</li>
+            <li data-i18n-key="lacq_feat3">ให้สีใสธรรมชาติ โทนผิวเดิมของชิ้นงานไม่เพี้ยน</li>
+          </ul>
+          <a class="more" href="troubleshootingelectrophoreticlacquer.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
-            <!-- Water-based Lacquer -->
+      <!-- Water-based Lacquer -->
       <article class="card lift reveal">
-        <picture><img src="https://www.baumechemical.com/picture/pw.jpg" alt="Water-based lacquer coating"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://www.baumechemical.com/picture/pw.jpg" alt="Water-based lacquer coating"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Protective</span><span class="badge">Masking Lacquer</span></div>
           <h3 data-i18n-key="lacq_t1">Masking Lacquer</h3>
           <p data-i18n-key="lacq_d1">ทำหน้าที่เป็นฉนวนป้องกันการชุบโลหะในบางพื้นที่ของชิ้นงาน การใช้สารนี้ทำให้สามารถสร้างลวดลายแบบ สองโทนสี (Two-tone) หรือหลายสีบนชิ้นงานเดียว</p>
-          <a class="more" href="topcoat-two-tone.html" data-i18n-key="view_details">ดูรายละเอียด →</a>
+          <ul class="feature-list">
+            <li data-i18n-key="lacq1_feat1">เป็นฉนวนป้องกันการชุบโลหะเฉพาะจุด</li>
+            <li data-i18n-key="lacq1_feat2">เหมาะสำหรับสร้างลวดลายแบบทูโทน (Two-tone)</li>
+            <li data-i18n-key="lacq1_feat3">ใช้งานง่าย ลอกออกหรือล้างทำความสะอาดได้เมื่อจบงาน</li>
+          </ul>
+          <a class="more" href="topcoat-two-tone.html" data-i18n-key="view_details">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
     </div>
@@ -492,15 +557,15 @@
     </div>
   </footer>
 
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- ===== JS: header glass, mobile nav (scrim+lock), reveal, i18n + meta sync ===== -->
+  <!-- ===== JS ===== -->
   <script>
-    // Header glass + dynamic height
+    // Header glass
     (function(){
       const header = document.getElementById('siteHeader');
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 56; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
       window.addEventListener('load', setH, {once:true});
       window.addEventListener('resize', setH);
@@ -508,7 +573,7 @@
       setH(); onScroll();
     })();
 
-    // Mobile nav: scrim + body lock + highlight current
+    // Mobile nav
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
@@ -540,7 +605,6 @@
         window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
-      // highlight "Products" when under /products
       try{
         const here = location.pathname.replace(/\/+$/,'');
         document.querySelectorAll('.menu a').forEach(a=>{
@@ -563,7 +627,7 @@
       els.forEach(el=>io.observe(el));
     })();
 
-    // ==== Hero Slider ====
+    // Hero Slider
     (function(){
       const slides = document.querySelectorAll('#heroSlides .slide');
       let sidx = 0;
@@ -572,11 +636,11 @@
           slides[sidx].classList.remove('active'); 
           sidx = (sidx + 1) % slides.length; 
           slides[sidx].classList.add('active'); 
-        }, 5200); // สลับรูปสารเคลือบทุกๆ 5.2 วินาที
+        }, 5200);
       }
     })();
 
-    // i18n + meta sync
+    // i18n
     const I18N = {
       th:{
         meta_title:"สารเคลือบป้องกันผิว (Anti-Tarnish & Lacquer) | Baume Chemical",
@@ -586,23 +650,38 @@
         tw_title:"สารเคลือบป้องกันผิว (Anti-Tarnish & Lacquer) - Baume Chemical",
         tw_desc:"ท็อปโค้ต/แอนติทาร์นิชเพื่อคงความเงางามและเพิ่มความทนการกัดกร่อน",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"กลับหน้าแรก", btn_consult:"ปรึกษาทีมเทคนิค",
         hero_title:"สารเคลือบป้องกันผิว (Anti-Tarnish & Lacquer)",
         hero_tagline:"ปกป้องผิวโลหะจากออกซิเดชันและสีหมอง โดยคงความเงางาม มีทั้งจุ่มเย็น/จุ่มร้อน/อิเล็กโทร, ป้องกันหมองบนดีบุก และแลคเกอร์น้ำ",
         sec_products:"ผลิตภัณฑ์",
         sec_products_lead:"เลือกท็อปโค้ต/แอนติทาร์นิชให้เหมาะกับโลหะและมาตรฐานการทดสอบ",
+        
         cold_t:"Cold Dip Anti-Tarnish (Cu/Brass)",
-        cold_d:"น้ำยาใสอมเหลือง ใช้เป็นบ่อสุดท้ายหลังชุบหรือหลังล้างเงา ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย สร้างฟิล์มใสป้องกันหมอง เหมาะงานอิเล็กทรอนิกส์/จิวเวลรี่ ทดสอบความชื้นได้ ~200 ชม.",
+        cold_d:"น้ำยาใสอมเหลือง ใช้เป็นบ่อสุดท้ายหลังชุบหรือหลังล้างเงา ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย สร้างฟิล์มใสป้องกันหมอง เหมาะงานอิเล็กทรอนิกส์/จิวเวลรี่",
+        cold_feat1:"ช่วยไล่คราบน้ำ แห้งไว ไม่ทิ้งรอย", cold_feat2:"สร้างฟิล์มใสป้องกันหมองบนทองแดง/ทองเหลือง", cold_feat3:"ผ่านการทดสอบความชื้นได้นานถึง 200 ชม.",
+
         hot_t:"Hot Dip Anti-Tarnish",
-        hot_d:"เคมีเคลือบผิวสำหรับซิงค์ นิกเกิล โครม สแตนเลส ทอง เงิน ฯลฯ ไล่คราบน้ำ แห้งไว ป้องกันสนิมบริเวณไม่ได้ชุบ ฟิล์มยืดหยุ่น ทนทาน ไร้สารตะกั่ว ผิวสัมผัสปลอดภัย",
+        hot_d:"เคมีเคลือบผิวสำหรับซิงค์ นิกเกิล โครม สแตนเลส ทอง เงิน ฯลฯ ไล่คราบน้ำ แห้งไว ป้องกันสนิมบริเวณไม่ได้ชุบ ฟิล์มยืดหยุ่น ทนทาน ไร้สารตะกั่ว",
+        hot_feat1:"ป้องกันสนิมบริเวณที่ไม่ได้ชุบอย่างมีประสิทธิภาพ", hot_feat2:"ฟิล์มเคลือบมีความยืดหยุ่น ทนทาน ไร้สารตะกั่ว", hot_feat3:"ปลอดภัยเมื่อสัมผัสผิวหนัง (Skin-contact friendly)",
+
         elec_t:"Electro Anti-Tarnish",
-        elec_d:"สำหรับเงิน ทอง นิกเกิล ทองแดง/อัลลอยด์ เคลือบไฟฟ้าล็อกสี ลดหมอง แห้งไว ผิวลื่น ไม่ระคายเคือง และไม่ก่อสีผิดเพี้ยน",
+        elec_d:"สำหรับเงิน ทอง นิกเกิล ทองแดงและอัลลอยด์ เคลือบไฟฟ้าเพื่อล็อกสี ลดหมอง ช่วยแห้งไว เพิ่มความลื่นผิว ฟิล์มไม่ระคายเคืองผิวหนัง และไม่ก่อสีผิดเพี้ยน",
+        elec_feat1:"ล็อกสีและลดความหมองด้วยระบบการชุบไฟฟ้า", elec_feat2:"แห้งไวและช่วยเพิ่มความลื่นให้ผิวชิ้นงาน", elec_feat3:"ไม่ก่อให้เกิดการระคายเคืองหรือทำให้สีเพี้ยน",
+
         tin_t:"Tin Anti-Tarnish",
-        tin_d:"ป้องกันหมองบนผิวดีบุก คงโทนสีเดิมยาวนาน เพิ่มความทนผิว อ่างเสถียร อายุเก็บยาวโดยไม่เสื่อม",
+        tin_d:"น้ำยาป้องกันหมองบนผิวดีบุก ช่วยคงโทนสีเดิมได้ยาวนาน เพิ่มความทนผิว อ่างมีเสถียรภาพสูง อายุการเก็บนานนับปีโดยไม่เสื่อม",
+        tin_feat1:"คงโทนสีเดิมของผิวดีบุกได้ยาวนานเป็นพิเศษ", tin_feat2:"เพิ่มความทนทานและการปกป้องให้พื้นผิว", tin_feat3:"อ่างมีความเสถียรสูง อายุการเก็บรักษายาวนาน",
+
         lacq_t:"Lacquer Coating",
+        lacq_d:"แลคเกอร์น้ำ เพิ่มความทนเค็มและกันหมอง ใช้กับซิงค์/อัลลอยด์ได้แม้ไม่โครเมต โทนผิวไม่เพี้ยน เหมาะกับนิกเกิล, โครเมียม, ทองแดง, ทองเหลือง ฯลฯ",
+        lacq_feat1:"เพิ่มความทนทานต่อไอเกลือ (Salt-spray) และกันหมอง", lacq_feat2:"ใช้เคลือบทับผิวโลหะได้หลากหลายชนิด", lacq_feat3:"ให้สีใสธรรมชาติ โทนผิวเดิมของชิ้นงานไม่เพี้ยน",
+
         lacq_t1:"Masking Lacquer",
-        lacq_d:"แลคเกอร์น้ำ เพิ่มความทนเค็ม/กันหมอง ใช้กับซิงค์แม้ไม่โครเมต หรือทับ Cr3/Cr6 ก็ได้ โทนผิวไม่เพี้ยน เหมาะกับนิกเกิล, โครเมียม, ทองแดง, ทองเหลือง, สเตนเลส, และ อะลูมิเนียม",
         lacq_d1:"ทำหน้าที่เป็นฉนวนป้องกันการชุบโลหะในบางพื้นที่ของชิ้นงาน การใช้สารนี้ทำให้สามารถสร้างลวดลายแบบ สองโทนสี (Two-tone) หรือหลายสีบนชิ้นงานเดียว",
-        view_details:"ดูรายละเอียด →",
+        lacq1_feat1:"เป็นฉนวนป้องกันการชุบโลหะเฉพาะจุด", lacq1_feat2:"เหมาะสำหรับสร้างลวดลายแบบทูโทน (Two-tone)", lacq1_feat3:"ใช้งานง่าย ลอกออกหรือล้างทำความสะอาดได้เมื่อจบงาน",
+
+        view_details:"ดูรายละเอียด",
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -615,23 +694,38 @@
         tw_title:"Anti-Tarnish & Lacquer - Baume Chemical",
         tw_desc:"Topcoats for tarnish/corrosion control with simple bath management.",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"Back to Home", btn_consult:"Talk to a Specialist",
         hero_title:"Anti-Tarnish & Lacquer Protective Coatings",
         hero_tagline:"Prevent oxidation/tarnish while preserving shine — cold dip, hot dip, electro, tin anti-tarnish, and water-based lacquer.",
         sec_products:"Products",
         sec_products_lead:"Pick a protective topcoat / anti-tarnish suited to your metal and test spec.",
+        
         cold_t:"Cold Dip Anti-Tarnish (Cu/Brass)",
-        cold_d:"Yellowish clear final bath after plating or bright dip; sheds water, fast-drying, no marks, deposits a clear film. Ideal for electronics and jewelry; humidity test ~200 h.",
+        cold_d:"Yellowish clear final bath after plating or bright dip; sheds water, fast-drying, no marks, deposits a clear film. Ideal for electronics and jewelry.",
+        cold_feat1:"Fast-drying and water-shedding formula", cold_feat2:"Creates a clear anti-tarnish protective film", cold_feat3:"Passes ~200 hours humidity testing",
+
         hot_t:"Hot Dip Anti-Tarnish",
         hot_d:"For Zn, Ni, Cr, SS, Au, Ag, etc. Removes water marks, speeds drying, protects unplated areas. Flexible, durable, lead-free film; skin-contact friendly.",
+        hot_feat1:"Protects unplated areas from rust", hot_feat2:"Flexible, durable, and lead-free film", hot_feat3:"Safe for skin contact applications",
+
         elec_t:"Electro Anti-Tarnish",
         elec_d:"For Ag, Au, Ni, Cu/alloys. Electro-applied film locks color, reduces tarnish, dries quickly, adds slip; non-irritating and color-neutral.",
+        elec_feat1:"Electro-applied film to lock color", elec_feat2:"Fast-drying and adds surface slip", elec_feat3:"Non-irritating and color-neutral",
+
         tin_t:"Tin Anti-Tarnish",
         tin_d:"For tin surfaces; maintains original tone for long periods and improves durability. Highly stable bath with long shelf life.",
+        tin_feat1:"Maintains original tin tone for long periods", tin_feat2:"Enhances surface durability and protection", tin_feat3:"Highly stable bath with a long shelf life",
+
         lacq_t:"Lacquer Coating",
-        lacq_t1:"Lacquer Coating",
-        lacq_d:"Water-based lacquer boosting salt-spray and tarnish resistance. Apply on Zn/Zn-alloy without chromate, or over Cr3/Cr6. Tone-neutral; suitable for Nickel, Chromium, Copper, Brass, Stainless Steel, and Aluminum.",
-        lacq_d1:"It serves as an insulating barrier against metal plating in certain areas of the workpiece. Using this substance makes it possible to create patterns in two tones (Two-tone) or multiple colors on a single piece.",
-        view_details:"View Details →",
+        lacq_d:"Water-based lacquer boosting salt-spray and tarnish resistance. Apply on Zn/Zn-alloy without chromate, or over Cr3/Cr6. Tone-neutral.",
+        lacq_feat1:"Boosts salt-spray and tarnish resistance", lacq_feat2:"Applicable over various metal surfaces", lacq_feat3:"Completely tone-neutral clear finish",
+
+        lacq_t1:"Masking Lacquer",
+        lacq_d1:"It serves as an insulating barrier against metal plating in certain areas of the workpiece. Using this substance makes it possible to create two-tone or multi-color patterns.",
+        lacq1_feat1:"Acts as an insulating barrier for selective plating", lacq1_feat2:"Perfect for creating two-tone or multi-color patterns", lacq1_feat3:"Easy to apply and clean after processing",
+
+        view_details:"View Details",
         footer_products:"Products",
         footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -639,7 +733,7 @@
     };
 
     const els = {
-      langBtns: ()=>document.querySelectorAll('.lang-btn'), // header + FAB
+      langBtns: ()=>document.querySelectorAll('.lang-btn'),
       translatables: ()=>document.querySelectorAll('[data-i18n-key]'),
       metaTitle: document.getElementById('metaTitle'),
       metaDesc: document.getElementById('metaDesc'),
@@ -654,17 +748,22 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // sync all language buttons (header + FAB)
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
 
-      // translate visible text
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const dict = I18N[L];
-        if (key && dict && dict[key] !== undefined) node.textContent = dict[key];
+        if (key && dict && dict[key] !== undefined){
+            if(key === "view_details") {
+                node.innerHTML = dict[key] + " <span>→</span>";
+            } else if(node.tagName === 'LI' || node.tagName === 'SPAN' || node.tagName === 'DIV' || node.tagName === 'H3' || node.tagName === 'H1' || node.tagName === 'P' || node.tagName === 'A' || node.tagName === 'TH' || node.tagName === 'TD') {
+                 node.innerHTML = dict[key];
+            } else {
+                node.textContent = dict[key];
+            }
+        } 
       });
 
-      // update SEO/OG/Twitter meta
       const t = I18N[L];
       if(t){
         els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
@@ -685,37 +784,23 @@
       applyLang(saved);
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
+
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
   </script>
-  <script>
-  (function(){
-    const btn = document.querySelector('[data-back]');
-    if(!btn) return;
-    btn.addEventListener('click', function(e){
-      try{
-        const ref = document.referrer;
-        const sameOrigin = ref && new URL(ref).origin === location.origin;
-        if(sameOrigin){ e.preventDefault(); history.back(); }
-      }catch(err){}
-    });
-  })();
-  // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
-
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
-
-</script>
-
 </body>
 </html>

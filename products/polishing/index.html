@@ -41,23 +41,76 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://img5.pic.in.th/file/secure-sv1/thumbnail-5.jpg">
 
+  <!-- JSON-LD: Organization -->
+  <script id="ld-org" type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Baume Chemical",
+    "url":"https://www.baumechemical.com/",
+    "logo":"https://www.baumechemical.com/assets/logo.png",
+    "sameAs":[
+      "https://www.facebook.com/baumechemical",
+      "https://www.linkedin.com/company/baumechemical",
+      "https://line.me/ti/p/~baumechemical"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: CollectionPage + ItemList -->
+  <script id="ld-collection" type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "inLanguage":"th",
+    "name":"Polishing — น้ำยากัดเงา/ขัดเงาโลหะ",
+    "url":"https://www.baumechemical.com/products/polishing/index.html",
+    "description":"สารเคมีกัดเงา/ขัดเงาโลหะสำหรับสเตนเลส ทองเหลือง อะลูมิเนียม เหล็ก สังกะสี และตะกั่ว",
+    "isPartOf":{"@type":"WebSite","name":"Baume Chemical","url":"https://www.baumechemical.com/"},
+    "mainEntity":{
+      "@type":"ItemList",
+      "itemListOrder":"ItemListOrderAscending",
+      "numberOfItems":5,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"url":"https://www.baumechemical.com/products/polishing/stainless-electropolishing-solution","name":"Stainless Steel Polishing"},
+        {"@type":"ListItem","position":2,"url":"https://www.baumechemical.com/products/polishing/brass-electropolishing-solution","name":"Brass Polishing"},
+        {"@type":"ListItem","position":3,"url":"https://www.baumechemical.com/products/polishing/aluminum-electropolishing-solution","name":"Aluminum Polishing"},
+        {"@type":"ListItem","position":4,"url":"https://www.baumechemical.com/products/polishing/steel-electropolishing-solution","name":"Steel Brite Dip"},
+        {"@type":"ListItem","position":5,"url":"https://www.baumechemical.com/products/polishing/zinc-electropolishing-solution","name":"Polishing for Zinc and Lead"}
+      ]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
+      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},
+      {"@type":"ListItem","position":3,"name":"Polishing","item":"https://www.baumechemical.com/products/polishing/index.html"}
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
       --ink:#0f172a; --muted:#5b6675; --bg:#f4f7f6;
-      --radius:14px; 
+      --radius:24px; 
       --shadow-1:0 12px 30px -10px rgba(2,8,20,.08); 
       --shadow-2:0 20px 40px -10px rgba(44,94,78,.18);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      /* ปรับลดความสูง Header */
       --header-h:56px; 
       --container:1200px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0}
+    html,body{margin:0;padding:0}
     body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6; overflow-x: hidden;}
 
-    /* ===== Header (ปรับขนาดให้เล็กลง) ===== */
+    /* ===== Header ===== */
     .site-header{
       position:fixed; inset:0 0 auto 0; z-index:1400;
       background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
@@ -68,18 +121,14 @@
       -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
       box-shadow:0 4px 20px rgba(2,8,20,.15);
     }
-    /* ลด Padding ของ Header */
     .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:6px 16px}
     .brand{display:flex; align-items:center; gap:8px; text-decoration:none}
-    /* ลดขนาด Logo */
     .brand-logo{width:34px;height:34px;border-radius:8px;flex:0 0 34px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    /* ลดขนาดตัวอักษร Logo */
     .brand-name{font-weight:800;color:#fff;font-size:0.95rem;letter-spacing:.2px}
 
     .header-right{display:flex;align-items:center;gap:10px}
     .primary-nav{display:flex;align-items:center;gap:8px}
     .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
-    /* ลดขนาด Padding และฟอนต์ของ Menu */
     .menu a{display:inline-block;padding:8px 10px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600; font-size: 0.9rem; transition: background 0.3s;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
@@ -91,27 +140,28 @@
     .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
     /* Header language switch */
-    .lang-switch{display:flex;gap:4px;padding:3px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(2,8,20,.1)}
+    .lang-switch{display:flex;gap:4px;padding:3px;border:1px solid rgba(226,232,240,.6);border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(2,8,20,.1)}
     .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:5px 8px;border-radius:999px;font-weight:800;font-size:0.85rem;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:5px 8px;border-radius:999px;font-weight:800;font-size:0.85rem;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
     .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
     .flag{width:16px;height:12px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
 
     @media (max-width:920px){
-      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .3s ease,opacity .3s ease;z-index:1400}
       .menu li a{display:block;padding:12px 14px;border-radius:10px}
       .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
       .nav-toggle{display:inline-flex}
     }
-    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
-    .menu-scrim:not([hidden]){display:block}
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.3);z-index:1300;display:none; backdrop-filter: blur(4px);}
+    .menu-scrim:not([hidden]){display:block; animation: fadeIn 0.3s ease;}
     body.no-scroll{position:fixed;width:100%}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    /* ===== Hero ===== */
+    /* ===== Hero (Modern Glassmorphism) ===== */
     .hero{ 
       position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;
       text-align:center; color:#fff; 
-      min-height: clamp(480px, 70vh, 680px); 
+      min-height: clamp(500px, 75vh, 720px); 
       padding-top:calc(var(--header-h) + 20px); 
       padding-bottom: 40px;
     }
@@ -120,7 +170,7 @@
     .hero .slide {
       position:absolute; inset:-4%;
       background-size:cover; background-position:center;
-      filter:brightness(0.9); transform:scale(1.04);
+      filter:brightness(0.85); transform:scale(1.04);
       opacity:0; transition:opacity 1200ms ease, transform 6000ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
@@ -152,10 +202,10 @@
     .hero h1{
       margin:0 0 16px; 
       font-weight:800; 
-      font-size:clamp(28px,4.5vw,48px); 
+      font-size:clamp(28px,4vw,48px); 
       background: linear-gradient(to right, #ffffff, #d1fae5);
       -webkit-background-clip: text;
-      background-clip: text; /* เพิ่มบรรทัดนี้เข้าไปครับ */
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1.3;
     }
@@ -200,18 +250,18 @@
       font-weight:800;
       background: linear-gradient(135deg, var(--brand), #0f172a);
       -webkit-background-clip: text;
-      background-clip: text; /* เพิ่มบรรทัดนี้เข้าไปครับ */
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     p.lead{margin:0;color:#5b6675;font-size:1.1rem;}
 
-    /* ===== Cards (Bento-style + เพิ่ม Feature List) ===== */
+    /* ===== Cards (Bento-style + Feature List) ===== */
     .grid{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}}
     
     .card{
-      background:#fff; border:none; border-radius:24px; overflow:hidden;
+      background:#fff; border:none; border-radius:var(--radius); overflow:hidden;
       box-shadow:var(--shadow-1);
       transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       display: flex; flex-direction: column;
@@ -235,7 +285,7 @@
     .card h3{margin:0 0 8px;font-size:1.15rem;color:#1e293b;font-weight:800; transition: color 0.3s;}
     .card p{margin:0;color:#64748b;font-size:0.95rem; line-height: 1.6;}
     
-    /* สไตล์ลิสต์รายละเอียดเพิ่มเติม (ใหม่) */
+    /* Feature List Styling */
     .feature-list {
       list-style: none; padding: 0; margin: 16px 0 0 0;
       border-top: 1px solid #f1f5f9; padding-top: 16px;
@@ -344,11 +394,11 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-            <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-            <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-            <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-            <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-            <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
+            <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
           </ul>
         </nav>
 
@@ -411,7 +461,6 @@
           <div class="badge-row"><span class="badge">Electropolishing</span><span class="badge">Mirror Finish</span></div>
           <h3 data-i18n-key="st_title">สเตนเลส (Electropolishing)</h3>
           <p data-i18n-key="st_desc">ทำผิวเรียบลื่นเงากระจก ลดคม ตั้งค่ากระแสและอุณหภูมิได้กว้าง ผิวที่ได้ทนการกัดกร่อนและสะอาดพร้อมขั้นตอนถัดไป.</p>
-          <!-- รายละเอียดเพิ่มเติม (ใหม่) -->
           <ul class="feature-list">
             <li data-i18n-key="st_feat1">เหมาะสำหรับเกรด 304, 316, 400 series</li>
             <li data-i18n-key="st_feat2">เพิ่มค่าความต้านทานการกัดกร่อนสูงสุด</li>
@@ -430,7 +479,6 @@
           <div class="badge-row"><span class="badge">Nitric-free</span><span class="badge">Low Fume</span></div>
           <h3 data-i18n-key="br_title">ทองเหลือง (Brass Polishing)</h3>
           <p data-i18n-key="br_desc">สูตรไร้กรดไนตริก ควันต่ำ คืนความเงางาม ลดคราบเขียว/สนิมแดง ใช้ได้ทั้งจุ่มและถังกลิ้ง พร้อมเข้าสู่ขั้นตอนชุบต่อได้ทันที.</p>
-          <!-- รายละเอียดเพิ่มเติม (ใหม่) -->
           <ul class="feature-list">
             <li data-i18n-key="br_feat1">ปลอดภัย ไร้กรดไนตริก (Nitric-free)</li>
             <li data-i18n-key="br_feat2">ไม่ทำลายผิวกระจกของชิ้นงานทองเหลือง</li>
@@ -449,7 +497,6 @@
           <div class="badge-row"><span class="badge">Hot Dip / Electro</span><span class="badge">Fast Shine</span></div>
           <h3 data-i18n-key="al_title">อะลูมิเนียม (Hot Dip / Electro)</h3>
           <p data-i18n-key="al_desc">ทั้งแบบจุ่มร้อนและอิเล็กโทรโพลิช ควบคุมได้ละเอียด เงาเร็ว ลบคราบ/หมองบนอะลูมิเนียมให้เรียบเนียนทนทาน.</p>
-          <!-- รายละเอียดเพิ่มเติม (ใหม่) -->
           <ul class="feature-list">
             <li data-i18n-key="al_feat1">ใช้งานได้กับอลูมิเนียมฉีดขึ้นรูปและงานรีด</li>
             <li data-i18n-key="al_feat2">ลบรอยขีดข่วนบางๆ บนชิ้นงาน</li>
@@ -468,7 +515,6 @@
           <div class="badge-row"><span class="badge">Brite Dip</span><span class="badge">Deburr</span></div>
           <h3 data-i18n-key="steel_title">เหล็ก (Steel Brite Dip)</h3>
           <p data-i18n-key="steel_desc">ขจัดสนิม/รอยและทำผิวเหล็กให้เงาใสแบบกระจก ใช้งานง่าย ได้ผลเร็ว รองรับทั้งจุ่มและกระบวนการไฟฟ้า.</p>
-          <!-- รายละเอียดเพิ่มเติม (ใหม่) -->
           <ul class="feature-list">
             <li data-i18n-key="steel_feat1">ลอกคราบออกไซด์และคราบน้ำมันบางๆ</li>
             <li data-i18n-key="steel_feat2">ให้ความเงาสูงในเวลาอันสั้น</li>
@@ -487,7 +533,6 @@
           <div class="badge-row"><span class="badge">Zinc/Lead</span><span class="badge">Restore Shine</span></div>
           <h3 data-i18n-key="zn_title">สังกะสีและตะกั่ว (Etched to a shine)</h3>
           <p data-i18n-key="zn_desc">ล้างคราบตะกั่ว/ออกไซด์ คืนความเงาสดใส ลดความขรุขระของผิว และเพิ่มความทนต่อการกัดกร่อนของชิ้นงาน.</p>
-          <!-- รายละเอียดเพิ่มเติม (ใหม่) -->
           <ul class="feature-list">
             <li data-i18n-key="zn_feat1">ทำความสะอาดพื้นผิวที่หมองคล้ำให้สดใส</li>
             <li data-i18n-key="zn_feat2">ปรับความเรียบเนียนของงานหล่อซิงค์</li>
@@ -640,6 +685,7 @@
         tw_title:"น้ำยากัดเงา/ขัดเงาโลหะ (Polishing) - Baume Chemical",
         tw_desc:"โซลูชัน Polishing ครบหลายวัสดุ พร้อมทีมเทคนิคแนะนำการตั้งไลน์",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
         back_home:"กลับหน้าแรก", btn_consult:"ปรึกษาทีมเทคนิค",
         hero_title:"น้ำยากัดเงา/ขัดเงาโลหะ (Polishing)",
         hero_tagline:"ปรับผิวโลหะให้เงางามเรียบเนียน ลดคราบ/ลดคม และเพิ่มความทนการกัดกร่อน รองรับงานสเตนเลส ทองเหลือง อะลูมิเนียม เหล็ก สังกะสี และตะกั่ว — พร้อมคำแนะนำจากทีมเทคนิค",
@@ -694,6 +740,7 @@
         tw_title:"Metal Polishing - Baume Chemical",
         tw_desc:"End-to-end polishing solutions across multiple substrates with expert line advice.",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
         back_home:"Back to Home", btn_consult:"Talk to a Specialist",
         hero_title:"Metal Polishing & Brightening",
         hero_tagline:"Smooth, mirror-like finishes with improved corrosion resistance—for stainless steel, brass, aluminum, steel, zinc, and lead. Expert guidance tailored to your line.",
@@ -766,6 +813,8 @@
         if (key && dict && dict[key] !== undefined){
             if(key === "view_details") {
                 node.innerHTML = dict[key] + " <span>→</span>";
+            } else if(node.tagName === 'LI' || node.tagName === 'SPAN' || node.tagName === 'DIV' || node.tagName === 'H3' || node.tagName === 'H1' || node.tagName === 'P' || node.tagName === 'A' || node.tagName === 'TH' || node.tagName === 'TD') {
+                 node.innerHTML = dict[key];
             } else {
                 node.textContent = dict[key];
             }
