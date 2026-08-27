@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/android-chrome-192.png">
 
-  <!-- Open Graph / Twitter (ใช้รูปเดิมจาก Imgur) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:url" content="https://www.baumechemical.com/products/pretreatment/index.html">
@@ -37,72 +37,8 @@
   <!-- Fonts & Perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://i.imgur.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://www.baumechemical.com/picture/ps.jpeg"/>
-
-  <!-- JSON-LD: Organization -->
-  <script id="ld-org" type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Baume Chemical",
-    "url":"https://www.baumechemical.com/",
-    "logo":"https://www.baumechemical.com/assets/logo.png",
-    "sameAs":[
-      "https://www.facebook.com/baumechemical",
-      "https://www.linkedin.com/company/baumechemical",
-      "https://line.me/ti/p/~baumechemical"
-    ]
-  }
-  </script>
-
-<!-- JSON-LD: CollectionPage + ItemList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.baumechemical.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Pretreatment",
-      "item": "https://www.baumechemical.com/products/pretreatment/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Electro Degreaser Pretreatment",
-      "item": "https://www.baumechemical.com/products/pretreatment/electrodegrea​ser.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Ultrasonic Cleaner Pretreatment",
-      "item": "https://www.baumechemical.com/products/pretreatment/ultrasonic.html"
-    }
-  ]
-}
-</script>
-
-  <!-- JSON-LD: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.baumechemical.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.baumechemical.com/products/"},
-      {"@type":"ListItem","position":3,"name":"Pretreatment","item":"https://www.baumechemical.com/products/pretreatment/index.html"}
-    ]
-  }
-  </script>
 
   <style>
     :root{
@@ -139,8 +75,6 @@
     .menu a{display:inline-block; padding:10px 14px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600; transition: background 0.2s ease, color 0.2s ease;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.2)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
 
     .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
     .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
@@ -164,12 +98,7 @@
     .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.3); backdrop-filter: blur(4px); z-index:1300; display:none }
     .menu-scrim:not([hidden]){ display:block; animation: fadeIn 0.3s ease; }
     body.no-scroll{ position:fixed; width:100%; }
-
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-    /* ===== Floating Language FAB (synced) ===== */
-    .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
-    .lang-fab .lang-btn{ padding:6px 10px }
 
     /* ===== Hero ===== */
     .hero{ 
@@ -178,7 +107,6 @@
       min-height: clamp(420px, 60vh, 620px); 
       padding-top:var(--header-h); 
     }
-    
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
       position:absolute; inset:-4%;
@@ -187,75 +115,172 @@
       opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
-    
     .hero::after{ 
       content:""; position:absolute; inset:0; 
       background:linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6)); 
       z-index:1; pointer-events:none; 
     }
-    
     .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
     .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 4px 20px rgba(0,0,0,.5)}
     .hero p{max-width:980px; margin:0 auto; color:#f0f7f5; text-shadow:0 2px 10px rgba(0,0,0,.4)}
     
-    /* ===== ปรับปรุงปุ่มย้อนกลับให้สวยและพรีเมียมขึ้น ===== */
     .home-back{ 
       display:inline-flex; align-items:center; gap:8px; padding:10px 20px; 
       border-radius:999px; border:1px solid rgba(255,255,255,.3); 
-      background: rgba(255,255,255,.15); /* Glassmorphism background */
+      background: rgba(255,255,255,.15);
       color:#fff; text-decoration:none; font-weight:600; font-size: 0.96rem;
       backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
       box-shadow: 0 4px 16px rgba(0,0,0,.15);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .home-back:hover{ 
-      background: rgba(255,255,255,.25); 
-      border-color: rgba(255,255,255,.6);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.25); border-color: rgba(255,255,255,.6);
+      transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.25);
     }
 
     /* ===== Layout ===== */
-    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 24px; color:#5f6d7c}
+    .wrap{max-width:var(--container);margin:auto;padding:40px 16px}
+    h2.section{margin:0 0 8px; font-size:clamp(24px,2.8vw,32px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 30px; color:#5f6d7c; font-size: 1.05rem; max-width: 900px;}
 
     /* ===== Cards ===== */
-    .grid{display:grid;gap:18px;grid-template-columns:1fr}
+    .grid{display:grid;gap:20px;grid-template-columns:1fr}
     @media(min-width:880px){.grid{grid-template-columns:repeat(3,1fr)}}
     .card{background:var(--card);border:1px solid #eef2ef;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-1);transition:all .3s cubic-bezier(0.4, 0, 0.2, 1)}
-    
-    /* ซ่อนส่วนที่ล้นเวลารูปซูม */
     .card picture { display:block; overflow:hidden; background:#eff5f0; } 
-    /* เพิ่ม Transition ให้รูปภาพเพื่อทำ Zoom Effect */
     .card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-    
-    .card .body{padding:18px}
-    .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+    .card .body{padding:20px}
+    .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
     .badge{font-size:12px;font-weight:600;background:#e8f4ed;color:#215c44;padding:4px 10px;border-radius:999px;display:inline-block}
-    .card h3{margin:0 0 8px; font-size:1.1rem; color:#1a2b21}
-    .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:14px; color:var(--accent); font-weight:800; text-decoration:none; transition: color 0.2s ease;}
+    .card h3{margin:0 0 8px; font-size:1.15rem; color:#1a2b21}
+    .card p{margin:0; color:#5b6675; font-size:0.98rem}
+    .card .more{display:inline-block; margin-top:16px; color:var(--accent); font-weight:800; text-decoration:none; transition: color 0.2s ease;}
     .card .more:hover{ color: #23543d; text-decoration:underline }
     
     .card.lift{ will-change: transform, box-shadow }
     @media (hover:hover) and (pointer:fine){ 
       .card.lift:hover, .card.lift:focus-within{ transform:translateY(-6px); box-shadow:var(--shadow-2); border-color:#d0e0d6; } 
-      /* ซูมรูปเมื่อเอาเมาส์ชี้การ์ด */
       .card.lift:hover img { transform: scale(1.06); }
     }
 
     /* Reveal */
-    .reveal{opacity:0; transform: translateY(12px) scale(.98); transition: opacity .6s ease, transform .6s ease}
+    .reveal{opacity:0; transform: translateY(16px) scale(.98); transition: opacity .6s ease, transform .6s ease}
     .reveal.show{opacity:1; transform:none}
     @media (prefers-reduced-motion: reduce){ .reveal{transition:none; opacity:1; transform:none} }
 
-    /* ===== Table (ปรับให้สวยงามและดูสะอาดขึ้น) ===== */
-    .table{overflow:auto;background:#fff;border-radius:12px; border:1px solid #ebf1ed; box-shadow: 0 4px 24px rgba(2,8,20,.03);}
-    table{border-collapse:collapse;width:100%;min-width:720px}
-    th,td{padding:14px 16px;border-bottom:1px solid #f0f4f2;text-align:left;font-size:.96rem; transition: background 0.2s ease;}
-    th{white-space:nowrap;background:#eef5f1;color:#1f3326;font-weight:800; border-bottom: 2px solid #dce8e1;}
-    tbody tr:hover td { background: #f8fbf9; } /* ไฮไลต์แถวเมื่อเอาเมาส์ชี้ */
+    /* =========================================
+       ✨ NEW PREMIUM TABLE STYLING ✨
+       ========================================= */
+    .table-section-title {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .table-section-title h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1f2a24;
+      margin: 0;
+    }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 12px;
+    }
+    .modern-table-wrapper {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+      border: 1px solid #eef2ef;
+      overflow: hidden;
+      min-width: 860px; /* บังคับให้ scroll บนจอมือถือ แทนที่จะเบียดข้อความ */
+    }
+    .modern-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .modern-table th {
+      background: #f4f9f6;
+      color: #1a2b21;
+      font-weight: 800;
+      padding: 18px 24px;
+      font-size: 0.98rem;
+      border-bottom: 2px solid #dce8e1;
+      white-space: nowrap;
+    }
+    .modern-table td {
+      padding: 24px;
+      border-bottom: 1px solid #f0f4f2;
+      color: #4a5568;
+      font-size: 0.96rem;
+      vertical-align: top; /* ให้อ่านจากบนลงล่างชัดเจน */
+      transition: background 0.2s ease;
+    }
+    .modern-table tbody tr:hover td {
+      background: #fafcfb; /* ไฮไลต์แถวเบาๆ เวลานำเมาส์ชี้ */
+    }
+    .modern-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ตกแต่งข้อมูลในตาราง */
+    .col-type {
+      font-weight: 800;
+      color: #2c5e4e;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .col-type-icon {
+      font-size: 1.3rem;
+      background: #e8f1ec;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+
+    .mat-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .mat-tag {
+      background: #f1f5f9;
+      color: #334155;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+
+    .app-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #334155;
+      line-height: 1.7;
+    }
+    .app-list li::marker { color: #387b5b; }
+
+    .note-box {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.6;
+      background: #f8faf9;
+      padding: 12px 14px;
+      border-left: 4px solid #739887;
+      border-radius: 4px 8px 8px 4px;
+    }
+    .note-box strong { color: #1e293b; }
+    /* ========================================= */
 
     /* ===== Footer ===== */
     .site-footer{background:#0b111f; color:#cbd5e1; margin-top:32px; border-top: 4px solid var(--brand);}
@@ -272,55 +297,27 @@
     .footer-list li{margin:8px 0}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.1); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#879ab0}
 
-    /* Floating LINE Button */
+    /* Floating Buttons */
     .float-line{
-      position:fixed;
-      right:16px;
-      bottom:calc(18px + env(safe-area-inset-bottom)); 
-      z-index:900; 
+      position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900; 
     }
     .float-line a{
-      display:grid; place-items:center;
-      width:54px; height:54px; border-radius:999px;
+      display:grid; place-items:center; width:54px; height:54px; border-radius:999px;
       background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-      box-shadow:0 6px 20px rgba(0,195,0,.3);
-      animation:pulse 2.6s infinite;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow:0 6px 20px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .float-line a:hover,
-    .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,195,0,.4) }
-    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
-
+    .float-line a:hover, .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,195,0,.4) }
     @keyframes pulse{
-      0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-      70%{box-shadow:0 0 0 16px rgba(0,195,0,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 16px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
     }
-
-    /* Back-to-top */
-    .backtop{
-      position:fixed;
-      right:16px;
-      bottom:calc(90px + env(safe-area-inset-bottom)); 
-      z-index:900;
-      display:none;
-    }
+    .backtop{ position:fixed; right:16px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; }
     .backtop.show{ display:block; animation: fadeIn 0.3s ease; }
     .backtop button{
-      width:44px; height:44px; border-radius:999px;
-      border:1px solid #d8e4e1; background:#fff; color:#215c44; font-weight: bold;
-      box-shadow:0 6px 20px rgba(0,0,0,.1);
-      cursor:pointer;
-      transition: all 0.2s ease;
+      width:44px; height:44px; border-radius:999px; border:1px solid #d8e4e1; background:#fff; color:#215c44; font-weight: bold;
+      box-shadow:0 6px 20px rgba(0,0,0,.1); cursor:pointer; transition: all 0.2s ease;
     }
-    .backtop button:hover,
-    .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.15); background:#f4f9f6; }
-
-    /* ย่อขนาดบนจอเล็ก */
-    @media (max-width:420px){
-      .float-line a{ width:50px; height:50px }
-      .backtop button{ width:42px; height:42px }
-    }
+    .backtop button:hover{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.15); background:#f4f9f6; }
+    @media (max-width:420px){ .float-line a{ width:50px; height:50px } .backtop button{ width:42px; height:42px } }
   </style>
 </head>
 <body>
@@ -341,7 +338,6 @@
             <li><a href="https://www.baumechemical.com/products.html" class="nav-link">Products</a></li>
             <li><a href="https://www.baumechemical.com/contact-us.html" class="nav-link">Contact Us</a></li>
             <li><a href="https://www.baumechemical.com/blog/index.html" class="nav-link">Blog</a></li>
-            
           </ul>
         </nav>
 
@@ -364,14 +360,12 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== HERO ===== -->
-<section class="hero" aria-label="Pretreatment overview">
-    
+  <section class="hero" aria-label="Pretreatment overview">
     <div class="slides" id="heroSlides">
       <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/Soakclean.jpg')"></div>
       <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/smut.jpg')"></div>
       <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/10.jpeg')"></div>
     </div>
-
     <div class="hero-inner">
       <div style="margin-bottom:12px">
         <a class="home-back" href="https://www.baumechemical.com/index.html">← <span data-i18n-key="back_home">หน้าแรก</span></a>
@@ -379,8 +373,8 @@
       <h1 data-i18n-key="hero_title">กรด/ด่างล้างไขมัน – อัลตร้าโซนิค Pretreatment</h1>
       <p data-i18n-key="hero_tagline">เลือกสูตรให้เหมาะกับวัสดุและคราบ เพื่อให้ผิวพร้อมชุบ คุณภาพคงที่ ลดของเสีย</p>
     </div>
-
   </section>
+
   <main class="wrap" role="main">
     <section>
       <h2 class="section" data-i18n-key="sec_products">ผลิตภัณฑ์ในกลุ่มนี้</h2>
@@ -413,14 +407,14 @@
           </div>
         </article>
 
-                <!-- Electro Degreaser -->
-        <article id="alkaline" class="card lift reveal">
+        <!-- Electro Degreaser -->
+        <article id="electro" class="card lift reveal">
           <picture>
             <img src="https://www.baumechemical.com/picture/10.jpeg" alt="Alkaline electro degreaser for oils/wax/grease">
           </picture>
           <div class="body">
             <div class="badges"><span class="badge">Alkaline Electro Degreaser</span><span class="badge">Pretreatment</span></div>
-            <h3 data-i18n-key="alk_title1">E-60 ยาแยกไฟฟ้าแบบด่างชนิดผง (Alkaline Electro Degreaser)</h3>
+            <h3 data-i18n-key="alk_title1">E-60 ยาแยกไฟฟ้าแบบด่างชนิดผง</h3>
             <p data-i18n-key="alk_desc1">ผงด่างปราศจากสารลดแรงตึงผิว มีซิลิเกต ฟอสเฟต และสารกำจัดสนิม ใช้ล้างคราบน้ำมันด้วยไฟฟ้า แนะนำใช้คู่ Soak clean B1 พร้อมวิธีใช้และเงื่อนไขการเดินงาน</p>
             <a class="more" href="electrodegreaser.html" data-i18n-key="btn_details">ดูรายละเอียด →</a>
           </div>
@@ -439,7 +433,7 @@
           </div>
         </article>
 
-                <!-- Desmut -->
+        <!-- Desmut -->
         <article id="desmut" class="card lift reveal">
           <picture>
             <img src="https://www.baumechemical.com/picture/smut.jpg" alt="A high-quality liquid deoxidizer developed with a special non-chromate formula.">
@@ -454,45 +448,112 @@
       </div>
     </section>
 
-    <!-- Compare -->
-    <section class="wrap" style="padding-left:0;padding-right:0">
-      <div class="table">
-        <table aria-label="Cleaning formulas comparison table">
-          <thead>
-            <tr>
-              <th data-i18n-key="tbl_type">ประเภท</th>
-              <th data-i18n-key="tbl_materials">วัสดุที่เหมาะสม</th>
-              <th data-i18n-key="tbl_soils">คราบเป้าหมาย</th>
-              <th data-i18n-key="tbl_app">การใช้งาน</th>
-              <th data-i18n-key="tbl_notes">หมายเหตุ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n-key="row_acid_type">แบบกรด</td>
-              <td data-i18n-key="row_acid_mat">เหล็ก, ทองเหลือง, ทองแดง</td>
-              <td data-i18n-key="row_acid_soil">ออกไซด์/สนิม + คราบน้ำมันบางเบา</td>
-              <td data-i18n-key="row_acid_app">การจุ่ม / การพ่น</td>
-              <td data-i18n-key="row_acid_note">ควบคุมเวลาและความเข้มข้นเพื่อหลีกเลี่ยงการกัดเกินจำเป็น</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="row_alk_type">แบบด่าง</td>
-              <td data-i18n-key="row_alk_mat">เหล็ก, สเตนเลส, อะลูมิเนียม*</td>
-              <td data-i18n-key="row_alk_soil">คราบน้ำมัน, ขี้ผึ้ง, จาระบี (บาง–หนา)</td>
-              <td data-i18n-key="row_alk_app">การจุ่ม / การพ่น / ไฟฟ้า</td>
-              <td data-i18n-key="row_alk_note">*เลือกสูตรและอัตราให้เหมาะสมกับวัสดุ</td>
-            </tr>
-            <tr>
-              <td data-i18n-key="row_ultra_type">อัลตร้าโซนิค</td>
-              <td data-i18n-key="row_ultra_mat">ชิ้นงานซับซ้อน / ในรูตามชิ้นงาน</td>
-              <td data-i18n-key="row_ultra_soil">คราบสกปรกที่ติดในรูหรือร่องลึก</td>
-              <td data-i18n-key="row_ultra_app">อ่างอัลตร้าโซนิคร่วมกับน้ำยาทำความสะอาด</td>
-              <td data-i18n-key="row_ultra_note">ช่วยเสริมประสิทธิภาพของขั้นตอนการทำความสะอาดหลัก</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- ===== PREMIUM COMPARE TABLE ===== -->
+    <section class="reveal">
+      <div class="table-section-title">
+        <h3 data-i18n-key="tbl_heading">เปรียบเทียบคุณสมบัติผลิตภัณฑ์</h3>
       </div>
-      <p class="note" style="margin-top:10px" data-i18n-key="tbl_footnote">หมายเหตุ: อุณหภูมิ/เวลา/ความเข้มข้น ควรกำหนดจากการทดลองหน้างานและมาตรฐานไลน์ของคุณ</p>
+      
+      <div class="table-scroll">
+        <div class="modern-table-wrapper">
+          <table class="modern-table" aria-label="Cleaning formulas comparison table">
+            <thead>
+              <tr>
+                <th width="20%" data-i18n-key="tbl_type">ประเภทสารล้าง</th>
+                <th width="20%" data-i18n-key="tbl_materials">วัสดุที่เหมาะสม</th>
+                <th width="25%" data-i18n-key="tbl_soils">คราบเป้าหมายหลัก</th>
+                <th width="15%" data-i18n-key="tbl_app">รูปแบบการใช้งาน</th>
+                <th width="20%" data-i18n-key="tbl_notes">ข้อแนะนำ / หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1: Acid -->
+              <tr>
+                <td>
+                  <div class="col-type">
+                    <span class="col-type-icon">🧪</span>
+                    <span data-i18n-key="row_acid_type">แบบกรด (Acid)</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="mat-tags">
+                    <span class="mat-tag" data-i18n-key="row_acid_mat_1">เหล็ก</span>
+                    <span class="mat-tag" data-i18n-key="row_acid_mat_2">ทองเหลือง</span>
+                    <span class="mat-tag" data-i18n-key="row_acid_mat_3">ทองแดง</span>
+                  </div>
+                </td>
+                <td data-i18n-key="row_acid_soil">กำจัดคราบสนิม, ออกไซด์ฝังแน่น, เกล็ดแร่ (Scale) และคราบน้ำมันบางเบา</td>
+                <td>
+                  <ul class="app-list">
+                    <li data-i18n-key="row_acid_app_1">การจุ่มแช่</li>
+                    <li data-i18n-key="row_acid_app_2">การพ่นสเปรย์</li>
+                  </ul>
+                </td>
+                <td>
+                  <div class="note-box" data-i18n-key="row_acid_note">
+                    ควรควบคุมอุณหภูมิ เวลา และความเข้มข้นอย่างเคร่งครัด เพื่อป้องกันเนื้อโลหะถูกกัดกร่อนเกินความจำเป็น
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 2: Alkaline -->
+              <tr>
+                <td>
+                  <div class="col-type">
+                    <span class="col-type-icon">💧</span>
+                    <span data-i18n-key="row_alk_type">แบบด่าง (Alkaline)</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="mat-tags">
+                    <span class="mat-tag" data-i18n-key="row_alk_mat_1">เหล็ก</span>
+                    <span class="mat-tag" data-i18n-key="row_alk_mat_2">สเตนเลส</span>
+                    <span class="mat-tag" data-i18n-key="row_alk_mat_3" style="background:#fff3e0; border-color:#fed7aa; color:#9a3412;">อะลูมิเนียม*</span>
+                  </div>
+                </td>
+                <td data-i18n-key="row_alk_soil">ขจัดคราบน้ำมันฝังลึก, จาระบี, แว็กซ์, และคราบน้ำหล่อเย็นจากการกลึง/ปั๊ม</td>
+                <td>
+                  <ul class="app-list">
+                    <li data-i18n-key="row_alk_app_1">การจุ่มต้ม</li>
+                    <li data-i18n-key="row_alk_app_2">การพ่น</li>
+                    <li data-i18n-key="row_alk_app_3">การแยกด้วยไฟฟ้า</li>
+                  </ul>
+                </td>
+                <td>
+                  <div class="note-box" data-i18n-key="row_alk_note">
+                    <strong>*สำหรับอะลูมิเนียม:</strong> ควรเลือกใช้สูตรและอัตราส่วนที่ถูกต้อง เพื่อป้องกันผิวงานหมองคล้ำหรือเสียหาย
+                  </div>
+                </td>
+              </tr>
+              <!-- Row 3: Ultrasonic -->
+              <tr>
+                <td>
+                  <div class="col-type">
+                    <span class="col-type-icon">⚡</span>
+                    <span data-i18n-key="row_ultra_type">อัลตร้าโซนิค</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="mat-tags">
+                    <span class="mat-tag" data-i18n-key="row_ultra_mat_1" style="background:#e0f2fe; border-color:#bae6fd; color:#0369a1;">โลหะทุกชนิด</span>
+                    <span class="mat-tag" data-i18n-key="row_ultra_mat_2">ชิ้นงานรูปทรงซับซ้อน / รูตัน</span>
+                  </div>
+                </td>
+                <td data-i18n-key="row_ultra_soil">คราบฝังลึกตามซอกมุม, ผงขัด, เศษโลหะขนาดเล็กที่ยากต่อการเข้าถึง</td>
+                <td>
+                  <ul class="app-list">
+                    <li data-i18n-key="row_ultra_app_1">อ่างอัลตร้าโซนิค ร่วมกับน้ำยาเฉพาะทาง</li>
+                  </ul>
+                </td>
+                <td>
+                  <div class="note-box" data-i18n-key="row_ultra_note">
+                    ช่วยลดระยะเวลา (Cycle time) และเสริมประสิทธิภาพกระบวนการทำความสะอาดหลักให้สมบูรณ์ยิ่งขึ้น
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -534,14 +595,13 @@
           </ul>
         </section>
       </div>
-
       <div class="footer-bottom">
         <div data-i18n-key="footer_copy">© 2025 Baume Chemical. All rights reserved.</div>
       </div>
     </div>
   </footer>
 
-    <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
+  <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
   <!-- ===== JS ===== -->
@@ -551,36 +611,22 @@
       const header = document.getElementById('siteHeader');
       const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
-      window.addEventListener('load', setH, {once:true});
-      window.addEventListener('resize', setH);
-      window.addEventListener('scroll', onScroll, {passive:true});
-      setH(); onScroll();
+      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH); window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
     })();
 
-    // Mobile nav (scrim + body lock) + highlight current (Products)
+    // Mobile nav (scrim + body lock)
     (function(){
-      const header = document.getElementById('siteHeader');
-      const toggle = header?.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-nav');
-      const scrim = document.querySelector('.menu-scrim');
+      const header = document.getElementById('siteHeader'); const toggle = header?.querySelector('.nav-toggle'); const nav = document.getElementById('primary-nav'); const scrim = document.querySelector('.menu-scrim');
       if(toggle && nav && scrim){
         let scrollTopLock = 0;
         function setMenuOpen(isOpen){
-          header.classList.toggle('open', isOpen);
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          nav.setAttribute('aria-hidden', String(!isOpen));
+          header.classList.toggle('open', isOpen); toggle.setAttribute('aria-expanded', String(isOpen)); nav.setAttribute('aria-hidden', String(!isOpen));
           isOpen ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
           if(isOpen){
-            scrollTopLock = window.scrollY;
-            document.body.classList.add('no-scroll');
-            document.body.style.top = `-${scrollTopLock}px`;
-            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
-            first && first.focus({preventScroll:true});
+            scrollTopLock = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${scrollTopLock}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
           }else{
-            document.body.classList.remove('no-scroll');
-            document.body.style.top = '';
-            window.scrollTo(0, scrollTopLock);
-            toggle.focus({preventScroll:true});
+            document.body.classList.remove('no-scroll'); document.body.style.top = ''; window.scrollTo(0, scrollTopLock); toggle.focus({preventScroll:true});
           }
         }
         toggle.addEventListener('click', ()=> setMenuOpen(!header.classList.contains('open')));
@@ -589,15 +635,13 @@
         window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
       }
-      // highlight "Products" on any /products path
       try{
         const here = location.pathname.replace(/\/+$/,'');
         document.querySelectorAll('.menu a').forEach(a=>{
           const path = new URL(a.getAttribute('href'), location.origin).pathname.replace(/\/+$/,'');
           const isProducts = here.startsWith('/products');
           if (isProducts && /\/products(\.html)?$/.test(path)) a.setAttribute('aria-current','page');
-          else if (here === path) a.setAttribute('aria-current','page');
-          else a.removeAttribute('aria-current');
+          else if (here === path) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
         });
       }catch(e){}
     })();
@@ -606,26 +650,19 @@
     (function(){
       const els = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('show')); return; }
-      const io = new IntersectionObserver((entries,obs)=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-      }, {threshold:.18});
+      const io = new IntersectionObserver((entries,obs)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} }); }, {threshold:.12});
       els.forEach(el=>io.observe(el));
     })();
 
     // ==== Hero Slider ====
     (function(){
-      const slides = document.querySelectorAll('#heroSlides .slide');
-      let sidx = 0;
+      const slides = document.querySelectorAll('#heroSlides .slide'); let sidx = 0;
       if(slides.length > 1){
-        setInterval(()=>{ 
-          slides[sidx].classList.remove('active'); 
-          sidx = (sidx + 1) % slides.length; 
-          slides[sidx].classList.add('active'); 
-        }, 5200); // สลับรูปทุก 5.2 วินาที
+        setInterval(()=>{ slides[sidx].classList.remove('active'); sidx = (sidx + 1) % slides.length; slides[sidx].classList.add('active'); }, 5200); 
       }
     })();
 
-    // i18n (sync header switch + FAB + update meta)
+    // i18n (sync header switch + update meta + TABLE DATA)
     const I18N = {
       th:{
         meta_title:"กรด/ด่างล้างไขมัน • อัลตร้าโซนิค | Baume Chemical",
@@ -643,27 +680,38 @@
 
         acid_title:"กรดล้างไขมัน (Acid Degreaser)",
         acid_desc:"เหมาะกับงานที่มีสนิม/ออกไซด์หรือเกลือค้าง พร้อมคราบน้ำมันเล็กน้อย คุมพารามิเตอร์ให้เหมาะเพื่อหลีกเลี่ยงการกัดผิวเกินจำเป็น ได้ผิวสะอาดพร้อมชุบ",
-
         alk_title:"ผงด่างล้างไขมัน (Alkaline Degreaser)",
         alk_title1:"ผงแยกไฟฟ้าแบบด่าง (Alkaline Electro)",
         alk_desc:"จัดการคราบน้ำมัน แว๊กซ์ และจาระบีจากการกลึง/ปั๊ม ให้ผิวสะอาดโดยไม่ทำลายเนื้อโลหะ สามารถนำไปกลิ้งขัดสะอาด บนงานเหล็กและโลหะที่ไม่ใช่เหล็ก ใช้ได้ทั้งแบบต้มและกลิ้ง",
         alk_desc1:"ผงด่างปราศจากสารลดแรงตึงผิว มีซิลิเกต ฟอสเฟต และสารกำจัดสนิม ใช้ล้างคราบน้ำมันด้วยไฟฟ้า แนะนำใช้คู่ Soak clean B1 พร้อมวิธีใช้และเงื่อนไขการเดินงาน",
-
         ultra_title:"ทำความสะอาดอัลตร้าโซนิค (Ultrasonic)",
         ultra_desc:"ระบบเขย่าขัดและกลิ้งล้าง กำจัดคราบในโพรง/รูด้วยคลื่นความถี่สูง เพิ่มประสิทธิภาพการทำความสะอาดและลดเวลา เหมาะกับชิ้นส่วนรูปทรงซับซ้อน",
-
         desmut_t:"น้ำยาดีสมัทและลอกออกไซด์ (Desmut-1015)",
         desmut_d:"ลอกออกไซด์ชนิดน้ำคุณภาพสูง พัฒนาขึ้นด้วยสูตรพิเศษที่ ปราศจากโครเมต (Non-Chromate) ช่วยเพิ่มความปลอดภัยในการทำงาน เป็นทางเลือกใหม่ที่อันตรายน้อยกว่าการใช้กรดไนตริกล้วน",
-
-
         btn_details:"ดูรายละเอียด →",
 
-        tbl_type:"ประเภท", tbl_materials:"วัสดุที่เหมาะสม", tbl_soils:"คราบเป้าหมาย", tbl_app:"การใช้งาน", tbl_notes:"หมายเหตุ",
-        row_acid_type:"แบบกรด", row_acid_mat:"เหล็ก, ทองเหลือง, ทองแดง", row_acid_soil:"ออกไซด์/สนิม + คราบน้ำมันบางเบา", row_acid_app:"การจุ่ม / การพ่น", row_acid_note:"ควบคุมเวลา/ความเข้มข้นเพื่อเลี่ยงการกัดเกินจำเป็น",
-        row_alk_type:"แบบด่าง", row_alk_mat:"เหล็ก, สเตนเลส, อะลูมิเนียม*", row_alk_soil:"คราบน้ำมัน, ขี้ผึ้ง, จาระบี (บาง–หนา)", row_alk_app:"การจุ่ม / การพ่น / ไฟฟ้า", row_alk_note:"*เลือกสูตร/อัตราให้เหมาะกับวัสดุ",
-        row_ultra_type:"อัลตร้าโซนิค", row_ultra_mat:"ชิ้นงานซับซ้อน / ช่องรูชิ้นงาน", row_ultra_soil:"คราบสกปรกที่ติดในรูหรือร่องลึก", row_ultra_app:"อ่างอัลตร้าโซนิคร่วมกับน้ำยาทำความสะอาด", row_ultra_note:"ช่วยเสริมประสิทธิภาพของขั้นตอนการทำความสะอาดหลัก",
+        // === Table i18n ===
+        tbl_heading:"เปรียบเทียบคุณสมบัติผลิตภัณฑ์",
+        tbl_type:"ประเภทสารล้าง", tbl_materials:"วัสดุที่เหมาะสม", tbl_soils:"คราบเป้าหมายหลัก", tbl_app:"รูปแบบการใช้งาน", tbl_notes:"ข้อแนะนำ / หมายเหตุ",
+        
+        row_acid_type:"แบบกรด (Acid)",
+        row_acid_mat_1:"เหล็ก", row_acid_mat_2:"ทองเหลือง", row_acid_mat_3:"ทองแดง",
+        row_acid_soil:"กำจัดคราบสนิม, ออกไซด์ฝังแน่น, เกล็ดแร่ (Scale) และคราบน้ำมันบางเบา",
+        row_acid_app_1:"การจุ่มแช่", row_acid_app_2:"การพ่นสเปรย์",
+        row_acid_note:"ควรควบคุมอุณหภูมิ เวลา และความเข้มข้นอย่างเคร่งครัด เพื่อป้องกันเนื้อโลหะถูกกัดกร่อนเกินความจำเป็น",
+        
+        row_alk_type:"แบบด่าง (Alkaline)",
+        row_alk_mat_1:"เหล็ก", row_alk_mat_2:"สเตนเลส", row_alk_mat_3:"อะลูมิเนียม*",
+        row_alk_soil:"ขจัดคราบน้ำมันฝังลึก, จาระบี, แว็กซ์, และคราบน้ำหล่อเย็นจากการกลึง/ปั๊ม",
+        row_alk_app_1:"การจุ่มต้ม", row_alk_app_2:"การพ่น", row_alk_app_3:"การแยกด้วยไฟฟ้า",
+        row_alk_note:"*สำหรับอะลูมิเนียม: ควรเลือกใช้สูตรและอัตราส่วนที่ถูกต้อง เพื่อป้องกันผิวงานหมองคล้ำหรือเสียหาย",
+        
+        row_ultra_type:"อัลตร้าโซนิค (Ultrasonic)",
+        row_ultra_mat_1:"โลหะทุกชนิด", row_ultra_mat_2:"ชิ้นงานรูปทรงซับซ้อน / รูตัน",
+        row_ultra_soil:"คราบฝังลึกตามซอกมุม, ผงขัด, เศษโลหะขนาดเล็กที่ยากต่อการเข้าถึง",
+        row_ultra_app_1:"อ่างอัลตร้าโซนิค ร่วมกับน้ำยาเฉพาะทาง",
+        row_ultra_note:"ช่วยลดระยะเวลา (Cycle time) และเสริมประสิทธิภาพกระบวนการทำความสะอาดหลักให้สมบูรณ์ยิ่งขึ้น",
 
-        tbl_footnote:"หมายเหตุ: อุณหภูมิ/เวลา/ความเข้มข้น ควรกำหนดจากการทดลองหน้างานและมาตรฐานไลน์ของคุณ",
         footer_products:"หมวดผลิตภัณฑ์", footer_contact:"ติดต่อเรา", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       },
       en:{
@@ -682,27 +730,38 @@
 
         acid_title:"Acid Degreaser",
         acid_desc:"Best for parts with rust/oxides or salt residues along with light oils. Proper control prevents over-etching and leaves a clean, plating-ready surface.",
-
         alk_title:"Alkaline Degreaser",
         alk_title1:"Electro Degreaser",
         alk_desc:"Targets oils, wax, and grease from machining/stamping. Cleans without attacking the base metal when parameters are controlled. It can be used for both boiling and rolling",
         alk_desc1:"Electro-cleaning degreaser: silicates, phosphates, deruster. Usage ranges and analysis method included.",
-
-
         ultra_title:"Ultrasonic Cleaner",
         ultra_desc:"Dislodges soils trapped in cavities/holes with high-frequency waves; boosts efficiency and reduces dwell time for complex parts.",
-
         desmut_t:"Desmut & Deoxidizer (Desmut-1015)",
         desmut_d:"A high-quality liquid deoxidizer developed with a special non-chromate formula. Enhances safety at work and is a less hazardous alternative to using pure nitric acid.",
-
         btn_details:"View details →",
 
-        tbl_type:"Type", tbl_materials:"Suitable materials", tbl_soils:"Target soils", tbl_app:"Application", tbl_notes:"Notes",
-        row_acid_type:"Acid", row_acid_mat:"Steel, brass, copper", row_acid_soil:"Oxides/rust + light oils", row_acid_app:"Dip / spray", row_acid_note:"Control time/concentration to avoid over-etching",
-        row_alk_type:"Alkaline", row_alk_mat:"Steel, stainless, aluminum*", row_alk_soil:"Oils, wax, grease (light–heavy)", row_alk_app:"Dip / spray / electric", row_alk_note:"*Use formulations/ratios appropriate to the substrate",
-        row_ultra_type:"Ultrasonic", row_ultra_mat:"Complex parts / cavities", row_ultra_soil:"Soils trapped in holes/crevices", row_ultra_app:"Ultrasonic bath + cleaner", row_ultra_note:"Enhances the primary cleaning stage",
+        // === Table i18n ===
+        tbl_heading:"Product Comparison",
+        tbl_type:"Cleaner Type", tbl_materials:"Suitable Materials", tbl_soils:"Target Soils", tbl_app:"Application Method", tbl_notes:"Recommendations / Notes",
+        
+        row_acid_type:"Acid-Based",
+        row_acid_mat_1:"Steel", row_acid_mat_2:"Brass", row_acid_mat_3:"Copper",
+        row_acid_soil:"Removes rust, stubborn oxides, mineral scales, and light oils.",
+        row_acid_app_1:"Immersion / Dip", row_acid_app_2:"Spray",
+        row_acid_note:"Strictly control temperature, time, and concentration to prevent over-etching the base metal.",
+        
+        row_alk_type:"Alkaline-Based",
+        row_alk_mat_1:"Steel", row_alk_mat_2:"Stainless", row_alk_mat_3:"Aluminum*",
+        row_alk_soil:"Removes heavy oils, grease, wax, and machining/stamping coolants.",
+        row_alk_app_1:"Hot Soak", row_alk_app_2:"Spray", row_alk_app_3:"Electro-cleaning",
+        row_alk_note:"*For Aluminum: Select non-etch formulas and proper ratios to prevent surface dulling or damage.",
+        
+        row_ultra_type:"Ultrasonic",
+        row_ultra_mat_1:"All Metals", row_ultra_mat_2:"Complex shapes / Blind holes",
+        row_ultra_soil:"Deeply embedded soils, polishing compounds, and hard-to-reach metal shavings.",
+        row_ultra_app_1:"Ultrasonic bath with specific cleaners",
+        row_ultra_note:"Reduces cycle time and significantly enhances the primary cleaning efficiency.",
 
-        tbl_footnote:"Note: Actual operating parameters (temperature/time/concentration) should be set by on-site trials and your line standards.",
         footer_products:"Products", footer_contact:"Contact Us", footer_copy:"© 2025 Baume Chemical. All rights reserved."
       }
     };
@@ -710,13 +769,9 @@
     const els = {
       langBtns: () => document.querySelectorAll('.lang-btn'),
       translatables: () => document.querySelectorAll('[data-i18n-key]'),
-      metaTitle: document.getElementById('metaTitle'),
-      metaDesc: document.getElementById('metaDesc'),
-      ogTitle: document.getElementById('ogTitle'),
-      ogDesc: document.getElementById('ogDesc'),
-      ogLocale: document.getElementById('ogLocale'),
-      twTitle: document.getElementById('twTitle'),
-      twDesc: document.getElementById('twDesc')
+      metaTitle: document.getElementById('metaTitle'), metaDesc: document.getElementById('metaDesc'),
+      ogTitle: document.getElementById('ogTitle'), ogDesc: document.getElementById('ogDesc'), ogLocale: document.getElementById('ogLocale'),
+      twTitle: document.getElementById('twTitle'), twDesc: document.getElementById('twDesc')
     };
 
     function applyLang(lang){
@@ -727,10 +782,15 @@
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const dict = I18N[L];
-        if(key && dict && dict[key] !== undefined) node.textContent = dict[key];
+        if(key && dict && dict[key] !== undefined) {
+            if(node.tagName === 'LI' || node.tagName === 'SPAN' || node.tagName === 'DIV' || node.tagName === 'H3' || node.tagName === 'H1' || node.tagName === 'P' || node.tagName === 'A' || node.tagName === 'TH' || node.tagName === 'TD') {
+                 node.innerHTML = dict[key]; // Allow HTML inside (like <strong>) for notes
+            } else {
+                 node.textContent = dict[key];
+            }
+        }
       });
 
-      // meta updates
       const t = I18N[L];
       if(t){
         els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
@@ -751,23 +811,18 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
 
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
-
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
-
+    // ==== Back-to-top ====
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200); 
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
   </script>
 </body>
 </html>
