@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- Open Graph / Twitter (ใช้รูปบนโดเมนตัวเองเพื่อพรีวิวเสถียร) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:url" content="https://www.baumechemical.com/products/equipment/">
@@ -40,10 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image"
-        href="https://i.imgur.com/3mWQsKe.jpeg"
-        imagesrcset="https://i.imgur.com/3mWQsKe.jpeg 800w, https://i.imgur.com/3mWQsKe.jpeg 1200w"
-        imagesizes="(max-width: 900px) 92vw, 900px">
+  <link rel="preload" as="image" href="https://i.imgur.com/3mWQsKe.jpeg" imagesrcset="https://i.imgur.com/3mWQsKe.jpeg 800w, https://i.imgur.com/3mWQsKe.jpeg 1200w" imagesizes="(max-width: 900px) 92vw, 900px">
 
   <!-- Structured Data (JSON-LD) -->
   <script id="ld-org" type="application/ld+json">
@@ -62,7 +59,7 @@
   }
   </script>
 
-  <!-- ใช้ CollectionPage + ItemList (หน้าหมวด) -->
+  <!-- JSON-LD: CollectionPage + ItemList -->
   <script id="ld-collection" type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -81,12 +78,7 @@
         {"@type":"ListItem","position":2,"name":"Laboratory Analytical Equipment","url":"https://www.baumechemical.com/products/equipment/toolschemical.html"},
         {"@type":"ListItem","position":3,"name":"Plating Line Equipment","url":"https://www.baumechemical.com/products/equipment/platingequipment.html"}
       ]
-    },
-    "hasPart":[
-      {"@type":"WebPage","name":"Analytical Reagents","url":"https://www.baumechemical.com/products/equipment/labchemicals.html"},
-      {"@type":"WebPage","name":"Analytical Equipment","url":"https://www.baumechemical.com/products/equipment/toolschemical.html"},
-      {"@type":"WebPage","name":"Plating Line Equipment","url":"https://www.baumechemical.com/products/equipment/platingequipment.html"}
-    ]
+    }
   }
   </script>
 
@@ -105,186 +97,230 @@
 
   <style>
     :root{
-      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800; --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5;
-      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --brand:#2c5e4e; --brand-2:#387b5b; --accent:#ff9800;
+      --ink:#0f172a; --muted:#5b6675; --bg:#f4f7f6;
+      --radius:24px; 
+      --shadow-1:0 12px 30px -10px rgba(2,8,20,.08); 
+      --shadow-2:0 20px 40px -10px rgba(44,94,78,.18);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png');
-      --header-h:64px; --container:1200px;
+      --header-h:56px; 
+      --container:1200px;
     }
-    *{box-sizing:border-box} html,body{margin:0}
-    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Noto Sans Thai',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6; overflow-x: hidden;}
 
-    /* ===== Header: fixed glass ===== */
-    .site-header{position:fixed;inset:0 0 auto 0;z-index:1400;background:transparent;border-bottom:1px solid rgba(255,255,255,.14);transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease}
-    .site-header.scrolled{background:rgba(15,23,42,.70);backdrop-filter:saturate(140%) blur(10px);box-shadow:0 8px 26px rgba(2,8,20,.18)}
-    .header-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:var(--header-h);padding:10px 16px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .brand-logo{width:42px;height:42px;border-radius:10px;flex:0 0 42px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
-    .brand-name{font-weight:800;color:#fff;font-size:1.02rem;letter-spacing:.2px}
+    /* ===== Header ===== */
+    .site-header{
+      position:fixed; inset:0 0 auto 0; z-index:1400;
+      background:transparent; border-bottom:1px solid rgba(255,255,255,.14);
+      transition:background .2s ease,backdrop-filter .2s ease,box-shadow .2s ease;
+    }
+    .site-header.scrolled{
+      background:rgba(15,23,42,.75);
+      -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
+      box-shadow:0 4px 20px rgba(2,8,20,.15);
+    }
+    .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:6px 16px}
+    .brand{display:flex; align-items:center; gap:8px; text-decoration:none}
+    .brand-logo{width:34px;height:34px;border-radius:8px;flex:0 0 34px;background:#e8f1ec var(--logo-url) center/cover no-repeat;box-shadow:0 2px 8px rgba(2,8,20,.15)}
+    .brand-name{font-weight:800;color:#fff;font-size:0.95rem;letter-spacing:.2px}
+
     .header-right{display:flex;align-items:center;gap:10px}
-
-    .primary-nav{display:flex;align-items:center;gap:12px}
-    .menu{list-style:none;display:flex;gap:8px;margin:0;padding:0}
-    .menu a{display:inline-block;padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+    .primary-nav{display:flex;align-items:center;gap:8px}
+    .menu{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+    .menu a{display:inline-block;padding:8px 10px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600; font-size: 0.9rem; transition: background 0.3s;}
     .menu a:hover{background:rgba(255,255,255,.12)}
     .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff;color:#0f172a;border-color:#fff}
 
-    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:9px;display:none;align-items:center;justify-content:center}
-    .nav-toggle .bar{position:relative;width:22px;height:2px;background:#fff;border-radius:2px}
+    .nav-toggle{appearance:none;border:0;background:transparent;cursor:pointer;width:34px;height:34px;border-radius:8px;display:none;align-items:center;justify-content:center}
+    .nav-toggle .bar{position:relative;width:20px;height:2px;background:#fff;border-radius:2px}
     .nav-toggle .bar::before,.nav-toggle .bar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;border-radius:2px}
-    .nav-toggle .bar::before{top:-7px}.nav-toggle .bar::after{top:7px}
+    .nav-toggle .bar::before{top:-6px}.nav-toggle .bar::after{top:6px}
     .nav-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
+    /* Header Language switch */
+    .lang-switch{display:flex;gap:4px;padding:3px;border:1px solid rgba(226,232,240,.6);border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 4px 12px rgba(2,8,20,.1)}
+    .site-header.scrolled .lang-switch{background:#ffffffdd}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:5px 8px;border-radius:999px;font-weight:800;font-size:0.85rem;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
+    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
+    .flag{width:16px;height:12px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+
     @media (max-width:920px){
-      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .2s ease,opacity .2s ease;z-index:1400}
+      .menu{position:fixed;left:12px;right:12px;top:calc(var(--header-h) + 8px);background:#0f172acc;backdrop-filter: blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:14px;transform:translateY(-12px);opacity:0;pointer-events:none;display:grid;gap:6px;padding:12px;transition:transform .3s ease,opacity .3s ease;z-index:1400}
       .menu li a{display:block;padding:12px 14px;border-radius:10px}
       .site-header.open .menu{transform:none;opacity:1;pointer-events:auto}
       .nav-toggle{display:inline-flex}
     }
-    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.28);z-index:1300;display:none}
-    .menu-scrim:not([hidden]){display:block}
+    .menu-scrim{position:fixed;inset:0;background:rgba(2,8,20,.3);z-index:1300;display:none; backdrop-filter: blur(4px);}
+    .menu-scrim:not([hidden]){display:block; animation: fadeIn 0.3s ease;}
     body.no-scroll{position:fixed;width:100%}
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    /* Language switchers (FAB + header) */
-    .lang-switch,.lang-fab{display:flex;gap:6px;padding:4px;border:1px solid #e2e8f0;border-radius:999px;background:#ffffffcc;backdrop-filter: blur(8px);box-shadow:0 10px 26px rgba(2,8,20,.12)}
-    .site-header.scrolled .lang-switch{background:#ffffffdd}
-    .lang-fab{position:fixed;top:calc(var(--header-h) + 10px);right:14px;z-index:1100}
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
-    .lang-btn[aria-pressed="true"]{background:var(--brand-2);color:#fff}
-    .flag{width:18px;height:14px;border-radius:2px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
-
-    /* ===== Hero ===== */
-/* ===== Hero ===== */
+    /* ===== Hero (Modern Glassmorphism) ===== */
     .hero{ 
-      position:relative; overflow:hidden; display:grid; place-items:center; 
+      position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center;
       text-align:center; color:#fff; 
-      min-height: clamp(420px, 60vh, 620px); 
-      padding-top:var(--header-h); 
+      min-height: clamp(500px, 75vh, 720px); 
+      padding-top:calc(var(--header-h) + 20px); 
+      padding-bottom: 40px;
     }
-    
-    /* สไตล์ Slider */
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
       position:absolute; inset:-4%;
       background-size:cover; background-position:center;
-      filter:brightness(.82); transform:scale(1.04);
-      opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
+      filter:brightness(0.85); transform:scale(1.04);
+      opacity:0; transition:opacity 1200ms ease, transform 6000ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
     
-    /* ฟิลเตอร์เงาดำ (กันไม่ให้บังเมาส์คลิกปุ่ม) */
     .hero::after{ 
       content:""; position:absolute; inset:0; 
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6)); 
+      background:linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(44,94,78,0.65) 100%); 
       z-index:1; pointer-events:none; 
     }
     
-    /* เนื้อหาข้อความ */
-    .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:980px; margin:0 auto; color:#e6f2ef}
-    
-    /* ปุ่มย้อนกลับ */
-    .back-home{ 
-      display:inline-flex; align-items:center; gap:8px; margin-bottom:10px; 
-      padding:6px 12px; border-radius:999px; background:#ffffffcc; color:#0f172a; 
-      border:1px solid #e2e8f0; text-decoration:none; font-weight:800; backdrop-filter: blur(6px) 
+    .hero-inner{ 
+      position:relative; z-index:2; 
+      padding:40px 30px; margin: 0 16px;
+      max-width: 860px; width:100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+      animation: floatUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    .back-home:hover{ background:#fff }
+    @keyframes floatUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero h1{
+      margin:0 0 16px; font-weight:800; font-size:clamp(28px,4vw,48px); 
+      background: linear-gradient(to right, #ffffff, #d1fae5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.3;
+    }
+    .hero p{ max-width:700px; margin:0 auto; color:#e2e8f0; font-size: 1.05rem; line-height: 1.7; font-weight: 400; }
+    .hero .actions{ display:flex; gap:16px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
+    
+    .btn{
+      appearance:none; border:none;
+      background: linear-gradient(135deg, #ff9800, #ff6b00); 
+      color:#fff; padding:12px 24px; 
+      border-radius:999px; font-weight:800; text-decoration:none;
+      box-shadow: 0 8px 20px rgba(255, 152, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .btn:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255, 152, 0, 0.5); }
+
+    .home-back{ 
+      display:inline-flex; align-items:center; gap:8px; padding:6px 14px; 
+      border-radius:999px; background: rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.3); 
+      color:#fff; text-decoration:none; font-size: 0.9rem; font-weight:600; 
+      transition: all 0.3s ease;
+    }
+    .home-back:hover{ background:rgba(255,255,255,.2); border-color:#fff; }
 
     /* ===== Layout ===== */
-    .wrap{max-width:var(--container);margin:auto;padding:34px 16px}
-    h2.section{margin:0 0 8px;font-size:clamp(22px,2.6vw,30px);font-weight:800;color:#1f2a24}
-    .lead{margin:0 0 16px;color:#5f6d7c}
+    .wrap{max-width:var(--container); margin:auto; padding:60px 16px}
+    .section-header { text-align: center; margin-bottom: 48px; }
+    h2.section{
+      margin:0 0 16px; font-size:clamp(28px, 3.5vw, 36px); font-weight:800;
+      background: linear-gradient(135deg, var(--brand), #0f172a);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    p.lead{margin:0 auto 12px; color:#5b6675; font-size:1.05rem; max-width: 860px; line-height: 1.6;}
 
-    /* ===== Cards ===== */
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-    .card{background:#fff;border:1px solid #e3ece5;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-1);transition:transform .18s ease,box-shadow .18s ease}
-    .card picture,.card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eff5f0}
-    .card .body{padding:14px}
-    .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-    .badge{font-size:12px;background:#eff7f1;border:1px solid #d8e7dd;color:#2f6b52;padding:2px 8px;border-radius:999px}
-    .card h3{margin:0 0 6px;font-size:1.05rem;color:#203126}
-    .card p{margin:0;color:#5b6675;font-size:.96rem}
-    .card .more{display:inline-block;margin-top:10px;color:var(--accent);font-weight:800;text-decoration:none}
-    .card .more:hover{text-decoration:underline}
+    /* ===== Cards (Bento-style + Feature List) ===== */
+    .grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr))}
+    
+    .card{
+      background:#fff; border:none; border-radius:var(--radius); overflow:hidden;
+      box-shadow:var(--shadow-1); transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex; flex-direction: column;
+    }
+    .card-img-wrapper { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #eff5f0; }
+    .card picture, .card img{ display:block; width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease; }
+    .card .body{padding:24px; flex-grow: 1; display: flex; flex-direction: column;}
+    
+    .badge-row{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px}
+    .badge{
+      font-size:11px; font-weight:700; letter-spacing: 0.3px; text-transform: uppercase;
+      background:#ecfdf5; color:#059669; padding:4px 10px; border-radius:999px;
+    }
+    
+    .card h3{margin:0 0 8px; font-size:1.25rem; color:#1e293b; font-weight:800; transition: color 0.3s;}
+    .card p{margin:0; color:#64748b; font-size:1rem; line-height: 1.6;}
+    
+    /* Feature List Styling */
+    .feature-list {
+      list-style: none; padding: 0; margin: 16px 0 0 0;
+      border-top: 1px solid #f1f5f9; padding-top: 16px;
+      font-size: 0.95rem; color: #475569; display: flex; flex-direction: column; gap: 10px;
+    }
+    .feature-list li { display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+    .feature-list li::before {
+      content: "✓"; color: #059669; font-weight: 800; background: #ecfdf5; border-radius: 50%;
+      width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.8rem; margin-top: 1px;
+    }
+    
+    .card .more{
+      display:inline-flex; align-items:center; gap:6px; margin-top:auto; padding-top:20px;
+      color:var(--accent); font-weight:800; text-decoration:none; font-size: 0.95rem;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+    
     .card.lift{will-change:transform,box-shadow}
-    @media(hover:hover) and (pointer:fine){.card.lift:hover,.card.lift:focus-within{transform:translateY(-8px);box-shadow:var(--shadow-2)}}
-    @media(prefers-reduced-motion:reduce){.card.lift{transition:none}}
+    @media(hover:hover) and (pointer:fine){
+      .card.lift:hover, .card.lift:focus-within{transform:translateY(-8px); box-shadow:var(--shadow-2)}
+      .card.lift:hover img {transform: scale(1.06);}
+      .card.lift:hover h3 {color: var(--brand);}
+      .card.lift:hover .more {gap: 12px; color: #e65100;}
+    }
 
-    /* Reveal */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
+    .reveal{opacity:0; transform:translateY(24px); transition:opacity .6s ease-out, transform .6s ease-out}
+    .reveal.show{opacity:1; transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{transition:none; opacity:1; transform:none}}
 
     /* ===== Footer ===== */
-    .site-footer{background:#0f172a;color:#cbd5e1;margin-top:24px}
-    .site-footer a{color:#e2e8f0;text-decoration:none}
-    .site-footer a:hover{color:#fff;text-decoration:underline}
-    .footer-inner{max-width:var(--container);margin:0 auto;padding:38px 20px}
-    .footer-grid{display:grid;gap:22px;grid-template-columns:2fr 1fr 1fr}
-    @media(max-width:900px){.footer-grid{grid-template-columns:1fr}}
-    .footer-brand .ft-head{display:flex;align-items:center;gap:12px;margin:0 0 10px}
-    .ft-logo{width:44px;height:44px;border-radius:10px;background:var(--brand);background-image:var(--logo-url);background-size:cover;background-position:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800;color:#fff}
-    .footer-title{margin:0 0 8px;color:#fff;font-weight:800;font-size:1.02rem}
-    .footer-list{list-style:none;margin:8px 0 0;padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25);margin-top:22px;padding-top:16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:.92rem;color:#9fb1c6}
+    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:40px}
+    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer a:hover{color:#fff; text-decoration:underline}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:48px 20px 38px}
+    .footer-grid{display:grid; gap:32px; grid-template-columns:2fr 1fr 1fr}
+    @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 16px}
+    .ft-logo{width:40px; height:40px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
+    .ft-name{font-weight:800; color:#fff; font-size: 1.1rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1rem}
+    .footer-list{list-style:none; margin:0; padding:0}
+    .footer-list li{margin:8px 0; font-size: 0.95rem;}
+    .footer-bottom{border-top:1px solid rgba(148,163,184,.15); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.9rem; color:#9fb1c6}
 
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating LINE & Back to top */
+    .float-line{ position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900; }
+    .float-line a{
+      display:grid; place-items:center; width:50px; height:50px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 8px 20px rgba(0,0,0,.25); animation:pulse 2.6s infinite;
+    }
+    .float-line a:hover, .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.28) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    @keyframes pulse{ 0%{box-shadow:0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 14px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)} }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
-
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
-
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-
-</style>
+    .backtop{ position:fixed; right:16px; bottom:calc(82px + env(safe-area-inset-bottom)); z-index:900; display:none; }
+    .backtop.show{ display:block; animation: fadeIn 0.3s; }
+    .backtop button{
+      width:40px; height:40px; border-radius:999px; border:1px solid #c5d2cf; background:#fff;
+      box-shadow:0 8px 20px rgba(0,0,0,.15); cursor:pointer; color: var(--brand); font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease;
+    }
+    .backtop button:hover, .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.2) }
+  </style>
 </head>
 <body>
+
   <!-- ===== Header ===== -->
-  <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
+  <header class="site-header" role="banner" id="siteHeader" aria-label="Site header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Baume Chemical">
         <span class="brand-logo" aria-hidden="true"></span>
@@ -294,15 +330,15 @@
       <div class="header-right">
         <nav id="primary-nav" class="primary-nav" aria-label="Primary" aria-hidden="true">
           <ul class="menu">
-        <a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a>
-        <a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a>
-        <a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a>
-        <a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a>
-        <a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a>
+            <li><a href="https://www.baumechemical.com/index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="https://www.baumechemical.com/about-us.html" data-i18n-key="nav_about">About us</a></li>
+            <li><a href="https://www.baumechemical.com/products.html" data-i18n-key="nav_products" aria-current="page">Products</a></li>
+            <li><a href="https://www.baumechemical.com/contact-us.html" data-i18n-key="nav_contact">Contact Us</a></li>
+            <li><a href="https://www.baumechemical.com/blog/" data-i18n-key="nav_blog">Blog</a></li>
           </ul>
         </nav>
 
-        <!-- Header language switch -->
+        <!-- Language switcher -->
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button class="lang-btn" data-lang="th" aria-pressed="true" title="ภาษาไทย">
             <img class="flag" src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" alt="TH"><span>ไทย</span>
@@ -321,60 +357,93 @@
   <div class="menu-scrim" hidden></div>
 
   <!-- ===== Hero ===== -->
-<section class="hero" aria-label="Equipment hero">
-
+  <section class="hero" aria-label="Equipment hero">
     <div class="slides" id="heroSlides">
-      <div class="slide active" style="background-image:url('https://i.imgur.com/3mWQsKe.jpeg')"></div> <div class="slide" style="background-image:url('https://i.imgur.com/wl25FWQ.jpeg')"></div> <div class="slide" style="background-image:url('https://i.imgur.com/R7gYwSN.jpeg')"></div> </div>
+      <div class="slide active" style="background-image:url('https://i.imgur.com/3mWQsKe.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://i.imgur.com/wl25FWQ.jpeg')"></div> 
+      <div class="slide" style="background-image:url('https://i.imgur.com/R7gYwSN.jpeg')"></div> 
+    </div>
 
     <div class="hero-inner">
-      <a class="back-home" href="https://www.baumechemical.com/index.html" onclick="if(history.length>1){history.back();return false;}" data-i18n-key="back_home">← กลับหน้าแรก</a>
+      <div style="margin-bottom:20px">
+        <a class="home-back" href="https://www.baumechemical.com/index.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span data-i18n-key="back_home">กลับหน้าแรก</span>
+        </a>
+      </div>
       <h1 data-i18n-key="hero_title">วัสดุอุปกรณ์</h1>
       <p data-i18n-key="hero_tagline">เครื่องมือและอุปกรณ์สำหรับงานชุบโลหะและห้องปฏิบัติการ</p>
+      <!-- เพิ่มปุ่มปรึกษาทีมเทคนิค -->
+      <div class="actions">
+        <a class="btn" href="https://www.baumechemical.com/contact-us.html" data-i18n-key="btn_consult">ปรึกษาทีมเทคนิค</a>
+      </div>
     </div>
   </section>
 
   <!-- ===== Content ===== -->
   <main class="wrap">
-    <h2 class="section" data-i18n-key="sec_title">ผลิตภัณฑ์ของเรา</h2>
-
-    <p class="lead" data-i18n-key="intro_1">
-      การชุบโลหะเป็นกระบวนการที่เคลือบผิวโลหะด้วยชั้นโลหะอีกชั้นหนึ่ง เพื่อเพิ่มความสวยงาม ความทนทาน และคุณสมบัติการใช้งานของผิวชิ้นงาน การเลือกใช้อุปกรณ์และเครื่องมือที่ถูกต้องเป็นปัจจัยสำคัญในการควบคุมกระบวนการชุบให้ได้ผลลัพธ์คุณภาพสูง การใช้เครื่องมือที่เที่ยงตรงและเทคโนโลยีทันสมัยช่วยให้ได้งานชุบที่มีประสิทธิภาพมากที่สุด นอกจากนี้ วัสดุและเครื่องมือที่ใช้จำเป็นต้องได้รับการบำรุงรักษาอย่างสม่ำเสมอเพื่อคงสมรรถนะและยืดอายุการใช้งานของชิ้นงานเคลือบ
-    </p>
-    <p class="lead" data-i18n-key="intro_2">
-      อุปกรณ์และเครื่องมือสำหรับงานชุบมีหลายประเภท ตั้งแต่เครื่องชุบไฟฟ้าไปจนถึงเครื่องมือทดสอบความทนทานของผิวเคลือบ การเลือกใช้อุปกรณ์คุณภาพสูงที่ควบคุมได้ละเอียดแม่นยำจะช่วยให้กระบวนการชุบสอดคล้องตามมาตรฐานและข้อกำหนดต่าง ๆ ได้อย่างมีประสิทธิภาพ
-    </p>
+    <div class="section-header">
+      <h2 class="section" data-i18n-key="sec_title">ผลิตภัณฑ์ของเรา</h2>
+      <p class="lead" data-i18n-key="intro_1">
+        การชุบโลหะเป็นกระบวนการที่เคลือบผิวโลหะด้วยชั้นโลหะอีกชั้นหนึ่ง เพื่อเพิ่มความสวยงาม ความทนทาน และคุณสมบัติการใช้งาน การเลือกใช้อุปกรณ์และเครื่องมือที่ถูกต้องเป็นปัจจัยสำคัญในการควบคุมกระบวนการชุบให้ได้ผลลัพธ์คุณภาพสูง
+      </p>
+      <p class="lead" data-i18n-key="intro_2">
+        อุปกรณ์สำหรับงานชุบมีหลายประเภท ตั้งแต่เครื่องชุบไฟฟ้าไปจนถึงเครื่องมือทดสอบความทนทาน การเลือกใช้อุปกรณ์คุณภาพสูงจะช่วยให้กระบวนการชุบสอดคล้องตามมาตรฐานและข้อกำหนดต่าง ๆ ได้อย่างมีประสิทธิภาพ
+      </p>
+    </div>
 
     <div class="grid">
       <!-- Lab Reagents -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/3mWQsKe.jpeg" alt="Laboratory Analytical Reagents"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://i.imgur.com/3mWQsKe.jpeg" alt="Laboratory Analytical Reagents"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Lab</span><span class="badge">Reagents</span></div>
           <h3 data-i18n-key="c1_t">สารเคมี/รีเอเจนต์สำหรับห้องปฏิบัติการ</h3>
-          <p data-i18n-key="c1_d">สารเคมีและรีเอเจนต์สำหรับการวิเคราะห์มีบทบาทสำคัญในการรองรับการทดสอบและการวิเคราะห์ทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะและการผลิตที่ต้องการความเที่ยงตรงและความน่าเชื่อถือ ...</p>
-          <a class="more" href="labchemicals.html" data-i18n-key="cta">ดูรายละเอียด →</a>
+          <p data-i18n-key="c1_d">สารเคมีและรีเอเจนต์สำหรับการวิเคราะห์มีบทบาทสำคัญในการรองรับการทดสอบและการวิเคราะห์ทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะที่ต้องการความเที่ยงตรงและความน่าเชื่อถือสูง</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c1_feat1">สารเคมีคุณภาพสูง ให้ผลการทดสอบที่แม่นยำ</li>
+            <li data-i18n-key="c1_feat2">เหมาะสำหรับวิเคราะห์โลหะหนักและตรวจค่า pH</li>
+            <li data-i18n-key="c1_feat3">ช่วยให้ควบคุมคุณภาพอ่างชุบได้ตามมาตรฐานสากล</li>
+          </ul>
+          <a class="more" href="labchemicals.html" data-i18n-key="cta">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Lab Instruments -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/wl25FWQ.jpeg" alt="Laboratory Analytical Equipment"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://i.imgur.com/wl25FWQ.jpeg" alt="Laboratory Analytical Equipment"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Lab</span><span class="badge">Instruments</span></div>
           <h3 data-i18n-key="c2_t">เครื่องมือวิเคราะห์ในห้องปฏิบัติการ</h3>
-          <p data-i18n-key="c2_d">ในห้องปฏิบัติการทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะและการผลิตที่ต้องทำการทดสอบสารเคมีและวิเคราะห์สมบัติของวัสดุ เครื่องมือวิเคราะห์ถือเป็นหัวใจสำคัญ ...</p>
-          <a class="more" href="toolschemical.html" data-i18n-key="cta">ดูรายละเอียด →</a>
+          <p data-i18n-key="c2_d">เครื่องมือวิเคราะห์ถือเป็นหัวใจสำคัญเพื่อให้การทดสอบแม่นยำและมีประสิทธิภาพ เช่น เครื่อง AAS, เครื่องวัด pH, UV-Vis หรือเครื่องไทเทรเตอร์ เพื่อช่วยสนับสนุนการประกันคุณภาพ</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c2_feat1">เครื่องมือวิเคราะห์ประสิทธิภาพสูง (AAS, UV-Vis)</li>
+            <li data-i18n-key="c2_feat2">ตรวจสอบความทนทานผิวเคลือบด้วย Salt Spray</li>
+            <li data-i18n-key="c2_feat3">สอบเทียบแม่นยำ รองรับงานประกันคุณภาพ (QA)</li>
+          </ul>
+          <a class="more" href="toolschemical.html" data-i18n-key="cta">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
 
       <!-- Plating Line Equipment -->
       <article class="card lift reveal">
-        <picture><img src="https://i.imgur.com/R7gYwSN.jpeg" alt="Equipment for Various Plating Processes"></picture>
+        <div class="card-img-wrapper">
+          <picture><img src="https://i.imgur.com/R7gYwSN.jpeg" alt="Equipment for Various Plating Processes"></picture>
+        </div>
         <div class="body">
           <div class="badge-row"><span class="badge">Line</span><span class="badge">Setup</span></div>
           <h3 data-i18n-key="c3_t">อุปกรณ์สำหรับกระบวนการชุบหลากหลาย</h3>
-          <p data-i18n-key="c3_d">ในการชุบโลหะและการเคลือบผิว ต้องใช้อุปกรณ์ที่ควบคุมได้อย่างแม่นยำเพื่อให้กระบวนการเกิดผลตามต้องการ ...</p>
-          <a class="more" href="platingequipment.html" data-i18n-key="cta">ดูรายละเอียด →</a>
+          <p data-i18n-key="c3_d">ตั้งแต่ถังชุบแบบครบวงจร ไปจนถึงเรคติไฟเออร์แปลงกระแสไฟ อุปกรณ์เฝ้าระวัง pH เครื่องวัดความหนาฟิล์ม และเครื่องล้างอัลตราโซนิก เพื่อควบคุมทุกปัจจัยในการผลิตให้ได้ผลงานสม่ำเสมอ</p>
+          <ul class="feature-list">
+            <li data-i18n-key="c3_feat1">อุปกรณ์ควบคุมอุณหภูมิและความเข้มข้นที่เชื่อถือได้</li>
+            <li data-i18n-key="c3_feat2">เรคติไฟเออร์แปลงไฟเสถียรเพื่อการชุบที่สม่ำเสมอ</li>
+            <li data-i18n-key="c3_feat3">ออกแบบและติดตั้งระบบให้เหมาะสมกับไลน์ผลิตของคุณ</li>
+          </ul>
+          <a class="more" href="platingequipment.html" data-i18n-key="cta">ดูรายละเอียด <span>→</span></a>
         </div>
       </article>
     </div>
@@ -431,18 +500,20 @@
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-  <!-- ===== JS: header glass, mobile nav (scrim+lock), reveal, i18n + meta sync ===== -->
+  <!-- ===== JS ===== -->
   <script>
-    // Header glass + set CSS var
+    // Header glass
     (function(){
       const header = document.getElementById('siteHeader');
-      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 64; document.documentElement.style.setProperty('--header-h', h + 'px'); };
+      const setH = ()=>{ const h = header ? Math.round(header.getBoundingClientRect().height) : 56; document.documentElement.style.setProperty('--header-h', h + 'px'); };
       const onScroll = ()=> header && header.classList.toggle('scrolled', (window.scrollY||0) > 10);
-      window.addEventListener('load', setH, {once:true}); window.addEventListener('resize', setH);
-      window.addEventListener('scroll', onScroll, {passive:true}); setH(); onScroll();
+      window.addEventListener('load', setH, {once:true});
+      window.addEventListener('resize', setH);
+      window.addEventListener('scroll', onScroll, {passive:true});
+      setH(); onScroll();
     })();
 
-    // Mobile nav: scrim + body lock + highlight current
+    // Mobile nav
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
@@ -456,10 +527,16 @@
           nav.setAttribute('aria-hidden', String(!v));
           v ? scrim.removeAttribute('hidden') : scrim.setAttribute('hidden','');
           if(v){
-            lockY = window.scrollY; document.body.classList.add('no-scroll'); document.body.style.top = `-${lockY}px`;
-            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); first && first.focus({preventScroll:true});
+            lockY = window.scrollY;
+            document.body.classList.add('no-scroll');
+            document.body.style.top = `-${lockY}px`;
+            const first = nav.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+            first && first.focus({preventScroll:true});
           }else{
-            document.body.classList.remove('no-scroll'); document.body.style.top=''; window.scrollTo(0, lockY); toggle.focus({preventScroll:true});
+            document.body.classList.remove('no-scroll');
+            document.body.style.top = '';
+            window.scrollTo(0, lockY);
+            toggle.focus({preventScroll:true});
           }
         }
         toggle.addEventListener('click', ()=> openMenu(!header.classList.contains('open')));
@@ -468,7 +545,6 @@
         window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) openMenu(false); }, {passive:true});
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> openMenu(false)));
       }
-      // highlight "Products" when under /products
       try{
         const here = location.pathname.replace(/\/+$/,'');
         document.querySelectorAll('.menu a').forEach(a=>{
@@ -491,7 +567,7 @@
       els.forEach(el=>io.observe(el));
     })();
 
-    // ==== Hero Slider ====
+    // Hero Slider
     (function(){
       const slides = document.querySelectorAll('#heroSlides .slide');
       let sidx = 0;
@@ -500,11 +576,11 @@
           slides[sidx].classList.remove('active'); 
           sidx = (sidx + 1) % slides.length; 
           slides[sidx].classList.add('active'); 
-        }, 5200); // สลับรูปอุปกรณ์ทุกๆ 5.2 วินาที
+        }, 5200);
       }
     })();
 
-    // i18n + meta sync
+    // i18n
     const I18N = {
       th:{
         meta_title:"วัสดุอุปกรณ์ | Baume Chemical",
@@ -514,19 +590,34 @@
         tw_title:"วัสดุอุปกรณ์ | Baume Chemical",
         tw_desc:"อุปกรณ์/เครื่องมือชุบโลหะและแล็บ ครบ พร้อมคำปรึกษา",
 
-        back_home:"← กลับหน้าแรก",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"กลับหน้าแรก",
+        btn_consult:"ปรึกษาทีมเทคนิค",
         hero_title:"วัสดุอุปกรณ์",
         hero_tagline:"เครื่องมือและอุปกรณ์สำหรับงานชุบโลหะและห้องปฏิบัติการ",
         sec_title:"ผลิตภัณฑ์ของเรา",
-        intro_1:"การชุบโลหะเป็นกระบวนการที่เคลือบผิวโลหะด้วยชั้นโลหะอีกชั้นหนึ่ง เพื่อเพิ่มความสวยงาม ความทนทาน และคุณสมบัติการใช้งานของผิวชิ้นงาน การเลือกใช้อุปกรณ์และเครื่องมือที่ถูกต้องเป็นปัจจัยสำคัญในการควบคุมกระบวนการชุบให้ได้ผลลัพธ์คุณภาพสูง การใช้เครื่องมือที่เที่ยงตรงและเทคโนโลยีทันสมัยช่วยให้ได้งานชุบที่มีประสิทธิภาพมากที่สุด นอกจากนี้ วัสดุและเครื่องมือที่ใช้จำเป็นต้องได้รับการบำรุงรักษาอย่างสม่ำเสมอเพื่อคงสมรรถนะและยืดอายุการใช้งานของชิ้นงานเคลือบ",
-        intro_2:"อุปกรณ์และเครื่องมือสำหรับงานชุบมีหลายประเภท ตั้งแต่เครื่องชุบไฟฟ้าไปจนถึงเครื่องมือทดสอบความทนทานของผิวเคลือบ การเลือกใช้อุปกรณ์คุณภาพสูงที่ควบคุมได้ละเอียดแม่นยำจะช่วยให้กระบวนการชุบสอดคล้องตามมาตรฐานและข้อกำหนดต่าง ๆ ได้อย่างมีประสิทธิภาพ",
+        intro_1:"การชุบโลหะเป็นกระบวนการที่เคลือบผิวโลหะด้วยชั้นโลหะอีกชั้นหนึ่ง เพื่อเพิ่มความสวยงาม ความทนทาน และคุณสมบัติการใช้งาน การเลือกใช้อุปกรณ์และเครื่องมือที่ถูกต้องเป็นปัจจัยสำคัญในการควบคุมกระบวนการชุบให้ได้ผลลัพธ์คุณภาพสูง",
+        intro_2:"อุปกรณ์สำหรับงานชุบมีหลายประเภท ตั้งแต่เครื่องชุบไฟฟ้าไปจนถึงเครื่องมือทดสอบความทนทาน การเลือกใช้อุปกรณ์คุณภาพสูงจะช่วยให้กระบวนการชุบสอดคล้องตามมาตรฐานและข้อกำหนดต่าง ๆ ได้อย่างมีประสิทธิภาพ",
+        
         c1_t:"สารเคมี/รีเอเจนต์สำหรับห้องปฏิบัติการ",
-        c1_d:"สารเคมีและรีเอเจนต์สำหรับการวิเคราะห์มีบทบาทสำคัญในการรองรับการทดสอบและการวิเคราะห์ทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะและการผลิตที่ต้องการความเที่ยงตรงและความน่าเชื่อถือ รีเอเจนต์เหล่านี้ถูกออกแบบมาเพื่อใช้ในการทดสอบสมบัติเคมีต่าง ๆ ได้อย่างมีประสิทธิภาพ โดยทั่วไปจะใช้ในขั้นตอน เช่น การทดสอบความเข้มข้นของโลหะหนักในสารละลาย การวิเคราะห์ค่า pH หรือการตรวจหาสิ่งปนเปื้อนในผลิตภัณฑ์ รีเอเจนต์ต้องมีคุณภาพสูงและมีความแม่นยำในการใช้ เพื่อให้ผลทดสอบถูกต้องและนำไปปรับปรุงกระบวนการผลิตได้อย่างมีประสิทธิภาพ การเลือกรีเอเจนต์ที่มีมาตรฐานและคุณภาพสูงช่วยให้การวิเคราะห์ในห้องแล็บถูกต้องตามข้อกำหนด ผู้ใช้งานจึงได้รับข้อมูลที่เชื่อถือได้เพื่อนำไปพัฒนากระบวนการผลิตให้มีประสิทธิภาพและปลอดภัยยิ่งขึ้น",
+        c1_d:"สารเคมีและรีเอเจนต์สำหรับการวิเคราะห์มีบทบาทสำคัญในการรองรับการทดสอบและการวิเคราะห์ทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะที่ต้องการความเที่ยงตรงและความน่าเชื่อถือสูง",
+        c1_feat1:"สารเคมีคุณภาพสูง ให้ผลการทดสอบที่แม่นยำ",
+        c1_feat2:"เหมาะสำหรับวิเคราะห์โลหะหนักและตรวจค่า pH",
+        c1_feat3:"ช่วยให้ควบคุมคุณภาพอ่างชุบได้ตามมาตรฐานสากล",
+
         c2_t:"เครื่องมือวิเคราะห์ในห้องปฏิบัติการ",
-        c2_d:"ในห้องปฏิบัติการทางวิทยาศาสตร์ โดยเฉพาะในอุตสาหกรรมชุบโลหะและการผลิตที่ต้องทำการทดสอบสารเคมีและวิเคราะห์สมบัติของวัสดุ เครื่องมือวิเคราะห์ถือเป็นหัวใจสำคัญเพื่อให้การทดสอบแม่นยำและมีประสิทธิภาพ ตัวอย่างเช่น เครื่อง Atomic Absorption Spectrometer (AAS) สำหรับวิเคราะห์โลหะหนักในสารละลาย เครื่องวัด pH เครื่องวัด Conductivity เครื่อง UV-Vis เครื่องไทเทรเตอร์ และ Salt Spray Tester สำหรับทดสอบความทนการกัดกร่อน เครื่องมือเหล่านี้ช่วยให้การวิเคราะห์มีความถูกต้องและเที่ยงตรง สนับสนุนการประกันคุณภาพ",
+        c2_d:"เครื่องมือวิเคราะห์ถือเป็นหัวใจสำคัญเพื่อให้การทดสอบแม่นยำและมีประสิทธิภาพ เช่น เครื่อง AAS, เครื่องวัด pH, UV-Vis หรือเครื่องไทเทรเตอร์ เพื่อช่วยสนับสนุนการประกันคุณภาพ",
+        c2_feat1:"เครื่องมือวิเคราะห์ประสิทธิภาพสูง (AAS, UV-Vis)",
+        c2_feat2:"ตรวจสอบความทนทานผิวเคลือบด้วย Salt Spray",
+        c2_feat3:"สอบเทียบแม่นยำ รองรับงานประกันคุณภาพ (QA)",
+
         c3_t:"อุปกรณ์สำหรับกระบวนการชุบหลากหลาย",
-        c3_d:"ในกระบวนการเคลือบผิวโลหะ การใช้อุปกรณ์ที่เหมาะสมคือหัวใจสำคัญเพื่อให้ได้งานที่มีคุณภาพสูง ตั้งแต่ถังชุบแบบครบวงจรที่ควบคุมทั้งอุณหภูมิและความเข้มข้น ไปจนถึงเรคติไฟเออร์ที่แปลงกระแสไฟให้เสถียร, ทุกชิ้นส่วนมีบทบาทสำคัญ. เครื่องเฝ้าระวัง pH/อุณหภูมิ ช่วยให้เราปรับแก้สถานการณ์ได้ทันท่วงที ขณะที่เครื่องวัดความหนาฟิล์ม ทำให้มั่นใจว่าชิ้นงานได้มาตรฐาน นอกจากนี้ชุดจิ๊กยังช่วยจัดวางชิ้นงานให้เคลือบได้ทั่วถึง เครื่องล้างอัลตราโซนิกก็ทำให้ผิวงานสะอาดหมดจด อุปกรณ์ทั้งหมดนี้ทำงานร่วมกันเพื่อควบคุมทุกปัจจัยในการผลิตให้ได้ผลงานที่แม่นยำและสม่ำเสมอตามที่ต้องการ",
-        cta:"ดูรายละเอียด →",
+        c3_d:"ตั้งแต่ถังชุบแบบครบวงจร ไปจนถึงเรคติไฟเออร์แปลงกระแสไฟ อุปกรณ์เฝ้าระวัง pH เครื่องวัดความหนาฟิล์ม และเครื่องล้างอัลตราโซนิก เพื่อควบคุมทุกปัจจัยในการผลิตให้ได้ผลงานสม่ำเสมอ",
+        c3_feat1:"อุปกรณ์ควบคุมอุณหภูมิและความเข้มข้นที่เชื่อถือได้",
+        c3_feat2:"เรคติไฟเออร์แปลงไฟเสถียรเพื่อการชุบที่สม่ำเสมอ",
+        c3_feat3:"ออกแบบและติดตั้งระบบให้เหมาะสมกับไลน์ผลิตของคุณ",
+
+        cta:"ดูรายละเอียด",
         footer_products:"หมวดผลิตภัณฑ์",
         footer_contact:"ติดต่อเรา",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -539,19 +630,34 @@
         tw_title:"Equipment | Baume Chemical",
         tw_desc:"Complete gear for labs & plating lines.",
 
-        back_home:"← Back to Home",
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
+        back_home:"Back to Home",
+        btn_consult:"Talk to a Specialist",
         hero_title:"Equipment",
         hero_tagline:"Tools and equipment for metal plating and laboratory work",
         sec_title:"Our Products",
-        intro_1:"Metal plating coats a base metal to improve aesthetics, durability, and functional properties. The right tools and equipment are critical to control the process for high-quality results. Precision instruments and modern tech maximize performance; regular maintenance keeps outputs consistent and extends service life.",
+        intro_1:"Metal plating coats a base metal to improve aesthetics, durability, and functional properties. The right tools and equipment are critical to control the process for high-quality results.",
         intro_2:"Plating equipment ranges from power supplies to corrosion testing gear. High-quality, precisely controlled tools help you meet specs and standards efficiently.",
+        
         c1_t:"Laboratory Analytical Reagents",
-        c1_d:"High-grade reagents for accurate analysis in plating/manufacturing — e.g., heavy-metal concentration tests, pH control, and contaminant checks — enabling reliable data for process optimization.",
+        c1_d:"High-grade reagents for accurate analysis in plating/manufacturing — enabling reliable data for testing and process optimization.",
+        c1_feat1:"High-quality chemicals for precise testing",
+        c1_feat2:"Ideal for heavy metal and pH analysis",
+        c1_feat3:"Helps maintain strict plating bath standards",
+
         c2_t:"Laboratory Analytical Equipment",
-        c2_d:"Key instruments include AAS for heavy metals, pH and conductivity meters, UV-Vis spectrophotometers, titrators, and salt spray testers — ensuring precise, repeatable results for QA and process improvement.",
-        c3_t:"Equipment for Various Plating Processes",
-        c3_d:"Process hardware such as temperature-controlled tanks, rectifiers, in-bath pH/temperature monitors, coating thickness gauges, jigs/fixtures, and ultrasonic cleaners helps deliver consistent, spec-compliant finishes.",
-        cta:"View details →",
+        c2_d:"Key instruments include AAS for heavy metals, pH and conductivity meters, UV-Vis spectrophotometers, titrators, and salt spray testers — ensuring precise, repeatable results.",
+        c2_feat1:"High-performance instruments (AAS, UV-Vis)",
+        c2_feat2:"Coating durability testing via Salt Spray",
+        c2_feat3:"Calibrated to support rigorous QA processes",
+
+        c3_t:"Equipment for Plating Processes",
+        c3_d:"Process hardware such as temperature-controlled tanks, rectifiers, in-bath pH/temperature monitors, and ultrasonic cleaners helps deliver consistent, spec-compliant finishes.",
+        c3_feat1:"Automated temperature and concentration controls",
+        c3_feat2:"Stable rectifiers for uniform plating results",
+        c3_feat3:"Custom-designed setups tailored to your production line",
+
+        cta:"View details",
         footer_products:"Products",
         footer_contact:"Contact Us",
         footer_copy:"© 2025 Baume Chemical. All rights reserved."
@@ -559,7 +665,7 @@
     };
 
     const els = {
-      langBtns: ()=>document.querySelectorAll('.lang-btn'), // header + FAB
+      langBtns: ()=>document.querySelectorAll('.lang-btn'),
       translatables: ()=>document.querySelectorAll('[data-i18n-key]'),
       metaTitle: document.getElementById('metaTitle'),
       metaDesc: document.getElementById('metaDesc'),
@@ -574,17 +680,22 @@
       const L = (lang==='en') ? 'en' : 'th';
       document.documentElement.lang = L;
 
-      // sync header + FAB buttons
       els.langBtns().forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === L)));
 
-      // translate text nodes
       els.translatables().forEach(node=>{
         const key = node.getAttribute('data-i18n-key');
         const dict = I18N[L];
-        if (key && dict && dict[key] !== undefined) node.textContent = dict[key];
+        if (key && dict && dict[key] !== undefined){
+            if(key === "cta") {
+                node.innerHTML = dict[key] + " <span>→</span>";
+            } else if(node.tagName === 'LI' || node.tagName === 'SPAN' || node.tagName === 'DIV' || node.tagName === 'H3' || node.tagName === 'H1' || node.tagName === 'P' || node.tagName === 'A' || node.tagName === 'TH' || node.tagName === 'TD') {
+                 node.innerHTML = dict[key];
+            } else {
+                node.textContent = dict[key];
+            }
+        } 
       });
 
-      // update SEO/OG/Twitter meta
       const t = I18N[L];
       if(t){
         els.metaTitle && (els.metaTitle.textContent = t.meta_title, document.title = t.meta_title);
@@ -606,23 +717,22 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
 
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
+    // Back-to-top
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
 
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
 
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
-
+      backTop.addEventListener('click', ()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
   </script>
 </body>
 </html>
