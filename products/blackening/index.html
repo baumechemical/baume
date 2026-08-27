@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- Open Graph / Twitter (ใช้โดเมนตัวเองเพื่อพรีวิวเสถียร) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Baume Chemical">
   <meta property="og:locale" id="ogLocale" content="th_TH">
@@ -38,12 +38,10 @@
 
   <!-- Performance Hints -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image"
-        href="https://www.baumechemical.com/picture/thumbnail.jpg"
-        imagesrcset="https://www.baumechemical.com/picture/thumbnail.jpg 800w, https://www.baumechemical.com/picture/thumbnail.jpg 1200w"
-        imagesizes="(max-width: 900px) 92vw, 900px">
+  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/thumbnail.jpg">
+  <link rel="dns-prefetch" href="//img2.pic.in.th">
 
-  <!-- Structured Data (สร้าง/อัปเดตตามภาษาแบบไดนามิก) -->
+  <!-- Structured Data -->
   <script id="ld-org" type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -95,38 +93,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="https://www.baumechemical.com/picture/thumbnail.jpg">
-  <link rel="dns-prefetch" href="//img2.pic.in.th">
 
   <style>
     :root{
       --brand:#2c5e4e; --brand-2:#387b5b; --accent:#387b5b;
-      --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5; --radius:14px;
-      --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.14);
+      --ink:#0f172a; --muted:#5b6675; --bg:#f4f6f5; --card:#fff;
+      --radius:14px; --shadow-1:0 8px 26px rgba(2,8,20,.06); --shadow-2:0 16px 40px rgba(2,8,20,.12);
       --logo-url:url('https://www.baumechemical.com/picture/logo.png'); --header-h:64px; --container:1200px;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6}
+    body{font-family:'Noto Sans Thai', system-ui, sans-serif; color:var(--ink); background:var(--bg); line-height:1.65}
 
     /* ===== Header: fixed glass ===== */
-.site-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1400;
-  background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,.14);
-  transition: background .2s ease, backdrop-filter .2s ease, box-shadow .2s ease;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-}
-
+    .site-header{
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1400;
+      background: transparent; border-bottom: 1px solid rgba(255,255,255,.12);
+      transition: background .3s ease, backdrop-filter .3s ease, box-shadow .3s ease, border-color .3s ease;
+      -webkit-backdrop-filter: none; backdrop-filter: none;
+    }
     .site-header.scrolled{
-      background:rgba(15,23,42,.70);
-      -webkit-backdrop-filter:saturate(140%) blur(10px); backdrop-filter:saturate(140%) blur(10px);
-      box-shadow:0 8px 26px rgba(2,8,20,.18);
+      background:rgba(15,23,42,.75);
+      -webkit-backdrop-filter:saturate(140%) blur(12px); backdrop-filter:saturate(140%) blur(12px);
+      box-shadow:0 8px 30px rgba(0,0,0,.15); border-bottom: 1px solid rgba(255,255,255,.05);
     }
     .header-inner{max-width:var(--container); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:var(--header-h); padding:10px 16px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
@@ -136,12 +125,10 @@
     .header-right{display:flex; align-items:center; gap:10px}
     .primary-nav{display:flex; align-items:center; gap:12px}
     .menu{list-style:none; display:flex; gap:8px; margin:0; padding:0}
-    .menu a{display:inline-block; padding:10px 12px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600}
+    .menu a{display:inline-block; padding:10px 14px; border-radius:10px; color:#fff; text-decoration:none; font-weight:600; transition: background 0.2s ease, color 0.2s ease;}
     .menu a:hover{background:rgba(255,255,255,.12)}
-    .menu a[aria-current="page"]{background:rgba(255,255,255,.18)}
-    .menu a.cta{border:1px solid rgba(255,255,255,.35)}
-    .menu a.cta:hover{background:#fff; color:#0f172a; border-color:#fff}
-
+    .menu a[aria-current="page"]{background:rgba(255,255,255,.2)}
+    
     .nav-toggle{appearance:none; border:0; background:transparent; cursor:pointer; width:38px; height:38px; border-radius:9px; display:none; align-items:center; justify-content:center}
     .nav-toggle:focus-visible{ outline:2px solid #ffffff; outline-offset:2px }
     .nav-toggle .bar{ position:relative; width:22px; height:2px; background:#fff; border-radius:2px }
@@ -151,157 +138,133 @@
     /* Header Language switch */
     .lang-switch{display:flex; gap:6px; padding:4px; border:1px solid rgba(226,232,240,.9); border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12)}
     .site-header.scrolled .lang-switch{ background:#ffffffdd }
-    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a}
+    .lang-btn{appearance:none;border:0;background:transparent;cursor:pointer;padding:6px 10px;border-radius:999px;font-weight:800;display:flex;align-items:center;gap:6px;color:#0f172a; transition: background 0.2s ease, color 0.2s ease;}
     .lang-btn[aria-pressed="true"]{ background: var(--brand-2); color:#fff }
     .flag{ width:18px; height:14px; border-radius:2px; object-fit:cover; box-shadow:0 0 0 1px rgba(0,0,0,.08) }
 
     @media (max-width:920px){
-      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,.18); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .2s ease, opacity .2s ease; z-index:1400}
+      .menu{position:fixed; left:12px; right:12px; top:calc(var(--header-h) + 8px); background:#0f172acc; backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,.15); border-radius:14px; transform:translateY(-12px); opacity:0; pointer-events:none; display:grid; gap:6px; padding:12px; transition:transform .3s ease, opacity .3s ease; z-index:1400; box-shadow: 0 10px 40px rgba(0,0,0,.25);}
       .menu li a{ display:block; padding:12px 14px; border-radius:10px }
       .site-header.open .menu{ transform:none; opacity:1; pointer-events:auto }
       .nav-toggle{ display:inline-flex }
     }
-    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.28); z-index:1300; display:none }
-    .menu-scrim:not([hidden]){ display:block }
+    .menu-scrim{ position:fixed; inset:0; background:rgba(2,8,20,.3); backdrop-filter: blur(4px); z-index:1300; display:none }
+    .menu-scrim:not([hidden]){ display:block; animation: fadeIn 0.3s ease; }
     body.no-scroll{ position:fixed; width:100%; }
-
-    /* === Language FAB (synced with header) === */
-    .lang-fab{ position:fixed; top:calc(var(--header-h) + 10px); right:14px; z-index:1100; display:flex; gap:6px; padding:4px; border:1px solid #e2e8f0; border-radius:999px; background:#ffffffcc; backdrop-filter: blur(8px); box-shadow:0 10px 26px rgba(2,8,20,.12) }
-    .lang-fab .lang-btn{ padding:6px 10px }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     /* === Hero === */
-/* === Hero === */
     .hero{ 
       position:relative; overflow:hidden; display:grid; place-items:center; 
       text-align:center; color:#fff; 
       min-height: clamp(420px, 60vh, 620px); 
       padding-top:var(--header-h); 
     }
-    
-    /* สไตล์สำหรับ Slider (z-index 0 เพื่อให้กดปุ่มได้) */
     .hero .slides { position:absolute; inset:0; z-index:0; }
     .hero .slide {
-      position:absolute; inset:-4%; /* เผื่อขอบเวลาซูม */
+      position:absolute; inset:-4%;
       background-size:cover; background-position:center;
       filter:brightness(.82); transform:scale(1.04);
       opacity:0; transition:opacity 900ms ease, transform 5200ms ease;
     }
     .hero .slide.active { opacity:1; transform:scale(1.08); }
-    
-    /* ฟิลเตอร์เงาดำ (pointer-events: none กันบังเมาส์) */
     .hero::after{ 
       content:""; position:absolute; inset:0; 
-      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); 
+      background:linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.6)); 
       z-index:1; pointer-events:none; 
     }
-    
-    /* เนื้อหาข้อความ */
     .hero-inner{ position:relative; z-index:2; padding:26px 16px; max-width:var(--container); width:100% }
-    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 6px 28px rgba(0,0,0,.45)}
-    .hero p{max-width:900px; margin:0 auto; color:#e6f2ef}
+    .hero h1{margin:0 0 10px; font-weight:800; font-size:clamp(26px,4.2vw,44px); text-shadow:0 4px 20px rgba(0,0,0,.5)}
+    .hero p{max-width:900px; margin:0 auto; color:#f0f7f5; text-shadow:0 2px 10px rgba(0,0,0,.4)}
     
-    /* ปุ่มย้อนกลับ */
+    /* ===== ปุ่มย้อนกลับ Glassmorphism ===== */
     .home-back{ 
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; 
-      border-radius:999px; border:1px solid rgba(255,255,255,.6); 
-      color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) 
+      display:inline-flex; align-items:center; gap:8px; padding:10px 20px; 
+      border-radius:999px; border:1px solid rgba(255,255,255,.3); 
+      background: rgba(255,255,255,.15);
+      color:#fff; text-decoration:none; font-weight:600; font-size: 0.96rem;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .home-back:hover{ background:rgba(255,255,255,.12) }
-
-    /* Back-to-home button */
-    .home-back{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.6); color:#fff; text-decoration:none; font-weight:800; backdrop-filter: blur(4px) }
-    .home-back:hover{ background:rgba(255,255,255,.12) }
+    .home-back:hover{ 
+      background: rgba(255,255,255,.25); border-color: rgba(255,255,255,.6);
+      transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
 
     /* === Layout === */
-    .wrap{max-width:var(--container); margin:auto; padding:34px 16px}
-    h2.section{margin:0 0 8px; font-size:clamp(22px,2.6vw,30px); font-weight:800; color:#1f2a24}
-    p.lead{margin:0 0 16px; color:#5f6d7c}
+    .wrap{max-width:var(--container); margin:auto; padding:40px 16px}
+    h2.section{margin:0 0 8px; font-size:clamp(24px,2.8vw,32px); font-weight:800; color:#1f2a24}
+    p.lead{margin:0 0 30px; color:#5f6d7c; font-size: 1.05rem; max-width: 900px;}
 
-    /* === Cards grid (lift) === */
-    .grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
+    /* === Cards (Premium Hover Zoom) === */
+    .grid{display:grid; gap:20px; grid-template-columns:repeat(3,1fr)}
     @media(max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)} }
     @media(max-width:640px){ .grid{grid-template-columns:1fr} }
-    .card{background:#fff; border:1px solid #e3ece5; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-1); transition:transform .18s ease, box-shadow .18s ease}
-    .card picture, .card img{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; background:#eff5f0}
-    .card .body{padding:14px}
-    .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
-    .badge{font-size:12px; background:#eff7f1; border:1px solid #d8e7dd; color:#2f6b52; padding:2px 8px; border-radius:999px}
-    .card h3{margin:0 0 6px; font-size:1.05rem; color:#203126}
-    .card p{margin:0; color:#5b6675; font-size:.96rem}
-    .card .more{display:inline-block; margin-top:10px; color:var(--accent); font-weight:800; text-decoration:none}
-    .card .more:hover{ text-decoration:underline }
+    .card{background:var(--card); border:1px solid #eef2ef; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-1); transition:all .3s cubic-bezier(0.4, 0, 0.2, 1)}
+    
+    .card picture { display:block; overflow:hidden; background:#eff5f0; } 
+    .card img{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    
+    .card .body{padding:20px}
+    .badge-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px}
+    .badge{font-size:12px; font-weight:600; background:#e8f4ed; color:#215c44; padding:4px 10px; border-radius:999px; display:inline-block}
+    .card h3{margin:0 0 8px; font-size:1.15rem; color:#1a2b21}
+    .card p{margin:0; color:#5b6675; font-size:0.98rem}
+    .card .more{display:inline-block; margin-top:16px; color:var(--accent); font-weight:800; text-decoration:none; transition: color 0.2s ease;}
+    .card .more:hover{ color: #23543d; text-decoration:underline }
 
-    /* Lift (opt-in) + reveal */
     .card.lift{ will-change: transform, box-shadow }
-    @media (hover:hover) and (pointer:fine){ .card.lift:hover, .card.lift:focus-within{ transform:translateY(-8px); box-shadow:var(--shadow-2) } }
-    .reveal{opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease}
+    @media (hover:hover) and (pointer:fine){ 
+      .card.lift:hover, .card.lift:focus-within{ transform:translateY(-6px); box-shadow:var(--shadow-2); border-color:#d0e0d6; } 
+      .card.lift:hover img { transform: scale(1.06); }
+    }
+
+    .reveal{opacity:0; transform: translateY(16px) scale(.98); transition: opacity .6s ease, transform .6s ease}
     .reveal.show{opacity:1; transform:none}
     @media (prefers-reduced-motion: reduce){ .reveal{transition:none; opacity:1; transform:none} }
 
     /* === Footer === */
-    .site-footer{background:#0f172a; color:#cbd5e1; margin-top:24px}
-    .site-footer a{color:#e2e8f0; text-decoration:none}
+    .site-footer{background:#0b111f; color:#cbd5e1; margin-top:32px; border-top: 4px solid var(--brand);}
+    .site-footer a{color:#e2e8f0; text-decoration:none; transition: color 0.2s ease;}
     .site-footer a:hover{color:#fff; text-decoration:underline}
-    .footer-inner{max-width:var(--container); margin:0 auto; padding:38px 20px}
-    .footer-grid{display:grid; gap:22px; grid-template-columns:2fr 1fr 1fr}
+    .footer-inner{max-width:var(--container); margin:0 auto; padding:44px 20px}
+    .footer-grid{display:grid; gap:28px; grid-template-columns:2fr 1fr 1fr}
     @media(max-width:900px){ .footer-grid{grid-template-columns:1fr} }
-    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 10px}
+    .footer-brand .ft-head{display:flex; align-items:center; gap:12px; margin:0 0 14px}
     .ft-logo{width:44px; height:44px; border-radius:10px; background:var(--brand); background-image:var(--logo-url); background-size:cover; background-position:center; box-shadow:0 3px 10px rgba(0,0,0,.3)}
-    .ft-name{font-weight:800; color:#fff}
-    .footer-title{margin:0 0 8px; color:#fff; font-weight:800; font-size:1.02rem}
+    .ft-name{font-weight:800; color:#fff; font-size:1.1rem;}
+    .footer-title{margin:0 0 12px; color:#fff; font-weight:800; font-size:1.02rem}
     .footer-list{list-style:none; margin:8px 0 0; padding:0}
-    .footer-list li{margin:6px 0}
-    .footer-bottom{border-top:1px solid rgba(148,163,184,.25); margin-top:22px; padding-top:16px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#9fb1c6}
+    .footer-list li{margin:8px 0}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1); margin-top:32px; padding-top:20px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:.92rem; color:#879ab0}
     
-    /* Add to your CSS (หรือแทนที่บล็อกเดิม) */
-.float-line{
-  position:fixed;
-  right:16px;
-  bottom:calc(18px + env(safe-area-inset-bottom)); /* กันชนมุมจอบน iOS */
-  z-index:900; /* ถ้าอยากลอยเหนือเมนู scrim ให้ใช้ >=1501 */
-}
-.float-line a{
-  display:grid; place-items:center;
-  width:54px; height:54px; border-radius:999px;
-  background:#00c300; color:#fff; text-decoration:none; font-weight:800;
-  box-shadow:0 10px 26px rgba(0,0,0,.25);
-  animation:pulse 2.6s infinite;
-}
-.float-line a:hover,
-.float-line a:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.28) }
-.float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    /* Floating Buttons */
+    .float-line{
+      position:fixed; right:16px; bottom:calc(18px + env(safe-area-inset-bottom)); z-index:900; 
+    }
+    .float-line a{
+      display:grid; place-items:center; width:54px; height:54px; border-radius:999px;
+      background:#00c300; color:#fff; text-decoration:none; font-weight:800;
+      box-shadow:0 6px 20px rgba(0,195,0,.3); animation:pulse 2.6s infinite; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .float-line a:hover, .float-line a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,195,0,.4) }
+    .float-line a:focus-visible{ outline:2px solid #fff; outline-offset:2px }
+    @keyframes pulse{
+      0%{box-shadow:0 0 0 rgba(0,195,0,.5)} 70%{box-shadow:0 0 0 16px rgba(0,195,0,0)} 100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
+    }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 rgba(0,195,0,.5)}
-  70%{box-shadow:0 0 0 18px rgba(0,195,0,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,195,0,0)}
-}
+    /* Back-to-top */
+    .backtop{ position:fixed; right:16px; bottom:calc(90px + env(safe-area-inset-bottom)); z-index:900; display:none; }
+    .backtop.show{ display:block; animation: fadeIn 0.3s ease; }
+    .backtop button{
+      width:44px; height:44px; border-radius:999px; border:1px solid #d8e4e1; background:#fff; color:#215c44; font-weight: bold;
+      box-shadow:0 6px 20px rgba(0,0,0,.1); cursor:pointer; transition: all 0.2s ease;
+    }
+    .backtop button:hover, .backtop button:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.15); background:#f4f9f6; }
 
-/* Back-to-top */
-.backtop{
-  position:fixed;
-  right:16px;
-  bottom:calc(90px + env(safe-area-inset-bottom)); /* วางเหนือปุ่ม LINE */
-  z-index:900;
-  display:none;
-}
-.backtop.show{ display:block }
-.backtop button{
-  width:44px; height:44px; border-radius:999px;
-  border:1px solid #c5d2cf; background:#fff;
-  box-shadow:0 10px 26px rgba(0,0,0,.18);
-  cursor:pointer;
-}
-.backtop button:hover,
-.backtop button:focus-visible{ transform:translateY(-1px); box-shadow:0 14px 30px rgba(0,0,0,.2) }
-
-/* ย่อขนาดบนจอเล็ก */
-@media (max-width:420px){
-  .float-line a{ width:50px; height:50px }
-  .backtop button{ width:42px; height:42px }
-}
-
-</style>
+    @media (max-width:420px){ .float-line a{ width:50px; height:50px } .backtop button{ width:42px; height:42px } }
+  </style>
 </head>
 <body>
   <!-- === Header === -->
@@ -345,7 +308,12 @@
 <section class="hero" aria-label="Blackening hero">
     
     <div class="slides" id="heroSlides">
-      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/thumbnail.jpg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/B2.jpg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/zdc.jpg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/B4.jpg')"></div> <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/Pa1.png')"></div> </div>
+      <div class="slide active" style="background-image:url('https://www.baumechemical.com/picture/thumbnail.jpg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/B2.jpg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/zdc.jpg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/B4.jpg')"></div> 
+      <div class="slide" style="background-image:url('https://www.baumechemical.com/picture/Pa1.png')"></div> 
+    </div>
 
     <div class="hero-inner">
       <div style="margin-bottom:12px">
@@ -379,7 +347,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Steel</span><span class="badge">Low-Temp</span></div>
           <h3 data-i18n-key="steel_title">รมดำสำหรับเหล็ก</h3>
-          <p data-i18n-key="steel_desc">กระบวนการจุ่มเย็น ใช้งานง่าย สีดำสม่ำเสมอทั่วผิวชิ้นงาน สามารถขัดเผยเนื้อเหล็กเพื่อสร้างลวดลาย และปิดผิวด้วยแลคเกอร์หรือน้ำมันภายหลัง</p>
+          <p data-i18n-key="steel_desc">กระบวนการจุ่มเย็น ใช้งานง่าย สีดำสม่ำเสมอทั่วผิวชิ้นงาน สามารถขัดเผยเนื้อเหล็กเพื่อสร้างเอฟเฟกต์ และปิดผิวด้วยแลคเกอร์หรือน้ำมันภายหลัง</p>
           <a class="more" href="troubleshootingblackening.html#steel" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -390,7 +358,7 @@
         <div class="body">
           <div class="badge-row"><span class="badge">Zinc</span><span class="badge">Uniform Oxide</span></div>
           <h3 data-i18n-key="zinc_title">รมดำสำหรับซิงค์ฉีด</h3>
-          <p data-i18n-key="zinc_desc">จุ่มเย็น สีดำเรียบเนียน เหมาะกับชิ้นงานซิงค์ฉีดหรือโลหะผสมสังกะสี สามารถปิดผิวด้วยแลคเกอร์/น้ำมันเพื่อยืดอายุการใช้งาน</p>
+          <p data-i18n-key="zinc_desc">จุ่มเย็น สีดำเรียบเนียน เหมาะกับชิ้นงานชุบซิงค์ฉีดหรือโลหะผสมสังกะสี สามารถปิดผิวด้วยแลคเกอร์/น้ำมันเพื่อยืดอายุการใช้งาน</p>
           <a class="more" href="troubleshootingblackening.html#zinc" data-i18n-key="view_details">ดูรายละเอียด →</a>
         </div>
       </article>
@@ -470,7 +438,6 @@
   <div class="backtop" id="backTop"><button aria-label="กลับขึ้นด้านบน">↑</button></div>
   <div class="float-line"><a href="https://line.me/ti/p/~baumechemical" target="_blank" rel="noopener" aria-label="แชท LINE">LINE</a></div>
 
-
   <!-- === JS: header glass, mobile nav (scrim+lock), reveal, i18n, meta sync === -->
   <script>
     // Header height + glass on scroll
@@ -484,7 +451,7 @@
       setH(); onScroll();
     })();
 
-    // Mobile nav (scrim + body lock) + highlight current (Products)
+    // Mobile nav (scrim + body lock) + highlight current
     (function(){
       const header = document.getElementById('siteHeader');
       const toggle = header?.querySelector('.nav-toggle');
@@ -516,7 +483,6 @@
         window.addEventListener('resize', ()=>{ if (window.innerWidth > 920 && header.classList.contains('open')) setMenuOpen(false); }, {passive:true});
         header.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', ()=> setMenuOpen(false)));
       }
-      // highlight "Products" when under /products
       try{
         const here = location.pathname.replace(/\/+$/,'');
         document.querySelectorAll('.menu a').forEach(a=>{
@@ -535,7 +501,7 @@
       if (!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('show')); return; }
       const io = new IntersectionObserver((entries,obs)=>{
         entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
-      }, {threshold:.18});
+      }, {threshold:.12});
       els.forEach(el=>io.observe(el));
     })();
 
@@ -548,7 +514,7 @@
           slides[sidx].classList.remove('active'); 
           sidx = (sidx + 1) % slides.length; 
           slides[sidx].classList.add('active'); 
-        }, 5200); // สลับรูปรมดำทุกๆ 5.2 วินาที
+        }, 5200); 
       }
     })();
 
@@ -562,6 +528,7 @@
         tw_title: "น้ำยารมดำโลหะ (Blackening) - Baume Chemical",
         tw_desc: "โซลูชันรมดำโลหะ: Brass, Copper, Steel, Zinc, Aluminium — จุ่มเย็น สีดำสม่ำเสมอ เคลือบแลคเกอร์/น้ำมันปิดผิวได้",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
         back_home: "หน้าแรก",
         hero_title: "น้ำยารมดำโลหะ (Blackening)",
         hero_tagline: "สร้างชั้นออกไซด์สีดำบนผิวโลหะเพื่อความสวยงาม ลดแสงสะท้อน และช่วยป้องกันการกัดกร่อน ขั้นตอนแบบจุ่มเย็น คุมง่าย สีสม่ำเสมอ เหมาะกับงานอุตสาหกรรมและงานตกแต่ง",
@@ -590,6 +557,7 @@
         tw_title: "Metal Blackening - Baume Chemical",
         tw_desc: "Blackening solutions for multiple substrates with consistent finish and easy control.",
 
+        nav_home: "Home", nav_about: "About us", nav_products: "Products", nav_contact: "Contact Us", nav_blog: "Blog",
         back_home: "Home",
         hero_title: "Metal Blackening Solutions",
         hero_tagline: "Create a uniform black oxide on metal surfaces for aesthetics, glare reduction, and enhanced corrosion resistance. Cold-immersion process, easy control, ideal for industrial and decorative work.",
@@ -656,22 +624,18 @@
       els.langBtns().forEach(btn=> btn.addEventListener('click', ()=> applyLang(btn.dataset.lang)));
     })();
 
-    // ==== Back-to-top (เสถียร + threshold ต่ำ) ====
-(function(){
-  const backTop = document.getElementById('backTop');
-  if(!backTop) return;
-
-  function toggleBackTop(){
-    const y = window.scrollY || document.documentElement.scrollTop || 0;
-    backTop.classList.toggle('show', y > 200);  // เดิม 600 -> ลดเหลือ 200
-  }
-  toggleBackTop();
-  window.addEventListener('scroll', toggleBackTop, {passive:true});
-
-  backTop.addEventListener('click', ()=>{
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-})();
+    // ==== Back-to-top ====
+    (function(){
+      const backTop = document.getElementById('backTop');
+      if(!backTop) return;
+      function toggleBackTop(){
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        backTop.classList.toggle('show', y > 200);
+      }
+      toggleBackTop();
+      window.addEventListener('scroll', toggleBackTop, {passive:true});
+      backTop.addEventListener('click', ()=>{ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
 
   </script>
 </body>
